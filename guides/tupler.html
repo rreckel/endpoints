@@ -21,7 +21,7 @@
             <div class="row">
               <div class="large-12 columns a_limited top-bar">
                 <div class="top-bar-left">
-                  <p>endpoints 0.9.0</p>
+                  <p>endpoints 0.10.0</p>
 
                 </div>
                 <div class="top-bar-right align-right row">
@@ -53,7 +53,7 @@
  
                 
                 <h1 id="tupler" class="a_section" data-magellan-target="tupler"><code class="hljs">Tupler</code><a class="a_hlink" href="#tupler"></a></h1>
-<p>This guide explains why we use implicit <a href="../api/0.9.0/index.html#endpoints.Tupler"><code class="hljs">Tupler</code></a> parameters
+<p>This guide explains why we use implicit <a href="../api/endpoints/Tupler.html"><code class="hljs">Tupler</code></a> parameters
 in the signature of some algebra operations and how it works.</p>
 <h2 id="motivation" class="a_section" data-magellan-target="motivation">Motivation<a class="a_hlink" href="#motivation"></a></h2>
 <p>As explained in the <a href="../design.html">design</a> page, to model a request that carries
@@ -103,7 +103,7 @@ the “useful” form of tupling <code class="hljs">A</code> and <code class="hl
 <pre class="hljs"><code class="language-scala"><span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">Tupler</span>[<span class="hljs-type">A</span>, <span class="hljs-type">B</span>] </span>{
   <span class="hljs-class"><span class="hljs-keyword">type</span> <span class="hljs-title">Out</span></span>
 }</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.9.0/algebras/algebra/src/main/scala/endpoints/Tupler.scala#L28-L34" class="a_sourcelink">Tupler.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.10.0/algebras/algebra/src/main/scala/endpoints/Tupler.scala#L28-L34" class="a_sourcelink">Tupler.scala</a></div></div>
 <p>Algebra operations that want to tuple types <code class="hljs">A</code> and <code class="hljs">B</code> take as
 parameter an implicit <code class="hljs">tupler: Tupler[A, B]</code> and return a
 <code class="hljs">tupler.Out</code> instead of an <code class="hljs">(A, B)</code>.</p>

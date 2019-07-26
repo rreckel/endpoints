@@ -21,7 +21,7 @@
             <div class="row">
               <div class="large-12 columns a_limited top-bar">
                 <div class="top-bar-left">
-                  <p>endpoints 0.9.0</p>
+                  <p>endpoints 0.10.0</p>
 
                 </div>
                 <div class="top-bar-right align-right row">
@@ -56,10 +56,10 @@
 <h2 id="jsonschemas" class="a_section" data-magellan-target="jsonschemas"><code class="hljs">JsonSchemas</code><a class="a_hlink" href="#jsonschemas"></a></h2>
 <p>This algebra provides vocabulary to define JSON schemas of data types.</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
-<pre class="hljs"><code class="language-scala"><span class="hljs-string">"org.julienrf"</span> %% <span class="hljs-string">"endpoints-algebra-json-schema"</span> % <span class="hljs-string">"0.9.0"</span>
+<pre class="hljs"><code class="language-scala"><span class="hljs-string">"org.julienrf"</span> %% <span class="hljs-string">"endpoints-algebra-json-schema"</span> % <span class="hljs-string">"0.10.0"</span>
 </code></pre>
 </div></div>
-<p><a href="../api/0.9.0/index.html#endpoints.algebra.JsonSchemas">API documentation</a></p>
+<p><a href="../api/endpoints/algebra/JsonSchemas.html">API documentation</a></p>
 <blockquote class="note">
 <p>This module is dependency-free, it can be used independently of <em>endpoints</em>
 to define JSON schemas and interpret them as actual encoder, decoders or
@@ -72,7 +72,7 @@ and ways to combine them together to build more complex schemas.</p>
 <p>For instance, given the following <code class="hljs">Rectangle</code> data type:</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
 <pre class="hljs"><code class="language-scala"><span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Rectangle</span>(<span class="hljs-params">width: <span class="hljs-type">Double</span>, height: <span class="hljs-type">Double</span></span>)</span></code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.9.0/json-schema/json-schema/src/test/scala/endpoints/algebra/JsonSchemasDocs.scala#L7" class="a_sourcelink">JsonSchemasDocs.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.10.0/json-schema/json-schema/src/test/scala/endpoints/algebra/JsonSchemasDocs.scala#L7" class="a_sourcelink">JsonSchemasDocs.scala</a></div></div>
 <p>We can represent instances of <code class="hljs">Rectangle</code> in JSON with a JSON object having properties corresponding
 to the case class fields. A JSON schema for such objects would be defined as follows:</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
@@ -80,7 +80,7 @@ to the case class fields. A JSON schema for such objects would be defined as fol
   field[<span class="hljs-type">Double</span>](<span class="hljs-string">"width"</span>, <span class="hljs-type">Some</span>(<span class="hljs-string">"Rectangle width"</span>)) zip
   field[<span class="hljs-type">Double</span>](<span class="hljs-string">"height"</span>)
 ).xmap((<span class="hljs-type">Rectangle</span>.apply _).tupled)(rect =&gt; (rect.width, rect.height))</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.9.0/json-schema/json-schema/src/test/scala/endpoints/algebra/JsonSchemasDocs.scala#L10-L13" class="a_sourcelink">JsonSchemasDocs.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.10.0/json-schema/json-schema/src/test/scala/endpoints/algebra/JsonSchemasDocs.scala#L10-L13" class="a_sourcelink">JsonSchemasDocs.scala</a></div></div>
 <p>The <code class="hljs">field</code> constructor defines a JSON object schema with one field of the given
 type and name (and an optional text documentation). A similar constructor, <code class="hljs">optField</code>,
 defines an optional field in a JSON object.</p>
@@ -96,7 +96,7 @@ defining a <code class="hljs">Shape</code>, which can be either a <code class="h
 <pre class="hljs"><code class="language-scala"><span class="hljs-keyword">sealed</span> <span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">Shape</span></span>
 <span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Circle</span>(<span class="hljs-params">radius: <span class="hljs-type">Double</span></span>) <span class="hljs-keyword">extends</span> <span class="hljs-title">Shape</span></span>
 <span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Rectangle</span>(<span class="hljs-params">width: <span class="hljs-type">Double</span>, height: <span class="hljs-type">Double</span></span>) <span class="hljs-keyword">extends</span> <span class="hljs-title">Shape</span></span></code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.9.0/json-schema/json-schema/src/test/scala/endpoints/algebra/JsonSchemasDocs.scala#L18-L20" class="a_sourcelink">JsonSchemasDocs.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.10.0/json-schema/json-schema/src/test/scala/endpoints/algebra/JsonSchemasDocs.scala#L18-L20" class="a_sourcelink">JsonSchemasDocs.scala</a></div></div>
 <p>A possible JSON schema for this data type consists in using a JSON object with a discriminator
 field indicating whether the <code class="hljs">Shape</code> is a <code class="hljs">Rectangle</code> or a <code class="hljs">Circle</code>. Such a schema can
 be defined as follows:</p>
@@ -112,7 +112,7 @@ be defined as follows:</p>
   <span class="hljs-keyword">case</span> c: <span class="hljs-type">Circle</span>    =&gt; <span class="hljs-type">Left</span>(c)
   <span class="hljs-keyword">case</span> r: <span class="hljs-type">Rectangle</span> =&gt; <span class="hljs-type">Right</span>(r)
 }</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.9.0/json-schema/json-schema/src/test/scala/endpoints/algebra/JsonSchemasDocs.scala#L35-L45" class="a_sourcelink">JsonSchemasDocs.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.10.0/json-schema/json-schema/src/test/scala/endpoints/algebra/JsonSchemasDocs.scala#L35-L45" class="a_sourcelink">JsonSchemasDocs.scala</a></div></div>
 <p>(We have omitted the definition of <code class="hljs">circleSchema</code> for the sake of conciseness)</p>
 <p>The <code class="hljs">orElse</code> operation turns the <code class="hljs">Record[Circle]</code> and <code class="hljs">Record[Rectangle]</code> values into
 a <code class="hljs">Record[Either[Circle, Rectangle]]</code>, which is then transformed into a <code class="hljs">Record[Shape]</code> by
@@ -132,13 +132,13 @@ you want to.</p>
 <span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">object</span> <span class="hljs-title">Active</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Status</span></span>
 <span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">object</span> <span class="hljs-title">Inactive</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Status</span></span>
 <span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">object</span> <span class="hljs-title">Obsolete</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Status</span></span></code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.9.0/json-schema/json-schema/src/test/scala/endpoints/algebra/JsonSchemasDocs.scala#L52-L55" class="a_sourcelink">JsonSchemasDocs.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.10.0/json-schema/json-schema/src/test/scala/endpoints/algebra/JsonSchemasDocs.scala#L52-L55" class="a_sourcelink">JsonSchemasDocs.scala</a></div></div>
 <p>The method <code class="hljs">enumeration</code> in the <code class="hljs">JsonSchemas</code> algebra supports mapping the enum values to JSON strings.
 It has two parameters: the possible values, and a function to encode an enum value as a string.</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
 <pre class="hljs"><code class="language-scala"><span class="hljs-keyword">implicit</span> <span class="hljs-keyword">lazy</span> <span class="hljs-keyword">val</span> statusSchema: <span class="hljs-type">JsonSchema</span>[<span class="hljs-type">Status</span>] =
   enumeration[<span class="hljs-type">Status</span>](<span class="hljs-type">Seq</span>(<span class="hljs-type">Active</span>, <span class="hljs-type">Inactive</span>, <span class="hljs-type">Obsolete</span>))(_.toString)</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.9.0/json-schema/json-schema/src/test/scala/endpoints/algebra/JsonSchemasDocs.scala#L58-L59" class="a_sourcelink">JsonSchemasDocs.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.10.0/json-schema/json-schema/src/test/scala/endpoints/algebra/JsonSchemasDocs.scala#L58-L59" class="a_sourcelink">JsonSchemasDocs.scala</a></div></div>
 <p>The resulting <code class="hljs">JsonSchema[Status]</code> allows defining JSON members with string values that are mapped to our case objects.</p>
 <p>It will work similarly for other representations of enumerated values.
 Most of them provide <code class="hljs">values</code> which can conveniently be passed into <code class="hljs">enumeration</code>.
@@ -152,20 +152,20 @@ by wrapping it in the <code class="hljs">lazySchema</code> constructor:</p>
 <span class="hljs-keyword">val</span> recSchema: <span class="hljs-type">JsonSchema</span>[<span class="hljs-type">Rec</span>] = (
   optField(<span class="hljs-string">"next"</span>)(lazySchema(recSchema, <span class="hljs-string">"Rec"</span>))
 ).xmap(<span class="hljs-type">Rec</span>)(_.next)</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.9.0/json-schema/json-schema/src/test/scala/endpoints/algebra/JsonSchemasDocs.scala#L64-L68" class="a_sourcelink">JsonSchemasDocs.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.10.0/json-schema/json-schema/src/test/scala/endpoints/algebra/JsonSchemasDocs.scala#L64-L68" class="a_sourcelink">JsonSchemasDocs.scala</a></div></div>
 <h2 id="generic-derivation-of-json-schemas" class="a_section" data-magellan-target="generic-derivation-of-json-schemas">Generic derivation of JSON schemas<a class="a_hlink" href="#generic-derivation-of-json-schemas"></a></h2>
 <p>The module presented in this section uses Shapeless to generically derive JSON schemas
 for algebraic data types.</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
-<pre class="hljs"><code class="language-scala"><span class="hljs-string">"org.julienrf"</span> %% <span class="hljs-string">"endpoints-json-schema-generic"</span> % <span class="hljs-string">"0.9.0"</span>
+<pre class="hljs"><code class="language-scala"><span class="hljs-string">"org.julienrf"</span> %% <span class="hljs-string">"endpoints-json-schema-generic"</span> % <span class="hljs-string">"0.10.0"</span>
 </code></pre>
 </div></div>
-<p><a href="../api/0.9.0/index.html#endpoints.generic.JsonSchemas">API documentation</a></p>
+<p><a href="../api/endpoints/generic/JsonSchemas.html">API documentation</a></p>
 <p>With this module, defining the JSON schema of the <code class="hljs">Shape</code> data type is
 reduced to the following:</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
 <pre class="hljs"><code class="language-scala"><span class="hljs-keyword">implicit</span> <span class="hljs-keyword">val</span> shapeSchema: <span class="hljs-type">JsonSchema</span>[<span class="hljs-type">Shape</span>] = genericJsonSchema</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.9.0/json-schema/json-schema-generic/src/test/scala/endpoints/generic/JsonSchemasDocs.scala#L10" class="a_sourcelink">JsonSchemasDocs.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.10.0/json-schema/json-schema-generic/src/test/scala/endpoints/generic/JsonSchemasDocs.scala#L10" class="a_sourcelink">JsonSchemasDocs.scala</a></div></div>
 <p>The <code class="hljs">genericJsonSchema</code> operation builds a JSON schema for the given
 type, mapping each case class field to a JSON object field of the same name,
 and each leaf of a sealed trait to a tagged JSON object whose type discriminator
@@ -178,7 +178,7 @@ is replaced by a <code class="hljs">:*:</code> operator, and <code class="hljs">
   field[<span class="hljs-type">Double</span>](<span class="hljs-string">"width"</span>) :*:
   field[<span class="hljs-type">Double</span>](<span class="hljs-string">"height"</span>)
 ).as[<span class="hljs-type">Rectangle</span>]</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.9.0/json-schema/json-schema-generic/src/test/scala/endpoints/generic/JsonSchemasDocs.scala#L15-L18" class="a_sourcelink">JsonSchemasDocs.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.10.0/json-schema/json-schema-generic/src/test/scala/endpoints/generic/JsonSchemasDocs.scala#L15-L18" class="a_sourcelink">JsonSchemasDocs.scala</a></div></div>
 
                  
   <ul class="menu align-right simple a_navbar a_navbar_bottom">

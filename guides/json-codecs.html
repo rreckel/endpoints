@@ -21,7 +21,7 @@
             <div class="row">
               <div class="large-12 columns a_limited top-bar">
                 <div class="top-bar-left">
-                  <p>endpoints 0.9.0</p>
+                  <p>endpoints 0.10.0</p>
 
                 </div>
                 <div class="top-bar-right align-right row">
@@ -66,7 +66,7 @@ types for request and response entities:</p>
 
 <span class="hljs-comment">/** Type class defining how to represent the `A` information as a JSON response entity */</span>
 <span class="hljs-class"><span class="hljs-keyword">type</span> <span class="hljs-title">JsonResponse</span>[<span class="hljs-type">A</span>]</span></code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.9.0/algebras/algebra/src/main/scala/endpoints/algebra/JsonEntities.scala#L23-L27" class="a_sourcelink">JsonEntities.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.10.0/algebras/algebra/src/main/scala/endpoints/algebra/JsonEntities.scala#L23-L27" class="a_sourcelink">JsonEntities.scala</a></div></div>
 <p>However, in case your endpoint definitions are interpreted in multiple ways these types
 should be aligned so that requests and responses are consistently encoded, decoded and
 documented by client, server and documentation interpreters. A consequence of this is that an
@@ -82,13 +82,13 @@ the <code class="hljs">JsonRequest</code> and <code class="hljs">JsonResponse</c
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
 <pre class="hljs"><code class="language-scala"><span class="hljs-comment">/** A JSON codec type class */</span>
 <span class="hljs-class"><span class="hljs-keyword">type</span> <span class="hljs-title">JsonCodec</span>[<span class="hljs-type">A</span>]</span></code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.9.0/algebras/algebra/src/main/scala/endpoints/algebra/JsonEntities.scala#L48-L49" class="a_sourcelink">JsonEntities.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.10.0/algebras/algebra/src/main/scala/endpoints/algebra/JsonEntities.scala#L48-L49" class="a_sourcelink">JsonEntities.scala</a></div></div>
 <p>Generally, you want to use a <code class="hljs">JsonEntitiesFromCodec</code> algebra that fixes this <code class="hljs">JsonCodec</code> type to
 a concrete type. An example is <code class="hljs">endpoints.algebra.playjson.JsonEntitiesFromCodec</code>, which
 aligns the <code class="hljs">JsonCodec</code> type with Play’s <code class="hljs">Format</code> type:</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
 <pre class="hljs"><code class="language-scala"><span class="hljs-class"><span class="hljs-keyword">type</span> <span class="hljs-title">JsonCodec</span>[<span class="hljs-type">A</span>] </span>= <span class="hljs-type">Format</span>[<span class="hljs-type">A</span>]</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.9.0/algebras/algebra-playjson/src/main/scala/endpoints/algebra/playjson/JsonEntitiesFromCodec.scala#L61" class="a_sourcelink">JsonEntitiesFromCodec.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.10.0/algebras/algebra-playjson/src/main/scala/endpoints/algebra/playjson/JsonEntitiesFromCodec.scala#L61" class="a_sourcelink">JsonEntitiesFromCodec.scala</a></div></div>
 <p>The <a href="../algebras/json-entities.html#jsonentitiesfromcodec">JSON entities algebra</a> documentation page
 shows the list of <code class="hljs">JsonEntitiesFromCodec</code> algebras that fixes the <code class="hljs">JsonCodec</code> type to a concrete type.</p>
 <h3 id="interpreters" class="a_section" data-magellan-target="interpreters">Interpreters<a class="a_hlink" href="#interpreters"></a></h3>
@@ -105,7 +105,7 @@ algebra). Both the <code class="hljs">JsonRequest</code> and <code class="hljs">
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
 <pre class="hljs"><code class="language-scala"><span class="hljs-class"><span class="hljs-keyword">type</span> <span class="hljs-title">JsonRequest</span>[<span class="hljs-type">A</span>] </span>= <span class="hljs-type">JsonSchema</span>[<span class="hljs-type">A</span>]
 <span class="hljs-class"><span class="hljs-keyword">type</span> <span class="hljs-title">JsonResponse</span>[<span class="hljs-type">A</span>] </span>= <span class="hljs-type">JsonSchema</span>[<span class="hljs-type">A</span>]</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.9.0/algebras/algebra/src/main/scala/endpoints/algebra/JsonSchemaEntities.scala#L14-L15" class="a_sourcelink">JsonSchemaEntities.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.10.0/algebras/algebra/src/main/scala/endpoints/algebra/JsonSchemaEntities.scala#L14-L15" class="a_sourcelink">JsonSchemaEntities.scala</a></div></div>
 <h3 id="interpreters-1" class="a_section" data-magellan-target="interpreters-1">Interpreters<a class="a_hlink" href="#interpreters-1"></a></h3>
 <p>To interpret endpoints defined with this algebra, pick an interpreter that matches your
 <a href="../algebras-and-interpreters.html#interpreters">family</a> of interpreters and, if relevant,
