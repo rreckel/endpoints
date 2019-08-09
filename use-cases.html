@@ -21,7 +21,7 @@
             <div class="row">
               <div class="large-12 columns a_limited top-bar">
                 <div class="top-bar-left">
-                  <p>endpoints 0.10.0</p>
+                  <p>endpoints 0.10.1</p>
 
                 </div>
                 <div class="top-bar-right align-right row">
@@ -74,12 +74,12 @@ the clients and servers for these APIs:</p>
   */</span>
 <span class="hljs-keyword">val</span> command: <span class="hljs-type">Endpoint</span>[<span class="hljs-type">Command</span>, <span class="hljs-type">Option</span>[<span class="hljs-type">StoredEvent</span>]] =
   endpoint(post(path / <span class="hljs-string">"command"</span>, jsonRequest[<span class="hljs-type">Command</span>]()), jsonResponse[<span class="hljs-type">Option</span>[<span class="hljs-type">StoredEvent</span>]]())</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.10.0/documentation/examples/cqrs/commands-endpoints/src/main/scala/cqrs/commands/CommandsEndpoints.scala#L17-L24" class="a_sourcelink">CommandsEndpoints.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.10.1/documentation/examples/cqrs/commands-endpoints/src/main/scala/cqrs/commands/CommandsEndpoints.scala#L17-L24" class="a_sourcelink">CommandsEndpoints.scala</a></div></div>
 <p>Invoking a service from another is as simple as a method call:</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
 <pre class="hljs"><code class="language-scala"><span class="hljs-keyword">val</span> eventuallyMaybeEvent: <span class="hljs-type">Future</span>[<span class="hljs-type">Option</span>[<span class="hljs-type">StoredEvent</span>]] =
   commandsClient.command(<span class="hljs-type">CreateMeter</span>(createData.label))</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.10.0/documentation/examples/cqrs/public-server/src/main/scala/cqrs/publicserver/PublicServer.scala#L49-L50" class="a_sourcelink">PublicServer.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.10.1/documentation/examples/cqrs/public-server/src/main/scala/cqrs/publicserver/PublicServer.scala#L49-L50" class="a_sourcelink">PublicServer.scala</a></div></div>
 <p><em>endpoints</em> takes care of correctly constructing the HTTP request and
 decoding the HTTP response according to the endpoint description.</p>
 <p>Maintenance effort is reduced: you only maintain the description of
@@ -93,11 +93,11 @@ communication by turning method calls into remote invocations.</p>
 <pre class="hljs"><code class="language-scala"><span class="hljs-comment">/** Registers a new meter */</span>
 <span class="hljs-keyword">val</span> createMeter: <span class="hljs-type">Endpoint</span>[<span class="hljs-type">CreateMeter</span>, <span class="hljs-type">Meter</span>] =
   endpoint(post(metersPath, jsonRequest[<span class="hljs-type">CreateMeter</span>]()), jsonResponse[<span class="hljs-type">Meter</span>]())</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.10.0/documentation/examples/cqrs/public-endpoints/src/main/scala/cqrs/publicserver/PublicEndpoints.scala#L37-L39" class="a_sourcelink">PublicEndpoints.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.10.1/documentation/examples/cqrs/public-endpoints/src/main/scala/cqrs/publicserver/PublicEndpoints.scala#L37-L39" class="a_sourcelink">PublicEndpoints.scala</a></div></div>
 <p>Corresponding invocation from the client-side:</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
 <pre class="hljs"><code class="language-scala"><span class="hljs-keyword">val</span> eventuallyCreatedMeter: <span class="hljs-type">Future</span>[<span class="hljs-type">Meter</span>] = <span class="hljs-type">PublicEndpoints</span>.createMeter(<span class="hljs-type">CreateMeter</span>(name))</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.10.0/documentation/examples/cqrs/web-client/src/main/scala/cqrs/webclient/Main.scala#L37" class="a_sourcelink">Main.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.10.1/documentation/examples/cqrs/web-client/src/main/scala/cqrs/webclient/Main.scala#L37" class="a_sourcelink">Main.scala</a></div></div>
 <h2 id="documenting-a-web-service" class="a_section" data-magellan-target="documenting-a-web-service">Documenting a Web Service<a class="a_hlink" href="#documenting-a-web-service"></a></h2>
 <p>Thanks to the separation between the description of an HTTP API and
 its implementation, <em>endpoints</em> can also generate an OpenAPI document
@@ -143,7 +143,7 @@ for a given HTTP API description.</p>
   <span class="hljs-keyword">implicit</span> <span class="hljs-keyword">lazy</span> <span class="hljs-keyword">val</span> jsonSchemaOperation: <span class="hljs-type">JsonSchema</span>[<span class="hljs-type">Operation</span>] = genericJsonSchema
 
 }</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.10.0/documentation/examples/documented/src/main/scala/counter/Counter.scala#L28-L66" class="a_sourcelink">Counter.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.10.1/documentation/examples/documented/src/main/scala/counter/Counter.scala#L28-L66" class="a_sourcelink">Counter.scala</a></div></div>
 <p><em>endpoints</em> can produce the
 <a href="https://documented-counter.herokuapp.com/documentation.json">following OpenApi document</a>.</p>
 

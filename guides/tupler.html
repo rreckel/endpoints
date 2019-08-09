@@ -21,7 +21,7 @@
             <div class="row">
               <div class="large-12 columns a_limited top-bar">
                 <div class="top-bar-left">
-                  <p>endpoints 0.10.0</p>
+                  <p>endpoints 0.10.1</p>
 
                 </div>
                 <div class="top-bar-right align-right row">
@@ -103,7 +103,7 @@ the “useful” form of tupling <code class="hljs">A</code> and <code class="hl
 <pre class="hljs"><code class="language-scala"><span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">Tupler</span>[<span class="hljs-type">A</span>, <span class="hljs-type">B</span>] </span>{
   <span class="hljs-class"><span class="hljs-keyword">type</span> <span class="hljs-title">Out</span></span>
 }</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.10.0/algebras/algebra/src/main/scala/endpoints/Tupler.scala#L28-L34" class="a_sourcelink">Tupler.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.10.1/algebras/algebra/src/main/scala/endpoints/Tupler.scala#L28-L34" class="a_sourcelink">Tupler.scala</a></div></div>
 <p>Algebra operations that want to tuple types <code class="hljs">A</code> and <code class="hljs">B</code> take as
 parameter an implicit <code class="hljs">tupler: Tupler[A, B]</code> and return a
 <code class="hljs">tupler.Out</code> instead of an <code class="hljs">(A, B)</code>.</p>

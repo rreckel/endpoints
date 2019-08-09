@@ -21,7 +21,7 @@
             <div class="row">
               <div class="large-12 columns a_limited top-bar">
                 <div class="top-bar-left">
-                  <p>endpoints 0.10.0</p>
+                  <p>endpoints 0.10.1</p>
 
                 </div>
                 <div class="top-bar-right align-right row">
@@ -56,7 +56,7 @@
 <p>Client and server backed by <a href="https://doc.akka.io/docs/akka-http/current/">Akka HTTP</a>.</p>
 <h2 id="client" class="a_section" data-magellan-target="client">Client<a class="a_hlink" href="#client"></a></h2>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
-<pre class="hljs"><code class="language-scala"><span class="hljs-string">"org.julienrf"</span> %% <span class="hljs-string">"endpoints-akka-http-client"</span> % <span class="hljs-string">"0.10.0"</span>
+<pre class="hljs"><code class="language-scala"><span class="hljs-string">"org.julienrf"</span> %% <span class="hljs-string">"endpoints-akka-http-client"</span> % <span class="hljs-string">"0.10.1"</span>
 </code></pre>
 </div></div>
 <p><a href="../api/endpoints/akkahttp/client/index.html">API documentation</a></p>
@@ -64,19 +64,19 @@
 from <code class="hljs">A</code> to <code class="hljs">Future[B]</code>:</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
 <pre class="hljs"><code class="language-scala"><span class="hljs-class"><span class="hljs-keyword">type</span> <span class="hljs-title">Endpoint</span>[<span class="hljs-type">A</span>, <span class="hljs-type">B</span>] </span>= <span class="hljs-type">A</span> =&gt; <span class="hljs-type">Future</span>[<span class="hljs-type">B</span>]</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.10.0/akka-http/client/src/main/scala/endpoints/akkahttp/client/Endpoints.scala#L120" class="a_sourcelink">Endpoints.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.10.1/akka-http/client/src/main/scala/endpoints/akkahttp/client/Endpoints.scala#L120" class="a_sourcelink">Endpoints.scala</a></div></div>
 <p>This means that, given the following endpoint definition:</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
 <pre class="hljs"><code class="language-scala"><span class="hljs-keyword">val</span> someResource: <span class="hljs-type">Endpoint</span>[<span class="hljs-type">Int</span>, <span class="hljs-type">String</span>] =
   endpoint(get(path / <span class="hljs-string">"some-resource"</span> / segment[<span class="hljs-type">Int</span>]()), textResponse())</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.10.0/algebras/algebra/src/test/scala/endpoints/algebra/EndpointsDocs.scala#L72-L73" class="a_sourcelink">EndpointsDocs.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.10.1/algebras/algebra/src/test/scala/endpoints/algebra/EndpointsDocs.scala#L72-L73" class="a_sourcelink">EndpointsDocs.scala</a></div></div>
 <p>It can be invoked as follows:</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
 <pre class="hljs"><code class="language-scala"><span class="hljs-keyword">val</span> eventuallyString: <span class="hljs-type">Future</span>[<span class="hljs-type">String</span>] = someResource(<span class="hljs-number">42</span>)</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.10.0/akka-http/client/src/test/scala/endpoints/akkahttp/client/EndpointsDocs.scala#L9" class="a_sourcelink">EndpointsDocs.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.10.1/akka-http/client/src/test/scala/endpoints/akkahttp/client/EndpointsDocs.scala#L9" class="a_sourcelink">EndpointsDocs.scala</a></div></div>
 <h2 id="server" class="a_section" data-magellan-target="server">Server<a class="a_hlink" href="#server"></a></h2>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
-<pre class="hljs"><code class="language-scala"><span class="hljs-string">"org.julienrf"</span> %% <span class="hljs-string">"endpoints-akka-http-server"</span> % <span class="hljs-string">"0.10.0"</span>
+<pre class="hljs"><code class="language-scala"><span class="hljs-string">"org.julienrf"</span> %% <span class="hljs-string">"endpoints-akka-http-server"</span> % <span class="hljs-string">"0.10.1"</span>
 </code></pre>
 </div></div>
 <p><a href="../api/endpoints/akkahttp/server/index.html">API documentation</a></p>
@@ -87,12 +87,12 @@ that can be integrated to your Akka HTTP application.</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
 <pre class="hljs"><code class="language-scala"><span class="hljs-keyword">val</span> someResource: <span class="hljs-type">Endpoint</span>[<span class="hljs-type">Int</span>, <span class="hljs-type">String</span>] =
   endpoint(get(path / <span class="hljs-string">"some-resource"</span> / segment[<span class="hljs-type">Int</span>]()), textResponse())</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.10.0/algebras/algebra/src/test/scala/endpoints/algebra/EndpointsDocs.scala#L72-L73" class="a_sourcelink">EndpointsDocs.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.10.1/algebras/algebra/src/test/scala/endpoints/algebra/EndpointsDocs.scala#L72-L73" class="a_sourcelink">EndpointsDocs.scala</a></div></div>
 <p>It can be implemented as follows:</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
 <pre class="hljs"><code class="language-scala"><span class="hljs-keyword">val</span> route: <span class="hljs-type">Route</span> =
   someResource.implementedBy(x =&gt; <span class="hljs-string">s"Received <span class="hljs-subst">$x</span>"</span>)</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.10.0/akka-http/server/src/test/scala/endpoints/akkahttp/server/EndpointsDocs.scala#L9-L10" class="a_sourcelink">EndpointsDocs.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.10.1/akka-http/server/src/test/scala/endpoints/akkahttp/server/EndpointsDocs.scala#L9-L10" class="a_sourcelink">EndpointsDocs.scala</a></div></div>
 
                  
   <ul class="menu align-right simple a_navbar a_navbar_bottom">
