@@ -21,7 +21,7 @@
             <div class="row">
               <div class="large-12 columns a_limited top-bar">
                 <div class="top-bar-left">
-                  <p>endpoints 0.10.1</p>
+                  <p>endpoints 0.11.0</p>
 
                 </div>
                 <div class="top-bar-right align-right row">
@@ -55,7 +55,7 @@
                 <h1 id="sttp" class="a_section" data-magellan-target="sttp">sttp<a class="a_hlink" href="#sttp"></a></h1>
 <p>Client backed by <a href="https://github.com/softwaremill/sttp">sttp</a>.</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
-<pre class="hljs"><code class="language-scala"><span class="hljs-string">"org.julienrf"</span> %% <span class="hljs-string">"endpoints-sttp-client"</span> % <span class="hljs-string">"0.10.1"</span>
+<pre class="hljs"><code class="language-scala"><span class="hljs-string">"org.julienrf"</span> %% <span class="hljs-string">"endpoints-sttp-client"</span> % <span class="hljs-string">"0.11.0"</span>
 </code></pre>
 </div></div>
 <p><a href="../api/endpoints/sttp/client/index.html">API documentation</a></p>
@@ -64,17 +64,17 @@ of type <code class="hljs">SttpBackend[R, Nothing]</code>, for some type constru
 <p>The <code class="hljs">Endpoint[A, B]</code> type is fixed as follows:</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
 <pre class="hljs"><code class="language-scala"><span class="hljs-class"><span class="hljs-keyword">type</span> <span class="hljs-title">Endpoint</span>[<span class="hljs-type">A</span>, <span class="hljs-type">B</span>] </span>= <span class="hljs-type">A</span> =&gt; <span class="hljs-type">R</span>[<span class="hljs-type">B</span>]</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.10.1/sttp/client/src/main/scala/endpoints/sttp/client/Endpoints.scala#L154" class="a_sourcelink">Endpoints.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.11.0/sttp/client/src/main/scala/endpoints/sttp/client/Endpoints.scala#L175" class="a_sourcelink">Endpoints.scala</a></div></div>
 <p>This means that, given the following endpoint definition:</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
 <pre class="hljs"><code class="language-scala"><span class="hljs-keyword">val</span> someResource: <span class="hljs-type">Endpoint</span>[<span class="hljs-type">Int</span>, <span class="hljs-type">String</span>] =
-  endpoint(get(path / <span class="hljs-string">"some-resource"</span> / segment[<span class="hljs-type">Int</span>]()), textResponse())</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.10.1/algebras/algebra/src/test/scala/endpoints/algebra/EndpointsDocs.scala#L72-L73" class="a_sourcelink">EndpointsDocs.scala</a></div></div>
+  endpoint(get(path / <span class="hljs-string">"some-resource"</span> / segment[<span class="hljs-type">Int</span>]()), ok(textResponse))</code></pre>
+<a href="https://github.com/julienrf/endpoints/blob/v0.11.0/algebras/algebra/src/test/scala/endpoints/algebra/EndpointsDocs.scala#L75-L76" class="a_sourcelink">EndpointsDocs.scala</a></div></div>
 <p>It can be invoked as follows with the <code class="hljs">HttpURLConnectionBackend</code>,
 for instance:</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
 <pre class="hljs"><code class="language-scala"><span class="hljs-keyword">val</span> string: <span class="hljs-type">String</span> = someResource(<span class="hljs-number">42</span>)</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.10.1/sttp/client/src/test/scala/endpoints/sttp/client/EndpointsDocs.scala#L9" class="a_sourcelink">EndpointsDocs.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.11.0/sttp/client/src/test/scala/endpoints/sttp/client/EndpointsDocs.scala#L9" class="a_sourcelink">EndpointsDocs.scala</a></div></div>
 
                  
   <ul class="menu align-right simple a_navbar a_navbar_bottom">

@@ -8,17 +8,17 @@
           <meta name="keywords" content="" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
+      
       <link href="../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
-      <script type="text/javascript" src="../../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../../lib/jquery.min.js"></script>
       <script type="text/javascript" src="../../../lib/jquery.panzoom.min.js"></script>
       <script type="text/javascript" src="../../../lib/jquery.mousewheel.min.js"></script>
       <script type="text/javascript" src="../../../lib/index.js"></script>
       <script type="text/javascript" src="../../../index.js"></script>
       <script type="text/javascript" src="../../../lib/scheduler.js"></script>
       <script type="text/javascript" src="../../../lib/template.js"></script>
-      <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
       <script type="text/javascript" src="../../../lib/modernizr.custom.js"></script><script type="text/javascript" src="../../../lib/diagrams.js" id="diagrams-js"></script>
       <script type="text/javascript">
         /* this variable can be used by the JS to determine the path to the root document */
@@ -56,7 +56,7 @@
                 <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="_root_"></a><a id="root:_root_"></a>
       <span class="permalink">
-      <a href="index.html#_root_" title="Permalink">
+      <a href="../../../index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -72,7 +72,7 @@
     </li><li name="_root_.endpoints" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="endpoints"></a><a id="endpoints:endpoints"></a>
       <span class="permalink">
-      <a href="index.html#endpoints" title="Permalink">
+      <a href="../../../endpoints/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -88,7 +88,7 @@
     </li><li name="endpoints.play" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="play"></a><a id="play:play"></a>
       <span class="permalink">
-      <a href="../endpoints/index.html#play" title="Permalink">
+      <a href="../../../endpoints/play/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -104,7 +104,7 @@
     </li><li name="endpoints.play.server" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="server"></a><a id="server:server"></a>
       <span class="permalink">
-      <a href="../../endpoints/play/index.html#server" title="Permalink">
+      <a href="../../../endpoints/play/server/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -120,9 +120,9 @@
 </p><div class="fullcomment"><div class="comment cmt"><p>Server interpreters backed by Play framework
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="endpoints.play">play</a></dd></dl></div>
     </li><li name="endpoints.play.server.Assets" visbl="pub" class="indented4 " data-isabs="true" fullComment="yes" group="interpreters">
-      <a id="AssetsextendsAssetswithEndpoints"></a><a id="Assets:Assets"></a>
+      <a id="AssetsextendsAssetswithEndpointsWithCustomErrors"></a><a id="Assets:Assets"></a>
       <span class="permalink">
-      <a href="../../../endpoints/play/server/index.html#AssetsextendsAssetswithEndpoints" title="Permalink">
+      <a href="../../../endpoints/play/server/Assets.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -131,7 +131,7 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="Interpreter for algebra.Assets that performs routing using Play framework" href="Assets.html"><span class="name">Assets</span></a><span class="result"> extends <a href="../../algebra/Assets.html" class="extype" name="endpoints.algebra.Assets">algebra.Assets</a> with <a href="Endpoints.html" class="extype" name="endpoints.play.server.Endpoints">Endpoints</a></span>
+        <a title="Interpreter for algebra.Assets that performs routing using Play framework" href="Assets.html"><span class="name">Assets</span></a><span class="result"> extends <a href="../../algebra/Assets.html" class="extype" name="endpoints.algebra.Assets">algebra.Assets</a> with <a href="EndpointsWithCustomErrors.html" class="extype" name="endpoints.play.server.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a></span>
       </span>
       
       <p class="shortcomment cmt">Interpreter for <a href="../../algebra/Assets.html" class="extype" name="endpoints.algebra.Assets">algebra.Assets</a> that performs routing using Play framework
@@ -159,20 +159,24 @@
                         <a href="" title="An AssetResponse is either AssetNotFound (if the asset has not been found on the server) or Found otherwise.">AssetResponse</a>
                       </li><li class="current-entities indented4">
                         <span class="separator"></span>
-                        <a class="class" href="Endpoints$Endpoint.html" title="Concrete representation of an Endpoint for routing purpose."></a>
-                        <a href="Endpoints$Endpoint.html" title="Concrete representation of an Endpoint for routing purpose.">Endpoint</a>
+                        <a class="abstract type" href="Assets$ClientErrors.html" title="Errors in a request built by a client"></a>
+                        <a href="Assets$ClientErrors.html" title="Errors in a request built by a client">ClientErrors</a>
                       </li><li class="current-entities indented4">
                         <span class="separator"></span>
-                        <a class="class" href="Endpoints$EndpointWithHandler.html" title="An endpoint from which we can get a Play request handler."></a>
-                        <a href="Endpoints$EndpointWithHandler.html" title="An endpoint from which we can get a Play request handler.">EndpointWithHandler</a>
+                        <a class="class" href="EndpointsWithCustomErrors$Endpoint.html" title="Concrete representation of an Endpoint for routing purpose."></a>
+                        <a href="EndpointsWithCustomErrors$Endpoint.html" title="Concrete representation of an Endpoint for routing purpose.">Endpoint</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="EndpointsWithCustomErrors$EndpointWithHandler.html" title="An endpoint from which we can get a Play request handler."></a>
+                        <a href="EndpointsWithCustomErrors$EndpointWithHandler.html" title="An endpoint from which we can get a Play request handler.">EndpointWithHandler</a>
                       </li><li class="current-entities indented4">
                         <span class="separator"></span>
                         <a class="class" href="Assets$Found.html" title=""></a>
                         <a href="Assets$Found.html" title="">Found</a>
                       </li><li class="current-entities indented4">
                         <span class="separator"></span>
-                        <a class="class" href="../../InvariantFunctorSyntax$InvariantFunctorSyntax.html" title=""></a>
-                        <a href="../../InvariantFunctorSyntax$InvariantFunctorSyntax.html" title="">InvariantFunctorSyntax</a>
+                        <a class="class" href="../../InvariantFunctorSyntax$InvariantFunctorSyntax.html" title="Extension methods for values of type F[A] for which there is an implicit InvariantFunctor[F] instance."></a>
+                        <a href="../../InvariantFunctorSyntax$InvariantFunctorSyntax.html" title="Extension methods for values of type F[A] for which there is an implicit InvariantFunctor[F] instance.">InvariantFunctorSyntax</a>
                       </li><li class="current-entities indented4">
                         <span class="separator"></span>
                         <a class="class" href="Methods$Method.html" title=""></a>
@@ -195,20 +199,20 @@
                         <a href="Urls$QueryString.html" title="Query string encoding and decoding">QueryString</a>
                       </li><li class="current-entities indented4">
                         <span class="separator"></span>
-                        <a class="class" href="../../algebra/Urls$QueryStringOps.html" title="Provides convenient methods on QueryString."></a>
-                        <a href="../../algebra/Urls$QueryStringOps.html" title="Provides convenient methods on QueryString.">QueryStringOps</a>
-                      </li><li class="current-entities indented4">
-                        <span class="separator"></span>
                         <a class="trait" href="Urls$QueryStringParam.html" title=""></a>
                         <a href="Urls$QueryStringParam.html" title="">QueryStringParam</a>
                       </li><li class="current-entities indented4">
                         <span class="separator"></span>
-                        <a class="trait" href="Endpoints$Request.html" title="An HTTP request."></a>
-                        <a href="Endpoints$Request.html" title="An HTTP request.">Request</a>
+                        <a class="class" href="../../algebra/Urls$QueryStringSyntax.html" title="Extension methods on QueryString."></a>
+                        <a href="../../algebra/Urls$QueryStringSyntax.html" title="Extension methods on QueryString.">QueryStringSyntax</a>
                       </li><li class="current-entities indented4">
                         <span class="separator"></span>
-                        <a class="class" href="../../algebra/Responses$ResponseExtensions.html" title="Extensions for Response."></a>
-                        <a href="../../algebra/Responses$ResponseExtensions.html" title="Extensions for Response.">ResponseExtensions</a>
+                        <a class="trait" href="EndpointsWithCustomErrors$Request.html" title="An HTTP request."></a>
+                        <a href="EndpointsWithCustomErrors$Request.html" title="An HTTP request.">Request</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="../../algebra/Responses$ResponseSyntax.html" title="Extension methods for Response."></a>
+                        <a href="../../algebra/Responses$ResponseSyntax.html" title="Extension methods for Response.">ResponseSyntax</a>
                       </li><li class="current-entities indented4">
                         <span class="separator"></span>
                         <a class="trait" href="Urls$Segment.html" title="Defines how to decode and encode path segments"></a>
@@ -219,16 +223,20 @@
                         <a href="../../SemigroupalSyntax$SemigroupalSyntax.html" title="">SemigroupalSyntax</a>
                       </li><li class="current-entities indented4">
                         <span class="separator"></span>
-                        <a class="trait" href="Endpoints$ToPlayHandler.html" title="Something that can be used as a Play request handler"></a>
-                        <a href="Endpoints$ToPlayHandler.html" title="Something that can be used as a Play request handler">ToPlayHandler</a>
+                        <a class="abstract type" href="Assets$ServerError.html" title="Error raised by the business logic of a server"></a>
+                        <a href="Assets$ServerError.html" title="Error raised by the business logic of a server">ServerError</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="EndpointsWithCustomErrors$ToPlayHandler.html" title="Something that can be used as a Play request handler"></a>
+                        <a href="EndpointsWithCustomErrors$ToPlayHandler.html" title="Something that can be used as a Play request handler">ToPlayHandler</a>
                       </li><li class="current-entities indented4">
                         <span class="separator"></span>
                         <a class="trait" href="Urls$Url.html" title=""></a>
                         <a href="Urls$Url.html" title="">Url</a>
                       </li><li class="current-entities indented4">
                         <span class="separator"></span>
-                        <a class="trait" href="Endpoints$UrlAndHeaders.html" title="The URL and HTTP headers of a request."></a>
-                        <a href="Endpoints$UrlAndHeaders.html" title="The URL and HTTP headers of a request.">UrlAndHeaders</a>
+                        <a class="trait" href="EndpointsWithCustomErrors$UrlAndHeaders.html" title="The URL and HTTP headers of a request."></a>
+                        <a href="EndpointsWithCustomErrors$UrlAndHeaders.html" title="The URL and HTTP headers of a request.">UrlAndHeaders</a>
                       </li>
               </ul>
             </div>
@@ -259,27 +267,17 @@
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>An <a href="" class="extype" name="endpoints.play.server.Assets.AssetResponse">AssetResponse</a> is either <a href="Assets$AssetNotFound$.html" class="extype" name="endpoints.play.server.Assets.AssetNotFound">AssetNotFound</a> (if the asset has not been found on
 the server) or <a href="Assets$Found.html" class="extype" name="endpoints.play.server.Assets.Found">Found</a> otherwise.
-</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/julienrf/endpoints/blob/v0.10.1/play/server/src/main/scala/endpoints/play/server/Assets.scala" target="_blank">Assets.scala</a></dd></dl><div class="toggleContainer block">
+</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/julienrf/endpoints/blob/v0.11.0/play/server/src/main/scala/endpoints/play/server/Assets.scala" target="_blank">Assets.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.12.8/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
+          <div class="superTypes hiddenContent"><a href="../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
         </div><div class="toggleContainer block">
             <span class="toggle">
               Known Subclasses
             </span>
             <div class="subClasses hiddenContent"><a href="Assets$AssetNotFound$.html" class="extype" name="endpoints.play.server.Assets.AssetNotFound">AssetNotFound</a>, <a href="Assets$Found.html" class="extype" name="endpoints.play.server.Assets.Found">Found</a></div>
-          </div><div class="toggleContainer block diagram-container" id="inheritance-diagram-container">
-                <span class="toggle diagram-link">
-                  Type Hierarchy
-                </span>
-                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph1" viewBox="0.00 0.00 204.00 155.00" height="155pt" width="204pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 151)" class="graph" id="page0,1_graph0"><polygon points="-4,4 -4,-151 200,-151 200,4 -4,4" stroke="transparent" fill="#ffffff"></polygon><g class="cluster" id="clust1"></g><g class="cluster" id="clust2"></g><!-- node0 --><g class="node this trait" id="graph1_0"><g id="a_this trait|graph1_0"><a xlink:title="endpoints.play.server.Assets.AssetResponse (this trait)" xlink:href="#inheritance-diagram"><path d="M154.1667,-86C154.1667,-86 61.8333,-86 61.8333,-86 57.6667,-86 53.5,-81.8333 53.5,-77.6667 53.5,-77.6667 53.5,-69.3333 53.5,-69.3333 53.5,-65.1667 57.6667,-61 61.8333,-61 61.8333,-61 154.1667,-61 154.1667,-61 158.3333,-61 162.5,-65.1667 162.5,-69.3333 162.5,-69.3333 162.5,-77.6667 162.5,-77.6667 162.5,-81.8333 158.3333,-86 154.1667,-86" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-80.5" x="64" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-71.1" x="85" text-anchor="start">AssetResponse</text></a></g></g><!-- node1 --><g class="node object" id="graph1_1"><g id="a_object|graph1_1"><a xlink:title="endpoints.play.server.Assets.AssetNotFound" xlink:href="Assets$AssetNotFound$.html#inheritance-diagram"><path d="M99.6667,-25C99.6667,-25 8.3333,-25 8.3333,-25 4.1667,-25 0,-20.8333 0,-16.6667 0,-16.6667 0,-8.3333 0,-8.3333 0,-4.1667 4.1667,0 8.3333,0 8.3333,0 99.6667,0 99.6667,0 103.8333,0 108,-4.1667 108,-8.3333 108,-8.3333 108,-16.6667 108,-16.6667 108,-20.8333 103.8333,-25 99.6667,-25" stroke="#103a51" fill="#103a51"></path><image xlink:href="../../../lib/object_diagram.png" y="-19.5" x="10" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="31" text-anchor="start">AssetNotFound</text></a></g></g><!-- node0&#45;&gt;node1 --><g class="edge inheritance" id="graph1_0_1"><g id="a_inheritance|graph1_0_1"><a xlink:title="AssetNotFound is a subtype of AssetResponse"><path d="M91.9737,-55.3963C83.3467,-45.6509 72.9184,-33.8708 65.1745,-25.123" stroke="#d4d4d4" fill="none"></path><polygon points="90.3368,-57.2434 96.8112,-60.8608 94.0057,-53.9954 90.3368,-57.2434" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node2 --><g class="node class" id="graph1_2"><g id="a_class|graph1_2"><a xlink:title="endpoints.play.server.Assets.Found" xlink:href="Assets$Found.html#inheritance-diagram"><path d="M187.6667,-25C187.6667,-25 134.3333,-25 134.3333,-25 130.1667,-25 126,-20.8333 126,-16.6667 126,-16.6667 126,-8.3333 126,-8.3333 126,-4.1667 130.1667,0 134.3333,0 134.3333,0 187.6667,0 187.6667,0 191.8333,0 196,-4.1667 196,-8.3333 196,-8.3333 196,-16.6667 196,-16.6667 196,-20.8333 191.8333,-25 187.6667,-25" stroke="#418565" fill="#418565"></path><image xlink:href="../../../lib/class_diagram.png" y="-19.5" x="136" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="157" text-anchor="start">Found</text></a></g></g><!-- node0&#45;&gt;node2 --><g class="edge inheritance" id="graph1_0_2"><g id="a_inheritance|graph1_0_2"><a xlink:title="Found is a subtype of AssetResponse"><path d="M123.7295,-55.3963C132.1968,-45.6509 142.4319,-33.8708 150.0324,-25.123" stroke="#d4d4d4" fill="none"></path><polygon points="121.7233,-53.9697 118.9816,-60.8608 125.4222,-57.1835 121.7233,-53.9697" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node3 --><g class="node class" id="graph1_3"><g id="a_class|graph1_3"><a xlink:title="scala.AnyRef"><path d="M137.1667,-147C137.1667,-147 78.8333,-147 78.8333,-147 74.6667,-147 70.5,-142.8333 70.5,-138.6667 70.5,-138.6667 70.5,-130.3333 70.5,-130.3333 70.5,-126.1667 74.6667,-122 78.8333,-122 78.8333,-122 137.1667,-122 137.1667,-122 141.3333,-122 145.5,-126.1667 145.5,-130.3333 145.5,-130.3333 145.5,-138.6667 145.5,-138.6667 145.5,-142.8333 141.3333,-147 137.1667,-147" stroke="#418565" fill="#418565"></path><image xlink:href="../../../lib/class_diagram.png" y="-141.5" x="81" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-132.1" x="102" text-anchor="start">AnyRef</text></a></g></g><!-- node3&#45;&gt;node0 --><g class="edge inheritance" id="graph1_3_0"><g id="a_inheritance|graph1_3_0"><a xlink:title="AssetResponse is a subtype of AnyRef"><path d="M108,-114.7386C108,-105.3393 108,-94.3803 108,-86.123" stroke="#d4d4d4" fill="none"></path><polygon points="105.5501,-114.8607 108,-121.8608 110.4501,-114.8608 105.5501,-114.8607" stroke="#d4d4d4" fill="none"></polygon></a></g></g></g></svg></div>
-                <div id="diagram-controls" class="hiddenContent">
-                  <button id="diagram-zoom-out" class="diagram-btn"><i class="material-icons"></i></button>
-                  <button id="diagram-zoom-in" class="diagram-btn"><i class="material-icons"></i></button>
-                  <button title="Toggle full-screen" id="diagram-fs" class="diagram-btn to-full"><i class="material-icons"></i></button>
-                </div>
-              </div></div>
+          </div></div>
         
 
       <div id="mbrsel">
@@ -305,6 +303,11 @@ the server) or <a href="Assets$Found.html" class="extype" name="endpoints.play.s
                   </span>
                   <ol id="linearization">
                     <li class="in" name="endpoints.play.server.Assets.AssetResponse"><span>AssetResponse</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  </ol>
+                </div><div class="ancestors">
+                  <span class="filtertype">Implicitly<br />
+                  </span>
+                  <ol id="implicits"> <li class="in" name="scala.Predef.any2stringadd" data-hidden="true"><span>by any2stringadd</span></li><li class="in" name="scala.Predef.StringFormat" data-hidden="true"><span>by StringFormat</span></li><li class="in" name="scala.Predef.Ensuring" data-hidden="true"><span>by Ensuring</span></li><li class="in" name="scala.Predef.ArrowAssoc" data-hidden="true"><span>by ArrowAssoc</span></li>
                   </ol>
                 </div><div class="ancestors">
               <span class="filtertype"></span>
@@ -343,7 +346,7 @@ the server) or <a href="Assets$Found.html" class="extype" name="endpoints.play.s
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.8/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.8/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -359,10 +362,53 @@ the server) or <a href="Assets$Found.html" class="extype" name="endpoints.play.s
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.8/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.Predef.any2stringadd#+" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="+(other:String):String"></a><a id="+(String):String"></a>
+      <span class="permalink">
+      <a href="../../../endpoints/play/server/Assets$AssetResponse.html#+(other:String):String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $plus" class="implicit">+</span><span class="params">(<span name="other">other: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="endpoints.play.server.Assets.AssetResponse">AssetResponse</a> to
+            <span class="extype" name="scala.Predef.any2stringadd">any2stringadd</span>[<a href="" class="extype" name="endpoints.play.server.Assets.AssetResponse">AssetResponse</a>] performed by method any2stringadd in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>any2stringadd</dd></dl></div>
+    </li><li name="scala.Predef.ArrowAssoc#-&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="-&gt;[B](y:B):(A,B)"></a><a id="-&gt;[B](B):(AssetResponse,B)"></a>
+      <span class="permalink">
+      <a href="../../../endpoints/play/server/Assets$AssetResponse.html#-&gt;[B](y:B):(A,B)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $minus$greater" class="implicit">-&gt;</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="endpoints.play.server.Assets.AssetResponse">AssetResponse</a>, <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span>)</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="endpoints.play.server.Assets.AssetResponse">AssetResponse</a> to
+            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="endpoints.play.server.Assets.AssetResponse">AssetResponse</a>] performed by method ArrowAssoc in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd><dt>Annotations</dt><dd>
+                <span class="name">@inline</span><span class="args">()</span>
+              
+        </dd></dl></div>
     </li><li name="scala.AnyRef#==" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="==(x$1:Any):Boolean"></a><a id="==(Any):Boolean"></a>
       <span class="permalink">
@@ -375,7 +421,7 @@ the server) or <a href="Assets$Found.html" class="extype" name="endpoints.play.s
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.8/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.8/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -410,15 +456,95 @@ the server) or <a href="Assets$Found.html" class="extype" name="endpoints.play.s
         <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@native</span><span class="args">()</span>
-              
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
     </span>)</span>
               
+                <span class="name">@native</span><span class="args">()</span>
+              
         </dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A"></a><a id="ensuring((AssetResponse)⇒Boolean,⇒Any):AssetResponse"></a>
+      <span class="permalink">
+      <a href="../../../endpoints/play/server/Assets$AssetResponse.html#ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="endpoints.play.server.Assets.AssetResponse">AssetResponse</a>) ⇒ <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>, <span name="msg">msg: ⇒ <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="" class="extype" name="endpoints.play.server.Assets.AssetResponse">AssetResponse</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="endpoints.play.server.Assets.AssetResponse">AssetResponse</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="endpoints.play.server.Assets.AssetResponse">AssetResponse</a>] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:A=&gt;Boolean):A"></a><a id="ensuring((AssetResponse)⇒Boolean):AssetResponse"></a>
+      <span class="permalink">
+      <a href="../../../endpoints/play/server/Assets$AssetResponse.html#ensuring(cond:A=&gt;Boolean):A" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="endpoints.play.server.Assets.AssetResponse">AssetResponse</a>) ⇒ <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>)</span><span class="result">: <a href="" class="extype" name="endpoints.play.server.Assets.AssetResponse">AssetResponse</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="endpoints.play.server.Assets.AssetResponse">AssetResponse</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="endpoints.play.server.Assets.AssetResponse">AssetResponse</a>] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:Boolean,msg:=&gt;Any):A"></a><a id="ensuring(Boolean,⇒Any):AssetResponse"></a>
+      <span class="permalink">
+      <a href="../../../endpoints/play/server/Assets$AssetResponse.html#ensuring(cond:Boolean,msg:=&gt;Any):A" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>, <span name="msg">msg: ⇒ <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="" class="extype" name="endpoints.play.server.Assets.AssetResponse">AssetResponse</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="endpoints.play.server.Assets.AssetResponse">AssetResponse</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="endpoints.play.server.Assets.AssetResponse">AssetResponse</a>] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:Boolean):A"></a><a id="ensuring(Boolean):AssetResponse"></a>
+      <span class="permalink">
+      <a href="../../../endpoints/play/server/Assets$AssetResponse.html#ensuring(cond:Boolean):A" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>)</span><span class="result">: <a href="" class="extype" name="endpoints.play.server.Assets.AssetResponse">AssetResponse</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="endpoints.play.server.Assets.AssetResponse">AssetResponse</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="endpoints.play.server.Assets.AssetResponse">AssetResponse</a>] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
       <span class="permalink">
@@ -431,7 +557,7 @@ the server) or <a href="Assets$Found.html" class="extype" name="endpoints.play.s
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.8/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
@@ -447,7 +573,7 @@ the server) or <a href="Assets$Found.html" class="extype" name="endpoints.play.s
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.8/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.8/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -463,14 +589,37 @@ the server) or <a href="Assets$Found.html" class="extype" name="endpoints.play.s
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.8/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="symbol">classOf[java.lang.Throwable]</span>
     </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.Predef.StringFormat#formatted" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="formatted(fmtstr:String):String"></a><a id="formatted(String):String"></a>
+      <span class="permalink">
+      <a href="../../../endpoints/play/server/Assets$AssetResponse.html#formatted(fmtstr:String):String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">formatted</span><span class="params">(<span name="fmtstr">fmtstr: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="endpoints.play.server.Assets.AssetResponse">AssetResponse</a> to
+            <span class="extype" name="scala.Predef.StringFormat">StringFormat</span>[<a href="" class="extype" name="endpoints.play.server.Assets.AssetResponse">AssetResponse</a>] performed by method StringFormat in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>StringFormat</dd><dt>Annotations</dt><dd>
+                <span class="name">@inline</span><span class="args">()</span>
               
         </dd></dl></div>
     </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -504,7 +653,7 @@ the server) or <a href="Assets$Found.html" class="extype" name="endpoints.play.s
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.8/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
@@ -523,7 +672,7 @@ the server) or <a href="Assets$Found.html" class="extype" name="endpoints.play.s
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.8/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
@@ -539,7 +688,7 @@ the server) or <a href="Assets$Found.html" class="extype" name="endpoints.play.s
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.8/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
@@ -555,7 +704,7 @@ the server) or <a href="Assets$Found.html" class="extype" name="endpoints.play.s
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">notify</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.8/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -574,7 +723,7 @@ the server) or <a href="Assets$Found.html" class="extype" name="endpoints.play.s
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.8/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -625,7 +774,7 @@ the server) or <a href="Assets$Found.html" class="extype" name="endpoints.play.s
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.8/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -647,7 +796,7 @@ the server) or <a href="Assets$Found.html" class="extype" name="endpoints.play.s
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.8/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>, <span name="arg1">arg1: <a href="http://www.scala-lang.org/api/2.12.8/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.8/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.10/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>, <span name="arg1">arg1: <a href="https://www.scala-lang.org/api/2.12.10/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -669,18 +818,38 @@ the server) or <a href="Assets$Found.html" class="extype" name="endpoints.play.s
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.8/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.8/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.10/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@native</span><span class="args">()</span>
-              
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
     </span>)</span>
               
+                <span class="name">@native</span><span class="args">()</span>
+              
         </dd></dl></div>
+    </li><li name="scala.Predef.ArrowAssoc#→" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="→[B](y:B):(A,B)"></a><a id="→[B](B):(AssetResponse,B)"></a>
+      <span class="permalink">
+      <a href="../../../endpoints/play/server/Assets$AssetResponse.html#→[B](y:B):(A,B)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $u2192" class="implicit">→</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="endpoints.play.server.Assets.AssetResponse">AssetResponse</a>, <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span>)</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="endpoints.play.server.Assets.AssetResponse">AssetResponse</a> to
+            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="endpoints.play.server.Assets.AssetResponse">AssetResponse</a>] performed by method ArrowAssoc in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd></dl></div>
     </li>
               </ol>
             </div>
@@ -694,9 +863,25 @@ the server) or <a href="Assets$Found.html" class="extype" name="endpoints.play.s
         <div class="parent" name="scala.AnyRef">
               <h3>Inherited from <a href="../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">
-              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.12.8/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></h3>
+              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></h3>
             </div>
-        
+        <div class="conversion" name="scala.Predef.any2stringadd">
+              <h3>Inherited by implicit conversion any2stringadd from
+                <a href="" class="extype" name="endpoints.play.server.Assets.AssetResponse">AssetResponse</a> to <span class="extype" name="scala.Predef.any2stringadd">any2stringadd</span>[<a href="" class="extype" name="endpoints.play.server.Assets.AssetResponse">AssetResponse</a>]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.StringFormat">
+              <h3>Inherited by implicit conversion StringFormat from
+                <a href="" class="extype" name="endpoints.play.server.Assets.AssetResponse">AssetResponse</a> to <span class="extype" name="scala.Predef.StringFormat">StringFormat</span>[<a href="" class="extype" name="endpoints.play.server.Assets.AssetResponse">AssetResponse</a>]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.Ensuring">
+              <h3>Inherited by implicit conversion Ensuring from
+                <a href="" class="extype" name="endpoints.play.server.Assets.AssetResponse">AssetResponse</a> to <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="endpoints.play.server.Assets.AssetResponse">AssetResponse</a>]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.ArrowAssoc">
+              <h3>Inherited by implicit conversion ArrowAssoc from
+                <a href="" class="extype" name="endpoints.play.server.Assets.AssetResponse">AssetResponse</a> to <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="endpoints.play.server.Assets.AssetResponse">AssetResponse</a>]
+              </h3>
+            </div>
         </div>
 
         <div id="groupedMembers">

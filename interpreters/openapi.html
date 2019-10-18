@@ -21,7 +21,7 @@
             <div class="row">
               <div class="large-12 columns a_limited top-bar">
                 <div class="top-bar-left">
-                  <p>endpoints 0.10.1</p>
+                  <p>endpoints 0.11.0</p>
 
                 </div>
                 <div class="top-bar-right align-right row">
@@ -54,7 +54,7 @@
                 
                 <h1 id="openapi" class="a_section" data-magellan-target="openapi">OpenAPI<a class="a_hlink" href="#openapi"></a></h1>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
-<pre class="hljs"><code class="language-scala"><span class="hljs-string">"org.julienrf"</span> %% <span class="hljs-string">"endpoints-openapi"</span> % <span class="hljs-string">"0.10.1"</span>
+<pre class="hljs"><code class="language-scala"><span class="hljs-string">"org.julienrf"</span> %% <span class="hljs-string">"endpoints-openapi"</span> % <span class="hljs-string">"0.11.0"</span>
 </code></pre>
 </div></div>
 <p><a href="../api/endpoints/openapi/index.html">API documentation</a></p>
@@ -67,9 +67,9 @@ to generate an OpenAPI document.</p>
 <pre class="hljs"><code class="language-scala"><span class="hljs-keyword">val</span> someDocumentedResource: <span class="hljs-type">Endpoint</span>[<span class="hljs-type">Int</span>, <span class="hljs-type">String</span>] =
   endpoint(
     get(path / <span class="hljs-string">"some-resource"</span> / segment[<span class="hljs-type">Int</span>](<span class="hljs-string">"id"</span>)),
-    textResponse(docs = <span class="hljs-type">Some</span>(<span class="hljs-string">"The content of the resource"</span>))
+    ok(textResponse, docs = <span class="hljs-type">Some</span>(<span class="hljs-string">"The content of the resource"</span>))
   )</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.10.1/algebras/algebra/src/test/scala/endpoints/algebra/EndpointsDocs.scala#L77-L81" class="a_sourcelink">EndpointsDocs.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.11.0/algebras/algebra/src/test/scala/endpoints/algebra/EndpointsDocs.scala#L80-L84" class="a_sourcelink">EndpointsDocs.scala</a></div></div>
 <p>It can be documented as follows:</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
 <pre class="hljs"><code class="language-scala"><span class="hljs-keyword">import</span> endpoints.openapi.model.{<span class="hljs-type">Info</span>, <span class="hljs-type">OpenApi</span>}
@@ -78,7 +78,7 @@ to generate an OpenAPI document.</p>
   openApi(<span class="hljs-type">Info</span>(title = <span class="hljs-string">"API to get some resource"</span>, version = <span class="hljs-string">"1.0"</span>))(
     someDocumentedResource
   )</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.10.1/openapi/openapi/src/test/scala/endpoints/openapi/EndpointsDocs.scala#L8-L13" class="a_sourcelink">EndpointsDocs.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.11.0/openapi/openapi/src/test/scala/endpoints/openapi/EndpointsDocs.scala#L8-L13" class="a_sourcelink">EndpointsDocs.scala</a></div></div>
 <p>The value returned by the <code class="hljs">openApi</code> method has type <code class="hljs">endpoints.openapi.models.OpenApi</code>,
 which is an abstract model for OpenAPI documents. You can generate a JSON
 representation of it, which you can then publish to your server. For instance, using circe:</p>
@@ -92,7 +92,7 @@ representation of it, which you can then publish to your server. For instance, u
 <span class="hljs-keyword">import</span> io.circe.syntax._
 
 <span class="hljs-keyword">val</span> apiJson: <span class="hljs-type">Json</span> = api.asJson</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.10.1/openapi/openapi/src/test/scala/endpoints/openapi/EndpointsDocs.scala#L17-L25" class="a_sourcelink">EndpointsDocs.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.11.0/openapi/openapi/src/test/scala/endpoints/openapi/EndpointsDocs.scala#L17-L25" class="a_sourcelink">EndpointsDocs.scala</a></div></div>
 <p>The <code class="hljs">OpenApiSchemas</code> trait (mixed into the top-level object) provides a
 <a href="../algebras/json-schemas.html"><code class="hljs">JsonSchema</code></a> instance for the <code class="hljs">OpenApi</code> model, which
 is used by the circe <code class="hljs">JsonSchemas</code> interpreter to turn the <code class="hljs">api</code> value into a <code class="hljs">Json</code>

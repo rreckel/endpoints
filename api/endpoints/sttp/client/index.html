@@ -8,17 +8,17 @@
           <meta name="keywords" content="" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
+      
       <link href="../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
-      <script type="text/javascript" src="../../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../../lib/jquery.min.js"></script>
       <script type="text/javascript" src="../../../lib/jquery.panzoom.min.js"></script>
       <script type="text/javascript" src="../../../lib/jquery.mousewheel.min.js"></script>
       <script type="text/javascript" src="../../../lib/index.js"></script>
       <script type="text/javascript" src="../../../index.js"></script>
       <script type="text/javascript" src="../../../lib/scheduler.js"></script>
       <script type="text/javascript" src="../../../lib/template.js"></script>
-      <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
       <script type="text/javascript" src="../../../lib/modernizr.custom.js"></script><script type="text/javascript" src="../../../lib/diagrams.js" id="diagrams-js"></script>
       <script type="text/javascript">
         /* this variable can be used by the JS to determine the path to the root document */
@@ -56,7 +56,7 @@
                 <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="_root_"></a><a id="root:_root_"></a>
       <span class="permalink">
-      <a href="index.html#_root_" title="Permalink">
+      <a href="../../../index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -72,7 +72,7 @@
     </li><li name="_root_.endpoints" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="endpoints"></a><a id="endpoints:endpoints"></a>
       <span class="permalink">
-      <a href="index.html#endpoints" title="Permalink">
+      <a href="../../../endpoints/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -88,7 +88,7 @@
     </li><li name="endpoints.sttp" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="sttp"></a><a id="sttp:sttp"></a>
       <span class="permalink">
-      <a href="../endpoints/index.html#sttp" title="Permalink">
+      <a href="../../../endpoints/sttp/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -104,7 +104,7 @@
     </li><li name="endpoints.sttp.client" visbl="pub" class="indented3 current" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="client"></a><a id="client:client"></a>
       <span class="permalink">
-      <a href="../../endpoints/sttp/index.html#client" title="Permalink">
+      <a href="../../../endpoints/sttp/client/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -124,8 +124,16 @@
                         <a href="BasicAuthentication.html" title="">BasicAuthentication</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
-                        <a class="class" href="Endpoints.html" title="An interpreter for endpoints.algebra.Endpoints that builds a client issuing requests using a sttp’s com.softwaremill.sttp.SttpBackend."></a>
-                        <a href="Endpoints.html" title="An interpreter for endpoints.algebra.Endpoints that builds a client issuing requests using a sttp’s com.softwaremill.sttp.SttpBackend.">Endpoints</a>
+                        <a class="trait" href="BuiltInErrors.html" title=""></a>
+                        <a href="BuiltInErrors.html" title="">BuiltInErrors</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="Endpoints.html" title="An interpreter for endpoints.algebra.Endpoints that builds a client issuing requests using a sttp’s com.softwaremill.sttp.SttpBackend, and uses algebra.BuiltInErrors to model client and server errors."></a>
+                        <a href="Endpoints.html" title="An interpreter for endpoints.algebra.Endpoints that builds a client issuing requests using a sttp’s com.softwaremill.sttp.SttpBackend, and uses algebra.BuiltInErrors to model client and server errors.">Endpoints</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="EndpointsWithCustomErrors.html" title="An interpreter for endpoints.algebra.Endpoints that builds a client issuing requests using a sttp’s com.softwaremill.sttp.SttpBackend."></a>
+                        <a href="EndpointsWithCustomErrors.html" title="An interpreter for endpoints.algebra.Endpoints that builds a client issuing requests using a sttp’s com.softwaremill.sttp.SttpBackend.">EndpointsWithCustomErrors</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
                         <a class="trait" href="JsonEntitiesFromCodec.html" title="Interpreter for endpoints.algebra.JsonEntitiesFromCodec that encodes JSON request"></a>
@@ -175,22 +183,12 @@
 
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Interpreters backed by <a href="https://github.com/softwaremill/sttp" target="_blank">sttp</a>.
-</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/julienrf/endpoints/blob/v0.10.1/sttp/client/src/main/scala/endpoints/sttp/client/package.scala" target="_blank">package.scala</a></dd></dl><div class="toggleContainer block">
+</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/julienrf/endpoints/blob/v0.11.0/sttp/client/src/main/scala/endpoints/sttp/client/package.scala" target="_blank">package.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.12.8/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
-        </div><div class="toggleContainer block diagram-container" id="content-diagram-container">
-                <span class="toggle diagram-link">
-                  Content Hierarchy
-                </span>
-                <div class="diagram" id="content-diagram"><svg class="package-diagram" id="graph1" viewBox="0.00 0.00 282.50 94.00" height="94pt" width="283pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 90)" class="graph" id="page0,1_graph0"><polygon points="-4,4 -4,-90 278.5,-90 278.5,4 -4,4" stroke="transparent" fill="#ffffff"></polygon><!-- node0 --><g class="node trait" id="graph1_0"><g id="a_trait|graph1_0"><a xlink:title="endpoints.sttp.client.Urls" xlink:href="Urls.html#inheritance-diagram"><path d="M52.6667,-86C52.6667,-86 8.3333,-86 8.3333,-86 4.1667,-86 0,-81.8333 0,-77.6667 0,-77.6667 0,-69.3333 0,-69.3333 0,-65.1667 4.1667,-61 8.3333,-61 8.3333,-61 52.6667,-61 52.6667,-61 56.8333,-61 61,-65.1667 61,-69.3333 61,-69.3333 61,-77.6667 61,-77.6667 61,-81.8333 56.8333,-86 52.6667,-86" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-80.5" x="10.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-71.1" x="31.5" text-anchor="start">Urls</text></a></g></g><!-- node3 --><g class="node class" id="graph1_3"><g id="a_class|graph1_3"><a xlink:title="endpoints.sttp.client.Endpoints" xlink:href="Endpoints.html#inheritance-diagram"><path d="M168.1667,-25C168.1667,-25 86.8333,-25 86.8333,-25 82.6667,-25 78.5,-20.8333 78.5,-16.6667 78.5,-16.6667 78.5,-8.3333 78.5,-8.3333 78.5,-4.1667 82.6667,0 86.8333,0 86.8333,0 168.1667,0 168.1667,0 172.3333,0 176.5,-4.1667 176.5,-8.3333 176.5,-8.3333 176.5,-16.6667 176.5,-16.6667 176.5,-20.8333 172.3333,-25 168.1667,-25" stroke="#418565" fill="#418565"></path><image xlink:href="../../../lib/class_diagram.png" y="-19.5" x="88.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="109.5" text-anchor="start">Endpoints[R]</text></a></g></g><!-- node0&#45;&gt;node3 --><g class="edge inheritance" id="graph1_0_3"><g id="a_inheritance|graph1_0_3"><a xlink:title="Endpoints[R] is a subtype of Urls"><path d="M56.7129,-57.0156C72.6687,-46.9816 92.7369,-34.3614 107.4273,-25.123" stroke="#d4d4d4" fill="none"></path><polygon points="55.2199,-55.0603 50.5985,-60.8608 57.8284,-59.2083 55.2199,-55.0603" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node1 --><g class="node trait" id="graph1_1"><g id="a_trait|graph1_1"><a xlink:title="endpoints.sttp.client.StatusCodes" xlink:href="StatusCodes.html#inheritance-diagram"><path d="M167.6667,-86C167.6667,-86 87.3333,-86 87.3333,-86 83.1667,-86 79,-81.8333 79,-77.6667 79,-77.6667 79,-69.3333 79,-69.3333 79,-65.1667 83.1667,-61 87.3333,-61 87.3333,-61 167.6667,-61 167.6667,-61 171.8333,-61 176,-65.1667 176,-69.3333 176,-69.3333 176,-77.6667 176,-77.6667 176,-81.8333 171.8333,-86 167.6667,-86" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-80.5" x="89.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-71.1" x="110.5" text-anchor="start">StatusCodes</text></a></g></g><!-- node1&#45;&gt;node3 --><g class="edge inheritance" id="graph1_1_3"><g id="a_inheritance|graph1_1_3"><a xlink:title="Endpoints[R] is a subtype of StatusCodes"><path d="M127.5,-53.7386C127.5,-44.3393 127.5,-33.3803 127.5,-25.123" stroke="#d4d4d4" fill="none"></path><polygon points="125.0501,-53.8607 127.5,-60.8608 129.9501,-53.8608 125.0501,-53.8607" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node2 --><g class="node trait" id="graph1_2"><g id="a_trait|graph1_2"><a xlink:title="endpoints.sttp.client.Methods" xlink:href="Methods.html#inheritance-diagram"><path d="M266.1667,-86C266.1667,-86 202.8333,-86 202.8333,-86 198.6667,-86 194.5,-81.8333 194.5,-77.6667 194.5,-77.6667 194.5,-69.3333 194.5,-69.3333 194.5,-65.1667 198.6667,-61 202.8333,-61 202.8333,-61 266.1667,-61 266.1667,-61 270.3333,-61 274.5,-65.1667 274.5,-69.3333 274.5,-69.3333 274.5,-77.6667 274.5,-77.6667 274.5,-81.8333 270.3333,-86 266.1667,-86" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-80.5" x="204.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-71.1" x="225.5" text-anchor="start">Methods</text></a></g></g><!-- node2&#45;&gt;node3 --><g class="edge inheritance" id="graph1_2_3"><g id="a_inheritance|graph1_2_3"><a xlink:title="Endpoints[R] is a subtype of Methods"><path d="M206.0509,-57.2814C188.3763,-47.2052 165.9904,-34.4431 149.6421,-25.123" stroke="#d4d4d4" fill="none"></path><polygon points="205.0349,-59.5223 212.3295,-60.8608 207.4617,-55.2654 205.0349,-59.5223" stroke="#d4d4d4" fill="none"></polygon></a></g></g></g></svg></div>
-                <div id="diagram-controls" class="hiddenContent">
-                  <button id="diagram-zoom-out" class="diagram-btn"><i class="material-icons"></i></button>
-                  <button id="diagram-zoom-in" class="diagram-btn"><i class="material-icons"></i></button>
-                  <button title="Toggle full-screen" id="diagram-fs" class="diagram-btn to-full"><i class="material-icons"></i></button>
-                </div>
-              </div></div>
+          <div class="superTypes hiddenContent"><a href="../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
+        </div></div>
         
 
       
@@ -204,7 +202,7 @@
               <ol><li name="endpoints.sttp.client.BasicAuthentication" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="interpreters">
       <a id="BasicAuthentication[R[_]]extendsBasicAuthentication"></a><a id="BasicAuthentication[R[_]]:BasicAuthentication[R]"></a>
       <span class="permalink">
-      <a href="../../../endpoints/sttp/client/index.html#BasicAuthentication[R[_]]extendsBasicAuthentication" title="Permalink">
+      <a href="../../../endpoints/sttp/client/BasicAuthentication.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -217,10 +215,26 @@
       </span>
       
       <p class="shortcomment cmt"></p>
-    </li><li name="endpoints.sttp.client.Endpoints" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="interpreters">
-      <a id="Endpoints[R[_]]extendsEndpointswithUrlswithMethodswithStatusCodes"></a><a id="Endpoints[R[_]]:Endpoints[R]"></a>
+    </li><li name="endpoints.sttp.client.BuiltInErrors" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="BuiltInErrors[R[_]]extendsBuiltInErrors"></a><a id="BuiltInErrors[R[_]]:BuiltInErrors[R]"></a>
       <span class="permalink">
-      <a href="../../../endpoints/sttp/client/index.html#Endpoints[R[_]]extendsEndpointswithUrlswithMethodswithStatusCodes" title="Permalink">
+      <a href="../../../endpoints/sttp/client/BuiltInErrors.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="BuiltInErrors.html"><span class="name">BuiltInErrors</span></a><span class="tparams">[<span name="R">R<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="result"> extends <a href="../../algebra/BuiltInErrors.html" class="extype" name="endpoints.algebra.BuiltInErrors">algebra.BuiltInErrors</a></span>
+      </span>
+      
+      
+    </li><li name="endpoints.sttp.client.Endpoints" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="interpreters">
+      <a id="Endpoints[R[_]]extendsEndpointswithEndpointsWithCustomErrors[R]withBuiltInErrors[R]"></a><a id="Endpoints[R[_]]:Endpoints[R]"></a>
+      <span class="permalink">
+      <a href="../../../endpoints/sttp/client/Endpoints.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -229,17 +243,38 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="An interpreter for endpoints.algebra.Endpoints that builds a client issuing requests using a sttp’s com.softwaremill.sttp.SttpBackend." href="Endpoints.html"><span class="name">Endpoints</span></a><span class="tparams">[<span name="R">R<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="result"> extends <a href="../../algebra/Endpoints.html" class="extype" name="endpoints.algebra.Endpoints">algebra.Endpoints</a> with <a href="Urls.html" class="extype" name="endpoints.sttp.client.Urls">Urls</a> with <a href="Methods.html" class="extype" name="endpoints.sttp.client.Methods">Methods</a> with <a href="StatusCodes.html" class="extype" name="endpoints.sttp.client.StatusCodes">StatusCodes</a></span>
+        <a title="An interpreter for endpoints.algebra.Endpoints that builds a client issuing requests using a sttp’s com.softwaremill.sttp.SttpBackend, and uses algebra.BuiltInErrors to model client and server errors." href="Endpoints.html"><span class="name">Endpoints</span></a><span class="tparams">[<span name="R">R<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="result"> extends <a href="../../algebra/Endpoints.html" class="extype" name="endpoints.algebra.Endpoints">algebra.Endpoints</a> with <a href="EndpointsWithCustomErrors.html" class="extype" name="endpoints.sttp.client.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a>[<span class="extype" name="endpoints.sttp.client.Endpoints.R">R</span>] with <a href="BuiltInErrors.html" class="extype" name="endpoints.sttp.client.BuiltInErrors">BuiltInErrors</a>[<span class="extype" name="endpoints.sttp.client.Endpoints.R">R</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">An interpreter for <a href="../../algebra/Endpoints.html" class="extype" name="endpoints.algebra.Endpoints">endpoints.algebra.Endpoints</a> that builds a client issuing requests using
+a sttp’s <code>com.softwaremill.sttp.SttpBackend</code>, and uses <a href="../../algebra/BuiltInErrors.html" class="extype" name="endpoints.algebra.BuiltInErrors">algebra.BuiltInErrors</a> to model client
+and server errors.</p><div class="fullcomment"><div class="comment cmt"><p>An interpreter for <a href="../../algebra/Endpoints.html" class="extype" name="endpoints.algebra.Endpoints">endpoints.algebra.Endpoints</a> that builds a client issuing requests using
+a sttp’s <code>com.softwaremill.sttp.SttpBackend</code>, and uses <a href="../../algebra/BuiltInErrors.html" class="extype" name="endpoints.algebra.BuiltInErrors">algebra.BuiltInErrors</a> to model client
+and server errors.</p><p>Doest not support streaming responses for now
+</p></div><dl class="paramcmts block"><dt class="tparam">R</dt><dd class="cmt"><p>The monad wrapping the response. It is defined by the backend</p></dd></dl></div>
+    </li><li name="endpoints.sttp.client.EndpointsWithCustomErrors" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="EndpointsWithCustomErrors[R[_]]extendsEndpointsWithCustomErrorswithUrlswithMethodswithStatusCodes"></a><a id="EndpointsWithCustomErrors[R[_]]:EndpointsWithCustomErrors[R]"></a>
+      <span class="permalink">
+      <a href="../../../endpoints/sttp/client/EndpointsWithCustomErrors.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="An interpreter for endpoints.algebra.Endpoints that builds a client issuing requests using a sttp’s com.softwaremill.sttp.SttpBackend." href="EndpointsWithCustomErrors.html"><span class="name">EndpointsWithCustomErrors</span></a><span class="tparams">[<span name="R">R<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="result"> extends <a href="../../algebra/EndpointsWithCustomErrors.html" class="extype" name="endpoints.algebra.EndpointsWithCustomErrors">algebra.EndpointsWithCustomErrors</a> with <a href="Urls.html" class="extype" name="endpoints.sttp.client.Urls">Urls</a> with <a href="Methods.html" class="extype" name="endpoints.sttp.client.Methods">Methods</a> with <a href="StatusCodes.html" class="extype" name="endpoints.sttp.client.StatusCodes">StatusCodes</a></span>
       </span>
       
       <p class="shortcomment cmt">An interpreter for <a href="../../algebra/Endpoints.html" class="extype" name="endpoints.algebra.Endpoints">endpoints.algebra.Endpoints</a> that builds a client issuing requests using
 a sttp’s <code>com.softwaremill.sttp.SttpBackend</code>.</p><div class="fullcomment"><div class="comment cmt"><p>An interpreter for <a href="../../algebra/Endpoints.html" class="extype" name="endpoints.algebra.Endpoints">endpoints.algebra.Endpoints</a> that builds a client issuing requests using
-a sttp’s <code>com.softwaremill.sttp.SttpBackend</code>.</p><p>Doest not support streaming responses for now
+a sttp’s <code>com.softwaremill.sttp.SttpBackend</code>.
 </p></div><dl class="paramcmts block"><dt class="tparam">R</dt><dd class="cmt"><p>The monad wrapping the response. It is defined by the backend</p></dd></dl></div>
     </li><li name="endpoints.sttp.client.JsonEntitiesFromCodec" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="interpreters">
       <a id="JsonEntitiesFromCodec[R[_]]extendsJsonEntitiesFromCodec"></a><a id="JsonEntitiesFromCodec[R[_]]:JsonEntitiesFromCodec[R]"></a>
       <span class="permalink">
-      <a href="../../../endpoints/sttp/client/index.html#JsonEntitiesFromCodec[R[_]]extendsJsonEntitiesFromCodec" title="Permalink">
+      <a href="../../../endpoints/sttp/client/JsonEntitiesFromCodec.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -255,7 +290,7 @@ a sttp’s <code>com.softwaremill.sttp.SttpBackend</code>.</p><p>Doest not suppo
     </li><li name="endpoints.sttp.client.Methods" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="interpreters">
       <a id="MethodsextendsMethods"></a><a id="Methods:Methods"></a>
       <span class="permalink">
-      <a href="../../../endpoints/sttp/client/index.html#MethodsextendsMethods" title="Permalink">
+      <a href="../../../endpoints/sttp/client/Methods.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -271,7 +306,7 @@ a sttp’s <code>com.softwaremill.sttp.SttpBackend</code>.</p><p>Doest not suppo
     </li><li name="endpoints.sttp.client.MuxEndpoints" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="interpreters">
       <a id="MuxEndpoints[R[_]]extendsEndpoints"></a><a id="MuxEndpoints[R[_]]:MuxEndpoints[R]"></a>
       <span class="permalink">
-      <a href="../../../endpoints/sttp/client/index.html#MuxEndpoints[R[_]]extendsEndpoints" title="Permalink">
+      <a href="../../../endpoints/sttp/client/MuxEndpoints.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -287,7 +322,7 @@ a sttp’s <code>com.softwaremill.sttp.SttpBackend</code>.</p><p>Doest not suppo
     </li><li name="endpoints.sttp.client.StatusCodes" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="StatusCodesextendsStatusCodes"></a><a id="StatusCodes:StatusCodes"></a>
       <span class="permalink">
-      <a href="../../../endpoints/sttp/client/index.html#StatusCodesextendsStatusCodes" title="Permalink">
+      <a href="../../../endpoints/sttp/client/StatusCodes.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -303,7 +338,7 @@ a sttp’s <code>com.softwaremill.sttp.SttpBackend</code>.</p><p>Doest not suppo
     </li><li name="endpoints.sttp.client.Urls" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="interpreters">
       <a id="UrlsextendsUrls"></a><a id="Urls:Urls"></a>
       <span class="permalink">
-      <a href="../../../endpoints/sttp/client/index.html#UrlsextendsUrls" title="Permalink">
+      <a href="../../../endpoints/sttp/client/Urls.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -332,7 +367,7 @@ a sttp’s <code>com.softwaremill.sttp.SttpBackend</code>.</p><p>Doest not suppo
         <div class="parent" name="scala.AnyRef">
               <h3>Inherited from <a href="../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">
-              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.12.8/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></h3>
+              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></h3>
             </div>
         
         </div>

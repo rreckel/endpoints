@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../theme/css/foundation.min.css">
     <link rel="stylesheet" href="../theme/css/app.css">
     
-     <link rel="stylesheet" href="../theme/highlight.js/styles/github-gist.css">  <link rel="stylesheet" href="../theme/css/foundation-icons.custom.css"> 
+     <link rel="stylesheet" href="../theme/css/mermaid.custom.css">  <link rel="stylesheet" href="../theme/highlight.js/styles/github-gist.css">  <link rel="stylesheet" href="../theme/css/foundation-icons.custom.css"> 
     
      <link rel="toc" href="../site-contents.html"  title="Table of Contents"  /> 
   </head>
@@ -21,7 +21,7 @@
             <div class="row">
               <div class="large-12 columns a_limited top-bar">
                 <div class="top-bar-left">
-                  <p>endpoints 0.10.1</p>
+                  <p>endpoints 0.11.0</p>
 
                 </div>
                 <div class="top-bar-right align-right row">
@@ -52,66 +52,95 @@
   </ul>
  
                 
+                   <noscript> <blockquote class="warning">
+<p>This page requires JavaScript. Please enable JavaScript in your browser.</p>
+</blockquote>
+ </noscript> 
+                
                 <h1 id="json-codecs" class="a_section" data-magellan-target="json-codecs">JSON codecs<a class="a_hlink" href="#json-codecs"></a></h1>
 <p>The <a href="../algebras/json-entities.html">JSON entities algebras</a> show that several options
 are available to define endpoints having JSON entities. In this guide, we show
-which options should be used in which case, and which interpreters are compatible
+which option should be used in which case, and which interpreters are compatible
 with which algebras.</p>
-<h2 id="use-codecs-at-the-algebra-level" class="a_section" data-magellan-target="use-codecs-at-the-algebra-level">Use codecs at the algebra level<a class="a_hlink" href="#use-codecs-at-the-algebra-level"></a></h2>
-<p>The most general algebra for defining JSON entities uses separate
-types for request and response entities:</p>
-<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
-<pre class="hljs"><code class="language-scala"><span class="hljs-comment">/** Type class defining how to represent the `A` information as a JSON request entity */</span>
-<span class="hljs-class"><span class="hljs-keyword">type</span> <span class="hljs-title">JsonRequest</span>[<span class="hljs-type">A</span>]</span>
+<p>The following diagram summarizes which algebra to use in which case:</p>
+<div class="mermaid" id="_id0"><pre class="mermaid_src" style="display: none">graph TB
+Doc(Do I want to publish documentation?)--&gt;|yes| JsonSchemaEntities
+Doc --&gt;|no| Codec(Do I want to implement both a client and a server?)
+Codec --&gt;|yes| JsonEntitiesFromCodec
+Codec --&gt;|no| JsonEntities
 
-<span class="hljs-comment">/** Type class defining how to represent the `A` information as a JSON response entity */</span>
-<span class="hljs-class"><span class="hljs-keyword">type</span> <span class="hljs-title">JsonResponse</span>[<span class="hljs-type">A</span>]</span></code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.10.1/algebras/algebra/src/main/scala/endpoints/algebra/JsonEntities.scala#L23-L27" class="a_sourcelink">JsonEntities.scala</a></div></div>
-<p>However, in case your endpoint definitions are interpreted in multiple ways these types
-should be aligned so that requests and responses are consistently encoded, decoded and
-documented by client, server and documentation interpreters. A consequence of this is that an
-implicit instance of such codecs has to be available for your data types at the
-definition-site of your endpoints.</p>
-<p>The next sections show how to use the two families of “codec”-based <code class="hljs">JsonEntities</code> algebra
-specializations: <code class="hljs">JsonEntitiesFromCodec</code> and <code class="hljs">JsonSchemaEntities</code>.</p>
-<h2 id="jsonentitiesfromcodec" class="a_section" data-magellan-target="jsonentitiesfromcodec"><code class="hljs">JsonEntitiesFromCodec</code><a class="a_hlink" href="#jsonentitiesfromcodec"></a></h2>
+style JsonSchemaEntities fill:#fff
+style JsonEntitiesFromCodec fill:#fff
+style JsonEntities fill:#fff
+</pre></div>
+<p>The first question to ask is “do I want to publish documentation of my
+endpoints?”. In order to document the JSON entities of your requests and
+responses you need a JSON schema for them, that’s why you have to use the
+<code class="hljs">JsonSchemaEntities</code> algebra. See <a href="json-codecs.html#jsonschemaentities">below</a> for more details.</p>
+<p>In case you don’t need to document the schema of your JSON entities, the
+second question to ask is “do I implement both a client and a server?”.
+If this is the case, then you need to be able to both encode and decode
+each JSON entity (an entity encoded by the server will be decoded by the
+client, and <em>vice versa</em>). To ensure that encoders and decoders are consistent
+together both have to be provided at the definition site of your endpoints, that’s
+why you should use the <code class="hljs">JsonEntitiesFromCodec</code> algebra. See
+<a href="json-codecs.html#jsonentitiesfromcodec">below</a> for more details.</p>
+<p>Last, if you answered “no” to both questions, then you don’t need to use an algebra,
+you can directly use the <code class="hljs">JsonEntities</code> interpreter for your specific client or server.
+With this approach, you will have to provide either an encoder or a decoder for each
+JSON entity on case-by-case basis: if you implement a client for an endpoint whose
+response contains a JSON entity, you will only need a decoder.</p>
+<p>The next section reminds general information about the <code class="hljs">JsonEntities</code> hierarchy,
+and the remaining sections provide more details on how to use <code class="hljs">JsonSchemaEntities</code>
+and <code class="hljs">JsonEntitiesFromCodec</code>.</p>
+<h2 id="the-jsonentities-hierarchy" class="a_section" data-magellan-target="the-jsonentities-hierarchy">The <code class="hljs">JsonEntities</code> hierarchy<a class="a_hlink" href="#the-jsonentities-hierarchy"></a></h2>
+<p>The following diagram shows the relations between the three aforementioned algebras,
+<code class="hljs">JsonEntities</code>, <code class="hljs">JsonEntitiesFromCodec</code>, and <code class="hljs">JsonSchemaEntities</code>, and their relations
+with the other algebras:</p>
+<p><img src="json-entities.svg" alt="" /></p>
+<p>The <code class="hljs">JsonEntities</code> algebra adds to the <code class="hljs">Endpoints</code> algebra the capability to describe
+JSON entities in requests and responses. The <code class="hljs">JsonEntitiesFromCodec</code> algebra refines
+the <code class="hljs">JsonEntities</code> algebra by aligning the request and response entities to the same
+<code class="hljs">JsonCodec</code> type. Finally, the <code class="hljs">JsonSchemaEntities</code> algebra refines the <code class="hljs">JsonEntities</code>
+algebra by aligning the request and response entities to the same <code class="hljs">JsonSchema</code> type.</p>
+<h2 id="jsonschemaentities" class="a_section" data-magellan-target="jsonschemaentities"><code class="hljs">JsonSchemaEntities</code><a class="a_hlink" href="#jsonschemaentities"></a></h2>
 <h3 id="algebra" class="a_section" data-magellan-target="algebra">Algebra<a class="a_hlink" href="#algebra"></a></h3>
+<p>The <code class="hljs">JsonSchemaEntities</code> algebra allows you to define a schema for your JSON entities.
+This schema can then be used to derive a documentation (by applying the <code class="hljs">endpoints.openapi.JsonSchemaEntities</code>
+interpreter), or codecs (by applying a corresponding interpreter for your JSON library, e.g.
+<code class="hljs">endpoints.akkahttp.server.circe.JsonSchemaEntities</code> to use Circe in an Akka HTTP server).</p>
+<p>Both the <code class="hljs">JsonRequest</code> and <code class="hljs">JsonResponse</code> types are fixed to the
+<code class="hljs">JsonSchema</code> type provided by the <a href="../algebras/json-schemas.html">JsonSchemas</a> algebra. This means
+that you have to define such a <code class="hljs">JsonSchema[A]</code> implicit value (as explained in the <code class="hljs">JsonSchemas</code>
+documentation) for each type <code class="hljs">A</code> that you want to carry as a JSON entity.</p>
+<h3 id="interpreters" class="a_section" data-magellan-target="interpreters">Interpreters<a class="a_hlink" href="#interpreters"></a></h3>
+<p>To interpret endpoints defined with this algebra, pick an interpreter that matches your
+<a href="../algebras-and-interpreters.html#interpreters">family</a> of interpreters and, if relevant,
+the underlying JSON library to use. For instance, the
+<code class="hljs">endpoints.play.server.circe.JsonSchemaEntities</code> trait is a server interpreter based
+on Play framework that uses the circe JSON library.</p>
+<h2 id="jsonentitiesfromcodec" class="a_section" data-magellan-target="jsonentitiesfromcodec"><code class="hljs">JsonEntitiesFromCodec</code><a class="a_hlink" href="#jsonentitiesfromcodec"></a></h2>
+<h3 id="algebra-1" class="a_section" data-magellan-target="algebra-1">Algebra<a class="a_hlink" href="#algebra-1"></a></h3>
 <p>In case you don’t need to document the JSON schemas of your request and response entities, the
 <code class="hljs">JsonEntitiesFromCodec</code> family of algebras is the preferred approach. These algebras fix both
 the <code class="hljs">JsonRequest</code> and <code class="hljs">JsonResponse</code> types to a same (abstract) <code class="hljs">JsonCodec</code> type:</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
 <pre class="hljs"><code class="language-scala"><span class="hljs-comment">/** A JSON codec type class */</span>
 <span class="hljs-class"><span class="hljs-keyword">type</span> <span class="hljs-title">JsonCodec</span>[<span class="hljs-type">A</span>]</span></code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.10.1/algebras/algebra/src/main/scala/endpoints/algebra/JsonEntities.scala#L48-L49" class="a_sourcelink">JsonEntities.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.11.0/algebras/algebra/src/main/scala/endpoints/algebra/JsonEntities.scala#L48-L49" class="a_sourcelink">JsonEntities.scala</a></div></div>
 <p>Generally, you want to use a <code class="hljs">JsonEntitiesFromCodec</code> algebra that fixes this <code class="hljs">JsonCodec</code> type to
 a concrete type. An example is <code class="hljs">endpoints.algebra.playjson.JsonEntitiesFromCodec</code>, which
 aligns the <code class="hljs">JsonCodec</code> type with Play’s <code class="hljs">Format</code> type:</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
 <pre class="hljs"><code class="language-scala"><span class="hljs-class"><span class="hljs-keyword">type</span> <span class="hljs-title">JsonCodec</span>[<span class="hljs-type">A</span>] </span>= <span class="hljs-type">Format</span>[<span class="hljs-type">A</span>]</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.10.1/algebras/algebra-playjson/src/main/scala/endpoints/algebra/playjson/JsonEntitiesFromCodec.scala#L61" class="a_sourcelink">JsonEntitiesFromCodec.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.11.0/algebras/algebra-playjson/src/main/scala/endpoints/algebra/playjson/JsonEntitiesFromCodec.scala#L62" class="a_sourcelink">JsonEntitiesFromCodec.scala</a></div></div>
 <p>The <a href="../algebras/json-entities.html#jsonentitiesfromcodec">JSON entities algebra</a> documentation page
 shows the list of <code class="hljs">JsonEntitiesFromCodec</code> algebras that fixes the <code class="hljs">JsonCodec</code> type to a concrete type.</p>
-<h3 id="interpreters" class="a_section" data-magellan-target="interpreters">Interpreters<a class="a_hlink" href="#interpreters"></a></h3>
+<h3 id="interpreters-1" class="a_section" data-magellan-target="interpreters-1">Interpreters<a class="a_hlink" href="#interpreters-1"></a></h3>
 <p>To interpret endpoints defined with such algebras, apply any interpreter named <code class="hljs">JsonEntitiesFromCodec</code>
 that matches your <a href="../algebras-and-interpreters.html#interpreters">family</a> of interpreters. For instance,
 if you use interpreters from the <code class="hljs">endpoints.xhr</code> package (ie. the Scala.js web interpreters), you
 should use the <code class="hljs">endpoints.xhr.JsonEntitiesFromCodec</code> interpreter.</p>
-<h2 id="jsonschemaentities" class="a_section" data-magellan-target="jsonschemaentities"><code class="hljs">JsonSchemaEntities</code><a class="a_hlink" href="#jsonschemaentities"></a></h2>
-<h3 id="algebra-1" class="a_section" data-magellan-target="algebra-1">Algebra<a class="a_hlink" href="#algebra-1"></a></h3>
-<p>The <code class="hljs">endpoints.algebra.JsonSchemaEntities</code> algebra allows you to document the JSON schema of request
-and response entities (when you apply a documentation interpreter to endpoints defined with this
-algebra). Both the <code class="hljs">JsonRequest</code> and <code class="hljs">JsonResponse</code> types are fixed to the
-<code class="hljs">JsonSchema</code> type provided by the <a href="../algebras/json-schemas.html">JsonSchemas</a> algebra:</p>
-<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
-<pre class="hljs"><code class="language-scala"><span class="hljs-class"><span class="hljs-keyword">type</span> <span class="hljs-title">JsonRequest</span>[<span class="hljs-type">A</span>] </span>= <span class="hljs-type">JsonSchema</span>[<span class="hljs-type">A</span>]
-<span class="hljs-class"><span class="hljs-keyword">type</span> <span class="hljs-title">JsonResponse</span>[<span class="hljs-type">A</span>] </span>= <span class="hljs-type">JsonSchema</span>[<span class="hljs-type">A</span>]</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.10.1/algebras/algebra/src/main/scala/endpoints/algebra/JsonSchemaEntities.scala#L14-L15" class="a_sourcelink">JsonSchemaEntities.scala</a></div></div>
-<h3 id="interpreters-1" class="a_section" data-magellan-target="interpreters-1">Interpreters<a class="a_hlink" href="#interpreters-1"></a></h3>
-<p>To interpret endpoints defined with this algebra, pick an interpreter that matches your
-<a href="../algebras-and-interpreters.html#interpreters">family</a> of interpreters and, if relevant,
-the underlying JSON library to use. For instance, the
-<code class="hljs">endpoints.play.server.circe.JsonSchemaEntities</code> trait is a server interpreter based
-on Play framework that uses the circe JSON library.</p>
 
                  
   <ul class="menu align-right simple a_navbar a_navbar_bottom">
@@ -226,7 +255,7 @@ on Play framework that uses the circe JSON library.</p>
   
     <li>
       
-         <a href="#use-codecs-at-the-algebra-level">Use codecs at the algebra level</a> 
+         <a href="#the-jsonentities-hierarchy">The JsonEntities hierarchy</a> 
       
       
     </li>
@@ -235,7 +264,7 @@ on Play framework that uses the circe JSON library.</p>
   
     <li>
       
-         <a href="#jsonentitiesfromcodec">JsonEntitiesFromCodec</a> 
+         <a href="#jsonschemaentities">JsonSchemaEntities</a> 
       
       
         <ul class="vertical menu">  
@@ -264,7 +293,7 @@ on Play framework that uses the circe JSON library.</p>
   
     <li>
       
-         <a href="#jsonschemaentities">JsonSchemaEntities</a> 
+         <a href="#jsonentitiesfromcodec">JsonEntitiesFromCodec</a> 
       
       
         <ul class="vertical menu">  
@@ -321,7 +350,7 @@ on Play framework that uses the circe JSON library.</p>
     <script src="../theme/js/jquery.min.js"></script>
     <script src="../theme/js/what-input.min.js"></script>
     <script src="../theme/js/foundation.min.js"></script>
-    
+     <script src="../theme/js/mermaidAPI-0.5.8.min.js"></script> 
     <script src="../theme/js/app.js"></script>
     
   </body>

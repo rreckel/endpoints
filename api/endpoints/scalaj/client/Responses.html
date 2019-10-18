@@ -8,17 +8,17 @@
           <meta name="keywords" content="" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
+      
       <link href="../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
-      <script type="text/javascript" src="../../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../../lib/jquery.min.js"></script>
       <script type="text/javascript" src="../../../lib/jquery.panzoom.min.js"></script>
       <script type="text/javascript" src="../../../lib/jquery.mousewheel.min.js"></script>
       <script type="text/javascript" src="../../../lib/index.js"></script>
       <script type="text/javascript" src="../../../index.js"></script>
       <script type="text/javascript" src="../../../lib/scheduler.js"></script>
       <script type="text/javascript" src="../../../lib/template.js"></script>
-      <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
       <script type="text/javascript" src="../../../lib/modernizr.custom.js"></script><script type="text/javascript" src="../../../lib/diagrams.js" id="diagrams-js"></script>
       <script type="text/javascript">
         /* this variable can be used by the JS to determine the path to the root document */
@@ -56,7 +56,7 @@
                 <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="_root_"></a><a id="root:_root_"></a>
       <span class="permalink">
-      <a href="index.html#_root_" title="Permalink">
+      <a href="../../../index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -72,7 +72,7 @@
     </li><li name="_root_.endpoints" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="endpoints"></a><a id="endpoints:endpoints"></a>
       <span class="permalink">
-      <a href="index.html#endpoints" title="Permalink">
+      <a href="../../../endpoints/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -88,7 +88,7 @@
     </li><li name="endpoints.scalaj" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="scalaj"></a><a id="scalaj:scalaj"></a>
       <span class="permalink">
-      <a href="../endpoints/index.html#scalaj" title="Permalink">
+      <a href="../../../endpoints/scalaj/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -104,7 +104,7 @@
     </li><li name="endpoints.scalaj.client" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="client"></a><a id="client:client"></a>
       <span class="permalink">
-      <a href="../../endpoints/scalaj/index.html#client" title="Permalink">
+      <a href="../../../endpoints/scalaj/client/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -125,8 +125,16 @@
                         <a href="BasicAuthentication.html" title="">BasicAuthentication</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
+                        <a class="trait" href="BuiltInErrors.html" title=""></a>
+                        <a href="BuiltInErrors.html" title="">BuiltInErrors</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
                         <a class="trait" href="Endpoints.html" title=""></a>
                         <a href="Endpoints.html" title="">Endpoints</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="EndpointsWithCustomErrors.html" title=""></a>
+                        <a href="EndpointsWithCustomErrors.html" title="">EndpointsWithCustomErrors</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
                         <a class="trait" href="JsonEntitiesFromCodec.html" title="Interpreter for endpoints.algebra.JsonEntitiesFromCodec that encodes JSON requests and decodes JSON responses."></a>
@@ -179,27 +187,17 @@
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/julienrf/endpoints/blob/v0.10.1/scalaj/client/src/main/scala/endpoints/scalaj/client/Responses.scala" target="_blank">Responses.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"></div><dl class="attributes block"> <dt>Self Type</dt><dd><a href="" class="extype" name="endpoints.scalaj.client.Responses">Responses</a> with <a href="../../algebra/Errors.html" class="extype" name="endpoints.algebra.Errors">Errors</a></dd><dt>Source</dt><dd><a href="https://github.com/julienrf/endpoints/blob/v0.11.0/scalaj/client/src/main/scala/endpoints/scalaj/client/Responses.scala" target="_blank">Responses.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="StatusCodes.html" class="extype" name="endpoints.scalaj.client.StatusCodes">StatusCodes</a>, <a href="../../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">algebra.Responses</a>, <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">algebra.StatusCodes</a>, <a href="../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.12.8/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
+          <div class="superTypes hiddenContent"><a href="StatusCodes.html" class="extype" name="endpoints.scalaj.client.StatusCodes">StatusCodes</a>, <a href="../../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">algebra.Responses</a>, <a href="../../InvariantFunctorSyntax.html" class="extype" name="endpoints.InvariantFunctorSyntax">endpoints.InvariantFunctorSyntax</a>, <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">algebra.StatusCodes</a>, <a href="../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
         </div><div class="toggleContainer block">
             <span class="toggle">
               Known Subclasses
             </span>
-            <div class="subClasses hiddenContent"><a href="BasicAuthentication.html" class="extype" name="endpoints.scalaj.client.BasicAuthentication">BasicAuthentication</a>, <a href="Endpoints.html" class="extype" name="endpoints.scalaj.client.Endpoints">Endpoints</a>, <a href="JsonEntitiesFromCodec.html" class="extype" name="endpoints.scalaj.client.JsonEntitiesFromCodec">JsonEntitiesFromCodec</a></div>
-          </div><div class="toggleContainer block diagram-container" id="inheritance-diagram-container">
-                <span class="toggle diagram-link">
-                  Type Hierarchy
-                </span>
-                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph1" viewBox="0.00 0.00 249.50 155.00" height="155pt" width="250pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 151)" class="graph" id="page0,1_graph0"><polygon points="-4,4 -4,-151 245.5,-151 245.5,4 -4,4" stroke="transparent" fill="#ffffff"></polygon><g class="cluster" id="clust1"></g><g class="cluster" id="clust2"></g><!-- node0 --><g class="node this trait" id="graph1_0"><g id="a_this trait|graph1_0"><a xlink:title="endpoints.scalaj.client.Responses (this trait)" xlink:href="#inheritance-diagram"><path d="M164.6667,-86C164.6667,-86 91.3333,-86 91.3333,-86 87.1667,-86 83,-81.8333 83,-77.6667 83,-77.6667 83,-69.3333 83,-69.3333 83,-65.1667 87.1667,-61 91.3333,-61 91.3333,-61 164.6667,-61 164.6667,-61 168.8333,-61 173,-65.1667 173,-69.3333 173,-69.3333 173,-77.6667 173,-77.6667 173,-81.8333 168.8333,-86 164.6667,-86" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-80.5" x="93" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-71.1" x="114" text-anchor="start">Responses</text></a></g></g><!-- node1 --><g class="node trait" id="graph1_1"><g id="a_trait|graph1_1"><a xlink:title="endpoints.scalaj.client.Endpoints" xlink:href="Endpoints.html#inheritance-diagram"><path d="M162.6667,-25C162.6667,-25 93.3333,-25 93.3333,-25 89.1667,-25 85,-20.8333 85,-16.6667 85,-16.6667 85,-8.3333 85,-8.3333 85,-4.1667 89.1667,0 93.3333,0 93.3333,0 162.6667,0 162.6667,0 166.8333,0 171,-4.1667 171,-8.3333 171,-8.3333 171,-16.6667 171,-16.6667 171,-20.8333 166.8333,-25 162.6667,-25" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-19.5" x="95" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="116" text-anchor="start">Endpoints</text></a></g></g><!-- node0&#45;&gt;node1 --><g class="edge inheritance" id="graph1_0_1"><g id="a_inheritance|graph1_0_1"><a xlink:title="Endpoints is a subtype of Responses"><path d="M128,-53.7386C128,-44.3393 128,-33.3803 128,-25.123" stroke="#d4d4d4" fill="none"></path><polygon points="125.5501,-53.8607 128,-60.8608 130.4501,-53.8608 125.5501,-53.8607" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node2 --><g class="node trait" id="graph1_2"><g id="a_trait|graph1_2"><a xlink:title="endpoints.algebra.Responses" xlink:href="../../algebra/Responses.html#inheritance-diagram"><path d="M117.6667,-147C117.6667,-147 8.3333,-147 8.3333,-147 4.1667,-147 0,-142.8333 0,-138.6667 0,-138.6667 0,-130.3333 0,-130.3333 0,-126.1667 4.1667,-122 8.3333,-122 8.3333,-122 117.6667,-122 117.6667,-122 121.8333,-122 126,-126.1667 126,-130.3333 126,-130.3333 126,-138.6667 126,-138.6667 126,-142.8333 121.8333,-147 117.6667,-147" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-141.5" x="10" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-132.1" x="31" text-anchor="start">algebra.Responses</text></a></g></g><!-- node2&#45;&gt;node0 --><g class="edge inheritance" id="graph1_2_0"><g id="a_inheritance|graph1_2_0"><a xlink:title="Responses is a subtype of algebra.Responses"><path d="M81.7109,-116.9406C92.2049,-107.0923 105.0536,-95.0343 114.5492,-86.123" stroke="#d4d4d4" fill="none"></path><polygon points="79.8958,-115.284 76.468,-121.8608 83.249,-118.857 79.8958,-115.284" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node3 --><g class="node trait" id="graph1_3"><g id="a_trait|graph1_3"><a xlink:title="endpoints.scalaj.client.StatusCodes" xlink:href="StatusCodes.html#inheritance-diagram"><path d="M233.1667,-147C233.1667,-147 152.8333,-147 152.8333,-147 148.6667,-147 144.5,-142.8333 144.5,-138.6667 144.5,-138.6667 144.5,-130.3333 144.5,-130.3333 144.5,-126.1667 148.6667,-122 152.8333,-122 152.8333,-122 233.1667,-122 233.1667,-122 237.3333,-122 241.5,-126.1667 241.5,-130.3333 241.5,-130.3333 241.5,-138.6667 241.5,-138.6667 241.5,-142.8333 237.3333,-147 233.1667,-147" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-141.5" x="155" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-132.1" x="176" text-anchor="start">StatusCodes</text></a></g></g><!-- node3&#45;&gt;node0 --><g class="edge inheritance" id="graph1_3_0"><g id="a_inheritance|graph1_3_0"><a xlink:title="Responses is a subtype of StatusCodes"><path d="M174.2891,-116.9406C163.7951,-107.0923 150.9464,-95.0343 141.4508,-86.123" stroke="#d4d4d4" fill="none"></path><polygon points="172.751,-118.857 179.532,-121.8608 176.1042,-115.284 172.751,-118.857" stroke="#d4d4d4" fill="none"></polygon></a></g></g></g></svg></div>
-                <div id="diagram-controls" class="hiddenContent">
-                  <button id="diagram-zoom-out" class="diagram-btn"><i class="material-icons"></i></button>
-                  <button id="diagram-zoom-in" class="diagram-btn"><i class="material-icons"></i></button>
-                  <button title="Toggle full-screen" id="diagram-fs" class="diagram-btn to-full"><i class="material-icons"></i></button>
-                </div>
-              </div></div>
+            <div class="subClasses hiddenContent"><a href="BasicAuthentication.html" class="extype" name="endpoints.scalaj.client.BasicAuthentication">BasicAuthentication</a>, <a href="Endpoints.html" class="extype" name="endpoints.scalaj.client.Endpoints">Endpoints</a>, <a href="EndpointsWithCustomErrors.html" class="extype" name="endpoints.scalaj.client.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a>, <a href="JsonEntitiesFromCodec.html" class="extype" name="endpoints.scalaj.client.JsonEntitiesFromCodec">JsonEntitiesFromCodec</a></div>
+          </div></div>
         
 
       <div id="mbrsel">
@@ -224,7 +222,12 @@
                   <span class="filtertype">Inherited<br />
                   </span>
                   <ol id="linearization">
-                    <li class="in" name="endpoints.scalaj.client.Responses"><span>Responses</span></li><li class="in" name="endpoints.scalaj.client.StatusCodes"><span>StatusCodes</span></li><li class="in" name="endpoints.algebra.Responses"><span>Responses</span></li><li class="in" name="endpoints.algebra.StatusCodes"><span>StatusCodes</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                    <li class="in" name="endpoints.scalaj.client.Responses"><span>Responses</span></li><li class="in" name="endpoints.scalaj.client.StatusCodes"><span>StatusCodes</span></li><li class="in" name="endpoints.algebra.Responses"><span>Responses</span></li><li class="in" name="endpoints.InvariantFunctorSyntax"><span>InvariantFunctorSyntax</span></li><li class="in" name="endpoints.algebra.StatusCodes"><span>StatusCodes</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  </ol>
+                </div><div class="ancestors">
+                  <span class="filtertype">Implicitly<br />
+                  </span>
+                  <ol id="implicits"> <li class="in" name="scala.Predef.any2stringadd" data-hidden="true"><span>by any2stringadd</span></li><li class="in" name="scala.Predef.StringFormat" data-hidden="true"><span>by StringFormat</span></li><li class="in" name="scala.Predef.Ensuring" data-hidden="true"><span>by Ensuring</span></li><li class="in" name="scala.Predef.ArrowAssoc" data-hidden="true"><span>by ArrowAssoc</span></li>
                   </ol>
                 </div><div class="ancestors">
               <span class="filtertype"></span>
@@ -246,10 +249,10 @@
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="endpoints.algebra.Responses.ResponseExtensions" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="ResponseExtensions[A]extendsAnyRef"></a><a id="ResponseExtensions[A]:ResponseExtensions[A]"></a>
+              <ol><li name="endpoints.InvariantFunctorSyntax.InvariantFunctorSyntax" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="InvariantFunctorSyntax[A,F[_]]extendsAnyRef"></a><a id="InvariantFunctorSyntax[A,F[_]]:InvariantFunctorSyntax[A,F]"></a>
       <span class="permalink">
-      <a href="../../endpoints/algebra/Responses.html#ResponseExtensions[A]extendsAnyRef" title="Permalink">
+      <a href="../../../endpoints/InvariantFunctorSyntax$InvariantFunctorSyntax.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -258,14 +261,33 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="Extensions for Response." href="../../algebra/Responses$ResponseExtensions.html"><span class="name">ResponseExtensions</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="result"> extends <a href="../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+        <a title="Extension methods for values of type F[A] for which there is an implicit InvariantFunctor[F] instance." href="../../InvariantFunctorSyntax$InvariantFunctorSyntax.html"><span class="name">InvariantFunctorSyntax</span></a><span class="tparams">[<span name="A">A</span>, <span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="result"> extends <a href="../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
-      <p class="shortcomment cmt">Extensions for <a href="../../algebra/Responses.html#Response[A]" class="extmbr" name="endpoints.algebra.Responses.Response">Response</a>.</p><div class="fullcomment"><div class="comment cmt"><p>Extensions for <a href="../../algebra/Responses.html#Response[A]" class="extmbr" name="endpoints.algebra.Responses.Response">Response</a>.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd></dl></div>
-    </li><li name="endpoints.scalaj.client.Responses.Response" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="Response[A]=scalaj.http.HttpResponse[String]=&gt;Either[Throwable,A]"></a><a id="Response[A]:Response[A]"></a>
+      <p class="shortcomment cmt">Extension methods for values of type <code>F[A]</code> for which there is an implicit
+<code>InvariantFunctor[F]</code> instance.</p><div class="fullcomment"><div class="comment cmt"><p>Extension methods for values of type <code>F[A]</code> for which there is an implicit
+<code>InvariantFunctor[F]</code> instance.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../InvariantFunctorSyntax.html" class="extype" name="endpoints.InvariantFunctorSyntax">InvariantFunctorSyntax</a></dd></dl></div>
+    </li><li name="endpoints.algebra.Responses.ResponseSyntax" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ResponseSyntax[A]extendsAnyRef"></a><a id="ResponseSyntax[A]:(Responses.this)#ResponseSyntax[A]"></a>
       <span class="permalink">
-      <a href="../../../endpoints/scalaj/client/Responses.html#Response[A]=scalaj.http.HttpResponse[String]=&gt;Either[Throwable,A]" title="Permalink">
+      <a href="../../../endpoints/algebra/Responses$ResponseSyntax.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Extension methods for Response." href="../../algebra/Responses$ResponseSyntax.html"><span class="name">ResponseSyntax</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="result"> extends <a href="../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Extension methods for <a href="../../algebra/Responses.html#Response[A]" class="extmbr" name="endpoints.algebra.Responses.Response">Response</a>.</p><div class="fullcomment"><div class="comment cmt"><p>Extension methods for <a href="../../algebra/Responses.html#Response[A]" class="extmbr" name="endpoints.algebra.Responses.Response">Response</a>.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd></dl></div>
+    </li><li name="endpoints.scalaj.client.Responses.Response" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Response[A]=scalaj.http.HttpResponse[String]=&gt;Option[Responses.this.ResponseEntity[A]]"></a><a id="Response[A]:(Responses.this)#Response[A]"></a>
+      <span class="permalink">
+      <a href="../../../endpoints/scalaj/client/Responses.html#Response[A]=scalaj.http.HttpResponse[String]=&gt;Option[Responses.this.ResponseEntity[A]]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -274,12 +296,28 @@
         <span class="kind">type</span>
       </span>
       <span class="symbol">
-        <span class="name">Response</span><span class="tparams">[<span name="A">A</span>]</span><span class="result alias"> = (<span class="extype" name="scalaj.http.HttpResponse">HttpResponse</span>[<span class="extype" name="scala.Predef.String">String</span>]) ⇒ <a href="../../../scala/index.html#Either[+A,+B]=scala.util.Either[A,B]" class="extmbr" name="scala.Either">Either</a>[<a href="../../../scala/index.html#Throwable=Throwable" class="extmbr" name="scala.Throwable">Throwable</a>, <span class="extype" name="endpoints.scalaj.client.Responses.Response.A">A</span>]</span>
+        <span class="name">Response</span><span class="tparams">[<span name="A">A</span>]</span><span class="result alias"> = (<span class="extype" name="scalaj.http.HttpResponse">HttpResponse</span>[<span class="extype" name="scala.Predef.String">String</span>]) ⇒ <a href="https://www.scala-lang.org/api/2.12.10/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[(<a href="" class="extype" name="endpoints.scalaj.client.Responses">Responses</a>.this)#<span class="extype" name="endpoints.scalaj.client.Responses.ResponseEntity">ResponseEntity</span>[<span class="extype" name="endpoints.scalaj.client.Responses.Response.A">A</span>]]</span>
       </span>
       
-      <p class="shortcomment cmt">Information carried by a response</p><div class="fullcomment"><div class="comment cmt"><p>Information carried by a response</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.scalaj.client.Responses">Responses</a> → <a href="../../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd></dl></div>
+      <p class="shortcomment cmt">An HTTP response (status, headers, and entity) carrying an information of type A</p><div class="fullcomment"><div class="comment cmt"><p>An HTTP response (status, headers, and entity) carrying an information of type A</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.scalaj.client.Responses">Responses</a> → <a href="../../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd></dl></div>
+    </li><li name="endpoints.scalaj.client.Responses.ResponseEntity" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ResponseEntity[A]=String=&gt;Either[Throwable,A]"></a><a id="ResponseEntity[A]:(Responses.this)#ResponseEntity[A]"></a>
+      <span class="permalink">
+      <a href="../../../endpoints/scalaj/client/Responses.html#ResponseEntity[A]=String=&gt;Either[Throwable,A]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ResponseEntity</span><span class="tparams">[<span name="A">A</span>]</span><span class="result alias"> = (<span class="extype" name="scala.Predef.String">String</span>) ⇒ <a href="../../../scala/index.html#Either[+A,+B]=scala.util.Either[A,B]" class="extmbr" name="scala.Either">Either</a>[<a href="../../../scala/index.html#Throwable=Throwable" class="extmbr" name="scala.Throwable">Throwable</a>, <span class="extype" name="endpoints.scalaj.client.Responses.ResponseEntity.A">A</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">An HTTP response entity carrying an information of type A</p><div class="fullcomment"><div class="comment cmt"><p>An HTTP response entity carrying an information of type A</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.scalaj.client.Responses">Responses</a> → <a href="../../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd></dl></div>
     </li><li name="endpoints.scalaj.client.StatusCodes.StatusCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="StatusCode=Int"></a><a id="StatusCode:StatusCode"></a>
+      <a id="StatusCode=Int"></a><a id="StatusCode:(Responses.this)#StatusCode"></a>
       <span class="permalink">
       <a href="../../../endpoints/scalaj/client/Responses.html#StatusCode=Int" title="Permalink">
         <i class="material-icons"></i>
@@ -290,7 +328,7 @@
         <span class="kind">type</span>
       </span>
       <span class="symbol">
-        <span class="name">StatusCode</span><span class="result alias"> = <a href="http://www.scala-lang.org/api/2.12.8/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
+        <span class="name">StatusCode</span><span class="result alias"> = <a href="https://www.scala-lang.org/api/2.12.10/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
       </span>
       
       <p class="shortcomment cmt">HTTP Status Code</p><div class="fullcomment"><div class="comment cmt"><p>HTTP Status Code</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="StatusCodes.html" class="extype" name="endpoints.scalaj.client.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd></dl></div>
@@ -314,7 +352,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.8/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.8/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -330,10 +368,53 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.8/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.Predef.any2stringadd#+" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="+(other:String):String"></a><a id="+(String):String"></a>
+      <span class="permalink">
+      <a href="../../../endpoints/scalaj/client/Responses.html#+(other:String):String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $plus" class="implicit">+</span><span class="params">(<span name="other">other: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="endpoints.scalaj.client.Responses">Responses</a> to
+            <span class="extype" name="scala.Predef.any2stringadd">any2stringadd</span>[<a href="" class="extype" name="endpoints.scalaj.client.Responses">Responses</a>] performed by method any2stringadd in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>any2stringadd</dd></dl></div>
+    </li><li name="scala.Predef.ArrowAssoc#-&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="-&gt;[B](y:B):(A,B)"></a><a id="-&gt;[B](B):(Responses,B)"></a>
+      <span class="permalink">
+      <a href="../../../endpoints/scalaj/client/Responses.html#-&gt;[B](y:B):(A,B)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $minus$greater" class="implicit">-&gt;</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="endpoints.scalaj.client.Responses">Responses</a>, <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span>)</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="endpoints.scalaj.client.Responses">Responses</a> to
+            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="endpoints.scalaj.client.Responses">Responses</a>] performed by method ArrowAssoc in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd><dt>Annotations</dt><dd>
+                <span class="name">@inline</span><span class="args">()</span>
+              
+        </dd></dl></div>
     </li><li name="scala.AnyRef#==" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="==(x$1:Any):Boolean"></a><a id="==(Any):Boolean"></a>
       <span class="permalink">
@@ -346,10 +427,26 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.8/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.8/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="endpoints.scalaj.client.StatusCodes#Accepted" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Accepted:Int"></a>
+      <span class="permalink">
+      <a href="../../../endpoints/scalaj/client/Responses.html#Accepted:Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Accepted</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="StatusCodes.html" class="extype" name="endpoints.scalaj.client.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd></dl></div>
     </li><li name="endpoints.scalaj.client.StatusCodes#BadRequest" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="BadRequest:Int"></a>
       <span class="permalink">
@@ -362,10 +459,78 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">BadRequest</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.8/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
+        <span class="name">BadRequest</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
       </span>
       
-      <p class="shortcomment cmt">4xx Client Error</p><div class="fullcomment"><div class="comment cmt"><p>4xx Client Error</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="StatusCodes.html" class="extype" name="endpoints.scalaj.client.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd></dl></div>
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="StatusCodes.html" class="extype" name="endpoints.scalaj.client.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd><dt>Note</dt><dd><span class="cmt"><p>You should use the <code>badRequest</code> constructor provided by the <a href="" class="extype" name="endpoints.scalaj.client.Responses">Responses</a>
+      trait to ensure that errors produced by <i>endponits</i> are consistently
+      handled by interpreters.</p></span></dd></dl></div>
+    </li><li name="endpoints.scalaj.client.StatusCodes#Created" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Created:Int"></a>
+      <span class="permalink">
+      <a href="../../../endpoints/scalaj/client/Responses.html#Created:Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Created</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="StatusCodes.html" class="extype" name="endpoints.scalaj.client.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd></dl></div>
+    </li><li name="endpoints.scalaj.client.StatusCodes#Forbidden" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Forbidden:Int"></a>
+      <span class="permalink">
+      <a href="../../../endpoints/scalaj/client/Responses.html#Forbidden:Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Forbidden</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="StatusCodes.html" class="extype" name="endpoints.scalaj.client.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd></dl></div>
+    </li><li name="endpoints.scalaj.client.StatusCodes#InternalServerError" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="InternalServerError:Int"></a>
+      <span class="permalink">
+      <a href="../../../endpoints/scalaj/client/Responses.html#InternalServerError:Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">InternalServerError</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
+      </span>
+      
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="StatusCodes.html" class="extype" name="endpoints.scalaj.client.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd><dt>Note</dt><dd><span class="cmt"><p>You should use the <code>internalServerError</code> constructor provided by the
+      <a href="" class="extype" name="endpoints.scalaj.client.Responses">Responses</a> trait to ensure that errors produced by <i>endpoints</i>
+      are consistently handled by interpreters.</p></span></dd></dl></div>
+    </li><li name="endpoints.scalaj.client.StatusCodes#NoContent" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="NoContent:Int"></a>
+      <span class="permalink">
+      <a href="../../../endpoints/scalaj/client/Responses.html#NoContent:Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">NoContent</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="StatusCodes.html" class="extype" name="endpoints.scalaj.client.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd></dl></div>
     </li><li name="endpoints.scalaj.client.StatusCodes#NotFound" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="NotFound:Int"></a>
       <span class="permalink">
@@ -378,7 +543,23 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">NotFound</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.8/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
+        <span class="name">NotFound</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="StatusCodes.html" class="extype" name="endpoints.scalaj.client.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd></dl></div>
+    </li><li name="endpoints.scalaj.client.StatusCodes#NotImplemented" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="NotImplemented:Int"></a>
+      <span class="permalink">
+      <a href="../../../endpoints/scalaj/client/Responses.html#NotImplemented:Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">NotImplemented</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="StatusCodes.html" class="extype" name="endpoints.scalaj.client.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd></dl></div>
@@ -394,10 +575,10 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">OK</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.8/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
+        <span class="name">OK</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
       </span>
       
-      <p class="shortcomment cmt">2xx Success</p><div class="fullcomment"><div class="comment cmt"><p>2xx Success</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="StatusCodes.html" class="extype" name="endpoints.scalaj.client.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="StatusCodes.html" class="extype" name="endpoints.scalaj.client.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd></dl></div>
     </li><li name="endpoints.scalaj.client.StatusCodes#Unauthorized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="Unauthorized:Int"></a>
       <span class="permalink">
@@ -410,7 +591,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">Unauthorized</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.8/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
+        <span class="name">Unauthorized</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="StatusCodes.html" class="extype" name="endpoints.scalaj.client.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd></dl></div>
@@ -430,6 +611,41 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="endpoints.algebra.Responses#badRequest" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="badRequest(docs:endpoints.algebra.Documentation):Responses.this.Response[Responses.this.ClientErrors]"></a><a id="badRequest(Documentation):(Responses.this)#Response[(Responses.this)#ClientErrors]"></a>
+      <span class="permalink">
+      <a href="../../../endpoints/scalaj/client/Responses.html#badRequest(docs:endpoints.algebra.Documentation):Responses.this.Response[Responses.this.ClientErrors]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">badRequest</span><span class="params">(<span name="docs">docs: <a href="../../algebra/index.html#Documentation=Option[String]" class="extmbr" name="endpoints.algebra.Documentation">Documentation</a> = <span class="symbol"><span class="name"><a href="../../../scala/index.html">None</a></span></span></span>)</span><span class="result">: (<a href="" class="extype" name="endpoints.scalaj.client.Responses">Responses</a>.this)#<span class="extype" name="endpoints.scalaj.client.Responses.Response">Response</span>[(<a href="" class="extype" name="endpoints.scalaj.client.Responses">Responses</a>.this)#<span class="extype" name="endpoints.algebra.Errors.ClientErrors">ClientErrors</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Bad Request (400) response, with an entity of type <code>ClientErrors</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Bad Request (400) response, with an entity of type <code>ClientErrors</code>.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd><dt>See also</dt><dd><span class="cmt"><p><a href="../../algebra/Errors.html" class="extype" name="endpoints.algebra.Errors">endpoints.algebra.Errors</a> and <a href="../../algebra/BuiltInErrors.html" class="extype" name="endpoints.algebra.BuiltInErrors">endpoints.algebra.BuiltInErrors</a></p></span></dd></dl></div>
+    </li><li name="endpoints.scalaj.client.Responses#choiceResponse" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="choiceResponse[A,B](responseA:Responses.this.Response[A],responseB:Responses.this.Response[B]):Responses.this.Response[Either[A,B]]"></a><a id="choiceResponse[A,B]((Responses.this)#Response[A],(Responses.this)#Response[B]):(Responses.this)#Response[Either[A,B]]"></a>
+      <span class="permalink">
+      <a href="../../../endpoints/scalaj/client/Responses.html#choiceResponse[A,B](responseA:Responses.this.Response[A],responseB:Responses.this.Response[B]):Responses.this.Response[Either[A,B]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">choiceResponse</span><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>]</span><span class="params">(<span name="responseA">responseA: (<a href="" class="extype" name="endpoints.scalaj.client.Responses">Responses</a>.this)#<span class="extype" name="endpoints.scalaj.client.Responses.Response">Response</span>[<span class="extype" name="endpoints.scalaj.client.Responses.choiceResponse.A">A</span>]</span>, <span name="responseB">responseB: (<a href="" class="extype" name="endpoints.scalaj.client.Responses">Responses</a>.this)#<span class="extype" name="endpoints.scalaj.client.Responses.Response">Response</span>[<span class="extype" name="endpoints.scalaj.client.Responses.choiceResponse.B">B</span>]</span>)</span><span class="result">: (<a href="" class="extype" name="endpoints.scalaj.client.Responses">Responses</a>.this)#<span class="extype" name="endpoints.scalaj.client.Responses.Response">Response</span>[<a href="../../../scala/index.html#Either[+A,+B]=scala.util.Either[A,B]" class="extmbr" name="scala.Either">Either</a>[<span class="extype" name="endpoints.scalaj.client.Responses.choiceResponse.A">A</span>, <span class="extype" name="endpoints.scalaj.client.Responses.choiceResponse.B">B</span>]]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Alternative between two possible choices of responses.</p><div class="fullcomment"><div class="comment cmt"><p>Alternative between two possible choices of responses.</p><p>Server interpreters construct either one or the other response.
+Client interpreters accept either one or the other response.
+Documentation interpreters list all the possible responses.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.scalaj.client.Responses">Responses</a> → <a href="../../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd></dl></div>
     </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a><a id="clone():AnyRef"></a>
       <span class="permalink">
@@ -445,19 +661,19 @@
         <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@native</span><span class="args">()</span>
-              
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
     </span>)</span>
               
+                <span class="name">@native</span><span class="args">()</span>
+              
         </dd></dl></div>
     </li><li name="endpoints.scalaj.client.Responses#emptyResponse" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="emptyResponse(docs:endpoints.algebra.Documentation):Responses.this.Response[Unit]"></a><a id="emptyResponse(Documentation):Response[Unit]"></a>
+      <a id="emptyResponse:Responses.this.ResponseEntity[Unit]"></a><a id="emptyResponse:(Responses.this)#ResponseEntity[Unit]"></a>
       <span class="permalink">
-      <a href="../../../endpoints/scalaj/client/Responses.html#emptyResponse(docs:endpoints.algebra.Documentation):Responses.this.Response[Unit]" title="Permalink">
+      <a href="../../../endpoints/scalaj/client/Responses.html#emptyResponse:Responses.this.ResponseEntity[Unit]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -466,11 +682,92 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">emptyResponse</span><span class="params">(<span name="docs">docs: <a href="../../algebra/index.html#Documentation=Option[String]" class="extmbr" name="endpoints.algebra.Documentation">Documentation</a></span>)</span><span class="result">: <a href="#Response[A]=scalaj.http.HttpResponse[String]=&gt;Either[Throwable,A]" class="extmbr" name="endpoints.scalaj.client.Responses.Response">Response</a>[<a href="http://www.scala-lang.org/api/2.12.8/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a>]</span>
+        <span class="name">emptyResponse</span><span class="result">: (<a href="" class="extype" name="endpoints.scalaj.client.Responses">Responses</a>.this)#<span class="extype" name="endpoints.scalaj.client.Responses.ResponseEntity">ResponseEntity</span>[<a href="https://www.scala-lang.org/api/2.12.10/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a>]</span>
       </span>
       
-      <p class="shortcomment cmt">Empty response.</p><div class="fullcomment"><div class="comment cmt"><p>Empty response.
+      <p class="shortcomment cmt">Empty response entity
+</p><div class="fullcomment"><div class="comment cmt"><p>Empty response entity
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.scalaj.client.Responses">Responses</a> → <a href="../../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A"></a><a id="ensuring((Responses)⇒Boolean,⇒Any):Responses"></a>
+      <span class="permalink">
+      <a href="../../../endpoints/scalaj/client/Responses.html#ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="endpoints.scalaj.client.Responses">Responses</a>) ⇒ <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>, <span name="msg">msg: ⇒ <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="" class="extype" name="endpoints.scalaj.client.Responses">Responses</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="endpoints.scalaj.client.Responses">Responses</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="endpoints.scalaj.client.Responses">Responses</a>] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:A=&gt;Boolean):A"></a><a id="ensuring((Responses)⇒Boolean):Responses"></a>
+      <span class="permalink">
+      <a href="../../../endpoints/scalaj/client/Responses.html#ensuring(cond:A=&gt;Boolean):A" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="endpoints.scalaj.client.Responses">Responses</a>) ⇒ <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>)</span><span class="result">: <a href="" class="extype" name="endpoints.scalaj.client.Responses">Responses</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="endpoints.scalaj.client.Responses">Responses</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="endpoints.scalaj.client.Responses">Responses</a>] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:Boolean,msg:=&gt;Any):A"></a><a id="ensuring(Boolean,⇒Any):Responses"></a>
+      <span class="permalink">
+      <a href="../../../endpoints/scalaj/client/Responses.html#ensuring(cond:Boolean,msg:=&gt;Any):A" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>, <span name="msg">msg: ⇒ <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="" class="extype" name="endpoints.scalaj.client.Responses">Responses</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="endpoints.scalaj.client.Responses">Responses</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="endpoints.scalaj.client.Responses">Responses</a>] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:Boolean):A"></a><a id="ensuring(Boolean):Responses"></a>
+      <span class="permalink">
+      <a href="../../../endpoints/scalaj/client/Responses.html#ensuring(cond:Boolean):A" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>)</span><span class="result">: <a href="" class="extype" name="endpoints.scalaj.client.Responses">Responses</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="endpoints.scalaj.client.Responses">Responses</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="endpoints.scalaj.client.Responses">Responses</a>] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
       <span class="permalink">
@@ -483,7 +780,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.8/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
@@ -499,7 +796,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.8/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.8/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -515,14 +812,37 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.8/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="symbol">classOf[java.lang.Throwable]</span>
     </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.Predef.StringFormat#formatted" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="formatted(fmtstr:String):String"></a><a id="formatted(String):String"></a>
+      <span class="permalink">
+      <a href="../../../endpoints/scalaj/client/Responses.html#formatted(fmtstr:String):String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">formatted</span><span class="params">(<span name="fmtstr">fmtstr: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="endpoints.scalaj.client.Responses">Responses</a> to
+            <span class="extype" name="scala.Predef.StringFormat">StringFormat</span>[<a href="" class="extype" name="endpoints.scalaj.client.Responses">Responses</a>] performed by method StringFormat in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>StringFormat</dd><dt>Annotations</dt><dd>
+                <span class="name">@inline</span><span class="args">()</span>
               
         </dd></dl></div>
     </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -556,13 +876,29 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.8/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li name="endpoints.algebra.Responses#internalServerError" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="internalServerError(docs:endpoints.algebra.Documentation):Responses.this.Response[Responses.this.ServerError]"></a><a id="internalServerError(Documentation):(Responses.this)#Response[(Responses.this)#ServerError]"></a>
+      <span class="permalink">
+      <a href="../../../endpoints/scalaj/client/Responses.html#internalServerError(docs:endpoints.algebra.Documentation):Responses.this.Response[Responses.this.ServerError]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">internalServerError</span><span class="params">(<span name="docs">docs: <a href="../../algebra/index.html#Documentation=Option[String]" class="extmbr" name="endpoints.algebra.Documentation">Documentation</a> = <span class="symbol"><span class="name"><a href="../../../scala/index.html">None</a></span></span></span>)</span><span class="result">: (<a href="" class="extype" name="endpoints.scalaj.client.Responses">Responses</a>.this)#<span class="extype" name="endpoints.scalaj.client.Responses.Response">Response</span>[(<a href="" class="extype" name="endpoints.scalaj.client.Responses">Responses</a>.this)#<span class="extype" name="endpoints.algebra.Errors.ServerError">ServerError</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Internal Server Error (500) response, with an entity of type <code>ServerError</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Internal Server Error (500) response, with an entity of type <code>ServerError</code>.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd><dt>See also</dt><dd><span class="cmt"><p><a href="../../algebra/Errors.html" class="extype" name="endpoints.algebra.Errors">endpoints.algebra.Errors</a> and <a href="../../algebra/BuiltInErrors.html" class="extype" name="endpoints.algebra.BuiltInErrors">endpoints.algebra.BuiltInErrors</a></p></span></dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <span class="permalink">
@@ -575,7 +911,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.8/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
@@ -591,7 +927,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.8/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
@@ -607,7 +943,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">notify</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.8/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -626,13 +962,65 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.8/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li name="endpoints.algebra.Responses#ok" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ok[A](entity:Responses.this.ResponseEntity[A],docs:endpoints.algebra.Documentation):Responses.this.Response[A]"></a><a id="ok[A]((Responses.this)#ResponseEntity[A],Documentation):(Responses.this)#Response[A]"></a>
+      <span class="permalink">
+      <a href="../../../endpoints/scalaj/client/Responses.html#ok[A](entity:Responses.this.ResponseEntity[A],docs:endpoints.algebra.Documentation):Responses.this.Response[A]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ok</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="entity">entity: (<a href="" class="extype" name="endpoints.scalaj.client.Responses">Responses</a>.this)#<span class="extype" name="endpoints.scalaj.client.Responses.ResponseEntity">ResponseEntity</span>[<span class="extype" name="endpoints.algebra.Responses.ok.A">A</span>]</span>, <span name="docs">docs: <a href="../../algebra/index.html#Documentation=Option[String]" class="extmbr" name="endpoints.algebra.Documentation">Documentation</a> = <span class="symbol"><span class="name"><a href="../../../scala/index.html">None</a></span></span></span>)</span><span class="result">: (<a href="" class="extype" name="endpoints.scalaj.client.Responses">Responses</a>.this)#<span class="extype" name="endpoints.scalaj.client.Responses.Response">Response</span>[<span class="extype" name="endpoints.algebra.Responses.ok.A">A</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">OK (200) Response with the given entity
+</p><div class="fullcomment"><div class="comment cmt"><p>OK (200) Response with the given entity
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd></dl></div>
+    </li><li name="endpoints.scalaj.client.Responses#response" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="response[A](statusCode:Responses.this.StatusCode,entity:Responses.this.ResponseEntity[A],docs:endpoints.algebra.Documentation):Responses.this.Response[A]"></a><a id="response[A]((Responses.this)#StatusCode,(Responses.this)#ResponseEntity[A],Documentation):(Responses.this)#Response[A]"></a>
+      <span class="permalink">
+      <a href="../../../endpoints/scalaj/client/Responses.html#response[A](statusCode:Responses.this.StatusCode,entity:Responses.this.ResponseEntity[A],docs:endpoints.algebra.Documentation):Responses.this.Response[A]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">response</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="statusCode">statusCode: (<a href="" class="extype" name="endpoints.scalaj.client.Responses">Responses</a>.this)#<span class="extype" name="endpoints.scalaj.client.StatusCodes.StatusCode">StatusCode</span></span>, <span name="entity">entity: (<a href="" class="extype" name="endpoints.scalaj.client.Responses">Responses</a>.this)#<span class="extype" name="endpoints.scalaj.client.Responses.ResponseEntity">ResponseEntity</span>[<span class="extype" name="endpoints.scalaj.client.Responses.response.A">A</span>]</span>, <span name="docs">docs: <a href="../../algebra/index.html#Documentation=Option[String]" class="extmbr" name="endpoints.algebra.Documentation">Documentation</a> = <span class="symbol"><span class="name"><a href="../../../scala/index.html">None</a></span></span></span>)</span><span class="result">: (<a href="" class="extype" name="endpoints.scalaj.client.Responses">Responses</a>.this)#<span class="extype" name="endpoints.scalaj.client.Responses.Response">Response</span>[<span class="extype" name="endpoints.scalaj.client.Responses.response.A">A</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">statusCode</dt><dd class="cmt"><p>Response status code</p></dd><dt class="param">entity</dt><dd class="cmt"><p>Response entity</p></dd><dt class="param">docs</dt><dd class="cmt"><p>Response documentation
+Server interpreters construct a response with the given status and entity.
+Client interpreters accept a response only if it has a corresponding status code.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.scalaj.client.Responses">Responses</a> → <a href="../../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd></dl></div>
+    </li><li name="endpoints.scalaj.client.Responses#responseInvFunctor" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="responseInvFunctor:endpoints.InvariantFunctor[Responses.this.Response]"></a><a id="responseInvFunctor:InvariantFunctor[(Responses.this)#Response]"></a>
+      <span class="permalink">
+      <a href="../../../endpoints/scalaj/client/Responses.html#responseInvFunctor:endpoints.InvariantFunctor[Responses.this.Response]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">lazy val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">responseInvFunctor</span><span class="result">: <a href="../../InvariantFunctor.html" class="extype" name="endpoints.InvariantFunctor">InvariantFunctor</a>[(<a href="" class="extype" name="endpoints.scalaj.client.Responses">Responses</a>.this)#<span class="extype" name="endpoints.scalaj.client.Responses.Response">Response</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.scalaj.client.Responses">Responses</a> → <a href="../../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
       <span class="permalink">
@@ -650,9 +1038,9 @@
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="endpoints.scalaj.client.Responses#textResponse" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="textResponse(docs:endpoints.algebra.Documentation):Responses.this.Response[String]"></a><a id="textResponse(Documentation):Response[String]"></a>
+      <a id="textResponse:Responses.this.ResponseEntity[String]"></a><a id="textResponse:(Responses.this)#ResponseEntity[String]"></a>
       <span class="permalink">
-      <a href="../../../endpoints/scalaj/client/Responses.html#textResponse(docs:endpoints.algebra.Documentation):Responses.this.Response[String]" title="Permalink">
+      <a href="../../../endpoints/scalaj/client/Responses.html#textResponse:Responses.this.ResponseEntity[String]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -661,10 +1049,11 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">textResponse</span><span class="params">(<span name="docs">docs: <a href="../../algebra/index.html#Documentation=Option[String]" class="extmbr" name="endpoints.algebra.Documentation">Documentation</a></span>)</span><span class="result">: <a href="#Response[A]=scalaj.http.HttpResponse[String]=&gt;Either[Throwable,A]" class="extmbr" name="endpoints.scalaj.client.Responses.Response">Response</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+        <span class="name">textResponse</span><span class="result">: (<a href="" class="extype" name="endpoints.scalaj.client.Responses">Responses</a>.this)#<span class="extype" name="endpoints.scalaj.client.Responses.ResponseEntity">ResponseEntity</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
       </span>
       
-      <p class="shortcomment cmt">Text response.</p><div class="fullcomment"><div class="comment cmt"><p>Text response.
+      <p class="shortcomment cmt">Text response entity
+</p><div class="fullcomment"><div class="comment cmt"><p>Text response entity
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.scalaj.client.Responses">Responses</a> → <a href="../../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd></dl></div>
     </li><li name="scala.AnyRef#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toString():String"></a>
@@ -694,7 +1083,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.8/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -716,7 +1105,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.8/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>, <span name="arg1">arg1: <a href="http://www.scala-lang.org/api/2.12.8/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.8/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.10/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>, <span name="arg1">arg1: <a href="https://www.scala-lang.org/api/2.12.10/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -738,22 +1127,40 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.8/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.8/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.10/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@native</span><span class="args">()</span>
-              
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
     </span>)</span>
               
+                <span class="name">@native</span><span class="args">()</span>
+              
         </dd></dl></div>
-    </li><li name="endpoints.scalaj.client.Responses#wheneverFound" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="wheneverFound[A](inner:scalaj.http.HttpResponse[String]=&gt;Either[Throwable,A],notFoundDocs:endpoints.algebra.Documentation):scalaj.http.HttpResponse[String]=&gt;Either[Throwable,Option[A]]"></a><a id="wheneverFound[A]((HttpResponse[String])⇒Either[Throwable,A],Documentation):(HttpResponse[String])⇒Either[Throwable,Option[A]]"></a>
+    </li><li name="endpoints.algebra.Responses#wheneverFound" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wheneverFound[A](responseA:Responses.this.Response[A],notFoundDocs:endpoints.algebra.Documentation):Responses.this.Response[Option[A]]"></a><a id="wheneverFound[A]((Responses.this)#Response[A],Documentation):(Responses.this)#Response[Option[A]]"></a>
       <span class="permalink">
-      <a href="../../../endpoints/scalaj/client/Responses.html#wheneverFound[A](inner:scalaj.http.HttpResponse[String]=&gt;Either[Throwable,A],notFoundDocs:endpoints.algebra.Documentation):scalaj.http.HttpResponse[String]=&gt;Either[Throwable,Option[A]]" title="Permalink">
+      <a href="../../../endpoints/scalaj/client/Responses.html#wheneverFound[A](responseA:Responses.this.Response[A],notFoundDocs:endpoints.algebra.Documentation):Responses.this.Response[Option[A]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wheneverFound</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="responseA">responseA: (<a href="" class="extype" name="endpoints.scalaj.client.Responses">Responses</a>.this)#<span class="extype" name="endpoints.scalaj.client.Responses.Response">Response</span>[<span class="extype" name="endpoints.algebra.Responses.wheneverFound.A">A</span>]</span>, <span name="notFoundDocs">notFoundDocs: <a href="../../algebra/index.html#Documentation=Option[String]" class="extmbr" name="endpoints.algebra.Documentation">Documentation</a> = <span class="symbol"><span class="name"><a href="../../../scala/index.html">None</a></span></span></span>)</span><span class="result">: (<a href="" class="extype" name="endpoints.scalaj.client.Responses">Responses</a>.this)#<span class="extype" name="endpoints.scalaj.client.Responses.Response">Response</span>[<a href="https://www.scala-lang.org/api/2.12.10/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="endpoints.algebra.Responses.wheneverFound.A">A</span>]]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Turns a <code>Response[A]</code> into a <code>Response[Option[A]]</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Turns a <code>Response[A]</code> into a <code>Response[Option[A]]</code>.</p><p>Interpreters represent <code>None</code> with
+an empty HTTP response whose status code is 404 (Not Found).
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd></dl></div>
+    </li><li name="scala.Predef.ArrowAssoc#→" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="→[B](y:B):(A,B)"></a><a id="→[B](B):(Responses,B)"></a>
+      <span class="permalink">
+      <a href="../../../endpoints/scalaj/client/Responses.html#→[B](y:B):(A,B)" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -762,12 +1169,14 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wheneverFound</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="inner">inner: (<span class="extype" name="scalaj.http.HttpResponse">HttpResponse</span>[<span class="extype" name="scala.Predef.String">String</span>]) ⇒ <a href="../../../scala/index.html#Either[+A,+B]=scala.util.Either[A,B]" class="extmbr" name="scala.Either">Either</a>[<a href="../../../scala/index.html#Throwable=Throwable" class="extmbr" name="scala.Throwable">Throwable</a>, <span class="extype" name="endpoints.scalaj.client.Responses.wheneverFound.A">A</span>]</span>, <span name="notFoundDocs">notFoundDocs: <a href="../../algebra/index.html#Documentation=Option[String]" class="extmbr" name="endpoints.algebra.Documentation">Documentation</a></span>)</span><span class="result">: (<span class="extype" name="scalaj.http.HttpResponse">HttpResponse</span>[<span class="extype" name="scala.Predef.String">String</span>]) ⇒ <a href="../../../scala/index.html#Either[+A,+B]=scala.util.Either[A,B]" class="extmbr" name="scala.Either">Either</a>[<a href="../../../scala/index.html#Throwable=Throwable" class="extmbr" name="scala.Throwable">Throwable</a>, <a href="http://www.scala-lang.org/api/2.12.8/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="endpoints.scalaj.client.Responses.wheneverFound.A">A</span>]]</span>
+        <span title="gt4s: $u2192" class="implicit">→</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="endpoints.scalaj.client.Responses">Responses</a>, <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span>)</span>
       </span>
       
-      <p class="shortcomment cmt">Turns a <code>Response[A]</code> into a <code>Response[Option[A]]</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Turns a <code>Response[A]</code> into a <code>Response[Option[A]]</code>.</p><p>Concrete interpreters should represent <code>None</code> with
-an empty HTTP response whose status code is 404 (Not Found).
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.scalaj.client.Responses">Responses</a> → <a href="../../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="endpoints.scalaj.client.Responses">Responses</a> to
+            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="endpoints.scalaj.client.Responses">Responses</a>] performed by method ArrowAssoc in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd></dl></div>
     </li>
               </ol>
             </div>
@@ -782,14 +1191,32 @@ an empty HTTP response whose status code is 404 (Not Found).
               <h3>Inherited from <a href="StatusCodes.html" class="extype" name="endpoints.scalaj.client.StatusCodes">StatusCodes</a></h3>
             </div><div class="parent" name="endpoints.algebra.Responses">
               <h3>Inherited from <a href="../../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">algebra.Responses</a></h3>
+            </div><div class="parent" name="endpoints.InvariantFunctorSyntax">
+              <h3>Inherited from <a href="../../InvariantFunctorSyntax.html" class="extype" name="endpoints.InvariantFunctorSyntax">endpoints.InvariantFunctorSyntax</a></h3>
             </div><div class="parent" name="endpoints.algebra.StatusCodes">
               <h3>Inherited from <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">algebra.StatusCodes</a></h3>
             </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <a href="../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">
-              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.12.8/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></h3>
+              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></h3>
             </div>
-        
+        <div class="conversion" name="scala.Predef.any2stringadd">
+              <h3>Inherited by implicit conversion any2stringadd from
+                <a href="" class="extype" name="endpoints.scalaj.client.Responses">Responses</a> to <span class="extype" name="scala.Predef.any2stringadd">any2stringadd</span>[<a href="" class="extype" name="endpoints.scalaj.client.Responses">Responses</a>]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.StringFormat">
+              <h3>Inherited by implicit conversion StringFormat from
+                <a href="" class="extype" name="endpoints.scalaj.client.Responses">Responses</a> to <span class="extype" name="scala.Predef.StringFormat">StringFormat</span>[<a href="" class="extype" name="endpoints.scalaj.client.Responses">Responses</a>]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.Ensuring">
+              <h3>Inherited by implicit conversion Ensuring from
+                <a href="" class="extype" name="endpoints.scalaj.client.Responses">Responses</a> to <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="endpoints.scalaj.client.Responses">Responses</a>]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.ArrowAssoc">
+              <h3>Inherited by implicit conversion ArrowAssoc from
+                <a href="" class="extype" name="endpoints.scalaj.client.Responses">Responses</a> to <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="endpoints.scalaj.client.Responses">Responses</a>]
+              </h3>
+            </div>
         </div>
 
         <div id="groupedMembers">

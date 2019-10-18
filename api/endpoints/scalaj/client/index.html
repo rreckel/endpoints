@@ -8,17 +8,17 @@
           <meta name="keywords" content="" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
+      
       <link href="../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
-      <script type="text/javascript" src="../../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../../lib/jquery.min.js"></script>
       <script type="text/javascript" src="../../../lib/jquery.panzoom.min.js"></script>
       <script type="text/javascript" src="../../../lib/jquery.mousewheel.min.js"></script>
       <script type="text/javascript" src="../../../lib/index.js"></script>
       <script type="text/javascript" src="../../../index.js"></script>
       <script type="text/javascript" src="../../../lib/scheduler.js"></script>
       <script type="text/javascript" src="../../../lib/template.js"></script>
-      <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
       <script type="text/javascript" src="../../../lib/modernizr.custom.js"></script><script type="text/javascript" src="../../../lib/diagrams.js" id="diagrams-js"></script>
       <script type="text/javascript">
         /* this variable can be used by the JS to determine the path to the root document */
@@ -56,7 +56,7 @@
                 <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="_root_"></a><a id="root:_root_"></a>
       <span class="permalink">
-      <a href="index.html#_root_" title="Permalink">
+      <a href="../../../index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -72,7 +72,7 @@
     </li><li name="_root_.endpoints" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="endpoints"></a><a id="endpoints:endpoints"></a>
       <span class="permalink">
-      <a href="index.html#endpoints" title="Permalink">
+      <a href="../../../endpoints/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -88,7 +88,7 @@
     </li><li name="endpoints.scalaj" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="scalaj"></a><a id="scalaj:scalaj"></a>
       <span class="permalink">
-      <a href="../endpoints/index.html#scalaj" title="Permalink">
+      <a href="../../../endpoints/scalaj/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -104,7 +104,7 @@
     </li><li name="endpoints.scalaj.client" visbl="pub" class="indented3 current" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="client"></a><a id="client:client"></a>
       <span class="permalink">
-      <a href="../../endpoints/scalaj/index.html#client" title="Permalink">
+      <a href="../../../endpoints/scalaj/client/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -125,8 +125,16 @@
                         <a href="BasicAuthentication.html" title="">BasicAuthentication</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
+                        <a class="trait" href="BuiltInErrors.html" title=""></a>
+                        <a href="BuiltInErrors.html" title="">BuiltInErrors</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
                         <a class="trait" href="Endpoints.html" title=""></a>
                         <a href="Endpoints.html" title="">Endpoints</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="EndpointsWithCustomErrors.html" title=""></a>
+                        <a href="EndpointsWithCustomErrors.html" title="">EndpointsWithCustomErrors</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
                         <a class="trait" href="JsonEntitiesFromCodec.html" title="Interpreter for endpoints.algebra.JsonEntitiesFromCodec that encodes JSON requests and decodes JSON responses."></a>
@@ -180,22 +188,12 @@
 
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Client interpreters backed by scalaj-http
-</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/julienrf/endpoints/blob/v0.10.1/scalaj/client/src/main/scala/endpoints/scalaj/client/package.scala" target="_blank">package.scala</a></dd></dl><div class="toggleContainer block">
+</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/julienrf/endpoints/blob/v0.11.0/scalaj/client/src/main/scala/endpoints/scalaj/client/package.scala" target="_blank">package.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.12.8/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
-        </div><div class="toggleContainer block diagram-container" id="content-diagram-container">
-                <span class="toggle diagram-link">
-                  Content Hierarchy
-                </span>
-                <div class="diagram" id="content-diagram"><svg class="package-diagram" id="graph1" viewBox="0.00 0.00 319.50 216.00" height="216pt" width="320pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 212)" class="graph" id="page0,1_graph0"><polygon points="-4,4 -4,-212 315.5,-212 315.5,4 -4,4" stroke="transparent" fill="#ffffff"></polygon><!-- node0 --><g class="node trait" id="graph1_0"><g id="a_trait|graph1_0"><a xlink:title="endpoints.scalaj.client.Urls" xlink:href="Urls.html#inheritance-diagram"><path d="M52.6667,-208C52.6667,-208 8.3333,-208 8.3333,-208 4.1667,-208 0,-203.8333 0,-199.6667 0,-199.6667 0,-191.3333 0,-191.3333 0,-187.1667 4.1667,-183 8.3333,-183 8.3333,-183 52.6667,-183 52.6667,-183 56.8333,-183 61,-187.1667 61,-191.3333 61,-191.3333 61,-199.6667 61,-199.6667 61,-203.8333 56.8333,-208 52.6667,-208" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-202.5" x="10.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-193.1" x="31.5" text-anchor="start">Urls</text></a></g></g><!-- node3 --><g class="node trait" id="graph1_3"><g id="a_trait|graph1_3"><a xlink:title="endpoints.scalaj.client.Requests" xlink:href="Requests.html#inheritance-diagram"><path d="M153.1667,-147C153.1667,-147 85.8333,-147 85.8333,-147 81.6667,-147 77.5,-142.8333 77.5,-138.6667 77.5,-138.6667 77.5,-130.3333 77.5,-130.3333 77.5,-126.1667 81.6667,-122 85.8333,-122 85.8333,-122 153.1667,-122 153.1667,-122 157.3333,-122 161.5,-126.1667 161.5,-130.3333 161.5,-130.3333 161.5,-138.6667 161.5,-138.6667 161.5,-142.8333 157.3333,-147 153.1667,-147" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-141.5" x="87.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-132.1" x="108.5" text-anchor="start">Requests</text></a></g></g><!-- node0&#45;&gt;node3 --><g class="edge inheritance" id="graph1_0_3"><g id="a_inheritance|graph1_0_3"><a xlink:title="Requests is a subtype of Urls"><path d="M54.9406,-178.7486C69.5163,-168.7585 87.7232,-156.2796 101.0828,-147.123" stroke="#d4d4d4" fill="none"></path><polygon points="53.3297,-176.8824 48.9409,-182.8608 56.1,-180.9242 53.3297,-176.8824" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node1 --><g class="node trait" id="graph1_1"><g id="a_trait|graph1_1"><a xlink:title="endpoints.scalaj.client.StatusCodes" xlink:href="StatusCodes.html#inheritance-diagram"><path d="M266.6667,-208C266.6667,-208 186.3333,-208 186.3333,-208 182.1667,-208 178,-203.8333 178,-199.6667 178,-199.6667 178,-191.3333 178,-191.3333 178,-187.1667 182.1667,-183 186.3333,-183 186.3333,-183 266.6667,-183 266.6667,-183 270.8333,-183 275,-187.1667 275,-191.3333 275,-191.3333 275,-199.6667 275,-199.6667 275,-203.8333 270.8333,-208 266.6667,-208" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-202.5" x="188.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-193.1" x="209.5" text-anchor="start">StatusCodes</text></a></g></g><!-- node2 --><g class="node trait" id="graph1_2"><g id="a_trait|graph1_2"><a xlink:title="endpoints.scalaj.client.Responses" xlink:href="Responses.html#inheritance-diagram"><path d="M262.1667,-147C262.1667,-147 188.8333,-147 188.8333,-147 184.6667,-147 180.5,-142.8333 180.5,-138.6667 180.5,-138.6667 180.5,-130.3333 180.5,-130.3333 180.5,-126.1667 184.6667,-122 188.8333,-122 188.8333,-122 262.1667,-122 262.1667,-122 266.3333,-122 270.5,-126.1667 270.5,-130.3333 270.5,-130.3333 270.5,-138.6667 270.5,-138.6667 270.5,-142.8333 266.3333,-147 262.1667,-147" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-141.5" x="190.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-132.1" x="211.5" text-anchor="start">Responses</text></a></g></g><!-- node1&#45;&gt;node2 --><g class="edge inheritance" id="graph1_1_2"><g id="a_inheritance|graph1_1_2"><a xlink:title="Responses is a subtype of StatusCodes"><path d="M226.176,-175.7386C226.022,-166.3393 225.8423,-155.3803 225.7069,-147.123" stroke="#d4d4d4" fill="none"></path><polygon points="223.7283,-175.9019 226.2928,-182.8608 228.6276,-175.8215 223.7283,-175.9019" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node6 --><g class="node trait" id="graph1_6"><g id="a_trait|graph1_6"><a xlink:title="endpoints.scalaj.client.Endpoints" xlink:href="Endpoints.html#inheritance-diagram"><path d="M206.1667,-86C206.1667,-86 136.8333,-86 136.8333,-86 132.6667,-86 128.5,-81.8333 128.5,-77.6667 128.5,-77.6667 128.5,-69.3333 128.5,-69.3333 128.5,-65.1667 132.6667,-61 136.8333,-61 136.8333,-61 206.1667,-61 206.1667,-61 210.3333,-61 214.5,-65.1667 214.5,-69.3333 214.5,-69.3333 214.5,-77.6667 214.5,-77.6667 214.5,-81.8333 210.3333,-86 206.1667,-86" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-80.5" x="138.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-71.1" x="159.5" text-anchor="start">Endpoints</text></a></g></g><!-- node2&#45;&gt;node6 --><g class="edge inheritance" id="graph1_2_6"><g id="a_inheritance|graph1_2_6"><a xlink:title="Endpoints is a subtype of Responses"><path d="M209.4737,-116.3963C200.8467,-106.6509 190.4184,-94.8708 182.6745,-86.123" stroke="#d4d4d4" fill="none"></path><polygon points="207.8368,-118.2434 214.3112,-121.8608 211.5057,-114.9954 207.8368,-118.2434" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node3&#45;&gt;node6 --><g class="edge inheritance" id="graph1_3_6"><g id="a_inheritance|graph1_3_6"><a xlink:title="Endpoints is a subtype of Requests"><path d="M134.9327,-116.3963C143.2402,-106.6509 153.2822,-94.8708 160.7394,-86.123" stroke="#d4d4d4" fill="none"></path><polygon points="132.9511,-114.9442 130.2744,-121.8608 136.6801,-118.123 132.9511,-114.9442" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node4 --><g class="node trait" id="graph1_4"><g id="a_trait|graph1_4"><a xlink:title="endpoints.scalaj.client.Methods" xlink:href="Methods.html#inheritance-diagram"><path d="M151.1667,-208C151.1667,-208 87.8333,-208 87.8333,-208 83.6667,-208 79.5,-203.8333 79.5,-199.6667 79.5,-199.6667 79.5,-191.3333 79.5,-191.3333 79.5,-187.1667 83.6667,-183 87.8333,-183 87.8333,-183 151.1667,-183 151.1667,-183 155.3333,-183 159.5,-187.1667 159.5,-191.3333 159.5,-191.3333 159.5,-199.6667 159.5,-199.6667 159.5,-203.8333 155.3333,-208 151.1667,-208" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-202.5" x="89.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-193.1" x="110.5" text-anchor="start">Methods</text></a></g></g><!-- node4&#45;&gt;node3 --><g class="edge inheritance" id="graph1_4_3"><g id="a_inheritance|graph1_4_3"><a xlink:title="Requests is a subtype of Methods"><path d="M119.5,-175.7386C119.5,-166.3393 119.5,-155.3803 119.5,-147.123" stroke="#d4d4d4" fill="none"></path><polygon points="117.0501,-175.8607 119.5,-182.8608 121.9501,-175.8608 117.0501,-175.8607" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node5 --><g class="node trait" id="graph1_5"><g id="a_trait|graph1_5"><a xlink:title="endpoints.scalaj.client.JsonEntitiesFromCodec" xlink:href="JsonEntitiesFromCodec.html#inheritance-diagram"><path d="M157.1667,-25C157.1667,-25 33.8333,-25 33.8333,-25 29.6667,-25 25.5,-20.8333 25.5,-16.6667 25.5,-16.6667 25.5,-8.3333 25.5,-8.3333 25.5,-4.1667 29.6667,0 33.8333,0 33.8333,0 157.1667,0 157.1667,0 161.3333,0 165.5,-4.1667 165.5,-8.3333 165.5,-8.3333 165.5,-16.6667 165.5,-16.6667 165.5,-20.8333 161.3333,-25 157.1667,-25" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-19.5" x="35.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="56.5" text-anchor="start">JsonEntitiesFromCodec</text></a></g></g><!-- node6&#45;&gt;node5 --><g class="edge inheritance" id="graph1_6_5"><g id="a_inheritance|graph1_6_5"><a xlink:title="JsonEntitiesFromCodec is a subtype of Endpoints"><path d="M149.9597,-56.2111C137.6287,-46.3138 122.4315,-34.1161 111.2271,-25.123" stroke="#d4d4d4" fill="none"></path><polygon points="148.7601,-58.3898 155.7528,-60.8608 151.8272,-54.5684 148.7601,-58.3898" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node7 --><g class="node trait" id="graph1_7"><g id="a_trait|graph1_7"><a xlink:title="endpoints.scalaj.client.BasicAuthentication" xlink:href="BasicAuthentication.html#inheritance-diagram"><path d="M303.1667,-25C303.1667,-25 191.8333,-25 191.8333,-25 187.6667,-25 183.5,-20.8333 183.5,-16.6667 183.5,-16.6667 183.5,-8.3333 183.5,-8.3333 183.5,-4.1667 187.6667,0 191.8333,0 191.8333,0 303.1667,0 303.1667,0 307.3333,0 311.5,-4.1667 311.5,-8.3333 311.5,-8.3333 311.5,-16.6667 311.5,-16.6667 311.5,-20.8333 307.3333,-25 303.1667,-25" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-19.5" x="193.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="214.5" text-anchor="start">BasicAuthentication</text></a></g></g><!-- node6&#45;&gt;node7 --><g class="edge inheritance" id="graph1_6_7"><g id="a_inheritance|graph1_6_7"><a xlink:title="BasicAuthentication is a subtype of Endpoints"><path d="M193.0403,-56.2111C205.3713,-46.3138 220.5685,-34.1161 231.7729,-25.123" stroke="#d4d4d4" fill="none"></path><polygon points="191.1728,-54.5684 187.2472,-60.8608 194.2399,-58.3898 191.1728,-54.5684" stroke="#d4d4d4" fill="none"></polygon></a></g></g></g></svg></div>
-                <div id="diagram-controls" class="hiddenContent">
-                  <button id="diagram-zoom-out" class="diagram-btn"><i class="material-icons"></i></button>
-                  <button id="diagram-zoom-in" class="diagram-btn"><i class="material-icons"></i></button>
-                  <button title="Toggle full-screen" id="diagram-fs" class="diagram-btn to-full"><i class="material-icons"></i></button>
-                </div>
-              </div></div>
+          <div class="superTypes hiddenContent"><a href="../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
+        </div></div>
         
 
       
@@ -207,9 +205,9 @@
         <div id="types" class="types members">
               <h3>Type Members</h3>
               <ol><li name="endpoints.scalaj.client.BasicAuthentication" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="interpreters">
-      <a id="BasicAuthenticationextendsBasicAuthenticationwithEndpoints"></a><a id="BasicAuthentication:BasicAuthentication"></a>
+      <a id="BasicAuthenticationextendsBasicAuthenticationwithEndpointsWithCustomErrors"></a><a id="BasicAuthentication:BasicAuthentication"></a>
       <span class="permalink">
-      <a href="../../../endpoints/scalaj/client/index.html#BasicAuthenticationextendsBasicAuthenticationwithEndpoints" title="Permalink">
+      <a href="../../../endpoints/scalaj/client/BasicAuthentication.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -218,14 +216,14 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="" href="BasicAuthentication.html"><span class="name">BasicAuthentication</span></a><span class="result"> extends <a href="../../algebra/BasicAuthentication.html" class="extype" name="endpoints.algebra.BasicAuthentication">algebra.BasicAuthentication</a> with <a href="Endpoints.html" class="extype" name="endpoints.scalaj.client.Endpoints">Endpoints</a></span>
+        <a title="" href="BasicAuthentication.html"><span class="name">BasicAuthentication</span></a><span class="result"> extends <a href="../../algebra/BasicAuthentication.html" class="extype" name="endpoints.algebra.BasicAuthentication">algebra.BasicAuthentication</a> with <a href="EndpointsWithCustomErrors.html" class="extype" name="endpoints.scalaj.client.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a></span>
       </span>
       
       <p class="shortcomment cmt"></p>
-    </li><li name="endpoints.scalaj.client.Endpoints" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="interpreters">
-      <a id="EndpointsextendsEndpointswithRequestswithResponses"></a><a id="Endpoints:Endpoints"></a>
+    </li><li name="endpoints.scalaj.client.BuiltInErrors" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="BuiltInErrorsextendsBuiltInErrors"></a><a id="BuiltInErrors:BuiltInErrors"></a>
       <span class="permalink">
-      <a href="../../../endpoints/scalaj/client/index.html#EndpointsextendsEndpointswithRequestswithResponses" title="Permalink">
+      <a href="../../../endpoints/scalaj/client/BuiltInErrors.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -234,14 +232,46 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="" href="Endpoints.html"><span class="name">Endpoints</span></a><span class="result"> extends <a href="../../algebra/Endpoints.html" class="extype" name="endpoints.algebra.Endpoints">algebra.Endpoints</a> with <a href="Requests.html" class="extype" name="endpoints.scalaj.client.Requests">Requests</a> with <a href="Responses.html" class="extype" name="endpoints.scalaj.client.Responses">Responses</a></span>
+        <a title="" href="BuiltInErrors.html"><span class="name">BuiltInErrors</span></a><span class="result"> extends <a href="../../algebra/BuiltInErrors.html" class="extype" name="endpoints.algebra.BuiltInErrors">algebra.BuiltInErrors</a></span>
+      </span>
+      
+      
+    </li><li name="endpoints.scalaj.client.Endpoints" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="interpreters">
+      <a id="EndpointsextendsEndpointswithEndpointsWithCustomErrorswithBuiltInErrors"></a><a id="Endpoints:Endpoints"></a>
+      <span class="permalink">
+      <a href="../../../endpoints/scalaj/client/Endpoints.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="Endpoints.html"><span class="name">Endpoints</span></a><span class="result"> extends <a href="../../algebra/Endpoints.html" class="extype" name="endpoints.algebra.Endpoints">algebra.Endpoints</a> with <a href="EndpointsWithCustomErrors.html" class="extype" name="endpoints.scalaj.client.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a> with <a href="BuiltInErrors.html" class="extype" name="endpoints.scalaj.client.BuiltInErrors">BuiltInErrors</a></span>
+      </span>
+      
+      <p class="shortcomment cmt"></p>
+    </li><li name="endpoints.scalaj.client.EndpointsWithCustomErrors" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="interpreters">
+      <a id="EndpointsWithCustomErrorsextendsEndpointsWithCustomErrorswithRequestswithResponses"></a><a id="EndpointsWithCustomErrors:EndpointsWithCustomErrors"></a>
+      <span class="permalink">
+      <a href="../../../endpoints/scalaj/client/EndpointsWithCustomErrors.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="EndpointsWithCustomErrors.html"><span class="name">EndpointsWithCustomErrors</span></a><span class="result"> extends <a href="../../algebra/EndpointsWithCustomErrors.html" class="extype" name="endpoints.algebra.EndpointsWithCustomErrors">algebra.EndpointsWithCustomErrors</a> with <a href="Requests.html" class="extype" name="endpoints.scalaj.client.Requests">Requests</a> with <a href="Responses.html" class="extype" name="endpoints.scalaj.client.Responses">Responses</a></span>
       </span>
       
       <p class="shortcomment cmt"></p>
     </li><li name="endpoints.scalaj.client.JsonEntitiesFromCodec" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="interpreters">
-      <a id="JsonEntitiesFromCodecextendsEndpointswithJsonEntitiesFromCodec"></a><a id="JsonEntitiesFromCodec:JsonEntitiesFromCodec"></a>
+      <a id="JsonEntitiesFromCodecextendsEndpointsWithCustomErrorswithJsonEntitiesFromCodec"></a><a id="JsonEntitiesFromCodec:JsonEntitiesFromCodec"></a>
       <span class="permalink">
-      <a href="../../../endpoints/scalaj/client/index.html#JsonEntitiesFromCodecextendsEndpointswithJsonEntitiesFromCodec" title="Permalink">
+      <a href="../../../endpoints/scalaj/client/JsonEntitiesFromCodec.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -250,7 +280,7 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="Interpreter for endpoints.algebra.JsonEntitiesFromCodec that encodes JSON requests and decodes JSON responses." href="JsonEntitiesFromCodec.html"><span class="name">JsonEntitiesFromCodec</span></a><span class="result"> extends <a href="Endpoints.html" class="extype" name="endpoints.scalaj.client.Endpoints">Endpoints</a> with <a href="../../algebra/JsonEntitiesFromCodec.html" class="extype" name="endpoints.algebra.JsonEntitiesFromCodec">algebra.JsonEntitiesFromCodec</a></span>
+        <a title="Interpreter for endpoints.algebra.JsonEntitiesFromCodec that encodes JSON requests and decodes JSON responses." href="JsonEntitiesFromCodec.html"><span class="name">JsonEntitiesFromCodec</span></a><span class="result"> extends <a href="EndpointsWithCustomErrors.html" class="extype" name="endpoints.scalaj.client.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a> with <a href="../../algebra/JsonEntitiesFromCodec.html" class="extype" name="endpoints.algebra.JsonEntitiesFromCodec">algebra.JsonEntitiesFromCodec</a></span>
       </span>
       
       <p class="shortcomment cmt">Interpreter for <a href="../../algebra/JsonEntitiesFromCodec.html" class="extype" name="endpoints.algebra.JsonEntitiesFromCodec">endpoints.algebra.JsonEntitiesFromCodec</a> that encodes JSON requests
@@ -258,7 +288,7 @@ and decodes JSON responses.</p>
     </li><li name="endpoints.scalaj.client.Methods" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="interpreters">
       <a id="MethodsextendsMethods"></a><a id="Methods:Methods"></a>
       <span class="permalink">
-      <a href="../../../endpoints/scalaj/client/index.html#MethodsextendsMethods" title="Permalink">
+      <a href="../../../endpoints/scalaj/client/Methods.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -274,7 +304,7 @@ and decodes JSON responses.</p>
     </li><li name="endpoints.scalaj.client.Requests" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="interpreters">
       <a id="RequestsextendsRequestswithUrlswithMethods"></a><a id="Requests:Requests"></a>
       <span class="permalink">
-      <a href="../../../endpoints/scalaj/client/index.html#RequestsextendsRequestswithUrlswithMethods" title="Permalink">
+      <a href="../../../endpoints/scalaj/client/Requests.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -290,7 +320,7 @@ and decodes JSON responses.</p>
     </li><li name="endpoints.scalaj.client.Responses" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="interpreters">
       <a id="ResponsesextendsResponseswithStatusCodes"></a><a id="Responses:Responses"></a>
       <span class="permalink">
-      <a href="../../../endpoints/scalaj/client/index.html#ResponsesextendsResponseswithStatusCodes" title="Permalink">
+      <a href="../../../endpoints/scalaj/client/Responses.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -306,7 +336,7 @@ and decodes JSON responses.</p>
     </li><li name="endpoints.scalaj.client.StatusCodes" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="StatusCodesextendsStatusCodes"></a><a id="StatusCodes:StatusCodes"></a>
       <span class="permalink">
-      <a href="../../../endpoints/scalaj/client/index.html#StatusCodesextendsStatusCodes" title="Permalink">
+      <a href="../../../endpoints/scalaj/client/StatusCodes.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -322,7 +352,7 @@ and decodes JSON responses.</p>
     </li><li name="endpoints.scalaj.client.Urls" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="interpreters">
       <a id="UrlsextendsUrls"></a><a id="Urls:Urls"></a>
       <span class="permalink">
-      <a href="../../../endpoints/scalaj/client/index.html#UrlsextendsUrls" title="Permalink">
+      <a href="../../../endpoints/scalaj/client/Urls.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -351,7 +381,7 @@ and decodes JSON responses.</p>
         <div class="parent" name="scala.AnyRef">
               <h3>Inherited from <a href="../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">
-              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.12.8/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></h3>
+              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></h3>
             </div>
         
         </div>

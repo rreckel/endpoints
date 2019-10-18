@@ -21,7 +21,7 @@
             <div class="row">
               <div class="large-12 columns a_limited top-bar">
                 <div class="top-bar-left">
-                  <p>endpoints 0.10.1</p>
+                  <p>endpoints 0.11.0</p>
 
                 </div>
                 <div class="top-bar-right align-right row">
@@ -56,7 +56,7 @@
 <p>Client and server backed by <a href="https://doc.akka.io/docs/akka-http/current/">Akka HTTP</a>.</p>
 <h2 id="client" class="a_section" data-magellan-target="client">Client<a class="a_hlink" href="#client"></a></h2>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
-<pre class="hljs"><code class="language-scala"><span class="hljs-string">"org.julienrf"</span> %% <span class="hljs-string">"endpoints-akka-http-client"</span> % <span class="hljs-string">"0.10.1"</span>
+<pre class="hljs"><code class="language-scala"><span class="hljs-string">"org.julienrf"</span> %% <span class="hljs-string">"endpoints-akka-http-client"</span> % <span class="hljs-string">"0.11.0"</span>
 </code></pre>
 </div></div>
 <p><a href="../api/endpoints/akkahttp/client/index.html">API documentation</a></p>
@@ -64,19 +64,19 @@
 from <code class="hljs">A</code> to <code class="hljs">Future[B]</code>:</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
 <pre class="hljs"><code class="language-scala"><span class="hljs-class"><span class="hljs-keyword">type</span> <span class="hljs-title">Endpoint</span>[<span class="hljs-type">A</span>, <span class="hljs-type">B</span>] </span>= <span class="hljs-type">A</span> =&gt; <span class="hljs-type">Future</span>[<span class="hljs-type">B</span>]</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.10.1/akka-http/client/src/main/scala/endpoints/akkahttp/client/Endpoints.scala#L120" class="a_sourcelink">Endpoints.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.11.0/akka-http/client/src/main/scala/endpoints/akkahttp/client/Endpoints.scala#L156" class="a_sourcelink">Endpoints.scala</a></div></div>
 <p>This means that, given the following endpoint definition:</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
 <pre class="hljs"><code class="language-scala"><span class="hljs-keyword">val</span> someResource: <span class="hljs-type">Endpoint</span>[<span class="hljs-type">Int</span>, <span class="hljs-type">String</span>] =
-  endpoint(get(path / <span class="hljs-string">"some-resource"</span> / segment[<span class="hljs-type">Int</span>]()), textResponse())</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.10.1/algebras/algebra/src/test/scala/endpoints/algebra/EndpointsDocs.scala#L72-L73" class="a_sourcelink">EndpointsDocs.scala</a></div></div>
+  endpoint(get(path / <span class="hljs-string">"some-resource"</span> / segment[<span class="hljs-type">Int</span>]()), ok(textResponse))</code></pre>
+<a href="https://github.com/julienrf/endpoints/blob/v0.11.0/algebras/algebra/src/test/scala/endpoints/algebra/EndpointsDocs.scala#L75-L76" class="a_sourcelink">EndpointsDocs.scala</a></div></div>
 <p>It can be invoked as follows:</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
 <pre class="hljs"><code class="language-scala"><span class="hljs-keyword">val</span> eventuallyString: <span class="hljs-type">Future</span>[<span class="hljs-type">String</span>] = someResource(<span class="hljs-number">42</span>)</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.10.1/akka-http/client/src/test/scala/endpoints/akkahttp/client/EndpointsDocs.scala#L9" class="a_sourcelink">EndpointsDocs.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.11.0/akka-http/client/src/test/scala/endpoints/akkahttp/client/EndpointsDocs.scala#L9" class="a_sourcelink">EndpointsDocs.scala</a></div></div>
 <h2 id="server" class="a_section" data-magellan-target="server">Server<a class="a_hlink" href="#server"></a></h2>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
-<pre class="hljs"><code class="language-scala"><span class="hljs-string">"org.julienrf"</span> %% <span class="hljs-string">"endpoints-akka-http-server"</span> % <span class="hljs-string">"0.10.1"</span>
+<pre class="hljs"><code class="language-scala"><span class="hljs-string">"org.julienrf"</span> %% <span class="hljs-string">"endpoints-akka-http-server"</span> % <span class="hljs-string">"0.11.0"</span>
 </code></pre>
 </div></div>
 <p><a href="../api/endpoints/akkahttp/server/index.html">API documentation</a></p>
@@ -86,13 +86,32 @@ that can be integrated to your Akka HTTP application.</p>
 <p>For instance, given the following endpoint definition:</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
 <pre class="hljs"><code class="language-scala"><span class="hljs-keyword">val</span> someResource: <span class="hljs-type">Endpoint</span>[<span class="hljs-type">Int</span>, <span class="hljs-type">String</span>] =
-  endpoint(get(path / <span class="hljs-string">"some-resource"</span> / segment[<span class="hljs-type">Int</span>]()), textResponse())</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.10.1/algebras/algebra/src/test/scala/endpoints/algebra/EndpointsDocs.scala#L72-L73" class="a_sourcelink">EndpointsDocs.scala</a></div></div>
+  endpoint(get(path / <span class="hljs-string">"some-resource"</span> / segment[<span class="hljs-type">Int</span>]()), ok(textResponse))</code></pre>
+<a href="https://github.com/julienrf/endpoints/blob/v0.11.0/algebras/algebra/src/test/scala/endpoints/algebra/EndpointsDocs.scala#L75-L76" class="a_sourcelink">EndpointsDocs.scala</a></div></div>
 <p>It can be implemented as follows:</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
 <pre class="hljs"><code class="language-scala"><span class="hljs-keyword">val</span> route: <span class="hljs-type">Route</span> =
   someResource.implementedBy(x =&gt; <span class="hljs-string">s"Received <span class="hljs-subst">$x</span>"</span>)</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.10.1/akka-http/server/src/test/scala/endpoints/akkahttp/server/EndpointsDocs.scala#L9-L10" class="a_sourcelink">EndpointsDocs.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.11.0/akka-http/server/src/test/scala/endpoints/akkahttp/server/EndpointsDocs.scala#L9-L10" class="a_sourcelink">EndpointsDocs.scala</a></div></div>
+<h3 id="error-handling" class="a_section" data-magellan-target="error-handling">Error handling<a class="a_hlink" href="#error-handling"></a></h3>
+<p>When the server processes requests, three kinds of errors can happen: the incoming request doesn’t match
+any endpoint, the request does match an endpoint but is invalid (e.g. one parameter has a wrong type), or
+an exception is thrown.</p>
+<h4 id="the-incoming-request-doesnt-match-any-endpoint" class="a_section" data-magellan-target="the-incoming-request-doesnt-match-any-endpoint">The incoming request doesn’t match any endpoint<a class="a_hlink" href="#the-incoming-request-doesnt-match-any-endpoint"></a></h4>
+<p>In that case, the routes constructed by <em>endpoints</em> can’t do anything. You have to deal with such
+errors in the usual Akka HTTP way: by using an implicit <code class="hljs">akka.http.scaladsl.server.RejectionHandler</code>
+having a <code class="hljs">handleNotFound</code> clause.</p>
+<h4 id="the-incoming-request-is-invalid" class="a_section" data-magellan-target="the-incoming-request-is-invalid">The incoming request is invalid<a class="a_hlink" href="#the-incoming-request-is-invalid"></a></h4>
+<p>In that case, <em>endpoints</em> returns a “Bad Request” (400) response reporting all the errors in a
+JSON array. You can change this behavior by overriding the
+<a href="../api/endpoints/akkahttp/server/Urls.html#handleClientErrors(invalid:endpoints.Invalid):akka.http.scaladsl.server.StandardRoute">handleClientErrors</a>
+method.</p>
+<h4 id="an-exception-is-thrown" class="a_section" data-magellan-target="an-exception-is-thrown">An exception is thrown<a class="a_hlink" href="#an-exception-is-thrown"></a></h4>
+<p>If an exception is thrown during request decoding, or when running the business logic, or when
+encoding the response, <em>endpoints</em> returns an “Internal Server Error” (500) response reporting
+the error in a JSON array. You can change this behavior by overriding the
+<a href="../api/endpoints/akkahttp/server/Endpoints.html#handleServerError(throwable:Throwable):akka.http.scaladsl.server.StandardRoute">handleServerError</a>
+method.</p>
 
                  
   <ul class="menu align-right simple a_navbar a_navbar_bottom">
@@ -218,6 +237,46 @@ that can be integrated to your Akka HTTP application.</p>
       
          <a href="#server">Server</a> 
       
+      
+        <ul class="vertical menu">  
+  
+    <li>
+      
+         <a href="#error-handling">Error handling</a> 
+      
+      
+        <ul class="vertical menu">  
+  
+    <li>
+      
+         <a href="#the-incoming-request-doesnt-match-any-endpoint">The incoming request doesn’t match any endpoint</a> 
+      
+      
+    </li>
+  
+  
+  
+    <li>
+      
+         <a href="#the-incoming-request-is-invalid">The incoming request is invalid</a> 
+      
+      
+    </li>
+  
+  
+  
+    <li>
+      
+         <a href="#an-exception-is-thrown">An exception is thrown</a> 
+      
+      
+    </li>
+  
+  </ul>
+      
+    </li>
+  
+  </ul>
       
     </li>
   

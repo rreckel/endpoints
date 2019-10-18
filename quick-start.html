@@ -21,7 +21,7 @@
             <div class="row">
               <div class="large-12 columns a_limited top-bar">
                 <div class="top-bar-left">
-                  <p>endpoints 0.10.1</p>
+                  <p>endpoints 0.11.0</p>
 
                 </div>
                 <div class="top-bar-right align-right row">
@@ -96,9 +96,9 @@ list.</p>
 <pre class="hljs"><code class="language-scala"><span class="hljs-keyword">val</span> shared =
   crossProject(<span class="hljs-type">JSPlatform</span>, <span class="hljs-type">JVMPlatform</span>).crossType(<span class="hljs-type">CrossType</span>.<span class="hljs-type">Pure</span>).settings(
     libraryDependencies ++= <span class="hljs-type">Seq</span>(
-      <span class="hljs-string">"org.julienrf"</span> %%% <span class="hljs-string">"endpoints-algebra"</span> % <span class="hljs-string">"0.10.1"</span>,
+      <span class="hljs-string">"org.julienrf"</span> %%% <span class="hljs-string">"endpoints-algebra"</span> % <span class="hljs-string">"0.11.0"</span>,
       <span class="hljs-comment">// optional, see explanation below</span>
-      <span class="hljs-string">"org.julienrf"</span> %%% <span class="hljs-string">"endpoints-json-schema-generic"</span> % <span class="hljs-string">"0.10.1"</span>
+      <span class="hljs-string">"org.julienrf"</span> %%% <span class="hljs-string">"endpoints-json-schema-generic"</span> % <span class="hljs-string">"0.11.0"</span>
     )
   )
 
@@ -107,14 +107,14 @@ list.</p>
 
 <span class="hljs-keyword">val</span> client =
   project.enablePlugins(<span class="hljs-type">ScalaJSPlugin</span>).settings(
-    libraryDependencies += <span class="hljs-string">"org.julienrf"</span> %%% <span class="hljs-string">"endpoints-xhr-client-circe"</span> % <span class="hljs-string">"0.10.1"</span>
+    libraryDependencies += <span class="hljs-string">"org.julienrf"</span> %%% <span class="hljs-string">"endpoints-xhr-client-circe"</span> % <span class="hljs-string">"0.11.0"</span>
   ).dependsOn(sharedJS)
 
 <span class="hljs-keyword">val</span> server =
   project.settings(
     libraryDependencies ++= <span class="hljs-type">Seq</span>(
-      <span class="hljs-string">"org.julienrf"</span> %% <span class="hljs-string">"endpoints-play-server-playjson"</span> % <span class="hljs-string">"0.10.1"</span>,
-      <span class="hljs-string">"org.julienrf"</span> %% <span class="hljs-string">"endpoints-openapi"</span> % <span class="hljs-string">"0.10.1"</span>,
+      <span class="hljs-string">"org.julienrf"</span> %% <span class="hljs-string">"endpoints-play-server-playjson"</span> % <span class="hljs-string">"0.11.0"</span>,
+      <span class="hljs-string">"org.julienrf"</span> %% <span class="hljs-string">"endpoints-openapi"</span> % <span class="hljs-string">"0.11.0"</span>,
       <span class="hljs-string">"org.scala-stm"</span> %% <span class="hljs-string">"scala-stm"</span> % <span class="hljs-string">"0.8"</span>
     )
   ).dependsOn(sharedJVM)
@@ -158,7 +158,7 @@ for getting a counter value and one for incrementing it:</p>
     * The response entity is a JSON document representing the counter value.
     */</span>
   <span class="hljs-keyword">val</span> currentValue: <span class="hljs-type">Endpoint</span>[<span class="hljs-type">Unit</span>, <span class="hljs-type">Counter</span>] =
-    endpoint(get(path / <span class="hljs-string">"current-value"</span>), jsonResponse[<span class="hljs-type">Counter</span>]())
+    endpoint(get(path / <span class="hljs-string">"current-value"</span>), ok(jsonResponse[<span class="hljs-type">Counter</span>]))
 
   <span class="hljs-comment">/**
     * Increments the counter value.
@@ -167,7 +167,7 @@ for getting a counter value and one for incrementing it:</p>
     * The response entity is empty.
     */</span>
   <span class="hljs-keyword">val</span> increment: <span class="hljs-type">Endpoint</span>[<span class="hljs-type">Increment</span>, <span class="hljs-type">Unit</span>] =
-    endpoint(post(path / <span class="hljs-string">"increment"</span>, jsonRequest[<span class="hljs-type">Increment</span>]()), emptyResponse())
+    endpoint(post(path / <span class="hljs-string">"increment"</span>, jsonRequest[<span class="hljs-type">Increment</span>]), ok(emptyResponse))
 
   <span class="hljs-comment">// Generically derive the JSON schema of our `Counter`</span>
   <span class="hljs-comment">// and `Increment` case classes defined thereafter</span>
@@ -178,7 +178,7 @@ for getting a counter value and one for incrementing it:</p>
 
 <span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Counter</span>(<span class="hljs-params">value: <span class="hljs-type">Int</span></span>)</span>
 <span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Increment</span>(<span class="hljs-params">step: <span class="hljs-type">Int</span></span>)</span></code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.10.1/documentation/examples/quickstart/endpoints/src/main/scala/quickstart/CounterEndpoints.scala#L4-L43" class="a_sourcelink">CounterEndpoints.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.11.0/documentation/examples/quickstart/endpoints/src/main/scala/quickstart/CounterEndpoints.scala#L4-L43" class="a_sourcelink">CounterEndpoints.scala</a></div></div>
 <p>The <code class="hljs">currentValue</code> and <code class="hljs">increment</code> members define the endpoints for getting the counter
 current value or incrementing it, as their names suggest. The <code class="hljs">counterSchema</code> and
 <code class="hljs">incrementSchema</code> members define a JSON schema that will be used to serialize and
@@ -199,7 +199,7 @@ the hood. Defines the following <code class="hljs">CounterClient</code> object i
   <span class="hljs-keyword">extends</span> <span class="hljs-type">CounterEndpoints</span>
     <span class="hljs-keyword">with</span> xhr.thenable.<span class="hljs-type">Endpoints</span>
     <span class="hljs-keyword">with</span> xhr.circe.<span class="hljs-type">JsonSchemaEntities</span></code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.10.1/documentation/examples/quickstart/client/src/main/scala/quickstart/CounterClient.scala#L4-L14" class="a_sourcelink">CounterClient.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.11.0/documentation/examples/quickstart/client/src/main/scala/quickstart/CounterClient.scala#L4-L14" class="a_sourcelink">CounterClient.scala</a></div></div>
 <p>And then, the <code class="hljs">CounterClient</code> object can be used as follows:</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
 <pre class="hljs"><code class="language-scala"><span class="hljs-keyword">import</span> scala.scalajs.js
@@ -209,7 +209,7 @@ the hood. Defines the following <code class="hljs">CounterClient</code> object i
   * deserializes the JSON response as a `Counter`.
   */</span>
 <span class="hljs-keyword">val</span> eventuallyCounter: js.<span class="hljs-type">Thenable</span>[<span class="hljs-type">Counter</span>] = <span class="hljs-type">CounterClient</span>.currentValue(())</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.10.1/documentation/examples/quickstart/client/src/main/scala/quickstart/Usage.scala#L6-L12" class="a_sourcelink">Usage.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.11.0/documentation/examples/quickstart/client/src/main/scala/quickstart/Usage.scala#L6-L12" class="a_sourcelink">Usage.scala</a></div></div>
 <p>And also:</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
 <pre class="hljs"><code class="language-scala"><span class="hljs-comment">/**
@@ -217,7 +217,7 @@ the hood. Defines the following <code class="hljs">CounterClient</code> object i
   * on the `increment` endpoint.
   */</span>
 <span class="hljs-keyword">val</span> eventuallyDone: js.<span class="hljs-type">Thenable</span>[<span class="hljs-type">Unit</span>] = <span class="hljs-type">CounterClient</span>.increment(<span class="hljs-type">Increment</span>(<span class="hljs-number">42</span>))</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.10.1/documentation/examples/quickstart/client/src/main/scala/quickstart/Usage.scala#L16-L20" class="a_sourcelink">Usage.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.11.0/documentation/examples/quickstart/client/src/main/scala/quickstart/Usage.scala#L16-L20" class="a_sourcelink">Usage.scala</a></div></div>
 <p>As you can see, invoking an endpoint is as easy as calling a method on the <code class="hljs">CounterClient</code> object.
 The <em>endpoints</em> library then builds an HTTP request (according to the endpoint description), sends
 it to the server, and eventually decodes the HTTP response (according to the endpoint description).</p>
@@ -247,16 +247,16 @@ that uses Play framework under the hood. Create the following <code class="hljs"
 
   <span class="hljs-keyword">val</span> routes: <span class="hljs-type">Router</span>.<span class="hljs-type">Routes</span> = routesFromEndpoints(
 
-    <span class="hljs-comment">/** Implements the `currentValue` endpoint */</span>
+    <span class="hljs-comment">// Implements the `currentValue` endpoint</span>
     currentValue.implementedBy(_ =&gt; <span class="hljs-type">Counter</span>(counter.single.get)),
 
-    <span class="hljs-comment">/** Implements the `increment` endpoint */</span>
+    <span class="hljs-comment">// Implements the `increment` endpoint</span>
     increment.implementedBy(inc =&gt; counter.single += inc.step)
 
   )
 
 }</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.10.1/documentation/examples/quickstart/server/src/main/scala/quickstart/CounterServer.scala#L4-L34" class="a_sourcelink">CounterServer.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.11.0/documentation/examples/quickstart/server/src/main/scala/quickstart/CounterServer.scala#L4-L34" class="a_sourcelink">CounterServer.scala</a></div></div>
 <p>The <code class="hljs">routes</code> value produced by the <em>endpoints</em> library is a <code class="hljs">Routes</code> value directly
 usable by Play framework. The last section shows how to setup a Play server that
 uses these routes.</p>
@@ -284,7 +284,7 @@ object in the <code class="hljs">server</code> project:</p>
     )(currentValue, increment)
 
 }</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.10.1/documentation/examples/quickstart/server/src/main/scala/quickstart/CounterDocumentation.scala#L4-L20" class="a_sourcelink">CounterDocumentation.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.11.0/documentation/examples/quickstart/server/src/main/scala/quickstart/CounterDocumentation.scala#L4-L20" class="a_sourcelink">CounterDocumentation.scala</a></div></div>
 <p>This code defines a <code class="hljs">CounterDocumentation</code> object with an <code class="hljs">api</code> member containing an OpenAPI object documenting
 the <code class="hljs">currentValue</code> and <code class="hljs">increment</code> endpoints.</p>
 <h2 id="running-the-application" class="a_section" data-magellan-target="running-the-application">Running the application<a class="a_hlink" href="#running-the-application"></a></h2>
@@ -293,15 +293,18 @@ Define the following <code class="hljs">Main</code> object:</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
 <pre class="hljs"><code class="language-scala"><span class="hljs-keyword">import</span> endpoints.openapi.model.{<span class="hljs-type">OpenApi</span>, <span class="hljs-type">OpenApiSchemas</span>}
 <span class="hljs-keyword">import</span> endpoints.play.server
-<span class="hljs-keyword">import</span> endpoints.play.server.{<span class="hljs-type">DefaultPlayComponents</span>, <span class="hljs-type">HttpServer</span>, <span class="hljs-type">PlayComponents</span>}
+<span class="hljs-keyword">import</span> endpoints.play.server.<span class="hljs-type">PlayComponents</span>
+<span class="hljs-keyword">import</span> play.core.server.<span class="hljs-type">NettyServer</span>
 <span class="hljs-keyword">import</span> play.core.server.<span class="hljs-type">ServerConfig</span>
 
 <span class="hljs-class"><span class="hljs-keyword">object</span> <span class="hljs-title">Main</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">App</span> </span>{
   <span class="hljs-keyword">val</span> config = <span class="hljs-type">ServerConfig</span>()
-  <span class="hljs-keyword">val</span> playComponents = <span class="hljs-keyword">new</span> <span class="hljs-type">DefaultPlayComponents</span>(config)
-  <span class="hljs-keyword">val</span> counterServer = <span class="hljs-keyword">new</span> <span class="hljs-type">CounterServer</span>(playComponents)
-  <span class="hljs-keyword">val</span> documentationServer = <span class="hljs-keyword">new</span> <span class="hljs-type">DocumentationServer</span>(playComponents)
-  <span class="hljs-type">HttpServer</span>(config, playComponents, counterServer.routes orElse documentationServer.routes)
+  <span class="hljs-type">NettyServer</span>.fromRouterWithComponents(config) { components =&gt;
+    <span class="hljs-keyword">val</span> playComponents = <span class="hljs-type">PlayComponents</span>.fromBuiltInComponents(components)
+    <span class="hljs-keyword">val</span> counterServer = <span class="hljs-keyword">new</span> <span class="hljs-type">CounterServer</span>(playComponents)
+    <span class="hljs-keyword">val</span> documentationServer = <span class="hljs-keyword">new</span> <span class="hljs-type">DocumentationServer</span>(playComponents)
+    counterServer.routes orElse documentationServer.routes
+  }
 }
 
 <span class="hljs-comment">// Additional route for serving the OpenAPI documentation</span>
@@ -310,12 +313,12 @@ Define the following <code class="hljs">Main</code> object:</p>
     <span class="hljs-keyword">with</span> <span class="hljs-type">OpenApiSchemas</span> <span class="hljs-keyword">with</span> server.playjson.<span class="hljs-type">JsonSchemaEntities</span> {
 
   <span class="hljs-keyword">val</span> routes = routesFromEndpoints(
-    endpoint(get(path / <span class="hljs-string">"documentation.json"</span>), jsonResponse[<span class="hljs-type">OpenApi</span>]())
+    endpoint[<span class="hljs-type">Unit</span>, <span class="hljs-type">OpenApi</span>](get(path / <span class="hljs-string">"documentation.json"</span>), ok(jsonResponse[<span class="hljs-type">OpenApi</span>]))
       .implementedBy(_ =&gt; <span class="hljs-type">CounterDocumentation</span>.api)
   )
 
 }</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.10.1/documentation/examples/quickstart/server/src/main/scala/quickstart/Main.scala#L4-L29" class="a_sourcelink">Main.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.11.0/documentation/examples/quickstart/server/src/main/scala/quickstart/Main.scala#L4-L32" class="a_sourcelink">Main.scala</a></div></div>
 <p>You can then browse the
 <a href="http://localhost:9000/current-value">http://localhost:9000/current-value</a>
 URL to query the counter value, or the
@@ -324,47 +327,44 @@ URL to get the generated OpenAPI documentation, which should look like
 the following:</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
 <pre class="hljs"><code class="language-javascript">{
-  <span class="hljs-string">"components"</span>: {
-    <span class="hljs-string">"schemas"</span>: {
-      <span class="hljs-string">"quickstart.Counter"</span>: {
-        <span class="hljs-string">"required"</span>: [
-          <span class="hljs-string">"value"</span>
-        ],
-        <span class="hljs-string">"type"</span>: <span class="hljs-string">"object"</span>,
-        <span class="hljs-string">"properties"</span>: {
-          <span class="hljs-string">"value"</span>: {
-            <span class="hljs-string">"type"</span>: <span class="hljs-string">"integer"</span>,
-            <span class="hljs-string">"format"</span>: <span class="hljs-string">"int32"</span>
-          }
-        }
-      },
-      <span class="hljs-string">"quickstart.Increment"</span>: {
-        <span class="hljs-string">"required"</span>: [
-          <span class="hljs-string">"step"</span>
-        ],
-        <span class="hljs-string">"type"</span>: <span class="hljs-string">"object"</span>,
-        <span class="hljs-string">"properties"</span>: {
-          <span class="hljs-string">"step"</span>: {
-            <span class="hljs-string">"type"</span>: <span class="hljs-string">"integer"</span>,
-            <span class="hljs-string">"format"</span>: <span class="hljs-string">"int32"</span>
-          }
-        }
-      }
-    }
-  },
   <span class="hljs-string">"openapi"</span>: <span class="hljs-string">"3.0.0"</span>,
   <span class="hljs-string">"info"</span>: {
     <span class="hljs-string">"title"</span>: <span class="hljs-string">"API to manipulate a counter"</span>,
     <span class="hljs-string">"version"</span>: <span class="hljs-string">"1.0.0"</span>
   },
+  <span class="hljs-string">"components"</span>: {
+    <span class="hljs-string">"schemas"</span>: {
+      <span class="hljs-string">"quickstart.Counter"</span>: {
+        <span class="hljs-string">"type"</span>: <span class="hljs-string">"object"</span>,
+        <span class="hljs-string">"properties"</span>: {
+          <span class="hljs-string">"value"</span>: {
+            <span class="hljs-string">"format"</span>: <span class="hljs-string">"int32"</span>,
+            <span class="hljs-string">"type"</span>: <span class="hljs-string">"integer"</span>
+          }
+        },
+        <span class="hljs-string">"required"</span>: [<span class="hljs-string">"value"</span>]
+      },
+      <span class="hljs-string">"quickstart.Increment"</span>: {
+        <span class="hljs-string">"type"</span>: <span class="hljs-string">"object"</span>,
+        <span class="hljs-string">"properties"</span>: {
+          <span class="hljs-string">"step"</span>: {
+            <span class="hljs-string">"format"</span>: <span class="hljs-string">"int32"</span>,
+            <span class="hljs-string">"type"</span>: <span class="hljs-string">"integer"</span>
+          }
+        },
+        <span class="hljs-string">"required"</span>: [<span class="hljs-string">"step"</span>]
+      },
+      <span class="hljs-string">"endpoints.Errors"</span>: {
+        <span class="hljs-string">"type"</span>: <span class="hljs-string">"array"</span>,
+        <span class="hljs-string">"items"</span>: {
+          <span class="hljs-string">"type"</span>: <span class="hljs-string">"string"</span>
+        }
+      }
+    }
+  },
   <span class="hljs-string">"paths"</span>: {
     <span class="hljs-string">"/increment"</span>: {
       <span class="hljs-string">"post"</span>: {
-        <span class="hljs-string">"responses"</span>: {
-          <span class="hljs-string">"200"</span>: {
-            <span class="hljs-string">"description"</span>: <span class="hljs-string">""</span>
-          }
-        },
         <span class="hljs-string">"requestBody"</span>: {
           <span class="hljs-string">"content"</span>: {
             <span class="hljs-string">"application/json"</span>: {
@@ -373,12 +373,57 @@ the following:</p>
               }
             }
           }
+        },
+        <span class="hljs-string">"responses"</span>: {
+          <span class="hljs-string">"400"</span>: {
+            <span class="hljs-string">"description"</span>: <span class="hljs-string">"Client error"</span>,
+            <span class="hljs-string">"content"</span>: {
+              <span class="hljs-string">"application/json"</span>: {
+                <span class="hljs-string">"schema"</span>: {
+                  <span class="hljs-string">"$ref"</span>: <span class="hljs-string">"#/components/schemas/endpoints.Errors"</span>
+                }
+              }
+            }
+          },
+          <span class="hljs-string">"500"</span>: {
+            <span class="hljs-string">"description"</span>: <span class="hljs-string">"Server error"</span>,
+            <span class="hljs-string">"content"</span>: {
+              <span class="hljs-string">"application/json"</span>: {
+                <span class="hljs-string">"schema"</span>: {
+                  <span class="hljs-string">"$ref"</span>: <span class="hljs-string">"#/components/schemas/endpoints.Errors"</span>
+                }
+              }
+            }
+          },
+          <span class="hljs-string">"200"</span>: {
+            <span class="hljs-string">"description"</span>: <span class="hljs-string">""</span>
+          }
         }
       }
     },
     <span class="hljs-string">"/current-value"</span>: {
       <span class="hljs-string">"get"</span>: {
         <span class="hljs-string">"responses"</span>: {
+          <span class="hljs-string">"400"</span>: {
+            <span class="hljs-string">"description"</span>: <span class="hljs-string">"Client error"</span>,
+            <span class="hljs-string">"content"</span>: {
+              <span class="hljs-string">"application/json"</span>: {
+                <span class="hljs-string">"schema"</span>: {
+                  <span class="hljs-string">"$ref"</span>: <span class="hljs-string">"#/components/schemas/endpoints.Errors"</span>
+                }
+              }
+            }
+          },
+          <span class="hljs-string">"500"</span>: {
+            <span class="hljs-string">"description"</span>: <span class="hljs-string">"Server error"</span>,
+            <span class="hljs-string">"content"</span>: {
+              <span class="hljs-string">"application/json"</span>: {
+                <span class="hljs-string">"schema"</span>: {
+                  <span class="hljs-string">"$ref"</span>: <span class="hljs-string">"#/components/schemas/endpoints.Errors"</span>
+                }
+              }
+            }
+          },
           <span class="hljs-string">"200"</span>: {
             <span class="hljs-string">"description"</span>: <span class="hljs-string">""</span>,
             <span class="hljs-string">"content"</span>: {

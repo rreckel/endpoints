@@ -8,17 +8,17 @@
           <meta name="keywords" content="" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
+      
       <link href="../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
-      <script type="text/javascript" src="../../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../../lib/jquery.min.js"></script>
       <script type="text/javascript" src="../../../lib/jquery.panzoom.min.js"></script>
       <script type="text/javascript" src="../../../lib/jquery.mousewheel.min.js"></script>
       <script type="text/javascript" src="../../../lib/index.js"></script>
       <script type="text/javascript" src="../../../index.js"></script>
       <script type="text/javascript" src="../../../lib/scheduler.js"></script>
       <script type="text/javascript" src="../../../lib/template.js"></script>
-      <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
       <script type="text/javascript" src="../../../lib/modernizr.custom.js"></script><script type="text/javascript" src="../../../lib/diagrams.js" id="diagrams-js"></script>
       <script type="text/javascript">
         /* this variable can be used by the JS to determine the path to the root document */
@@ -56,7 +56,7 @@
                 <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="_root_"></a><a id="root:_root_"></a>
       <span class="permalink">
-      <a href="index.html#_root_" title="Permalink">
+      <a href="../../../index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -72,7 +72,7 @@
     </li><li name="_root_.endpoints" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="endpoints"></a><a id="endpoints:endpoints"></a>
       <span class="permalink">
-      <a href="index.html#endpoints" title="Permalink">
+      <a href="../../../endpoints/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -88,7 +88,7 @@
     </li><li name="endpoints.xhr" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="xhr"></a><a id="xhr:xhr"></a>
       <span class="permalink">
-      <a href="../endpoints/index.html#xhr" title="Permalink">
+      <a href="../../../endpoints/xhr/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -106,7 +106,7 @@
     </li><li name="endpoints.xhr.circe" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="circe"></a><a id="circe:circe"></a>
       <span class="permalink">
-      <a href="../../endpoints/xhr/index.html#circe" title="Permalink">
+      <a href="../../../endpoints/xhr/circe/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -122,7 +122,7 @@
     </li><li name="endpoints.xhr.faithful" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="faithful"></a><a id="faithful:faithful"></a>
       <span class="permalink">
-      <a href="../../endpoints/xhr/index.html#faithful" title="Permalink">
+      <a href="../../../endpoints/xhr/faithful/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -139,7 +139,7 @@
     </li><li name="endpoints.xhr.future" visbl="pub" class="indented3 current" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="future"></a><a id="future:future"></a>
       <span class="permalink">
-      <a href="../../endpoints/xhr/index.html#future" title="Permalink">
+      <a href="../../../endpoints/xhr/future/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -156,12 +156,16 @@
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="endpoints.xhr">xhr</a></dd></dl></div>
     </li><li class="current-entities indented3">
                         <span class="separator"></span>
-                        <a class="trait" href="Endpoints.html" title="Implements xhr.Endpoints by using Scala’s Futures."></a>
-                        <a href="Endpoints.html" title="Implements xhr.Endpoints by using Scala’s Futures.">Endpoints</a>
+                        <a class="trait" href="Endpoints.html" title="Implements xhr.Endpoints by using Scala’s Futures, and uses endpoints.algebra.BuiltInErrors to model client and server errors."></a>
+                        <a href="Endpoints.html" title="Implements xhr.Endpoints by using Scala’s Futures, and uses endpoints.algebra.BuiltInErrors to model client and server errors.">Endpoints</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="EndpointsWithCustomErrors.html" title="Implements xhr.Endpoints by using Scala’s Futures."></a>
+                        <a href="EndpointsWithCustomErrors.html" title="Implements xhr.Endpoints by using Scala’s Futures.">EndpointsWithCustomErrors</a>
                       </li><li name="endpoints.xhr.thenable" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="thenable"></a><a id="thenable:thenable"></a>
       <span class="permalink">
-      <a href="../../endpoints/xhr/index.html#thenable" title="Permalink">
+      <a href="../../../endpoints/xhr/thenable/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -205,11 +209,11 @@
 
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Clients returning Scala <code>Future</code>s
-</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/julienrf/endpoints/blob/v0.10.1/xhr/client/src/main/scala/endpoints/xhr/future/package.scala" target="_blank">package.scala</a></dd></dl><div class="toggleContainer block">
+</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/julienrf/endpoints/blob/v0.11.0/xhr/client/src/main/scala/endpoints/xhr/future/package.scala" target="_blank">package.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.12.8/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
+          <div class="superTypes hiddenContent"><a href="../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
         </div></div>
         
 
@@ -222,9 +226,9 @@
         <div id="types" class="types members">
               <h3>Type Members</h3>
               <ol><li name="endpoints.xhr.future.Endpoints" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="interpreters">
-      <a id="EndpointsextendsEndpoints"></a><a id="Endpoints:Endpoints"></a>
+      <a id="EndpointsextendsEndpointswithEndpointsWithCustomErrors"></a><a id="Endpoints:Endpoints"></a>
       <span class="permalink">
-      <a href="../../../endpoints/xhr/future/index.html#EndpointsextendsEndpoints" title="Permalink">
+      <a href="../../../endpoints/xhr/future/Endpoints.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -233,10 +237,27 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="Implements xhr.Endpoints by using Scala’s Futures." href="Endpoints.html"><span class="name">Endpoints</span></a><span class="result"> extends <a href="../Endpoints.html" class="extype" name="endpoints.xhr.Endpoints">xhr.Endpoints</a></span>
+        <a title="Implements xhr.Endpoints by using Scala’s Futures, and uses endpoints.algebra.BuiltInErrors to model client and server errors." href="Endpoints.html"><span class="name">Endpoints</span></a><span class="result"> extends <a href="../Endpoints.html" class="extype" name="endpoints.xhr.Endpoints">xhr.Endpoints</a> with <a href="EndpointsWithCustomErrors.html" class="extype" name="endpoints.xhr.future.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a></span>
       </span>
       
-      <p class="shortcomment cmt">Implements <a href="../Endpoints.html" class="extype" name="endpoints.xhr.Endpoints">xhr.Endpoints</a> by using Scala’s <span class="extype" name="Future">Future</span>s.</p>
+      <p class="shortcomment cmt">Implements <a href="../Endpoints.html" class="extype" name="endpoints.xhr.Endpoints">xhr.Endpoints</a> by using Scala’s <code>Futures</code>, and uses <a href="../../algebra/BuiltInErrors.html" class="extype" name="endpoints.algebra.BuiltInErrors">endpoints.algebra.BuiltInErrors</a>
+to model client and server errors.</p>
+    </li><li name="endpoints.xhr.future.EndpointsWithCustomErrors" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="interpreters">
+      <a id="EndpointsWithCustomErrorsextendsEndpointsWithCustomErrors"></a><a id="EndpointsWithCustomErrors:EndpointsWithCustomErrors"></a>
+      <span class="permalink">
+      <a href="../../../endpoints/xhr/future/EndpointsWithCustomErrors.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="Implements xhr.Endpoints by using Scala’s Futures." href="EndpointsWithCustomErrors.html"><span class="name">EndpointsWithCustomErrors</span></a><span class="result"> extends <a href="../EndpointsWithCustomErrors.html" class="extype" name="endpoints.xhr.EndpointsWithCustomErrors">xhr.EndpointsWithCustomErrors</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Implements <a href="../Endpoints.html" class="extype" name="endpoints.xhr.Endpoints">xhr.Endpoints</a> by using Scala’s <code>Future</code>s.</p>
     </li></ol>
             </div>
 
@@ -253,7 +274,7 @@
         <div class="parent" name="scala.AnyRef">
               <h3>Inherited from <a href="../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">
-              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.12.8/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></h3>
+              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></h3>
             </div>
         
         </div>

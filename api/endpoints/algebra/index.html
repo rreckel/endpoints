@@ -8,17 +8,17 @@
           <meta name="keywords" content="" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
+      
       <link href="../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
-      <script type="text/javascript" src="../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../lib/jquery.min.js"></script>
       <script type="text/javascript" src="../../lib/jquery.panzoom.min.js"></script>
       <script type="text/javascript" src="../../lib/jquery.mousewheel.min.js"></script>
       <script type="text/javascript" src="../../lib/index.js"></script>
       <script type="text/javascript" src="../../index.js"></script>
       <script type="text/javascript" src="../../lib/scheduler.js"></script>
       <script type="text/javascript" src="../../lib/template.js"></script>
-      <script type="text/javascript" src="../../lib/tools.tooltip.js"></script>
       <script type="text/javascript" src="../../lib/modernizr.custom.js"></script><script type="text/javascript" src="../../lib/diagrams.js" id="diagrams-js"></script>
       <script type="text/javascript">
         /* this variable can be used by the JS to determine the path to the root document */
@@ -56,7 +56,7 @@
                 <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="_root_"></a><a id="root:_root_"></a>
       <span class="permalink">
-      <a href="index.html#_root_" title="Permalink">
+      <a href="../../index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -72,7 +72,7 @@
     </li><li name="_root_.endpoints" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="endpoints"></a><a id="endpoints:endpoints"></a>
       <span class="permalink">
-      <a href="index.html#endpoints" title="Permalink">
+      <a href="../../endpoints/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -88,7 +88,7 @@
     </li><li name="endpoints.akkahttp" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="akkahttp"></a><a id="akkahttp:akkahttp"></a>
       <span class="permalink">
-      <a href="../endpoints/index.html#akkahttp" title="Permalink">
+      <a href="../../endpoints/akkahttp/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -104,7 +104,7 @@
     </li><li name="endpoints.algebra" visbl="pub" class="indented2 current" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="algebra"></a><a id="algebra:algebra"></a>
       <span class="permalink">
-      <a href="../endpoints/index.html#algebra" title="Permalink">
+      <a href="../../endpoints/algebra/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -120,7 +120,7 @@
     </li><li name="endpoints.algebra.circe" visbl="pub" class="indented3 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="circe"></a><a id="circe:circe"></a>
       <span class="permalink">
-      <a href="../../endpoints/algebra/index.html#circe" title="Permalink">
+      <a href="../../endpoints/algebra/circe/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -136,7 +136,7 @@
     </li><li name="endpoints.algebra.playjson" visbl="pub" class="indented3 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="playjson"></a><a id="playjson:playjson"></a>
       <span class="permalink">
-      <a href="../../endpoints/algebra/index.html#playjson" title="Permalink">
+      <a href="../../endpoints/algebra/playjson/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -159,20 +159,36 @@
                         <a href="BasicAuthentication.html" title="Provides vocabulary to describe endpoints that use Basic HTTP authentication.">BasicAuthentication</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
-                        <a class="trait" href="Codec.html" title=""></a>
-                        <a href="Codec.html" title="">Codec</a>
+                        <a class="trait" href="BuiltInErrors.html" title="Uses endpoints built-in error types:"></a>
+                        <a href="BuiltInErrors.html" title="Uses endpoints built-in error types:">BuiltInErrors</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
-                        <a class="trait" href="Decoder.html" title=""></a>
-                        <a href="Decoder.html" title="">Decoder</a>
+                        <a class="trait" href="Codec.html" title="A way to encode and decode values"></a>
+                        <a href="Codec.html" title="A way to encode and decode values">Codec</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
-                        <a class="trait" href="Encoder.html" title=""></a>
-                        <a href="Encoder.html" title="">Encoder</a>
+                        <a class="trait" href="Decoder.html" title="A way to decode a From value into a To value."></a>
+                        <a href="Decoder.html" title="A way to decode a From value into a To value.">Decoder</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="trait" href="Encoder.html" title="A way to encode a From value into a To value"></a>
+                        <a href="Encoder.html" title="A way to encode a From value into a To value">Encoder</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="trait" href="Endpoints.html" title="Algebra interface for describing endpoints made of requests and responses."></a>
                         <a href="Endpoints.html" title="Algebra interface for describing endpoints made of requests and responses.">Endpoints</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="trait" href="EndpointsWithCustomErrors.html" title="Algebra interface for describing endpoints made of requests and responses."></a>
+                        <a href="EndpointsWithCustomErrors.html" title="Algebra interface for describing endpoints made of requests and responses.">EndpointsWithCustomErrors</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="trait" href="Errors.html" title="Defines the error types used to model client and server errors."></a>
+                        <a href="Errors.html" title="Defines the error types used to model client and server errors.">Errors</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="object" href="InvalidCodec$.html" title=""></a>
+                        <a href="InvalidCodec$.html" title="">InvalidCodec</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="trait" href="JsonEntities.html" title="Algebra interface for describing JSON entities in requests and responses."></a>
@@ -224,7 +240,7 @@
                       </li><li name="endpoints.circe" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="circe"></a><a id="circe:circe"></a>
       <span class="permalink">
-      <a href="../endpoints/index.html#circe" title="Permalink">
+      <a href="../../endpoints/circe/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -240,7 +256,7 @@
     </li><li name="endpoints.generic" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="generic"></a><a id="generic:generic"></a>
       <span class="permalink">
-      <a href="../endpoints/index.html#generic" title="Permalink">
+      <a href="../../endpoints/generic/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -256,7 +272,7 @@
     </li><li name="endpoints.openapi" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="openapi"></a><a id="openapi:openapi"></a>
       <span class="permalink">
-      <a href="../endpoints/index.html#openapi" title="Permalink">
+      <a href="../../endpoints/openapi/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -273,7 +289,7 @@
     </li><li name="endpoints.play" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="play"></a><a id="play:play"></a>
       <span class="permalink">
-      <a href="../endpoints/index.html#play" title="Permalink">
+      <a href="../../endpoints/play/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -289,7 +305,7 @@
     </li><li name="endpoints.playjson" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="playjson"></a><a id="playjson:playjson"></a>
       <span class="permalink">
-      <a href="../endpoints/index.html#playjson" title="Permalink">
+      <a href="../../endpoints/playjson/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -305,7 +321,7 @@
     </li><li name="endpoints.scalaj" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="scalaj"></a><a id="scalaj:scalaj"></a>
       <span class="permalink">
-      <a href="../endpoints/index.html#scalaj" title="Permalink">
+      <a href="../../endpoints/scalaj/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -321,7 +337,7 @@
     </li><li name="endpoints.sttp" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="sttp"></a><a id="sttp:sttp"></a>
       <span class="permalink">
-      <a href="../endpoints/index.html#sttp" title="Permalink">
+      <a href="../../endpoints/sttp/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -337,7 +353,7 @@
     </li><li name="endpoints.xhr" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="xhr"></a><a id="xhr:xhr"></a>
       <span class="permalink">
-      <a href="../endpoints/index.html#xhr" title="Permalink">
+      <a href="../../endpoints/xhr/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -380,22 +396,12 @@
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/julienrf/endpoints/blob/v0.10.1/algebras/algebra/src/main/scala/endpoints/algebra/package.scala" target="_blank">package.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/julienrf/endpoints/blob/v0.11.0/algebras/algebra/src/main/scala/endpoints/algebra/package.scala" target="_blank">package.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.12.8/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
-        </div><div class="toggleContainer block diagram-container" id="content-diagram-container">
-                <span class="toggle diagram-link">
-                  Content Hierarchy
-                </span>
-                <div class="diagram" id="content-diagram"><svg class="package-diagram" id="graph1" viewBox="0.00 0.00 895.00 277.00" height="277pt" width="895pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 273)" class="graph" id="page0,1_graph0"><polygon points="-4,4 -4,-273 891,-273 891,4 -4,4" stroke="transparent" fill="#ffffff"></polygon><!-- node0 --><g class="node trait" id="graph1_0"><g id="a_trait|graph1_0"><a xlink:title="endpoints.algebra.JsonSchemas" xlink:href="JsonSchemas.html#inheritance-diagram"><path d="M91.6667,-86C91.6667,-86 8.3333,-86 8.3333,-86 4.1667,-86 0,-81.8333 0,-77.6667 0,-77.6667 0,-69.3333 0,-69.3333 0,-65.1667 4.1667,-61 8.3333,-61 8.3333,-61 91.6667,-61 91.6667,-61 95.8333,-61 100,-65.1667 100,-69.3333 100,-69.3333 100,-77.6667 100,-77.6667 100,-81.8333 95.8333,-86 91.6667,-86" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-80.5" x="10" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-71.1" x="31" text-anchor="start">JsonSchemas</text></a></g></g><!-- node8 --><g class="node trait" id="graph1_8"><g id="a_trait|graph1_8"><a xlink:title="endpoints.algebra.JsonSchemaEntities" xlink:href="JsonSchemaEntities.html#inheritance-diagram"><path d="M218.6667,-25C218.6667,-25 109.3333,-25 109.3333,-25 105.1667,-25 101,-20.8333 101,-16.6667 101,-16.6667 101,-8.3333 101,-8.3333 101,-4.1667 105.1667,0 109.3333,0 109.3333,0 218.6667,0 218.6667,0 222.8333,0 227,-4.1667 227,-8.3333 227,-8.3333 227,-16.6667 227,-16.6667 227,-20.8333 222.8333,-25 218.6667,-25" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-19.5" x="111" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="132" text-anchor="start">JsonSchemaEntities</text></a></g></g><!-- node0&#45;&gt;node8 --><g class="edge inheritance" id="graph1_0_8"><g id="a_inheritance|graph1_0_8"><a xlink:title="JsonSchemaEntities is a subtype of JsonSchemas"><path d="M79.8159,-57.5459C98.7222,-47.4294 122.8388,-34.5249 140.4094,-25.123" stroke="#d4d4d4" fill="none"></path><polygon points="78.6369,-55.398 73.6209,-60.8608 80.9488,-59.7184 78.6369,-55.398" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node1 --><g class="node trait" id="graph1_1"><g id="a_trait|graph1_1"><a xlink:title="endpoints.algebra.Urls" xlink:href="Urls.html#inheritance-diagram"><path d="M500.1667,-269C500.1667,-269 455.8333,-269 455.8333,-269 451.6667,-269 447.5,-264.8333 447.5,-260.6667 447.5,-260.6667 447.5,-252.3333 447.5,-252.3333 447.5,-248.1667 451.6667,-244 455.8333,-244 455.8333,-244 500.1667,-244 500.1667,-244 504.3333,-244 508.5,-248.1667 508.5,-252.3333 508.5,-252.3333 508.5,-260.6667 508.5,-260.6667 508.5,-264.8333 504.3333,-269 500.1667,-269" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-263.5" x="458" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-254.1" x="479" text-anchor="start">Urls</text></a></g></g><!-- node4 --><g class="node trait" id="graph1_4"><g id="a_trait|graph1_4"><a xlink:title="endpoints.algebra.Requests" xlink:href="Requests.html#inheritance-diagram"><path d="M515.6667,-208C515.6667,-208 448.3333,-208 448.3333,-208 444.1667,-208 440,-203.8333 440,-199.6667 440,-199.6667 440,-191.3333 440,-191.3333 440,-187.1667 444.1667,-183 448.3333,-183 448.3333,-183 515.6667,-183 515.6667,-183 519.8333,-183 524,-187.1667 524,-191.3333 524,-191.3333 524,-199.6667 524,-199.6667 524,-203.8333 519.8333,-208 515.6667,-208" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-202.5" x="450" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-193.1" x="471" text-anchor="start">Requests</text></a></g></g><!-- node1&#45;&gt;node4 --><g class="edge inheritance" id="graph1_1_4"><g id="a_inheritance|graph1_1_4"><a xlink:title="Requests is a subtype of Urls"><path d="M479.2958,-236.7386C479.9122,-227.3393 480.6308,-216.3803 481.1723,-208.123" stroke="#d4d4d4" fill="none"></path><polygon points="476.8422,-236.7154 478.8288,-243.8608 481.7317,-237.0361 476.8422,-236.7154" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node2 --><g class="node trait" id="graph1_2"><g id="a_trait|graph1_2"><a xlink:title="endpoints.algebra.StatusCodes" xlink:href="StatusCodes.html#inheritance-diagram"><path d="M417.1667,-269C417.1667,-269 336.8333,-269 336.8333,-269 332.6667,-269 328.5,-264.8333 328.5,-260.6667 328.5,-260.6667 328.5,-252.3333 328.5,-252.3333 328.5,-248.1667 332.6667,-244 336.8333,-244 336.8333,-244 417.1667,-244 417.1667,-244 421.3333,-244 425.5,-248.1667 425.5,-252.3333 425.5,-252.3333 425.5,-260.6667 425.5,-260.6667 425.5,-264.8333 421.3333,-269 417.1667,-269" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-263.5" x="339" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-254.1" x="360" text-anchor="start">StatusCodes</text></a></g></g><!-- node3 --><g class="node trait" id="graph1_3"><g id="a_trait|graph1_3"><a xlink:title="endpoints.algebra.Responses" xlink:href="Responses.html#inheritance-diagram"><path d="M413.6667,-208C413.6667,-208 340.3333,-208 340.3333,-208 336.1667,-208 332,-203.8333 332,-199.6667 332,-199.6667 332,-191.3333 332,-191.3333 332,-187.1667 336.1667,-183 340.3333,-183 340.3333,-183 413.6667,-183 413.6667,-183 417.8333,-183 422,-187.1667 422,-191.3333 422,-191.3333 422,-199.6667 422,-199.6667 422,-203.8333 417.8333,-208 413.6667,-208" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-202.5" x="342" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-193.1" x="363" text-anchor="start">Responses</text></a></g></g><!-- node2&#45;&gt;node3 --><g class="edge inheritance" id="graph1_2_3"><g id="a_inheritance|graph1_2_3"><a xlink:title="Responses is a subtype of StatusCodes"><path d="M377,-236.7386C377,-227.3393 377,-216.3803 377,-208.123" stroke="#d4d4d4" fill="none"></path><polygon points="374.5501,-236.8607 377,-243.8608 379.4501,-236.8608 374.5501,-236.8607" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node11 --><g class="node trait" id="graph1_11"><g id="a_trait|graph1_11"><a xlink:title="endpoints.algebra.Endpoints" xlink:href="Endpoints.html#inheritance-diagram"><path d="M463.6667,-147C463.6667,-147 394.3333,-147 394.3333,-147 390.1667,-147 386,-142.8333 386,-138.6667 386,-138.6667 386,-130.3333 386,-130.3333 386,-126.1667 390.1667,-122 394.3333,-122 394.3333,-122 463.6667,-122 463.6667,-122 467.8333,-122 472,-126.1667 472,-130.3333 472,-130.3333 472,-138.6667 472,-138.6667 472,-142.8333 467.8333,-147 463.6667,-147" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-141.5" x="396" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-132.1" x="417" text-anchor="start">Endpoints</text></a></g></g><!-- node3&#45;&gt;node11 --><g class="edge inheritance" id="graph1_3_11"><g id="a_inheritance|graph1_3_11"><a xlink:title="Endpoints is a subtype of Responses"><path d="M392.4327,-177.3963C400.7402,-167.6509 410.7822,-155.8708 418.2394,-147.123" stroke="#d4d4d4" fill="none"></path><polygon points="390.4511,-175.9442 387.7744,-182.8608 394.1801,-179.123 390.4511,-175.9442" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node4&#45;&gt;node11 --><g class="edge inheritance" id="graph1_4_11"><g id="a_inheritance|graph1_4_11"><a xlink:title="Endpoints is a subtype of Requests"><path d="M466.2705,-177.3963C457.8032,-167.6509 447.5681,-155.8708 439.9676,-147.123" stroke="#d4d4d4" fill="none"></path><polygon points="464.5778,-179.1835 471.0184,-182.8608 468.2767,-175.9697 464.5778,-179.1835" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node5 --><g class="node trait" id="graph1_5"><g id="a_trait|graph1_5"><a xlink:title="endpoints.algebra.MuxEndpoints" xlink:href="MuxEndpoints.html#inheritance-diagram"><path d="M213.1667,-86C213.1667,-86 126.8333,-86 126.8333,-86 122.6667,-86 118.5,-81.8333 118.5,-77.6667 118.5,-77.6667 118.5,-69.3333 118.5,-69.3333 118.5,-65.1667 122.6667,-61 126.8333,-61 126.8333,-61 213.1667,-61 213.1667,-61 217.3333,-61 221.5,-65.1667 221.5,-69.3333 221.5,-69.3333 221.5,-77.6667 221.5,-77.6667 221.5,-81.8333 217.3333,-86 213.1667,-86" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-80.5" x="129" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-71.1" x="150" text-anchor="start">MuxEndpoints</text></a></g></g><!-- node6 --><g class="node trait" id="graph1_6"><g id="a_trait|graph1_6"><a xlink:title="endpoints.algebra.Methods" xlink:href="Methods.html#inheritance-diagram"><path d="M598.6667,-269C598.6667,-269 535.3333,-269 535.3333,-269 531.1667,-269 527,-264.8333 527,-260.6667 527,-260.6667 527,-252.3333 527,-252.3333 527,-248.1667 531.1667,-244 535.3333,-244 535.3333,-244 598.6667,-244 598.6667,-244 602.8333,-244 607,-248.1667 607,-252.3333 607,-252.3333 607,-260.6667 607,-260.6667 607,-264.8333 602.8333,-269 598.6667,-269" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-263.5" x="537" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-254.1" x="558" text-anchor="start">Methods</text></a></g></g><!-- node6&#45;&gt;node4 --><g class="edge inheritance" id="graph1_6_4"><g id="a_inheritance|graph1_6_4"><a xlink:title="Requests is a subtype of Methods"><path d="M543.6579,-239.7486C529.7372,-229.7585 512.3486,-217.2796 499.5895,-208.123" stroke="#d4d4d4" fill="none"></path><polygon points="542.2724,-241.7699 549.3879,-243.8608 545.1293,-237.7889 542.2724,-241.7699" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node7 --><g class="node trait" id="graph1_7"><g id="a_trait|graph1_7"><a xlink:title="endpoints.algebra.LowLevelEndpoints" xlink:href="LowLevelEndpoints.html#inheritance-diagram"><path d="M356.1667,-86C356.1667,-86 247.8333,-86 247.8333,-86 243.6667,-86 239.5,-81.8333 239.5,-77.6667 239.5,-77.6667 239.5,-69.3333 239.5,-69.3333 239.5,-65.1667 243.6667,-61 247.8333,-61 247.8333,-61 356.1667,-61 356.1667,-61 360.3333,-61 364.5,-65.1667 364.5,-69.3333 364.5,-69.3333 364.5,-77.6667 364.5,-77.6667 364.5,-81.8333 360.3333,-86 356.1667,-86" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-80.5" x="250" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-71.1" x="271" text-anchor="start">LowLevelEndpoints</text></a></g></g><!-- node9 --><g class="node trait" id="graph1_9"><g id="a_trait|graph1_9"><a xlink:title="endpoints.algebra.JsonEntitiesFromCodec" xlink:href="JsonEntitiesFromCodec.html#inheritance-diagram"><path d="M490.6667,-25C490.6667,-25 367.3333,-25 367.3333,-25 363.1667,-25 359,-20.8333 359,-16.6667 359,-16.6667 359,-8.3333 359,-8.3333 359,-4.1667 363.1667,0 367.3333,0 367.3333,0 490.6667,0 490.6667,0 494.8333,0 499,-4.1667 499,-8.3333 499,-8.3333 499,-16.6667 499,-16.6667 499,-20.8333 494.8333,-25 490.6667,-25" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-19.5" x="369" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="390" text-anchor="start">JsonEntitiesFromCodec</text></a></g></g><!-- node10 --><g class="node trait" id="graph1_10"><g id="a_trait|graph1_10"><a xlink:title="endpoints.algebra.JsonEntities" xlink:href="JsonEntities.html#inheritance-diagram"><path d="M467.1667,-86C467.1667,-86 390.8333,-86 390.8333,-86 386.6667,-86 382.5,-81.8333 382.5,-77.6667 382.5,-77.6667 382.5,-69.3333 382.5,-69.3333 382.5,-65.1667 386.6667,-61 390.8333,-61 390.8333,-61 467.1667,-61 467.1667,-61 471.3333,-61 475.5,-65.1667 475.5,-69.3333 475.5,-69.3333 475.5,-77.6667 475.5,-77.6667 475.5,-81.8333 471.3333,-86 467.1667,-86" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-80.5" x="393" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-71.1" x="414" text-anchor="start">JsonEntities</text></a></g></g><!-- node10&#45;&gt;node8 --><g class="edge inheritance" id="graph1_10_8"><g id="a_inheritance|graph1_10_8"><a xlink:title="JsonSchemaEntities is a subtype of JsonEntities"><path d="M375.3638,-61.1535C329.7153,-50.6458 264.4345,-35.6189 218.5317,-25.0526" stroke="#d4d4d4" fill="none"></path><polygon points="374.8621,-63.5521 382.2333,-62.7348 375.9613,-58.7769 374.8621,-63.5521" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node10&#45;&gt;node9 --><g class="edge inheritance" id="graph1_10_9"><g id="a_inheritance|graph1_10_9"><a xlink:title="JsonEntitiesFromCodec is a subtype of JsonEntities"><path d="M429,-53.7386C429,-44.3393 429,-33.3803 429,-25.123" stroke="#d4d4d4" fill="none"></path><polygon points="426.5501,-53.8607 429,-60.8608 431.4501,-53.8608 426.5501,-53.8607" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node11&#45;&gt;node5 --><g class="edge inheritance" id="graph1_11_5"><g id="a_inheritance|graph1_11_5"><a xlink:title="MuxEndpoints is a subtype of Endpoints"><path d="M378.8664,-122.6925C333.6234,-112.0368 267.3437,-96.4265 221.6409,-85.6625" stroke="#d4d4d4" fill="none"></path><polygon points="378.5654,-125.1386 385.9407,-124.3586 379.6888,-120.369 378.5654,-125.1386" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node11&#45;&gt;node7 --><g class="edge inheritance" id="graph1_11_7"><g id="a_inheritance|graph1_11_7"><a xlink:title="LowLevelEndpoints is a subtype of Endpoints"><path d="M396.3322,-118.8092C375.1896,-108.654 348.0253,-95.6066 328.2808,-86.123" stroke="#d4d4d4" fill="none"></path><polygon points="395.3148,-121.0384 402.6855,-121.8608 397.4364,-116.6215 395.3148,-121.0384" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node11&#45;&gt;node10 --><g class="edge inheritance" id="graph1_11_10"><g id="a_inheritance|graph1_11_10"><a xlink:title="JsonEntities is a subtype of Endpoints"><path d="M429,-114.7386C429,-105.3393 429,-94.3803 429,-86.123" stroke="#d4d4d4" fill="none"></path><polygon points="426.5501,-114.8607 429,-121.8608 431.4501,-114.8608 426.5501,-114.8607" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node15 --><g class="node trait" id="graph1_15"><g id="a_trait|graph1_15"><a xlink:title="endpoints.algebra.BasicAuthentication" xlink:href="BasicAuthentication.html#inheritance-diagram"><path d="M613.6667,-86C613.6667,-86 502.3333,-86 502.3333,-86 498.1667,-86 494,-81.8333 494,-77.6667 494,-77.6667 494,-69.3333 494,-69.3333 494,-65.1667 498.1667,-61 502.3333,-61 502.3333,-61 613.6667,-61 613.6667,-61 617.8333,-61 622,-65.1667 622,-69.3333 622,-69.3333 622,-77.6667 622,-77.6667 622,-81.8333 617.8333,-86 613.6667,-86" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-80.5" x="504" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-71.1" x="525" text-anchor="start">BasicAuthentication</text></a></g></g><!-- node11&#45;&gt;node15 --><g class="edge inheritance" id="graph1_11_15"><g id="a_inheritance|graph1_11_15"><a xlink:title="BasicAuthentication is a subtype of Endpoints"><path d="M462.1822,-118.8092C483.6578,-108.654 511.2499,-95.6066 531.3054,-86.123" stroke="#d4d4d4" fill="none"></path><polygon points="461.0097,-116.6535 455.7289,-121.8608 463.1044,-121.0832 461.0097,-116.6535" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node16 --><g class="node trait" id="graph1_16"><g id="a_trait|graph1_16"><a xlink:title="endpoints.algebra.Assets" xlink:href="Assets.html#inheritance-diagram"><path d="M703.6667,-86C703.6667,-86 648.3333,-86 648.3333,-86 644.1667,-86 640,-81.8333 640,-77.6667 640,-77.6667 640,-69.3333 640,-69.3333 640,-65.1667 644.1667,-61 648.3333,-61 648.3333,-61 703.6667,-61 703.6667,-61 707.8333,-61 712,-65.1667 712,-69.3333 712,-69.3333 712,-77.6667 712,-77.6667 712,-81.8333 707.8333,-86 703.6667,-86" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-80.5" x="650" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-71.1" x="671" text-anchor="start">Assets</text></a></g></g><!-- node11&#45;&gt;node16 --><g class="edge inheritance" id="graph1_11_16"><g id="a_inheritance|graph1_11_16"><a xlink:title="Assets is a subtype of Endpoints"><path d="M478.9785,-123.018C519.9324,-113.485 579.3458,-99.3708 631,-86 633.8259,-85.2685 636.7468,-84.4956 639.6803,-83.7073" stroke="#d4d4d4" fill="none"></path><polygon points="478.3249,-120.6545 472.0612,-124.6255 479.4341,-125.4273 478.3249,-120.6545" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node12 --><g class="node trait" id="graph1_12"><g id="a_trait|graph1_12"><a xlink:title="endpoints.algebra.Encoder" xlink:href="Encoder.html#inheritance-diagram"><path d="M738.1667,-269C738.1667,-269 633.8333,-269 633.8333,-269 629.6667,-269 625.5,-264.8333 625.5,-260.6667 625.5,-260.6667 625.5,-252.3333 625.5,-252.3333 625.5,-248.1667 629.6667,-244 633.8333,-244 633.8333,-244 738.1667,-244 738.1667,-244 742.3333,-244 746.5,-248.1667 746.5,-252.3333 746.5,-252.3333 746.5,-260.6667 746.5,-260.6667 746.5,-264.8333 742.3333,-269 738.1667,-269" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-263.5" x="636" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-254.1" x="657" text-anchor="start">Encoder[From, To]</text></a></g></g><!-- node14 --><g class="node trait" id="graph1_14"><g id="a_trait|graph1_14"><a xlink:title="endpoints.algebra.Codec" xlink:href="Codec.html#inheritance-diagram"><path d="M794.6667,-208C794.6667,-208 717.3333,-208 717.3333,-208 713.1667,-208 709,-203.8333 709,-199.6667 709,-199.6667 709,-191.3333 709,-191.3333 709,-187.1667 713.1667,-183 717.3333,-183 717.3333,-183 794.6667,-183 794.6667,-183 798.8333,-183 803,-187.1667 803,-191.3333 803,-191.3333 803,-199.6667 803,-199.6667 803,-203.8333 798.8333,-208 794.6667,-208" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-202.5" x="719" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-193.1" x="740" text-anchor="start">Codec[E, D]</text></a></g></g><!-- node12&#45;&gt;node14 --><g class="edge inheritance" id="graph1_12_14"><g id="a_inheritance|graph1_12_14"><a xlink:title="Codec[E, D] is a subtype of Encoder[From, To]"><path d="M705.8398,-239.2111C717.1972,-229.3138 731.1946,-217.1161 741.5145,-208.123" stroke="#d4d4d4" fill="none"></path><polygon points="704.1718,-237.4148 700.504,-243.8608 707.391,-241.109 704.1718,-237.4148" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node13 --><g class="node trait" id="graph1_13"><g id="a_trait|graph1_13"><a xlink:title="endpoints.algebra.Decoder" xlink:href="Decoder.html#inheritance-diagram"><path d="M878.6667,-269C878.6667,-269 773.3333,-269 773.3333,-269 769.1667,-269 765,-264.8333 765,-260.6667 765,-260.6667 765,-252.3333 765,-252.3333 765,-248.1667 769.1667,-244 773.3333,-244 773.3333,-244 878.6667,-244 878.6667,-244 882.8333,-244 887,-248.1667 887,-252.3333 887,-252.3333 887,-260.6667 887,-260.6667 887,-264.8333 882.8333,-269 878.6667,-269" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-263.5" x="775" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-254.1" x="796" text-anchor="start">Decoder[From, To]</text></a></g></g><!-- node13&#45;&gt;node14 --><g class="edge inheritance" id="graph1_13_14"><g id="a_inheritance|graph1_13_14"><a xlink:title="Codec[E, D] is a subtype of Decoder[From, To]"><path d="M806.1602,-239.2111C794.8028,-229.3138 780.8054,-217.1161 770.4855,-208.123" stroke="#d4d4d4" fill="none"></path><polygon points="804.609,-241.109 811.496,-243.8608 807.8282,-237.4148 804.609,-241.109" stroke="#d4d4d4" fill="none"></polygon></a></g></g></g></svg></div>
-                <div id="diagram-controls" class="hiddenContent">
-                  <button id="diagram-zoom-out" class="diagram-btn"><i class="material-icons"></i></button>
-                  <button id="diagram-zoom-in" class="diagram-btn"><i class="material-icons"></i></button>
-                  <button title="Toggle full-screen" id="diagram-fs" class="diagram-btn to-full"><i class="material-icons"></i></button>
-                </div>
-              </div></div>
+          <div class="superTypes hiddenContent"><a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
+        </div></div>
         
 
       <div id="mbrsel">
@@ -443,9 +449,9 @@
         <div id="types" class="types members">
               <h3>Type Members</h3>
               <ol><li name="endpoints.algebra.Assets" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="algebras">
-      <a id="AssetsextendsEndpoints"></a><a id="Assets:Assets"></a>
+      <a id="AssetsextendsEndpointsWithCustomErrors"></a><a id="Assets:Assets"></a>
       <span class="permalink">
-      <a href="../../endpoints/algebra/index.html#AssetsextendsEndpoints" title="Permalink">
+      <a href="../../endpoints/algebra/Assets.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -454,15 +460,15 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="Describes endpoints related to static assets (e.g." href="Assets.html"><span class="name">Assets</span></a><span class="result"> extends <a href="Endpoints.html" class="extype" name="endpoints.algebra.Endpoints">Endpoints</a></span>
+        <a title="Describes endpoints related to static assets (e.g." href="Assets.html"><span class="name">Assets</span></a><span class="result"> extends <a href="EndpointsWithCustomErrors.html" class="extype" name="endpoints.algebra.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a></span>
       </span>
       
       <p class="shortcomment cmt">Describes endpoints related to static assets (e.g.</p><div class="fullcomment"><div class="comment cmt"><p>Describes endpoints related to static assets (e.g. medias, scripts, stylesheets, etc.)
 </p></div></div>
     </li><li name="endpoints.algebra.BasicAuthentication" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="algebras">
-      <a id="BasicAuthenticationextendsEndpoints"></a><a id="BasicAuthentication:BasicAuthentication"></a>
+      <a id="BasicAuthenticationextendsEndpointsWithCustomErrors"></a><a id="BasicAuthentication:BasicAuthentication"></a>
       <span class="permalink">
-      <a href="../../endpoints/algebra/index.html#BasicAuthenticationextendsEndpoints" title="Permalink">
+      <a href="../../endpoints/algebra/BasicAuthentication.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -471,16 +477,16 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="Provides vocabulary to describe endpoints that use Basic HTTP authentication." href="BasicAuthentication.html"><span class="name">BasicAuthentication</span></a><span class="result"> extends <a href="Endpoints.html" class="extype" name="endpoints.algebra.Endpoints">Endpoints</a></span>
+        <a title="Provides vocabulary to describe endpoints that use Basic HTTP authentication." href="BasicAuthentication.html"><span class="name">BasicAuthentication</span></a><span class="result"> extends <a href="EndpointsWithCustomErrors.html" class="extype" name="endpoints.algebra.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a></span>
       </span>
       
       <p class="shortcomment cmt">Provides vocabulary to describe endpoints that use Basic HTTP authentication.</p><div class="fullcomment"><div class="comment cmt"><p>Provides vocabulary to describe endpoints that use Basic HTTP authentication.</p><p>This trait works fine, but developers are likely to implement their own
 authentication mechanism, specific to their application.
 </p></div></div>
-    </li><li name="endpoints.algebra.Codec" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="Codec[E,D]extendsDecoder[E,D]withEncoder[D,E]"></a><a id="Codec[E,D]:Codec[E,D]"></a>
+    </li><li name="endpoints.algebra.BuiltInErrors" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="BuiltInErrorsextendsErrors"></a><a id="BuiltInErrors:BuiltInErrors"></a>
       <span class="permalink">
-      <a href="../../endpoints/algebra/index.html#Codec[E,D]extendsDecoder[E,D]withEncoder[D,E]" title="Permalink">
+      <a href="../../endpoints/algebra/BuiltInErrors.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -489,14 +495,31 @@ authentication mechanism, specific to their application.
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="" href="Codec.html"><span class="name">Codec</span></a><span class="tparams">[<span name="E">E</span>, <span name="D">D</span>]</span><span class="result"> extends <a href="Decoder.html" class="extype" name="endpoints.algebra.Decoder">Decoder</a>[<span class="extype" name="endpoints.algebra.Codec.E">E</span>, <span class="extype" name="endpoints.algebra.Codec.D">D</span>] with <a href="Encoder.html" class="extype" name="endpoints.algebra.Encoder">Encoder</a>[<span class="extype" name="endpoints.algebra.Codec.D">D</span>, <span class="extype" name="endpoints.algebra.Codec.E">E</span>]</span>
+        <a title="Uses endpoints built-in error types:" href="BuiltInErrors.html"><span class="name">BuiltInErrors</span></a><span class="result"> extends <a href="Errors.html" class="extype" name="endpoints.algebra.Errors">Errors</a></span>
       </span>
       
+      <p class="shortcomment cmt">Uses <i>endpoints</i> built-in error types:</p><div class="fullcomment"><div class="comment cmt"><p>Uses <i>endpoints</i> built-in error types:</p><p>- <a href="../Invalid.html" class="extype" name="endpoints.Invalid">Invalid</a> for client errors,</p><p>- and <code>Throwable</code> for server error.</p><p>Both types of errors are serialized into a JSON array containing string error values.
+</p></div></div>
+    </li><li name="endpoints.algebra.Codec" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="Codec[E,D]extendsDecoder[E,D]withEncoder[D,E]"></a><a id="Codec[E,D]:Codec[E,D]"></a>
+      <span class="permalink">
+      <a href="../../endpoints/algebra/Codec.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="A way to encode and decode values" href="Codec.html"><span class="name">Codec</span></a><span class="tparams">[<span name="E">E</span>, <span name="D">D</span>]</span><span class="result"> extends <a href="Decoder.html" class="extype" name="endpoints.algebra.Decoder">Decoder</a>[<span class="extype" name="endpoints.algebra.Codec.E">E</span>, <span class="extype" name="endpoints.algebra.Codec.D">D</span>] with <a href="Encoder.html" class="extype" name="endpoints.algebra.Encoder">Encoder</a>[<span class="extype" name="endpoints.algebra.Codec.D">D</span>, <span class="extype" name="endpoints.algebra.Codec.E">E</span>]</span>
+      </span>
       
+      <p class="shortcomment cmt">A way to encode and decode values</p><div class="fullcomment"><div class="comment cmt"><p>A way to encode and decode values</p></div><dl class="paramcmts block"><dt class="tparam">E</dt><dd class="cmt"><p>Type of encoded values</p></dd><dt class="tparam">D</dt><dd class="cmt"><p>Type of decoded values</p></dd></dl></div>
     </li><li name="endpoints.algebra.Decoder" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="Decoder[-From,+To]extendsAnyRef"></a><a id="Decoder[-From,+To]:Decoder[From,To]"></a>
       <span class="permalink">
-      <a href="../../endpoints/algebra/index.html#Decoder[-From,+To]extendsAnyRef" title="Permalink">
+      <a href="../../endpoints/algebra/Decoder.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -505,10 +528,10 @@ authentication mechanism, specific to their application.
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="" href="Decoder.html"><span class="name">Decoder</span></a><span class="tparams">[<span name="From">-From</span>, <span name="To">+To</span>]</span><span class="result"> extends <a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+        <a title="A way to decode a From value into a To value." href="Decoder.html"><span class="name">Decoder</span></a><span class="tparams">[<span name="From">-From</span>, <span name="To">+To</span>]</span><span class="result"> extends <a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
-      
+      <p class="shortcomment cmt">A way to decode a <code>From</code> value into a <code>To</code> value.</p>
     </li><li name="endpoints.algebra.Documentation" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="Documentation=Option[String]"></a><a id="Documentation:Documentation"></a>
       <span class="permalink">
@@ -521,14 +544,14 @@ authentication mechanism, specific to their application.
         <span class="kind">type</span>
       </span>
       <span class="symbol">
-        <span class="name">Documentation</span><span class="result alias"> = <a href="http://www.scala-lang.org/api/2.12.8/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+        <span class="name">Documentation</span><span class="result alias"> = <a href="https://www.scala-lang.org/api/2.12.10/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>
       </span>
       
       
     </li><li name="endpoints.algebra.Encoder" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="Encoder[-From,+To]extendsAnyRef"></a><a id="Encoder[-From,+To]:Encoder[From,To]"></a>
       <span class="permalink">
-      <a href="../../endpoints/algebra/index.html#Encoder[-From,+To]extendsAnyRef" title="Permalink">
+      <a href="../../endpoints/algebra/Encoder.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -537,14 +560,15 @@ authentication mechanism, specific to their application.
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="" href="Encoder.html"><span class="name">Encoder</span></a><span class="tparams">[<span name="From">-From</span>, <span name="To">+To</span>]</span><span class="result"> extends <a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+        <a title="A way to encode a From value into a To value" href="Encoder.html"><span class="name">Encoder</span></a><span class="tparams">[<span name="From">-From</span>, <span name="To">+To</span>]</span><span class="result"> extends <a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
-      
+      <p class="shortcomment cmt">A way to encode a <code>From</code> value into a <code>To</code> value
+</p>
     </li><li name="endpoints.algebra.Endpoints" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="algebras">
-      <a id="EndpointsextendsRequestswithResponses"></a><a id="Endpoints:Endpoints"></a>
+      <a id="EndpointsextendsEndpointsWithCustomErrorswithBuiltInErrors"></a><a id="Endpoints:Endpoints"></a>
       <span class="permalink">
-      <a href="../../endpoints/algebra/index.html#EndpointsextendsRequestswithResponses" title="Permalink">
+      <a href="../../endpoints/algebra/Endpoints.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -553,7 +577,7 @@ authentication mechanism, specific to their application.
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="Algebra interface for describing endpoints made of requests and responses." href="Endpoints.html"><span class="name">Endpoints</span></a><span class="result"> extends <a href="Requests.html" class="extype" name="endpoints.algebra.Requests">Requests</a> with <a href="Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></span>
+        <a title="Algebra interface for describing endpoints made of requests and responses." href="Endpoints.html"><span class="name">Endpoints</span></a><span class="result"> extends <a href="EndpointsWithCustomErrors.html" class="extype" name="endpoints.algebra.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a> with <a href="BuiltInErrors.html" class="extype" name="endpoints.algebra.BuiltInErrors">BuiltInErrors</a></span>
       </span>
       
       <p class="shortcomment cmt">Algebra interface for describing endpoints made of requests and responses.</p><div class="fullcomment"><div class="comment cmt"><p>Algebra interface for describing endpoints made of requests and responses.</p><p>Requests and responses contain headers and entity.</p><pre><span class="cmt">/**
@@ -562,11 +586,12 @@ authentication mechanism, specific to their application.
   *  - URL is made of path “/foo”,
   *  - response has no entity
   */</span>
-<span class="kw">val</span> example = endpoint(get(path / <span class="lit">"foo"</span>), emptyResponse)</pre></div></div>
-    </li><li name="endpoints.algebra.JsonEntities" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="algebras">
-      <a id="JsonEntitiesextendsEndpoints"></a><a id="JsonEntities:JsonEntities"></a>
+<span class="kw">val</span> example = endpoint(get(path / <span class="lit">"foo"</span>), emptyResponse)</pre><p>This trait uses <a href="BuiltInErrors.html" class="extype" name="endpoints.algebra.BuiltInErrors">BuiltInErrors</a> to model client and server errors.
+</p></div></div>
+    </li><li name="endpoints.algebra.EndpointsWithCustomErrors" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="algebras">
+      <a id="EndpointsWithCustomErrorsextendsRequestswithResponseswithErrors"></a><a id="EndpointsWithCustomErrors:EndpointsWithCustomErrors"></a>
       <span class="permalink">
-      <a href="../../endpoints/algebra/index.html#JsonEntitiesextendsEndpoints" title="Permalink">
+      <a href="../../endpoints/algebra/EndpointsWithCustomErrors.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -575,7 +600,45 @@ authentication mechanism, specific to their application.
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="Algebra interface for describing JSON entities in requests and responses." href="JsonEntities.html"><span class="name">JsonEntities</span></a><span class="result"> extends <a href="Endpoints.html" class="extype" name="endpoints.algebra.Endpoints">Endpoints</a></span>
+        <a title="Algebra interface for describing endpoints made of requests and responses." href="EndpointsWithCustomErrors.html"><span class="name">EndpointsWithCustomErrors</span></a><span class="result"> extends <a href="Requests.html" class="extype" name="endpoints.algebra.Requests">Requests</a> with <a href="Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a> with <a href="Errors.html" class="extype" name="endpoints.algebra.Errors">Errors</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Algebra interface for describing endpoints made of requests and responses.</p>
+    </li><li name="endpoints.algebra.Errors" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="ErrorsextendsAnyRef"></a><a id="Errors:Errors"></a>
+      <span class="permalink">
+      <a href="../../endpoints/algebra/Errors.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="Defines the error types used to model client and server errors." href="Errors.html"><span class="name">Errors</span></a><span class="result"> extends <a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Defines the error types used to model client and server errors.</p><div class="fullcomment"><div class="comment cmt"><p>Defines the error types used to model client and server errors.</p><p>The <code>ClientErrors</code> type is used by <i>endpoints</i> to model errors coming
+from the client (missing query parameter, invalid entity, etc.).</p><p>The <code>ServerError</code> type is used by <i>endpoints</i> to model errors coming from
+the server business logic.</p><p>The <code>badRequest</code> and <code>internalServerError</code> operations defined in <a href="Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a>
+define responses carrying entities of type <code>ClientErrors</code> and <code>ServerError</code>,
+respectively.</p><p>Interpreters are expected to use the <code>clientErrorsResponse</code> and <code>serverErrorResponse</code>
+operations defined here to handle client and server errors, respectively.
+</p></div><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p><a href="BuiltInErrors.html" class="extype" name="endpoints.algebra.BuiltInErrors">BuiltInErrors</a></p></span></dd></dl></div>
+    </li><li name="endpoints.algebra.JsonEntities" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="algebras">
+      <a id="JsonEntitiesextendsEndpointsWithCustomErrors"></a><a id="JsonEntities:JsonEntities"></a>
+      <span class="permalink">
+      <a href="../../endpoints/algebra/JsonEntities.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="Algebra interface for describing JSON entities in requests and responses." href="JsonEntities.html"><span class="name">JsonEntities</span></a><span class="result"> extends <a href="EndpointsWithCustomErrors.html" class="extype" name="endpoints.algebra.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a></span>
       </span>
       
       <p class="shortcomment cmt">Algebra interface for describing JSON entities in requests and responses.</p><div class="fullcomment"><div class="comment cmt"><p>Algebra interface for describing JSON entities in requests and responses.</p><pre><span class="cmt">/**
@@ -588,7 +651,7 @@ authentication mechanism, specific to their application.
     </li><li name="endpoints.algebra.JsonEntitiesFromCodec" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="algebras">
       <a id="JsonEntitiesFromCodecextendsJsonEntities"></a><a id="JsonEntitiesFromCodec:JsonEntitiesFromCodec"></a>
       <span class="permalink">
-      <a href="../../endpoints/algebra/index.html#JsonEntitiesFromCodecextendsJsonEntities" title="Permalink">
+      <a href="../../endpoints/algebra/JsonEntitiesFromCodec.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -604,7 +667,7 @@ authentication mechanism, specific to their application.
     </li><li name="endpoints.algebra.JsonSchemaEntities" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="algebras">
       <a id="JsonSchemaEntitiesextendsJsonEntitieswithJsonSchemas"></a><a id="JsonSchemaEntities:JsonSchemaEntities"></a>
       <span class="permalink">
-      <a href="../../endpoints/algebra/index.html#JsonSchemaEntitiesextendsJsonEntitieswithJsonSchemas" title="Permalink">
+      <a href="../../endpoints/algebra/JsonSchemaEntities.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -621,7 +684,7 @@ authentication mechanism, specific to their application.
     </li><li name="endpoints.algebra.JsonSchemas" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="algebras">
       <a id="JsonSchemasextendsAnyRef"></a><a id="JsonSchemas:JsonSchemas"></a>
       <span class="permalink">
-      <a href="../../endpoints/algebra/index.html#JsonSchemasextendsAnyRef" title="Permalink">
+      <a href="../../endpoints/algebra/JsonSchemas.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -664,9 +727,9 @@ named “name”, and the second one has type <code>Int</code> and name “age�
   }
 }</pre></div></div>
     </li><li name="endpoints.algebra.LowLevelEndpoints" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="LowLevelEndpointsextendsEndpoints"></a><a id="LowLevelEndpoints:LowLevelEndpoints"></a>
+      <a id="LowLevelEndpointsextendsEndpointsWithCustomErrors"></a><a id="LowLevelEndpoints:LowLevelEndpoints"></a>
       <span class="permalink">
-      <a href="../../endpoints/algebra/index.html#LowLevelEndpointsextendsEndpoints" title="Permalink">
+      <a href="../../endpoints/algebra/LowLevelEndpoints.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -675,7 +738,7 @@ named “name”, and the second one has type <code>Int</code> and name “age�
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="Provides a way to define endpoints that directly expose the low level APIs of the interpreters." href="LowLevelEndpoints.html"><span class="name">LowLevelEndpoints</span></a><span class="result"> extends <a href="Endpoints.html" class="extype" name="endpoints.algebra.Endpoints">Endpoints</a></span>
+        <a title="Provides a way to define endpoints that directly expose the low level APIs of the interpreters." href="LowLevelEndpoints.html"><span class="name">LowLevelEndpoints</span></a><span class="result"> extends <a href="EndpointsWithCustomErrors.html" class="extype" name="endpoints.algebra.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a></span>
       </span>
       
       <p class="shortcomment cmt">Provides a way to define endpoints that directly expose the low level APIs of the
@@ -689,7 +752,7 @@ interpreters. However, it can be useful for transitioning legacy code.</p><p>Exa
     </li><li name="endpoints.algebra.Methods" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="algebras">
       <a id="MethodsextendsAnyRef"></a><a id="Methods:Methods"></a>
       <span class="permalink">
-      <a href="../../endpoints/algebra/index.html#MethodsextendsAnyRef" title="Permalink">
+      <a href="../../endpoints/algebra/Methods.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -703,9 +766,9 @@ interpreters. However, it can be useful for transitioning legacy code.</p><p>Exa
       
       <p class="shortcomment cmt"></p>
     </li><li name="endpoints.algebra.MuxEndpoints" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="algebras">
-      <a id="MuxEndpointsextendsEndpoints"></a><a id="MuxEndpoints:MuxEndpoints"></a>
+      <a id="MuxEndpointsextendsEndpointsWithCustomErrors"></a><a id="MuxEndpoints:MuxEndpoints"></a>
       <span class="permalink">
-      <a href="../../endpoints/algebra/index.html#MuxEndpointsextendsEndpoints" title="Permalink">
+      <a href="../../endpoints/algebra/MuxEndpoints.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -714,7 +777,7 @@ interpreters. However, it can be useful for transitioning legacy code.</p><p>Exa
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="Algebra interface for describing endpoints such that one endpoint can handle several types of requests and responses." href="MuxEndpoints.html"><span class="name">MuxEndpoints</span></a><span class="result"> extends <a href="Endpoints.html" class="extype" name="endpoints.algebra.Endpoints">Endpoints</a></span>
+        <a title="Algebra interface for describing endpoints such that one endpoint can handle several types of requests and responses." href="MuxEndpoints.html"><span class="name">MuxEndpoints</span></a><span class="result"> extends <a href="EndpointsWithCustomErrors.html" class="extype" name="endpoints.algebra.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a></span>
       </span>
       
       <p class="shortcomment cmt">Algebra interface for describing endpoints such that one endpoint can
@@ -722,7 +785,7 @@ handle several types of requests and responses.</p>
     </li><li name="endpoints.algebra.MuxRequest" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="MuxRequestextendsAnyRef"></a><a id="MuxRequest:MuxRequest"></a>
       <span class="permalink">
-      <a href="../../endpoints/algebra/index.html#MuxRequestextendsAnyRef" title="Permalink">
+      <a href="../../endpoints/algebra/MuxRequest.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -737,9 +800,9 @@ handle several types of requests and responses.</p>
       <p class="shortcomment cmt">Multiplexed request type
 </p>
     </li><li name="endpoints.algebra.Requests" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="algebras">
-      <a id="RequestsextendsUrlswithMethodswithPartialInvariantFunctorSyntaxwithSemigroupalSyntax"></a><a id="Requests:Requests"></a>
+      <a id="RequestsextendsUrlswithMethodswithSemigroupalSyntax"></a><a id="Requests:Requests"></a>
       <span class="permalink">
-      <a href="../../endpoints/algebra/index.html#RequestsextendsUrlswithMethodswithPartialInvariantFunctorSyntaxwithSemigroupalSyntax" title="Permalink">
+      <a href="../../endpoints/algebra/Requests.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -748,14 +811,14 @@ handle several types of requests and responses.</p>
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="" href="Requests.html"><span class="name">Requests</span></a><span class="result"> extends <a href="Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a> with <a href="Methods.html" class="extype" name="endpoints.algebra.Methods">Methods</a> with <a href="../PartialInvariantFunctorSyntax.html" class="extype" name="endpoints.PartialInvariantFunctorSyntax">PartialInvariantFunctorSyntax</a> with <a href="../SemigroupalSyntax.html" class="extype" name="endpoints.SemigroupalSyntax">SemigroupalSyntax</a></span>
+        <a title="" href="Requests.html"><span class="name">Requests</span></a><span class="result"> extends <a href="Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a> with <a href="Methods.html" class="extype" name="endpoints.algebra.Methods">Methods</a> with <a href="../SemigroupalSyntax.html" class="extype" name="endpoints.SemigroupalSyntax">SemigroupalSyntax</a></span>
       </span>
       
       <p class="shortcomment cmt"></p>
     </li><li name="endpoints.algebra.Responses" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="algebras">
-      <a id="ResponsesextendsStatusCodes"></a><a id="Responses:Responses"></a>
+      <a id="ResponsesextendsStatusCodeswithInvariantFunctorSyntax"></a><a id="Responses:Responses"></a>
       <span class="permalink">
-      <a href="../../endpoints/algebra/index.html#ResponsesextendsStatusCodes" title="Permalink">
+      <a href="../../endpoints/algebra/Responses.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -764,14 +827,14 @@ handle several types of requests and responses.</p>
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="" href="Responses.html"><span class="name">Responses</span></a><span class="result"> extends <a href="StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></span>
+        <a title="" href="Responses.html"><span class="name">Responses</span></a><span class="result"> extends <a href="StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a> with <a href="../InvariantFunctorSyntax.html" class="extype" name="endpoints.InvariantFunctorSyntax">InvariantFunctorSyntax</a></span>
       </span>
       
       <p class="shortcomment cmt"></p>
     </li><li name="endpoints.algebra.StatusCodes" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="algebras">
       <a id="StatusCodesextendsAnyRef"></a><a id="StatusCodes:StatusCodes"></a>
       <span class="permalink">
-      <a href="../../endpoints/algebra/index.html#StatusCodesextendsAnyRef" title="Permalink">
+      <a href="../../endpoints/algebra/StatusCodes.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -785,9 +848,9 @@ handle several types of requests and responses.</p>
       
       <p class="shortcomment cmt"></p>
     </li><li name="endpoints.algebra.Urls" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="algebras">
-      <a id="UrlsextendsAnyRef"></a><a id="Urls:Urls"></a>
+      <a id="UrlsextendsPartialInvariantFunctorSyntax"></a><a id="Urls:Urls"></a>
       <span class="permalink">
-      <a href="../../endpoints/algebra/index.html#UrlsextendsAnyRef" title="Permalink">
+      <a href="../../endpoints/algebra/Urls.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -796,7 +859,7 @@ handle several types of requests and responses.</p>
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="Algebra interface for describing URLs made of a path and a query string." href="Urls.html"><span class="name">Urls</span></a><span class="result"> extends <a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+        <a title="Algebra interface for describing URLs made of a path and a query string." href="Urls.html"><span class="name">Urls</span></a><span class="result"> extends <a href="../PartialInvariantFunctorSyntax.html" class="extype" name="endpoints.PartialInvariantFunctorSyntax">PartialInvariantFunctorSyntax</a></span>
       </span>
       
       <p class="shortcomment cmt">Algebra interface for describing URLs made of a path and a query string.</p><div class="fullcomment"><div class="comment cmt"><p>Algebra interface for describing URLs made of a path and a query string.</p><p>A path is itself made of segments chained together.</p><p>A query string is made of named parameters.</p><pre><span class="cmt">/**
@@ -810,7 +873,7 @@ handle several types of requests and responses.</p>
   * - /articles/kitchen?lang=fr
   * - /articles/garden?lang=en&page=2
   */</span>
-<span class="kw">val</span> example = path / <span class="lit">"articles"</span> / segment[<span class="std">String</span>] /? (qs[Lang](<span class="lit">"lang"</span>) &amp; qs[<span class="std">Option</span>[<span class="std">Int</span>]](<span class="lit">"page"</span>))</pre></div></div>
+<span class="kw">val</span> example = path / <span class="lit">"articles"</span> / segment[<span class="std">String</span>]() /? (qs[Lang](<span class="lit">"lang"</span>) &amp; qs[<span class="std">Option</span>[<span class="std">Int</span>]](<span class="lit">"page"</span>))</pre></div></div>
     </li></ol>
             </div>
 
@@ -822,7 +885,7 @@ handle several types of requests and responses.</p>
                 <li name="endpoints.algebra.BasicAuthentication" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="BasicAuthentication"></a><a id="BasicAuthentication:BasicAuthentication"></a>
       <span class="permalink">
-      <a href="../../endpoints/algebra/index.html#BasicAuthentication" title="Permalink">
+      <a href="../../endpoints/algebra/BasicAuthentication$.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -832,6 +895,22 @@ handle several types of requests and responses.</p>
       </span>
       <span class="symbol">
         <a title="" href="BasicAuthentication$.html"><span class="name">BasicAuthentication</span></a>
+      </span>
+      
+      
+    </li><li name="endpoints.algebra.InvalidCodec" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="InvalidCodec"></a><a id="InvalidCodec:InvalidCodec"></a>
+      <span class="permalink">
+      <a href="../../endpoints/algebra/InvalidCodec$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="InvalidCodec$.html"><span class="name">InvalidCodec</span></a>
       </span>
       
       
@@ -848,7 +927,7 @@ handle several types of requests and responses.</p>
         <div class="parent" name="scala.AnyRef">
               <h3>Inherited from <a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">
-              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.12.8/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></h3>
+              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></h3>
             </div>
         
         </div>

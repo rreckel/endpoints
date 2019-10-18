@@ -21,7 +21,7 @@
             <div class="row">
               <div class="large-12 columns a_limited top-bar">
                 <div class="top-bar-left">
-                  <p>endpoints 0.10.1</p>
+                  <p>endpoints 0.11.0</p>
 
                 </div>
                 <div class="top-bar-right align-right row">
@@ -55,7 +55,7 @@
                 <h1 id="circe" class="a_section" data-magellan-target="circe">circe<a class="a_hlink" href="#circe"></a></h1>
 <p>Builds <a href="http://circe.github.io/circe/">circe</a> codecs out of JSON schema definitions.</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
-<pre class="hljs"><code class="language-scala"><span class="hljs-string">"org.julienrf"</span> %% <span class="hljs-string">"endpoints-json-schema-circe"</span> % <span class="hljs-string">"0.10.1"</span>
+<pre class="hljs"><code class="language-scala"><span class="hljs-string">"org.julienrf"</span> %% <span class="hljs-string">"endpoints-json-schema-circe"</span> % <span class="hljs-string">"0.11.0"</span>
 </code></pre>
 </div></div>
 <p><a href="../api/endpoints/circe/JsonSchemas.html">API documentation</a></p>
@@ -66,7 +66,7 @@ that provides both an <code class="hljs">io.circe.Encoder[A]</code> and an <code
 <pre class="hljs"><code class="language-scala"><span class="hljs-keyword">sealed</span> <span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">Shape</span></span>
 <span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Circle</span>(<span class="hljs-params">radius: <span class="hljs-type">Double</span></span>) <span class="hljs-keyword">extends</span> <span class="hljs-title">Shape</span></span>
 <span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Rectangle</span>(<span class="hljs-params">width: <span class="hljs-type">Double</span>, height: <span class="hljs-type">Double</span></span>) <span class="hljs-keyword">extends</span> <span class="hljs-title">Shape</span></span></code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.10.1/json-schema/json-schema/src/test/scala/endpoints/algebra/JsonSchemasDocs.scala#L18-L20" class="a_sourcelink">JsonSchemasDocs.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.11.0/json-schema/json-schema/src/test/scala/endpoints/algebra/JsonSchemasDocs.scala#L18-L20" class="a_sourcelink">JsonSchemasDocs.scala</a></div></div>
 <p>Assuming that there is an implicit <code class="hljs">JsonSchema[Shape]</code> definition,
 we can encode a <code class="hljs">Shape</code> into JSON and decode it using the usual
 circe operations:</p>
@@ -75,7 +75,7 @@ circe operations:</p>
 <span class="hljs-keyword">val</span> shape: <span class="hljs-type">Shape</span> = <span class="hljs-type">Circle</span>(<span class="hljs-number">42</span>)
 <span class="hljs-keyword">val</span> shapeJson: <span class="hljs-type">Json</span> = shape.asJson
 <span class="hljs-keyword">val</span> maybeShape: <span class="hljs-type">Either</span>[circe.<span class="hljs-type">Error</span>, <span class="hljs-type">Shape</span>] = shapeJson.as[<span class="hljs-type">Shape</span>]</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.10.1/json-schema/json-schema-circe/src/test/scala/endpoints/circe/JsonSchemasDocs.scala#L11-L14" class="a_sourcelink">JsonSchemasDocs.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.11.0/json-schema/json-schema-circe/src/test/scala/endpoints/circe/JsonSchemasDocs.scala#L11-L14" class="a_sourcelink">JsonSchemasDocs.scala</a></div></div>
 
                  
   <ul class="menu align-right simple a_navbar a_navbar_bottom">

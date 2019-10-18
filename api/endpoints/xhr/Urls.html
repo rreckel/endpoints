@@ -8,17 +8,17 @@
           <meta name="keywords" content="" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
+      
       <link href="../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
-      <script type="text/javascript" src="../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../lib/jquery.min.js"></script>
       <script type="text/javascript" src="../../lib/jquery.panzoom.min.js"></script>
       <script type="text/javascript" src="../../lib/jquery.mousewheel.min.js"></script>
       <script type="text/javascript" src="../../lib/index.js"></script>
       <script type="text/javascript" src="../../index.js"></script>
       <script type="text/javascript" src="../../lib/scheduler.js"></script>
       <script type="text/javascript" src="../../lib/template.js"></script>
-      <script type="text/javascript" src="../../lib/tools.tooltip.js"></script>
       <script type="text/javascript" src="../../lib/modernizr.custom.js"></script><script type="text/javascript" src="../../lib/diagrams.js" id="diagrams-js"></script>
       <script type="text/javascript">
         /* this variable can be used by the JS to determine the path to the root document */
@@ -56,7 +56,7 @@
                 <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="_root_"></a><a id="root:_root_"></a>
       <span class="permalink">
-      <a href="index.html#_root_" title="Permalink">
+      <a href="../../index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -72,7 +72,7 @@
     </li><li name="_root_.endpoints" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="endpoints"></a><a id="endpoints:endpoints"></a>
       <span class="permalink">
-      <a href="index.html#endpoints" title="Permalink">
+      <a href="../../endpoints/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -88,7 +88,7 @@
     </li><li name="endpoints.xhr" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="xhr"></a><a id="xhr:xhr"></a>
       <span class="permalink">
-      <a href="../endpoints/index.html#xhr" title="Permalink">
+      <a href="../../endpoints/xhr/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -106,7 +106,7 @@
     </li><li name="endpoints.xhr.circe" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="circe"></a><a id="circe:circe"></a>
       <span class="permalink">
-      <a href="../../endpoints/xhr/index.html#circe" title="Permalink">
+      <a href="../../endpoints/xhr/circe/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -122,7 +122,7 @@
     </li><li name="endpoints.xhr.faithful" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="faithful"></a><a id="faithful:faithful"></a>
       <span class="permalink">
-      <a href="../../endpoints/xhr/index.html#faithful" title="Permalink">
+      <a href="../../endpoints/xhr/faithful/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -139,7 +139,7 @@
     </li><li name="endpoints.xhr.future" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="future"></a><a id="future:future"></a>
       <span class="permalink">
-      <a href="../../endpoints/xhr/index.html#future" title="Permalink">
+      <a href="../../endpoints/xhr/future/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -157,7 +157,7 @@
     </li><li name="endpoints.xhr.thenable" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="thenable"></a><a id="thenable:thenable"></a>
       <span class="permalink">
-      <a href="../../endpoints/xhr/index.html#thenable" title="Permalink">
+      <a href="../../endpoints/xhr/thenable/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -182,8 +182,16 @@
                         <a href="BasicAuthentication.html" title="">BasicAuthentication</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
+                        <a class="trait" href="BuiltInErrors.html" title=""></a>
+                        <a href="BuiltInErrors.html" title="">BuiltInErrors</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
                         <a class="trait" href="Endpoints.html" title="Partial interpreter for algebra.Endpoints that builds a client issuing requests using XMLHttpRequest."></a>
                         <a href="Endpoints.html" title="Partial interpreter for algebra.Endpoints that builds a client issuing requests using XMLHttpRequest.">Endpoints</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="trait" href="EndpointsWithCustomErrors.html" title="Partial interpreter for algebra.Endpoints that builds a client issuing requests using XMLHttpRequest."></a>
+                        <a href="EndpointsWithCustomErrors.html" title="Partial interpreter for algebra.Endpoints that builds a client issuing requests using XMLHttpRequest.">EndpointsWithCustomErrors</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="trait" href="JsonEntitiesFromCodec.html" title="Interpreter for endpoints.algebra.JsonEntitiesFromCodec that encodes JSON requests and decodes JSON responses."></a>
@@ -237,27 +245,17 @@
 
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p><a href="../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">algebra.Urls</a> interpreter that builds URLs (in a JavaScript runtime environment).
-</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/julienrf/endpoints/blob/v0.10.1/xhr/client/src/main/scala/endpoints/xhr/Urls.scala" target="_blank">Urls.scala</a></dd></dl><div class="toggleContainer block">
+</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/julienrf/endpoints/blob/v0.11.0/xhr/client/src/main/scala/endpoints/xhr/Urls.scala" target="_blank">Urls.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">algebra.Urls</a>, <a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.12.8/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
+          <div class="superTypes hiddenContent"><a href="../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">algebra.Urls</a>, <a href="../PartialInvariantFunctorSyntax.html" class="extype" name="endpoints.PartialInvariantFunctorSyntax">endpoints.PartialInvariantFunctorSyntax</a>, <a href="../InvariantFunctorSyntax.html" class="extype" name="endpoints.InvariantFunctorSyntax">endpoints.InvariantFunctorSyntax</a>, <a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
         </div><div class="toggleContainer block">
             <span class="toggle">
               Known Subclasses
             </span>
-            <div class="subClasses hiddenContent"><a href="Assets.html" class="extype" name="endpoints.xhr.Assets">Assets</a>, <a href="BasicAuthentication.html" class="extype" name="endpoints.xhr.BasicAuthentication">BasicAuthentication</a>, <a href="Endpoints.html" class="extype" name="endpoints.xhr.Endpoints">Endpoints</a>, <a href="JsonEntitiesFromCodec.html" class="extype" name="endpoints.xhr.JsonEntitiesFromCodec">JsonEntitiesFromCodec</a>, <a href="LowLevelEndpoints.html" class="extype" name="endpoints.xhr.LowLevelEndpoints">LowLevelEndpoints</a>, <a href="MuxEndpoints.html" class="extype" name="endpoints.xhr.MuxEndpoints">MuxEndpoints</a>, <a href="circe/JsonEntities.html" class="extype" name="endpoints.xhr.circe.JsonEntities">JsonEntities</a>, <a href="circe/JsonSchemaEntities.html" class="extype" name="endpoints.xhr.circe.JsonSchemaEntities">JsonSchemaEntities</a>, <a href="faithful/Endpoints.html" class="extype" name="endpoints.xhr.faithful.Endpoints">Endpoints</a>, <a href="faithful/MuxEndpoints.html" class="extype" name="endpoints.xhr.faithful.MuxEndpoints">MuxEndpoints</a>, <a href="future/Endpoints.html" class="extype" name="endpoints.xhr.future.Endpoints">Endpoints</a>, <a href="thenable/Endpoints.html" class="extype" name="endpoints.xhr.thenable.Endpoints">Endpoints</a>, <a href="thenable/MuxEndpoints.html" class="extype" name="endpoints.xhr.thenable.MuxEndpoints">MuxEndpoints</a></div>
-          </div><div class="toggleContainer block diagram-container" id="inheritance-diagram-container">
-                <span class="toggle diagram-link">
-                  Type Hierarchy
-                </span>
-                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph1" viewBox="0.00 0.00 118.00 155.00" height="155pt" width="118pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 151)" class="graph" id="page0,1_graph0"><polygon points="-4,4 -4,-151 114,-151 114,4 -4,4" stroke="transparent" fill="#ffffff"></polygon><g class="cluster" id="clust1"></g><g class="cluster" id="clust2"></g><!-- node0 --><g class="node this trait" id="graph1_0"><g id="a_this trait|graph1_0"><a xlink:title="endpoints.xhr.Urls (this trait)" xlink:href="#inheritance-diagram"><path d="M77.1667,-86C77.1667,-86 32.8333,-86 32.8333,-86 28.6667,-86 24.5,-81.8333 24.5,-77.6667 24.5,-77.6667 24.5,-69.3333 24.5,-69.3333 24.5,-65.1667 28.6667,-61 32.8333,-61 32.8333,-61 77.1667,-61 77.1667,-61 81.3333,-61 85.5,-65.1667 85.5,-69.3333 85.5,-69.3333 85.5,-77.6667 85.5,-77.6667 85.5,-81.8333 81.3333,-86 77.1667,-86" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-80.5" x="35" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-71.1" x="56" text-anchor="start">Urls</text></a></g></g><!-- node1 --><g class="node trait" id="graph1_1"><g id="a_trait|graph1_1"><a xlink:title="endpoints.xhr.Endpoints" xlink:href="Endpoints.html#inheritance-diagram"><path d="M89.6667,-25C89.6667,-25 20.3333,-25 20.3333,-25 16.1667,-25 12,-20.8333 12,-16.6667 12,-16.6667 12,-8.3333 12,-8.3333 12,-4.1667 16.1667,0 20.3333,0 20.3333,0 89.6667,0 89.6667,0 93.8333,0 98,-4.1667 98,-8.3333 98,-8.3333 98,-16.6667 98,-16.6667 98,-20.8333 93.8333,-25 89.6667,-25" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-19.5" x="22" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="43" text-anchor="start">Endpoints</text></a></g></g><!-- node0&#45;&gt;node1 --><g class="edge inheritance" id="graph1_0_1"><g id="a_inheritance|graph1_0_1"><a xlink:title="Endpoints is a subtype of Urls"><path d="M55,-53.7386C55,-44.3393 55,-33.3803 55,-25.123" stroke="#d4d4d4" fill="none"></path><polygon points="52.5501,-53.8607 55,-60.8608 57.4501,-53.8608 52.5501,-53.8607" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node2 --><g class="node trait" id="graph1_2"><g id="a_trait|graph1_2"><a xlink:title="endpoints.algebra.Urls" xlink:href="../algebra/Urls.html#inheritance-diagram"><path d="M94.6667,-147C94.6667,-147 15.3333,-147 15.3333,-147 11.1667,-147 7,-142.8333 7,-138.6667 7,-138.6667 7,-130.3333 7,-130.3333 7,-126.1667 11.1667,-122 15.3333,-122 15.3333,-122 94.6667,-122 94.6667,-122 98.8333,-122 103,-126.1667 103,-130.3333 103,-130.3333 103,-138.6667 103,-138.6667 103,-142.8333 98.8333,-147 94.6667,-147" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-141.5" x="17" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-132.1" x="38" text-anchor="start">algebra.Urls</text></a></g></g><!-- node2&#45;&gt;node0 --><g class="edge inheritance" id="graph1_2_0"><g id="a_inheritance|graph1_2_0"><a xlink:title="Urls is a subtype of algebra.Urls"><path d="M55,-114.7386C55,-105.3393 55,-94.3803 55,-86.123" stroke="#d4d4d4" fill="none"></path><polygon points="52.5501,-114.8607 55,-121.8608 57.4501,-114.8608 52.5501,-114.8607" stroke="#d4d4d4" fill="none"></polygon></a></g></g></g></svg></div>
-                <div id="diagram-controls" class="hiddenContent">
-                  <button id="diagram-zoom-out" class="diagram-btn"><i class="material-icons"></i></button>
-                  <button id="diagram-zoom-in" class="diagram-btn"><i class="material-icons"></i></button>
-                  <button title="Toggle full-screen" id="diagram-fs" class="diagram-btn to-full"><i class="material-icons"></i></button>
-                </div>
-              </div></div>
+            <div class="subClasses hiddenContent"><a href="Assets.html" class="extype" name="endpoints.xhr.Assets">Assets</a>, <a href="BasicAuthentication.html" class="extype" name="endpoints.xhr.BasicAuthentication">BasicAuthentication</a>, <a href="Endpoints.html" class="extype" name="endpoints.xhr.Endpoints">Endpoints</a>, <a href="EndpointsWithCustomErrors.html" class="extype" name="endpoints.xhr.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a>, <a href="JsonEntitiesFromCodec.html" class="extype" name="endpoints.xhr.JsonEntitiesFromCodec">JsonEntitiesFromCodec</a>, <a href="LowLevelEndpoints.html" class="extype" name="endpoints.xhr.LowLevelEndpoints">LowLevelEndpoints</a>, <a href="MuxEndpoints.html" class="extype" name="endpoints.xhr.MuxEndpoints">MuxEndpoints</a>, <a href="circe/JsonEntities.html" class="extype" name="endpoints.xhr.circe.JsonEntities">JsonEntities</a>, <a href="circe/JsonSchemaEntities.html" class="extype" name="endpoints.xhr.circe.JsonSchemaEntities">JsonSchemaEntities</a>, <a href="faithful/Endpoints.html" class="extype" name="endpoints.xhr.faithful.Endpoints">Endpoints</a>, <a href="faithful/MuxEndpoints.html" class="extype" name="endpoints.xhr.faithful.MuxEndpoints">MuxEndpoints</a>, <a href="future/Endpoints.html" class="extype" name="endpoints.xhr.future.Endpoints">Endpoints</a>, <a href="future/EndpointsWithCustomErrors.html" class="extype" name="endpoints.xhr.future.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a>, <a href="thenable/Endpoints.html" class="extype" name="endpoints.xhr.thenable.Endpoints">Endpoints</a>, <a href="thenable/EndpointsWithCustomErrors.html" class="extype" name="endpoints.xhr.thenable.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a>, <a href="thenable/MuxEndpoints.html" class="extype" name="endpoints.xhr.thenable.MuxEndpoints">MuxEndpoints</a></div>
+          </div></div>
         
 
       <div id="mbrsel">
@@ -282,7 +280,12 @@
                   <span class="filtertype">Inherited<br />
                   </span>
                   <ol id="linearization">
-                    <li class="in" name="endpoints.xhr.Urls"><span>Urls</span></li><li class="in" name="endpoints.algebra.Urls"><span>Urls</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                    <li class="in" name="endpoints.xhr.Urls"><span>Urls</span></li><li class="in" name="endpoints.algebra.Urls"><span>Urls</span></li><li class="in" name="endpoints.PartialInvariantFunctorSyntax"><span>PartialInvariantFunctorSyntax</span></li><li class="in" name="endpoints.InvariantFunctorSyntax"><span>InvariantFunctorSyntax</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  </ol>
+                </div><div class="ancestors">
+                  <span class="filtertype">Implicitly<br />
+                  </span>
+                  <ol id="implicits"> <li class="in" name="scala.Predef.any2stringadd" data-hidden="true"><span>by any2stringadd</span></li><li class="in" name="scala.Predef.StringFormat" data-hidden="true"><span>by StringFormat</span></li><li class="in" name="scala.Predef.Ensuring" data-hidden="true"><span>by Ensuring</span></li><li class="in" name="scala.Predef.ArrowAssoc" data-hidden="true"><span>by ArrowAssoc</span></li>
                   </ol>
                 </div><div class="ancestors">
               <span class="filtertype"></span>
@@ -304,10 +307,45 @@
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="endpoints.algebra.Urls.PathOps" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+              <ol><li name="endpoints.InvariantFunctorSyntax.InvariantFunctorSyntax" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="InvariantFunctorSyntax[A,F[_]]extendsAnyRef"></a><a id="InvariantFunctorSyntax[A,F[_]]:InvariantFunctorSyntax[A,F]"></a>
+      <span class="permalink">
+      <a href="../../endpoints/InvariantFunctorSyntax$InvariantFunctorSyntax.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Extension methods for values of type F[A] for which there is an implicit InvariantFunctor[F] instance." href="../InvariantFunctorSyntax$InvariantFunctorSyntax.html"><span class="name">InvariantFunctorSyntax</span></a><span class="tparams">[<span name="A">A</span>, <span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="result"> extends <a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Extension methods for values of type <code>F[A]</code> for which there is an implicit
+<code>InvariantFunctor[F]</code> instance.</p><div class="fullcomment"><div class="comment cmt"><p>Extension methods for values of type <code>F[A]</code> for which there is an implicit
+<code>InvariantFunctor[F]</code> instance.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../InvariantFunctorSyntax.html" class="extype" name="endpoints.InvariantFunctorSyntax">InvariantFunctorSyntax</a></dd></dl></div>
+    </li><li name="endpoints.PartialInvariantFunctorSyntax.PartialInvariantFunctorSyntax" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="PartialInvariantFunctorSyntax[A,F[_]]extendsAnyRef"></a><a id="PartialInvariantFunctorSyntax[A,F[_]]:PartialInvariantFunctorSyntax[A,F]"></a>
+      <span class="permalink">
+      <a href="../../endpoints/PartialInvariantFunctorSyntax$PartialInvariantFunctorSyntax.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../PartialInvariantFunctorSyntax$PartialInvariantFunctorSyntax.html"><span class="name">PartialInvariantFunctorSyntax</span></a><span class="tparams">[<span name="A">A</span>, <span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="result"> extends <a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../PartialInvariantFunctorSyntax.html" class="extype" name="endpoints.PartialInvariantFunctorSyntax">PartialInvariantFunctorSyntax</a></dd></dl></div>
+    </li><li name="endpoints.algebra.Urls.PathOps" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="PathOps[A]extendsAnyRef"></a><a id="PathOps[A]:PathOps[A]"></a>
       <span class="permalink">
-      <a href="../../endpoints/algebra/Urls.html#PathOps[A]extendsAnyRef" title="Permalink">
+      <a href="../../endpoints/algebra/Urls$PathOps.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -320,10 +358,10 @@
       </span>
       
       <p class="shortcomment cmt">Convenient methods for <a href="../algebra/Urls.html#Path[A]&lt;:Urls.this.Url[A]" class="extmbr" name="endpoints.algebra.Urls.Path">Path</a>s.</p><div class="fullcomment"><div class="comment cmt"><p>Convenient methods for <a href="../algebra/Urls.html#Path[A]&lt;:Urls.this.Url[A]" class="extmbr" name="endpoints.algebra.Urls.Path">Path</a>s.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
-    </li><li name="endpoints.algebra.Urls.QueryStringOps" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="QueryStringOps[A]extendsAnyRef"></a><a id="QueryStringOps[A]:QueryStringOps[A]"></a>
+    </li><li name="endpoints.algebra.Urls.QueryStringSyntax" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="QueryStringSyntax[A]extendsAnyRef"></a><a id="QueryStringSyntax[A]:QueryStringSyntax[A]"></a>
       <span class="permalink">
-      <a href="../../endpoints/algebra/Urls.html#QueryStringOps[A]extendsAnyRef" title="Permalink">
+      <a href="../../endpoints/algebra/Urls$QueryStringSyntax.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -332,14 +370,14 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="Provides convenient methods on QueryString." href="../algebra/Urls$QueryStringOps.html"><span class="name">QueryStringOps</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="result"> extends <a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+        <a title="Extension methods on QueryString." href="../algebra/Urls$QueryStringSyntax.html"><span class="name">QueryStringSyntax</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="result"> extends <a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
-      <p class="shortcomment cmt">Provides convenient methods on <a href="../algebra/Urls.html#QueryString[A]" class="extmbr" name="endpoints.algebra.Urls.QueryString">QueryString</a>.</p><div class="fullcomment"><div class="comment cmt"><p>Provides convenient methods on <a href="../algebra/Urls.html#QueryString[A]" class="extmbr" name="endpoints.algebra.Urls.QueryString">QueryString</a>.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
+      <p class="shortcomment cmt">Extension methods on <a href="../algebra/Urls.html#QueryString[A]" class="extmbr" name="endpoints.algebra.Urls.QueryString">QueryString</a>.</p><div class="fullcomment"><div class="comment cmt"><p>Extension methods on <a href="../algebra/Urls.html#QueryString[A]" class="extmbr" name="endpoints.algebra.Urls.QueryString">QueryString</a>.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
     </li><li name="endpoints.xhr.Urls.Path" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="Path[A]extendsUrls.this.Url[A]"></a><a id="Path[A]:Path[A]"></a>
       <span class="permalink">
-      <a href="../../endpoints/xhr/Urls.html#Path[A]extendsUrls.this.Url[A]" title="Permalink">
+      <a href="../../endpoints/xhr/Urls$Path.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -355,7 +393,7 @@
     </li><li name="endpoints.xhr.Urls.QueryString" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="QueryString[A]extendsAnyRef"></a><a id="QueryString[A]:QueryString[A]"></a>
       <span class="permalink">
-      <a href="../../endpoints/xhr/Urls.html#QueryString[A]extendsAnyRef" title="Permalink">
+      <a href="../../endpoints/xhr/Urls$QueryString.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -372,7 +410,7 @@
     </li><li name="endpoints.xhr.Urls.QueryStringParam" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="QueryStringParam[A]extendsAnyRef"></a><a id="QueryStringParam[A]:QueryStringParam[A]"></a>
       <span class="permalink">
-      <a href="../../endpoints/xhr/Urls.html#QueryStringParam[A]extendsAnyRef" title="Permalink">
+      <a href="../../endpoints/xhr/Urls$QueryStringParam.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -388,7 +426,7 @@
     </li><li name="endpoints.xhr.Urls.Segment" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="Segment[A]extendsAnyRef"></a><a id="Segment[A]:Segment[A]"></a>
       <span class="permalink">
-      <a href="../../endpoints/xhr/Urls.html#Segment[A]extendsAnyRef" title="Permalink">
+      <a href="../../endpoints/xhr/Urls$Segment.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -404,7 +442,7 @@
     </li><li name="endpoints.xhr.Urls.Url" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="Url[A]extendsAnyRef"></a><a id="Url[A]:Url[A]"></a>
       <span class="permalink">
-      <a href="../../endpoints/xhr/Urls.html#Url[A]extendsAnyRef" title="Permalink">
+      <a href="../../endpoints/xhr/Urls$Url.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -437,7 +475,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.8/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.8/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -453,10 +491,53 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.8/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.Predef.any2stringadd#+" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="+(other:String):String"></a><a id="+(String):String"></a>
+      <span class="permalink">
+      <a href="../../endpoints/xhr/Urls.html#+(other:String):String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $plus" class="implicit">+</span><span class="params">(<span name="other">other: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="endpoints.xhr.Urls">Urls</a> to
+            <span class="extype" name="scala.Predef.any2stringadd">any2stringadd</span>[<a href="" class="extype" name="endpoints.xhr.Urls">Urls</a>] performed by method any2stringadd in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>any2stringadd</dd></dl></div>
+    </li><li name="scala.Predef.ArrowAssoc#-&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="-&gt;[B](y:B):(A,B)"></a><a id="-&gt;[B](B):(Urls,B)"></a>
+      <span class="permalink">
+      <a href="../../endpoints/xhr/Urls.html#-&gt;[B](y:B):(A,B)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $minus$greater" class="implicit">-&gt;</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="endpoints.xhr.Urls">Urls</a>, <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span>)</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="endpoints.xhr.Urls">Urls</a> to
+            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="endpoints.xhr.Urls">Urls</a>] performed by method ArrowAssoc in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd><dt>Annotations</dt><dd>
+                <span class="name">@inline</span><span class="args">()</span>
+              
+        </dd></dl></div>
     </li><li name="scala.AnyRef#==" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="==(x$1:Any):Boolean"></a><a id="==(Any):Boolean"></a>
       <span class="permalink">
@@ -469,7 +550,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.8/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.8/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -501,7 +582,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">booleanQueryString</span><span class="result">: <a href="Urls$QueryStringParam.html" class="extype" name="endpoints.xhr.Urls.QueryStringParam">QueryStringParam</a>[<a href="http://www.scala-lang.org/api/2.12.8/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a>]</span>
+        <span class="name">booleanQueryString</span><span class="result">: <a href="Urls$QueryStringParam.html" class="extype" name="endpoints.xhr.Urls.QueryStringParam">QueryStringParam</a>[<a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a>]</span>
       </span>
       
       <p class="shortcomment cmt">Query string parameter containing a <code>Boolean</code> value</p><div class="fullcomment"><div class="comment cmt"><p>Query string parameter containing a <code>Boolean</code> value</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
@@ -536,13 +617,13 @@
         <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@native</span><span class="args">()</span>
-              
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
     </span>)</span>
+              
+                <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
     </li><li name="endpoints.xhr.Urls#combineQueryStrings" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -573,7 +654,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">doubleQueryString</span><span class="result">: <a href="Urls$QueryStringParam.html" class="extype" name="endpoints.xhr.Urls.QueryStringParam">QueryStringParam</a>[<a href="http://www.scala-lang.org/api/2.12.8/scala/Double.html#scala.Double" class="extype" name="scala.Double">Double</a>]</span>
+        <span class="name">doubleQueryString</span><span class="result">: <a href="Urls$QueryStringParam.html" class="extype" name="endpoints.xhr.Urls.QueryStringParam">QueryStringParam</a>[<a href="https://www.scala-lang.org/api/2.12.10/scala/Double.html#scala.Double" class="extype" name="scala.Double">Double</a>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
@@ -589,7 +670,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">doubleSegment</span><span class="result">: <a href="Urls$Segment.html" class="extype" name="endpoints.xhr.Urls.Segment">Segment</a>[<a href="http://www.scala-lang.org/api/2.12.8/scala/Double.html#scala.Double" class="extype" name="scala.Double">Double</a>]</span>
+        <span class="name">doubleSegment</span><span class="result">: <a href="Urls$Segment.html" class="extype" name="endpoints.xhr.Urls.Segment">Segment</a>[<a href="https://www.scala-lang.org/api/2.12.10/scala/Double.html#scala.Double" class="extype" name="scala.Double">Double</a>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
@@ -609,6 +690,86 @@
       </span>
       
       <p class="shortcomment cmt">Implicit conversion to get rid of intellij errors when defining paths.</p><div class="fullcomment"><div class="comment cmt"><p>Implicit conversion to get rid of intellij errors when defining paths. Effectively should not be called.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A"></a><a id="ensuring((Urls)⇒Boolean,⇒Any):Urls"></a>
+      <span class="permalink">
+      <a href="../../endpoints/xhr/Urls.html#ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="endpoints.xhr.Urls">Urls</a>) ⇒ <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>, <span name="msg">msg: ⇒ <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="" class="extype" name="endpoints.xhr.Urls">Urls</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="endpoints.xhr.Urls">Urls</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="endpoints.xhr.Urls">Urls</a>] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:A=&gt;Boolean):A"></a><a id="ensuring((Urls)⇒Boolean):Urls"></a>
+      <span class="permalink">
+      <a href="../../endpoints/xhr/Urls.html#ensuring(cond:A=&gt;Boolean):A" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="endpoints.xhr.Urls">Urls</a>) ⇒ <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>)</span><span class="result">: <a href="" class="extype" name="endpoints.xhr.Urls">Urls</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="endpoints.xhr.Urls">Urls</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="endpoints.xhr.Urls">Urls</a>] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:Boolean,msg:=&gt;Any):A"></a><a id="ensuring(Boolean,⇒Any):Urls"></a>
+      <span class="permalink">
+      <a href="../../endpoints/xhr/Urls.html#ensuring(cond:Boolean,msg:=&gt;Any):A" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>, <span name="msg">msg: ⇒ <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="" class="extype" name="endpoints.xhr.Urls">Urls</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="endpoints.xhr.Urls">Urls</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="endpoints.xhr.Urls">Urls</a>] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:Boolean):A"></a><a id="ensuring(Boolean):Urls"></a>
+      <span class="permalink">
+      <a href="../../endpoints/xhr/Urls.html#ensuring(cond:Boolean):A" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>)</span><span class="result">: <a href="" class="extype" name="endpoints.xhr.Urls">Urls</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="endpoints.xhr.Urls">Urls</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="endpoints.xhr.Urls">Urls</a>] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
       <span class="permalink">
@@ -621,7 +782,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.8/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
@@ -637,7 +798,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.8/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.8/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -653,14 +814,37 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.8/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="symbol">classOf[java.lang.Throwable]</span>
     </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.Predef.StringFormat#formatted" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="formatted(fmtstr:String):String"></a><a id="formatted(String):String"></a>
+      <span class="permalink">
+      <a href="../../endpoints/xhr/Urls.html#formatted(fmtstr:String):String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">formatted</span><span class="params">(<span name="fmtstr">fmtstr: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="endpoints.xhr.Urls">Urls</a> to
+            <span class="extype" name="scala.Predef.StringFormat">StringFormat</span>[<a href="" class="extype" name="endpoints.xhr.Urls">Urls</a>] performed by method StringFormat in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>StringFormat</dd><dt>Annotations</dt><dd>
+                <span class="name">@inline</span><span class="args">()</span>
               
         </dd></dl></div>
     </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -694,7 +878,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.8/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
@@ -713,7 +897,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">intQueryString</span><span class="result">: <a href="Urls$QueryStringParam.html" class="extype" name="endpoints.xhr.Urls.QueryStringParam">QueryStringParam</a>[<a href="http://www.scala-lang.org/api/2.12.8/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>]</span>
+        <span class="name">intQueryString</span><span class="result">: <a href="Urls$QueryStringParam.html" class="extype" name="endpoints.xhr.Urls.QueryStringParam">QueryStringParam</a>[<a href="https://www.scala-lang.org/api/2.12.10/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>]</span>
       </span>
       
       <p class="shortcomment cmt">Ability to define <code>Int</code> query string parameters</p><div class="fullcomment"><div class="comment cmt"><p>Ability to define <code>Int</code> query string parameters</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
@@ -729,7 +913,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">intSegment</span><span class="result">: <a href="Urls$Segment.html" class="extype" name="endpoints.xhr.Urls.Segment">Segment</a>[<a href="http://www.scala-lang.org/api/2.12.8/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>]</span>
+        <span class="name">intSegment</span><span class="result">: <a href="Urls$Segment.html" class="extype" name="endpoints.xhr.Urls.Segment">Segment</a>[<a href="https://www.scala-lang.org/api/2.12.10/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>]</span>
       </span>
       
       <p class="shortcomment cmt">Ability to define <code>Int</code> path segments</p><div class="fullcomment"><div class="comment cmt"><p>Ability to define <code>Int</code> path segments</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
@@ -745,7 +929,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.8/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
@@ -761,7 +945,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">longQueryString</span><span class="result">: <a href="Urls$QueryStringParam.html" class="extype" name="endpoints.xhr.Urls.QueryStringParam">QueryStringParam</a>[<a href="http://www.scala-lang.org/api/2.12.8/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a>]</span>
+        <span class="name">longQueryString</span><span class="result">: <a href="Urls$QueryStringParam.html" class="extype" name="endpoints.xhr.Urls.QueryStringParam">QueryStringParam</a>[<a href="https://www.scala-lang.org/api/2.12.10/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a>]</span>
       </span>
       
       <p class="shortcomment cmt">Query string parameter containing a <code>Long</code> value</p><div class="fullcomment"><div class="comment cmt"><p>Query string parameter containing a <code>Long</code> value</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
@@ -777,7 +961,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">longSegment</span><span class="result">: <a href="Urls$Segment.html" class="extype" name="endpoints.xhr.Urls.Segment">Segment</a>[<a href="http://www.scala-lang.org/api/2.12.8/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a>]</span>
+        <span class="name">longSegment</span><span class="result">: <a href="Urls$Segment.html" class="extype" name="endpoints.xhr.Urls.Segment">Segment</a>[<a href="https://www.scala-lang.org/api/2.12.10/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a>]</span>
       </span>
       
       <p class="shortcomment cmt">Segment containing a <code>Long</code> value</p><div class="fullcomment"><div class="comment cmt"><p>Segment containing a <code>Long</code> value</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
@@ -793,7 +977,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.8/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
@@ -809,7 +993,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">notify</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.8/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -828,7 +1012,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.8/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -847,7 +1031,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">optionalQueryStringParam</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span class="implicit">implicit </span><span name="param">param: <a href="Urls$QueryStringParam.html" class="extype" name="endpoints.xhr.Urls.QueryStringParam">QueryStringParam</a>[<span class="extype" name="endpoints.xhr.Urls.optionalQueryStringParam.A">A</span>]</span>)</span><span class="result">: <a href="Urls$QueryStringParam.html" class="extype" name="endpoints.xhr.Urls.QueryStringParam">QueryStringParam</a>[<a href="http://www.scala-lang.org/api/2.12.8/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="endpoints.xhr.Urls.optionalQueryStringParam.A">A</span>]]</span>
+        <span class="name">optionalQueryStringParam</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span class="implicit">implicit </span><span name="param">param: <a href="Urls$QueryStringParam.html" class="extype" name="endpoints.xhr.Urls.QueryStringParam">QueryStringParam</a>[<span class="extype" name="endpoints.xhr.Urls.optionalQueryStringParam.A">A</span>]</span>)</span><span class="result">: <a href="Urls$QueryStringParam.html" class="extype" name="endpoints.xhr.Urls.QueryStringParam">QueryStringParam</a>[<a href="https://www.scala-lang.org/api/2.12.10/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="endpoints.xhr.Urls.optionalQueryStringParam.A">A</span>]]</span>
       </span>
       
       <p class="shortcomment cmt">Make a query string parameter optional:</p><div class="fullcomment"><div class="comment cmt"><p>Make a query string parameter optional:</p><pre>path / <span class="lit">"articles"</span> /? qs[<span class="std">Option</span>[<span class="std">Int</span>]](<span class="lit">"page"</span>)</pre><p>Client interpreters must omit optional query string parameters that are empty.
@@ -867,7 +1051,7 @@ parameters are present, but malformed.
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">path</span><span class="result">: <a href="Urls$Path.html" class="extype" name="endpoints.xhr.Urls.Path">Path</a>[<a href="http://www.scala-lang.org/api/2.12.8/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a>]</span>
+        <span class="name">path</span><span class="result">: <a href="Urls$Path.html" class="extype" name="endpoints.xhr.Urls.Path">Path</a>[<a href="https://www.scala-lang.org/api/2.12.10/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a>]</span>
       </span>
       
       <p class="shortcomment cmt">An empty path.</p><div class="fullcomment"><div class="comment cmt"><p>An empty path.</p><p>Useful to begin a path definition:</p><pre>path / <span class="lit">"foo"</span> / segment[<span class="std">Int</span>] /? qs[<span class="std">String</span>](<span class="lit">"bar"</span>)</pre></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
@@ -1015,7 +1199,7 @@ case, its value is an empty collection), and report a failure if at least one va
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">staticPathSegment</span><span class="params">(<span name="segment">segment: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="Urls$Path.html" class="extype" name="endpoints.xhr.Urls.Path">Path</a>[<a href="http://www.scala-lang.org/api/2.12.8/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a>]</span>
+        <span class="name">staticPathSegment</span><span class="params">(<span name="segment">segment: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="Urls$Path.html" class="extype" name="endpoints.xhr.Urls.Path">Path</a>[<a href="https://www.scala-lang.org/api/2.12.10/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a>]</span>
       </span>
       
       <p class="shortcomment cmt">A path segment whose value is the given <code>segment</code></p><div class="fullcomment"><div class="comment cmt"><p>A path segment whose value is the given <code>segment</code></p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.xhr.Urls">Urls</a> → <a href="../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
@@ -1088,6 +1272,22 @@ and clients should take an URL-decoded string value.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="endpoints.algebra.Urls#tryParseString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="tryParseString[A](type:String)(parse:String=&gt;A):String=&gt;endpoints.Validated[A]"></a><a id="tryParseString[A](String)((String)⇒A):(String)⇒Validated[A]"></a>
+      <span class="permalink">
+      <a href="../../endpoints/xhr/Urls.html#tryParseString[A](type:String)(parse:String=&gt;A):String=&gt;endpoints.Validated[A]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">tryParseString</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="type">type: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="params">(<span name="parse">parse: (<span class="extype" name="scala.Predef.String">String</span>) ⇒ <span class="extype" name="endpoints.algebra.Urls.tryParseString.A">A</span></span>)</span><span class="result">: (<span class="extype" name="scala.Predef.String">String</span>) ⇒ <a href="../Validated.html" class="extype" name="endpoints.Validated">Validated</a>[<span class="extype" name="endpoints.algebra.Urls.tryParseString.A">A</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
     </li><li name="endpoints.xhr.Urls#urlPartialInvFunctor" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="urlPartialInvFunctor:endpoints.PartialInvariantFunctor[Urls.this.Url]"></a><a id="urlPartialInvFunctor:PartialInvariantFunctor[Url]"></a>
       <span class="permalink">
@@ -1164,7 +1364,7 @@ and clients should take an URL-decoded string value.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.8/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -1186,7 +1386,7 @@ and clients should take an URL-decoded string value.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.8/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>, <span name="arg1">arg1: <a href="http://www.scala-lang.org/api/2.12.8/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.8/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.10/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>, <span name="arg1">arg1: <a href="https://www.scala-lang.org/api/2.12.10/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -1208,18 +1408,38 @@ and clients should take an URL-decoded string value.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.8/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.8/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.10/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@native</span><span class="args">()</span>
-              
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
     </span>)</span>
               
+                <span class="name">@native</span><span class="args">()</span>
+              
         </dd></dl></div>
+    </li><li name="scala.Predef.ArrowAssoc#→" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="→[B](y:B):(A,B)"></a><a id="→[B](B):(Urls,B)"></a>
+      <span class="permalink">
+      <a href="../../endpoints/xhr/Urls.html#→[B](y:B):(A,B)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $u2192" class="implicit">→</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="endpoints.xhr.Urls">Urls</a>, <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span>)</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="endpoints.xhr.Urls">Urls</a> to
+            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="endpoints.xhr.Urls">Urls</a>] performed by method ArrowAssoc in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd></dl></div>
     </li>
               </ol>
             </div>
@@ -1232,12 +1452,32 @@ and clients should take an URL-decoded string value.
         <div id="inheritedMembers">
         <div class="parent" name="endpoints.algebra.Urls">
               <h3>Inherited from <a href="../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">algebra.Urls</a></h3>
+            </div><div class="parent" name="endpoints.PartialInvariantFunctorSyntax">
+              <h3>Inherited from <a href="../PartialInvariantFunctorSyntax.html" class="extype" name="endpoints.PartialInvariantFunctorSyntax">endpoints.PartialInvariantFunctorSyntax</a></h3>
+            </div><div class="parent" name="endpoints.InvariantFunctorSyntax">
+              <h3>Inherited from <a href="../InvariantFunctorSyntax.html" class="extype" name="endpoints.InvariantFunctorSyntax">endpoints.InvariantFunctorSyntax</a></h3>
             </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">
-              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.12.8/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></h3>
+              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></h3>
             </div>
-        
+        <div class="conversion" name="scala.Predef.any2stringadd">
+              <h3>Inherited by implicit conversion any2stringadd from
+                <a href="" class="extype" name="endpoints.xhr.Urls">Urls</a> to <span class="extype" name="scala.Predef.any2stringadd">any2stringadd</span>[<a href="" class="extype" name="endpoints.xhr.Urls">Urls</a>]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.StringFormat">
+              <h3>Inherited by implicit conversion StringFormat from
+                <a href="" class="extype" name="endpoints.xhr.Urls">Urls</a> to <span class="extype" name="scala.Predef.StringFormat">StringFormat</span>[<a href="" class="extype" name="endpoints.xhr.Urls">Urls</a>]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.Ensuring">
+              <h3>Inherited by implicit conversion Ensuring from
+                <a href="" class="extype" name="endpoints.xhr.Urls">Urls</a> to <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="endpoints.xhr.Urls">Urls</a>]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.ArrowAssoc">
+              <h3>Inherited by implicit conversion ArrowAssoc from
+                <a href="" class="extype" name="endpoints.xhr.Urls">Urls</a> to <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="endpoints.xhr.Urls">Urls</a>]
+              </h3>
+            </div>
         </div>
 
         <div id="groupedMembers">

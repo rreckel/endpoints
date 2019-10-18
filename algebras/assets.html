@@ -21,7 +21,7 @@
             <div class="row">
               <div class="large-12 columns a_limited top-bar">
                 <div class="top-bar-left">
-                  <p>endpoints 0.10.1</p>
+                  <p>endpoints 0.11.0</p>
 
                 </div>
                 <div class="top-bar-right align-right row">
@@ -55,7 +55,7 @@
                 <h1 id="assets" class="a_section" data-magellan-target="assets"><code class="hljs">Assets</code><a class="a_hlink" href="#assets"></a></h1>
 <p>This algebra provides vocabulary to define endpoints serving static assets.</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
-<pre class="hljs"><code class="language-scala"><span class="hljs-string">"org.julienrf"</span> %% <span class="hljs-string">"endpoints-algebra"</span> % <span class="hljs-string">"0.10.1"</span>
+<pre class="hljs"><code class="language-scala"><span class="hljs-string">"org.julienrf"</span> %% <span class="hljs-string">"endpoints-algebra"</span> % <span class="hljs-string">"0.11.0"</span>
 </code></pre>
 </div></div>
 <p><a href="../api/endpoints/algebra/Assets.html">API documentation</a></p>
@@ -65,7 +65,7 @@ and <code class="hljs">AssetPath</code>. The typical usage looks like the follow
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
 <pre class="hljs"><code class="language-scala"><span class="hljs-keyword">val</span> assets: <span class="hljs-type">Endpoint</span>[<span class="hljs-type">AssetRequest</span>, <span class="hljs-type">AssetResponse</span>] =
   assetsEndpoint(path / <span class="hljs-string">"assets"</span> / assetSegments())</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.10.1/algebras/algebra/src/test/scala/endpoints/algebra/AssetsDocs.scala#L6-L7" class="a_sourcelink">AssetsDocs.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.11.0/algebras/algebra/src/test/scala/endpoints/algebra/AssetsDocs.scala#L6-L7" class="a_sourcelink">AssetsDocs.scala</a></div></div>
 <p>The <code class="hljs">assetsSegments</code> method defines a path containing (possibly) multiple segments.</p>
 <p>The concrete instantiation of the <code class="hljs">AssetRequest</code> and <code class="hljs">AssetResponse</code> types is left to
 interpreters. Typically, <code class="hljs">AssetResponse</code> is mapped to binary data. Interpreters also
@@ -77,7 +77,7 @@ an abstract <code class="hljs">digest: Map[String, String]</code> member to be o
 digests uniquely identifying the assets:</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
 <pre class="hljs"><code class="language-scala"><span class="hljs-keyword">val</span> digests = <span class="hljs-type">Map</span>(<span class="hljs-string">"main.css"</span> -&gt; <span class="hljs-string">"2018-10-09T14:32:12Z"</span>)</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.10.1/algebras/algebra/src/test/scala/endpoints/algebra/AssetsDocs.scala#L11" class="a_sourcelink">AssetsDocs.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.11.0/algebras/algebra/src/test/scala/endpoints/algebra/AssetsDocs.scala#L11" class="a_sourcelink">AssetsDocs.scala</a></div></div>
 <p>The content of the digests can be included to the asset segments so that servers
 know that the requested version of the asset matches the one it uses, enabling servers
 to indefinitely cache the asset.</p>
