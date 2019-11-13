@@ -153,6 +153,18 @@
                         <span class="separator"></span>
                         <a class="trait" href="JsonSchemas.html" title="Enriches JsonSchemas with two kinds of operations:"></a>
                         <a href="JsonSchemas.html" title="Enriches JsonSchemas with two kinds of operations:">JsonSchemas</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="class" href="discriminator.html" title="Defines the name of the discriminator field of a generic tagged schema."></a>
+                        <a href="discriminator.html" title="Defines the name of the discriminator field of a generic tagged schema.">discriminator</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="class" href="docs.html" title="Documents a case class field."></a>
+                        <a href="docs.html" title="Documents a case class field.">docs</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="class" href="name.html" title="Defines the name of a generic schema."></a>
+                        <a href="name.html" title="Defines the name of a generic schema.">name</a>
                       </li><li name="endpoints.openapi" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="openapi"></a><a id="openapi:openapi"></a>
       <span class="permalink">
@@ -306,11 +318,9 @@
         <a title="Enriches JsonSchemas with two kinds of operations:" href="JsonSchemas.html"><span class="name">JsonSchemas</span></a><span class="result"> extends <a href="../algebra/JsonSchemas.html" class="extype" name="endpoints.algebra.JsonSchemas">algebra.JsonSchemas</a></span>
       </span>
       
-      <p class="shortcomment cmt">Enriches <a href="JsonSchemas.html" class="extype" name="endpoints.generic.JsonSchemas">JsonSchemas</a> with two kinds of operations:</p><div class="fullcomment"><div class="comment cmt"><p>Enriches <a href="JsonSchemas.html" class="extype" name="endpoints.generic.JsonSchemas">JsonSchemas</a> with two kinds of operations:</p><p>- <code>genericJsonSchema[A]</code> derives the <code>JsonSchema</code> of an algebraic
-  data type <code>A</code>;
-- <code>(field1 :×: field2 :×: …).as[A]</code> builds a tuple of <code>Record</code>s and maps
-  it to a case class <code>A</code></p><p>The data type description derivation is based on the underlying
-field and constructor names.</p><p>For instance, consider the following program that derives the description
+      <p class="shortcomment cmt">Enriches <a href="JsonSchemas.html" class="extype" name="endpoints.generic.JsonSchemas">JsonSchemas</a> with two kinds of operations:</p><div class="fullcomment"><div class="comment cmt"><p>Enriches <a href="JsonSchemas.html" class="extype" name="endpoints.generic.JsonSchemas">JsonSchemas</a> with two kinds of operations:</p><ul><li><code>genericJsonSchema[A]</code> derives the <code>JsonSchema</code> of an algebraic
+    data type <code>A</code>;</li><li><code>(field1 :×: field2 :×: …).as[A]</code> builds a tuple of <code>Record</code>s and maps
+    it to a case class <code>A</code></li></ul><p>For instance, consider the following program that derives the JSON schema
 of a case class:</p><pre><span class="kw">case</span> <span class="kw">class</span> User(name: <span class="std">String</span>, age: <span class="std">Int</span>)
 <span class="kw">object</span> User {
   <span class="kw">implicit</span> <span class="kw">val</span> schema: JsonSchema[User] = genericJsonSchema[User]
@@ -321,6 +331,60 @@ of a case class:</p><pre><span class="kw">case</span> <span class="kw">class</sp
     field[<span class="std">Int</span>](<span class="lit">"age"</span>)
   ).xmap((User.apply _).tupled)(<span class="std">Function</span>.unlift(User.unapply))
 }</pre></div></div>
+    </li><li name="endpoints.generic.discriminator" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="discriminatorextendsAnnotationwithProductwithSerializable"></a><a id="discriminator:discriminator"></a>
+      <span class="permalink">
+      <a href="../../endpoints/generic/discriminator.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="Defines the name of the discriminator field of a generic tagged schema." href="discriminator.html"><span class="name">discriminator</span></a><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.10/scala/annotation/Annotation.html#scala.annotation.Annotation" class="extype" name="scala.annotation.Annotation">Annotation</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Defines the name of the discriminator field of a generic tagged schema.</p><div class="fullcomment"><div class="comment cmt"><p>Defines the name of the discriminator field of a generic tagged schema.</p><p>Annotate a sealed trait definition with this annotation to define
+the name of its discriminator field.
+</p></div><dl class="paramcmts block"><dt class="param">name</dt><dd class="cmt"><p>Name of the tagged discriminator field</p></dd></dl></div>
+    </li><li name="endpoints.generic.docs" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="docsextendsAnnotationwithProductwithSerializable"></a><a id="docs:docs"></a>
+      <span class="permalink">
+      <a href="../../endpoints/generic/docs.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="Documents a case class field." href="docs.html"><span class="name">docs</span></a><span class="params">(<span name="text">text: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.10/scala/annotation/Annotation.html#scala.annotation.Annotation" class="extype" name="scala.annotation.Annotation">Annotation</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Documents a case class field.</p><div class="fullcomment"><div class="comment cmt"><p>Documents a case class field.</p><p>Annotate a case class field with this annotation to define its
+documentation.
+</p></div><dl class="paramcmts block"><dt class="param">text</dt><dd class="cmt"><p>Description of the annotated field</p></dd></dl></div>
+    </li><li name="endpoints.generic.name" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="nameextendsAnnotationwithProductwithSerializable"></a><a id="name:name"></a>
+      <span class="permalink">
+      <a href="../../endpoints/generic/name.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="Defines the name of a generic schema." href="name.html"><span class="name">name</span></a><span class="params">(<span name="value">value: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.10/scala/annotation/Annotation.html#scala.annotation.Annotation" class="extype" name="scala.annotation.Annotation">Annotation</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Defines the name of a generic schema.</p><div class="fullcomment"><div class="comment cmt"><p>Defines the name of a generic schema.</p><p>Annotate a sealed trait or case class definition with this annotation
+to define its schema name.
+</p></div><dl class="paramcmts block"><dt class="param">value</dt><dd class="cmt"><p>Name of the schema</p></dd></dl></div>
     </li></ol>
             </div>
 

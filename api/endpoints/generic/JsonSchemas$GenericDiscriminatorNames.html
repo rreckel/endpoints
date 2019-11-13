@@ -85,10 +85,10 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
-    </li><li name="endpoints.algebra" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="algebra"></a><a id="algebra:algebra"></a>
+    </li><li name="endpoints.generic" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="generic"></a><a id="generic:generic"></a>
       <span class="permalink">
-      <a href="../../endpoints/algebra/index.html" title="Permalink">
+      <a href="../../endpoints/generic/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -97,14 +97,14 @@
         <span class="kind">package</span>
       </span>
       <span class="symbol">
-        <a title="" href="index.html"><span class="name">algebra</span></a>
+        <a title="" href="index.html"><span class="name">generic</span></a>
       </span>
       
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="endpoints">endpoints</a></dd></dl></div>
-    </li><li name="endpoints.algebra.JsonSchemas" visbl="pub" class="indented3 " data-isabs="true" fullComment="yes" group="algebras">
-      <a id="JsonSchemasextendsAnyRef"></a><a id="JsonSchemas:JsonSchemas"></a>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="endpoints">endpoints</a></dd></dl></div>
+    </li><li name="endpoints.generic.JsonSchemas" visbl="pub" class="indented3 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="JsonSchemasextendsJsonSchemas"></a><a id="JsonSchemas:JsonSchemas"></a>
       <span class="permalink">
-      <a href="../../endpoints/algebra/JsonSchemas.html" title="Permalink">
+      <a href="../../endpoints/generic/JsonSchemas.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -113,78 +113,97 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="An algebra interface for describing algebraic data types." href="JsonSchemas.html"><span class="name">JsonSchemas</span></a><span class="result"> extends <a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+        <a title="Enriches JsonSchemas with two kinds of operations:" href="JsonSchemas.html"><span class="name">JsonSchemas</span></a><span class="result"> extends <a href="../algebra/JsonSchemas.html" class="extype" name="endpoints.algebra.JsonSchemas">algebra.JsonSchemas</a></span>
       </span>
       
-      <p class="shortcomment cmt">An algebra interface for describing algebraic data types.</p><div class="fullcomment"><div class="comment cmt"><p>An algebra interface for describing algebraic data types. Such descriptions
-can be interpreted to produce a JSON schema of the data type, a JSON encoder,
-a JSON decoder, etc.</p><p>A description contains the fields of a case class and their type, and the
-constructor names of a sealed trait.</p><p>For instance, consider the following record type:</p><pre><span class="kw">case</span> <span class="kw">class</span> User(name: <span class="std">String</span>, age: <span class="std">Int</span>)</pre><p>Its description is the following:</p><pre><span class="kw">object</span> User {
+      <p class="shortcomment cmt">Enriches <a href="JsonSchemas.html" class="extype" name="endpoints.generic.JsonSchemas">JsonSchemas</a> with two kinds of operations:</p><div class="fullcomment"><div class="comment cmt"><p>Enriches <a href="JsonSchemas.html" class="extype" name="endpoints.generic.JsonSchemas">JsonSchemas</a> with two kinds of operations:</p><ul><li><code>genericJsonSchema[A]</code> derives the <code>JsonSchema</code> of an algebraic
+    data type <code>A</code>;</li><li><code>(field1 :×: field2 :×: …).as[A]</code> builds a tuple of <code>Record</code>s and maps
+    it to a case class <code>A</code></li></ul><p>For instance, consider the following program that derives the JSON schema
+of a case class:</p><pre><span class="kw">case</span> <span class="kw">class</span> User(name: <span class="std">String</span>, age: <span class="std">Int</span>)
+<span class="kw">object</span> User {
+  <span class="kw">implicit</span> <span class="kw">val</span> schema: JsonSchema[User] = genericJsonSchema[User]
+}</pre><p>It is equivalent to the following:</p><pre><span class="kw">case</span> <span class="kw">class</span> User(name: <span class="std">String</span>, age: <span class="std">Int</span>)
+<span class="kw">object</span> User {
   <span class="kw">implicit</span> <span class="kw">val</span> schema: JsonSchema[User] = (
     field[<span class="std">String</span>](<span class="lit">"name"</span>) zip
     field[<span class="std">Int</span>](<span class="lit">"age"</span>)
   ).xmap((User.apply _).tupled)(<span class="std">Function</span>.unlift(User.unapply))
-}</pre><p>The description says that the record type has two fields, the first one has type <code>String</code> and is
-named “name”, and the second one has type <code>Int</code> and name “age”.</p><p>To describe sum types you have to explicitly “tag” each alternative:</p><pre><span class="kw">sealed</span> <span class="kw">trait</span> Shape
-<span class="kw">case</span> <span class="kw">class</span> Circle(radius: <span class="std">Double</span>) <span class="kw">extends</span> Shape
-<span class="kw">case</span> <span class="kw">class</span> Rectangle(width: <span class="std">Double</span>, height: <span class="std">Double</span>) <span class="kw">extends</span> Shape
-
-<span class="kw">object</span> Shape {
-  <span class="kw">implicit</span> <span class="kw">val</span> schema: JsonSchema[Shape] = {
-    <span class="kw">val</span> circleSchema = field[<span class="std">Double</span>](<span class="lit">"radius"</span>).xmap(Circle)(<span class="std">Function</span>.unlift(Circle.unapply))
-    <span class="kw">val</span> rectangleSchema = (
-      field[<span class="std">Double</span>](<span class="lit">"width"</span>) zip
-      field[<span class="std">Double</span>](<span class="lit">"height"</span>)
-    ).xmap((Rectangle.apply _).tupled)(<span class="std">Function</span>.unlift(Rectangle.unapply))
-    (circleSchema.tagged(<span class="lit">"Circle"</span>) orElse rectangleSchema.tagged(<span class="lit">"Rectangle"</span>))
-      .xmap[Shape] {
-        <span class="kw">case</span> Left(circle) <span class="kw">=&gt;</span> circle
-        <span class="kw">case</span> Right(rect)  <span class="kw">=&gt;</span> rect
-      } {
-        <span class="kw">case</span> c: Circle    <span class="kw">=&gt;</span> Left(c)
-        <span class="kw">case</span> r: Rectangle <span class="kw">=&gt;</span> Right(r)
-      }
-  }
-}</pre></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="endpoints.algebra">algebra</a></dd></dl></div>
+}</pre></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="endpoints.generic">generic</a></dd></dl></div>
     </li><li class="current-entities indented3">
                         <span class="separator"></span>
                         <a class="abstract type" href="JsonSchemas$Enum.html" title="A JSON schema for enumerations, i.e."></a>
                         <a href="JsonSchemas$Enum.html" title="A JSON schema for enumerations, i.e.">Enum</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
+                        <a class="class" href="../algebra/JsonSchemas$EnumOps.html" title=""></a>
+                        <a href="../algebra/JsonSchemas$EnumOps.html" title="">EnumOps</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="" title="Internal machinery for deriving the discriminator name of a type"></a>
+                        <a href="" title="Internal machinery for deriving the discriminator name of a type">GenericDiscriminatorNames</a>
+                      </li><li class="current-entities indented3">
+                        <a class="object" href="JsonSchemas$GenericJsonSchema$.html" title=""></a>
+                        <a class="trait" href="JsonSchemas$GenericJsonSchema.html" title=""></a>
+                        <a href="JsonSchemas$GenericJsonSchema.html" title="">GenericJsonSchema</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="JsonSchemas$GenericJsonSchemaLowLowPriority.html" title=""></a>
+                        <a href="JsonSchemas$GenericJsonSchemaLowLowPriority.html" title="">GenericJsonSchemaLowLowPriority</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="JsonSchemas$GenericJsonSchemaLowPriority.html" title=""></a>
+                        <a href="JsonSchemas$GenericJsonSchemaLowPriority.html" title="">GenericJsonSchemaLowPriority</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="JsonSchemas$GenericSchemaNames.html" title="Internal machinery for deriving the schema name of a type"></a>
+                        <a href="JsonSchemas$GenericSchemaNames.html" title="Internal machinery for deriving the schema name of a type">GenericSchemaNames</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="../InvariantFunctorSyntax$InvariantFunctorSyntax.html" title="Extension methods for values of type F[A] for which there is an implicit InvariantFunctor[F] instance."></a>
+                        <a href="../InvariantFunctorSyntax$InvariantFunctorSyntax.html" title="Extension methods for values of type F[A] for which there is an implicit InvariantFunctor[F] instance.">InvariantFunctorSyntax</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
                         <a class="abstract type" href="JsonSchemas$JsonSchema.html" title="The JSON schema of a type A"></a>
                         <a href="JsonSchemas$JsonSchema.html" title="The JSON schema of a type A">JsonSchema</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
-                        <a class="class" href="" title="Convenient infix operations"></a>
-                        <a href="" title="Convenient infix operations">JsonSchemaOps</a>
+                        <a class="class" href="JsonSchemas$JsonSchemaGenericOps.html" title=""></a>
+                        <a href="JsonSchemas$JsonSchemaGenericOps.html" title="">JsonSchemaGenericOps</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="../PartialInvariantFunctorSyntax$PartialInvariantFunctorSyntax.html" title=""></a>
+                        <a href="../PartialInvariantFunctorSyntax$PartialInvariantFunctorSyntax.html" title="">PartialInvariantFunctorSyntax</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
                         <a class="abstract type" href="JsonSchemas$Record.html" title="The JSON schema of a record type (case class) A"></a>
                         <a href="JsonSchemas$Record.html" title="The JSON schema of a record type (case class) A">Record</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
-                        <a class="class" href="JsonSchemas$RecordOps.html" title="Convenient infix operations"></a>
-                        <a href="JsonSchemas$RecordOps.html" title="Convenient infix operations">RecordOps</a>
+                        <a class="class" href="JsonSchemas$RecordGenericOps.html" title=""></a>
+                        <a href="JsonSchemas$RecordGenericOps.html" title="">RecordGenericOps</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="../algebra/JsonSchemas$RecordOps.html" title="Implicit methods for values of type Record"></a>
+                        <a href="../algebra/JsonSchemas$RecordOps.html" title="Implicit methods for values of type Record">RecordOps</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
                         <a class="abstract type" href="JsonSchemas$Tagged.html" title="A JSON schema containing the name of the type A."></a>
                         <a href="JsonSchemas$Tagged.html" title="A JSON schema containing the name of the type A.">Tagged</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
-                        <a class="class" href="JsonSchemas$TaggedOps.html" title=""></a>
-                        <a href="JsonSchemas$TaggedOps.html" title="">TaggedOps</a>
+                        <a class="class" href="../algebra/JsonSchemas$TaggedOps.html" title=""></a>
+                        <a href="../algebra/JsonSchemas$TaggedOps.html" title="">TaggedOps</a>
                       </li>
               </ul>
             </div>
           </div>
           <div id="content">
-            <body class="class type">
+            <body class="trait type">
       <div id="definition">
-        <div class="big-circle class">c</div>
-        <p id="owner"><a href="../index.html" class="extype" name="endpoints">endpoints</a>.<a href="index.html" class="extype" name="endpoints.algebra">algebra</a>.<a href="JsonSchemas.html" class="extype" name="endpoints.algebra.JsonSchemas">JsonSchemas</a></p>
-        <h1>JsonSchemaOps<span class="permalink">
-      <a href="../../endpoints/algebra/JsonSchemas$JsonSchemaOps.html" title="Permalink">
+        <div class="big-circle trait">t</div>
+        <p id="owner"><a href="../index.html" class="extype" name="endpoints">endpoints</a>.<a href="index.html" class="extype" name="endpoints.generic">generic</a>.<a href="JsonSchemas.html" class="extype" name="endpoints.generic.JsonSchemas">JsonSchemas</a></p>
+        <h1>GenericDiscriminatorNames<span class="permalink">
+      <a href="../../endpoints/generic/JsonSchemas$GenericDiscriminatorNames.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span></h1>
@@ -193,31 +212,26 @@ named “name”, and the second one has type <code>Int</code> and name “age�
 
       <h4 id="signature" class="signature">
       <span class="modifier_kind">
-        <span class="modifier">implicit final </span>
-        <span class="kind">class</span>
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <span class="name">JsonSchemaOps</span><span class="tparams">[<span name="A">A</span>]</span><span class="result"> extends <a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+        <span class="name">GenericDiscriminatorNames</span><span class="result"> extends <a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
       </span>
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Convenient infix operations</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/julienrf/endpoints/blob/v0.11.0/json-schema/json-schema/src/main/scala/endpoints/algebra/JsonSchemas.scala" target="_blank">JsonSchemas.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Internal machinery for deriving the discriminator name of a type</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/julienrf/endpoints/blob/v0.12.0/json-schema/json-schema-generic/src/main/scala/endpoints/generic/JsonSchemas.scala" target="_blank">JsonSchemas.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
           <div class="superTypes hiddenContent"><a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
-        </div><div class="toggleContainer block diagram-container" id="inheritance-diagram-container">
-                <span class="toggle diagram-link">
-                  Type Hierarchy
-                </span>
-                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph1" viewBox="0.00 0.00 180.00 118.00" height="118pt" width="180pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 114)" class="graph" id="page0,1_graph0"><polygon points="-4,4 -4,-114 176,-114 176,4 -4,4" stroke="transparent" fill="#ffffff"></polygon><g class="cluster" id="clust1"></g><g class="cluster" id="clust2"></g><!-- node0 --><g class="node this class" id="graph1_0"><g id="a_this class|graph1_0"><a xlink:title="endpoints.algebra.JsonSchemas.JsonSchemaOps (this class)" xlink:href="#inheritance-diagram"><path d="M139.6667,-49C139.6667,-49 32.3333,-49 32.3333,-49 28.1667,-49 24,-44.8333 24,-40.6667 24,-40.6667 24,-32.3333 24,-32.3333 24,-28.1667 28.1667,-24 32.3333,-24 32.3333,-24 139.6667,-24 139.6667,-24 143.8333,-24 148,-28.1667 148,-32.3333 148,-32.3333 148,-40.6667 148,-40.6667 148,-44.8333 143.8333,-49 139.6667,-49" stroke="#418565" fill="#418565"></path><image xlink:href="../../lib/class_diagram.png" y="-43.5" x="34" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-34.1" x="55" text-anchor="start">JsonSchemaOps[A]</text></a></g></g><!-- node1 --><g class="node class" id="graph1_1"><g id="a_class|graph1_1"><a xlink:title="scala.AnyRef"><path d="M115.1667,-110C115.1667,-110 56.8333,-110 56.8333,-110 52.6667,-110 48.5,-105.8333 48.5,-101.6667 48.5,-101.6667 48.5,-93.3333 48.5,-93.3333 48.5,-89.1667 52.6667,-85 56.8333,-85 56.8333,-85 115.1667,-85 115.1667,-85 119.3333,-85 123.5,-89.1667 123.5,-93.3333 123.5,-93.3333 123.5,-101.6667 123.5,-101.6667 123.5,-105.8333 119.3333,-110 115.1667,-110" stroke="#418565" fill="#418565"></path><image xlink:href="../../lib/class_diagram.png" y="-104.5" x="59" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-95.1" x="80" text-anchor="start">AnyRef</text></a></g></g><!-- node1&#45;&gt;node0 --><g class="edge inheritance" id="graph1_1_0"><g id="a_inheritance|graph1_1_0"><a xlink:title="JsonSchemaOps[A] is a subtype of AnyRef"><path d="M86,-77.7386C86,-68.3393 86,-57.3803 86,-49.123" stroke="#d4d4d4" fill="none"></path><polygon points="83.5501,-77.8607 86,-84.8608 88.4501,-77.8608 83.5501,-77.8607" stroke="#d4d4d4" fill="none"></polygon></a></g></g></g></svg></div>
-                <div id="diagram-controls" class="hiddenContent">
-                  <button id="diagram-zoom-out" class="diagram-btn"><i class="material-icons"></i></button>
-                  <button id="diagram-zoom-in" class="diagram-btn"><i class="material-icons"></i></button>
-                  <button title="Toggle full-screen" id="diagram-fs" class="diagram-btn to-full"><i class="material-icons"></i></button>
-                </div>
-              </div></div>
+        </div><div class="toggleContainer block">
+            <span class="toggle">
+              Known Subclasses
+            </span>
+            <div class="subClasses hiddenContent"><a href="JsonSchemas$GenericJsonSchema$.html" class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchema">GenericJsonSchema</a></div>
+          </div></div>
         
 
       <div id="mbrsel">
@@ -242,7 +256,7 @@ named “name”, and the second one has type <code>Int</code> and name “age�
                   <span class="filtertype">Inherited<br />
                   </span>
                   <ol id="linearization">
-                    <li class="in" name="endpoints.algebra.JsonSchemas.JsonSchemaOps"><span>JsonSchemaOps</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                    <li class="in" name="endpoints.generic.JsonSchemas.GenericDiscriminatorNames"><span>GenericDiscriminatorNames</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                   </ol>
                 </div><div class="ancestors">
                   <span class="filtertype">Implicitly<br />
@@ -265,28 +279,44 @@ named “name”, and the second one has type <code>Int</code> and name “age�
 
       <div id="template">
         <div id="allMembers">
-        <div id="constructors" class="members">
-              <h3>Instance Constructors</h3>
-              <ol><li name="endpoints.algebra.JsonSchemas.JsonSchemaOps#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(jsonSchema:JsonSchemas.this.JsonSchema[A]):JsonSchemas.this.JsonSchemaOps[A]"></a><a id="&lt;init&gt;:JsonSchemaOps[A]"></a>
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="endpoints.generic.JsonSchemas.GenericDiscriminatorNames.GenericDiscriminatorName" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="GenericDiscriminatorName[A]extendsAnyRef"></a><a id="GenericDiscriminatorName[A]:GenericDiscriminatorName[A]"></a>
       <span class="permalink">
-      <a href="../../endpoints/algebra/JsonSchemas$JsonSchemaOps.html#&lt;init&gt;(jsonSchema:JsonSchemas.this.JsonSchema[A]):JsonSchemas.this.JsonSchemaOps[A]" title="Permalink">
+      <a href="../../endpoints/generic/JsonSchemas$GenericDiscriminatorNames$GenericDiscriminatorName.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">new</span>
+        <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">JsonSchemaOps</span><span class="params">(<span name="jsonSchema">jsonSchema: <a href="JsonSchemas.html#JsonSchema[A]" class="extmbr" name="endpoints.algebra.JsonSchemas.JsonSchema">JsonSchema</a>[<span class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps.A">A</span>]</span>)</span>
+        <a title="" href="JsonSchemas$GenericDiscriminatorNames$GenericDiscriminatorName.html"><span class="name">GenericDiscriminatorName</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="result"> extends <a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      
+      
+    </li><li name="endpoints.generic.JsonSchemas.GenericDiscriminatorNames.GenericDiscriminatorNameLowPriority" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="GenericDiscriminatorNameLowPriorityextendsAnyRef"></a><a id="GenericDiscriminatorNameLowPriority:GenericDiscriminatorNameLowPriority"></a>
+      <span class="permalink">
+      <a href="../../endpoints/generic/JsonSchemas$GenericDiscriminatorNames$GenericDiscriminatorNameLowPriority.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="JsonSchemas$GenericDiscriminatorNames$GenericDiscriminatorNameLowPriority.html"><span class="name">GenericDiscriminatorNameLowPriority</span></a><span class="result"> extends <a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       
     </li></ol>
             </div>
-
-        
 
         
 
@@ -296,7 +326,7 @@ named “name”, and the second one has type <code>Int</code> and name “age�
                 <li name="scala.AnyRef#!=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="!=(x$1:Any):Boolean"></a><a id="!=(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../../endpoints/algebra/JsonSchemas$JsonSchemaOps.html#!=(x$1:Any):Boolean" title="Permalink">
+      <a href="../../endpoints/generic/JsonSchemas$GenericDiscriminatorNames.html#!=(x$1:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -312,7 +342,7 @@ named “name”, and the second one has type <code>Int</code> and name “age�
     </li><li name="scala.AnyRef###" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="##():Int"></a>
       <span class="permalink">
-      <a href="../../endpoints/algebra/JsonSchemas$JsonSchemaOps.html###():Int" title="Permalink">
+      <a href="../../endpoints/generic/JsonSchemas$GenericDiscriminatorNames.html###():Int" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -328,7 +358,7 @@ named “name”, and the second one has type <code>Int</code> and name “age�
     </li><li name="scala.Predef.any2stringadd#+" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="+(other:String):String"></a><a id="+(String):String"></a>
       <span class="permalink">
-      <a href="../../endpoints/algebra/JsonSchemas$JsonSchemaOps.html#+(other:String):String" title="Permalink">
+      <a href="../../endpoints/generic/JsonSchemas$GenericDiscriminatorNames.html#+(other:String):String" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -341,14 +371,14 @@ named “name”, and the second one has type <code>Int</code> and name “age�
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps">JsonSchemaOps</a>[<span class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps.A">A</span>] to
-            <span class="extype" name="scala.Predef.any2stringadd">any2stringadd</span>[<a href="" class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps">JsonSchemaOps</a>[<span class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps.A">A</span>]] performed by method any2stringadd in scala.Predef.
+            This member is added by an implicit conversion from <a href="" class="extype" name="endpoints.generic.JsonSchemas.GenericDiscriminatorNames">GenericDiscriminatorNames</a> to
+            <span class="extype" name="scala.Predef.any2stringadd">any2stringadd</span>[<a href="" class="extype" name="endpoints.generic.JsonSchemas.GenericDiscriminatorNames">GenericDiscriminatorNames</a>] performed by method any2stringadd in scala.Predef.
             
           </dd><dt>Definition Classes</dt><dd>any2stringadd</dd></dl></div>
     </li><li name="scala.Predef.ArrowAssoc#-&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="-&gt;[B](y:B):(A,B)"></a><a id="-&gt;[B](B):(JsonSchemaOps[A],B)"></a>
+      <a id="-&gt;[B](y:B):(A,B)"></a><a id="-&gt;[B](B):(GenericDiscriminatorNames,B)"></a>
       <span class="permalink">
-      <a href="../../endpoints/algebra/JsonSchemas$JsonSchemaOps.html#-&gt;[B](y:B):(A,B)" title="Permalink">
+      <a href="../../endpoints/generic/JsonSchemas$GenericDiscriminatorNames.html#-&gt;[B](y:B):(A,B)" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -357,12 +387,12 @@ named “name”, and the second one has type <code>Int</code> and name “age�
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $minus$greater" class="implicit">-&gt;</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps">JsonSchemaOps</a>[<span class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps.A">A</span>], <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span>)</span>
+        <span title="gt4s: $minus$greater" class="implicit">-&gt;</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="endpoints.generic.JsonSchemas.GenericDiscriminatorNames">GenericDiscriminatorNames</a>, <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span>)</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps">JsonSchemaOps</a>[<span class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps.A">A</span>] to
-            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps">JsonSchemaOps</a>[<span class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps.A">A</span>]] performed by method ArrowAssoc in scala.Predef.
+            This member is added by an implicit conversion from <a href="" class="extype" name="endpoints.generic.JsonSchemas.GenericDiscriminatorNames">GenericDiscriminatorNames</a> to
+            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="endpoints.generic.JsonSchemas.GenericDiscriminatorNames">GenericDiscriminatorNames</a>] performed by method ArrowAssoc in scala.Predef.
             
           </dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd><dt>Annotations</dt><dd>
                 <span class="name">@inline</span><span class="args">()</span>
@@ -371,7 +401,7 @@ named “name”, and the second one has type <code>Int</code> and name “age�
     </li><li name="scala.AnyRef#==" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="==(x$1:Any):Boolean"></a><a id="==(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../../endpoints/algebra/JsonSchemas$JsonSchemaOps.html#==(x$1:Any):Boolean" title="Permalink">
+      <a href="../../endpoints/generic/JsonSchemas$GenericDiscriminatorNames.html#==(x$1:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -387,7 +417,7 @@ named “name”, and the second one has type <code>Int</code> and name “age�
     </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <span class="permalink">
-      <a href="../../endpoints/algebra/JsonSchemas$JsonSchemaOps.html#asInstanceOf[T0]:T0" title="Permalink">
+      <a href="../../endpoints/generic/JsonSchemas$GenericDiscriminatorNames.html#asInstanceOf[T0]:T0" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -403,7 +433,7 @@ named “name”, and the second one has type <code>Int</code> and name “age�
     </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a><a id="clone():AnyRef"></a>
       <span class="permalink">
-      <a href="../../endpoints/algebra/JsonSchemas$JsonSchemaOps.html#clone():Object" title="Permalink">
+      <a href="../../endpoints/generic/JsonSchemas$GenericDiscriminatorNames.html#clone():Object" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -425,9 +455,9 @@ named “name”, and the second one has type <code>Int</code> and name “age�
               
         </dd></dl></div>
     </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A"></a><a id="ensuring((JsonSchemaOps[A])⇒Boolean,⇒Any):JsonSchemaOps[A]"></a>
+      <a id="ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A"></a><a id="ensuring((GenericDiscriminatorNames)⇒Boolean,⇒Any):GenericDiscriminatorNames"></a>
       <span class="permalink">
-      <a href="../../endpoints/algebra/JsonSchemas$JsonSchemaOps.html#ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A" title="Permalink">
+      <a href="../../endpoints/generic/JsonSchemas$GenericDiscriminatorNames.html#ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -436,18 +466,18 @@ named “name”, and the second one has type <code>Int</code> and name “age�
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps">JsonSchemaOps</a>[<span class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps.A">A</span>]) ⇒ <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>, <span name="msg">msg: ⇒ <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="" class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps">JsonSchemaOps</a>[<span class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps.A">A</span>]</span>
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="endpoints.generic.JsonSchemas.GenericDiscriminatorNames">GenericDiscriminatorNames</a>) ⇒ <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>, <span name="msg">msg: ⇒ <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="" class="extype" name="endpoints.generic.JsonSchemas.GenericDiscriminatorNames">GenericDiscriminatorNames</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps">JsonSchemaOps</a>[<span class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps.A">A</span>] to
-            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps">JsonSchemaOps</a>[<span class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps.A">A</span>]] performed by method Ensuring in scala.Predef.
+            This member is added by an implicit conversion from <a href="" class="extype" name="endpoints.generic.JsonSchemas.GenericDiscriminatorNames">GenericDiscriminatorNames</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="endpoints.generic.JsonSchemas.GenericDiscriminatorNames">GenericDiscriminatorNames</a>] performed by method Ensuring in scala.Predef.
             
           </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
     </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="ensuring(cond:A=&gt;Boolean):A"></a><a id="ensuring((JsonSchemaOps[A])⇒Boolean):JsonSchemaOps[A]"></a>
+      <a id="ensuring(cond:A=&gt;Boolean):A"></a><a id="ensuring((GenericDiscriminatorNames)⇒Boolean):GenericDiscriminatorNames"></a>
       <span class="permalink">
-      <a href="../../endpoints/algebra/JsonSchemas$JsonSchemaOps.html#ensuring(cond:A=&gt;Boolean):A" title="Permalink">
+      <a href="../../endpoints/generic/JsonSchemas$GenericDiscriminatorNames.html#ensuring(cond:A=&gt;Boolean):A" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -456,18 +486,18 @@ named “name”, and the second one has type <code>Int</code> and name “age�
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps">JsonSchemaOps</a>[<span class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps.A">A</span>]) ⇒ <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>)</span><span class="result">: <a href="" class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps">JsonSchemaOps</a>[<span class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps.A">A</span>]</span>
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="endpoints.generic.JsonSchemas.GenericDiscriminatorNames">GenericDiscriminatorNames</a>) ⇒ <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>)</span><span class="result">: <a href="" class="extype" name="endpoints.generic.JsonSchemas.GenericDiscriminatorNames">GenericDiscriminatorNames</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps">JsonSchemaOps</a>[<span class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps.A">A</span>] to
-            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps">JsonSchemaOps</a>[<span class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps.A">A</span>]] performed by method Ensuring in scala.Predef.
+            This member is added by an implicit conversion from <a href="" class="extype" name="endpoints.generic.JsonSchemas.GenericDiscriminatorNames">GenericDiscriminatorNames</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="endpoints.generic.JsonSchemas.GenericDiscriminatorNames">GenericDiscriminatorNames</a>] performed by method Ensuring in scala.Predef.
             
           </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
     </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="ensuring(cond:Boolean,msg:=&gt;Any):A"></a><a id="ensuring(Boolean,⇒Any):JsonSchemaOps[A]"></a>
+      <a id="ensuring(cond:Boolean,msg:=&gt;Any):A"></a><a id="ensuring(Boolean,⇒Any):GenericDiscriminatorNames"></a>
       <span class="permalink">
-      <a href="../../endpoints/algebra/JsonSchemas$JsonSchemaOps.html#ensuring(cond:Boolean,msg:=&gt;Any):A" title="Permalink">
+      <a href="../../endpoints/generic/JsonSchemas$GenericDiscriminatorNames.html#ensuring(cond:Boolean,msg:=&gt;Any):A" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -476,18 +506,18 @@ named “name”, and the second one has type <code>Int</code> and name “age�
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>, <span name="msg">msg: ⇒ <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="" class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps">JsonSchemaOps</a>[<span class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps.A">A</span>]</span>
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>, <span name="msg">msg: ⇒ <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="" class="extype" name="endpoints.generic.JsonSchemas.GenericDiscriminatorNames">GenericDiscriminatorNames</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps">JsonSchemaOps</a>[<span class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps.A">A</span>] to
-            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps">JsonSchemaOps</a>[<span class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps.A">A</span>]] performed by method Ensuring in scala.Predef.
+            This member is added by an implicit conversion from <a href="" class="extype" name="endpoints.generic.JsonSchemas.GenericDiscriminatorNames">GenericDiscriminatorNames</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="endpoints.generic.JsonSchemas.GenericDiscriminatorNames">GenericDiscriminatorNames</a>] performed by method Ensuring in scala.Predef.
             
           </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
     </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="ensuring(cond:Boolean):A"></a><a id="ensuring(Boolean):JsonSchemaOps[A]"></a>
+      <a id="ensuring(cond:Boolean):A"></a><a id="ensuring(Boolean):GenericDiscriminatorNames"></a>
       <span class="permalink">
-      <a href="../../endpoints/algebra/JsonSchemas$JsonSchemaOps.html#ensuring(cond:Boolean):A" title="Permalink">
+      <a href="../../endpoints/generic/JsonSchemas$GenericDiscriminatorNames.html#ensuring(cond:Boolean):A" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -496,18 +526,18 @@ named “name”, and the second one has type <code>Int</code> and name “age�
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>)</span><span class="result">: <a href="" class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps">JsonSchemaOps</a>[<span class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps.A">A</span>]</span>
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>)</span><span class="result">: <a href="" class="extype" name="endpoints.generic.JsonSchemas.GenericDiscriminatorNames">GenericDiscriminatorNames</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps">JsonSchemaOps</a>[<span class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps.A">A</span>] to
-            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps">JsonSchemaOps</a>[<span class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps.A">A</span>]] performed by method Ensuring in scala.Predef.
+            This member is added by an implicit conversion from <a href="" class="extype" name="endpoints.generic.JsonSchemas.GenericDiscriminatorNames">GenericDiscriminatorNames</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="endpoints.generic.JsonSchemas.GenericDiscriminatorNames">GenericDiscriminatorNames</a>] performed by method Ensuring in scala.Predef.
             
           </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
       <span class="permalink">
-      <a href="../../endpoints/algebra/JsonSchemas$JsonSchemaOps.html#eq(x$1:AnyRef):Boolean" title="Permalink">
+      <a href="../../endpoints/generic/JsonSchemas$GenericDiscriminatorNames.html#eq(x$1:AnyRef):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -523,7 +553,7 @@ named “name”, and the second one has type <code>Int</code> and name “age�
     </li><li name="scala.AnyRef#equals" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="equals(x$1:Any):Boolean"></a><a id="equals(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../../endpoints/algebra/JsonSchemas$JsonSchemaOps.html#equals(x$1:Any):Boolean" title="Permalink">
+      <a href="../../endpoints/generic/JsonSchemas$GenericDiscriminatorNames.html#equals(x$1:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -539,7 +569,7 @@ named “name”, and the second one has type <code>Int</code> and name “age�
     </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <span class="permalink">
-      <a href="../../endpoints/algebra/JsonSchemas$JsonSchemaOps.html#finalize():Unit" title="Permalink">
+      <a href="../../endpoints/generic/JsonSchemas$GenericDiscriminatorNames.html#finalize():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -561,7 +591,7 @@ named “name”, and the second one has type <code>Int</code> and name “age�
     </li><li name="scala.Predef.StringFormat#formatted" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="formatted(fmtstr:String):String"></a><a id="formatted(String):String"></a>
       <span class="permalink">
-      <a href="../../endpoints/algebra/JsonSchemas$JsonSchemaOps.html#formatted(fmtstr:String):String" title="Permalink">
+      <a href="../../endpoints/generic/JsonSchemas$GenericDiscriminatorNames.html#formatted(fmtstr:String):String" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -574,8 +604,8 @@ named “name”, and the second one has type <code>Int</code> and name “age�
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps">JsonSchemaOps</a>[<span class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps.A">A</span>] to
-            <span class="extype" name="scala.Predef.StringFormat">StringFormat</span>[<a href="" class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps">JsonSchemaOps</a>[<span class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps.A">A</span>]] performed by method StringFormat in scala.Predef.
+            This member is added by an implicit conversion from <a href="" class="extype" name="endpoints.generic.JsonSchemas.GenericDiscriminatorNames">GenericDiscriminatorNames</a> to
+            <span class="extype" name="scala.Predef.StringFormat">StringFormat</span>[<a href="" class="extype" name="endpoints.generic.JsonSchemas.GenericDiscriminatorNames">GenericDiscriminatorNames</a>] performed by method StringFormat in scala.Predef.
             
           </dd><dt>Definition Classes</dt><dd>StringFormat</dd><dt>Annotations</dt><dd>
                 <span class="name">@inline</span><span class="args">()</span>
@@ -584,7 +614,7 @@ named “name”, and the second one has type <code>Int</code> and name “age�
     </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <span class="permalink">
-      <a href="../../endpoints/algebra/JsonSchemas$JsonSchemaOps.html#getClass():Class[_]" title="Permalink">
+      <a href="../../endpoints/generic/JsonSchemas$GenericDiscriminatorNames.html#getClass():Class[_]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -603,7 +633,7 @@ named “name”, and the second one has type <code>Int</code> and name “age�
     </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
       <span class="permalink">
-      <a href="../../endpoints/algebra/JsonSchemas$JsonSchemaOps.html#hashCode():Int" title="Permalink">
+      <a href="../../endpoints/generic/JsonSchemas$GenericDiscriminatorNames.html#hashCode():Int" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -622,7 +652,7 @@ named “name”, and the second one has type <code>Int</code> and name “age�
     </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <span class="permalink">
-      <a href="../../endpoints/algebra/JsonSchemas$JsonSchemaOps.html#isInstanceOf[T0]:Boolean" title="Permalink">
+      <a href="../../endpoints/generic/JsonSchemas$GenericDiscriminatorNames.html#isInstanceOf[T0]:Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -638,7 +668,7 @@ named “name”, and the second one has type <code>Int</code> and name “age�
     </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
       <span class="permalink">
-      <a href="../../endpoints/algebra/JsonSchemas$JsonSchemaOps.html#ne(x$1:AnyRef):Boolean" title="Permalink">
+      <a href="../../endpoints/generic/JsonSchemas$GenericDiscriminatorNames.html#ne(x$1:AnyRef):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -654,7 +684,7 @@ named “name”, and the second one has type <code>Int</code> and name “age�
     </li><li name="scala.AnyRef#notify" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notify():Unit"></a>
       <span class="permalink">
-      <a href="../../endpoints/algebra/JsonSchemas$JsonSchemaOps.html#notify():Unit" title="Permalink">
+      <a href="../../endpoints/generic/JsonSchemas$GenericDiscriminatorNames.html#notify():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -673,7 +703,7 @@ named “name”, and the second one has type <code>Int</code> and name “age�
     </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notifyAll():Unit"></a>
       <span class="permalink">
-      <a href="../../endpoints/algebra/JsonSchemas$JsonSchemaOps.html#notifyAll():Unit" title="Permalink">
+      <a href="../../endpoints/generic/JsonSchemas$GenericDiscriminatorNames.html#notifyAll():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -692,7 +722,7 @@ named “name”, and the second one has type <code>Int</code> and name “age�
     </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
       <span class="permalink">
-      <a href="../../endpoints/algebra/JsonSchemas$JsonSchemaOps.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
+      <a href="../../endpoints/generic/JsonSchemas$GenericDiscriminatorNames.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -708,7 +738,7 @@ named “name”, and the second one has type <code>Int</code> and name “age�
     </li><li name="scala.AnyRef#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toString():String"></a>
       <span class="permalink">
-      <a href="../../endpoints/algebra/JsonSchemas$JsonSchemaOps.html#toString():String" title="Permalink">
+      <a href="../../endpoints/generic/JsonSchemas$GenericDiscriminatorNames.html#toString():String" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -724,7 +754,7 @@ named “name”, and the second one has type <code>Int</code> and name “age�
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <span class="permalink">
-      <a href="../../endpoints/algebra/JsonSchemas$JsonSchemaOps.html#wait():Unit" title="Permalink">
+      <a href="../../endpoints/generic/JsonSchemas$GenericDiscriminatorNames.html#wait():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -746,7 +776,7 @@ named “name”, and the second one has type <code>Int</code> and name “age�
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
       <span class="permalink">
-      <a href="../../endpoints/algebra/JsonSchemas$JsonSchemaOps.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
+      <a href="../../endpoints/generic/JsonSchemas$GenericDiscriminatorNames.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -768,7 +798,7 @@ named “name”, and the second one has type <code>Int</code> and name “age�
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait(x$1:Long):Unit"></a><a id="wait(Long):Unit"></a>
       <span class="permalink">
-      <a href="../../endpoints/algebra/JsonSchemas$JsonSchemaOps.html#wait(x$1:Long):Unit" title="Permalink">
+      <a href="../../endpoints/generic/JsonSchemas$GenericDiscriminatorNames.html#wait(x$1:Long):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -789,26 +819,10 @@ named “name”, and the second one has type <code>Int</code> and name “age�
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="endpoints.algebra.JsonSchemas.JsonSchemaOps#xmap" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="xmap[B](f:A=&gt;B)(g:B=&gt;A):JsonSchemas.this.JsonSchema[B]"></a><a id="xmap[B]((A)⇒B)((B)⇒A):JsonSchema[B]"></a>
-      <span class="permalink">
-      <a href="../../endpoints/algebra/JsonSchemas$JsonSchemaOps.html#xmap[B](f:A=&gt;B)(g:B=&gt;A):JsonSchemas.this.JsonSchema[B]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">xmap</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps.A">A</span>) ⇒ <span class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps.xmap.B">B</span></span>)</span><span class="params">(<span name="g">g: (<span class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps.xmap.B">B</span>) ⇒ <span class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps.A">A</span></span>)</span><span class="result">: <a href="JsonSchemas.html#JsonSchema[A]" class="extmbr" name="endpoints.algebra.JsonSchemas.JsonSchema">JsonSchema</a>[<span class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps.xmap.B">B</span>]</span>
-      </span>
-      
-      
     </li><li name="scala.Predef.ArrowAssoc#→" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="→[B](y:B):(A,B)"></a><a id="→[B](B):(JsonSchemaOps[A],B)"></a>
+      <a id="→[B](y:B):(A,B)"></a><a id="→[B](B):(GenericDiscriminatorNames,B)"></a>
       <span class="permalink">
-      <a href="../../endpoints/algebra/JsonSchemas$JsonSchemaOps.html#→[B](y:B):(A,B)" title="Permalink">
+      <a href="../../endpoints/generic/JsonSchemas$GenericDiscriminatorNames.html#→[B](y:B):(A,B)" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -817,14 +831,30 @@ named “name”, and the second one has type <code>Int</code> and name “age�
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $u2192" class="implicit">→</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps">JsonSchemaOps</a>[<span class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps.A">A</span>], <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span>)</span>
+        <span title="gt4s: $u2192" class="implicit">→</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="endpoints.generic.JsonSchemas.GenericDiscriminatorNames">GenericDiscriminatorNames</a>, <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span>)</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps">JsonSchemaOps</a>[<span class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps.A">A</span>] to
-            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps">JsonSchemaOps</a>[<span class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps.A">A</span>]] performed by method ArrowAssoc in scala.Predef.
+            This member is added by an implicit conversion from <a href="" class="extype" name="endpoints.generic.JsonSchemas.GenericDiscriminatorNames">GenericDiscriminatorNames</a> to
+            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="endpoints.generic.JsonSchemas.GenericDiscriminatorNames">GenericDiscriminatorNames</a>] performed by method ArrowAssoc in scala.Predef.
             
           </dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd></dl></div>
+    </li><li name="endpoints.generic.JsonSchemas.GenericDiscriminatorNames.GenericDiscriminatorName" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="GenericDiscriminatorName"></a><a id="GenericDiscriminatorName:GenericDiscriminatorName"></a>
+      <span class="permalink">
+      <a href="../../endpoints/generic/JsonSchemas$GenericDiscriminatorNames$GenericDiscriminatorName$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="JsonSchemas$GenericDiscriminatorNames$GenericDiscriminatorName$.html"><span class="name">GenericDiscriminatorName</span></a><span class="result"> extends <a href="JsonSchemas$GenericDiscriminatorNames$GenericDiscriminatorNameLowPriority.html" class="extype" name="endpoints.generic.JsonSchemas.GenericDiscriminatorNames.GenericDiscriminatorNameLowPriority">GenericDiscriminatorNameLowPriority</a></span>
+      </span>
+      
+      
     </li>
               </ol>
             </div>
@@ -842,19 +872,19 @@ named “name”, and the second one has type <code>Int</code> and name “age�
             </div>
         <div class="conversion" name="scala.Predef.any2stringadd">
               <h3>Inherited by implicit conversion any2stringadd from
-                <a href="" class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps">JsonSchemaOps</a>[<span class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps.A">A</span>] to <span class="extype" name="scala.Predef.any2stringadd">any2stringadd</span>[<a href="" class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps">JsonSchemaOps</a>[<span class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps.A">A</span>]]
+                <a href="" class="extype" name="endpoints.generic.JsonSchemas.GenericDiscriminatorNames">GenericDiscriminatorNames</a> to <span class="extype" name="scala.Predef.any2stringadd">any2stringadd</span>[<a href="" class="extype" name="endpoints.generic.JsonSchemas.GenericDiscriminatorNames">GenericDiscriminatorNames</a>]
               </h3>
             </div><div class="conversion" name="scala.Predef.StringFormat">
               <h3>Inherited by implicit conversion StringFormat from
-                <a href="" class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps">JsonSchemaOps</a>[<span class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps.A">A</span>] to <span class="extype" name="scala.Predef.StringFormat">StringFormat</span>[<a href="" class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps">JsonSchemaOps</a>[<span class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps.A">A</span>]]
+                <a href="" class="extype" name="endpoints.generic.JsonSchemas.GenericDiscriminatorNames">GenericDiscriminatorNames</a> to <span class="extype" name="scala.Predef.StringFormat">StringFormat</span>[<a href="" class="extype" name="endpoints.generic.JsonSchemas.GenericDiscriminatorNames">GenericDiscriminatorNames</a>]
               </h3>
             </div><div class="conversion" name="scala.Predef.Ensuring">
               <h3>Inherited by implicit conversion Ensuring from
-                <a href="" class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps">JsonSchemaOps</a>[<span class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps.A">A</span>] to <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps">JsonSchemaOps</a>[<span class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps.A">A</span>]]
+                <a href="" class="extype" name="endpoints.generic.JsonSchemas.GenericDiscriminatorNames">GenericDiscriminatorNames</a> to <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="endpoints.generic.JsonSchemas.GenericDiscriminatorNames">GenericDiscriminatorNames</a>]
               </h3>
             </div><div class="conversion" name="scala.Predef.ArrowAssoc">
               <h3>Inherited by implicit conversion ArrowAssoc from
-                <a href="" class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps">JsonSchemaOps</a>[<span class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps.A">A</span>] to <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps">JsonSchemaOps</a>[<span class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps.A">A</span>]]
+                <a href="" class="extype" name="endpoints.generic.JsonSchemas.GenericDiscriminatorNames">GenericDiscriminatorNames</a> to <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="endpoints.generic.JsonSchemas.GenericDiscriminatorNames">GenericDiscriminatorNames</a>]
               </h3>
             </div>
         </div>

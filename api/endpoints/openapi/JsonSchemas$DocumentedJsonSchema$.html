@@ -103,7 +103,7 @@
       <p class="shortcomment cmt">Interpreters producing an OpenAPI model of endpoints.</p><div class="fullcomment"><div class="comment cmt"><p>Interpreters producing an OpenAPI model of endpoints.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="endpoints">endpoints</a></dd></dl></div>
     </li><li name="endpoints.openapi.JsonSchemas" visbl="pub" class="indented3 " data-isabs="true" fullComment="yes" group="interpreters">
-      <a id="JsonSchemasextendsJsonSchemas"></a><a id="JsonSchemas:JsonSchemas"></a>
+      <a id="JsonSchemasextendsJsonSchemaswithTuplesSchemas"></a><a id="JsonSchemas:JsonSchemas"></a>
       <span class="permalink">
       <a href="../../endpoints/openapi/JsonSchemas.html" title="Permalink">
         <i class="material-icons"></i>
@@ -114,7 +114,7 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="An interpreter for endpoints.algebra.JsonSchemas that produces a JSON schema for a given algebraic data type description." href="JsonSchemas.html"><span class="name">JsonSchemas</span></a><span class="result"> extends <a href="../algebra/JsonSchemas.html" class="extype" name="endpoints.algebra.JsonSchemas">algebra.JsonSchemas</a></span>
+        <a title="An interpreter for endpoints.algebra.JsonSchemas that produces a JSON schema for a given algebraic data type description." href="JsonSchemas.html"><span class="name">JsonSchemas</span></a><span class="result"> extends <a href="../algebra/JsonSchemas.html" class="extype" name="endpoints.algebra.JsonSchemas">algebra.JsonSchemas</a> with <a href="TuplesSchemas.html" class="extype" name="endpoints.openapi.TuplesSchemas">TuplesSchemas</a></span>
       </span>
       
       <p class="shortcomment cmt">An interpreter for <a href="../algebra/JsonSchemas.html" class="extype" name="endpoints.algebra.JsonSchemas">endpoints.algebra.JsonSchemas</a> that produces a JSON schema for
@@ -127,12 +127,20 @@ a given algebraic data type description.
                         <a href="JsonSchemas$DocumentedJsonSchema.html" title="">DocumentedJsonSchema</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
-                        <a class="class" href="../algebra/JsonSchemas$JsonSchemaOps.html" title="Convenient infix operations"></a>
-                        <a href="../algebra/JsonSchemas$JsonSchemaOps.html" title="Convenient infix operations">JsonSchemaOps</a>
+                        <a class="class" href="../algebra/JsonSchemas$EnumOps.html" title=""></a>
+                        <a href="../algebra/JsonSchemas$EnumOps.html" title="">EnumOps</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
-                        <a class="class" href="../algebra/JsonSchemas$RecordOps.html" title="Convenient infix operations"></a>
-                        <a href="../algebra/JsonSchemas$RecordOps.html" title="Convenient infix operations">RecordOps</a>
+                        <a class="class" href="../InvariantFunctorSyntax$InvariantFunctorSyntax.html" title="Extension methods for values of type F[A] for which there is an implicit InvariantFunctor[F] instance."></a>
+                        <a href="../InvariantFunctorSyntax$InvariantFunctorSyntax.html" title="Extension methods for values of type F[A] for which there is an implicit InvariantFunctor[F] instance.">InvariantFunctorSyntax</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="../PartialInvariantFunctorSyntax$PartialInvariantFunctorSyntax.html" title=""></a>
+                        <a href="../PartialInvariantFunctorSyntax$PartialInvariantFunctorSyntax.html" title="">PartialInvariantFunctorSyntax</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="../algebra/JsonSchemas$RecordOps.html" title="Implicit methods for values of type Record"></a>
+                        <a href="../algebra/JsonSchemas$RecordOps.html" title="Implicit methods for values of type Record">RecordOps</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
                         <a class="class" href="../algebra/JsonSchemas$TaggedOps.html" title=""></a>
@@ -167,7 +175,7 @@ a given algebraic data type description.
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/julienrf/endpoints/blob/v0.11.0/openapi/openapi/src/main/scala/endpoints/openapi/JsonSchemas.scala" target="_blank">JsonSchemas.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/julienrf/endpoints/blob/v0.12.0/openapi/openapi/src/main/scala/endpoints/openapi/JsonSchemas.scala" target="_blank">JsonSchemas.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -219,7 +227,7 @@ a given algebraic data type description.
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="endpoints.openapi.JsonSchemas.DocumentedJsonSchema.Array" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+              <ol><li name="endpoints.openapi.JsonSchemas.DocumentedJsonSchema.Array" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ArrayextendsJsonSchemas.this.DocumentedJsonSchemawithProductwithSerializable"></a><a id="Array:Array"></a>
       <span class="permalink">
       <a href="../../endpoints/openapi/JsonSchemas$DocumentedJsonSchema$$Array.html" title="Permalink">
@@ -231,10 +239,10 @@ a given algebraic data type description.
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a title="" href="JsonSchemas$DocumentedJsonSchema$$Array.html"><span class="name">Array</span></a><span class="params">(<span name="elementType">elementType: <a href="JsonSchemas$DocumentedJsonSchema.html" class="extype" name="endpoints.openapi.JsonSchemas.DocumentedJsonSchema">DocumentedJsonSchema</a></span>)</span><span class="result"> extends <a href="JsonSchemas$DocumentedJsonSchema.html" class="extype" name="endpoints.openapi.JsonSchemas.DocumentedJsonSchema">DocumentedJsonSchema</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="JsonSchemas$DocumentedJsonSchema$$Array.html"><span class="name">Array</span></a><span class="params">(<span name="schema">schema: <a href="../../scala/index.html#Either[+A,+B]=scala.util.Either[A,B]" class="extmbr" name="scala.Either">Either</a>[<a href="JsonSchemas$DocumentedJsonSchema.html" class="extype" name="endpoints.openapi.JsonSchemas.DocumentedJsonSchema">DocumentedJsonSchema</a>, <a href="../../scala/index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<a href="JsonSchemas$DocumentedJsonSchema.html" class="extype" name="endpoints.openapi.JsonSchemas.DocumentedJsonSchema">DocumentedJsonSchema</a>]]</span>)</span><span class="result"> extends <a href="JsonSchemas$DocumentedJsonSchema.html" class="extype" name="endpoints.openapi.JsonSchemas.DocumentedJsonSchema">DocumentedJsonSchema</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
-      
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">schema</dt><dd class="cmt"><p><code>Left(itemSchema)</code> for a homogeneous array, or <code>Right(itemSchemas)</code> for a heterogeneous array (ie, a tuple)</p></dd></dl></div>
     </li><li name="endpoints.openapi.JsonSchemas.DocumentedJsonSchema.DocumentedCoProd" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="DocumentedCoProdextendsJsonSchemas.this.DocumentedJsonSchemawithProductwithSerializable"></a><a id="DocumentedCoProd:DocumentedCoProd"></a>
       <span class="permalink">
@@ -263,7 +271,7 @@ a given algebraic data type description.
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a title="" href="JsonSchemas$DocumentedJsonSchema$$DocumentedEnum.html"><span class="name">DocumentedEnum</span></a><span class="params">(<span name="elementType">elementType: <a href="JsonSchemas$DocumentedJsonSchema.html" class="extype" name="endpoints.openapi.JsonSchemas.DocumentedJsonSchema">DocumentedJsonSchema</a></span>, <span name="values">values: <a href="../../scala/index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result"> extends <a href="JsonSchemas$DocumentedJsonSchema.html" class="extype" name="endpoints.openapi.JsonSchemas.DocumentedJsonSchema">DocumentedJsonSchema</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="JsonSchemas$DocumentedJsonSchema$$DocumentedEnum.html"><span class="name">DocumentedEnum</span></a><span class="params">(<span name="elementType">elementType: <a href="JsonSchemas$DocumentedJsonSchema.html" class="extype" name="endpoints.openapi.JsonSchemas.DocumentedJsonSchema">DocumentedJsonSchema</a></span>, <span name="values">values: <a href="../../scala/index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="name">name: <a href="https://www.scala-lang.org/api/2.12.10/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result"> extends <a href="JsonSchemas$DocumentedJsonSchema.html" class="extype" name="endpoints.openapi.JsonSchemas.DocumentedJsonSchema">DocumentedJsonSchema</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       

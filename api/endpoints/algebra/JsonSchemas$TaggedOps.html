@@ -102,7 +102,7 @@
       
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="endpoints">endpoints</a></dd></dl></div>
     </li><li name="endpoints.algebra.JsonSchemas" visbl="pub" class="indented3 " data-isabs="true" fullComment="yes" group="algebras">
-      <a id="JsonSchemasextendsAnyRef"></a><a id="JsonSchemas:JsonSchemas"></a>
+      <a id="JsonSchemasextendsTuplesSchemaswithPartialInvariantFunctorSyntax"></a><a id="JsonSchemas:JsonSchemas"></a>
       <span class="permalink">
       <a href="../../endpoints/algebra/JsonSchemas.html" title="Permalink">
         <i class="material-icons"></i>
@@ -113,7 +113,7 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="An algebra interface for describing algebraic data types." href="JsonSchemas.html"><span class="name">JsonSchemas</span></a><span class="result"> extends <a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+        <a title="An algebra interface for describing algebraic data types." href="JsonSchemas.html"><span class="name">JsonSchemas</span></a><span class="result"> extends <a href="TuplesSchemas.html" class="extype" name="endpoints.algebra.TuplesSchemas">TuplesSchemas</a> with <a href="../PartialInvariantFunctorSyntax.html" class="extype" name="endpoints.PartialInvariantFunctorSyntax">PartialInvariantFunctorSyntax</a></span>
       </span>
       
       <p class="shortcomment cmt">An algebra interface for describing algebraic data types.</p><div class="fullcomment"><div class="comment cmt"><p>An algebra interface for describing algebraic data types. Such descriptions
@@ -152,20 +152,28 @@ named “name”, and the second one has type <code>Int</code> and name “age�
                         <a href="JsonSchemas$Enum.html" title="A JSON schema for enumerations, i.e.">Enum</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
+                        <a class="class" href="JsonSchemas$EnumOps.html" title=""></a>
+                        <a href="JsonSchemas$EnumOps.html" title="">EnumOps</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="../InvariantFunctorSyntax$InvariantFunctorSyntax.html" title="Extension methods for values of type F[A] for which there is an implicit InvariantFunctor[F] instance."></a>
+                        <a href="../InvariantFunctorSyntax$InvariantFunctorSyntax.html" title="Extension methods for values of type F[A] for which there is an implicit InvariantFunctor[F] instance.">InvariantFunctorSyntax</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
                         <a class="abstract type" href="JsonSchemas$JsonSchema.html" title="The JSON schema of a type A"></a>
                         <a href="JsonSchemas$JsonSchema.html" title="The JSON schema of a type A">JsonSchema</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
-                        <a class="class" href="JsonSchemas$JsonSchemaOps.html" title="Convenient infix operations"></a>
-                        <a href="JsonSchemas$JsonSchemaOps.html" title="Convenient infix operations">JsonSchemaOps</a>
+                        <a class="class" href="../PartialInvariantFunctorSyntax$PartialInvariantFunctorSyntax.html" title=""></a>
+                        <a href="../PartialInvariantFunctorSyntax$PartialInvariantFunctorSyntax.html" title="">PartialInvariantFunctorSyntax</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
                         <a class="abstract type" href="JsonSchemas$Record.html" title="The JSON schema of a record type (case class) A"></a>
                         <a href="JsonSchemas$Record.html" title="The JSON schema of a record type (case class) A">Record</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
-                        <a class="class" href="JsonSchemas$RecordOps.html" title="Convenient infix operations"></a>
-                        <a href="JsonSchemas$RecordOps.html" title="Convenient infix operations">RecordOps</a>
+                        <a class="class" href="JsonSchemas$RecordOps.html" title="Implicit methods for values of type Record"></a>
+                        <a href="JsonSchemas$RecordOps.html" title="Implicit methods for values of type Record">RecordOps</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
                         <a class="abstract type" href="JsonSchemas$Tagged.html" title="A JSON schema containing the name of the type A."></a>
@@ -202,22 +210,12 @@ named “name”, and the second one has type <code>Int</code> and name “age�
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/julienrf/endpoints/blob/v0.11.0/json-schema/json-schema/src/main/scala/endpoints/algebra/JsonSchemas.scala" target="_blank">JsonSchemas.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/julienrf/endpoints/blob/v0.12.0/json-schema/json-schema/src/main/scala/endpoints/algebra/JsonSchemas.scala" target="_blank">JsonSchemas.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
           <div class="superTypes hiddenContent"><a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
-        </div><div class="toggleContainer block diagram-container" id="inheritance-diagram-container">
-                <span class="toggle diagram-link">
-                  Type Hierarchy
-                </span>
-                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph1" viewBox="0.00 0.00 160.00 118.00" height="118pt" width="160pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 114)" class="graph" id="page0,1_graph0"><polygon points="-4,4 -4,-114 156,-114 156,4 -4,4" stroke="transparent" fill="#ffffff"></polygon><g class="cluster" id="clust1"></g><g class="cluster" id="clust2"></g><!-- node0 --><g class="node this class" id="graph1_0"><g id="a_this class|graph1_0"><a xlink:title="endpoints.algebra.JsonSchemas.TaggedOps (this class)" xlink:href="#inheritance-diagram"><path d="M119.1667,-49C119.1667,-49 32.8333,-49 32.8333,-49 28.6667,-49 24.5,-44.8333 24.5,-40.6667 24.5,-40.6667 24.5,-32.3333 24.5,-32.3333 24.5,-28.1667 28.6667,-24 32.8333,-24 32.8333,-24 119.1667,-24 119.1667,-24 123.3333,-24 127.5,-28.1667 127.5,-32.3333 127.5,-32.3333 127.5,-40.6667 127.5,-40.6667 127.5,-44.8333 123.3333,-49 119.1667,-49" stroke="#418565" fill="#418565"></path><image xlink:href="../../lib/class_diagram.png" y="-43.5" x="35" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-34.1" x="56" text-anchor="start">TaggedOps[A]</text></a></g></g><!-- node1 --><g class="node class" id="graph1_1"><g id="a_class|graph1_1"><a xlink:title="scala.AnyRef"><path d="M105.1667,-110C105.1667,-110 46.8333,-110 46.8333,-110 42.6667,-110 38.5,-105.8333 38.5,-101.6667 38.5,-101.6667 38.5,-93.3333 38.5,-93.3333 38.5,-89.1667 42.6667,-85 46.8333,-85 46.8333,-85 105.1667,-85 105.1667,-85 109.3333,-85 113.5,-89.1667 113.5,-93.3333 113.5,-93.3333 113.5,-101.6667 113.5,-101.6667 113.5,-105.8333 109.3333,-110 105.1667,-110" stroke="#418565" fill="#418565"></path><image xlink:href="../../lib/class_diagram.png" y="-104.5" x="49" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-95.1" x="70" text-anchor="start">AnyRef</text></a></g></g><!-- node1&#45;&gt;node0 --><g class="edge inheritance" id="graph1_1_0"><g id="a_inheritance|graph1_1_0"><a xlink:title="TaggedOps[A] is a subtype of AnyRef"><path d="M76,-77.7386C76,-68.3393 76,-57.3803 76,-49.123" stroke="#d4d4d4" fill="none"></path><polygon points="73.5501,-77.8607 76,-84.8608 78.4501,-77.8608 73.5501,-77.8607" stroke="#d4d4d4" fill="none"></polygon></a></g></g></g></svg></div>
-                <div id="diagram-controls" class="hiddenContent">
-                  <button id="diagram-zoom-out" class="diagram-btn"><i class="material-icons"></i></button>
-                  <button id="diagram-zoom-in" class="diagram-btn"><i class="material-icons"></i></button>
-                  <button title="Toggle full-screen" id="diagram-fs" class="diagram-btn to-full"><i class="material-icons"></i></button>
-                </div>
-              </div></div>
+        </div></div>
         
 
       <div id="mbrsel">
@@ -635,6 +633,22 @@ named “name”, and the second one has type <code>Int</code> and name “age�
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="endpoints.algebra.JsonSchemas.TaggedOps#named" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="named(name:String):JsonSchemas.this.Tagged[A]"></a><a id="named(String):Tagged[A]"></a>
+      <span class="permalink">
+      <a href="../../endpoints/algebra/JsonSchemas$TaggedOps.html#named(name:String):JsonSchemas.this.Tagged[A]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">named</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="JsonSchemas.html#Tagged[A]&lt;:JsonSchemas.this.JsonSchema[A]" class="extmbr" name="endpoints.algebra.JsonSchemas.Tagged">Tagged</a>[<span class="extype" name="endpoints.algebra.JsonSchemas.TaggedOps.A">A</span>]</span>
+      </span>
+      
+      
     </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
       <span class="permalink">
@@ -805,10 +819,10 @@ named “name”, and the second one has type <code>Int</code> and name “age�
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="endpoints.algebra.JsonSchemas.TaggedOps#xmap" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="xmap[B](f:A=&gt;B)(g:B=&gt;A):JsonSchemas.this.Tagged[B]"></a><a id="xmap[B]((A)⇒B)((B)⇒A):Tagged[B]"></a>
+    </li><li name="endpoints.algebra.JsonSchemas.TaggedOps#withDiscriminator" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="withDiscriminator(name:String):JsonSchemas.this.Tagged[A]"></a><a id="withDiscriminator(String):Tagged[A]"></a>
       <span class="permalink">
-      <a href="../../endpoints/algebra/JsonSchemas$TaggedOps.html#xmap[B](f:A=&gt;B)(g:B=&gt;A):JsonSchemas.this.Tagged[B]" title="Permalink">
+      <a href="../../endpoints/algebra/JsonSchemas$TaggedOps.html#withDiscriminator(name:String):JsonSchemas.this.Tagged[A]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -817,7 +831,7 @@ named “name”, and the second one has type <code>Int</code> and name “age�
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">xmap</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="endpoints.algebra.JsonSchemas.TaggedOps.A">A</span>) ⇒ <span class="extype" name="endpoints.algebra.JsonSchemas.TaggedOps.xmap.B">B</span></span>)</span><span class="params">(<span name="g">g: (<span class="extype" name="endpoints.algebra.JsonSchemas.TaggedOps.xmap.B">B</span>) ⇒ <span class="extype" name="endpoints.algebra.JsonSchemas.TaggedOps.A">A</span></span>)</span><span class="result">: <a href="JsonSchemas.html#Tagged[A]&lt;:JsonSchemas.this.JsonSchema[A]" class="extmbr" name="endpoints.algebra.JsonSchemas.Tagged">Tagged</a>[<span class="extype" name="endpoints.algebra.JsonSchemas.TaggedOps.xmap.B">B</span>]</span>
+        <span class="name">withDiscriminator</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="JsonSchemas.html#Tagged[A]&lt;:JsonSchemas.this.JsonSchema[A]" class="extmbr" name="endpoints.algebra.JsonSchemas.Tagged">Tagged</a>[<span class="extype" name="endpoints.algebra.JsonSchemas.TaggedOps.A">A</span>]</span>
       </span>
       
       

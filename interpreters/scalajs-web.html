@@ -21,7 +21,7 @@
             <div class="row">
               <div class="large-12 columns a_limited top-bar">
                 <div class="top-bar-left">
-                  <p>endpoints 0.11.0</p>
+                  <p>endpoints 0.12.0</p>
 
                 </div>
                 <div class="top-bar-right align-right row">
@@ -55,7 +55,7 @@
                 <h1 id="scala.js-web-client" class="a_section" data-magellan-target="scala.js-web-client">Scala.js web client<a class="a_hlink" href="#scala.js-web-client"></a></h1>
 <p>Web client using <code class="hljs">XMLHttpRequest</code>.</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
-<pre class="hljs"><code class="language-scala"><span class="hljs-string">"org.julienrf"</span> %%% <span class="hljs-string">"endpoints-xhr-client"</span> % <span class="hljs-string">"0.11.0"</span>
+<pre class="hljs"><code class="language-scala"><span class="hljs-string">"org.julienrf"</span> %%% <span class="hljs-string">"endpoints-xhr-client"</span> % <span class="hljs-string">"0.12.0"</span>
 </code></pre>
 </div></div>
 <p><a href="../api/endpoints/xhr/index.html">API documentation</a></p>
@@ -68,18 +68,18 @@ which fixes the <code class="hljs">Result[A]</code> type to <code class="hljs">s
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
 <pre class="hljs"><code class="language-scala"><span class="hljs-keyword">val</span> someResource: <span class="hljs-type">Endpoint</span>[<span class="hljs-type">Int</span>, <span class="hljs-type">String</span>] =
   endpoint(get(path / <span class="hljs-string">"some-resource"</span> / segment[<span class="hljs-type">Int</span>]()), ok(textResponse))</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.11.0/algebras/algebra/src/test/scala/endpoints/algebra/EndpointsDocs.scala#L75-L76" class="a_sourcelink">EndpointsDocs.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.12.0/algebras/algebra/src/test/scala/endpoints/algebra/EndpointsDocs.scala#L75-L76" class="a_sourcelink">EndpointsDocs.scala</a></div></div>
 <p>It can be invoked as follows:</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
 <pre class="hljs"><code class="language-scala"><span class="hljs-keyword">val</span> eventuallyString: <span class="hljs-type">Future</span>[<span class="hljs-type">String</span>] = someResource(<span class="hljs-number">42</span>)</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.11.0/xhr/client/src/test/scala/endpoints/xhr/future/EndpointsDocs.scala#L10" class="a_sourcelink">EndpointsDocs.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.12.0/xhr/client/src/test/scala/endpoints/xhr/future/EndpointsDocs.scala#L10" class="a_sourcelink">EndpointsDocs.scala</a></div></div>
 <p>Another example is <code class="hljs">endpoints.xhr.client.faithful.Endpoints</code>, which fixes
 the <code class="hljs">Result[A]</code> type to <code class="hljs">faithful.Future[A]</code>. This interpreter requires
 an additional dependency (which, in turn, depends on the
 <a href="https://github.com/julienrf/faithful">faithful</a> library):</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
 <pre class="hljs"><code class="language-scala"><span class="hljs-comment">// Provides endpoints.xhr.client.faithful.Endpoints</span>
-<span class="hljs-string">"org.julienrf"</span> %%% <span class="hljs-string">"endpoints-xhr-client-faithful"</span> % <span class="hljs-string">"0.11.0"</span>
+<span class="hljs-string">"org.julienrf"</span> %%% <span class="hljs-string">"endpoints-xhr-client-faithful"</span> % <span class="hljs-string">"0.12.0"</span>
 </code></pre>
 </div></div>
 

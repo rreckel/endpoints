@@ -21,7 +21,7 @@
             <div class="row">
               <div class="large-12 columns a_limited top-bar">
                 <div class="top-bar-left">
-                  <p>endpoints 0.11.0</p>
+                  <p>endpoints 0.12.0</p>
 
                 </div>
                 <div class="top-bar-right align-right row">
@@ -74,15 +74,15 @@ use). For instance, here is an endpoint for incrementing a counter. It uses the 
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
 <pre class="hljs"><code class="language-scala"><span class="hljs-keyword">val</span> increment: <span class="hljs-type">Endpoint</span>[<span class="hljs-type">Increment</span>, <span class="hljs-type">Unit</span>] =
   endpoint(post(path / <span class="hljs-string">"increment"</span>, jsonRequest[<span class="hljs-type">Increment</span>]), ok(emptyResponse))</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.11.0/documentation/examples/quickstart/endpoints/src/main/scala/quickstart/CounterEndpoints.scala#L31-L32" class="a_sourcelink">CounterEndpoints.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.12.0/documentation/examples/quickstart/endpoints/src/main/scala/quickstart/CounterEndpoints.scala#L31-L32" class="a_sourcelink">CounterEndpoints.scala</a></div></div>
 <p>From the client perspective, calling an HTTP endpoint is as simple as calling a function:</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
 <pre class="hljs"><code class="language-scala"><span class="hljs-keyword">val</span> eventuallyDone: <span class="hljs-type">Future</span>[<span class="hljs-type">Unit</span>] = increment(<span class="hljs-type">Increment</span>(step = <span class="hljs-number">42</span>))</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.11.0/documentation/examples/quickstart/client/src/main/scala/quickstart/CounterClientFuture.scala#L13" class="a_sourcelink">CounterClientFuture.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.12.0/documentation/examples/quickstart/client/src/main/scala/quickstart/CounterClientFuture.scala#L13" class="a_sourcelink">CounterClientFuture.scala</a></div></div>
 <p>Conversely, from the server perspective implementing an HTTP endpoint is as simple as implementing a function:</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
 <pre class="hljs"><code class="language-scala">increment.implementedBy(inc =&gt; counter.single += inc.step)</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.11.0/documentation/examples/quickstart/server/src/main/scala/quickstart/CounterServer.scala#L29" class="a_sourcelink">CounterServer.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.12.0/documentation/examples/quickstart/server/src/main/scala/quickstart/CounterServer.scala#L29" class="a_sourcelink">CounterServer.scala</a></div></div>
 <p>The <em>endpoints</em> library takes care of constructing the HTTP requests and responses and decoding the server
 responses or client requests into high-level data types according to the endpoint descriptions.</p>
 <p>In contrast with <a href="comparison.html">most other approaches</a>, <em>endpoints</em> is a pure, “<em>vanilla</em>”, Scala library.

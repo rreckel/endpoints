@@ -116,11 +116,9 @@
         <a title="Enriches JsonSchemas with two kinds of operations:" href="JsonSchemas.html"><span class="name">JsonSchemas</span></a><span class="result"> extends <a href="../algebra/JsonSchemas.html" class="extype" name="endpoints.algebra.JsonSchemas">algebra.JsonSchemas</a></span>
       </span>
       
-      <p class="shortcomment cmt">Enriches <a href="JsonSchemas.html" class="extype" name="endpoints.generic.JsonSchemas">JsonSchemas</a> with two kinds of operations:</p><div class="fullcomment"><div class="comment cmt"><p>Enriches <a href="JsonSchemas.html" class="extype" name="endpoints.generic.JsonSchemas">JsonSchemas</a> with two kinds of operations:</p><p>- <code>genericJsonSchema[A]</code> derives the <code>JsonSchema</code> of an algebraic
-  data type <code>A</code>;
-- <code>(field1 :×: field2 :×: …).as[A]</code> builds a tuple of <code>Record</code>s and maps
-  it to a case class <code>A</code></p><p>The data type description derivation is based on the underlying
-field and constructor names.</p><p>For instance, consider the following program that derives the description
+      <p class="shortcomment cmt">Enriches <a href="JsonSchemas.html" class="extype" name="endpoints.generic.JsonSchemas">JsonSchemas</a> with two kinds of operations:</p><div class="fullcomment"><div class="comment cmt"><p>Enriches <a href="JsonSchemas.html" class="extype" name="endpoints.generic.JsonSchemas">JsonSchemas</a> with two kinds of operations:</p><ul><li><code>genericJsonSchema[A]</code> derives the <code>JsonSchema</code> of an algebraic
+    data type <code>A</code>;</li><li><code>(field1 :×: field2 :×: …).as[A]</code> builds a tuple of <code>Record</code>s and maps
+    it to a case class <code>A</code></li></ul><p>For instance, consider the following program that derives the JSON schema
 of a case class:</p><pre><span class="kw">case</span> <span class="kw">class</span> User(name: <span class="std">String</span>, age: <span class="std">Int</span>)
 <span class="kw">object</span> User {
   <span class="kw">implicit</span> <span class="kw">val</span> schema: JsonSchema[User] = genericJsonSchema[User]
@@ -136,6 +134,14 @@ of a case class:</p><pre><span class="kw">case</span> <span class="kw">class</sp
                         <a class="abstract type" href="JsonSchemas$Enum.html" title="A JSON schema for enumerations, i.e."></a>
                         <a href="JsonSchemas$Enum.html" title="A JSON schema for enumerations, i.e.">Enum</a>
                       </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="../algebra/JsonSchemas$EnumOps.html" title=""></a>
+                        <a href="../algebra/JsonSchemas$EnumOps.html" title="">EnumOps</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="JsonSchemas$GenericDiscriminatorNames.html" title="Internal machinery for deriving the discriminator name of a type"></a>
+                        <a href="JsonSchemas$GenericDiscriminatorNames.html" title="Internal machinery for deriving the discriminator name of a type">GenericDiscriminatorNames</a>
+                      </li><li class="current-entities indented3">
                         <a class="object" href="" title=""></a>
                         <a class="trait" href="JsonSchemas$GenericJsonSchema.html" title=""></a>
                         <a href="JsonSchemas$GenericJsonSchema.html" title="">GenericJsonSchema</a>
@@ -149,12 +155,24 @@ of a case class:</p><pre><span class="kw">case</span> <span class="kw">class</sp
                         <a href="JsonSchemas$GenericJsonSchemaLowPriority.html" title="">GenericJsonSchemaLowPriority</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
+                        <a class="trait" href="JsonSchemas$GenericSchemaNames.html" title="Internal machinery for deriving the schema name of a type"></a>
+                        <a href="JsonSchemas$GenericSchemaNames.html" title="Internal machinery for deriving the schema name of a type">GenericSchemaNames</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="../InvariantFunctorSyntax$InvariantFunctorSyntax.html" title="Extension methods for values of type F[A] for which there is an implicit InvariantFunctor[F] instance."></a>
+                        <a href="../InvariantFunctorSyntax$InvariantFunctorSyntax.html" title="Extension methods for values of type F[A] for which there is an implicit InvariantFunctor[F] instance.">InvariantFunctorSyntax</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
                         <a class="abstract type" href="JsonSchemas$JsonSchema.html" title="The JSON schema of a type A"></a>
                         <a href="JsonSchemas$JsonSchema.html" title="The JSON schema of a type A">JsonSchema</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
-                        <a class="class" href="../algebra/JsonSchemas$JsonSchemaOps.html" title="Convenient infix operations"></a>
-                        <a href="../algebra/JsonSchemas$JsonSchemaOps.html" title="Convenient infix operations">JsonSchemaOps</a>
+                        <a class="class" href="JsonSchemas$JsonSchemaGenericOps.html" title=""></a>
+                        <a href="JsonSchemas$JsonSchemaGenericOps.html" title="">JsonSchemaGenericOps</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="../PartialInvariantFunctorSyntax$PartialInvariantFunctorSyntax.html" title=""></a>
+                        <a href="../PartialInvariantFunctorSyntax$PartialInvariantFunctorSyntax.html" title="">PartialInvariantFunctorSyntax</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
                         <a class="abstract type" href="JsonSchemas$Record.html" title="The JSON schema of a record type (case class) A"></a>
@@ -165,8 +183,8 @@ of a case class:</p><pre><span class="kw">case</span> <span class="kw">class</sp
                         <a href="JsonSchemas$RecordGenericOps.html" title="">RecordGenericOps</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
-                        <a class="class" href="../algebra/JsonSchemas$RecordOps.html" title="Convenient infix operations"></a>
-                        <a href="../algebra/JsonSchemas$RecordOps.html" title="Convenient infix operations">RecordOps</a>
+                        <a class="class" href="../algebra/JsonSchemas$RecordOps.html" title="Implicit methods for values of type Record"></a>
+                        <a href="../algebra/JsonSchemas$RecordOps.html" title="Implicit methods for values of type Record">RecordOps</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
                         <a class="abstract type" href="JsonSchemas$Tagged.html" title="A JSON schema containing the name of the type A."></a>
@@ -200,16 +218,16 @@ of a case class:</p><pre><span class="kw">case</span> <span class="kw">class</sp
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <span class="name">GenericJsonSchema</span><span class="result"> extends <a href="JsonSchemas$GenericJsonSchemaLowPriority.html" class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowPriority">GenericJsonSchemaLowPriority</a></span>
+        <span class="name">GenericJsonSchema</span><span class="result"> extends <a href="JsonSchemas$GenericJsonSchemaLowPriority.html" class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowPriority">GenericJsonSchemaLowPriority</a> with <a href="JsonSchemas$GenericDiscriminatorNames.html" class="extype" name="endpoints.generic.JsonSchemas.GenericDiscriminatorNames">GenericDiscriminatorNames</a> with <a href="JsonSchemas$GenericSchemaNames.html" class="extype" name="endpoints.generic.JsonSchemas.GenericSchemaNames">GenericSchemaNames</a></span>
       </span>
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/julienrf/endpoints/blob/v0.11.0/json-schema/json-schema-generic/src/main/scala/endpoints/generic/JsonSchemas.scala" target="_blank">JsonSchemas.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/julienrf/endpoints/blob/v0.12.0/json-schema/json-schema-generic/src/main/scala/endpoints/generic/JsonSchemas.scala" target="_blank">JsonSchemas.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="JsonSchemas$GenericJsonSchemaLowPriority.html" class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowPriority">GenericJsonSchemaLowPriority</a>, <a href="JsonSchemas$GenericJsonSchemaLowLowPriority.html" class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowLowPriority">GenericJsonSchemaLowLowPriority</a>, <a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
+          <div class="superTypes hiddenContent"><a href="JsonSchemas$GenericSchemaNames.html" class="extype" name="endpoints.generic.JsonSchemas.GenericSchemaNames">GenericSchemaNames</a>, <a href="JsonSchemas$GenericDiscriminatorNames.html" class="extype" name="endpoints.generic.JsonSchemas.GenericDiscriminatorNames">GenericDiscriminatorNames</a>, <a href="JsonSchemas$GenericJsonSchemaLowPriority.html" class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowPriority">GenericJsonSchemaLowPriority</a>, <a href="JsonSchemas$GenericJsonSchemaLowLowPriority.html" class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowLowPriority">GenericJsonSchemaLowLowPriority</a>, <a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
         </div></div>
         
 
@@ -235,7 +253,7 @@ of a case class:</p><pre><span class="kw">case</span> <span class="kw">class</sp
                   <span class="filtertype">Inherited<br />
                   </span>
                   <ol id="linearization">
-                    <li class="in" name="endpoints.generic.JsonSchemas.GenericJsonSchema"><span>GenericJsonSchema</span></li><li class="in" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowPriority"><span>GenericJsonSchemaLowPriority</span></li><li class="in" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowLowPriority"><span>GenericJsonSchemaLowLowPriority</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                    <li class="in" name="endpoints.generic.JsonSchemas.GenericJsonSchema"><span>GenericJsonSchema</span></li><li class="in" name="endpoints.generic.JsonSchemas.GenericSchemaNames"><span>GenericSchemaNames</span></li><li class="in" name="endpoints.generic.JsonSchemas.GenericDiscriminatorNames"><span>GenericDiscriminatorNames</span></li><li class="in" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowPriority"><span>GenericJsonSchemaLowPriority</span></li><li class="in" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowLowPriority"><span>GenericJsonSchemaLowLowPriority</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                   </ol>
                 </div><div class="ancestors">
               <span class="filtertype"></span>
@@ -257,8 +275,56 @@ of a case class:</p><pre><span class="kw">case</span> <span class="kw">class</sp
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowLowPriority.GenericRecord" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="GenericRecord[A]extendsJsonSchemas.this.GenericJsonSchema[A]"></a><a id="GenericRecord[A]:GenericRecord[A]"></a>
+              <ol><li name="endpoints.generic.JsonSchemas.GenericDiscriminatorNames.GenericDiscriminatorName" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="GenericDiscriminatorName[A]extendsAnyRef"></a><a id="GenericDiscriminatorName[A]:GenericDiscriminatorName[A]"></a>
+      <span class="permalink">
+      <a href="../../endpoints/generic/JsonSchemas$GenericDiscriminatorNames$GenericDiscriminatorName.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="JsonSchemas$GenericDiscriminatorNames$GenericDiscriminatorName.html"><span class="name">GenericDiscriminatorName</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="result"> extends <a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="JsonSchemas$GenericDiscriminatorNames.html" class="extype" name="endpoints.generic.JsonSchemas.GenericDiscriminatorNames">GenericDiscriminatorNames</a></dd></dl></div>
+    </li><li name="endpoints.generic.JsonSchemas.GenericDiscriminatorNames.GenericDiscriminatorNameLowPriority" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="GenericDiscriminatorNameLowPriorityextendsAnyRef"></a><a id="GenericDiscriminatorNameLowPriority:GenericDiscriminatorNameLowPriority"></a>
+      <span class="permalink">
+      <a href="../../endpoints/generic/JsonSchemas$GenericDiscriminatorNames$GenericDiscriminatorNameLowPriority.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="JsonSchemas$GenericDiscriminatorNames$GenericDiscriminatorNameLowPriority.html"><span class="name">GenericDiscriminatorNameLowPriority</span></a><span class="result"> extends <a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="JsonSchemas$GenericDiscriminatorNames.html" class="extype" name="endpoints.generic.JsonSchemas.GenericDiscriminatorNames">GenericDiscriminatorNames</a></dd></dl></div>
+    </li><li name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowLowPriority.DocumentedGenericRecord" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="DocumentedGenericRecord[A,D&lt;:shapeless.HList]extendsAnyRef"></a><a id="DocumentedGenericRecord[A,D&lt;:HList]:GenericJsonSchema.DocumentedGenericRecord[A,D]"></a>
+      <span class="permalink">
+      <a href="../../endpoints/generic/JsonSchemas$GenericJsonSchemaLowLowPriority$DocumentedGenericRecord.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="JsonSchemas$GenericJsonSchemaLowLowPriority$DocumentedGenericRecord.html"><span class="name">DocumentedGenericRecord</span></a><span class="tparams">[<span name="A">A</span>, <span name="D">D &lt;: <span class="extype" name="shapeless.HList">HList</span></span>]</span><span class="result"> extends <a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="JsonSchemas$GenericJsonSchemaLowLowPriority.html" class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowLowPriority">GenericJsonSchemaLowLowPriority</a></dd></dl></div>
+    </li><li name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowLowPriority.GenericRecord" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="GenericRecord[A]extendsJsonSchemas.this.GenericJsonSchema[A]"></a><a id="GenericRecord[A]:GenericJsonSchema.GenericRecord[A]"></a>
       <span class="permalink">
       <a href="../../endpoints/generic/JsonSchemas$GenericJsonSchemaLowLowPriority$GenericRecord.html" title="Permalink">
         <i class="material-icons"></i>
@@ -266,17 +332,49 @@ of a case class:</p><pre><span class="kw">case</span> <span class="kw">class</sp
     </span>
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">trait</span>
+        <span class="kind">class</span>
       </span>
       <span class="symbol">
         <a title="" href="JsonSchemas$GenericJsonSchemaLowLowPriority$GenericRecord.html"><span class="name">GenericRecord</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="result"> extends <a href="JsonSchemas$GenericJsonSchema.html" class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchema">GenericJsonSchema</a>[<span class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowLowPriority.GenericRecord.A">A</span>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="JsonSchemas$GenericJsonSchemaLowLowPriority.html" class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowLowPriority">GenericJsonSchemaLowLowPriority</a></dd></dl></div>
-    </li><li name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowLowPriority.GenericTagged" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="GenericTagged[A]extendsJsonSchemas.this.GenericJsonSchema[A]"></a><a id="GenericTagged[A]:GenericTagged[A]"></a>
+    </li><li name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowLowPriority.GenericTagged" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="GenericTagged[A]extendsJsonSchemas.this.GenericJsonSchema[A]"></a><a id="GenericTagged[A]:GenericJsonSchema.GenericTagged[A]"></a>
       <span class="permalink">
       <a href="../../endpoints/generic/JsonSchemas$GenericJsonSchemaLowLowPriority$GenericTagged.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="JsonSchemas$GenericJsonSchemaLowLowPriority$GenericTagged.html"><span class="name">GenericTagged</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="result"> extends <a href="JsonSchemas$GenericJsonSchema.html" class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchema">GenericJsonSchema</a>[<span class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowLowPriority.GenericTagged.A">A</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="JsonSchemas$GenericJsonSchemaLowLowPriority.html" class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowLowPriority">GenericJsonSchemaLowLowPriority</a></dd></dl></div>
+    </li><li name="endpoints.generic.JsonSchemas.GenericSchemaNames.GenericSchemaName" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="GenericSchemaName[A]extendsAnyRef"></a><a id="GenericSchemaName[A]:GenericSchemaName[A]"></a>
+      <span class="permalink">
+      <a href="../../endpoints/generic/JsonSchemas$GenericSchemaNames$GenericSchemaName.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="JsonSchemas$GenericSchemaNames$GenericSchemaName.html"><span class="name">GenericSchemaName</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="result"> extends <a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="JsonSchemas$GenericSchemaNames.html" class="extype" name="endpoints.generic.JsonSchemas.GenericSchemaNames">GenericSchemaNames</a></dd></dl></div>
+    </li><li name="endpoints.generic.JsonSchemas.GenericSchemaNames.GenericSchemaNameLowPriority" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="GenericSchemaNameLowPriorityextendsAnyRef"></a><a id="GenericSchemaNameLowPriority:GenericSchemaNameLowPriority"></a>
+      <span class="permalink">
+      <a href="../../endpoints/generic/JsonSchemas$GenericSchemaNames$GenericSchemaNameLowPriority.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -285,10 +383,10 @@ of a case class:</p><pre><span class="kw">case</span> <span class="kw">class</sp
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="" href="JsonSchemas$GenericJsonSchemaLowLowPriority$GenericTagged.html"><span class="name">GenericTagged</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="result"> extends <a href="JsonSchemas$GenericJsonSchema.html" class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchema">GenericJsonSchema</a>[<span class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowLowPriority.GenericTagged.A">A</span>]</span>
+        <a title="" href="JsonSchemas$GenericSchemaNames$GenericSchemaNameLowPriority.html"><span class="name">GenericSchemaNameLowPriority</span></a><span class="result"> extends <a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="JsonSchemas$GenericJsonSchemaLowLowPriority.html" class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowLowPriority">GenericJsonSchemaLowLowPriority</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="JsonSchemas$GenericSchemaNames.html" class="extype" name="endpoints.generic.JsonSchemas.GenericSchemaNames">GenericSchemaNames</a></dd></dl></div>
     </li></ol>
             </div>
 
@@ -297,7 +395,23 @@ of a case class:</p><pre><span class="kw">case</span> <span class="kw">class</sp
         <div class="values members">
               <h3>Value Members</h3>
               <ol>
-                <li name="scala.AnyRef#!=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+                <li name="endpoints.generic.JsonSchemas.GenericDiscriminatorNames.GenericDiscriminatorName" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="GenericDiscriminatorName"></a><a id="GenericDiscriminatorName:GenericDiscriminatorName"></a>
+      <span class="permalink">
+      <a href="../../endpoints/generic/JsonSchemas$GenericDiscriminatorNames$GenericDiscriminatorName$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="JsonSchemas$GenericDiscriminatorNames$GenericDiscriminatorName$.html"><span class="name">GenericDiscriminatorName</span></a><span class="result"> extends <a href="JsonSchemas$GenericDiscriminatorNames$GenericDiscriminatorNameLowPriority.html" class="extype" name="endpoints.generic.JsonSchemas.GenericDiscriminatorNames.GenericDiscriminatorNameLowPriority">GenericDiscriminatorNameLowPriority</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="JsonSchemas$GenericDiscriminatorNames.html" class="extype" name="endpoints.generic.JsonSchemas.GenericDiscriminatorNames">GenericDiscriminatorNames</a></dd></dl></div>
+    </li><li name="scala.AnyRef#!=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="!=(x$1:Any):Boolean"></a><a id="!=(Any):Boolean"></a>
       <span class="permalink">
       <a href="../../endpoints/generic/JsonSchemas$GenericJsonSchema$.html#!=(x$1:Any):Boolean" title="Permalink">
@@ -402,9 +516,9 @@ of a case class:</p><pre><span class="kw">case</span> <span class="kw">class</sp
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="JsonSchemas$GenericJsonSchemaLowPriority.html" class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowPriority">GenericJsonSchemaLowPriority</a></dd></dl></div>
     </li><li name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowPriority#consOptRecord" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="consOptRecord[L&lt;:Symbol,H,T&lt;:shapeless.HList](implicitlabelHead:shapeless.Witness.Aux[L],implicitjsonSchemaHead:JsonSchemas.this.JsonSchema[H],implicitjsonSchemaTail:GenericJsonSchemaLowPriority.this.GenericRecord[T]):GenericJsonSchemaLowPriority.this.GenericRecord[shapeless.labelled.FieldType[L,Option[H]]::T]"></a><a id="consOptRecord[L&lt;:Symbol,H,T&lt;:HList](Aux[L],JsonSchemas.JsonSchema[H],GenericRecord[T]):GenericRecord[::[FieldType[L,Option[H]],T]]"></a>
+      <a id="consOptRecord[L&lt;:Symbol,H,T&lt;:shapeless.HList,DH&lt;:Option[endpoints.generic.docs],DT&lt;:shapeless.HList](implicitlabelHead:shapeless.Witness.Aux[L],implicitjsonSchemaHead:JsonSchemas.this.JsonSchema[H],implicitjsonSchemaTail:GenericJsonSchemaLowPriority.this.DocumentedGenericRecord[T,DT]):GenericJsonSchemaLowPriority.this.DocumentedGenericRecord[shapeless.labelled.FieldType[L,Option[H]]::T,DH::DT]"></a><a id="consOptRecord[L&lt;:Symbol,H,T&lt;:HList,DH&lt;:Option[docs],DT&lt;:HList](Aux[L],JsonSchemas.JsonSchema[H],DocumentedGenericRecord[T,DT]):DocumentedGenericRecord[::[FieldType[L,Option[H]],T],::[DH,DT]]"></a>
       <span class="permalink">
-      <a href="../../endpoints/generic/JsonSchemas$GenericJsonSchema$.html#consOptRecord[L&lt;:Symbol,H,T&lt;:shapeless.HList](implicitlabelHead:shapeless.Witness.Aux[L],implicitjsonSchemaHead:JsonSchemas.this.JsonSchema[H],implicitjsonSchemaTail:GenericJsonSchemaLowPriority.this.GenericRecord[T]):GenericJsonSchemaLowPriority.this.GenericRecord[shapeless.labelled.FieldType[L,Option[H]]::T]" title="Permalink">
+      <a href="../../endpoints/generic/JsonSchemas$GenericJsonSchema$.html#consOptRecord[L&lt;:Symbol,H,T&lt;:shapeless.HList,DH&lt;:Option[endpoints.generic.docs],DT&lt;:shapeless.HList](implicitlabelHead:shapeless.Witness.Aux[L],implicitjsonSchemaHead:JsonSchemas.this.JsonSchema[H],implicitjsonSchemaTail:GenericJsonSchemaLowPriority.this.DocumentedGenericRecord[T,DT]):GenericJsonSchemaLowPriority.this.DocumentedGenericRecord[shapeless.labelled.FieldType[L,Option[H]]::T,DH::DT]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -413,14 +527,14 @@ of a case class:</p><pre><span class="kw">case</span> <span class="kw">class</sp
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">consOptRecord</span><span class="tparams">[<span name="L">L &lt;: <span class="extype" name="scala.Symbol">Symbol</span></span>, <span name="H">H</span>, <span name="T">T &lt;: <span class="extype" name="shapeless.HList">HList</span></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="labelHead">labelHead: <span class="extype" name="shapeless.Witness.Aux">Aux</span>[<span class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowPriority.consOptRecord.L">L</span>]</span>, <span name="jsonSchemaHead">jsonSchemaHead: <a href="JsonSchemas.html#JsonSchema[A]" class="extmbr" name="endpoints.generic.JsonSchemas.JsonSchema">JsonSchemas.JsonSchema</a>[<span class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowPriority.consOptRecord.H">H</span>]</span>, <span name="jsonSchemaTail">jsonSchemaTail: <a href="#GenericRecord[A]extendsJsonSchemas.this.GenericJsonSchema[A]" class="extmbr" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowLowPriority.GenericRecord">GenericRecord</a>[<span class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowPriority.consOptRecord.T">T</span>]</span>)</span><span class="result">: <a href="#GenericRecord[A]extendsJsonSchemas.this.GenericJsonSchema[A]" class="extmbr" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowLowPriority.GenericRecord">GenericRecord</a>[<span class="extype" name="shapeless.::">::</span>[<span class="extype" name="shapeless.labelled.FieldType">FieldType</span>[<span class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowPriority.consOptRecord.L">L</span>, <a href="https://www.scala-lang.org/api/2.12.10/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowPriority.consOptRecord.H">H</span>]], <span class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowPriority.consOptRecord.T">T</span>]]</span>
+        <span class="name">consOptRecord</span><span class="tparams">[<span name="L">L &lt;: <span class="extype" name="scala.Symbol">Symbol</span></span>, <span name="H">H</span>, <span name="T">T &lt;: <span class="extype" name="shapeless.HList">HList</span></span>, <span name="DH">DH &lt;: <a href="https://www.scala-lang.org/api/2.12.10/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<a href="docs.html" class="extype" name="endpoints.generic.docs">docs</a>]</span>, <span name="DT">DT &lt;: <span class="extype" name="shapeless.HList">HList</span></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="labelHead">labelHead: <span class="extype" name="shapeless.Witness.Aux">Aux</span>[<span class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowPriority.consOptRecord.L">L</span>]</span>, <span name="jsonSchemaHead">jsonSchemaHead: <a href="JsonSchemas.html#JsonSchema[A]" class="extmbr" name="endpoints.generic.JsonSchemas.JsonSchema">JsonSchemas.JsonSchema</a>[<span class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowPriority.consOptRecord.H">H</span>]</span>, <span name="jsonSchemaTail">jsonSchemaTail: <a href="#DocumentedGenericRecord[A,D&lt;:shapeless.HList]extendsAnyRef" class="extmbr" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowLowPriority.DocumentedGenericRecord">DocumentedGenericRecord</a>[<span class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowPriority.consOptRecord.T">T</span>, <span class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowPriority.consOptRecord.DT">DT</span>]</span>)</span><span class="result">: <a href="#DocumentedGenericRecord[A,D&lt;:shapeless.HList]extendsAnyRef" class="extmbr" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowLowPriority.DocumentedGenericRecord">DocumentedGenericRecord</a>[<span class="extype" name="shapeless.::">::</span>[<span class="extype" name="shapeless.labelled.FieldType">FieldType</span>[<span class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowPriority.consOptRecord.L">L</span>, <a href="https://www.scala-lang.org/api/2.12.10/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowPriority.consOptRecord.H">H</span>]], <span class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowPriority.consOptRecord.T">T</span>], <span class="extype" name="shapeless.::">::</span>[<span class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowPriority.consOptRecord.DH">DH</span>, <span class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowPriority.consOptRecord.DT">DT</span>]]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="JsonSchemas$GenericJsonSchemaLowPriority.html" class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowPriority">GenericJsonSchemaLowPriority</a></dd></dl></div>
     </li><li name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowPriority#consRecord" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="consRecord[L&lt;:Symbol,H,T&lt;:shapeless.HList](implicitlabelHead:shapeless.Witness.Aux[L],implicitjsonSchemaHead:JsonSchemas.this.JsonSchema[H],implicitjsonSchemaTail:GenericJsonSchemaLowPriority.this.GenericRecord[T]):GenericJsonSchemaLowPriority.this.GenericRecord[shapeless.labelled.FieldType[L,H]::T]"></a><a id="consRecord[L&lt;:Symbol,H,T&lt;:HList](Aux[L],JsonSchemas.JsonSchema[H],GenericRecord[T]):GenericRecord[::[FieldType[L,H],T]]"></a>
+      <a id="consRecord[L&lt;:Symbol,H,T&lt;:shapeless.HList,DH&lt;:Option[endpoints.generic.docs],DT&lt;:shapeless.HList](implicitlabelHead:shapeless.Witness.Aux[L],implicitjsonSchemaHead:JsonSchemas.this.JsonSchema[H],implicitjsonSchemaTail:GenericJsonSchemaLowPriority.this.DocumentedGenericRecord[T,DT]):GenericJsonSchemaLowPriority.this.DocumentedGenericRecord[shapeless.labelled.FieldType[L,H]::T,DH::DT]"></a><a id="consRecord[L&lt;:Symbol,H,T&lt;:HList,DH&lt;:Option[docs],DT&lt;:HList](Aux[L],JsonSchemas.JsonSchema[H],DocumentedGenericRecord[T,DT]):DocumentedGenericRecord[::[FieldType[L,H],T],::[DH,DT]]"></a>
       <span class="permalink">
-      <a href="../../endpoints/generic/JsonSchemas$GenericJsonSchema$.html#consRecord[L&lt;:Symbol,H,T&lt;:shapeless.HList](implicitlabelHead:shapeless.Witness.Aux[L],implicitjsonSchemaHead:JsonSchemas.this.JsonSchema[H],implicitjsonSchemaTail:GenericJsonSchemaLowPriority.this.GenericRecord[T]):GenericJsonSchemaLowPriority.this.GenericRecord[shapeless.labelled.FieldType[L,H]::T]" title="Permalink">
+      <a href="../../endpoints/generic/JsonSchemas$GenericJsonSchema$.html#consRecord[L&lt;:Symbol,H,T&lt;:shapeless.HList,DH&lt;:Option[endpoints.generic.docs],DT&lt;:shapeless.HList](implicitlabelHead:shapeless.Witness.Aux[L],implicitjsonSchemaHead:JsonSchemas.this.JsonSchema[H],implicitjsonSchemaTail:GenericJsonSchemaLowPriority.this.DocumentedGenericRecord[T,DT]):GenericJsonSchemaLowPriority.this.DocumentedGenericRecord[shapeless.labelled.FieldType[L,H]::T,DH::DT]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -429,14 +543,14 @@ of a case class:</p><pre><span class="kw">case</span> <span class="kw">class</sp
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">consRecord</span><span class="tparams">[<span name="L">L &lt;: <span class="extype" name="scala.Symbol">Symbol</span></span>, <span name="H">H</span>, <span name="T">T &lt;: <span class="extype" name="shapeless.HList">HList</span></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="labelHead">labelHead: <span class="extype" name="shapeless.Witness.Aux">Aux</span>[<span class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowPriority.consRecord.L">L</span>]</span>, <span name="jsonSchemaHead">jsonSchemaHead: <a href="JsonSchemas.html#JsonSchema[A]" class="extmbr" name="endpoints.generic.JsonSchemas.JsonSchema">JsonSchemas.JsonSchema</a>[<span class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowPriority.consRecord.H">H</span>]</span>, <span name="jsonSchemaTail">jsonSchemaTail: <a href="#GenericRecord[A]extendsJsonSchemas.this.GenericJsonSchema[A]" class="extmbr" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowLowPriority.GenericRecord">GenericRecord</a>[<span class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowPriority.consRecord.T">T</span>]</span>)</span><span class="result">: <a href="#GenericRecord[A]extendsJsonSchemas.this.GenericJsonSchema[A]" class="extmbr" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowLowPriority.GenericRecord">GenericRecord</a>[<span class="extype" name="shapeless.::">::</span>[<span class="extype" name="shapeless.labelled.FieldType">FieldType</span>[<span class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowPriority.consRecord.L">L</span>, <span class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowPriority.consRecord.H">H</span>], <span class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowPriority.consRecord.T">T</span>]]</span>
+        <span class="name">consRecord</span><span class="tparams">[<span name="L">L &lt;: <span class="extype" name="scala.Symbol">Symbol</span></span>, <span name="H">H</span>, <span name="T">T &lt;: <span class="extype" name="shapeless.HList">HList</span></span>, <span name="DH">DH &lt;: <a href="https://www.scala-lang.org/api/2.12.10/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<a href="docs.html" class="extype" name="endpoints.generic.docs">docs</a>]</span>, <span name="DT">DT &lt;: <span class="extype" name="shapeless.HList">HList</span></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="labelHead">labelHead: <span class="extype" name="shapeless.Witness.Aux">Aux</span>[<span class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowPriority.consRecord.L">L</span>]</span>, <span name="jsonSchemaHead">jsonSchemaHead: <a href="JsonSchemas.html#JsonSchema[A]" class="extmbr" name="endpoints.generic.JsonSchemas.JsonSchema">JsonSchemas.JsonSchema</a>[<span class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowPriority.consRecord.H">H</span>]</span>, <span name="jsonSchemaTail">jsonSchemaTail: <a href="#DocumentedGenericRecord[A,D&lt;:shapeless.HList]extendsAnyRef" class="extmbr" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowLowPriority.DocumentedGenericRecord">DocumentedGenericRecord</a>[<span class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowPriority.consRecord.T">T</span>, <span class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowPriority.consRecord.DT">DT</span>]</span>)</span><span class="result">: <a href="#DocumentedGenericRecord[A,D&lt;:shapeless.HList]extendsAnyRef" class="extmbr" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowLowPriority.DocumentedGenericRecord">DocumentedGenericRecord</a>[<span class="extype" name="shapeless.::">::</span>[<span class="extype" name="shapeless.labelled.FieldType">FieldType</span>[<span class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowPriority.consRecord.L">L</span>, <span class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowPriority.consRecord.H">H</span>], <span class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowPriority.consRecord.T">T</span>], <span class="extype" name="shapeless.::">::</span>[<span class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowPriority.consRecord.DH">DH</span>, <span class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowPriority.consRecord.DT">DT</span>]]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="JsonSchemas$GenericJsonSchemaLowPriority.html" class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowPriority">GenericJsonSchemaLowPriority</a></dd></dl></div>
     </li><li name="endpoints.generic.JsonSchemas.GenericJsonSchema#emptyRecordCase" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="emptyRecordCase:endpoints.generic.JsonSchemas.GenericJsonSchema.GenericRecord[shapeless.HNil]"></a><a id="emptyRecordCase:GenericRecord[HNil]"></a>
+      <a id="emptyRecordCase:endpoints.generic.JsonSchemas.GenericJsonSchema.DocumentedGenericRecord[shapeless.HNil,shapeless.HNil]"></a><a id="emptyRecordCase:DocumentedGenericRecord[HNil,HNil]"></a>
       <span class="permalink">
-      <a href="../../endpoints/generic/JsonSchemas$GenericJsonSchema$.html#emptyRecordCase:endpoints.generic.JsonSchemas.GenericJsonSchema.GenericRecord[shapeless.HNil]" title="Permalink">
+      <a href="../../endpoints/generic/JsonSchemas$GenericJsonSchema$.html#emptyRecordCase:endpoints.generic.JsonSchemas.GenericJsonSchema.DocumentedGenericRecord[shapeless.HNil,shapeless.HNil]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -445,7 +559,7 @@ of a case class:</p><pre><span class="kw">case</span> <span class="kw">class</sp
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">emptyRecordCase</span><span class="result">: <a href="#GenericRecord[A]extendsJsonSchemas.this.GenericJsonSchema[A]" class="extmbr" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowLowPriority.GenericRecord">GenericRecord</a>[<span class="extype" name="shapeless.HNil">HNil</span>]</span>
+        <span class="name">emptyRecordCase</span><span class="result">: <a href="#DocumentedGenericRecord[A,D&lt;:shapeless.HList]extendsAnyRef" class="extmbr" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowLowPriority.DocumentedGenericRecord">DocumentedGenericRecord</a>[<span class="extype" name="shapeless.HNil">HNil</span>, <span class="extype" name="shapeless.HNil">HNil</span>]</span>
       </span>
       
       
@@ -612,9 +726,9 @@ of a case class:</p><pre><span class="kw">case</span> <span class="kw">class</sp
               
         </dd></dl></div>
     </li><li name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowLowPriority#recordGeneric" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="recordGeneric[A,R](implicitgen:shapeless.LabelledGeneric.Aux[A,R],implicitrecord:GenericJsonSchemaLowLowPriority.this.GenericRecord[R],implicitct:scala.reflect.ClassTag[A]):GenericJsonSchemaLowLowPriority.this.GenericRecord[A]"></a><a id="recordGeneric[A,R](Aux[A,R],GenericRecord[R],ClassTag[A]):GenericRecord[A]"></a>
+      <a id="recordGeneric[A,R,D&lt;:shapeless.HList](implicitgen:shapeless.LabelledGeneric.Aux[A,R],implicitdocAnns:shapeless.Annotations.Aux[endpoints.generic.docs,A,D],implicitrecord:GenericJsonSchemaLowLowPriority.this.DocumentedGenericRecord[R,D],implicitname:GenericJsonSchemaLowLowPriority.this.GenericSchemaName[A]):GenericJsonSchemaLowLowPriority.this.GenericRecord[A]"></a><a id="recordGeneric[A,R,D&lt;:HList](Aux[A,R],Aux[docs,A,D],DocumentedGenericRecord[R,D],GenericSchemaName[A]):GenericRecord[A]"></a>
       <span class="permalink">
-      <a href="../../endpoints/generic/JsonSchemas$GenericJsonSchema$.html#recordGeneric[A,R](implicitgen:shapeless.LabelledGeneric.Aux[A,R],implicitrecord:GenericJsonSchemaLowLowPriority.this.GenericRecord[R],implicitct:scala.reflect.ClassTag[A]):GenericJsonSchemaLowLowPriority.this.GenericRecord[A]" title="Permalink">
+      <a href="../../endpoints/generic/JsonSchemas$GenericJsonSchema$.html#recordGeneric[A,R,D&lt;:shapeless.HList](implicitgen:shapeless.LabelledGeneric.Aux[A,R],implicitdocAnns:shapeless.Annotations.Aux[endpoints.generic.docs,A,D],implicitrecord:GenericJsonSchemaLowLowPriority.this.DocumentedGenericRecord[R,D],implicitname:GenericJsonSchemaLowLowPriority.this.GenericSchemaName[A]):GenericJsonSchemaLowLowPriority.this.GenericRecord[A]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -623,7 +737,7 @@ of a case class:</p><pre><span class="kw">case</span> <span class="kw">class</sp
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">recordGeneric</span><span class="tparams">[<span name="A">A</span>, <span name="R">R</span>]</span><span class="params">(<span class="implicit">implicit </span><span name="gen">gen: <span class="extype" name="shapeless.LabelledGeneric.Aux">Aux</span>[<span class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowLowPriority.recordGeneric.A">A</span>, <span class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowLowPriority.recordGeneric.R">R</span>]</span>, <span name="record">record: <a href="#GenericRecord[A]extendsJsonSchemas.this.GenericJsonSchema[A]" class="extmbr" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowLowPriority.GenericRecord">GenericRecord</a>[<span class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowLowPriority.recordGeneric.R">R</span>]</span>, <span name="ct">ct: <a href="https://www.scala-lang.org/api/2.12.10/scala/reflect/ClassTag.html#scala.reflect.ClassTag" class="extype" name="scala.reflect.ClassTag">ClassTag</a>[<span class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowLowPriority.recordGeneric.A">A</span>]</span>)</span><span class="result">: <a href="#GenericRecord[A]extendsJsonSchemas.this.GenericJsonSchema[A]" class="extmbr" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowLowPriority.GenericRecord">GenericRecord</a>[<span class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowLowPriority.recordGeneric.A">A</span>]</span>
+        <span class="name">recordGeneric</span><span class="tparams">[<span name="A">A</span>, <span name="R">R</span>, <span name="D">D &lt;: <span class="extype" name="shapeless.HList">HList</span></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="gen">gen: <span class="extype" name="shapeless.LabelledGeneric.Aux">Aux</span>[<span class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowLowPriority.recordGeneric.A">A</span>, <span class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowLowPriority.recordGeneric.R">R</span>]</span>, <span name="docAnns">docAnns: <span class="extype" name="shapeless.Annotations.Aux">Aux</span>[<a href="docs.html" class="extype" name="endpoints.generic.docs">docs</a>, <span class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowLowPriority.recordGeneric.A">A</span>, <span class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowLowPriority.recordGeneric.D">D</span>]</span>, <span name="record">record: <a href="#DocumentedGenericRecord[A,D&lt;:shapeless.HList]extendsAnyRef" class="extmbr" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowLowPriority.DocumentedGenericRecord">DocumentedGenericRecord</a>[<span class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowLowPriority.recordGeneric.R">R</span>, <span class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowLowPriority.recordGeneric.D">D</span>]</span>, <span name="name">name: <a href="#GenericSchemaName[A]extendsAnyRef" class="extmbr" name="endpoints.generic.JsonSchemas.GenericSchemaNames.GenericSchemaName">GenericSchemaName</a>[<span class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowLowPriority.recordGeneric.A">A</span>]</span>)</span><span class="result">: <a href="#GenericRecord[A]extendsJsonSchemas.this.GenericJsonSchema[A]" class="extmbr" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowLowPriority.GenericRecord">GenericRecord</a>[<span class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowLowPriority.recordGeneric.A">A</span>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="JsonSchemas$GenericJsonSchemaLowLowPriority.html" class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowLowPriority">GenericJsonSchemaLowLowPriority</a></dd></dl></div>
@@ -660,9 +774,9 @@ of a case class:</p><pre><span class="kw">case</span> <span class="kw">class</sp
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowLowPriority#taggedGeneric" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="taggedGeneric[A,R](implicitgen:shapeless.LabelledGeneric.Aux[A,R],implicittagged:GenericJsonSchemaLowLowPriority.this.GenericTagged[R],implicitct:scala.reflect.ClassTag[A]):GenericJsonSchemaLowLowPriority.this.GenericTagged[A]"></a><a id="taggedGeneric[A,R](Aux[A,R],GenericTagged[R],ClassTag[A]):GenericTagged[A]"></a>
+      <a id="taggedGeneric[A,R](implicitgen:shapeless.LabelledGeneric.Aux[A,R],implicittagged:GenericJsonSchemaLowLowPriority.this.GenericTagged[R],implicitname:GenericJsonSchemaLowLowPriority.this.GenericSchemaName[A],implicitdiscriminator:GenericJsonSchemaLowLowPriority.this.GenericDiscriminatorName[A]):GenericJsonSchemaLowLowPriority.this.GenericTagged[A]"></a><a id="taggedGeneric[A,R](Aux[A,R],GenericTagged[R],GenericSchemaName[A],GenericDiscriminatorName[A]):GenericTagged[A]"></a>
       <span class="permalink">
-      <a href="../../endpoints/generic/JsonSchemas$GenericJsonSchema$.html#taggedGeneric[A,R](implicitgen:shapeless.LabelledGeneric.Aux[A,R],implicittagged:GenericJsonSchemaLowLowPriority.this.GenericTagged[R],implicitct:scala.reflect.ClassTag[A]):GenericJsonSchemaLowLowPriority.this.GenericTagged[A]" title="Permalink">
+      <a href="../../endpoints/generic/JsonSchemas$GenericJsonSchema$.html#taggedGeneric[A,R](implicitgen:shapeless.LabelledGeneric.Aux[A,R],implicittagged:GenericJsonSchemaLowLowPriority.this.GenericTagged[R],implicitname:GenericJsonSchemaLowLowPriority.this.GenericSchemaName[A],implicitdiscriminator:GenericJsonSchemaLowLowPriority.this.GenericDiscriminatorName[A]):GenericJsonSchemaLowLowPriority.this.GenericTagged[A]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -671,7 +785,7 @@ of a case class:</p><pre><span class="kw">case</span> <span class="kw">class</sp
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">taggedGeneric</span><span class="tparams">[<span name="A">A</span>, <span name="R">R</span>]</span><span class="params">(<span class="implicit">implicit </span><span name="gen">gen: <span class="extype" name="shapeless.LabelledGeneric.Aux">Aux</span>[<span class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowLowPriority.taggedGeneric.A">A</span>, <span class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowLowPriority.taggedGeneric.R">R</span>]</span>, <span name="tagged">tagged: <a href="#GenericTagged[A]extendsJsonSchemas.this.GenericJsonSchema[A]" class="extmbr" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowLowPriority.GenericTagged">GenericTagged</a>[<span class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowLowPriority.taggedGeneric.R">R</span>]</span>, <span name="ct">ct: <a href="https://www.scala-lang.org/api/2.12.10/scala/reflect/ClassTag.html#scala.reflect.ClassTag" class="extype" name="scala.reflect.ClassTag">ClassTag</a>[<span class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowLowPriority.taggedGeneric.A">A</span>]</span>)</span><span class="result">: <a href="#GenericTagged[A]extendsJsonSchemas.this.GenericJsonSchema[A]" class="extmbr" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowLowPriority.GenericTagged">GenericTagged</a>[<span class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowLowPriority.taggedGeneric.A">A</span>]</span>
+        <span class="name">taggedGeneric</span><span class="tparams">[<span name="A">A</span>, <span name="R">R</span>]</span><span class="params">(<span class="implicit">implicit </span><span name="gen">gen: <span class="extype" name="shapeless.LabelledGeneric.Aux">Aux</span>[<span class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowLowPriority.taggedGeneric.A">A</span>, <span class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowLowPriority.taggedGeneric.R">R</span>]</span>, <span name="tagged">tagged: <a href="#GenericTagged[A]extendsJsonSchemas.this.GenericJsonSchema[A]" class="extmbr" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowLowPriority.GenericTagged">GenericTagged</a>[<span class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowLowPriority.taggedGeneric.R">R</span>]</span>, <span name="name">name: <a href="#GenericSchemaName[A]extendsAnyRef" class="extmbr" name="endpoints.generic.JsonSchemas.GenericSchemaNames.GenericSchemaName">GenericSchemaName</a>[<span class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowLowPriority.taggedGeneric.A">A</span>]</span>, <span name="discriminator">discriminator: <a href="#GenericDiscriminatorName[A]extendsAnyRef" class="extmbr" name="endpoints.generic.JsonSchemas.GenericDiscriminatorNames.GenericDiscriminatorName">GenericDiscriminatorName</a>[<span class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowLowPriority.taggedGeneric.A">A</span>]</span>)</span><span class="result">: <a href="#GenericTagged[A]extendsJsonSchemas.this.GenericJsonSchema[A]" class="extmbr" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowLowPriority.GenericTagged">GenericTagged</a>[<span class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowLowPriority.taggedGeneric.A">A</span>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="JsonSchemas$GenericJsonSchemaLowLowPriority.html" class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowLowPriority">GenericJsonSchemaLowLowPriority</a></dd></dl></div>
@@ -759,6 +873,22 @@ of a case class:</p><pre><span class="kw">case</span> <span class="kw">class</sp
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li name="endpoints.generic.JsonSchemas.GenericSchemaNames.GenericSchemaName" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="GenericSchemaName"></a><a id="GenericSchemaName:GenericSchemaName"></a>
+      <span class="permalink">
+      <a href="../../endpoints/generic/JsonSchemas$GenericSchemaNames$GenericSchemaName$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="JsonSchemas$GenericSchemaNames$GenericSchemaName$.html"><span class="name">GenericSchemaName</span></a><span class="result"> extends <a href="JsonSchemas$GenericSchemaNames$GenericSchemaNameLowPriority.html" class="extype" name="endpoints.generic.JsonSchemas.GenericSchemaNames.GenericSchemaNameLowPriority">GenericSchemaNameLowPriority</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="JsonSchemas$GenericSchemaNames.html" class="extype" name="endpoints.generic.JsonSchemas.GenericSchemaNames">GenericSchemaNames</a></dd></dl></div>
     </li>
               </ol>
             </div>
@@ -769,7 +899,11 @@ of a case class:</p><pre><span class="kw">case</span> <span class="kw">class</sp
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowPriority">
+        <div class="parent" name="endpoints.generic.JsonSchemas.GenericSchemaNames">
+              <h3>Inherited from <a href="JsonSchemas$GenericSchemaNames.html" class="extype" name="endpoints.generic.JsonSchemas.GenericSchemaNames">GenericSchemaNames</a></h3>
+            </div><div class="parent" name="endpoints.generic.JsonSchemas.GenericDiscriminatorNames">
+              <h3>Inherited from <a href="JsonSchemas$GenericDiscriminatorNames.html" class="extype" name="endpoints.generic.JsonSchemas.GenericDiscriminatorNames">GenericDiscriminatorNames</a></h3>
+            </div><div class="parent" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowPriority">
               <h3>Inherited from <a href="JsonSchemas$GenericJsonSchemaLowPriority.html" class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowPriority">GenericJsonSchemaLowPriority</a></h3>
             </div><div class="parent" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowLowPriority">
               <h3>Inherited from <a href="JsonSchemas$GenericJsonSchemaLowLowPriority.html" class="extype" name="endpoints.generic.JsonSchemas.GenericJsonSchemaLowLowPriority">GenericJsonSchemaLowLowPriority</a></h3>

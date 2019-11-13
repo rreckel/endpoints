@@ -21,7 +21,7 @@
             <div class="row">
               <div class="large-12 columns a_limited top-bar">
                 <div class="top-bar-left">
-                  <p>endpoints 0.11.0</p>
+                  <p>endpoints 0.12.0</p>
 
                 </div>
                 <div class="top-bar-right align-right row">
@@ -56,7 +56,7 @@
 <p>Client and server backed by <a href="https://www.playframework.com/">Play framework</a>.</p>
 <h2 id="client" class="a_section" data-magellan-target="client">Client<a class="a_hlink" href="#client"></a></h2>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
-<pre class="hljs"><code class="language-scala"><span class="hljs-string">"org.julienrf"</span> %% <span class="hljs-string">"endpoints-play-client"</span> % <span class="hljs-string">"0.11.0"</span>
+<pre class="hljs"><code class="language-scala"><span class="hljs-string">"org.julienrf"</span> %% <span class="hljs-string">"endpoints-play-client"</span> % <span class="hljs-string">"0.12.0"</span>
 </code></pre>
 </div></div>
 <p><a href="../api/endpoints/play/client/index.html">API documentation</a></p>
@@ -64,19 +64,19 @@
 <code class="hljs">A</code> to <code class="hljs">Future[B]</code>:</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
 <pre class="hljs"><code class="language-scala"><span class="hljs-class"><span class="hljs-keyword">type</span> <span class="hljs-title">Endpoint</span>[<span class="hljs-type">A</span>, <span class="hljs-type">B</span>] </span>= <span class="hljs-type">A</span> =&gt; <span class="hljs-type">Future</span>[<span class="hljs-type">B</span>]</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.11.0/play/client/src/main/scala/endpoints/play/client/Endpoints.scala#L142" class="a_sourcelink">Endpoints.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.12.0/play/client/src/main/scala/endpoints/play/client/Endpoints.scala#L142" class="a_sourcelink">Endpoints.scala</a></div></div>
 <p>This means that, given the following endpoint definition:</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
 <pre class="hljs"><code class="language-scala"><span class="hljs-keyword">val</span> someResource: <span class="hljs-type">Endpoint</span>[<span class="hljs-type">Int</span>, <span class="hljs-type">String</span>] =
   endpoint(get(path / <span class="hljs-string">"some-resource"</span> / segment[<span class="hljs-type">Int</span>]()), ok(textResponse))</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.11.0/algebras/algebra/src/test/scala/endpoints/algebra/EndpointsDocs.scala#L75-L76" class="a_sourcelink">EndpointsDocs.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.12.0/algebras/algebra/src/test/scala/endpoints/algebra/EndpointsDocs.scala#L75-L76" class="a_sourcelink">EndpointsDocs.scala</a></div></div>
 <p>It can be invoked as follows:</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
 <pre class="hljs"><code class="language-scala"><span class="hljs-keyword">val</span> eventuallyString: <span class="hljs-type">Future</span>[<span class="hljs-type">String</span>] = someResource(<span class="hljs-number">42</span>)</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.11.0/play/client/src/test/scala/endpoints/play/client/EndpointsDocs.scala#L10" class="a_sourcelink">EndpointsDocs.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.12.0/play/client/src/test/scala/endpoints/play/client/EndpointsDocs.scala#L10" class="a_sourcelink">EndpointsDocs.scala</a></div></div>
 <h2 id="server" class="a_section" data-magellan-target="server">Server<a class="a_hlink" href="#server"></a></h2>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
-<pre class="hljs"><code class="language-scala"><span class="hljs-string">"org.julienrf"</span> %% <span class="hljs-string">"endpoints-play-server"</span> % <span class="hljs-string">"0.11.0"</span>
+<pre class="hljs"><code class="language-scala"><span class="hljs-string">"org.julienrf"</span> %% <span class="hljs-string">"endpoints-play-server"</span> % <span class="hljs-string">"0.12.0"</span>
 </code></pre>
 </div></div>
 <p><a href="../api/endpoints/play/server/index.html">API documentation</a></p>
@@ -87,14 +87,14 @@ value that can be integrated to your Play application.</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
 <pre class="hljs"><code class="language-scala"><span class="hljs-keyword">val</span> someResource: <span class="hljs-type">Endpoint</span>[<span class="hljs-type">Int</span>, <span class="hljs-type">String</span>] =
   endpoint(get(path / <span class="hljs-string">"some-resource"</span> / segment[<span class="hljs-type">Int</span>]()), ok(textResponse))</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.11.0/algebras/algebra/src/test/scala/endpoints/algebra/EndpointsDocs.scala#L75-L76" class="a_sourcelink">EndpointsDocs.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.12.0/algebras/algebra/src/test/scala/endpoints/algebra/EndpointsDocs.scala#L75-L76" class="a_sourcelink">EndpointsDocs.scala</a></div></div>
 <p>It can be implemented as follows:</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
 <pre class="hljs"><code class="language-scala"><span class="hljs-keyword">val</span> routes: <span class="hljs-type">Router</span>.<span class="hljs-type">Routes</span> =
   routesFromEndpoints(
     someResource.implementedBy(x =&gt; <span class="hljs-string">s"Received <span class="hljs-subst">$x</span>"</span>)
   )</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.11.0/play/server/src/test/scala/endpoints/play/server/EndpointsDocs.scala#L9-L12" class="a_sourcelink">EndpointsDocs.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.12.0/play/server/src/test/scala/endpoints/play/server/EndpointsDocs.scala#L9-L12" class="a_sourcelink">EndpointsDocs.scala</a></div></div>
 <p>In practice, the routes are put in a class taking an <code class="hljs">endpoints.play.server.PlayComponents</code>
 parameter. An HTTP server can then be started as in the following example:</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
@@ -109,7 +109,7 @@ parameter. An HTTP server can then be started as in the following example:</p>
     counterServer.routes orElse documentationServer.routes
   }
 }</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.11.0/documentation/examples/quickstart/server/src/main/scala/quickstart/Main.scala#L9-L19" class="a_sourcelink">Main.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.12.0/documentation/examples/quickstart/server/src/main/scala/quickstart/Main.scala#L9-L19" class="a_sourcelink">Main.scala</a></div></div>
 <h3 id="error-handling" class="a_section" data-magellan-target="error-handling">Error handling<a class="a_hlink" href="#error-handling"></a></h3>
 <p>When the server processes requests, three kinds of errors can happen: the incoming request doesn’t match
 any endpoint, the request does match an endpoint but is invalid (e.g. one parameter has a wrong type), or

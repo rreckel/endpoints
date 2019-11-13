@@ -21,7 +21,7 @@
             <div class="row">
               <div class="large-12 columns a_limited top-bar">
                 <div class="top-bar-left">
-                  <p>endpoints 0.11.0</p>
+                  <p>endpoints 0.12.0</p>
 
                 </div>
                 <div class="top-bar-right align-right row">
@@ -106,7 +106,7 @@ is serialized and is cryptographically signed by the server (that’s why client
 arbitrary JWT). In our case, the user information we are interested in is only its name:</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
 <pre class="hljs"><code class="language-scala"><span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">UserInfo</span>(<span class="hljs-params">name: <span class="hljs-type">String</span></span>)</span></code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.11.0/documentation/examples/authentication/src/main/scala/authentication/Authentication.scala#L115" class="a_sourcelink">Authentication.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.12.0/documentation/examples/authentication/src/main/scala/authentication/Authentication.scala#L115" class="a_sourcelink">Authentication.scala</a></div></div>
 <p>The type used to model the authentication token will be different on client-side and
 server-side. On server-side, we are only interested in the user info and we want to let the algebra
 interpreter serialize and sign it. However, on client-side we need to also keep the serialized
@@ -142,7 +142,7 @@ type member <code class="hljs">AuthenticationToken</code>.</p>
       .xmap(_.fold[<span class="hljs-type">Option</span>[<span class="hljs-type">A</span>]](<span class="hljs-type">Some</span>(_), _ =&gt; <span class="hljs-type">None</span>))(_.toLeft(()))
 
 }</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.11.0/documentation/examples/authentication/src/main/scala/authentication/Authentication.scala#L9-L110" class="a_sourcelink">Authentication.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.12.0/documentation/examples/authentication/src/main/scala/authentication/Authentication.scala#L9-L110" class="a_sourcelink">Authentication.scala</a></div></div>
 <p>We define our algebra in a trait named <code class="hljs">Authentication</code>, which extends the main
 algebra, <code class="hljs">algebra.Endpoints</code>.</p>
 <p>Given this new algebra, we can now describe the login endpoint as follows:</p>
@@ -163,7 +163,7 @@ algebra, <code class="hljs">algebra.Endpoints</code>.</p>
   )
 
 }</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.11.0/documentation/examples/authentication/src/main/scala/authentication/Usage.scala#L4-L49" class="a_sourcelink">Usage.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.12.0/documentation/examples/authentication/src/main/scala/authentication/Usage.scala#L4-L49" class="a_sourcelink">Usage.scala</a></div></div>
 <p>The <code class="hljs">login</code> endpoint is defined in an <code class="hljs">AuthenticationTrait</code>, which uses (by inheritance)
 the main algebra, <code class="hljs">algebra.Endpoints</code>, and the <code class="hljs">Authentication</code> algebra.</p>
 <p>The endpoint takes request using the <code class="hljs">GET</code> method, the <code class="hljs">/login</code> URL and a query string
@@ -194,7 +194,7 @@ and implements the <code class="hljs">authenticationToken</code> and <code class
     userInfo =&gt; <span class="hljs-type">Results</span>.<span class="hljs-type">Ok</span>.withJwtSession(<span class="hljs-type">JwtSession</span>().+(<span class="hljs-string">"user"</span>, userInfo))
 
 }</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.11.0/documentation/examples/authentication/src/main/scala/authentication/Authentication.scala#L14-L259" class="a_sourcelink">Authentication.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.12.0/documentation/examples/authentication/src/main/scala/authentication/Authentication.scala#L14-L259" class="a_sourcelink">Authentication.scala</a></div></div>
 <p>The <code class="hljs">ServerAuthentication</code> trait extends the <code class="hljs">Authentication</code> algebra as well
 as a server <code class="hljs">Endpoints</code> interpreter based on Play framework.</p>
 <p>The <code class="hljs">authenticationToken</code> operation is straightforwardly implemented by
@@ -222,7 +222,7 @@ the following:</p>
   }
 
 }</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.11.0/documentation/examples/authentication/src/main/scala/authentication/Usage.scala#L8-L88" class="a_sourcelink">Usage.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.12.0/documentation/examples/authentication/src/main/scala/authentication/Usage.scala#L8-L88" class="a_sourcelink">Usage.scala</a></div></div>
 <p>Our <code class="hljs">Server</code> class extends the traits that defines the <code class="hljs">login</code> endpoint,
 namely the <code class="hljs">AuthenticationEndpoints</code>, and mixes the Play-based server
 interpreter as well as our <code class="hljs">ServerAuthentication</code> interpreter.</p>
@@ -314,7 +314,7 @@ recipe: we define a trait <code class="hljs">ClientAuthentication</code>, which 
   }
 
 }</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.11.0/documentation/examples/authentication/src/main/scala/authentication/Authentication.scala#L20-L198" class="a_sourcelink">Authentication.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.12.0/documentation/examples/authentication/src/main/scala/authentication/Authentication.scala#L20-L198" class="a_sourcelink">Authentication.scala</a></div></div>
 <p>The <code class="hljs">AuthenticationToken</code> type is implemented as a class whose
 constructor is private. If it was public, clients could build
 a fake authentication token which would then fail at runtime
@@ -355,7 +355,7 @@ that the following scenarios work as expected:</p>
     loginResult &lt;- client.login(<span class="hljs-string">"foobar"</span>)
   } <span class="hljs-keyword">yield</span> assert(loginResult.nonEmpty)
 }</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.11.0/documentation/examples/authentication/src/test/scala/authentication/AuthenticationTest.scala#L76-L85" class="a_sourcelink">AuthenticationTest.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.12.0/documentation/examples/authentication/src/test/scala/authentication/AuthenticationTest.scala#L76-L85" class="a_sourcelink">AuthenticationTest.scala</a></div></div>
 <p>These tests check that if we login with an unknown API key we get no authentication
 token, but if we login with the <code class="hljs">&quot;foobar&quot;</code> API key then we get some authentication token.</p>
 <h2 id="protected-endpoints" class="a_section" data-magellan-target="protected-endpoints">Protected endpoints<a class="a_hlink" href="#protected-endpoints"></a></h2>
@@ -420,7 +420,7 @@ puts all the pieces together.</p>
     authenticatedRequest(method, url, requestEntity),
     wheneverAuthenticated(response)
   )</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.11.0/documentation/examples/authentication/src/main/scala/authentication/Authentication.scala#L59-L106" class="a_sourcelink">Authentication.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.12.0/documentation/examples/authentication/src/main/scala/authentication/Authentication.scala#L59-L106" class="a_sourcelink">Authentication.scala</a></div></div>
 <p>The <code class="hljs">authenticatedRequest</code> method defines a request expecting an authentication token
 to be provided in the <code class="hljs">Authorization</code> header. The <code class="hljs">wheneverAuthenticated</code> method transforms
 a given <code class="hljs">Response[A]</code>
@@ -463,7 +463,7 @@ is static—of type <code class="hljs">Url[Unit]</code>—the tuplers return <co
   emptyRequest,
   ok(textResponse)
 )</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.11.0/documentation/examples/authentication/src/main/scala/authentication/Usage.scala#L35-L45" class="a_sourcelink">Usage.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.12.0/documentation/examples/authentication/src/main/scala/authentication/Usage.scala#L35-L45" class="a_sourcelink">Usage.scala</a></div></div>
 <p>Since the request URL is static and the request has no entity, the information carried
 by the request is just the <code class="hljs">AuthenticationToken</code>.</p>
 <h3 id="server-interpreter-1" class="a_section" data-magellan-target="server-interpreter-1">Server interpreter<a class="a_hlink" href="#server-interpreter-1"></a></h3>
@@ -501,13 +501,13 @@ by the request is just the <code class="hljs">AuthenticationToken</code>.</p>
 <span class="hljs-comment">// takes care of returning `Unauthorized` if the request</span>
 <span class="hljs-comment">// is not properly authenticated</span>
 <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">wheneverAuthenticated</span></span>[<span class="hljs-type">A</span>](response: <span class="hljs-type">Response</span>[<span class="hljs-type">A</span>]): <span class="hljs-type">Response</span>[<span class="hljs-type">A</span>] = response</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.11.0/documentation/examples/authentication/src/main/scala/authentication/Authentication.scala#L224-L255" class="a_sourcelink">Authentication.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.12.0/documentation/examples/authentication/src/main/scala/authentication/Authentication.scala#L224-L255" class="a_sourcelink">Authentication.scala</a></div></div>
 <p>And the protected endpoint can be implemented as follows:</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
 <pre class="hljs"><code class="language-scala">  <span class="hljs-comment">// Note that the `AuthenticationToken` is available to the implementations</span>
   <span class="hljs-comment">// It can be used to check authorizations</span>
   someResource.implementedBy(token =&gt; <span class="hljs-string">s"Hello <span class="hljs-subst">${token.name}</span>!"</span>)</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.11.0/documentation/examples/authentication/src/main/scala/authentication/Usage.scala#L81-L83" class="a_sourcelink">Usage.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.12.0/documentation/examples/authentication/src/main/scala/authentication/Usage.scala#L81-L83" class="a_sourcelink">Usage.scala</a></div></div>
 <h3 id="client-interpreter-1" class="a_section" data-magellan-target="client-interpreter-1">Client interpreter<a class="a_hlink" href="#client-interpreter-1"></a></h3>
 <p>And our Play-based client is implemented as follows:</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
@@ -534,7 +534,7 @@ by the request is just the <code class="hljs">AuthenticationToken</code>.</p>
     response(status, headers)
   }
 }</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.11.0/documentation/examples/authentication/src/main/scala/authentication/Authentication.scala#L172-L194" class="a_sourcelink">Authentication.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.12.0/documentation/examples/authentication/src/main/scala/authentication/Authentication.scala#L172-L194" class="a_sourcelink">Authentication.scala</a></div></div>
 <h3 id="putting-things-together-1" class="a_section" data-magellan-target="putting-things-together-1">Putting things together<a class="a_hlink" href="#putting-things-together-1"></a></h3>
 <p>Our <code class="hljs">Client</code> and <code class="hljs">Server</code> instances are now able to have more sophisticated exchanges:</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
@@ -546,7 +546,7 @@ by the request is just the <code class="hljs">AuthenticationToken</code>.</p>
     resource &lt;- client.someResource(token)
   } <span class="hljs-keyword">yield</span> assert(resource == <span class="hljs-string">"Hello Alice!"</span>)
 }</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.11.0/documentation/examples/authentication/src/test/scala/authentication/AuthenticationTest.scala#L88-L95" class="a_sourcelink">AuthenticationTest.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.12.0/documentation/examples/authentication/src/test/scala/authentication/AuthenticationTest.scala#L88-L95" class="a_sourcelink">AuthenticationTest.scala</a></div></div>
 <p>This test first gets an authentication token by calling the <code class="hljs">login</code> endpoint, and then
 accesses the protected endpoint by supplying its token.</p>
 <h2 id="conclusion" class="a_section" data-magellan-target="conclusion">Conclusion<a class="a_hlink" href="#conclusion"></a></h2>
