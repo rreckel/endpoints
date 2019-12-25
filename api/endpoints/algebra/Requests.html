@@ -143,18 +143,18 @@
                         <a href="BasicAuthentication.html" title="Provides vocabulary to describe endpoints that use Basic HTTP authentication.">BasicAuthentication</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
-                        <a class="trait" href="BuiltInErrors.html" title="Uses endpoints built-in error types:"></a>
-                        <a href="BuiltInErrors.html" title="Uses endpoints built-in error types:">BuiltInErrors</a>
+                        <a class="trait" href="BuiltInErrors.html" title="Interpreter for the Errors algebra that uses endpoints built-in error types:"></a>
+                        <a href="BuiltInErrors.html" title="Interpreter for the Errors algebra that uses endpoints built-in error types:">BuiltInErrors</a>
                       </li><li class="current-entities indented2">
-                        <span class="separator"></span>
+                        <a class="object" href="Codec$.html" title=""></a>
                         <a class="trait" href="Codec.html" title="A way to encode and decode values"></a>
                         <a href="Codec.html" title="A way to encode and decode values">Codec</a>
                       </li><li class="current-entities indented2">
-                        <span class="separator"></span>
+                        <a class="object" href="Decoder$.html" title=""></a>
                         <a class="trait" href="Decoder.html" title="A way to decode a From value into a To value."></a>
                         <a href="Decoder.html" title="A way to decode a From value into a To value.">Decoder</a>
                       </li><li class="current-entities indented2">
-                        <span class="separator"></span>
+                        <a class="object" href="Encoder$.html" title=""></a>
                         <a class="trait" href="Encoder.html" title="A way to encode a From value into a To value"></a>
                         <a href="Encoder.html" title="A way to encode a From value into a To value">Encoder</a>
                       </li><li class="current-entities indented2">
@@ -171,20 +171,20 @@
                         <a href="Errors.html" title="Defines the error types used to model client and server errors.">Errors</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
-                        <a class="object" href="InvalidCodec$.html" title=""></a>
-                        <a href="InvalidCodec$.html" title="">InvalidCodec</a>
+                        <a class="trait" href="JsonCodecs.html" title="Fixes both the JsonRequest and JsonResponse types to be a same JsonCodec type."></a>
+                        <a href="JsonCodecs.html" title="Fixes both the JsonRequest and JsonResponse types to be a same JsonCodec type.">JsonCodecs</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="trait" href="JsonEntities.html" title="Algebra interface for describing JSON entities in requests and responses."></a>
                         <a href="JsonEntities.html" title="Algebra interface for describing JSON entities in requests and responses.">JsonEntities</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
-                        <a class="trait" href="JsonEntitiesFromCodec.html" title="Fixes both the JsonRequest and JsonResponse types to be Codec."></a>
-                        <a href="JsonEntitiesFromCodec.html" title="Fixes both the JsonRequest and JsonResponse types to be Codec.">JsonEntitiesFromCodec</a>
+                        <a class="trait" href="JsonEntitiesFromCodecs.html" title="Turns a JsonCodec into a Codec."></a>
+                        <a href="JsonEntitiesFromCodecs.html" title="Turns a JsonCodec into a Codec.">JsonEntitiesFromCodecs</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
-                        <a class="trait" href="JsonSchemaEntities.html" title="Partially applies the endpoints.algebra.JsonEntities algebra interface to fix the JsonRequest and JsonResponse types to be JsonSchema."></a>
-                        <a href="JsonSchemaEntities.html" title="Partially applies the endpoints.algebra.JsonEntities algebra interface to fix the JsonRequest and JsonResponse types to be JsonSchema.">JsonSchemaEntities</a>
+                        <a class="trait" href="JsonEntitiesFromSchemas.html" title="Partially applies the JsonEntities algebra interface to fix the JsonRequest and JsonResponse types to be JsonSchema."></a>
+                        <a href="JsonEntitiesFromSchemas.html" title="Partially applies the JsonEntities algebra interface to fix the JsonRequest and JsonResponse types to be JsonSchema.">JsonEntitiesFromSchemas</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="trait" href="JsonSchemas.html" title="An algebra interface for describing algebraic data types."></a>
@@ -253,7 +253,7 @@
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/julienrf/endpoints/blob/v0.12.0/algebras/algebra/src/main/scala/endpoints/algebra/Requests.scala" target="_blank">Requests.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/julienrf/endpoints/blob/v0.13.0/algebras/algebra/src/main/scala/endpoints/algebra/Requests.scala" target="_blank">Requests.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -262,12 +262,12 @@
             <span class="toggle">
               Known Subclasses
             </span>
-            <div class="subClasses hiddenContent"><a href="../akkahttp/client/BasicAuthentication.html" class="extype" name="endpoints.akkahttp.client.BasicAuthentication">BasicAuthentication</a>, <a href="../akkahttp/client/Endpoints.html" class="extype" name="endpoints.akkahttp.client.Endpoints">Endpoints</a>, <a href="../akkahttp/client/EndpointsWithCustomErrors.html" class="extype" name="endpoints.akkahttp.client.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a>, <a href="../akkahttp/client/JsonEntitiesFromCodec.html" class="extype" name="endpoints.akkahttp.client.JsonEntitiesFromCodec">JsonEntitiesFromCodec</a>, <a href="../akkahttp/client/MuxEndpoints.html" class="extype" name="endpoints.akkahttp.client.MuxEndpoints">MuxEndpoints</a>, <a href="../akkahttp/client/circe/JsonSchemaEntities.html" class="extype" name="endpoints.akkahttp.client.circe.JsonSchemaEntities">JsonSchemaEntities</a>, <a href="../akkahttp/server/BasicAuthentication.html" class="extype" name="endpoints.akkahttp.server.BasicAuthentication">BasicAuthentication</a>, <a href="../akkahttp/server/Endpoints.html" class="extype" name="endpoints.akkahttp.server.Endpoints">Endpoints</a>, <a href="../akkahttp/server/EndpointsWithCustomErrors.html" class="extype" name="endpoints.akkahttp.server.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a>, <a href="../akkahttp/server/JsonEntities.html" class="extype" name="endpoints.akkahttp.server.JsonEntities">JsonEntities</a>, <a href="../akkahttp/server/JsonEntitiesFromCodec.html" class="extype" name="endpoints.akkahttp.server.JsonEntitiesFromCodec">JsonEntitiesFromCodec</a>, <a href="../akkahttp/server/MuxEndpoints.html" class="extype" name="endpoints.akkahttp.server.MuxEndpoints">MuxEndpoints</a>, <a href="../akkahttp/server/circe/JsonSchemaEntities.html" class="extype" name="endpoints.akkahttp.server.circe.JsonSchemaEntities">JsonSchemaEntities</a>, <a href="../akkahttp/server/playjson/JsonSchemaEntities.html" class="extype" name="endpoints.akkahttp.server.playjson.JsonSchemaEntities">JsonSchemaEntities</a>, <a href="Assets.html" class="extype" name="endpoints.algebra.Assets">Assets</a>, <a href="BasicAuthentication.html" class="extype" name="endpoints.algebra.BasicAuthentication">BasicAuthentication</a>, <a href="Endpoints.html" class="extype" name="endpoints.algebra.Endpoints">Endpoints</a>, <a href="EndpointsWithCustomErrors.html" class="extype" name="endpoints.algebra.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a>, <a href="JsonEntities.html" class="extype" name="endpoints.algebra.JsonEntities">JsonEntities</a>, <a href="JsonEntitiesFromCodec.html" class="extype" name="endpoints.algebra.JsonEntitiesFromCodec">JsonEntitiesFromCodec</a>, <a href="JsonSchemaEntities.html" class="extype" name="endpoints.algebra.JsonSchemaEntities">JsonSchemaEntities</a>, <a href="LowLevelEndpoints.html" class="extype" name="endpoints.algebra.LowLevelEndpoints">LowLevelEndpoints</a>, <a href="MuxEndpoints.html" class="extype" name="endpoints.algebra.MuxEndpoints">MuxEndpoints</a>, <a href="circe/JsonEntitiesFromCodec.html" class="extype" name="endpoints.algebra.circe.JsonEntitiesFromCodec">JsonEntitiesFromCodec</a>, <a href="playjson/JsonEntitiesFromCodec.html" class="extype" name="endpoints.algebra.playjson.JsonEntitiesFromCodec">JsonEntitiesFromCodec</a>, <a href="../openapi/Assets.html" class="extype" name="endpoints.openapi.Assets">Assets</a>, <a href="../openapi/BasicAuthentication.html" class="extype" name="endpoints.openapi.BasicAuthentication">BasicAuthentication</a>, <a href="../openapi/Endpoints.html" class="extype" name="endpoints.openapi.Endpoints">Endpoints</a>, <a href="../openapi/EndpointsWithCustomErrors.html" class="extype" name="endpoints.openapi.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a>, <a href="../openapi/JsonEntities.html" class="extype" name="endpoints.openapi.JsonEntities">JsonEntities</a>, <a href="../openapi/JsonSchemaEntities.html" class="extype" name="endpoints.openapi.JsonSchemaEntities">JsonSchemaEntities</a>, <a href="../openapi/MuxEndpoints.html" class="extype" name="endpoints.openapi.MuxEndpoints">MuxEndpoints</a>, <a href="../openapi/Requests.html" class="extype" name="endpoints.openapi.Requests">Requests</a>, <a href="../play/client/BasicAuthentication.html" class="extype" name="endpoints.play.client.BasicAuthentication">BasicAuthentication</a>, <a href="../play/client/Endpoints.html" class="extype" name="endpoints.play.client.Endpoints">Endpoints</a>, <a href="../play/client/EndpointsWithCustomErrors.html" class="extype" name="endpoints.play.client.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a>, <a href="../play/client/JsonEntitiesFromCodec.html" class="extype" name="endpoints.play.client.JsonEntitiesFromCodec">JsonEntitiesFromCodec</a>, <a href="../play/client/MuxEndpoints.html" class="extype" name="endpoints.play.client.MuxEndpoints">MuxEndpoints</a>, <a href="../play/server/Assets.html" class="extype" name="endpoints.play.server.Assets">Assets</a>, <a href="../play/server/BasicAuthentication.html" class="extype" name="endpoints.play.server.BasicAuthentication">BasicAuthentication</a>, <a href="../play/server/Endpoints.html" class="extype" name="endpoints.play.server.Endpoints">Endpoints</a>, <a href="../play/server/EndpointsWithCustomErrors.html" class="extype" name="endpoints.play.server.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a>, <a href="../play/server/JsonEntitiesFromCodec.html" class="extype" name="endpoints.play.server.JsonEntitiesFromCodec">JsonEntitiesFromCodec</a>, <a href="../play/server/LowLevelEndpoints.html" class="extype" name="endpoints.play.server.LowLevelEndpoints">LowLevelEndpoints</a>, <a href="../play/server/MuxEndpoints.html" class="extype" name="endpoints.play.server.MuxEndpoints">MuxEndpoints</a>, <a href="../play/server/circe/JsonEntities.html" class="extype" name="endpoints.play.server.circe.JsonEntities">JsonEntities</a>, <a href="../play/server/circe/JsonEntitiesFromCodec.html" class="extype" name="endpoints.play.server.circe.JsonEntitiesFromCodec">JsonEntitiesFromCodec</a>, <a href="../play/server/circe/JsonSchemaEntities.html" class="extype" name="endpoints.play.server.circe.JsonSchemaEntities">JsonSchemaEntities</a>, <a href="../play/server/playjson/JsonSchemaEntities.html" class="extype" name="endpoints.play.server.playjson.JsonSchemaEntities">JsonSchemaEntities</a>, <a href="../scalaj/client/BasicAuthentication.html" class="extype" name="endpoints.scalaj.client.BasicAuthentication">BasicAuthentication</a>, <a href="../scalaj/client/Endpoints.html" class="extype" name="endpoints.scalaj.client.Endpoints">Endpoints</a>, <a href="../scalaj/client/EndpointsWithCustomErrors.html" class="extype" name="endpoints.scalaj.client.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a>, <a href="../scalaj/client/JsonEntitiesFromCodec.html" class="extype" name="endpoints.scalaj.client.JsonEntitiesFromCodec">JsonEntitiesFromCodec</a>, <a href="../scalaj/client/Requests.html" class="extype" name="endpoints.scalaj.client.Requests">Requests</a>, <a href="../sttp/client/BasicAuthentication.html" class="extype" name="endpoints.sttp.client.BasicAuthentication">BasicAuthentication</a>, <a href="../sttp/client/Endpoints.html" class="extype" name="endpoints.sttp.client.Endpoints">Endpoints</a>, <a href="../sttp/client/EndpointsWithCustomErrors.html" class="extype" name="endpoints.sttp.client.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a>, <a href="../sttp/client/JsonEntitiesFromCodec.html" class="extype" name="endpoints.sttp.client.JsonEntitiesFromCodec">JsonEntitiesFromCodec</a>, <a href="../sttp/client/MuxEndpoints.html" class="extype" name="endpoints.sttp.client.MuxEndpoints">MuxEndpoints</a>, <a href="../xhr/Assets.html" class="extype" name="endpoints.xhr.Assets">Assets</a>, <a href="../xhr/BasicAuthentication.html" class="extype" name="endpoints.xhr.BasicAuthentication">BasicAuthentication</a>, <a href="../xhr/Endpoints.html" class="extype" name="endpoints.xhr.Endpoints">Endpoints</a>, <a href="../xhr/EndpointsWithCustomErrors.html" class="extype" name="endpoints.xhr.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a>, <a href="../xhr/JsonEntitiesFromCodec.html" class="extype" name="endpoints.xhr.JsonEntitiesFromCodec">JsonEntitiesFromCodec</a>, <a href="../xhr/LowLevelEndpoints.html" class="extype" name="endpoints.xhr.LowLevelEndpoints">LowLevelEndpoints</a>, <a href="../xhr/MuxEndpoints.html" class="extype" name="endpoints.xhr.MuxEndpoints">MuxEndpoints</a>, <a href="../xhr/circe/JsonEntities.html" class="extype" name="endpoints.xhr.circe.JsonEntities">JsonEntities</a>, <a href="../xhr/circe/JsonSchemaEntities.html" class="extype" name="endpoints.xhr.circe.JsonSchemaEntities">JsonSchemaEntities</a>, <a href="../xhr/faithful/Endpoints.html" class="extype" name="endpoints.xhr.faithful.Endpoints">Endpoints</a>, <a href="../xhr/faithful/MuxEndpoints.html" class="extype" name="endpoints.xhr.faithful.MuxEndpoints">MuxEndpoints</a>, <a href="../xhr/future/Endpoints.html" class="extype" name="endpoints.xhr.future.Endpoints">Endpoints</a>, <a href="../xhr/future/EndpointsWithCustomErrors.html" class="extype" name="endpoints.xhr.future.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a>, <a href="../xhr/thenable/Endpoints.html" class="extype" name="endpoints.xhr.thenable.Endpoints">Endpoints</a>, <a href="../xhr/thenable/EndpointsWithCustomErrors.html" class="extype" name="endpoints.xhr.thenable.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a>, <a href="../xhr/thenable/MuxEndpoints.html" class="extype" name="endpoints.xhr.thenable.MuxEndpoints">MuxEndpoints</a></div>
+            <div class="subClasses hiddenContent"><a href="../akkahttp/client/BasicAuthentication.html" class="extype" name="endpoints.akkahttp.client.BasicAuthentication">BasicAuthentication</a>, <a href="../akkahttp/client/Endpoints.html" class="extype" name="endpoints.akkahttp.client.Endpoints">Endpoints</a>, <a href="../akkahttp/client/EndpointsWithCustomErrors.html" class="extype" name="endpoints.akkahttp.client.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a>, <a href="../akkahttp/client/JsonEntitiesFromCodecs.html" class="extype" name="endpoints.akkahttp.client.JsonEntitiesFromCodecs">JsonEntitiesFromCodecs</a>, <a href="../akkahttp/client/JsonEntitiesFromSchemas.html" class="extype" name="endpoints.akkahttp.client.JsonEntitiesFromSchemas">JsonEntitiesFromSchemas</a>, <a href="../akkahttp/client/MuxEndpoints.html" class="extype" name="endpoints.akkahttp.client.MuxEndpoints">MuxEndpoints</a>, <a href="../akkahttp/server/BasicAuthentication.html" class="extype" name="endpoints.akkahttp.server.BasicAuthentication">BasicAuthentication</a>, <a href="../akkahttp/server/Endpoints.html" class="extype" name="endpoints.akkahttp.server.Endpoints">Endpoints</a>, <a href="../akkahttp/server/EndpointsWithCustomErrors.html" class="extype" name="endpoints.akkahttp.server.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a>, <a href="../akkahttp/server/JsonEntities.html" class="extype" name="endpoints.akkahttp.server.JsonEntities">JsonEntities</a>, <a href="../akkahttp/server/JsonEntitiesFromCodecs.html" class="extype" name="endpoints.akkahttp.server.JsonEntitiesFromCodecs">JsonEntitiesFromCodecs</a>, <a href="../akkahttp/server/JsonEntitiesFromEncodersAndDecoders.html" class="extype" name="endpoints.akkahttp.server.JsonEntitiesFromEncodersAndDecoders">JsonEntitiesFromEncodersAndDecoders</a>, <a href="../akkahttp/server/JsonEntitiesFromSchemas.html" class="extype" name="endpoints.akkahttp.server.JsonEntitiesFromSchemas">JsonEntitiesFromSchemas</a>, <a href="../akkahttp/server/MuxEndpoints.html" class="extype" name="endpoints.akkahttp.server.MuxEndpoints">MuxEndpoints</a>, <a href="Assets.html" class="extype" name="endpoints.algebra.Assets">Assets</a>, <a href="BasicAuthentication.html" class="extype" name="endpoints.algebra.BasicAuthentication">BasicAuthentication</a>, <a href="Endpoints.html" class="extype" name="endpoints.algebra.Endpoints">Endpoints</a>, <a href="EndpointsWithCustomErrors.html" class="extype" name="endpoints.algebra.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a>, <a href="JsonCodecs.html" class="extype" name="endpoints.algebra.JsonCodecs">JsonCodecs</a>, <a href="JsonEntities.html" class="extype" name="endpoints.algebra.JsonEntities">JsonEntities</a>, <a href="JsonEntitiesFromCodecs.html" class="extype" name="endpoints.algebra.JsonEntitiesFromCodecs">JsonEntitiesFromCodecs</a>, <a href="JsonEntitiesFromSchemas.html" class="extype" name="endpoints.algebra.JsonEntitiesFromSchemas">JsonEntitiesFromSchemas</a>, <a href="LowLevelEndpoints.html" class="extype" name="endpoints.algebra.LowLevelEndpoints">LowLevelEndpoints</a>, <a href="MuxEndpoints.html" class="extype" name="endpoints.algebra.MuxEndpoints">MuxEndpoints</a>, <a href="circe/JsonEntitiesFromCodecs.html" class="extype" name="endpoints.algebra.circe.JsonEntitiesFromCodecs">JsonEntitiesFromCodecs</a>, <a href="playjson/JsonEntitiesFromCodecs.html" class="extype" name="endpoints.algebra.playjson.JsonEntitiesFromCodecs">JsonEntitiesFromCodecs</a>, <a href="../openapi/Assets.html" class="extype" name="endpoints.openapi.Assets">Assets</a>, <a href="../openapi/BasicAuthentication.html" class="extype" name="endpoints.openapi.BasicAuthentication">BasicAuthentication</a>, <a href="../openapi/Endpoints.html" class="extype" name="endpoints.openapi.Endpoints">Endpoints</a>, <a href="../openapi/EndpointsWithCustomErrors.html" class="extype" name="endpoints.openapi.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a>, <a href="../openapi/JsonEntities.html" class="extype" name="endpoints.openapi.JsonEntities">JsonEntities</a>, <a href="../openapi/JsonEntitiesFromSchemas.html" class="extype" name="endpoints.openapi.JsonEntitiesFromSchemas">JsonEntitiesFromSchemas</a>, <a href="../openapi/MuxEndpoints.html" class="extype" name="endpoints.openapi.MuxEndpoints">MuxEndpoints</a>, <a href="../openapi/Requests.html" class="extype" name="endpoints.openapi.Requests">Requests</a>, <a href="../play/client/BasicAuthentication.html" class="extype" name="endpoints.play.client.BasicAuthentication">BasicAuthentication</a>, <a href="../play/client/Endpoints.html" class="extype" name="endpoints.play.client.Endpoints">Endpoints</a>, <a href="../play/client/EndpointsWithCustomErrors.html" class="extype" name="endpoints.play.client.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a>, <a href="../play/client/JsonEntitiesFromCodecs.html" class="extype" name="endpoints.play.client.JsonEntitiesFromCodecs">JsonEntitiesFromCodecs</a>, <a href="../play/client/MuxEndpoints.html" class="extype" name="endpoints.play.client.MuxEndpoints">MuxEndpoints</a>, <a href="../play/server/Assets.html" class="extype" name="endpoints.play.server.Assets">Assets</a>, <a href="../play/server/BasicAuthentication.html" class="extype" name="endpoints.play.server.BasicAuthentication">BasicAuthentication</a>, <a href="../play/server/Endpoints.html" class="extype" name="endpoints.play.server.Endpoints">Endpoints</a>, <a href="../play/server/EndpointsWithCustomErrors.html" class="extype" name="endpoints.play.server.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a>, <a href="../play/server/JsonEntitiesFromCodecs.html" class="extype" name="endpoints.play.server.JsonEntitiesFromCodecs">JsonEntitiesFromCodecs</a>, <a href="../play/server/JsonEntitiesFromEncodersAndDecoders.html" class="extype" name="endpoints.play.server.JsonEntitiesFromEncodersAndDecoders">JsonEntitiesFromEncodersAndDecoders</a>, <a href="../play/server/JsonEntitiesFromSchemas.html" class="extype" name="endpoints.play.server.JsonEntitiesFromSchemas">JsonEntitiesFromSchemas</a>, <a href="../play/server/LowLevelEndpoints.html" class="extype" name="endpoints.play.server.LowLevelEndpoints">LowLevelEndpoints</a>, <a href="../play/server/MuxEndpoints.html" class="extype" name="endpoints.play.server.MuxEndpoints">MuxEndpoints</a>, <a href="../play/server/circe/JsonEntities.html" class="extype" name="endpoints.play.server.circe.JsonEntities">JsonEntities</a>, <a href="../play/server/circe/JsonEntitiesFromCodecs.html" class="extype" name="endpoints.play.server.circe.JsonEntitiesFromCodecs">JsonEntitiesFromCodecs</a>, <a href="../scalaj/client/BasicAuthentication.html" class="extype" name="endpoints.scalaj.client.BasicAuthentication">BasicAuthentication</a>, <a href="../scalaj/client/Endpoints.html" class="extype" name="endpoints.scalaj.client.Endpoints">Endpoints</a>, <a href="../scalaj/client/EndpointsWithCustomErrors.html" class="extype" name="endpoints.scalaj.client.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a>, <a href="../scalaj/client/JsonEntitiesFromCodecs.html" class="extype" name="endpoints.scalaj.client.JsonEntitiesFromCodecs">JsonEntitiesFromCodecs</a>, <a href="../scalaj/client/Requests.html" class="extype" name="endpoints.scalaj.client.Requests">Requests</a>, <a href="../sttp/client/BasicAuthentication.html" class="extype" name="endpoints.sttp.client.BasicAuthentication">BasicAuthentication</a>, <a href="../sttp/client/Endpoints.html" class="extype" name="endpoints.sttp.client.Endpoints">Endpoints</a>, <a href="../sttp/client/EndpointsWithCustomErrors.html" class="extype" name="endpoints.sttp.client.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a>, <a href="../sttp/client/JsonEntitiesFromCodecs.html" class="extype" name="endpoints.sttp.client.JsonEntitiesFromCodecs">JsonEntitiesFromCodecs</a>, <a href="../sttp/client/MuxEndpoints.html" class="extype" name="endpoints.sttp.client.MuxEndpoints">MuxEndpoints</a>, <a href="../xhr/Assets.html" class="extype" name="endpoints.xhr.Assets">Assets</a>, <a href="../xhr/BasicAuthentication.html" class="extype" name="endpoints.xhr.BasicAuthentication">BasicAuthentication</a>, <a href="../xhr/Endpoints.html" class="extype" name="endpoints.xhr.Endpoints">Endpoints</a>, <a href="../xhr/EndpointsWithCustomErrors.html" class="extype" name="endpoints.xhr.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a>, <a href="../xhr/JsonEntitiesFromCodecs.html" class="extype" name="endpoints.xhr.JsonEntitiesFromCodecs">JsonEntitiesFromCodecs</a>, <a href="../xhr/JsonEntitiesFromSchemas.html" class="extype" name="endpoints.xhr.JsonEntitiesFromSchemas">JsonEntitiesFromSchemas</a>, <a href="../xhr/LowLevelEndpoints.html" class="extype" name="endpoints.xhr.LowLevelEndpoints">LowLevelEndpoints</a>, <a href="../xhr/MuxEndpoints.html" class="extype" name="endpoints.xhr.MuxEndpoints">MuxEndpoints</a>, <a href="../xhr/circe/JsonEntities.html" class="extype" name="endpoints.xhr.circe.JsonEntities">JsonEntities</a>, <a href="../xhr/faithful/Endpoints.html" class="extype" name="endpoints.xhr.faithful.Endpoints">Endpoints</a>, <a href="../xhr/faithful/MuxEndpoints.html" class="extype" name="endpoints.xhr.faithful.MuxEndpoints">MuxEndpoints</a>, <a href="../xhr/future/Endpoints.html" class="extype" name="endpoints.xhr.future.Endpoints">Endpoints</a>, <a href="../xhr/future/EndpointsWithCustomErrors.html" class="extype" name="endpoints.xhr.future.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a>, <a href="../xhr/thenable/Endpoints.html" class="extype" name="endpoints.xhr.thenable.Endpoints">Endpoints</a>, <a href="../xhr/thenable/EndpointsWithCustomErrors.html" class="extype" name="endpoints.xhr.thenable.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a>, <a href="../xhr/thenable/MuxEndpoints.html" class="extype" name="endpoints.xhr.thenable.MuxEndpoints">MuxEndpoints</a></div>
           </div><div class="toggleContainer block diagram-container" id="inheritance-diagram-container">
                 <span class="toggle diagram-link">
                   Type Hierarchy
                 </span>
-                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph1" viewBox="0.00 0.00 463.50 155.00" height="155pt" width="464pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 151)" class="graph" id="page0,1_graph0"><polygon points="-4,4 -4,-151 459.5,-151 459.5,4 -4,4" stroke="transparent" fill="#ffffff"></polygon><g class="cluster" id="clust1"></g><g class="cluster" id="clust2"></g><!-- node0 --><g class="node this trait" id="graph1_0"><g id="a_this trait|graph1_0"><a xlink:title="endpoints.algebra.Requests (this trait)" xlink:href="#inheritance-diagram"><path d="M275.1667,-86C275.1667,-86 207.8333,-86 207.8333,-86 203.6667,-86 199.5,-81.8333 199.5,-77.6667 199.5,-77.6667 199.5,-69.3333 199.5,-69.3333 199.5,-65.1667 203.6667,-61 207.8333,-61 207.8333,-61 275.1667,-61 275.1667,-61 279.3333,-61 283.5,-65.1667 283.5,-69.3333 283.5,-69.3333 283.5,-77.6667 283.5,-77.6667 283.5,-81.8333 279.3333,-86 275.1667,-86" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-80.5" x="209.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-71.1" x="230.5" text-anchor="start">Requests</text></a></g></g><!-- node1 --><g class="node trait" id="graph1_1"><g id="a_trait|graph1_1"><a xlink:title="endpoints.algebra.EndpointsWithCustomErrors" xlink:href="EndpointsWithCustomErrors.html#inheritance-diagram"><path d="M154.6667,-25C154.6667,-25 8.3333,-25 8.3333,-25 4.1667,-25 0,-20.8333 0,-16.6667 0,-16.6667 0,-8.3333 0,-8.3333 0,-4.1667 4.1667,0 8.3333,0 8.3333,0 154.6667,0 154.6667,0 158.8333,0 163,-4.1667 163,-8.3333 163,-8.3333 163,-16.6667 163,-16.6667 163,-20.8333 158.8333,-25 154.6667,-25" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-19.5" x="10.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="31.5" text-anchor="start">EndpointsWithCustomErrors</text></a></g></g><!-- node0&#45;&gt;node1 --><g class="edge inheritance" id="graph1_0_1"><g id="a_inheritance|graph1_0_1"><a xlink:title="EndpointsWithCustomErrors is a subtype of Requests"><path d="M201.6919,-58.3232C174.7734,-48.0605 139.6533,-34.6709 114.3355,-25.0185" stroke="#d4d4d4" fill="none"></path><polygon points="200.9343,-60.6563 208.3479,-60.8608 202.6799,-56.0778 200.9343,-60.6563" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node2 --><g class="node trait" id="graph1_2"><g id="a_trait|graph1_2"><a xlink:title="endpoints.openapi.Requests" xlink:href="../openapi/Requests.html#inheritance-diagram"><path d="M293.1667,-25C293.1667,-25 189.8333,-25 189.8333,-25 185.6667,-25 181.5,-20.8333 181.5,-16.6667 181.5,-16.6667 181.5,-8.3333 181.5,-8.3333 181.5,-4.1667 185.6667,0 189.8333,0 189.8333,0 293.1667,0 293.1667,0 297.3333,0 301.5,-4.1667 301.5,-8.3333 301.5,-8.3333 301.5,-16.6667 301.5,-16.6667 301.5,-20.8333 297.3333,-25 293.1667,-25" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-19.5" x="191.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="212.5" text-anchor="start">openapi.Requests</text></a></g></g><!-- node0&#45;&gt;node2 --><g class="edge inheritance" id="graph1_0_2"><g id="a_inheritance|graph1_0_2"><a xlink:title="openapi.Requests is a subtype of Requests"><path d="M241.5,-53.7386C241.5,-44.3393 241.5,-33.3803 241.5,-25.123" stroke="#d4d4d4" fill="none"></path><polygon points="239.0501,-53.8607 241.5,-60.8608 243.9501,-53.8608 239.0501,-53.8607" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node3 --><g class="node trait" id="graph1_3"><g id="a_trait|graph1_3"><a xlink:title="endpoints.scalaj.client.Requests" xlink:href="../scalaj/client/Requests.html#inheritance-diagram"><path d="M447.1667,-25C447.1667,-25 327.8333,-25 327.8333,-25 323.6667,-25 319.5,-20.8333 319.5,-16.6667 319.5,-16.6667 319.5,-8.3333 319.5,-8.3333 319.5,-4.1667 323.6667,0 327.8333,0 327.8333,0 447.1667,0 447.1667,0 451.3333,0 455.5,-4.1667 455.5,-8.3333 455.5,-8.3333 455.5,-16.6667 455.5,-16.6667 455.5,-20.8333 451.3333,-25 447.1667,-25" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-19.5" x="329.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="350.5" text-anchor="start">scalaj.client.Requests</text></a></g></g><!-- node0&#45;&gt;node3 --><g class="edge inheritance" id="graph1_0_3"><g id="a_inheritance|graph1_0_3"><a xlink:title="scalaj.client.Requests is a subtype of Requests"><path d="M278.4281,-58.0712C302.8218,-47.8793 334.3934,-34.6884 357.2875,-25.123" stroke="#d4d4d4" fill="none"></path><polygon points="277.2657,-55.9015 271.7513,-60.8608 279.1547,-60.4227 277.2657,-55.9015" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node4 --><g class="node trait" id="graph1_4"><g id="a_trait|graph1_4"><a xlink:title="endpoints.algebra.Urls" xlink:href="Urls.html#inheritance-diagram"><path d="M174.6667,-147C174.6667,-147 130.3333,-147 130.3333,-147 126.1667,-147 122,-142.8333 122,-138.6667 122,-138.6667 122,-130.3333 122,-130.3333 122,-126.1667 126.1667,-122 130.3333,-122 130.3333,-122 174.6667,-122 174.6667,-122 178.8333,-122 183,-126.1667 183,-130.3333 183,-130.3333 183,-138.6667 183,-138.6667 183,-142.8333 178.8333,-147 174.6667,-147" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-141.5" x="132.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-132.1" x="153.5" text-anchor="start">Urls</text></a></g></g><!-- node4&#45;&gt;node0 --><g class="edge inheritance" id="graph1_4_0"><g id="a_inheritance|graph1_4_0"><a xlink:title="Requests is a subtype of Urls"><path d="M176.9406,-117.7486C191.5163,-107.7585 209.7232,-95.2796 223.0828,-86.123" stroke="#d4d4d4" fill="none"></path><polygon points="175.3297,-115.8824 170.9409,-121.8608 178.1,-119.9242 175.3297,-115.8824" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node5 --><g class="node trait" id="graph1_5"><g id="a_trait|graph1_5"><a xlink:title="endpoints.algebra.Methods" xlink:href="Methods.html#inheritance-diagram"><path d="M273.1667,-147C273.1667,-147 209.8333,-147 209.8333,-147 205.6667,-147 201.5,-142.8333 201.5,-138.6667 201.5,-138.6667 201.5,-130.3333 201.5,-130.3333 201.5,-126.1667 205.6667,-122 209.8333,-122 209.8333,-122 273.1667,-122 273.1667,-122 277.3333,-122 281.5,-126.1667 281.5,-130.3333 281.5,-130.3333 281.5,-138.6667 281.5,-138.6667 281.5,-142.8333 277.3333,-147 273.1667,-147" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-141.5" x="211.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-132.1" x="232.5" text-anchor="start">Methods</text></a></g></g><!-- node5&#45;&gt;node0 --><g class="edge inheritance" id="graph1_5_0"><g id="a_inheritance|graph1_5_0"><a xlink:title="Requests is a subtype of Methods"><path d="M241.5,-114.7386C241.5,-105.3393 241.5,-94.3803 241.5,-86.123" stroke="#d4d4d4" fill="none"></path><polygon points="239.0501,-114.8607 241.5,-121.8608 243.9501,-114.8608 239.0501,-114.8607" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node6 --><g class="node trait" id="graph1_6"><g id="a_trait|graph1_6"><a xlink:title="endpoints.SemigroupalSyntax" xlink:href="../SemigroupalSyntax.html#inheritance-diagram"><path d="M418.6667,-147C418.6667,-147 308.3333,-147 308.3333,-147 304.1667,-147 300,-142.8333 300,-138.6667 300,-138.6667 300,-130.3333 300,-130.3333 300,-126.1667 304.1667,-122 308.3333,-122 308.3333,-122 418.6667,-122 418.6667,-122 422.8333,-122 427,-126.1667 427,-130.3333 427,-130.3333 427,-138.6667 427,-138.6667 427,-142.8333 422.8333,-147 418.6667,-147" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-141.5" x="310.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-132.1" x="331.5" text-anchor="start">SemigroupalSyntax</text></a></g></g><!-- node6&#45;&gt;node0 --><g class="edge inheritance" id="graph1_6_0"><g id="a_inheritance|graph1_6_0"><a xlink:title="Requests is a subtype of SemigroupalSyntax"><path d="M331.8554,-118.6777C311.5833,-108.5416 285.6315,-95.5657 266.7461,-86.123" stroke="#d4d4d4" fill="none"></path><polygon points="330.8648,-120.9216 338.2215,-121.8608 333.0562,-116.5389 330.8648,-120.9216" stroke="#d4d4d4" fill="none"></polygon></a></g></g></g></svg></div>
+                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph1" viewBox="0.00 0.00 468.00 155.00" height="155pt" width="468pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 151)" class="graph" id="graph0"><polygon points="-4,4 -4,-151 464,-151 464,4 -4,4" stroke="none" fill="white"></polygon><g class="cluster" id="clust1"></g><g class="cluster" id="clust2"></g><!-- node0 --><g class="node this trait" id="graph1_0"><g id="a_this trait|graph1_0"><a xlink:title="endpoints.algebra.Requests (this trait)" xlink:href="#inheritance-diagram"><path d="M276.667,-86C276.667,-86 209.333,-86 209.333,-86 205.167,-86 201,-81.8333 201,-77.6667 201,-77.6667 201,-69.3333 201,-69.3333 201,-65.1667 205.167,-61 209.333,-61 209.333,-61 276.667,-61 276.667,-61 280.833,-61 285,-65.1667 285,-69.3333 285,-69.3333 285,-77.6667 285,-77.6667 285,-81.8333 280.833,-86 276.667,-86" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-80.5" x="211" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-71.1" x="232" text-anchor="start">Requests</text></a></g></g><!-- node1 --><g class="node trait" id="graph1_1"><g id="a_trait|graph1_1"><a xlink:title="endpoints.algebra.EndpointsWithCustomErrors" xlink:href="EndpointsWithCustomErrors.html#inheritance-diagram"><path d="M155.667,-25C155.667,-25 8.33333,-25 8.33333,-25 4.16667,-25 0,-20.8333 0,-16.6667 0,-16.6667 0,-8.33333 0,-8.33333 0,-4.16667 4.16667,-0 8.33333,-0 8.33333,-0 155.667,-0 155.667,-0 159.833,-0 164,-4.16667 164,-8.33333 164,-8.33333 164,-16.6667 164,-16.6667 164,-20.8333 159.833,-25 155.667,-25" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-19.5" x="10" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="31" text-anchor="start">EndpointsWithCustomErrors</text></a></g></g><!-- node0&#45;&gt;node1 --><g class="edge inheritance" id="graph1_0_1"><g id="a_inheritance|graph1_0_1"><a xlink:title="EndpointsWithCustomErrors is a subtype of Requests"><path d="M204.721,-58.4723C176.918,-48.2837 139.743,-34.6606 113.62,-25.0875" stroke="#d4d4d4" fill="none"></path><polygon points="204.16,-60.8759 211.575,-60.9841 205.846,-56.2751 204.16,-60.8759" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node2 --><g class="node trait" id="graph1_2"><g id="a_trait|graph1_2"><a xlink:title="endpoints.openapi.Requests" xlink:href="../openapi/Requests.html#inheritance-diagram"><path d="M295.167,-25C295.167,-25 190.833,-25 190.833,-25 186.667,-25 182.5,-20.8333 182.5,-16.6667 182.5,-16.6667 182.5,-8.33333 182.5,-8.33333 182.5,-4.16667 186.667,-0 190.833,-0 190.833,-0 295.167,-0 295.167,-0 299.333,-0 303.5,-4.16667 303.5,-8.33333 303.5,-8.33333 303.5,-16.6667 303.5,-16.6667 303.5,-20.8333 299.333,-25 295.167,-25" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-19.5" x="193" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="214" text-anchor="start">openapi.Requests</text></a></g></g><!-- node0&#45;&gt;node2 --><g class="edge inheritance" id="graph1_0_2"><g id="a_inheritance|graph1_0_2"><a xlink:title="openapi.Requests is a subtype of Requests"><path d="M243,-53.7603C243,-44.3675 243,-33.2882 243,-25.1323" stroke="#d4d4d4" fill="none"></path><polygon points="240.55,-53.8435 243,-60.8435 245.45,-53.8435 240.55,-53.8435" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node3 --><g class="node trait" id="graph1_3"><g id="a_trait|graph1_3"><a xlink:title="endpoints.scalaj.client.Requests" xlink:href="../scalaj/client/Requests.html#inheritance-diagram"><path d="M451.667,-25C451.667,-25 330.333,-25 330.333,-25 326.167,-25 322,-20.8333 322,-16.6667 322,-16.6667 322,-8.33333 322,-8.33333 322,-4.16667 326.167,-0 330.333,-0 330.333,-0 451.667,-0 451.667,-0 455.833,-0 460,-4.16667 460,-8.33333 460,-8.33333 460,-16.6667 460,-16.6667 460,-20.8333 455.833,-25 451.667,-25" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-19.5" x="332" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="353" text-anchor="start">scalaj.client.Requests</text></a></g></g><!-- node0&#45;&gt;node3 --><g class="edge inheritance" id="graph1_0_3"><g id="a_inheritance|graph1_0_3"><a xlink:title="scalaj.client.Requests is a subtype of Requests"><path d="M278.513,-58.3426C304.036,-48.1683 338.021,-34.62 361.933,-25.0875" stroke="#d4d4d4" fill="none"></path><polygon points="277.482,-56.1161 271.887,-60.9841 279.297,-60.6678 277.482,-56.1161" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node4 --><g class="node trait" id="graph1_4"><g id="a_trait|graph1_4"><a xlink:title="endpoints.algebra.Urls" xlink:href="Urls.html#inheritance-diagram"><path d="M175.667,-147C175.667,-147 130.333,-147 130.333,-147 126.167,-147 122,-142.833 122,-138.667 122,-138.667 122,-130.333 122,-130.333 122,-126.167 126.167,-122 130.333,-122 130.333,-122 175.667,-122 175.667,-122 179.833,-122 184,-126.167 184,-130.333 184,-130.333 184,-138.667 184,-138.667 184,-142.833 179.833,-147 175.667,-147" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-141.5" x="132" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-132.1" x="153" text-anchor="start">Urls</text></a></g></g><!-- node4&#45;&gt;node0 --><g class="edge inheritance" id="graph1_4_0"><g id="a_inheritance|graph1_4_0"><a xlink:title="Requests is a subtype of Urls"><path d="M177.005,-117.763C192.18,-107.815 211.46,-95.1764 225.256,-86.1323" stroke="#d4d4d4" fill="none"></path><polygon points="175.292,-115.957 170.781,-121.843 177.979,-120.055 175.292,-115.957" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node5 --><g class="node trait" id="graph1_5"><g id="a_trait|graph1_5"><a xlink:title="endpoints.algebra.Methods" xlink:href="Methods.html#inheritance-diagram"><path d="M275.167,-147C275.167,-147 210.833,-147 210.833,-147 206.667,-147 202.5,-142.833 202.5,-138.667 202.5,-138.667 202.5,-130.333 202.5,-130.333 202.5,-126.167 206.667,-122 210.833,-122 210.833,-122 275.167,-122 275.167,-122 279.333,-122 283.5,-126.167 283.5,-130.333 283.5,-130.333 283.5,-138.667 283.5,-138.667 283.5,-142.833 279.333,-147 275.167,-147" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-141.5" x="213" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-132.1" x="234" text-anchor="start">Methods</text></a></g></g><!-- node5&#45;&gt;node0 --><g class="edge inheritance" id="graph1_5_0"><g id="a_inheritance|graph1_5_0"><a xlink:title="Requests is a subtype of Methods"><path d="M243,-114.76C243,-105.367 243,-94.2882 243,-86.1323" stroke="#d4d4d4" fill="none"></path><polygon points="240.55,-114.843 243,-121.843 245.45,-114.844 240.55,-114.843" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node6 --><g class="node trait" id="graph1_6"><g id="a_trait|graph1_6"><a xlink:title="endpoints.SemigroupalSyntax" xlink:href="../SemigroupalSyntax.html#inheritance-diagram"><path d="M420.167,-147C420.167,-147 309.833,-147 309.833,-147 305.667,-147 301.5,-142.833 301.5,-138.667 301.5,-138.667 301.5,-130.333 301.5,-130.333 301.5,-126.167 305.667,-122 309.833,-122 309.833,-122 420.167,-122 420.167,-122 424.333,-122 428.5,-126.167 428.5,-130.333 428.5,-130.333 428.5,-138.667 428.5,-138.667 428.5,-142.833 424.333,-147 420.167,-147" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-141.5" x="312" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-132.1" x="333" text-anchor="start">SemigroupalSyntax</text></a></g></g><!-- node6&#45;&gt;node0 --><g class="edge inheritance" id="graph1_6_0"><g id="a_inheritance|graph1_6_0"><a xlink:title="Requests is a subtype of SemigroupalSyntax"><path d="M334.667,-118.831C313.83,-108.754 286.54,-95.5561 267.169,-86.1884" stroke="#d4d4d4" fill="none"></path><polygon points="333.819,-121.142 341.188,-121.984 335.952,-116.731 333.819,-121.142" stroke="#d4d4d4" fill="none"></polygon></a></g></g></g></svg></div>
                 <div id="diagram-controls" class="hiddenContent">
                   <button id="diagram-zoom-out" class="diagram-btn"><i class="material-icons"></i></button>
                   <button id="diagram-zoom-in" class="diagram-btn"><i class="material-icons"></i></button>
@@ -289,7 +289,7 @@
           <div id="order">
             <span class="filtertype">Ordering</span>
             <ol>
-              
+              <li class="group out"><span>Grouped</span></li>
               <li class="alpha in"><span>Alphabetic</span></li>
               <li class="inherit out"><span>By Inheritance</span></li>
             </ol>
@@ -376,7 +376,7 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../SemigroupalSyntax.html" class="extype" name="endpoints.SemigroupalSyntax">SemigroupalSyntax</a></dd></dl></div>
-    </li><li name="endpoints.algebra.Methods.Method" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.algebra.Methods.Method" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="types">
       <a id="Method"></a><a id="Method:Method"></a>
       <span class="permalink">
       <a href="../../endpoints/algebra/Requests.html#Method" title="Permalink">
@@ -392,7 +392,7 @@
       </span>
       
       <p class="shortcomment cmt">HTTP Method</p><div class="fullcomment"><div class="comment cmt"><p>HTTP Method</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Methods.html" class="extype" name="endpoints.algebra.Methods">Methods</a></dd></dl></div>
-    </li><li name="endpoints.algebra.Urls.Path" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.algebra.Urls.Path" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="types">
       <a id="Path[A]&lt;:Urls.this.Url[A]"></a><a id="Path[A]:Path[A]"></a>
       <span class="permalink">
       <a href="../../endpoints/algebra/Requests.html#Path[A]&lt;:Urls.this.Url[A]" title="Permalink">
@@ -407,8 +407,9 @@
         <span class="name">Path</span><span class="tparams">[<span name="A">A</span>]</span><span class="result"> &lt;: <a href="#Url[A]" class="extmbr" name="endpoints.algebra.Requests.Url">Url</a>[<span class="extype" name="endpoints.algebra.Urls.Path.A">A</span>]</span>
       </span>
       
-      <p class="shortcomment cmt">An URL path carrying an <code>A</code> information</p><div class="fullcomment"><div class="comment cmt"><p>An URL path carrying an <code>A</code> information</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
-    </li><li name="endpoints.algebra.Urls.QueryString" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt">An URL path carrying an <code>A</code> information</p><div class="fullcomment"><div class="comment cmt"><p>An URL path carrying an <code>A</code> information</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd><dt>Note</dt><dd><span class="cmt"><p>This type has implicit methods provided by the <a href="Urls$PathOps.html" class="extype" name="endpoints.algebra.Urls.PathOps">PathOps</a>,
+       <a href="../InvariantFunctorSyntax$InvariantFunctorSyntax.html" class="extype" name="endpoints.InvariantFunctorSyntax.InvariantFunctorSyntax">InvariantFunctorSyntax</a>, and the <a href="../PartialInvariantFunctorSyntax$PartialInvariantFunctorSyntax.html" class="extype" name="endpoints.PartialInvariantFunctorSyntax.PartialInvariantFunctorSyntax">PartialInvariantFunctorSyntax</a> classes.</p></span></dd></dl></div>
+    </li><li name="endpoints.algebra.Urls.QueryString" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="types">
       <a id="QueryString[A]"></a><a id="QueryString[A]:QueryString[A]"></a>
       <span class="permalink">
       <a href="../../endpoints/algebra/Requests.html#QueryString[A]" title="Permalink">
@@ -425,8 +426,9 @@
       
       <p class="shortcomment cmt">A query string carrying an <code>A</code> information</p><div class="fullcomment"><div class="comment cmt"><p>A query string carrying an <code>A</code> information</p><p>QueryString values can be created with the <a href="#qs[A](name:String,docs:endpoints.algebra.Documentation)(implicitvalue:Urls.this.QueryStringParam[A]):Urls.this.QueryString[A]" class="extmbr" name="endpoints.algebra.Requests#qs">qs</a> operation,
 and can be combined with the <code>&amp;</code> operation:</p><pre><span class="kw">val</span> queryPageAndLang: QueryString[(<span class="std">Int</span>, <span class="std">Option</span>[<span class="std">String</span>])] =
-  qs[<span class="std">Int</span>](<span class="lit">"page"</span>) &amp; qs[<span class="std">Option</span>[<span class="std">String</span>]](<span class="lit">"lang"</span>)</pre></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
-    </li><li name="endpoints.algebra.Urls.QueryStringParam" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+  qs[<span class="std">Int</span>](<span class="lit">"page"</span>) &amp; qs[<span class="std">Option</span>[<span class="std">String</span>]](<span class="lit">"lang"</span>)</pre></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd><dt>Note</dt><dd><span class="cmt"><p>This type has implicit methods provided by the <a href="Urls$QueryStringSyntax.html" class="extype" name="endpoints.algebra.Urls.QueryStringSyntax">QueryStringSyntax</a>,
+       <a href="../InvariantFunctorSyntax$InvariantFunctorSyntax.html" class="extype" name="endpoints.InvariantFunctorSyntax.InvariantFunctorSyntax">InvariantFunctorSyntax</a>, and the <a href="../PartialInvariantFunctorSyntax$PartialInvariantFunctorSyntax.html" class="extype" name="endpoints.PartialInvariantFunctorSyntax.PartialInvariantFunctorSyntax">PartialInvariantFunctorSyntax</a> classes.</p></span></dd></dl></div>
+    </li><li name="endpoints.algebra.Urls.QueryStringParam" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="types">
       <a id="QueryStringParam[A]"></a><a id="QueryStringParam[A]:QueryStringParam[A]"></a>
       <span class="permalink">
       <a href="../../endpoints/algebra/Requests.html#QueryStringParam[A]" title="Permalink">
@@ -441,9 +443,9 @@ and can be combined with the <code>&amp;</code> operation:</p><pre><span class="
         <span class="name">QueryStringParam</span><span class="tparams">[<span name="A">A</span>]</span>
       </span>
       
-      <p class="shortcomment cmt">A single query string parameter carrying an <code>A</code> information.</p><div class="fullcomment"><div class="comment cmt"><p>A single query string parameter carrying an <code>A</code> information.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
-    </li><li name="endpoints.algebra.Requests.Request" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <p class="shortcomment cmt">A query string parameter codec for type <code>A</code>.</p><div class="fullcomment"><div class="comment cmt"><p>A query string parameter codec for type <code>A</code>.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd><dt>Note</dt><dd><span class="cmt"><p>This type has implicit methods provided by the <a href="../PartialInvariantFunctorSyntax$PartialInvariantFunctorSyntax.html" class="extype" name="endpoints.PartialInvariantFunctorSyntax.PartialInvariantFunctorSyntax">PartialInvariantFunctorSyntax</a>
+       and the <a href="../InvariantFunctorSyntax$InvariantFunctorSyntax.html" class="extype" name="endpoints.InvariantFunctorSyntax.InvariantFunctorSyntax">InvariantFunctorSyntax</a> classes.</p></span></dd></dl></div>
+    </li><li name="endpoints.algebra.Requests.Request" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="types">
       <a id="Request[A]"></a><a id="Request[A]:Request[A]"></a>
       <span class="permalink">
       <a href="../../endpoints/algebra/Requests.html#Request[A]" title="Permalink">
@@ -459,7 +461,7 @@ and can be combined with the <code>&amp;</code> operation:</p><pre><span class="
       </span>
       
       <p class="shortcomment cmt">Information carried by a whole request (headers and entity)</p>
-    </li><li name="endpoints.algebra.Requests.RequestEntity" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+    </li><li name="endpoints.algebra.Requests.RequestEntity" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="types">
       <a id="RequestEntity[A]"></a><a id="RequestEntity[A]:RequestEntity[A]"></a>
       <span class="permalink">
       <a href="../../endpoints/algebra/Requests.html#RequestEntity[A]" title="Permalink">
@@ -474,8 +476,8 @@ and can be combined with the <code>&amp;</code> operation:</p><pre><span class="
         <span class="name">RequestEntity</span><span class="tparams">[<span name="A">A</span>]</span>
       </span>
       
-      <p class="shortcomment cmt">Information carried by request entity</p>
-    </li><li name="endpoints.algebra.Requests.RequestHeaders" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <p class="shortcomment cmt">Information carried by request entity</p><div class="fullcomment"><div class="comment cmt"><p>Information carried by request entity</p></div><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>This type has implicit methods provided by the <a href="../InvariantFunctorSyntax$InvariantFunctorSyntax.html" class="extype" name="endpoints.InvariantFunctorSyntax.InvariantFunctorSyntax">InvariantFunctorSyntax</a> class.</p></span></dd></dl></div>
+    </li><li name="endpoints.algebra.Requests.RequestHeaders" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="types">
       <a id="RequestHeaders[A]"></a><a id="RequestHeaders[A]:RequestHeaders[A]"></a>
       <span class="permalink">
       <a href="../../endpoints/algebra/Requests.html#RequestHeaders[A]" title="Permalink">
@@ -490,8 +492,9 @@ and can be combined with the <code>&amp;</code> operation:</p><pre><span class="
         <span class="name">RequestHeaders</span><span class="tparams">[<span name="A">A</span>]</span>
       </span>
       
-      <p class="shortcomment cmt">Information carried by requests’ headers</p>
-    </li><li name="endpoints.algebra.Urls.Segment" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt">Information carried by requests’ headers</p><div class="fullcomment"><div class="comment cmt"><p>Information carried by requests’ headers</p></div><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>This type has implicit methods provided by the <a href="../SemigroupalSyntax$SemigroupalSyntax.html" class="extype" name="endpoints.SemigroupalSyntax.SemigroupalSyntax">SemigroupalSyntax</a>
+       and <a href="../InvariantFunctorSyntax$InvariantFunctorSyntax.html" class="extype" name="endpoints.InvariantFunctorSyntax.InvariantFunctorSyntax">InvariantFunctorSyntax</a> classes.</p></span></dd></dl></div>
+    </li><li name="endpoints.algebra.Urls.Segment" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="types">
       <a id="Segment[A]"></a><a id="Segment[A]:Segment[A]"></a>
       <span class="permalink">
       <a href="../../endpoints/algebra/Requests.html#Segment[A]" title="Permalink">
@@ -506,9 +509,9 @@ and can be combined with the <code>&amp;</code> operation:</p><pre><span class="
         <span class="name">Segment</span><span class="tparams">[<span name="A">A</span>]</span>
       </span>
       
-      <p class="shortcomment cmt">An URL path segment carrying an <code>A</code> information.</p><div class="fullcomment"><div class="comment cmt"><p>An URL path segment carrying an <code>A</code> information.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
-    </li><li name="endpoints.algebra.Urls.Url" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt">An URL path segment codec for type <code>A</code>.</p><div class="fullcomment"><div class="comment cmt"><p>An URL path segment codec for type <code>A</code>.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd><dt>Note</dt><dd><span class="cmt"><p>This type has implicit methods provided by the <a href="../PartialInvariantFunctorSyntax$PartialInvariantFunctorSyntax.html" class="extype" name="endpoints.PartialInvariantFunctorSyntax.PartialInvariantFunctorSyntax">PartialInvariantFunctorSyntax</a>
+       and the <a href="../InvariantFunctorSyntax$InvariantFunctorSyntax.html" class="extype" name="endpoints.InvariantFunctorSyntax.InvariantFunctorSyntax">InvariantFunctorSyntax</a> classes.</p></span></dd></dl></div>
+    </li><li name="endpoints.algebra.Urls.Url" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="types">
       <a id="Url[A]"></a><a id="Url[A]:Url[A]"></a>
       <span class="permalink">
       <a href="../../endpoints/algebra/Requests.html#Url[A]" title="Permalink">
@@ -523,10 +526,9 @@ and can be combined with the <code>&amp;</code> operation:</p><pre><span class="
         <span class="name">Url</span><span class="tparams">[<span name="A">A</span>]</span>
       </span>
       
-      <p class="shortcomment cmt">An URL carrying an <code>A</code> information
-</p><div class="fullcomment"><div class="comment cmt"><p>An URL carrying an <code>A</code> information
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
-    </li><li name="endpoints.algebra.Urls.PathOps" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt">An URL carrying an <code>A</code> information</p><div class="fullcomment"><div class="comment cmt"><p>An URL carrying an <code>A</code> information</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd><dt>Note</dt><dd><span class="cmt"><p>This type has implicit methods provided by the <a href="../PartialInvariantFunctorSyntax$PartialInvariantFunctorSyntax.html" class="extype" name="endpoints.PartialInvariantFunctorSyntax.PartialInvariantFunctorSyntax">PartialInvariantFunctorSyntax</a>
+       and <a href="../InvariantFunctorSyntax$InvariantFunctorSyntax.html" class="extype" name="endpoints.InvariantFunctorSyntax.InvariantFunctorSyntax">InvariantFunctorSyntax</a> classes.</p></span></dd></dl></div>
+    </li><li name="endpoints.algebra.Urls.PathOps" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="PathOps[A]extendsAnyRef"></a><a id="PathOps[A]:PathOps[A]"></a>
       <span class="permalink">
       <a href="../../endpoints/algebra/Urls$PathOps.html" title="Permalink">
@@ -542,7 +544,7 @@ and can be combined with the <code>&amp;</code> operation:</p><pre><span class="
       </span>
       
       <p class="shortcomment cmt">Convenient methods for <a href="Urls.html#Path[A]&lt;:Urls.this.Url[A]" class="extmbr" name="endpoints.algebra.Urls.Path">Path</a>s.</p><div class="fullcomment"><div class="comment cmt"><p>Convenient methods for <a href="Urls.html#Path[A]&lt;:Urls.this.Url[A]" class="extmbr" name="endpoints.algebra.Urls.Path">Path</a>s.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
-    </li><li name="endpoints.algebra.Urls.QueryStringSyntax" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.algebra.Urls.QueryStringSyntax" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="QueryStringSyntax[A]extendsAnyRef"></a><a id="QueryStringSyntax[A]:QueryStringSyntax[A]"></a>
       <span class="permalink">
       <a href="../../endpoints/algebra/Urls$QueryStringSyntax.html" title="Permalink">
@@ -563,7 +565,7 @@ and can be combined with the <code>&amp;</code> operation:</p><pre><span class="
 
         <div class="values members">
               <h3>Abstract Value Members</h3>
-              <ol><li name="endpoints.algebra.Methods#Delete" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+              <ol><li name="endpoints.algebra.Methods#Delete" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="operations">
       <a id="Delete:Methods.this.Method"></a><a id="Delete:Method"></a>
       <span class="permalink">
       <a href="../../endpoints/algebra/Requests.html#Delete:Methods.this.Method" title="Permalink">
@@ -578,8 +580,8 @@ and can be combined with the <code>&amp;</code> operation:</p><pre><span class="
         <span class="name">Delete</span><span class="result">: <a href="#Method" class="extmbr" name="endpoints.algebra.Requests.Method">Method</a></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Methods.html" class="extype" name="endpoints.algebra.Methods">Methods</a></dd></dl></div>
-    </li><li name="endpoints.algebra.Methods#Get" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Methods.html" class="extype" name="endpoints.algebra.Methods">Methods</a></dd></dl></div>
+    </li><li name="endpoints.algebra.Methods#Get" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="operations">
       <a id="Get:Methods.this.Method"></a><a id="Get:Method"></a>
       <span class="permalink">
       <a href="../../endpoints/algebra/Requests.html#Get:Methods.this.Method" title="Permalink">
@@ -594,8 +596,8 @@ and can be combined with the <code>&amp;</code> operation:</p><pre><span class="
         <span class="name">Get</span><span class="result">: <a href="#Method" class="extmbr" name="endpoints.algebra.Requests.Method">Method</a></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Methods.html" class="extype" name="endpoints.algebra.Methods">Methods</a></dd></dl></div>
-    </li><li name="endpoints.algebra.Methods#Options" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Methods.html" class="extype" name="endpoints.algebra.Methods">Methods</a></dd></dl></div>
+    </li><li name="endpoints.algebra.Methods#Options" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="operations">
       <a id="Options:Methods.this.Method"></a><a id="Options:Method"></a>
       <span class="permalink">
       <a href="../../endpoints/algebra/Requests.html#Options:Methods.this.Method" title="Permalink">
@@ -610,8 +612,8 @@ and can be combined with the <code>&amp;</code> operation:</p><pre><span class="
         <span class="name">Options</span><span class="result">: <a href="#Method" class="extmbr" name="endpoints.algebra.Requests.Method">Method</a></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Methods.html" class="extype" name="endpoints.algebra.Methods">Methods</a></dd></dl></div>
-    </li><li name="endpoints.algebra.Methods#Patch" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Methods.html" class="extype" name="endpoints.algebra.Methods">Methods</a></dd></dl></div>
+    </li><li name="endpoints.algebra.Methods#Patch" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="operations">
       <a id="Patch:Methods.this.Method"></a><a id="Patch:Method"></a>
       <span class="permalink">
       <a href="../../endpoints/algebra/Requests.html#Patch:Methods.this.Method" title="Permalink">
@@ -626,8 +628,8 @@ and can be combined with the <code>&amp;</code> operation:</p><pre><span class="
         <span class="name">Patch</span><span class="result">: <a href="#Method" class="extmbr" name="endpoints.algebra.Requests.Method">Method</a></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Methods.html" class="extype" name="endpoints.algebra.Methods">Methods</a></dd></dl></div>
-    </li><li name="endpoints.algebra.Methods#Post" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Methods.html" class="extype" name="endpoints.algebra.Methods">Methods</a></dd></dl></div>
+    </li><li name="endpoints.algebra.Methods#Post" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="operations">
       <a id="Post:Methods.this.Method"></a><a id="Post:Method"></a>
       <span class="permalink">
       <a href="../../endpoints/algebra/Requests.html#Post:Methods.this.Method" title="Permalink">
@@ -642,8 +644,8 @@ and can be combined with the <code>&amp;</code> operation:</p><pre><span class="
         <span class="name">Post</span><span class="result">: <a href="#Method" class="extmbr" name="endpoints.algebra.Requests.Method">Method</a></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Methods.html" class="extype" name="endpoints.algebra.Methods">Methods</a></dd></dl></div>
-    </li><li name="endpoints.algebra.Methods#Put" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Methods.html" class="extype" name="endpoints.algebra.Methods">Methods</a></dd></dl></div>
+    </li><li name="endpoints.algebra.Methods#Put" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="operations">
       <a id="Put:Methods.this.Method"></a><a id="Put:Method"></a>
       <span class="permalink">
       <a href="../../endpoints/algebra/Requests.html#Put:Methods.this.Method" title="Permalink">
@@ -658,7 +660,7 @@ and can be combined with the <code>&amp;</code> operation:</p><pre><span class="
         <span class="name">Put</span><span class="result">: <a href="#Method" class="extmbr" name="endpoints.algebra.Requests.Method">Method</a></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Methods.html" class="extype" name="endpoints.algebra.Methods">Methods</a></dd></dl></div>
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Methods.html" class="extype" name="endpoints.algebra.Methods">Methods</a></dd></dl></div>
     </li><li name="endpoints.algebra.Urls#chainPaths" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="chainPaths[A,B](first:Urls.this.Path[A],second:Urls.this.Path[B])(implicittupler:endpoints.Tupler[A,B]):Urls.this.Path[tupler.Out]"></a><a id="chainPaths[A,B](Path[A],Path[B])(Tupler[A,B]):Path[Out]"></a>
       <span class="permalink">
@@ -691,7 +693,7 @@ and can be combined with the <code>&amp;</code> operation:</p><pre><span class="
       </span>
       
       <p class="shortcomment cmt">Concatenates two <code>QueryString</code>s</p><div class="fullcomment"><div class="comment cmt"><p>Concatenates two <code>QueryString</code>s</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
-    </li><li name="endpoints.algebra.Requests#emptyHeaders" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.algebra.Requests#emptyHeaders" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="operations">
       <a id="emptyHeaders:Requests.this.RequestHeaders[Unit]"></a><a id="emptyHeaders:RequestHeaders[Unit]"></a>
       <span class="permalink">
       <a href="../../endpoints/algebra/Requests.html#emptyHeaders:Requests.this.RequestHeaders[Unit]" title="Permalink">
@@ -709,9 +711,8 @@ and can be combined with the <code>&amp;</code> operation:</p><pre><span class="
       <p class="shortcomment cmt">No particular information.</p><div class="fullcomment"><div class="comment cmt"><p>No particular information. Does not mean that the headers *have to*
 be empty. Just that, from a server point of view no information will
 be extracted from them, and from a client point of view no particular
-headers will be built in the request.</p><p>Use <code>description</code> of <a href="Endpoints.html#endpoint[A,B](request:EndpointsWithCustomErrors.this.Request[A],response:EndpointsWithCustomErrors.this.Response[B],docs:EndpointsWithCustomErrors.this.EndpointDocs):EndpointsWithCustomErrors.this.Endpoint[A,B]" class="extmbr" name="endpoints.algebra.Endpoints#endpoint">endpoints.algebra.Endpoints#endpoint</a> to document empty headers.
-</p></div></div>
-    </li><li name="endpoints.algebra.Requests#emptyRequest" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+headers will be built in the request.</p><p>Use <code>description</code> of <a href="Endpoints.html#endpoint[A,B](request:EndpointsWithCustomErrors.this.Request[A],response:EndpointsWithCustomErrors.this.Response[B],docs:EndpointsWithCustomErrors.this.EndpointDocs):EndpointsWithCustomErrors.this.Endpoint[A,B]" class="extmbr" name="endpoints.algebra.Endpoints#endpoint">endpoints.algebra.Endpoints#endpoint</a> to document empty headers.</p></div></div>
+    </li><li name="endpoints.algebra.Requests#emptyRequest" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="operations">
       <a id="emptyRequest:Requests.this.RequestEntity[Unit]"></a><a id="emptyRequest:RequestEntity[Unit]"></a>
       <span class="permalink">
       <a href="../../endpoints/algebra/Requests.html#emptyRequest:Requests.this.RequestEntity[Unit]" title="Permalink">
@@ -727,9 +728,8 @@ headers will be built in the request.</p><p>Use <code>description</code> of <a h
       </span>
       
       <p class="shortcomment cmt">Empty request -- request without a body.</p><div class="fullcomment"><div class="comment cmt"><p>Empty request -- request without a body.
-Use <code>description</code> of <a href="Endpoints.html#endpoint[A,B](request:EndpointsWithCustomErrors.this.Request[A],response:EndpointsWithCustomErrors.this.Response[B],docs:EndpointsWithCustomErrors.this.EndpointDocs):EndpointsWithCustomErrors.this.Endpoint[A,B]" class="extmbr" name="endpoints.algebra.Endpoints#endpoint">endpoints.algebra.Endpoints#endpoint</a> to document an empty body.
-</p></div></div>
-    </li><li name="endpoints.algebra.Requests#header" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+Use <code>description</code> of <a href="Endpoints.html#endpoint[A,B](request:EndpointsWithCustomErrors.this.Request[A],response:EndpointsWithCustomErrors.this.Response[B],docs:EndpointsWithCustomErrors.this.EndpointDocs):EndpointsWithCustomErrors.this.Endpoint[A,B]" class="extmbr" name="endpoints.algebra.Endpoints#endpoint">endpoints.algebra.Endpoints#endpoint</a> to document an empty body.</p></div></div>
+    </li><li name="endpoints.algebra.Requests#header" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="operations">
       <a id="header(name:String,docs:endpoints.algebra.Documentation):Requests.this.RequestHeaders[String]"></a><a id="header(String,Documentation):RequestHeaders[String]"></a>
       <span class="permalink">
       <a href="../../endpoints/algebra/Requests.html#header(name:String,docs:endpoints.algebra.Documentation):Requests.this.RequestHeaders[String]" title="Permalink">
@@ -744,8 +744,8 @@ Use <code>description</code> of <a href="Endpoints.html#endpoint[A,B](request:En
         <span class="name">header</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="docs">docs: <a href="index.html#Documentation=Option[String]" class="extmbr" name="endpoints.algebra.Documentation">Documentation</a> = <span class="symbol"><span class="name"><a href="../../scala/index.html">None</a></span></span></span>)</span><span class="result">: <a href="#RequestHeaders[A]" class="extmbr" name="endpoints.algebra.Requests.RequestHeaders">RequestHeaders</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>
       </span>
       
-      
-    </li><li name="endpoints.algebra.Requests#optHeader" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <p class="shortcomment cmt">A required request header</p><div class="fullcomment"><div class="comment cmt"><p>A required request header</p></div><dl class="paramcmts block"><dt class="param">name</dt><dd class="cmt"><p>Header name (e.g., “Authorization”)</p></dd></dl></div>
+    </li><li name="endpoints.algebra.Requests#optHeader" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="operations">
       <a id="optHeader(name:String,docs:endpoints.algebra.Documentation):Requests.this.RequestHeaders[Option[String]]"></a><a id="optHeader(String,Documentation):RequestHeaders[Option[String]]"></a>
       <span class="permalink">
       <a href="../../endpoints/algebra/Requests.html#optHeader(name:String,docs:endpoints.algebra.Documentation):Requests.this.RequestHeaders[Option[String]]" title="Permalink">
@@ -760,8 +760,8 @@ Use <code>description</code> of <a href="Endpoints.html#endpoint[A,B](request:En
         <span class="name">optHeader</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="docs">docs: <a href="index.html#Documentation=Option[String]" class="extmbr" name="endpoints.algebra.Documentation">Documentation</a> = <span class="symbol"><span class="name"><a href="../../scala/index.html">None</a></span></span></span>)</span><span class="result">: <a href="#RequestHeaders[A]" class="extmbr" name="endpoints.algebra.Requests.RequestHeaders">RequestHeaders</a>[<a href="https://www.scala-lang.org/api/2.12.10/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="scala.Predef.String">String</span>]]</span>
       </span>
       
-      
-    </li><li name="endpoints.algebra.Urls#optionalQueryStringParam" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt">An optional request header</p><div class="fullcomment"><div class="comment cmt"><p>An optional request header</p></div><dl class="paramcmts block"><dt class="param">name</dt><dd class="cmt"><p>Header name (e.g., “Authorization”)</p></dd></dl></div>
+    </li><li name="endpoints.algebra.Urls#optionalQueryStringParam" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="operations">
       <a id="optionalQueryStringParam[A](implicitevidence$1:Urls.this.QueryStringParam[A]):Urls.this.QueryStringParam[Option[A]]"></a><a id="optionalQueryStringParam[A](QueryStringParam[A]):QueryStringParam[Option[A]]"></a>
       <span class="permalink">
       <a href="../../endpoints/algebra/Requests.html#optionalQueryStringParam[A](implicitevidence$1:Urls.this.QueryStringParam[A]):Urls.this.QueryStringParam[Option[A]]" title="Permalink">
@@ -796,8 +796,8 @@ parameters are present, but malformed.
         <span class="name">pathPartialInvariantFunctor</span><span class="result">: <a href="../PartialInvariantFunctor.html" class="extype" name="endpoints.PartialInvariantFunctor">PartialInvariantFunctor</a>[<a href="#Path[A]&lt;:Urls.this.Url[A]" class="extmbr" name="endpoints.algebra.Requests.Path">Path</a>]</span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
-    </li><li name="endpoints.algebra.Urls#qs" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt">Provides <code>xmap</code> and <code>xmapPartial</code> operations.</p><div class="fullcomment"><div class="comment cmt"><p>Provides <code>xmap</code> and <code>xmapPartial</code> operations.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd><dt>See also</dt><dd><span class="cmt"><p><a href="../PartialInvariantFunctorSyntax$PartialInvariantFunctorSyntax.html" class="extype" name="endpoints.PartialInvariantFunctorSyntax.PartialInvariantFunctorSyntax">PartialInvariantFunctorSyntax</a> and <a href="../InvariantFunctorSyntax$InvariantFunctorSyntax.html" class="extype" name="endpoints.InvariantFunctorSyntax.InvariantFunctorSyntax">InvariantFunctorSyntax</a></p></span></dd></dl></div>
+    </li><li name="endpoints.algebra.Urls#qs" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="operations">
       <a id="qs[A](name:String,docs:endpoints.algebra.Documentation)(implicitvalue:Urls.this.QueryStringParam[A]):Urls.this.QueryString[A]"></a><a id="qs[A](String,Documentation)(QueryStringParam[A]):QueryString[A]"></a>
       <span class="permalink">
       <a href="../../endpoints/algebra/Requests.html#qs[A](name:String,docs:endpoints.algebra.Documentation)(implicitvalue:Urls.this.QueryStringParam[A]):Urls.this.QueryString[A]" title="Permalink">
@@ -830,7 +830,7 @@ qs[<span class="std">List</span>[<span class="std">Long</span>]](<span class="li
         <span class="name">queryStringParamPartialInvFunctor</span><span class="result">: <a href="../PartialInvariantFunctor.html" class="extype" name="endpoints.PartialInvariantFunctor">PartialInvariantFunctor</a>[<a href="#QueryStringParam[A]" class="extmbr" name="endpoints.algebra.Requests.QueryStringParam">QueryStringParam</a>]</span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
+      <p class="shortcomment cmt">Provides <code>xmap</code> and <code>xmapPartial</code> operations.</p><div class="fullcomment"><div class="comment cmt"><p>Provides <code>xmap</code> and <code>xmapPartial</code> operations.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd><dt>See also</dt><dd><span class="cmt"><p><a href="../PartialInvariantFunctorSyntax$PartialInvariantFunctorSyntax.html" class="extype" name="endpoints.PartialInvariantFunctorSyntax.PartialInvariantFunctorSyntax">PartialInvariantFunctorSyntax</a> and <a href="../InvariantFunctorSyntax$InvariantFunctorSyntax.html" class="extype" name="endpoints.InvariantFunctorSyntax.InvariantFunctorSyntax">InvariantFunctorSyntax</a></p></span></dd></dl></div>
     </li><li name="endpoints.algebra.Urls#queryStringPartialInvFunctor" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="queryStringPartialInvFunctor:endpoints.PartialInvariantFunctor[Urls.this.QueryString]"></a><a id="queryStringPartialInvFunctor:PartialInvariantFunctor[QueryString]"></a>
       <span class="permalink">
@@ -846,8 +846,8 @@ qs[<span class="std">List</span>[<span class="std">Long</span>]](<span class="li
         <span class="name">queryStringPartialInvFunctor</span><span class="result">: <a href="../PartialInvariantFunctor.html" class="extype" name="endpoints.PartialInvariantFunctor">PartialInvariantFunctor</a>[<a href="#QueryString[A]" class="extmbr" name="endpoints.algebra.Requests.QueryString">QueryString</a>]</span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
-    </li><li name="endpoints.algebra.Urls#remainingSegments" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt">Provides <code>xmap</code> and <code>xmapPartial</code> operations.</p><div class="fullcomment"><div class="comment cmt"><p>Provides <code>xmap</code> and <code>xmapPartial</code> operations.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd><dt>See also</dt><dd><span class="cmt"><p><a href="../PartialInvariantFunctorSyntax$PartialInvariantFunctorSyntax.html" class="extype" name="endpoints.PartialInvariantFunctorSyntax.PartialInvariantFunctorSyntax">PartialInvariantFunctorSyntax</a> and <a href="../InvariantFunctorSyntax$InvariantFunctorSyntax.html" class="extype" name="endpoints.InvariantFunctorSyntax.InvariantFunctorSyntax">InvariantFunctorSyntax</a></p></span></dd></dl></div>
+    </li><li name="endpoints.algebra.Urls#remainingSegments" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="operations">
       <a id="remainingSegments(name:String,docs:endpoints.algebra.Documentation):Urls.this.Path[String]"></a><a id="remainingSegments(String,Documentation):Path[String]"></a>
       <span class="permalink">
       <a href="../../endpoints/algebra/Requests.html#remainingSegments(name:String,docs:endpoints.algebra.Documentation):Urls.this.Path[String]" title="Permalink">
@@ -863,7 +863,7 @@ qs[<span class="std">List</span>[<span class="std">Long</span>]](<span class="li
       </span>
       
       <p class="shortcomment cmt">The remaining segments of the path.</p><div class="fullcomment"><div class="comment cmt"><p>The remaining segments of the path. The <code>String</code> value carried by this <code>Path</code> is still URL-encoded.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
-    </li><li name="endpoints.algebra.Urls#repeatedQueryStringParam" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.algebra.Urls#repeatedQueryStringParam" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="operations">
       <a id="repeatedQueryStringParam[A,CC[X]&lt;:Iterable[X]](implicitevidence$2:Urls.this.QueryStringParam[A],implicitfactory:collection.compat.Factory[A,CC[A]]):Urls.this.QueryStringParam[CC[A]]"></a><a id="repeatedQueryStringParam[A,CC[X]&lt;:Iterable[X]](QueryStringParam[A],scala.collection.compat.Factory[A,CC[A]]):QueryStringParam[CC[A]]"></a>
       <span class="permalink">
       <a href="../../endpoints/algebra/Requests.html#repeatedQueryStringParam[A,CC[X]&lt;:Iterable[X]](implicitevidence$2:Urls.this.QueryStringParam[A],implicitfactory:collection.compat.Factory[A,CC[A]]):Urls.this.QueryStringParam[CC[A]]" title="Permalink">
@@ -881,7 +881,7 @@ qs[<span class="std">List</span>[<span class="std">Long</span>]](<span class="li
       <p class="shortcomment cmt">Support query string parameters with multiple values:</p><div class="fullcomment"><div class="comment cmt"><p>Support query string parameters with multiple values:</p><pre>path / <span class="lit">"articles"</span> /? qs[<span class="std">List</span>[<span class="std">Long</span>]](<span class="lit">"id"</span>)</pre><p>Server interpreters must accept incoming requests where such parameters are missing (in such a
 case, its value is an empty collection), and report a failure if at least one value is malformed.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
-    </li><li name="endpoints.algebra.Requests#reqEntityInvFunctor" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+    </li><li name="endpoints.algebra.Requests#reqEntityInvFunctor" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="reqEntityInvFunctor:endpoints.InvariantFunctor[Requests.this.RequestEntity]"></a><a id="reqEntityInvFunctor:InvariantFunctor[RequestEntity]"></a>
       <span class="permalink">
       <a href="../../endpoints/algebra/Requests.html#reqEntityInvFunctor:endpoints.InvariantFunctor[Requests.this.RequestEntity]" title="Permalink">
@@ -896,8 +896,8 @@ case, its value is an empty collection), and report a failure if at least one va
         <span class="name">reqEntityInvFunctor</span><span class="result">: <a href="../InvariantFunctor.html" class="extype" name="endpoints.InvariantFunctor">InvariantFunctor</a>[<a href="#RequestEntity[A]" class="extmbr" name="endpoints.algebra.Requests.RequestEntity">RequestEntity</a>]</span>
       </span>
       
-      
-    </li><li name="endpoints.algebra.Requests#reqHeadersInvFunctor" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <p class="shortcomment cmt">Provides <code>xmap</code> operation.</p><div class="fullcomment"><div class="comment cmt"><p>Provides <code>xmap</code> operation.</p></div><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p><a href="../InvariantFunctorSyntax$InvariantFunctorSyntax.html" class="extype" name="endpoints.InvariantFunctorSyntax.InvariantFunctorSyntax">InvariantFunctorSyntax</a></p></span></dd></dl></div>
+    </li><li name="endpoints.algebra.Requests#reqHeadersInvFunctor" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="reqHeadersInvFunctor:endpoints.InvariantFunctor[Requests.this.RequestHeaders]"></a><a id="reqHeadersInvFunctor:InvariantFunctor[RequestHeaders]"></a>
       <span class="permalink">
       <a href="../../endpoints/algebra/Requests.html#reqHeadersInvFunctor:endpoints.InvariantFunctor[Requests.this.RequestHeaders]" title="Permalink">
@@ -912,8 +912,8 @@ case, its value is an empty collection), and report a failure if at least one va
         <span class="name">reqHeadersInvFunctor</span><span class="result">: <a href="../InvariantFunctor.html" class="extype" name="endpoints.InvariantFunctor">InvariantFunctor</a>[<a href="#RequestHeaders[A]" class="extmbr" name="endpoints.algebra.Requests.RequestHeaders">RequestHeaders</a>]</span>
       </span>
       
-      
-    </li><li name="endpoints.algebra.Requests#reqHeadersSemigroupal" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <p class="shortcomment cmt">Provides <code>xmap</code> operation.</p><div class="fullcomment"><div class="comment cmt"><p>Provides <code>xmap</code> operation.</p></div><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p><a href="../InvariantFunctorSyntax$InvariantFunctorSyntax.html" class="extype" name="endpoints.InvariantFunctorSyntax.InvariantFunctorSyntax">InvariantFunctorSyntax</a></p></span></dd></dl></div>
+    </li><li name="endpoints.algebra.Requests#reqHeadersSemigroupal" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="reqHeadersSemigroupal:endpoints.Semigroupal[Requests.this.RequestHeaders]"></a><a id="reqHeadersSemigroupal:Semigroupal[RequestHeaders]"></a>
       <span class="permalink">
       <a href="../../endpoints/algebra/Requests.html#reqHeadersSemigroupal:endpoints.Semigroupal[Requests.this.RequestHeaders]" title="Permalink">
@@ -928,8 +928,8 @@ case, its value is an empty collection), and report a failure if at least one va
         <span class="name">reqHeadersSemigroupal</span><span class="result">: <a href="../Semigroupal.html" class="extype" name="endpoints.Semigroupal">Semigroupal</a>[<a href="#RequestHeaders[A]" class="extmbr" name="endpoints.algebra.Requests.RequestHeaders">RequestHeaders</a>]</span>
       </span>
       
-      
-    </li><li name="endpoints.algebra.Requests#request" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt">Provides <code>++</code> operation.</p><div class="fullcomment"><div class="comment cmt"><p>Provides <code>++</code> operation.</p></div><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p><a href="../SemigroupalSyntax$SemigroupalSyntax.html" class="extype" name="endpoints.SemigroupalSyntax.SemigroupalSyntax">SemigroupalSyntax</a></p></span></dd></dl></div>
+    </li><li name="endpoints.algebra.Requests#request" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="operations">
       <a id="request[UrlP,BodyP,HeadersP,UrlAndBodyPTupled,Out](method:Requests.this.Method,url:Requests.this.Url[UrlP],entity:Requests.this.RequestEntity[BodyP],docs:endpoints.algebra.Documentation,headers:Requests.this.RequestHeaders[HeadersP])(implicittuplerUB:endpoints.Tupler.Aux[UrlP,BodyP,UrlAndBodyPTupled],implicittuplerUBH:endpoints.Tupler.Aux[UrlAndBodyPTupled,HeadersP,Out]):Requests.this.Request[Out]"></a><a id="request[UrlP,BodyP,HeadersP,UrlAndBodyPTupled,Out](Method,Url[UrlP],RequestEntity[BodyP],Documentation,RequestHeaders[HeadersP])(Tupler.Aux[UrlP,BodyP,UrlAndBodyPTupled],Tupler.Aux[UrlAndBodyPTupled,HeadersP,Out]):Request[Out]"></a>
       <span class="permalink">
       <a href="../../endpoints/algebra/Requests.html#request[UrlP,BodyP,HeadersP,UrlAndBodyPTupled,Out](method:Requests.this.Method,url:Requests.this.Url[UrlP],entity:Requests.this.RequestEntity[BodyP],docs:endpoints.algebra.Documentation,headers:Requests.this.RequestHeaders[HeadersP])(implicittuplerUB:endpoints.Tupler.Aux[UrlP,BodyP,UrlAndBodyPTupled],implicittuplerUBH:endpoints.Tupler.Aux[UrlAndBodyPTupled,HeadersP,Out]):Requests.this.Request[Out]" title="Permalink">
@@ -947,7 +947,7 @@ case, its value is an empty collection), and report a failure if at least one va
       <p class="shortcomment cmt">Request for given parameters
 </p><div class="fullcomment"><div class="comment cmt"><p>Request for given parameters
 </p></div><dl class="paramcmts block"><dt class="tparam">UrlP</dt><dd class="cmt"><p>Payload carried by url</p></dd><dt class="tparam">BodyP</dt><dd class="cmt"><p>Payload carried by body</p></dd><dt class="tparam">HeadersP</dt><dd class="cmt"><p>Payload carried by headers</p></dd><dt class="tparam">UrlAndBodyPTupled</dt><dd class="cmt"><p>Payloads of Url and Body tupled together by <a href="../Tupler.html" class="extype" name="endpoints.Tupler">Tupler</a></p></dd><dt class="param">method</dt><dd class="cmt"><p>Request method</p></dd><dt class="param">url</dt><dd class="cmt"><p>Request URL</p></dd><dt class="param">entity</dt><dd class="cmt"><p>Request entity</p></dd><dt class="param">docs</dt><dd class="cmt"><p>Request documentation</p></dd><dt class="param">headers</dt><dd class="cmt"><p>Request headers</p></dd></dl></div>
-    </li><li name="endpoints.algebra.Urls#segment" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.algebra.Urls#segment" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="operations">
       <a id="segment[A](name:String,docs:endpoints.algebra.Documentation)(implicits:Urls.this.Segment[A]):Urls.this.Path[A]"></a><a id="segment[A](String,Documentation)(Segment[A]):Path[A]"></a>
       <span class="permalink">
       <a href="../../endpoints/algebra/Requests.html#segment[A](name:String,docs:endpoints.algebra.Documentation)(implicits:Urls.this.Segment[A]):Urls.this.Path[A]" title="Permalink">
@@ -978,8 +978,8 @@ case, its value is an empty collection), and report a failure if at least one va
         <span class="name">segmentPartialInvFunctor</span><span class="result">: <a href="../PartialInvariantFunctor.html" class="extype" name="endpoints.PartialInvariantFunctor">PartialInvariantFunctor</a>[<a href="#Segment[A]" class="extmbr" name="endpoints.algebra.Requests.Segment">Segment</a>]</span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
-    </li><li name="endpoints.algebra.Urls#staticPathSegment" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt">Provides <code>xmap</code> and <code>xmapPartial</code> operations.</p><div class="fullcomment"><div class="comment cmt"><p>Provides <code>xmap</code> and <code>xmapPartial</code> operations.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd><dt>See also</dt><dd><span class="cmt"><p><a href="../PartialInvariantFunctorSyntax$PartialInvariantFunctorSyntax.html" class="extype" name="endpoints.PartialInvariantFunctorSyntax.PartialInvariantFunctorSyntax">PartialInvariantFunctorSyntax</a> and <a href="../InvariantFunctorSyntax$InvariantFunctorSyntax.html" class="extype" name="endpoints.InvariantFunctorSyntax.InvariantFunctorSyntax">InvariantFunctorSyntax</a></p></span></dd></dl></div>
+    </li><li name="endpoints.algebra.Urls#staticPathSegment" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="operations">
       <a id="staticPathSegment(segment:String):Urls.this.Path[Unit]"></a><a id="staticPathSegment(String):Path[Unit]"></a>
       <span class="permalink">
       <a href="../../endpoints/algebra/Requests.html#staticPathSegment(segment:String):Urls.this.Path[Unit]" title="Permalink">
@@ -995,7 +995,7 @@ case, its value is an empty collection), and report a failure if at least one va
       </span>
       
       <p class="shortcomment cmt">A path segment whose value is the given <code>segment</code></p><div class="fullcomment"><div class="comment cmt"><p>A path segment whose value is the given <code>segment</code></p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
-    </li><li name="endpoints.algebra.Urls#stringQueryString" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.algebra.Urls#stringQueryString" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="operations">
       <a id="stringQueryString:Urls.this.QueryStringParam[String]"></a><a id="stringQueryString:QueryStringParam[String]"></a>
       <span class="permalink">
       <a href="../../endpoints/algebra/Requests.html#stringQueryString:Urls.this.QueryStringParam[String]" title="Permalink">
@@ -1011,7 +1011,7 @@ case, its value is an empty collection), and report a failure if at least one va
       </span>
       
       <p class="shortcomment cmt">Ability to define <code>String</code> query string parameters</p><div class="fullcomment"><div class="comment cmt"><p>Ability to define <code>String</code> query string parameters</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
-    </li><li name="endpoints.algebra.Urls#stringSegment" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.algebra.Urls#stringSegment" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="operations">
       <a id="stringSegment:Urls.this.Segment[String]"></a><a id="stringSegment:Segment[String]"></a>
       <span class="permalink">
       <a href="../../endpoints/algebra/Requests.html#stringSegment:Urls.this.Segment[String]" title="Permalink">
@@ -1030,9 +1030,8 @@ case, its value is an empty collection), and report a failure if at least one va
 Servers should return an URL-decoded string value,
 and clients should take an URL-decoded string value.</p><div class="fullcomment"><div class="comment cmt"><p>Ability to define <code>String</code> path segments
 Servers should return an URL-decoded string value,
-and clients should take an URL-decoded string value.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
-    </li><li name="endpoints.algebra.Requests#textRequest" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+and clients should take an URL-decoded string value.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
+    </li><li name="endpoints.algebra.Requests#textRequest" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="operations">
       <a id="textRequest:Requests.this.RequestEntity[String]"></a><a id="textRequest:RequestEntity[String]"></a>
       <span class="permalink">
       <a href="../../endpoints/algebra/Requests.html#textRequest:Requests.this.RequestEntity[String]" title="Permalink">
@@ -1063,7 +1062,7 @@ and clients should take an URL-decoded string value.
         <span class="name">urlPartialInvFunctor</span><span class="result">: <a href="../PartialInvariantFunctor.html" class="extype" name="endpoints.PartialInvariantFunctor">PartialInvariantFunctor</a>[<a href="#Url[A]" class="extmbr" name="endpoints.algebra.Requests.Url">Url</a>]</span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
+      <p class="shortcomment cmt">Provides <code>xmap</code> and <code>xmapPartial</code> operations</p><div class="fullcomment"><div class="comment cmt"><p>Provides <code>xmap</code> and <code>xmapPartial</code> operations</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd><dt>See also</dt><dd><span class="cmt"><p><a href="../PartialInvariantFunctorSyntax$PartialInvariantFunctorSyntax.html" class="extype" name="endpoints.PartialInvariantFunctorSyntax.PartialInvariantFunctorSyntax">PartialInvariantFunctorSyntax</a> and <a href="../InvariantFunctorSyntax$InvariantFunctorSyntax.html" class="extype" name="endpoints.InvariantFunctorSyntax.InvariantFunctorSyntax">InvariantFunctorSyntax</a></p></span></dd></dl></div>
     </li><li name="endpoints.algebra.Urls#urlWithQueryString" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="urlWithQueryString[A,B](path:Urls.this.Path[A],qs:Urls.this.QueryString[B])(implicittupler:endpoints.Tupler[A,B]):Urls.this.Url[tupler.Out]"></a><a id="urlWithQueryString[A,B](Path[A],QueryString[B])(Tupler[A,B]):Url[Out]"></a>
       <span class="permalink">
@@ -1193,7 +1192,7 @@ and clients should take an URL-decoded string value.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="endpoints.algebra.Urls#booleanQueryString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.algebra.Urls#booleanQueryString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="booleanQueryString:Urls.this.QueryStringParam[Boolean]"></a><a id="booleanQueryString:QueryStringParam[Boolean]"></a>
       <span class="permalink">
       <a href="../../endpoints/algebra/Requests.html#booleanQueryString:Urls.this.QueryStringParam[Boolean]" title="Permalink">
@@ -1233,7 +1232,7 @@ and clients should take an URL-decoded string value.
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="endpoints.algebra.Requests#delete" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.algebra.Requests#delete" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="delete[UrlP,HeadersP,Out](url:Requests.this.Url[UrlP],docs:endpoints.algebra.Documentation,headers:Requests.this.RequestHeaders[HeadersP])(implicittuplerUH:endpoints.Tupler.Aux[UrlP,HeadersP,Out]):Requests.this.Request[Out]"></a><a id="delete[UrlP,HeadersP,Out](Url[UrlP],Documentation,RequestHeaders[HeadersP])(Tupler.Aux[UrlP,HeadersP,Out]):Request[Out]"></a>
       <span class="permalink">
       <a href="../../endpoints/algebra/Requests.html#delete[UrlP,HeadersP,Out](url:Requests.this.Url[UrlP],docs:endpoints.algebra.Documentation,headers:Requests.this.RequestHeaders[HeadersP])(implicittuplerUH:endpoints.Tupler.Aux[UrlP,HeadersP,Out]):Requests.this.Request[Out]" title="Permalink">
@@ -1249,7 +1248,7 @@ and clients should take an URL-decoded string value.
       </span>
       
       <p class="shortcomment cmt">Helper method to perform DELETE request</p><div class="fullcomment"><div class="comment cmt"><p>Helper method to perform DELETE request</p></div><dl class="paramcmts block"><dt class="tparam">UrlP</dt><dd class="cmt"><p>Payload carried by url</p></dd><dt class="tparam">HeadersP</dt><dd class="cmt"><p>Payload carried by headers</p></dd></dl></div>
-    </li><li name="endpoints.algebra.Urls#doubleQueryString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.algebra.Urls#doubleQueryString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="doubleQueryString:Urls.this.QueryStringParam[Double]"></a><a id="doubleQueryString:QueryStringParam[Double]"></a>
       <span class="permalink">
       <a href="../../endpoints/algebra/Requests.html#doubleQueryString:Urls.this.QueryStringParam[Double]" title="Permalink">
@@ -1264,8 +1263,8 @@ and clients should take an URL-decoded string value.
         <span class="name">doubleQueryString</span><span class="result">: <a href="#QueryStringParam[A]" class="extmbr" name="endpoints.algebra.Requests.QueryStringParam">QueryStringParam</a>[<a href="https://www.scala-lang.org/api/2.12.10/scala/Double.html#scala.Double" class="extype" name="scala.Double">Double</a>]</span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
-    </li><li name="endpoints.algebra.Urls#doubleSegment" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt">Codec for query string parameters of type <code>Double</code></p><div class="fullcomment"><div class="comment cmt"><p>Codec for query string parameters of type <code>Double</code></p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
+    </li><li name="endpoints.algebra.Urls#doubleSegment" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="doubleSegment:Urls.this.Segment[Double]"></a><a id="doubleSegment:Segment[Double]"></a>
       <span class="permalink">
       <a href="../../endpoints/algebra/Requests.html#doubleSegment:Urls.this.Segment[Double]" title="Permalink">
@@ -1280,7 +1279,7 @@ and clients should take an URL-decoded string value.
         <span class="name">doubleSegment</span><span class="result">: <a href="#Segment[A]" class="extmbr" name="endpoints.algebra.Requests.Segment">Segment</a>[<a href="https://www.scala-lang.org/api/2.12.10/scala/Double.html#scala.Double" class="extype" name="scala.Double">Double</a>]</span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
+      <p class="shortcomment cmt">Segment codec for type <code>Double</code></p><div class="fullcomment"><div class="comment cmt"><p>Segment codec for type <code>Double</code></p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
     </li><li name="endpoints.algebra.Urls#dummyPathToUrl" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="dummyPathToUrl[A](p:Urls.this.Path[A]):Urls.this.Url[A]"></a><a id="dummyPathToUrl[A](Path[A]):Url[A]"></a>
       <span class="permalink">
@@ -1296,7 +1295,7 @@ and clients should take an URL-decoded string value.
         <span class="name">dummyPathToUrl</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="p">p: <a href="#Path[A]&lt;:Urls.this.Url[A]" class="extmbr" name="endpoints.algebra.Requests.Path">Path</a>[<span class="extype" name="endpoints.algebra.Urls.dummyPathToUrl.A">A</span>]</span>)</span><span class="result">: <a href="#Url[A]" class="extmbr" name="endpoints.algebra.Requests.Url">Url</a>[<span class="extype" name="endpoints.algebra.Urls.dummyPathToUrl.A">A</span>]</span>
       </span>
       
-      <p class="shortcomment cmt">Implicit conversion to get rid of intellij errors when defining paths.</p><div class="fullcomment"><div class="comment cmt"><p>Implicit conversion to get rid of intellij errors when defining paths. Effectively should not be called.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
+      <p class="shortcomment cmt">Implicit conversion to get rid of intellij errors when defining paths.</p><div class="fullcomment"><div class="comment cmt"><p>Implicit conversion to get rid of intellij errors when defining paths. Effectively should not be called.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd><dt>See also</dt><dd><span class="cmt"><p><a href="https://youtrack.jetbrains.com/issue/SCL-16284" target="_blank">https://youtrack.jetbrains.com/issue/SCL-16284</a></p></span></dd></dl></div>
     </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A"></a><a id="ensuring((Requests)⇒Boolean,⇒Any):Requests"></a>
       <span class="permalink">
@@ -1454,7 +1453,7 @@ and clients should take an URL-decoded string value.
                 <span class="name">@inline</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="endpoints.algebra.Requests#get" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.algebra.Requests#get" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="get[UrlP,HeadersP,Out](url:Requests.this.Url[UrlP],docs:endpoints.algebra.Documentation,headers:Requests.this.RequestHeaders[HeadersP])(implicittuplerUH:endpoints.Tupler.Aux[UrlP,HeadersP,Out]):Requests.this.Request[Out]"></a><a id="get[UrlP,HeadersP,Out](Url[UrlP],Documentation,RequestHeaders[HeadersP])(Tupler.Aux[UrlP,HeadersP,Out]):Request[Out]"></a>
       <span class="permalink">
       <a href="../../endpoints/algebra/Requests.html#get[UrlP,HeadersP,Out](url:Requests.this.Url[UrlP],docs:endpoints.algebra.Documentation,headers:Requests.this.RequestHeaders[HeadersP])(implicittuplerUH:endpoints.Tupler.Aux[UrlP,HeadersP,Out]):Requests.this.Request[Out]" title="Permalink">
@@ -1508,7 +1507,7 @@ and clients should take an URL-decoded string value.
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="endpoints.algebra.Urls#intQueryString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.algebra.Urls#intQueryString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="intQueryString:Urls.this.QueryStringParam[Int]"></a><a id="intQueryString:QueryStringParam[Int]"></a>
       <span class="permalink">
       <a href="../../endpoints/algebra/Requests.html#intQueryString:Urls.this.QueryStringParam[Int]" title="Permalink">
@@ -1524,7 +1523,7 @@ and clients should take an URL-decoded string value.
       </span>
       
       <p class="shortcomment cmt">Ability to define <code>Int</code> query string parameters</p><div class="fullcomment"><div class="comment cmt"><p>Ability to define <code>Int</code> query string parameters</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
-    </li><li name="endpoints.algebra.Urls#intSegment" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.algebra.Urls#intSegment" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="intSegment:Urls.this.Segment[Int]"></a><a id="intSegment:Segment[Int]"></a>
       <span class="permalink">
       <a href="../../endpoints/algebra/Requests.html#intSegment:Urls.this.Segment[Int]" title="Permalink">
@@ -1556,7 +1555,7 @@ and clients should take an URL-decoded string value.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="endpoints.algebra.Urls#longQueryString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.algebra.Urls#longQueryString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="longQueryString:Urls.this.QueryStringParam[Long]"></a><a id="longQueryString:QueryStringParam[Long]"></a>
       <span class="permalink">
       <a href="../../endpoints/algebra/Requests.html#longQueryString:Urls.this.QueryStringParam[Long]" title="Permalink">
@@ -1572,7 +1571,7 @@ and clients should take an URL-decoded string value.
       </span>
       
       <p class="shortcomment cmt">Query string parameter containing a <code>Long</code> value</p><div class="fullcomment"><div class="comment cmt"><p>Query string parameter containing a <code>Long</code> value</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
-    </li><li name="endpoints.algebra.Urls#longSegment" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.algebra.Urls#longSegment" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="longSegment:Urls.this.Segment[Long]"></a><a id="longSegment:Segment[Long]"></a>
       <span class="permalink">
       <a href="../../endpoints/algebra/Requests.html#longSegment:Urls.this.Segment[Long]" title="Permalink">
@@ -1642,7 +1641,7 @@ and clients should take an URL-decoded string value.
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="endpoints.algebra.Urls#path" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.algebra.Urls#path" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="path:Urls.this.Path[Unit]"></a><a id="path:Path[Unit]"></a>
       <span class="permalink">
       <a href="../../endpoints/algebra/Requests.html#path:Urls.this.Path[Unit]" title="Permalink">
@@ -1658,7 +1657,7 @@ and clients should take an URL-decoded string value.
       </span>
       
       <p class="shortcomment cmt">An empty path.</p><div class="fullcomment"><div class="comment cmt"><p>An empty path.</p><p>Useful to begin a path definition:</p><pre>path / <span class="lit">"foo"</span> / segment[<span class="std">Int</span>] /? qs[<span class="std">String</span>](<span class="lit">"bar"</span>)</pre></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
-    </li><li name="endpoints.algebra.Requests#post" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.algebra.Requests#post" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="post[UrlP,BodyP,HeadersP,UrlAndBodyPTupled,Out](url:Requests.this.Url[UrlP],entity:Requests.this.RequestEntity[BodyP],docs:endpoints.algebra.Documentation,headers:Requests.this.RequestHeaders[HeadersP])(implicittuplerUB:endpoints.Tupler.Aux[UrlP,BodyP,UrlAndBodyPTupled],implicittuplerUBH:endpoints.Tupler.Aux[UrlAndBodyPTupled,HeadersP,Out]):Requests.this.Request[Out]"></a><a id="post[UrlP,BodyP,HeadersP,UrlAndBodyPTupled,Out](Url[UrlP],RequestEntity[BodyP],Documentation,RequestHeaders[HeadersP])(Tupler.Aux[UrlP,BodyP,UrlAndBodyPTupled],Tupler.Aux[UrlAndBodyPTupled,HeadersP,Out]):Request[Out]"></a>
       <span class="permalink">
       <a href="../../endpoints/algebra/Requests.html#post[UrlP,BodyP,HeadersP,UrlAndBodyPTupled,Out](url:Requests.this.Url[UrlP],entity:Requests.this.RequestEntity[BodyP],docs:endpoints.algebra.Documentation,headers:Requests.this.RequestHeaders[HeadersP])(implicittuplerUB:endpoints.Tupler.Aux[UrlP,BodyP,UrlAndBodyPTupled],implicittuplerUBH:endpoints.Tupler.Aux[UrlAndBodyPTupled,HeadersP,Out]):Requests.this.Request[Out]" title="Permalink">
@@ -1674,7 +1673,7 @@ and clients should take an URL-decoded string value.
       </span>
       
       <p class="shortcomment cmt">Helper method to perform POST request</p><div class="fullcomment"><div class="comment cmt"><p>Helper method to perform POST request</p></div><dl class="paramcmts block"><dt class="tparam">UrlP</dt><dd class="cmt"><p>Payload carried by url</p></dd><dt class="tparam">BodyP</dt><dd class="cmt"><p>Payload carried by body</p></dd><dt class="tparam">HeadersP</dt><dd class="cmt"><p>Payload carried by headers</p></dd><dt class="tparam">UrlAndBodyPTupled</dt><dd class="cmt"><p>Payloads of Url and Body tupled together by <a href="../Tupler.html" class="extype" name="endpoints.Tupler">Tupler</a></p></dd><dt class="param">docs</dt><dd class="cmt"><p>Request documentation</p></dd></dl></div>
-    </li><li name="endpoints.algebra.Requests#put" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.algebra.Requests#put" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="put[UrlP,BodyP,HeadersP,UrlAndBodyPTupled,Out](url:Requests.this.Url[UrlP],entity:Requests.this.RequestEntity[BodyP],docs:endpoints.algebra.Documentation,headers:Requests.this.RequestHeaders[HeadersP])(implicittuplerUB:endpoints.Tupler.Aux[UrlP,BodyP,UrlAndBodyPTupled],implicittuplerUBH:endpoints.Tupler.Aux[UrlAndBodyPTupled,HeadersP,Out]):Requests.this.Request[Out]"></a><a id="put[UrlP,BodyP,HeadersP,UrlAndBodyPTupled,Out](Url[UrlP],RequestEntity[BodyP],Documentation,RequestHeaders[HeadersP])(Tupler.Aux[UrlP,BodyP,UrlAndBodyPTupled],Tupler.Aux[UrlAndBodyPTupled,HeadersP,Out]):Request[Out]"></a>
       <span class="permalink">
       <a href="../../endpoints/algebra/Requests.html#put[UrlP,BodyP,HeadersP,UrlAndBodyPTupled,Out](url:Requests.this.Url[UrlP],entity:Requests.this.RequestEntity[BodyP],docs:endpoints.algebra.Documentation,headers:Requests.this.RequestHeaders[HeadersP])(implicittuplerUB:endpoints.Tupler.Aux[UrlP,BodyP,UrlAndBodyPTupled],implicittuplerUBH:endpoints.Tupler.Aux[UrlAndBodyPTupled,HeadersP,Out]):Requests.this.Request[Out]" title="Permalink">
@@ -1738,7 +1737,7 @@ and clients should take an URL-decoded string value.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
-    </li><li name="endpoints.algebra.Urls#uuidQueryString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.algebra.Urls#uuidQueryString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="uuidQueryString:Urls.this.QueryStringParam[java.util.UUID]"></a><a id="uuidQueryString:QueryStringParam[UUID]"></a>
       <span class="permalink">
       <a href="../../endpoints/algebra/Requests.html#uuidQueryString:Urls.this.QueryStringParam[java.util.UUID]" title="Permalink">
@@ -1754,7 +1753,7 @@ and clients should take an URL-decoded string value.
       </span>
       
       <p class="shortcomment cmt">Ability to define <code>UUID</code> query string parameters</p><div class="fullcomment"><div class="comment cmt"><p>Ability to define <code>UUID</code> query string parameters</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
-    </li><li name="endpoints.algebra.Urls#uuidSegment" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.algebra.Urls#uuidSegment" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="uuidSegment:Urls.this.Segment[java.util.UUID]"></a><a id="uuidSegment:Segment[UUID]"></a>
       <span class="permalink">
       <a href="../../endpoints/algebra/Requests.html#uuidSegment:Urls.this.Segment[java.util.UUID]" title="Permalink">
@@ -1903,7 +1902,13 @@ and clients should take an URL-decoded string value.
         </div>
 
         <div id="groupedMembers">
-        <div class="group" name="Ungrouped">
+        <div class="group" name="types">
+              <h3>Types</h3>
+              <div class="comment cmt"><p>Types introduced by the algebra</p></div>
+            </div><div class="group" name="operations">
+              <h3>Operations</h3>
+              <div class="comment cmt"><p>Operations creating and transforming values</p></div>
+            </div><div class="group" name="Ungrouped">
               <h3>Ungrouped</h3>
               
             </div>

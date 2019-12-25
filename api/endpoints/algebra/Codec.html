@@ -143,18 +143,18 @@
                         <a href="BasicAuthentication.html" title="Provides vocabulary to describe endpoints that use Basic HTTP authentication.">BasicAuthentication</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
-                        <a class="trait" href="BuiltInErrors.html" title="Uses endpoints built-in error types:"></a>
-                        <a href="BuiltInErrors.html" title="Uses endpoints built-in error types:">BuiltInErrors</a>
+                        <a class="trait" href="BuiltInErrors.html" title="Interpreter for the Errors algebra that uses endpoints built-in error types:"></a>
+                        <a href="BuiltInErrors.html" title="Interpreter for the Errors algebra that uses endpoints built-in error types:">BuiltInErrors</a>
                       </li><li class="current-entities indented2">
-                        <span class="separator"></span>
+                        <a class="object" href="Codec$.html" title=""></a>
                         <a class="trait" href="" title="A way to encode and decode values"></a>
                         <a href="" title="A way to encode and decode values">Codec</a>
                       </li><li class="current-entities indented2">
-                        <span class="separator"></span>
+                        <a class="object" href="Decoder$.html" title=""></a>
                         <a class="trait" href="Decoder.html" title="A way to decode a From value into a To value."></a>
                         <a href="Decoder.html" title="A way to decode a From value into a To value.">Decoder</a>
                       </li><li class="current-entities indented2">
-                        <span class="separator"></span>
+                        <a class="object" href="Encoder$.html" title=""></a>
                         <a class="trait" href="Encoder.html" title="A way to encode a From value into a To value"></a>
                         <a href="Encoder.html" title="A way to encode a From value into a To value">Encoder</a>
                       </li><li class="current-entities indented2">
@@ -171,20 +171,20 @@
                         <a href="Errors.html" title="Defines the error types used to model client and server errors.">Errors</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
-                        <a class="object" href="InvalidCodec$.html" title=""></a>
-                        <a href="InvalidCodec$.html" title="">InvalidCodec</a>
+                        <a class="trait" href="JsonCodecs.html" title="Fixes both the JsonRequest and JsonResponse types to be a same JsonCodec type."></a>
+                        <a href="JsonCodecs.html" title="Fixes both the JsonRequest and JsonResponse types to be a same JsonCodec type.">JsonCodecs</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="trait" href="JsonEntities.html" title="Algebra interface for describing JSON entities in requests and responses."></a>
                         <a href="JsonEntities.html" title="Algebra interface for describing JSON entities in requests and responses.">JsonEntities</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
-                        <a class="trait" href="JsonEntitiesFromCodec.html" title="Fixes both the JsonRequest and JsonResponse types to be Codec."></a>
-                        <a href="JsonEntitiesFromCodec.html" title="Fixes both the JsonRequest and JsonResponse types to be Codec.">JsonEntitiesFromCodec</a>
+                        <a class="trait" href="JsonEntitiesFromCodecs.html" title="Turns a JsonCodec into a Codec."></a>
+                        <a href="JsonEntitiesFromCodecs.html" title="Turns a JsonCodec into a Codec.">JsonEntitiesFromCodecs</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
-                        <a class="trait" href="JsonSchemaEntities.html" title="Partially applies the endpoints.algebra.JsonEntities algebra interface to fix the JsonRequest and JsonResponse types to be JsonSchema."></a>
-                        <a href="JsonSchemaEntities.html" title="Partially applies the endpoints.algebra.JsonEntities algebra interface to fix the JsonRequest and JsonResponse types to be JsonSchema.">JsonSchemaEntities</a>
+                        <a class="trait" href="JsonEntitiesFromSchemas.html" title="Partially applies the JsonEntities algebra interface to fix the JsonRequest and JsonResponse types to be JsonSchema."></a>
+                        <a href="JsonEntitiesFromSchemas.html" title="Partially applies the JsonEntities algebra interface to fix the JsonRequest and JsonResponse types to be JsonSchema.">JsonEntitiesFromSchemas</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="trait" href="JsonSchemas.html" title="An algebra interface for describing algebraic data types."></a>
@@ -232,14 +232,16 @@
           <div id="content">
             <body class="trait type">
       <div id="definition">
-        <div class="big-circle trait">t</div>
+        <a href="Codec$.html" title="See companion object"><div class="big-circle trait-companion-object">t</div></a>
         <p id="owner"><a href="../index.html" class="extype" name="endpoints">endpoints</a>.<a href="index.html" class="extype" name="endpoints.algebra">algebra</a></p>
-        <h1>Codec<span class="permalink">
+        <h1><a href="Codec$.html" title="See companion object">Codec</a><span class="permalink">
       <a href="../../endpoints/algebra/Codec.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span></h1>
-        <h3><span class="morelinks"></span></h3>
+        <h3><span class="morelinks"><div>
+            Companion <a href="Codec$.html" title="See companion object">object Codec</a>
+          </div></span></h3>
       </div>
 
       <h4 id="signature" class="signature">
@@ -253,7 +255,7 @@
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>A way to encode and decode values</p></div><dl class="paramcmts block"><dt class="tparam">E</dt><dd class="cmt"><p>Type of encoded values</p></dd><dt class="tparam">D</dt><dd class="cmt"><p>Type of decoded values</p></dd></dl><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/julienrf/endpoints/blob/v0.12.0/algebras/algebra/src/main/scala/endpoints/algebra/Codec.scala" target="_blank">Codec.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>A way to encode and decode values</p></div><dl class="paramcmts block"><dt class="tparam">E</dt><dd class="cmt"><p>Type of encoded values</p></dd><dt class="tparam">D</dt><dd class="cmt"><p>Type of decoded values</p></dd></dl><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/julienrf/endpoints/blob/v0.13.0/algebras/algebra/src/main/scala/endpoints/algebra/Codec.scala" target="_blank">Codec.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -262,7 +264,7 @@
                 <span class="toggle diagram-link">
                   Type Hierarchy
                 </span>
-                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph1" viewBox="0.00 0.00 231.50 118.00" height="118pt" width="232pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 114)" class="graph" id="page0,1_graph0"><polygon points="-4,4 -4,-114 227.5,-114 227.5,4 -4,4" stroke="transparent" fill="#ffffff"></polygon><g class="cluster" id="clust1"></g><g class="cluster" id="clust2"></g><!-- node0 --><g class="node this trait" id="graph1_0"><g id="a_this trait|graph1_0"><a xlink:title="endpoints.algebra.Codec (this trait)" xlink:href="#inheritance-diagram"><path d="M150.1667,-49C150.1667,-49 72.8333,-49 72.8333,-49 68.6667,-49 64.5,-44.8333 64.5,-40.6667 64.5,-40.6667 64.5,-32.3333 64.5,-32.3333 64.5,-28.1667 68.6667,-24 72.8333,-24 72.8333,-24 150.1667,-24 150.1667,-24 154.3333,-24 158.5,-28.1667 158.5,-32.3333 158.5,-32.3333 158.5,-40.6667 158.5,-40.6667 158.5,-44.8333 154.3333,-49 150.1667,-49" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-43.5" x="74.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-34.1" x="95.5" text-anchor="start">Codec[E, D]</text></a></g></g><!-- node1 --><g class="node trait" id="graph1_1"><g id="a_trait|graph1_1"><a xlink:title="endpoints.algebra.Decoder" xlink:href="Decoder.html#inheritance-diagram"><path d="M94.6667,-110C94.6667,-110 8.3333,-110 8.3333,-110 4.1667,-110 0,-105.8333 0,-101.6667 0,-101.6667 0,-93.3333 0,-93.3333 0,-89.1667 4.1667,-85 8.3333,-85 8.3333,-85 94.6667,-85 94.6667,-85 98.8333,-85 103,-89.1667 103,-93.3333 103,-93.3333 103,-101.6667 103,-101.6667 103,-105.8333 98.8333,-110 94.6667,-110" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-104.5" x="10.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-95.1" x="31.5" text-anchor="start">Decoder[E, D]</text></a></g></g><!-- node1&#45;&gt;node0 --><g class="edge inheritance" id="graph1_1_0"><g id="a_inheritance|graph1_1_0"><a xlink:title="Codec[E, D] is a subtype of Decoder[E, D]"><path d="M69.0387,-79.669C78.6757,-69.8714 90.3991,-57.9526 99.0839,-49.123" stroke="#d4d4d4" fill="none"></path><polygon points="67.0941,-78.1522 63.932,-84.8608 70.5874,-81.5883 67.0941,-78.1522" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node2 --><g class="node trait" id="graph1_2"><g id="a_trait|graph1_2"><a xlink:title="endpoints.algebra.Encoder" xlink:href="Encoder.html#inheritance-diagram"><path d="M215.1667,-110C215.1667,-110 129.8333,-110 129.8333,-110 125.6667,-110 121.5,-105.8333 121.5,-101.6667 121.5,-101.6667 121.5,-93.3333 121.5,-93.3333 121.5,-89.1667 125.6667,-85 129.8333,-85 129.8333,-85 215.1667,-85 215.1667,-85 219.3333,-85 223.5,-89.1667 223.5,-93.3333 223.5,-93.3333 223.5,-101.6667 223.5,-101.6667 223.5,-105.8333 219.3333,-110 215.1667,-110" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-104.5" x="131.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-95.1" x="152.5" text-anchor="start">Encoder[D, E]</text></a></g></g><!-- node2&#45;&gt;node0 --><g class="edge inheritance" id="graph1_2_0"><g id="a_inheritance|graph1_2_0"><a xlink:title="Codec[E, D] is a subtype of Encoder[D, E]"><path d="M154.669,-79.669C144.8714,-69.8714 132.9526,-57.9526 124.123,-49.123" stroke="#d4d4d4" fill="none"></path><polygon points="153.1786,-81.6434 159.8608,-84.8608 156.6434,-78.1786 153.1786,-81.6434" stroke="#d4d4d4" fill="none"></polygon></a></g></g></g></svg></div>
+                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph1" viewBox="0.00 0.00 231.50 118.00" height="118pt" width="232pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 114)" class="graph" id="graph0"><polygon points="-4,4 -4,-114 227.5,-114 227.5,4 -4,4" stroke="none" fill="white"></polygon><g class="cluster" id="clust1"></g><g class="cluster" id="clust2"></g><!-- node0 --><g class="node this trait" id="graph1_0"><g id="a_this trait|graph1_0"><a xlink:title="endpoints.algebra.Codec (this trait)" xlink:href="#inheritance-diagram"><path d="M150.167,-49C150.167,-49 72.8333,-49 72.8333,-49 68.6667,-49 64.5,-44.8333 64.5,-40.6667 64.5,-40.6667 64.5,-32.3333 64.5,-32.3333 64.5,-28.1667 68.6667,-24 72.8333,-24 72.8333,-24 150.167,-24 150.167,-24 154.333,-24 158.5,-28.1667 158.5,-32.3333 158.5,-32.3333 158.5,-40.6667 158.5,-40.6667 158.5,-44.8333 154.333,-49 150.167,-49" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-43.5" x="74.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-34.1" x="95.5" text-anchor="start">Codec[E, D]</text></a></g></g><!-- node1 --><g class="node trait" id="graph1_1"><g id="a_trait|graph1_1"><a xlink:title="endpoints.algebra.Decoder" xlink:href="Decoder.html#inheritance-diagram"><path d="M94.6667,-110C94.6667,-110 8.33333,-110 8.33333,-110 4.16667,-110 0,-105.833 0,-101.667 0,-101.667 0,-93.3333 0,-93.3333 0,-89.1667 4.16667,-85 8.33333,-85 8.33333,-85 94.6667,-85 94.6667,-85 98.8333,-85 103,-89.1667 103,-93.3333 103,-93.3333 103,-101.667 103,-101.667 103,-105.833 98.8333,-110 94.6667,-110" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-104.5" x="10.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-95.1" x="31.5" text-anchor="start">Decoder[E, D]</text></a></g></g><!-- node1&#45;&gt;node0 --><g class="edge inheritance" id="graph1_1_0"><g id="a_inheritance|graph1_1_0"><a xlink:title="Codec[E, D] is a subtype of Decoder[E, D]"><path d="M68.5975,-79.6874C78.5333,-69.9173 90.8016,-57.8534 99.6706,-49.1323" stroke="#d4d4d4" fill="none"></path><polygon points="66.6275,-78.1886 63.3541,-84.8435 70.0631,-81.6824 66.6275,-78.1886" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node2 --><g class="node trait" id="graph1_2"><g id="a_trait|graph1_2"><a xlink:title="endpoints.algebra.Encoder" xlink:href="Encoder.html#inheritance-diagram"><path d="M215.167,-110C215.167,-110 129.833,-110 129.833,-110 125.667,-110 121.5,-105.833 121.5,-101.667 121.5,-101.667 121.5,-93.3333 121.5,-93.3333 121.5,-89.1667 125.667,-85 129.833,-85 129.833,-85 215.167,-85 215.167,-85 219.333,-85 223.5,-89.1667 223.5,-93.3333 223.5,-93.3333 223.5,-101.667 223.5,-101.667 223.5,-105.833 219.333,-110 215.167,-110" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-104.5" x="131.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-95.1" x="152.5" text-anchor="start">Encoder[D, E]</text></a></g></g><!-- node2&#45;&gt;node0 --><g class="edge inheritance" id="graph1_2_0"><g id="a_inheritance|graph1_2_0"><a xlink:title="Codec[E, D] is a subtype of Encoder[D, E]"><path d="M155.397,-79.9582C145.247,-70.141 132.627,-57.9342 123.527,-49.1323" stroke="#d4d4d4" fill="none"></path><polygon points="153.713,-81.7379 160.448,-84.8435 157.12,-78.2158 153.713,-81.7379" stroke="#d4d4d4" fill="none"></polygon></a></g></g></g></svg></div>
                 <div id="diagram-controls" class="hiddenContent">
                   <button id="diagram-zoom-out" class="diagram-btn"><i class="material-icons"></i></button>
                   <button id="diagram-zoom-in" class="diagram-btn"><i class="material-icons"></i></button>

@@ -157,7 +157,7 @@ of a case class:</p><pre><span class="kw">case</span> <span class="kw">class</sp
     field[<span class="std">String</span>](<span class="lit">"name"</span>) zip
     field[<span class="std">Int</span>](<span class="lit">"age"</span>)
   ).xmap((User.apply _).tupled)(<span class="std">Function</span>.unlift(User.unapply))
-}</pre></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/julienrf/endpoints/blob/v0.12.0/json-schema/json-schema-generic/src/main/scala/endpoints/generic/JsonSchemas.scala" target="_blank">JsonSchemas.scala</a></dd></dl><div class="toggleContainer block">
+}</pre></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/julienrf/endpoints/blob/v0.13.0/json-schema/json-schema-generic/src/main/scala/endpoints/generic/JsonSchemas.scala" target="_blank">JsonSchemas.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -166,7 +166,7 @@ of a case class:</p><pre><span class="kw">case</span> <span class="kw">class</sp
                 <span class="toggle diagram-link">
                   Type Hierarchy
                 </span>
-                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph1" viewBox="0.00 0.00 156.00 118.00" height="118pt" width="156pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 114)" class="graph" id="page0,1_graph0"><polygon points="-4,4 -4,-114 152,-114 152,4 -4,4" stroke="transparent" fill="#ffffff"></polygon><g class="cluster" id="clust1"></g><g class="cluster" id="clust2"></g><!-- node0 --><g class="node this trait" id="graph1_0"><g id="a_this trait|graph1_0"><a xlink:title="endpoints.generic.JsonSchemas (this trait)" xlink:href="#inheritance-diagram"><path d="M115.6667,-49C115.6667,-49 32.3333,-49 32.3333,-49 28.1667,-49 24,-44.8333 24,-40.6667 24,-40.6667 24,-32.3333 24,-32.3333 24,-28.1667 28.1667,-24 32.3333,-24 32.3333,-24 115.6667,-24 115.6667,-24 119.8333,-24 124,-28.1667 124,-32.3333 124,-32.3333 124,-40.6667 124,-40.6667 124,-44.8333 119.8333,-49 115.6667,-49" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-43.5" x="34" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-34.1" x="55" text-anchor="start">JsonSchemas</text></a></g></g><!-- node1 --><g class="node trait" id="graph1_1"><g id="a_trait|graph1_1"><a xlink:title="endpoints.algebra.JsonSchemas" xlink:href="../algebra/JsonSchemas.html#inheritance-diagram"><path d="M133.1667,-110C133.1667,-110 14.8333,-110 14.8333,-110 10.6667,-110 6.5,-105.8333 6.5,-101.6667 6.5,-101.6667 6.5,-93.3333 6.5,-93.3333 6.5,-89.1667 10.6667,-85 14.8333,-85 14.8333,-85 133.1667,-85 133.1667,-85 137.3333,-85 141.5,-89.1667 141.5,-93.3333 141.5,-93.3333 141.5,-101.6667 141.5,-101.6667 141.5,-105.8333 137.3333,-110 133.1667,-110" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-104.5" x="17" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-95.1" x="38" text-anchor="start">algebra.JsonSchemas</text></a></g></g><!-- node1&#45;&gt;node0 --><g class="edge inheritance" id="graph1_1_0"><g id="a_inheritance|graph1_1_0"><a xlink:title="JsonSchemas is a subtype of algebra.JsonSchemas"><path d="M74,-77.7386C74,-68.3393 74,-57.3803 74,-49.123" stroke="#d4d4d4" fill="none"></path><polygon points="71.5501,-77.8607 74,-84.8608 76.4501,-77.8608 71.5501,-77.8607" stroke="#d4d4d4" fill="none"></polygon></a></g></g></g></svg></div>
+                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph1" viewBox="0.00 0.00 158.00 118.00" height="118pt" width="158pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 114)" class="graph" id="graph0"><polygon points="-4,4 -4,-114 154,-114 154,4 -4,4" stroke="none" fill="white"></polygon><g class="cluster" id="clust1"></g><g class="cluster" id="clust2"></g><!-- node0 --><g class="node this trait" id="graph1_0"><g id="a_this trait|graph1_0"><a xlink:title="endpoints.generic.JsonSchemas (this trait)" xlink:href="#inheritance-diagram"><path d="M117.667,-49C117.667,-49 32.3333,-49 32.3333,-49 28.1667,-49 24,-44.8333 24,-40.6667 24,-40.6667 24,-32.3333 24,-32.3333 24,-28.1667 28.1667,-24 32.3333,-24 32.3333,-24 117.667,-24 117.667,-24 121.833,-24 126,-28.1667 126,-32.3333 126,-32.3333 126,-40.6667 126,-40.6667 126,-44.8333 121.833,-49 117.667,-49" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-43.5" x="34" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-34.1" x="55" text-anchor="start">JsonSchemas</text></a></g></g><!-- node1 --><g class="node trait" id="graph1_1"><g id="a_trait|graph1_1"><a xlink:title="endpoints.algebra.JsonSchemas" xlink:href="../algebra/JsonSchemas.html#inheritance-diagram"><path d="M135.667,-110C135.667,-110 14.3333,-110 14.3333,-110 10.1667,-110 6,-105.833 6,-101.667 6,-101.667 6,-93.3333 6,-93.3333 6,-89.1667 10.1667,-85 14.3333,-85 14.3333,-85 135.667,-85 135.667,-85 139.833,-85 144,-89.1667 144,-93.3333 144,-93.3333 144,-101.667 144,-101.667 144,-105.833 139.833,-110 135.667,-110" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-104.5" x="16" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-95.1" x="37" text-anchor="start">algebra.JsonSchemas</text></a></g></g><!-- node1&#45;&gt;node0 --><g class="edge inheritance" id="graph1_1_0"><g id="a_inheritance|graph1_1_0"><a xlink:title="JsonSchemas is a subtype of algebra.JsonSchemas"><path d="M75,-77.7603C75,-68.3675 75,-57.2882 75,-49.1323" stroke="#d4d4d4" fill="none"></path><polygon points="72.5501,-77.8435 75,-84.8435 77.4501,-77.8435 72.5501,-77.8435" stroke="#d4d4d4" fill="none"></polygon></a></g></g></g></svg></div>
                 <div id="diagram-controls" class="hiddenContent">
                   <button id="diagram-zoom-out" class="diagram-btn"><i class="material-icons"></i></button>
                   <button id="diagram-zoom-in" class="diagram-btn"><i class="material-icons"></i></button>
@@ -275,6 +275,22 @@ of a case class:</p><pre><span class="kw">case</span> <span class="kw">class</sp
       </span>
       
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../algebra/JsonSchemas.html" class="extype" name="endpoints.algebra.JsonSchemas">JsonSchemas</a></dd></dl></div>
+    </li><li name="endpoints.algebra.JsonSchemas.JsonSchemaOps" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
+      <a id="JsonSchemaOps[A]extendsAnyRef"></a><a id="JsonSchemaOps[A]:JsonSchemaOps[A]"></a>
+      <span class="permalink">
+      <a href="../../endpoints/algebra/JsonSchemas$JsonSchemaOps.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Implicit methods for values of type JsonSchema" href="../algebra/JsonSchemas$JsonSchemaOps.html"><span class="name">JsonSchemaOps</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="result"> extends <a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Implicit methods for values of type <a href="../algebra/JsonSchemas.html#JsonSchema[A]" class="extmbr" name="endpoints.algebra.JsonSchemas.JsonSchema">JsonSchema</a></p><div class="fullcomment"><div class="comment cmt"><p>Implicit methods for values of type <a href="../algebra/JsonSchemas.html#JsonSchema[A]" class="extmbr" name="endpoints.algebra.JsonSchemas.JsonSchema">JsonSchema</a></p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../algebra/JsonSchemas.html" class="extype" name="endpoints.algebra.JsonSchemas">JsonSchemas</a></dd></dl></div>
     </li><li name="endpoints.algebra.JsonSchemas.RecordOps" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="RecordOps[A]extendsAnyRef"></a><a id="RecordOps[A]:RecordOps[A]"></a>
       <span class="permalink">
@@ -421,8 +437,8 @@ of a case class:</p><pre><span class="kw">case</span> <span class="kw">class</sp
       
       <p class="shortcomment cmt">The JSON schema of a type <code>A</code>
 </p><div class="fullcomment"><div class="comment cmt"><p>The JSON schema of a type <code>A</code>
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../algebra/JsonSchemas.html" class="extype" name="endpoints.algebra.JsonSchemas">JsonSchemas</a></dd><dt>Note</dt><dd><span class="cmt"><p>This type has implicit methods provided by the <a href="../PartialInvariantFunctorSyntax$PartialInvariantFunctorSyntax.html" class="extype" name="endpoints.PartialInvariantFunctorSyntax.PartialInvariantFunctorSyntax">PartialInvariantFunctorSyntax</a> and
-      <a href="../InvariantFunctorSyntax$InvariantFunctorSyntax.html" class="extype" name="endpoints.InvariantFunctorSyntax.InvariantFunctorSyntax">InvariantFunctorSyntax</a> classes.</p></span></dd></dl></div>
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../algebra/JsonSchemas.html" class="extype" name="endpoints.algebra.JsonSchemas">JsonSchemas</a></dd><dt>Note</dt><dd><span class="cmt"><p>This type has implicit methods provided by the <a href="../PartialInvariantFunctorSyntax$PartialInvariantFunctorSyntax.html" class="extype" name="endpoints.PartialInvariantFunctorSyntax.PartialInvariantFunctorSyntax">PartialInvariantFunctorSyntax</a>,
+      <a href="../InvariantFunctorSyntax$InvariantFunctorSyntax.html" class="extype" name="endpoints.InvariantFunctorSyntax.InvariantFunctorSyntax">InvariantFunctorSyntax</a>, and <a href="../algebra/JsonSchemas$JsonSchemaOps.html" class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps">JsonSchemaOps</a> classes.</p></span></dd></dl></div>
     </li><li name="endpoints.generic.JsonSchemas.JsonSchemaGenericOps" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="JsonSchemaGenericOps[A]extendsAnyRef"></a><a id="JsonSchemaGenericOps[A]:JsonSchemaGenericOps[A]"></a>
       <span class="permalink">
@@ -611,9 +627,9 @@ Tagged schemas are useful to describe sum types (sealed traits).
       
       <p class="shortcomment cmt">The JSON schema of a record with no fields</p><div class="fullcomment"><div class="comment cmt"><p>The JSON schema of a record with no fields</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../algebra/JsonSchemas.html" class="extype" name="endpoints.algebra.JsonSchemas">JsonSchemas</a></dd></dl></div>
     </li><li name="endpoints.algebra.JsonSchemas#enumeration" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="operations">
-      <a id="enumeration[A](values:Seq[A])(encode:A=&gt;String)(implicittpe:JsonSchemas.this.JsonSchema[String]):JsonSchemas.this.Enum[A]"></a><a id="enumeration[A](Seq[A])((A)⇒String)(JsonSchema[String]):Enum[A]"></a>
+      <a id="enumeration[A](values:Seq[A])(tpe:JsonSchemas.this.JsonSchema[A]):JsonSchemas.this.Enum[A]"></a><a id="enumeration[A](Seq[A])(JsonSchema[A]):Enum[A]"></a>
       <span class="permalink">
-      <a href="../../endpoints/generic/JsonSchemas.html#enumeration[A](values:Seq[A])(encode:A=&gt;String)(implicittpe:JsonSchemas.this.JsonSchema[String]):JsonSchemas.this.Enum[A]" title="Permalink">
+      <a href="../../endpoints/generic/JsonSchemas.html#enumeration[A](values:Seq[A])(tpe:JsonSchemas.this.JsonSchema[A]):JsonSchemas.this.Enum[A]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -622,10 +638,10 @@ Tagged schemas are useful to describe sum types (sealed traits).
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">enumeration</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="values">values: <a href="../../scala/index.html#Seq[+A]=Seq[A]" class="extmbr" name="scala.Seq">Seq</a>[<span class="extype" name="endpoints.algebra.JsonSchemas.enumeration.A">A</span>]</span>)</span><span class="params">(<span name="encode">encode: (<span class="extype" name="endpoints.algebra.JsonSchemas.enumeration.A">A</span>) ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="tpe">tpe: <a href="#JsonSchema[A]" class="extmbr" name="endpoints.generic.JsonSchemas.JsonSchema">JsonSchema</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result">: <a href="#Enum[A]&lt;:JsonSchemas.this.JsonSchema[A]" class="extmbr" name="endpoints.generic.JsonSchemas.Enum">Enum</a>[<span class="extype" name="endpoints.algebra.JsonSchemas.enumeration.A">A</span>]</span>
+        <span class="name">enumeration</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="values">values: <a href="../../scala/index.html#Seq[+A]=Seq[A]" class="extmbr" name="scala.Seq">Seq</a>[<span class="extype" name="endpoints.algebra.JsonSchemas.enumeration.A">A</span>]</span>)</span><span class="params">(<span name="tpe">tpe: <a href="#JsonSchema[A]" class="extmbr" name="endpoints.generic.JsonSchemas.JsonSchema">JsonSchema</a>[<span class="extype" name="endpoints.algebra.JsonSchemas.enumeration.A">A</span>]</span>)</span><span class="result">: <a href="#Enum[A]&lt;:JsonSchemas.this.JsonSchema[A]" class="extmbr" name="endpoints.generic.JsonSchemas.Enum">Enum</a>[<span class="extype" name="endpoints.algebra.JsonSchemas.enumeration.A">A</span>]</span>
       </span>
       
-      <p class="shortcomment cmt">Promotes a schema to an enumeration and converts between enum constants and JSON strings.</p><div class="fullcomment"><div class="comment cmt"><p>Promotes a schema to an enumeration and converts between enum constants and JSON strings.
+      <p class="shortcomment cmt">Promotes a schema to an enumeration.</p><div class="fullcomment"><div class="comment cmt"><p>Promotes a schema to an enumeration.
 Decoding fails if the input string does not match the encoded values of any of the possible values.
 Encoding does never fail, even if the value is not contained in the set of possible values.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../algebra/JsonSchemas.html" class="extype" name="endpoints.algebra.JsonSchemas">JsonSchemas</a></dd></dl></div>
@@ -847,21 +863,22 @@ the given <code>schema</code> unless it is effectively used.
       <p class="shortcomment cmt">Provides <code>xmap</code> and <code>xmapPartial</code> operations.</p><div class="fullcomment"><div class="comment cmt"><p>Provides <code>xmap</code> and <code>xmapPartial</code> operations.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../algebra/JsonSchemas.html" class="extype" name="endpoints.algebra.JsonSchemas">JsonSchemas</a></dd><dt>See also</dt><dd><span class="cmt"><p><a href="../PartialInvariantFunctorSyntax$PartialInvariantFunctorSyntax.html" class="extype" name="endpoints.PartialInvariantFunctorSyntax.PartialInvariantFunctorSyntax">PartialInvariantFunctorSyntax</a> and <a href="../InvariantFunctorSyntax$InvariantFunctorSyntax.html" class="extype" name="endpoints.InvariantFunctorSyntax.InvariantFunctorSyntax">InvariantFunctorSyntax</a></p></span></dd></dl></div>
     </li><li name="endpoints.algebra.JsonSchemas#stringJsonSchema" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="operations">
-      <a id="stringJsonSchema:JsonSchemas.this.JsonSchema[String]"></a><a id="stringJsonSchema:JsonSchema[String]"></a>
+      <a id="stringJsonSchema(format:Option[String]):JsonSchemas.this.JsonSchema[String]"></a><a id="stringJsonSchema(Option[String]):JsonSchema[String]"></a>
       <span class="permalink">
-      <a href="../../endpoints/generic/JsonSchemas.html#stringJsonSchema:JsonSchemas.this.JsonSchema[String]" title="Permalink">
+      <a href="../../endpoints/generic/JsonSchemas.html#stringJsonSchema(format:Option[String]):JsonSchemas.this.JsonSchema[String]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
       <span class="modifier_kind">
-        <span class="modifier">implicit abstract </span>
+        <span class="modifier">abstract </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">stringJsonSchema</span><span class="result">: <a href="#JsonSchema[A]" class="extmbr" name="endpoints.generic.JsonSchemas.JsonSchema">JsonSchema</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+        <span class="name">stringJsonSchema</span><span class="params">(<span name="format">format: <a href="https://www.scala-lang.org/api/2.12.10/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result">: <a href="#JsonSchema[A]" class="extmbr" name="endpoints.generic.JsonSchemas.JsonSchema">JsonSchema</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>
       </span>
       
-      <p class="shortcomment cmt">A JSON schema for type <code>String</code></p><div class="fullcomment"><div class="comment cmt"><p>A JSON schema for type <code>String</code></p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../algebra/JsonSchemas.html" class="extype" name="endpoints.algebra.JsonSchemas">JsonSchemas</a></dd></dl></div>
+      <p class="shortcomment cmt">A JSON schema for type <code>String</code>.</p><div class="fullcomment"><div class="comment cmt"><p>A JSON schema for type <code>String</code>.
+</p></div><dl class="paramcmts block"><dt class="param">format</dt><dd class="cmt"><p>An additional semantic information about the underlying format of the string</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../algebra/JsonSchemas.html" class="extype" name="endpoints.algebra.JsonSchemas">JsonSchemas</a></dd><dt>See also</dt><dd><span class="cmt"><p><a href="https://json-schema.org/understanding-json-schema/reference/string.html#format" target="_blank">https://json-schema.org/understanding-json-schema/reference/string.html#format</a></p></span></dd></dl></div>
     </li><li name="endpoints.algebra.JsonSchemas#taggedPartialInvFunctor" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="taggedPartialInvFunctor:endpoints.PartialInvariantFunctor[JsonSchemas.this.Tagged]"></a><a id="taggedPartialInvFunctor:PartialInvariantFunctor[Tagged]"></a>
       <span class="permalink">
@@ -1252,22 +1269,6 @@ the given <code>schema</code> unless it is effectively used.
       
       <p class="shortcomment cmt">A JSON schema for a tuple of 9 elements.</p><div class="fullcomment"><div class="comment cmt"><p>A JSON schema for a tuple of 9 elements.</p><p>Tuples are represented with JSON arrays, as documented in <a href="https://json-schema.org/understanding-json-schema/reference/array.html#tuple-validation" target="_blank">https://json-schema.org/understanding-json-schema/reference/array.html#tuple-validation</a>.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../algebra/TuplesSchemas.html" class="extype" name="endpoints.algebra.TuplesSchemas">TuplesSchemas</a></dd></dl></div>
-    </li><li name="endpoints.algebra.JsonSchemas#uuidJsonSchema" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="operations">
-      <a id="uuidJsonSchema:JsonSchemas.this.JsonSchema[java.util.UUID]"></a><a id="uuidJsonSchema:JsonSchema[UUID]"></a>
-      <span class="permalink">
-      <a href="../../endpoints/generic/JsonSchemas.html#uuidJsonSchema:JsonSchemas.this.JsonSchema[java.util.UUID]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier">implicit abstract </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">uuidJsonSchema</span><span class="result">: <a href="#JsonSchema[A]" class="extmbr" name="endpoints.generic.JsonSchemas.JsonSchema">JsonSchema</a>[<span class="extype" name="java.util.UUID">UUID</span>]</span>
-      </span>
-      
-      <p class="shortcomment cmt">A JSON schema for type <code>UUID</code></p><div class="fullcomment"><div class="comment cmt"><p>A JSON schema for type <code>UUID</code></p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../algebra/JsonSchemas.html" class="extype" name="endpoints.algebra.JsonSchemas">JsonSchemas</a></dd></dl></div>
     </li><li name="endpoints.algebra.JsonSchemas#withDiscriminatorTagged" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="withDiscriminatorTagged[A](tagged:JsonSchemas.this.Tagged[A],discriminatorName:String):JsonSchemas.this.Tagged[A]"></a><a id="withDiscriminatorTagged[A](Tagged[A],String):Tagged[A]"></a>
       <span class="permalink">
@@ -1284,6 +1285,22 @@ the given <code>schema</code> unless it is effectively used.
       </span>
       
       <p class="shortcomment cmt">Allows to specify name of discriminator field for sum type</p><div class="fullcomment"><div class="comment cmt"><p>Allows to specify name of discriminator field for sum type</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../algebra/JsonSchemas.html" class="extype" name="endpoints.algebra.JsonSchemas">JsonSchemas</a></dd></dl></div>
+    </li><li name="endpoints.algebra.JsonSchemas#withExampleJsonSchema" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="withExampleJsonSchema[A](schema:JsonSchemas.this.JsonSchema[A],example:A):JsonSchemas.this.JsonSchema[A]"></a><a id="withExampleJsonSchema[A](JsonSchema[A],A):JsonSchema[A]"></a>
+      <span class="permalink">
+      <a href="../../endpoints/generic/JsonSchemas.html#withExampleJsonSchema[A](schema:JsonSchemas.this.JsonSchema[A],example:A):JsonSchemas.this.JsonSchema[A]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">withExampleJsonSchema</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="schema">schema: <a href="#JsonSchema[A]" class="extmbr" name="endpoints.generic.JsonSchemas.JsonSchema">JsonSchema</a>[<span class="extype" name="endpoints.algebra.JsonSchemas.withExampleJsonSchema.A">A</span>]</span>, <span name="example">example: <span class="extype" name="endpoints.algebra.JsonSchemas.withExampleJsonSchema.A">A</span></span>)</span><span class="result">: <a href="#JsonSchema[A]" class="extmbr" name="endpoints.generic.JsonSchemas.JsonSchema">JsonSchema</a>[<span class="extype" name="endpoints.algebra.JsonSchemas.withExampleJsonSchema.A">A</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../algebra/JsonSchemas.html" class="extype" name="endpoints.algebra.JsonSchemas">JsonSchemas</a></dd></dl></div>
     </li><li name="endpoints.algebra.JsonSchemas#zipRecords" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="zipRecords[A,B](recordA:JsonSchemas.this.Record[A],recordB:JsonSchemas.this.Record[B])(implicitt:endpoints.Tupler[A,B]):JsonSchemas.this.Record[t.Out]"></a><a id="zipRecords[A,B](Record[A],Record[B])(Tupler[A,B]):Record[Out]"></a>
       <span class="permalink">
@@ -1474,6 +1491,22 @@ This could result in non unique values and mess with documentation.</p><p>You ca
       <p class="shortcomment cmt">Default discriminator field name for sum types.</p><div class="fullcomment"><div class="comment cmt"><p>Default discriminator field name for sum types.</p><p>It defaults to &quot;type&quot;, but you can override it twofold:
 - by overriding this field you can change default discriminator name algebra-wide
 - by using <code>withDiscriminator</code> you can specify discriminator field name for specific sum type</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../algebra/JsonSchemas.html" class="extype" name="endpoints.algebra.JsonSchemas">JsonSchemas</a></dd></dl></div>
+    </li><li name="endpoints.algebra.JsonSchemas#defaultStringJsonSchema" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
+      <a id="defaultStringJsonSchema:JsonSchemas.this.JsonSchema[String]"></a><a id="defaultStringJsonSchema:JsonSchema[String]"></a>
+      <span class="permalink">
+      <a href="../../endpoints/generic/JsonSchemas.html#defaultStringJsonSchema:JsonSchemas.this.JsonSchema[String]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">defaultStringJsonSchema</span><span class="result">: <a href="#JsonSchema[A]" class="extmbr" name="endpoints.generic.JsonSchemas.JsonSchema">JsonSchema</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">A JSON schema for type <code>String</code></p><div class="fullcomment"><div class="comment cmt"><p>A JSON schema for type <code>String</code></p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../algebra/JsonSchemas.html" class="extype" name="endpoints.algebra.JsonSchemas">JsonSchemas</a></dd></dl></div>
     </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A"></a><a id="ensuring((JsonSchemas)⇒Boolean,⇒Any):JsonSchemas"></a>
       <span class="permalink">
@@ -1744,6 +1777,30 @@ description of the data type (based on the <code>JsonSchemas</code> algebra inte
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="endpoints.algebra.JsonSchemas#literal" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
+      <a id="literal[A](value:A)(implicittpe:JsonSchemas.this.JsonSchema[A]):JsonSchemas.this.JsonSchema[Unit]"></a><a id="literal[A](A)(JsonSchema[A]):JsonSchema[Unit]"></a>
+      <span class="permalink">
+      <a href="../../endpoints/generic/JsonSchemas.html#literal[A](value:A)(implicittpe:JsonSchemas.this.JsonSchema[A]):JsonSchemas.this.JsonSchema[Unit]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">literal</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="value">value: <span class="extype" name="endpoints.algebra.JsonSchemas.literal.A">A</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="tpe">tpe: <a href="#JsonSchema[A]" class="extmbr" name="endpoints.generic.JsonSchemas.JsonSchema">JsonSchema</a>[<span class="extype" name="endpoints.algebra.JsonSchemas.literal.A">A</span>]</span>)</span><span class="result">: <a href="#JsonSchema[A]" class="extmbr" name="endpoints.generic.JsonSchemas.JsonSchema">JsonSchema</a>[<a href="https://www.scala-lang.org/api/2.12.10/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">A schema for a statically known value.</p><div class="fullcomment"><div class="comment cmt"><p>A schema for a statically known value.</p><p>Encoders always produce the given <code>value</code>, encoded according to <code>tpe</code>.
+Decoders first try to decode incoming values with the given <code>tpe</code> schema,
+and then check that it is equal to the given <code>value</code>.</p><p>This is useful to model schemas of objects containing extra fields that
+are absent from their Scala representation. For example, here is a schema
+for a GeoJSON point:</p><pre><span class="kw">case</span> <span class="kw">class</span> Point(lon: <span class="std">Double</span>, lat: <span class="std">Double</span>)
+<span class="kw">val</span> pointSchema = (
+  field(<span class="lit">"type"</span>)(literal(<span class="lit">"Point"</span>)) zip
+  field[(<span class="std">Double</span>, <span class="std">Double</span>)](<span class="lit">"coordinates"</span>)
+).xmap(Point.tupled)(p <span class="kw">=&gt;</span> (p.lon, p.lat))</pre></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../algebra/JsonSchemas.html" class="extype" name="endpoints.algebra.JsonSchemas">JsonSchemas</a></dd></dl></div>
     </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
       <span class="permalink">
@@ -1814,6 +1871,22 @@ description of the data type (based on the <code>JsonSchemas</code> algebra inte
       </span>
       
       
+    </li><li name="endpoints.algebra.JsonSchemas#stringEnumeration" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
+      <a id="stringEnumeration[A](values:Seq[A])(encode:A=&gt;String)(implicittpe:JsonSchemas.this.JsonSchema[String]):JsonSchemas.this.Enum[A]"></a><a id="stringEnumeration[A](Seq[A])((A)⇒String)(JsonSchema[String]):Enum[A]"></a>
+      <span class="permalink">
+      <a href="../../endpoints/generic/JsonSchemas.html#stringEnumeration[A](values:Seq[A])(encode:A=&gt;String)(implicittpe:JsonSchemas.this.JsonSchema[String]):JsonSchemas.this.Enum[A]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">stringEnumeration</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="values">values: <a href="../../scala/index.html#Seq[+A]=Seq[A]" class="extmbr" name="scala.Seq">Seq</a>[<span class="extype" name="endpoints.algebra.JsonSchemas.stringEnumeration.A">A</span>]</span>)</span><span class="params">(<span name="encode">encode: (<span class="extype" name="endpoints.algebra.JsonSchemas.stringEnumeration.A">A</span>) ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="tpe">tpe: <a href="#JsonSchema[A]" class="extmbr" name="endpoints.generic.JsonSchemas.JsonSchema">JsonSchema</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result">: <a href="#Enum[A]&lt;:JsonSchemas.this.JsonSchema[A]" class="extmbr" name="endpoints.generic.JsonSchemas.Enum">Enum</a>[<span class="extype" name="endpoints.algebra.JsonSchemas.stringEnumeration.A">A</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Convenient constructor for enumerations represented by string values.</p><div class="fullcomment"><div class="comment cmt"><p>Convenient constructor for enumerations represented by string values.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../algebra/JsonSchemas.html" class="extype" name="endpoints.algebra.JsonSchemas">JsonSchemas</a></dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
       <span class="permalink">
@@ -1846,6 +1919,22 @@ description of the data type (based on the <code>JsonSchemas</code> algebra inte
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="endpoints.algebra.JsonSchemas#uuidJsonSchema" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
+      <a id="uuidJsonSchema:JsonSchemas.this.JsonSchema[java.util.UUID]"></a><a id="uuidJsonSchema:JsonSchema[UUID]"></a>
+      <span class="permalink">
+      <a href="../../endpoints/generic/JsonSchemas.html#uuidJsonSchema:JsonSchemas.this.JsonSchema[java.util.UUID]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit final </span>
+        <span class="kind">lazy val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">uuidJsonSchema</span><span class="result">: <a href="#JsonSchema[A]" class="extmbr" name="endpoints.generic.JsonSchemas.JsonSchema">JsonSchema</a>[<span class="extype" name="java.util.UUID">UUID</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">A JSON schema for type <code>UUID</code></p><div class="fullcomment"><div class="comment cmt"><p>A JSON schema for type <code>UUID</code></p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../algebra/JsonSchemas.html" class="extype" name="endpoints.algebra.JsonSchemas">JsonSchemas</a></dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <span class="permalink">
@@ -1995,7 +2084,7 @@ description of the data type (based on the <code>JsonSchemas</code> algebra inte
         <div id="groupedMembers">
         <div class="group" name="types">
               <h3>Types</h3>
-              <div class="comment cmt"><p>Types introduced by the algebra interface</p></div>
+              <div class="comment cmt"><p>Types introduced by the algebra</p></div>
             </div><div class="group" name="operations">
               <h3>Operations</h3>
               <div class="comment cmt"><p>Operations creating and transforming values</p></div>

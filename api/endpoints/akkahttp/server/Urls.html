@@ -119,38 +119,6 @@
       <p class="shortcomment cmt">Server interpreters backed by Akka HTTP
 </p><div class="fullcomment"><div class="comment cmt"><p>Server interpreters backed by Akka HTTP
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="endpoints.akkahttp">akkahttp</a></dd></dl></div>
-    </li><li name="endpoints.akkahttp.server.circe" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="circe"></a><a id="circe:circe"></a>
-      <span class="permalink">
-      <a href="../../../endpoints/akkahttp/server/circe/index.html" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">package</span>
-      </span>
-      <span class="symbol">
-        <a title="" href="circe/index.html"><span class="name">circe</span></a>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="endpoints.akkahttp.server">server</a></dd></dl></div>
-    </li><li name="endpoints.akkahttp.server.playjson" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="playjson"></a><a id="playjson:playjson"></a>
-      <span class="permalink">
-      <a href="../../../endpoints/akkahttp/server/playjson/index.html" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">package</span>
-      </span>
-      <span class="symbol">
-        <a title="" href="playjson/index.html"><span class="name">playjson</span></a>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="endpoints.akkahttp.server">server</a></dd></dl></div>
     </li><li class="current-entities indented3">
                         <span class="separator"></span>
                         <a class="trait" href="BasicAuthentication.html" title=""></a>
@@ -173,8 +141,16 @@
                         <a href="JsonEntities.html" title="Interpreter for algebra.JsonEntities">JsonEntities</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
-                        <a class="trait" href="JsonEntitiesFromCodec.html" title="Interpreter for endpoints.algebra.JsonEntitiesFromCodec that decodes JSON requests and encodes JSON responses using Akka HTTP."></a>
-                        <a href="JsonEntitiesFromCodec.html" title="Interpreter for endpoints.algebra.JsonEntitiesFromCodec that decodes JSON requests and encodes JSON responses using Akka HTTP.">JsonEntitiesFromCodec</a>
+                        <a class="trait" href="JsonEntitiesFromCodecs.html" title="Interpreter for algebra.JsonEntitiesFromCodecs that decodes JSON requests and encodes JSON responses using Akka HTTP."></a>
+                        <a href="JsonEntitiesFromCodecs.html" title="Interpreter for algebra.JsonEntitiesFromCodecs that decodes JSON requests and encodes JSON responses using Akka HTTP.">JsonEntitiesFromCodecs</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="JsonEntitiesFromEncodersAndDecoders.html" title="Interpreter for endpoints.algebra.JsonEntities that decodes JSON entities with a endpoints.algebra.Decoder and encodes JSON entities with an endpoints.algebra.Encoder."></a>
+                        <a href="JsonEntitiesFromEncodersAndDecoders.html" title="Interpreter for endpoints.algebra.JsonEntities that decodes JSON entities with a endpoints.algebra.Decoder and encodes JSON entities with an endpoints.algebra.Encoder.">JsonEntitiesFromEncodersAndDecoders</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="JsonEntitiesFromSchemas.html" title="Interpreter for algebra.JsonEntitiesFromSchemas that decodes JSON requests and encodes JSON responses using Akka HTTP."></a>
+                        <a href="JsonEntitiesFromSchemas.html" title="Interpreter for algebra.JsonEntitiesFromSchemas that decodes JSON requests and encodes JSON responses using Akka HTTP.">JsonEntitiesFromSchemas</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
                         <a class="trait" href="Methods.html" title="algebra.Methods interpreter that decodes and encodes methods."></a>
@@ -228,7 +204,7 @@
 
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p><a href="../../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">algebra.Urls</a> interpreter that decodes and encodes URLs.
-</p></div><dl class="attributes block"> <dt>Self Type</dt><dd><a href="EndpointsWithCustomErrors.html" class="extype" name="endpoints.akkahttp.server.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a></dd><dt>Source</dt><dd><a href="https://github.com/julienrf/endpoints/blob/v0.12.0/akka-http/server/src/main/scala/endpoints/akkahttp/server/Urls.scala" target="_blank">Urls.scala</a></dd></dl><div class="toggleContainer block">
+</p></div><dl class="attributes block"> <dt>Self Type</dt><dd><a href="EndpointsWithCustomErrors.html" class="extype" name="endpoints.akkahttp.server.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a></dd><dt>Source</dt><dd><a href="https://github.com/julienrf/endpoints/blob/v0.13.0/akka-http/server/src/main/scala/endpoints/akkahttp/server/Urls.scala" target="_blank">Urls.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -237,12 +213,12 @@
             <span class="toggle">
               Known Subclasses
             </span>
-            <div class="subClasses hiddenContent"><a href="BasicAuthentication.html" class="extype" name="endpoints.akkahttp.server.BasicAuthentication">BasicAuthentication</a>, <a href="Endpoints.html" class="extype" name="endpoints.akkahttp.server.Endpoints">Endpoints</a>, <a href="EndpointsWithCustomErrors.html" class="extype" name="endpoints.akkahttp.server.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a>, <a href="JsonEntities.html" class="extype" name="endpoints.akkahttp.server.JsonEntities">JsonEntities</a>, <a href="JsonEntitiesFromCodec.html" class="extype" name="endpoints.akkahttp.server.JsonEntitiesFromCodec">JsonEntitiesFromCodec</a>, <a href="MuxEndpoints.html" class="extype" name="endpoints.akkahttp.server.MuxEndpoints">MuxEndpoints</a>, <a href="circe/JsonSchemaEntities.html" class="extype" name="endpoints.akkahttp.server.circe.JsonSchemaEntities">JsonSchemaEntities</a>, <a href="playjson/JsonSchemaEntities.html" class="extype" name="endpoints.akkahttp.server.playjson.JsonSchemaEntities">JsonSchemaEntities</a></div>
+            <div class="subClasses hiddenContent"><a href="BasicAuthentication.html" class="extype" name="endpoints.akkahttp.server.BasicAuthentication">BasicAuthentication</a>, <a href="Endpoints.html" class="extype" name="endpoints.akkahttp.server.Endpoints">Endpoints</a>, <a href="EndpointsWithCustomErrors.html" class="extype" name="endpoints.akkahttp.server.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a>, <a href="JsonEntities.html" class="extype" name="endpoints.akkahttp.server.JsonEntities">JsonEntities</a>, <a href="JsonEntitiesFromCodecs.html" class="extype" name="endpoints.akkahttp.server.JsonEntitiesFromCodecs">JsonEntitiesFromCodecs</a>, <a href="JsonEntitiesFromEncodersAndDecoders.html" class="extype" name="endpoints.akkahttp.server.JsonEntitiesFromEncodersAndDecoders">JsonEntitiesFromEncodersAndDecoders</a>, <a href="JsonEntitiesFromSchemas.html" class="extype" name="endpoints.akkahttp.server.JsonEntitiesFromSchemas">JsonEntitiesFromSchemas</a>, <a href="MuxEndpoints.html" class="extype" name="endpoints.akkahttp.server.MuxEndpoints">MuxEndpoints</a></div>
           </div><div class="toggleContainer block diagram-container" id="inheritance-diagram-container">
                 <span class="toggle diagram-link">
                   Type Hierarchy
                 </span>
-                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph1" viewBox="0.00 0.00 219.50 155.00" height="155pt" width="220pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 151)" class="graph" id="page0,1_graph0"><polygon points="-4,4 -4,-151 215.5,-151 215.5,4 -4,4" stroke="transparent" fill="#ffffff"></polygon><g class="cluster" id="clust1"></g><g class="cluster" id="clust2"></g><!-- node0 --><g class="node this trait" id="graph1_0"><g id="a_this trait|graph1_0"><a xlink:title="endpoints.akkahttp.server.Urls (this trait)" xlink:href="#inheritance-diagram"><path d="M127.1667,-86C127.1667,-86 82.8333,-86 82.8333,-86 78.6667,-86 74.5,-81.8333 74.5,-77.6667 74.5,-77.6667 74.5,-69.3333 74.5,-69.3333 74.5,-65.1667 78.6667,-61 82.8333,-61 82.8333,-61 127.1667,-61 127.1667,-61 131.3333,-61 135.5,-65.1667 135.5,-69.3333 135.5,-69.3333 135.5,-77.6667 135.5,-77.6667 135.5,-81.8333 131.3333,-86 127.1667,-86" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-80.5" x="85" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-71.1" x="106" text-anchor="start">Urls</text></a></g></g><!-- node1 --><g class="node trait" id="graph1_1"><g id="a_trait|graph1_1"><a xlink:title="endpoints.akkahttp.server.EndpointsWithCustomErrors" xlink:href="EndpointsWithCustomErrors.html#inheritance-diagram"><path d="M178.1667,-25C178.1667,-25 31.8333,-25 31.8333,-25 27.6667,-25 23.5,-20.8333 23.5,-16.6667 23.5,-16.6667 23.5,-8.3333 23.5,-8.3333 23.5,-4.1667 27.6667,0 31.8333,0 31.8333,0 178.1667,0 178.1667,0 182.3333,0 186.5,-4.1667 186.5,-8.3333 186.5,-8.3333 186.5,-16.6667 186.5,-16.6667 186.5,-20.8333 182.3333,-25 178.1667,-25" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-19.5" x="34" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="55" text-anchor="start">EndpointsWithCustomErrors</text></a></g></g><!-- node0&#45;&gt;node1 --><g class="edge inheritance" id="graph1_0_1"><g id="a_inheritance|graph1_0_1"><a xlink:title="EndpointsWithCustomErrors is a subtype of Urls"><path d="M105,-53.7386C105,-44.3393 105,-33.3803 105,-25.123" stroke="#d4d4d4" fill="none"></path><polygon points="102.5501,-53.8607 105,-60.8608 107.4501,-53.8608 102.5501,-53.8607" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node2 --><g class="node trait" id="graph1_2"><g id="a_trait|graph1_2"><a xlink:title="endpoints.algebra.Urls" xlink:href="../../algebra/Urls.html#inheritance-diagram"><path d="M87.6667,-147C87.6667,-147 8.3333,-147 8.3333,-147 4.1667,-147 0,-142.8333 0,-138.6667 0,-138.6667 0,-130.3333 0,-130.3333 0,-126.1667 4.1667,-122 8.3333,-122 8.3333,-122 87.6667,-122 87.6667,-122 91.8333,-122 96,-126.1667 96,-130.3333 96,-130.3333 96,-138.6667 96,-138.6667 96,-142.8333 91.8333,-147 87.6667,-147" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-141.5" x="10" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-132.1" x="31" text-anchor="start">algebra.Urls</text></a></g></g><!-- node2&#45;&gt;node0 --><g class="edge inheritance" id="graph1_2_0"><g id="a_inheritance|graph1_2_0"><a xlink:title="Urls is a subtype of algebra.Urls"><path d="M64.6618,-116.669C73.8169,-106.8714 84.9541,-94.9526 93.2047,-86.123" stroke="#d4d4d4" fill="none"></path><polygon points="62.7996,-115.0734 59.8104,-121.8608 66.3798,-118.4189 62.7996,-115.0734" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node3 --><g class="node trait" id="graph1_3"><g id="a_trait|graph1_3"><a xlink:title="endpoints.akkahttp.server.StatusCodes" xlink:href="StatusCodes.html#inheritance-diagram"><path d="M203.1667,-147C203.1667,-147 122.8333,-147 122.8333,-147 118.6667,-147 114.5,-142.8333 114.5,-138.6667 114.5,-138.6667 114.5,-130.3333 114.5,-130.3333 114.5,-126.1667 118.6667,-122 122.8333,-122 122.8333,-122 203.1667,-122 203.1667,-122 207.3333,-122 211.5,-126.1667 211.5,-130.3333 211.5,-130.3333 211.5,-138.6667 211.5,-138.6667 211.5,-142.8333 207.3333,-147 203.1667,-147" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-141.5" x="125" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-132.1" x="146" text-anchor="start">StatusCodes</text></a></g></g><!-- node3&#45;&gt;node0 --><g class="edge inheritance" id="graph1_3_0"><g id="a_inheritance|graph1_3_0"><a xlink:title="Urls is a subtype of StatusCodes"><path d="M146.0459,-116.669C136.7301,-106.8714 125.3975,-94.9526 117.0022,-86.123" stroke="#d4d4d4" fill="none"></path><polygon points="144.3834,-118.476 150.9824,-121.8608 147.9344,-115.0996 144.3834,-118.476" stroke="#d4d4d4" fill="none"></polygon></a></g></g></g></svg></div>
+                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph1" viewBox="0.00 0.00 222.00 155.00" height="155pt" width="222pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 151)" class="graph" id="graph0"><polygon points="-4,4 -4,-151 218,-151 218,4 -4,4" stroke="none" fill="white"></polygon><g class="cluster" id="clust1"></g><g class="cluster" id="clust2"></g><!-- node0 --><g class="node this trait" id="graph1_0"><g id="a_this trait|graph1_0"><a xlink:title="endpoints.akkahttp.server.Urls (this trait)" xlink:href="#inheritance-diagram"><path d="M129.167,-86C129.167,-86 83.8333,-86 83.8333,-86 79.6667,-86 75.5,-81.8333 75.5,-77.6667 75.5,-77.6667 75.5,-69.3333 75.5,-69.3333 75.5,-65.1667 79.6667,-61 83.8333,-61 83.8333,-61 129.167,-61 129.167,-61 133.333,-61 137.5,-65.1667 137.5,-69.3333 137.5,-69.3333 137.5,-77.6667 137.5,-77.6667 137.5,-81.8333 133.333,-86 129.167,-86" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-80.5" x="85.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-71.1" x="106.5" text-anchor="start">Urls</text></a></g></g><!-- node1 --><g class="node trait" id="graph1_1"><g id="a_trait|graph1_1"><a xlink:title="endpoints.akkahttp.server.EndpointsWithCustomErrors" xlink:href="EndpointsWithCustomErrors.html#inheritance-diagram"><path d="M180.167,-25C180.167,-25 32.8333,-25 32.8333,-25 28.6667,-25 24.5,-20.8333 24.5,-16.6667 24.5,-16.6667 24.5,-8.33333 24.5,-8.33333 24.5,-4.16667 28.6667,-0 32.8333,-0 32.8333,-0 180.167,-0 180.167,-0 184.333,-0 188.5,-4.16667 188.5,-8.33333 188.5,-8.33333 188.5,-16.6667 188.5,-16.6667 188.5,-20.8333 184.333,-25 180.167,-25" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-19.5" x="34.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="55.5" text-anchor="start">EndpointsWithCustomErrors</text></a></g></g><!-- node0&#45;&gt;node1 --><g class="edge inheritance" id="graph1_0_1"><g id="a_inheritance|graph1_0_1"><a xlink:title="EndpointsWithCustomErrors is a subtype of Urls"><path d="M106.5,-53.7603C106.5,-44.3675 106.5,-33.2882 106.5,-25.1323" stroke="#d4d4d4" fill="none"></path><polygon points="104.05,-53.8435 106.5,-60.8435 108.95,-53.8435 104.05,-53.8435" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node2 --><g class="node trait" id="graph1_2"><g id="a_trait|graph1_2"><a xlink:title="endpoints.algebra.Urls" xlink:href="../../algebra/Urls.html#inheritance-diagram"><path d="M88.6667,-147C88.6667,-147 8.33333,-147 8.33333,-147 4.16667,-147 7.10543e-15,-142.833 7.10543e-15,-138.667 7.10543e-15,-138.667 7.10543e-15,-130.333 7.10543e-15,-130.333 7.10543e-15,-126.167 4.16667,-122 8.33333,-122 8.33333,-122 88.6667,-122 88.6667,-122 92.8333,-122 97,-126.167 97,-130.333 97,-130.333 97,-138.667 97,-138.667 97,-142.833 92.8333,-147 88.6667,-147" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-141.5" x="10.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-132.1" x="31.5" text-anchor="start">algebra.Urls</text></a></g></g><!-- node2&#45;&gt;node0 --><g class="edge inheritance" id="graph1_2_0"><g id="a_inheritance|graph1_2_0"><a xlink:title="Urls is a subtype of algebra.Urls"><path d="M65.0276,-116.687C74.6322,-106.917 86.4915,-94.8534 95.0649,-86.1323" stroke="#d4d4d4" fill="none"></path><polygon points="63.1191,-115.134 59.9589,-121.843 66.6134,-118.569 63.1191,-115.134" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node3 --><g class="node trait" id="graph1_3"><g id="a_trait|graph1_3"><a xlink:title="endpoints.akkahttp.server.StatusCodes" xlink:href="StatusCodes.html#inheritance-diagram"><path d="M205.667,-147C205.667,-147 123.333,-147 123.333,-147 119.167,-147 115,-142.833 115,-138.667 115,-138.667 115,-130.333 115,-130.333 115,-126.167 119.167,-122 123.333,-122 123.333,-122 205.667,-122 205.667,-122 209.833,-122 214,-126.167 214,-130.333 214,-130.333 214,-138.667 214,-138.667 214,-142.833 209.833,-147 205.667,-147" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-141.5" x="125.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-132.1" x="146.5" text-anchor="start">StatusCodes</text></a></g></g><!-- node3&#45;&gt;node0 --><g class="edge inheritance" id="graph1_3_0"><g id="a_inheritance|graph1_3_0"><a xlink:title="Urls is a subtype of StatusCodes"><path d="M147.972,-116.687C138.368,-106.917 126.508,-94.8534 117.935,-86.1323" stroke="#d4d4d4" fill="none"></path><polygon points="146.387,-118.569 153.041,-121.843 149.881,-115.134 146.387,-118.569" stroke="#d4d4d4" fill="none"></polygon></a></g></g></g></svg></div>
                 <div id="diagram-controls" class="hiddenContent">
                   <button id="diagram-zoom-out" class="diagram-btn"><i class="material-icons"></i></button>
                   <button id="diagram-zoom-in" class="diagram-btn"><i class="material-icons"></i></button>
@@ -264,7 +240,7 @@
           <div id="order">
             <span class="filtertype">Ordering</span>
             <ol>
-              
+              <li class="group out"><span>Grouped</span></li>
               <li class="alpha in"><span>Alphabetic</span></li>
               <li class="inherit out"><span>By Inheritance</span></li>
             </ol>
@@ -367,7 +343,7 @@
       </span>
       
       
-    </li><li name="endpoints.akkahttp.server.Urls.QueryStringParam" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.akkahttp.server.Urls.QueryStringParam" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="types">
       <a id="QueryStringParam[T]=(String,Map[String,Seq[String]])=&gt;endpoints.Validated[T]"></a><a id="QueryStringParam[T]:EndpointsWithCustomErrors.QueryStringParam[T]"></a>
       <span class="permalink">
       <a href="../../../endpoints/akkahttp/server/Urls.html#QueryStringParam[T]=(String,Map[String,Seq[String]])=&gt;endpoints.Validated[T]" title="Permalink">
@@ -383,10 +359,8 @@
       </span>
       
       <p class="shortcomment cmt">Given a parameter name and a query string content, returns a decoded parameter
-value of type <code>T</code>, or <code>Invalid</code> if decoding failed
-</p><div class="fullcomment"><div class="comment cmt"><p>Given a parameter name and a query string content, returns a decoded parameter
-value of type <code>T</code>, or <code>Invalid</code> if decoding failed
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.akkahttp.server.Urls">Urls</a> → <a href="../../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
+value of type <code>T</code>, or <code>Invalid</code> if decoding failed</p><div class="fullcomment"><div class="comment cmt"><p>Given a parameter name and a query string content, returns a decoded parameter
+value of type <code>T</code>, or <code>Invalid</code> if decoding failed</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.akkahttp.server.Urls">Urls</a> → <a href="../../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
     </li><li name="endpoints.akkahttp.server.Urls.Segment" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="Segment[A]extendsAnyRef"></a><a id="Segment[A]:EndpointsWithCustomErrors.Segment[A]"></a>
       <span class="permalink">
@@ -403,7 +377,7 @@ value of type <code>T</code>, or <code>Invalid</code> if decoding failed
       </span>
       
       
-    </li><li name="endpoints.akkahttp.server.StatusCodes.StatusCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.akkahttp.server.StatusCodes.StatusCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="types">
       <a id="StatusCode=akka.http.scaladsl.model.StatusCode"></a><a id="StatusCode:EndpointsWithCustomErrors.StatusCode"></a>
       <span class="permalink">
       <a href="../../../endpoints/akkahttp/server/Urls.html#StatusCode=akka.http.scaladsl.model.StatusCode" title="Permalink">
@@ -415,7 +389,7 @@ value of type <code>T</code>, or <code>Invalid</code> if decoding failed
         <span class="kind">type</span>
       </span>
       <span class="symbol">
-        <span class="name">StatusCode</span><span class="result alias"> = <a href="https://doc.akka.io/api/akka-http/10.1.10/akka/http/scaladsl/model/StatusCode.html#akka.http.scaladsl.model.StatusCode" class="extype" name="akka.http.scaladsl.model.StatusCode">akka.http.scaladsl.model.StatusCode</a></span>
+        <span class="name">StatusCode</span><span class="result alias"> = <a href="https://doc.akka.io/api/akka-http/10.1.11/akka/http/scaladsl/model/StatusCode.html#akka.http.scaladsl.model.StatusCode" class="extype" name="akka.http.scaladsl.model.StatusCode">akka.http.scaladsl.model.StatusCode</a></span>
       </span>
       
       <p class="shortcomment cmt">HTTP Status Code</p><div class="fullcomment"><div class="comment cmt"><p>HTTP Status Code</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="StatusCodes.html" class="extype" name="endpoints.akkahttp.server.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd></dl></div>
@@ -435,7 +409,7 @@ value of type <code>T</code>, or <code>Invalid</code> if decoding failed
       </span>
       
       
-    </li><li name="endpoints.algebra.Urls.PathOps" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.algebra.Urls.PathOps" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="PathOps[A]extendsAnyRef"></a><a id="PathOps[A]:PathOps[A]"></a>
       <span class="permalink">
       <a href="../../../endpoints/algebra/Urls$PathOps.html" title="Permalink">
@@ -451,7 +425,7 @@ value of type <code>T</code>, or <code>Invalid</code> if decoding failed
       </span>
       
       <p class="shortcomment cmt">Convenient methods for <a href="../../algebra/Urls.html#Path[A]&lt;:Urls.this.Url[A]" class="extmbr" name="endpoints.algebra.Urls.Path">Path</a>s.</p><div class="fullcomment"><div class="comment cmt"><p>Convenient methods for <a href="../../algebra/Urls.html#Path[A]&lt;:Urls.this.Url[A]" class="extmbr" name="endpoints.algebra.Urls.Path">Path</a>s.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
-    </li><li name="endpoints.algebra.Urls.QueryStringSyntax" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.algebra.Urls.QueryStringSyntax" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="QueryStringSyntax[A]extendsAnyRef"></a><a id="QueryStringSyntax[A]:QueryStringSyntax[A]"></a>
       <span class="permalink">
       <a href="../../../endpoints/algebra/Urls$QueryStringSyntax.html" title="Permalink">
@@ -566,7 +540,7 @@ value of type <code>T</code>, or <code>Invalid</code> if decoding failed
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="endpoints.akkahttp.server.StatusCodes#Accepted" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.akkahttp.server.StatusCodes#Accepted" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="Accepted:akka.http.scaladsl.model.StatusCodes.Success"></a><a id="Accepted:Success"></a>
       <span class="permalink">
       <a href="../../../endpoints/akkahttp/server/Urls.html#Accepted:akka.http.scaladsl.model.StatusCodes.Success" title="Permalink">
@@ -581,8 +555,8 @@ value of type <code>T</code>, or <code>Invalid</code> if decoding failed
         <span class="name">Accepted</span><span class="result">: <span class="extype" name="akka.http.scaladsl.model.StatusCodes.Success">Success</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="StatusCodes.html" class="extype" name="endpoints.akkahttp.server.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd></dl></div>
-    </li><li name="endpoints.akkahttp.server.StatusCodes#BadRequest" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="StatusCodes.html" class="extype" name="endpoints.akkahttp.server.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd></dl></div>
+    </li><li name="endpoints.akkahttp.server.StatusCodes#BadRequest" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="BadRequest:akka.http.scaladsl.model.StatusCodes.ClientError"></a><a id="BadRequest:ClientError"></a>
       <span class="permalink">
       <a href="../../../endpoints/akkahttp/server/Urls.html#BadRequest:akka.http.scaladsl.model.StatusCodes.ClientError" title="Permalink">
@@ -597,10 +571,10 @@ value of type <code>T</code>, or <code>Invalid</code> if decoding failed
         <span class="name">BadRequest</span><span class="result">: <span class="extype" name="akka.http.scaladsl.model.StatusCodes.ClientError">ClientError</span></span>
       </span>
       
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="StatusCodes.html" class="extype" name="endpoints.akkahttp.server.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd><dt>Note</dt><dd><span class="cmt"><p>You should use the <code>badRequest</code> constructor provided by the <span class="extype" name="Responses">Responses</span>
-      trait to ensure that errors produced by <i>endponits</i> are consistently
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="StatusCodes.html" class="extype" name="endpoints.akkahttp.server.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd><dt>Note</dt><dd><span class="cmt"><p>You should use the <code>badRequest</code> constructor provided by the <a href="../../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">endpoints.algebra.Responses</a>
+      trait to ensure that errors produced by <i>endpoints</i> are consistently
       handled by interpreters.</p></span></dd></dl></div>
-    </li><li name="endpoints.akkahttp.server.StatusCodes#Created" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.akkahttp.server.StatusCodes#Created" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="Created:akka.http.scaladsl.model.StatusCodes.Success"></a><a id="Created:Success"></a>
       <span class="permalink">
       <a href="../../../endpoints/akkahttp/server/Urls.html#Created:akka.http.scaladsl.model.StatusCodes.Success" title="Permalink">
@@ -615,8 +589,8 @@ value of type <code>T</code>, or <code>Invalid</code> if decoding failed
         <span class="name">Created</span><span class="result">: <span class="extype" name="akka.http.scaladsl.model.StatusCodes.Success">Success</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="StatusCodes.html" class="extype" name="endpoints.akkahttp.server.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd></dl></div>
-    </li><li name="endpoints.akkahttp.server.StatusCodes#Forbidden" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="StatusCodes.html" class="extype" name="endpoints.akkahttp.server.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd></dl></div>
+    </li><li name="endpoints.akkahttp.server.StatusCodes#Forbidden" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="Forbidden:akka.http.scaladsl.model.StatusCodes.ClientError"></a><a id="Forbidden:ClientError"></a>
       <span class="permalink">
       <a href="../../../endpoints/akkahttp/server/Urls.html#Forbidden:akka.http.scaladsl.model.StatusCodes.ClientError" title="Permalink">
@@ -631,8 +605,8 @@ value of type <code>T</code>, or <code>Invalid</code> if decoding failed
         <span class="name">Forbidden</span><span class="result">: <span class="extype" name="akka.http.scaladsl.model.StatusCodes.ClientError">ClientError</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="StatusCodes.html" class="extype" name="endpoints.akkahttp.server.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd></dl></div>
-    </li><li name="endpoints.akkahttp.server.StatusCodes#InternalServerError" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="StatusCodes.html" class="extype" name="endpoints.akkahttp.server.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd></dl></div>
+    </li><li name="endpoints.akkahttp.server.StatusCodes#InternalServerError" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="InternalServerError:akka.http.scaladsl.model.StatusCodes.ServerError"></a><a id="InternalServerError:ServerError"></a>
       <span class="permalink">
       <a href="../../../endpoints/akkahttp/server/Urls.html#InternalServerError:akka.http.scaladsl.model.StatusCodes.ServerError" title="Permalink">
@@ -648,9 +622,9 @@ value of type <code>T</code>, or <code>Invalid</code> if decoding failed
       </span>
       
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="StatusCodes.html" class="extype" name="endpoints.akkahttp.server.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd><dt>Note</dt><dd><span class="cmt"><p>You should use the <code>internalServerError</code> constructor provided by the
-      <span class="extype" name="Responses">Responses</span> trait to ensure that errors produced by <i>endpoints</i>
+      <a href="../../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">endpoints.algebra.Responses</a> trait to ensure that errors produced by <i>endpoints</i>
       are consistently handled by interpreters.</p></span></dd></dl></div>
-    </li><li name="endpoints.akkahttp.server.StatusCodes#NoContent" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.akkahttp.server.StatusCodes#NoContent" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="NoContent:akka.http.scaladsl.model.StatusCodes.Success"></a><a id="NoContent:Success"></a>
       <span class="permalink">
       <a href="../../../endpoints/akkahttp/server/Urls.html#NoContent:akka.http.scaladsl.model.StatusCodes.Success" title="Permalink">
@@ -665,8 +639,8 @@ value of type <code>T</code>, or <code>Invalid</code> if decoding failed
         <span class="name">NoContent</span><span class="result">: <span class="extype" name="akka.http.scaladsl.model.StatusCodes.Success">Success</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="StatusCodes.html" class="extype" name="endpoints.akkahttp.server.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd></dl></div>
-    </li><li name="endpoints.akkahttp.server.StatusCodes#NotFound" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="StatusCodes.html" class="extype" name="endpoints.akkahttp.server.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd></dl></div>
+    </li><li name="endpoints.akkahttp.server.StatusCodes#NotFound" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="NotFound:akka.http.scaladsl.model.StatusCodes.ClientError"></a><a id="NotFound:ClientError"></a>
       <span class="permalink">
       <a href="../../../endpoints/akkahttp/server/Urls.html#NotFound:akka.http.scaladsl.model.StatusCodes.ClientError" title="Permalink">
@@ -681,8 +655,8 @@ value of type <code>T</code>, or <code>Invalid</code> if decoding failed
         <span class="name">NotFound</span><span class="result">: <span class="extype" name="akka.http.scaladsl.model.StatusCodes.ClientError">ClientError</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="StatusCodes.html" class="extype" name="endpoints.akkahttp.server.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd></dl></div>
-    </li><li name="endpoints.akkahttp.server.StatusCodes#NotImplemented" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="StatusCodes.html" class="extype" name="endpoints.akkahttp.server.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd></dl></div>
+    </li><li name="endpoints.akkahttp.server.StatusCodes#NotImplemented" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="NotImplemented:akka.http.scaladsl.model.StatusCodes.ServerError"></a><a id="NotImplemented:ServerError"></a>
       <span class="permalink">
       <a href="../../../endpoints/akkahttp/server/Urls.html#NotImplemented:akka.http.scaladsl.model.StatusCodes.ServerError" title="Permalink">
@@ -697,8 +671,8 @@ value of type <code>T</code>, or <code>Invalid</code> if decoding failed
         <span class="name">NotImplemented</span><span class="result">: <span class="extype" name="akka.http.scaladsl.model.StatusCodes.ServerError">ServerError</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="StatusCodes.html" class="extype" name="endpoints.akkahttp.server.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd></dl></div>
-    </li><li name="endpoints.akkahttp.server.StatusCodes#OK" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="StatusCodes.html" class="extype" name="endpoints.akkahttp.server.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd></dl></div>
+    </li><li name="endpoints.akkahttp.server.StatusCodes#OK" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="OK:akka.http.scaladsl.model.StatusCodes.Success"></a><a id="OK:Success"></a>
       <span class="permalink">
       <a href="../../../endpoints/akkahttp/server/Urls.html#OK:akka.http.scaladsl.model.StatusCodes.Success" title="Permalink">
@@ -713,8 +687,8 @@ value of type <code>T</code>, or <code>Invalid</code> if decoding failed
         <span class="name">OK</span><span class="result">: <span class="extype" name="akka.http.scaladsl.model.StatusCodes.Success">Success</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="StatusCodes.html" class="extype" name="endpoints.akkahttp.server.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd></dl></div>
-    </li><li name="endpoints.akkahttp.server.StatusCodes#Unauthorized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="StatusCodes.html" class="extype" name="endpoints.akkahttp.server.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd></dl></div>
+    </li><li name="endpoints.akkahttp.server.StatusCodes#Unauthorized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="Unauthorized:akka.http.scaladsl.model.StatusCodes.ClientError"></a><a id="Unauthorized:ClientError"></a>
       <span class="permalink">
       <a href="../../../endpoints/akkahttp/server/Urls.html#Unauthorized:akka.http.scaladsl.model.StatusCodes.ClientError" title="Permalink">
@@ -729,7 +703,7 @@ value of type <code>T</code>, or <code>Invalid</code> if decoding failed
         <span class="name">Unauthorized</span><span class="result">: <span class="extype" name="akka.http.scaladsl.model.StatusCodes.ClientError">ClientError</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="StatusCodes.html" class="extype" name="endpoints.akkahttp.server.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd></dl></div>
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="StatusCodes.html" class="extype" name="endpoints.akkahttp.server.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <span class="permalink">
@@ -746,7 +720,7 @@ value of type <code>T</code>, or <code>Invalid</code> if decoding failed
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="endpoints.algebra.Urls#booleanQueryString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.algebra.Urls#booleanQueryString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="booleanQueryString:Urls.this.QueryStringParam[Boolean]"></a><a id="booleanQueryString:EndpointsWithCustomErrors.QueryStringParam[Boolean]"></a>
       <span class="permalink">
       <a href="../../../endpoints/akkahttp/server/Urls.html#booleanQueryString:Urls.this.QueryStringParam[Boolean]" title="Permalink">
@@ -834,7 +808,7 @@ value of type <code>T</code>, or <code>Invalid</code> if decoding failed
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
-    </li><li name="endpoints.algebra.Urls#doubleQueryString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.algebra.Urls#doubleQueryString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="doubleQueryString:Urls.this.QueryStringParam[Double]"></a><a id="doubleQueryString:EndpointsWithCustomErrors.QueryStringParam[Double]"></a>
       <span class="permalink">
       <a href="../../../endpoints/akkahttp/server/Urls.html#doubleQueryString:Urls.this.QueryStringParam[Double]" title="Permalink">
@@ -849,8 +823,8 @@ value of type <code>T</code>, or <code>Invalid</code> if decoding failed
         <span class="name">doubleQueryString</span><span class="result">: <a href="EndpointsWithCustomErrors.html#QueryStringParam[T]=(String,Map[String,Seq[String]])=&gt;endpoints.Validated[T]" class="extmbr" name="endpoints.akkahttp.server.EndpointsWithCustomErrors.QueryStringParam">EndpointsWithCustomErrors.QueryStringParam</a>[<a href="https://www.scala-lang.org/api/2.12.10/scala/Double.html#scala.Double" class="extype" name="scala.Double">Double</a>]</span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
-    </li><li name="endpoints.algebra.Urls#doubleSegment" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt">Codec for query string parameters of type <code>Double</code></p><div class="fullcomment"><div class="comment cmt"><p>Codec for query string parameters of type <code>Double</code></p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
+    </li><li name="endpoints.algebra.Urls#doubleSegment" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="doubleSegment:Urls.this.Segment[Double]"></a><a id="doubleSegment:EndpointsWithCustomErrors.Segment[Double]"></a>
       <span class="permalink">
       <a href="../../../endpoints/akkahttp/server/Urls.html#doubleSegment:Urls.this.Segment[Double]" title="Permalink">
@@ -865,7 +839,7 @@ value of type <code>T</code>, or <code>Invalid</code> if decoding failed
         <span class="name">doubleSegment</span><span class="result">: <a href="EndpointsWithCustomErrors.html#Segment[A]extendsAnyRef" class="extmbr" name="endpoints.akkahttp.server.Urls.Segment">EndpointsWithCustomErrors.Segment</a>[<a href="https://www.scala-lang.org/api/2.12.10/scala/Double.html#scala.Double" class="extype" name="scala.Double">Double</a>]</span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
+      <p class="shortcomment cmt">Segment codec for type <code>Double</code></p><div class="fullcomment"><div class="comment cmt"><p>Segment codec for type <code>Double</code></p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
     </li><li name="endpoints.algebra.Urls#dummyPathToUrl" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="dummyPathToUrl[A](p:Urls.this.Path[A]):Urls.this.Url[A]"></a><a id="dummyPathToUrl[A](EndpointsWithCustomErrors.Path[A]):EndpointsWithCustomErrors.Url[A]"></a>
       <span class="permalink">
@@ -881,7 +855,7 @@ value of type <code>T</code>, or <code>Invalid</code> if decoding failed
         <span class="name">dummyPathToUrl</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="p">p: <a href="EndpointsWithCustomErrors.html#Path[A]extendsUrls.this.Url[A]" class="extmbr" name="endpoints.akkahttp.server.Urls.Path">EndpointsWithCustomErrors.Path</a>[<span class="extype" name="endpoints.algebra.Urls.dummyPathToUrl.A">A</span>]</span>)</span><span class="result">: <a href="EndpointsWithCustomErrors.html#Url[A]extendsAnyRef" class="extmbr" name="endpoints.akkahttp.server.Urls.Url">EndpointsWithCustomErrors.Url</a>[<span class="extype" name="endpoints.algebra.Urls.dummyPathToUrl.A">A</span>]</span>
       </span>
       
-      <p class="shortcomment cmt">Implicit conversion to get rid of intellij errors when defining paths.</p><div class="fullcomment"><div class="comment cmt"><p>Implicit conversion to get rid of intellij errors when defining paths. Effectively should not be called.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
+      <p class="shortcomment cmt">Implicit conversion to get rid of intellij errors when defining paths.</p><div class="fullcomment"><div class="comment cmt"><p>Implicit conversion to get rid of intellij errors when defining paths. Effectively should not be called.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd><dt>See also</dt><dd><span class="cmt"><p><a href="https://youtrack.jetbrains.com/issue/SCL-16284" target="_blank">https://youtrack.jetbrains.com/issue/SCL-16284</a></p></span></dd></dl></div>
     </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A"></a><a id="ensuring((Urls)⇒Boolean,⇒Any):Urls"></a>
       <span class="permalink">
@@ -1070,7 +1044,7 @@ value of type <code>T</code>, or <code>Invalid</code> if decoding failed
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">handleClientErrors</span><span class="params">(<span name="invalid">invalid: <a href="../../Invalid.html" class="extype" name="endpoints.Invalid">Invalid</a></span>)</span><span class="result">: <a href="https://doc.akka.io/api/akka-http/10.1.10/akka/http/scaladsl/server/StandardRoute.html#akka.http.scaladsl.server.StandardRoute" class="extype" name="akka.http.scaladsl.server.StandardRoute">StandardRoute</a></span>
+        <span class="name">handleClientErrors</span><span class="params">(<span name="invalid">invalid: <a href="../../Invalid.html" class="extype" name="endpoints.Invalid">Invalid</a></span>)</span><span class="result">: <a href="https://doc.akka.io/api/akka-http/10.1.11/akka/http/scaladsl/server/StandardRoute.html#akka.http.scaladsl.server.StandardRoute" class="extype" name="akka.http.scaladsl.server.StandardRoute">StandardRoute</a></span>
       </span>
       
       <p class="shortcomment cmt">This method is called by <i>endpoints</i> when decoding a request failed.</p><div class="fullcomment"><div class="comment cmt"><p>This method is called by <i>endpoints</i> when decoding a request failed.</p><p>The provided implementation calls <code>clientErrorsResponse</code> to complete
@@ -1095,7 +1069,7 @@ with a response containing the errors.</p><p>This method can be overridden to cu
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="endpoints.algebra.Urls#intQueryString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.algebra.Urls#intQueryString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="intQueryString:Urls.this.QueryStringParam[Int]"></a><a id="intQueryString:EndpointsWithCustomErrors.QueryStringParam[Int]"></a>
       <span class="permalink">
       <a href="../../../endpoints/akkahttp/server/Urls.html#intQueryString:Urls.this.QueryStringParam[Int]" title="Permalink">
@@ -1111,7 +1085,7 @@ with a response containing the errors.</p><p>This method can be overridden to cu
       </span>
       
       <p class="shortcomment cmt">Ability to define <code>Int</code> query string parameters</p><div class="fullcomment"><div class="comment cmt"><p>Ability to define <code>Int</code> query string parameters</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
-    </li><li name="endpoints.algebra.Urls#intSegment" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.algebra.Urls#intSegment" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="intSegment:Urls.this.Segment[Int]"></a><a id="intSegment:EndpointsWithCustomErrors.Segment[Int]"></a>
       <span class="permalink">
       <a href="../../../endpoints/akkahttp/server/Urls.html#intSegment:Urls.this.Segment[Int]" title="Permalink">
@@ -1161,7 +1135,7 @@ with a response containing the errors.</p><p>This method can be overridden to cu
       <p class="shortcomment cmt">Simpler alternative to <code>Directive.&amp;()</code> method
 </p><div class="fullcomment"><div class="comment cmt"><p>Simpler alternative to <code>Directive.&amp;()</code> method
 </p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
-    </li><li name="endpoints.algebra.Urls#longQueryString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.algebra.Urls#longQueryString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="longQueryString:Urls.this.QueryStringParam[Long]"></a><a id="longQueryString:EndpointsWithCustomErrors.QueryStringParam[Long]"></a>
       <span class="permalink">
       <a href="../../../endpoints/akkahttp/server/Urls.html#longQueryString:Urls.this.QueryStringParam[Long]" title="Permalink">
@@ -1177,7 +1151,7 @@ with a response containing the errors.</p><p>This method can be overridden to cu
       </span>
       
       <p class="shortcomment cmt">Query string parameter containing a <code>Long</code> value</p><div class="fullcomment"><div class="comment cmt"><p>Query string parameter containing a <code>Long</code> value</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
-    </li><li name="endpoints.algebra.Urls#longSegment" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.algebra.Urls#longSegment" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="longSegment:Urls.this.Segment[Long]"></a><a id="longSegment:EndpointsWithCustomErrors.Segment[Long]"></a>
       <span class="permalink">
       <a href="../../../endpoints/akkahttp/server/Urls.html#longSegment:Urls.this.Segment[Long]" title="Permalink">
@@ -1247,7 +1221,7 @@ with a response containing the errors.</p><p>This method can be overridden to cu
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="endpoints.akkahttp.server.Urls#optionalQueryStringParam" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.akkahttp.server.Urls#optionalQueryStringParam" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="optionalQueryStringParam[A](implicitparam:Urls.this.QueryStringParam[A]):Urls.this.QueryStringParam[Option[A]]"></a><a id="optionalQueryStringParam[A](EndpointsWithCustomErrors.QueryStringParam[A]):EndpointsWithCustomErrors.QueryStringParam[Option[A]]"></a>
       <span class="permalink">
       <a href="../../../endpoints/akkahttp/server/Urls.html#optionalQueryStringParam[A](implicitparam:Urls.this.QueryStringParam[A]):Urls.this.QueryStringParam[Option[A]]" title="Permalink">
@@ -1267,7 +1241,7 @@ Server interpreters must accept incoming requests whose optional query string pa
 Server interpreters must report a failure for incoming requests whose optional query string
 parameters are present, but malformed.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.akkahttp.server.Urls">Urls</a> → <a href="../../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
-    </li><li name="endpoints.algebra.Urls#path" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.algebra.Urls#path" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="path:Urls.this.Path[Unit]"></a><a id="path:EndpointsWithCustomErrors.Path[Unit]"></a>
       <span class="permalink">
       <a href="../../../endpoints/akkahttp/server/Urls.html#path:Urls.this.Path[Unit]" title="Permalink">
@@ -1298,8 +1272,8 @@ parameters are present, but malformed.
         <span class="name">pathPartialInvariantFunctor</span><span class="result">: <a href="../../PartialInvariantFunctor.html" class="extype" name="endpoints.PartialInvariantFunctor">PartialInvariantFunctor</a>[<a href="EndpointsWithCustomErrors.html#Path[A]extendsUrls.this.Url[A]" class="extmbr" name="endpoints.akkahttp.server.Urls.Path">EndpointsWithCustomErrors.Path</a>]</span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.akkahttp.server.Urls">Urls</a> → <a href="../../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
-    </li><li name="endpoints.akkahttp.server.Urls#qs" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt">Provides <code>xmap</code> and <code>xmapPartial</code> operations.</p><div class="fullcomment"><div class="comment cmt"><p>Provides <code>xmap</code> and <code>xmapPartial</code> operations.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.akkahttp.server.Urls">Urls</a> → <a href="../../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd><dt>See also</dt><dd><span class="cmt"><p><a href="../../PartialInvariantFunctorSyntax$PartialInvariantFunctorSyntax.html" class="extype" name="endpoints.PartialInvariantFunctorSyntax.PartialInvariantFunctorSyntax">PartialInvariantFunctorSyntax</a> and <a href="../../InvariantFunctorSyntax$InvariantFunctorSyntax.html" class="extype" name="endpoints.InvariantFunctorSyntax.InvariantFunctorSyntax">InvariantFunctorSyntax</a></p></span></dd></dl></div>
+    </li><li name="endpoints.akkahttp.server.Urls#qs" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="qs[A](name:String,docs:endpoints.algebra.Documentation)(implicitparam:Urls.this.QueryStringParam[A]):Urls.this.QueryString[A]"></a><a id="qs[A](String,Documentation)(EndpointsWithCustomErrors.QueryStringParam[A]):EndpointsWithCustomErrors.QueryString[A]"></a>
       <span class="permalink">
       <a href="../../../endpoints/akkahttp/server/Urls.html#qs[A](name:String,docs:endpoints.algebra.Documentation)(implicitparam:Urls.this.QueryStringParam[A]):Urls.this.QueryString[A]" title="Permalink">
@@ -1332,7 +1306,7 @@ qs[<span class="std">List</span>[<span class="std">Long</span>]](<span class="li
         <span class="name">queryStringParamPartialInvFunctor</span><span class="result">: <a href="../../PartialInvariantFunctor.html" class="extype" name="endpoints.PartialInvariantFunctor">PartialInvariantFunctor</a>[<a href="EndpointsWithCustomErrors.html#QueryStringParam[T]=(String,Map[String,Seq[String]])=&gt;endpoints.Validated[T]" class="extmbr" name="endpoints.akkahttp.server.EndpointsWithCustomErrors.QueryStringParam">EndpointsWithCustomErrors.QueryStringParam</a>]</span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.akkahttp.server.Urls">Urls</a> → <a href="../../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
+      <p class="shortcomment cmt">Provides <code>xmap</code> and <code>xmapPartial</code> operations.</p><div class="fullcomment"><div class="comment cmt"><p>Provides <code>xmap</code> and <code>xmapPartial</code> operations.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.akkahttp.server.Urls">Urls</a> → <a href="../../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd><dt>See also</dt><dd><span class="cmt"><p><a href="../../PartialInvariantFunctorSyntax$PartialInvariantFunctorSyntax.html" class="extype" name="endpoints.PartialInvariantFunctorSyntax.PartialInvariantFunctorSyntax">PartialInvariantFunctorSyntax</a> and <a href="../../InvariantFunctorSyntax$InvariantFunctorSyntax.html" class="extype" name="endpoints.InvariantFunctorSyntax.InvariantFunctorSyntax">InvariantFunctorSyntax</a></p></span></dd></dl></div>
     </li><li name="endpoints.akkahttp.server.Urls#queryStringPartialInvFunctor" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="queryStringPartialInvFunctor:endpoints.PartialInvariantFunctor[Urls.this.QueryString]"></a><a id="queryStringPartialInvFunctor:PartialInvariantFunctor[EndpointsWithCustomErrors.QueryString]"></a>
       <span class="permalink">
@@ -1348,8 +1322,8 @@ qs[<span class="std">List</span>[<span class="std">Long</span>]](<span class="li
         <span class="name">queryStringPartialInvFunctor</span><span class="result">: <a href="../../PartialInvariantFunctor.html" class="extype" name="endpoints.PartialInvariantFunctor">PartialInvariantFunctor</a>[<a href="EndpointsWithCustomErrors.html#QueryString[T]extendsAnyRef" class="extmbr" name="endpoints.akkahttp.server.Urls.QueryString">EndpointsWithCustomErrors.QueryString</a>]</span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.akkahttp.server.Urls">Urls</a> → <a href="../../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
-    </li><li name="endpoints.akkahttp.server.Urls#remainingSegments" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt">Provides <code>xmap</code> and <code>xmapPartial</code> operations.</p><div class="fullcomment"><div class="comment cmt"><p>Provides <code>xmap</code> and <code>xmapPartial</code> operations.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.akkahttp.server.Urls">Urls</a> → <a href="../../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd><dt>See also</dt><dd><span class="cmt"><p><a href="../../PartialInvariantFunctorSyntax$PartialInvariantFunctorSyntax.html" class="extype" name="endpoints.PartialInvariantFunctorSyntax.PartialInvariantFunctorSyntax">PartialInvariantFunctorSyntax</a> and <a href="../../InvariantFunctorSyntax$InvariantFunctorSyntax.html" class="extype" name="endpoints.InvariantFunctorSyntax.InvariantFunctorSyntax">InvariantFunctorSyntax</a></p></span></dd></dl></div>
+    </li><li name="endpoints.akkahttp.server.Urls#remainingSegments" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="remainingSegments(name:String,docs:endpoints.algebra.Documentation):Urls.this.Path[String]"></a><a id="remainingSegments(String,Documentation):EndpointsWithCustomErrors.Path[String]"></a>
       <span class="permalink">
       <a href="../../../endpoints/akkahttp/server/Urls.html#remainingSegments(name:String,docs:endpoints.algebra.Documentation):Urls.this.Path[String]" title="Permalink">
@@ -1365,7 +1339,7 @@ qs[<span class="std">List</span>[<span class="std">Long</span>]](<span class="li
       </span>
       
       <p class="shortcomment cmt">The remaining segments of the path.</p><div class="fullcomment"><div class="comment cmt"><p>The remaining segments of the path. The <code>String</code> value carried by this <code>Path</code> is still URL-encoded.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.akkahttp.server.Urls">Urls</a> → <a href="../../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
-    </li><li name="endpoints.akkahttp.server.Urls#repeatedQueryStringParam" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.akkahttp.server.Urls#repeatedQueryStringParam" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="repeatedQueryStringParam[A,CC[X]&lt;:Iterable[X]](implicitparam:Urls.this.QueryStringParam[A],implicitfactory:collection.compat.Factory[A,CC[A]]):Urls.this.QueryStringParam[CC[A]]"></a><a id="repeatedQueryStringParam[A,CC[X]&lt;:Iterable[X]](EndpointsWithCustomErrors.QueryStringParam[A],scala.collection.compat.Factory[A,CC[A]]):EndpointsWithCustomErrors.QueryStringParam[CC[A]]"></a>
       <span class="permalink">
       <a href="../../../endpoints/akkahttp/server/Urls.html#repeatedQueryStringParam[A,CC[X]&lt;:Iterable[X]](implicitparam:Urls.this.QueryStringParam[A],implicitfactory:collection.compat.Factory[A,CC[A]]):Urls.this.QueryStringParam[CC[A]]" title="Permalink">
@@ -1383,7 +1357,7 @@ qs[<span class="std">List</span>[<span class="std">Long</span>]](<span class="li
       <p class="shortcomment cmt">Support query string parameters with multiple values:</p><div class="fullcomment"><div class="comment cmt"><p>Support query string parameters with multiple values:</p><pre>path / <span class="lit">"articles"</span> /? qs[<span class="std">List</span>[<span class="std">Long</span>]](<span class="lit">"id"</span>)</pre><p>Server interpreters must accept incoming requests where such parameters are missing (in such a
 case, its value is an empty collection), and report a failure if at least one value is malformed.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.akkahttp.server.Urls">Urls</a> → <a href="../../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
-    </li><li name="endpoints.akkahttp.server.Urls#segment" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.akkahttp.server.Urls#segment" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="segment[A](name:String,docs:endpoints.algebra.Documentation)(implicits:Urls.this.Segment[A]):Urls.this.Path[A]"></a><a id="segment[A](String,Documentation)(EndpointsWithCustomErrors.Segment[A]):EndpointsWithCustomErrors.Path[A]"></a>
       <span class="permalink">
       <a href="../../../endpoints/akkahttp/server/Urls.html#segment[A](name:String,docs:endpoints.algebra.Documentation)(implicits:Urls.this.Segment[A]):Urls.this.Path[A]" title="Permalink">
@@ -1414,8 +1388,8 @@ case, its value is an empty collection), and report a failure if at least one va
         <span class="name">segmentPartialInvFunctor</span><span class="result">: <a href="../../PartialInvariantFunctor.html" class="extype" name="endpoints.PartialInvariantFunctor">PartialInvariantFunctor</a>[<a href="EndpointsWithCustomErrors.html#Segment[A]extendsAnyRef" class="extmbr" name="endpoints.akkahttp.server.Urls.Segment">EndpointsWithCustomErrors.Segment</a>]</span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.akkahttp.server.Urls">Urls</a> → <a href="../../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
-    </li><li name="endpoints.akkahttp.server.Urls#staticPathSegment" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt">Provides <code>xmap</code> and <code>xmapPartial</code> operations.</p><div class="fullcomment"><div class="comment cmt"><p>Provides <code>xmap</code> and <code>xmapPartial</code> operations.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.akkahttp.server.Urls">Urls</a> → <a href="../../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd><dt>See also</dt><dd><span class="cmt"><p><a href="../../PartialInvariantFunctorSyntax$PartialInvariantFunctorSyntax.html" class="extype" name="endpoints.PartialInvariantFunctorSyntax.PartialInvariantFunctorSyntax">PartialInvariantFunctorSyntax</a> and <a href="../../InvariantFunctorSyntax$InvariantFunctorSyntax.html" class="extype" name="endpoints.InvariantFunctorSyntax.InvariantFunctorSyntax">InvariantFunctorSyntax</a></p></span></dd></dl></div>
+    </li><li name="endpoints.akkahttp.server.Urls#staticPathSegment" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="staticPathSegment(segment:String):Urls.this.Path[Unit]"></a><a id="staticPathSegment(String):EndpointsWithCustomErrors.Path[Unit]"></a>
       <span class="permalink">
       <a href="../../../endpoints/akkahttp/server/Urls.html#staticPathSegment(segment:String):Urls.this.Path[Unit]" title="Permalink">
@@ -1431,7 +1405,7 @@ case, its value is an empty collection), and report a failure if at least one va
       </span>
       
       <p class="shortcomment cmt">A path segment whose value is the given <code>segment</code></p><div class="fullcomment"><div class="comment cmt"><p>A path segment whose value is the given <code>segment</code></p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.akkahttp.server.Urls">Urls</a> → <a href="../../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
-    </li><li name="endpoints.akkahttp.server.Urls#stringQueryString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.akkahttp.server.Urls#stringQueryString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="stringQueryString:Urls.this.QueryStringParam[String]"></a><a id="stringQueryString:EndpointsWithCustomErrors.QueryStringParam[String]"></a>
       <span class="permalink">
       <a href="../../../endpoints/akkahttp/server/Urls.html#stringQueryString:Urls.this.QueryStringParam[String]" title="Permalink">
@@ -1447,7 +1421,7 @@ case, its value is an empty collection), and report a failure if at least one va
       </span>
       
       <p class="shortcomment cmt">Ability to define <code>String</code> query string parameters</p><div class="fullcomment"><div class="comment cmt"><p>Ability to define <code>String</code> query string parameters</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.akkahttp.server.Urls">Urls</a> → <a href="../../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
-    </li><li name="endpoints.akkahttp.server.Urls#stringSegment" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.akkahttp.server.Urls#stringSegment" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="stringSegment:Urls.this.Segment[String]"></a><a id="stringSegment:EndpointsWithCustomErrors.Segment[String]"></a>
       <span class="permalink">
       <a href="../../../endpoints/akkahttp/server/Urls.html#stringSegment:Urls.this.Segment[String]" title="Permalink">
@@ -1466,8 +1440,7 @@ case, its value is an empty collection), and report a failure if at least one va
 Servers should return an URL-decoded string value,
 and clients should take an URL-decoded string value.</p><div class="fullcomment"><div class="comment cmt"><p>Ability to define <code>String</code> path segments
 Servers should return an URL-decoded string value,
-and clients should take an URL-decoded string value.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.akkahttp.server.Urls">Urls</a> → <a href="../../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
+and clients should take an URL-decoded string value.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.akkahttp.server.Urls">Urls</a> → <a href="../../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
       <span class="permalink">
@@ -1531,7 +1504,7 @@ and clients should take an URL-decoded string value.
         <span class="name">urlPartialInvFunctor</span><span class="result">: <a href="../../PartialInvariantFunctor.html" class="extype" name="endpoints.PartialInvariantFunctor">PartialInvariantFunctor</a>[<a href="EndpointsWithCustomErrors.html#Url[A]extendsAnyRef" class="extmbr" name="endpoints.akkahttp.server.Urls.Url">EndpointsWithCustomErrors.Url</a>]</span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.akkahttp.server.Urls">Urls</a> → <a href="../../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
+      <p class="shortcomment cmt">Provides <code>xmap</code> and <code>xmapPartial</code> operations</p><div class="fullcomment"><div class="comment cmt"><p>Provides <code>xmap</code> and <code>xmapPartial</code> operations</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.akkahttp.server.Urls">Urls</a> → <a href="../../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd><dt>See also</dt><dd><span class="cmt"><p><a href="../../PartialInvariantFunctorSyntax$PartialInvariantFunctorSyntax.html" class="extype" name="endpoints.PartialInvariantFunctorSyntax.PartialInvariantFunctorSyntax">PartialInvariantFunctorSyntax</a> and <a href="../../InvariantFunctorSyntax$InvariantFunctorSyntax.html" class="extype" name="endpoints.InvariantFunctorSyntax.InvariantFunctorSyntax">InvariantFunctorSyntax</a></p></span></dd></dl></div>
     </li><li name="endpoints.akkahttp.server.Urls#urlWithQueryString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="urlWithQueryString[A,B](path:Urls.this.Path[A],qs:Urls.this.QueryString[B])(implicittupler:endpoints.Tupler[A,B]):Urls.this.Url[tupler.Out]"></a><a id="urlWithQueryString[A,B](EndpointsWithCustomErrors.Path[A],EndpointsWithCustomErrors.QueryString[B])(Tupler[A,B]):EndpointsWithCustomErrors.Url[Out]"></a>
       <span class="permalink">
@@ -1548,7 +1521,7 @@ and clients should take an URL-decoded string value.
       </span>
       
       <p class="shortcomment cmt">Builds an URL from the given path and query string</p><div class="fullcomment"><div class="comment cmt"><p>Builds an URL from the given path and query string</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.akkahttp.server.Urls">Urls</a> → <a href="../../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
-    </li><li name="endpoints.algebra.Urls#uuidQueryString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.algebra.Urls#uuidQueryString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="uuidQueryString:Urls.this.QueryStringParam[java.util.UUID]"></a><a id="uuidQueryString:EndpointsWithCustomErrors.QueryStringParam[UUID]"></a>
       <span class="permalink">
       <a href="../../../endpoints/akkahttp/server/Urls.html#uuidQueryString:Urls.this.QueryStringParam[java.util.UUID]" title="Permalink">
@@ -1564,7 +1537,7 @@ and clients should take an URL-decoded string value.
       </span>
       
       <p class="shortcomment cmt">Ability to define <code>UUID</code> query string parameters</p><div class="fullcomment"><div class="comment cmt"><p>Ability to define <code>UUID</code> query string parameters</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
-    </li><li name="endpoints.algebra.Urls#uuidSegment" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.algebra.Urls#uuidSegment" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="uuidSegment:Urls.this.Segment[java.util.UUID]"></a><a id="uuidSegment:EndpointsWithCustomErrors.Segment[UUID]"></a>
       <span class="permalink">
       <a href="../../../endpoints/akkahttp/server/Urls.html#uuidSegment:Urls.this.Segment[java.util.UUID]" title="Permalink">
@@ -1713,7 +1686,13 @@ and clients should take an URL-decoded string value.
         </div>
 
         <div id="groupedMembers">
-        <div class="group" name="Ungrouped">
+        <div class="group" name="types">
+              <h3>Types</h3>
+              <div class="comment cmt"><p>Types introduced by the algebra</p></div>
+            </div><div class="group" name="operations">
+              <h3>Operations</h3>
+              <div class="comment cmt"><p>Operations creating and transforming values</p></div>
+            </div><div class="group" name="Ungrouped">
               <h3>Ungrouped</h3>
               
             </div>

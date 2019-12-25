@@ -119,38 +119,6 @@
       <p class="shortcomment cmt">Server interpreters backed by Akka HTTP
 </p><div class="fullcomment"><div class="comment cmt"><p>Server interpreters backed by Akka HTTP
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="endpoints.akkahttp">akkahttp</a></dd></dl></div>
-    </li><li name="endpoints.akkahttp.server.circe" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="circe"></a><a id="circe:circe"></a>
-      <span class="permalink">
-      <a href="../../../endpoints/akkahttp/server/circe/index.html" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">package</span>
-      </span>
-      <span class="symbol">
-        <a title="" href="circe/index.html"><span class="name">circe</span></a>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="endpoints.akkahttp.server">server</a></dd></dl></div>
-    </li><li name="endpoints.akkahttp.server.playjson" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="playjson"></a><a id="playjson:playjson"></a>
-      <span class="permalink">
-      <a href="../../../endpoints/akkahttp/server/playjson/index.html" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">package</span>
-      </span>
-      <span class="symbol">
-        <a title="" href="playjson/index.html"><span class="name">playjson</span></a>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="endpoints.akkahttp.server">server</a></dd></dl></div>
     </li><li class="current-entities indented3">
                         <span class="separator"></span>
                         <a class="trait" href="BasicAuthentication.html" title=""></a>
@@ -173,8 +141,16 @@
                         <a href="JsonEntities.html" title="Interpreter for algebra.JsonEntities">JsonEntities</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
-                        <a class="trait" href="JsonEntitiesFromCodec.html" title="Interpreter for endpoints.algebra.JsonEntitiesFromCodec that decodes JSON requests and encodes JSON responses using Akka HTTP."></a>
-                        <a href="JsonEntitiesFromCodec.html" title="Interpreter for endpoints.algebra.JsonEntitiesFromCodec that decodes JSON requests and encodes JSON responses using Akka HTTP.">JsonEntitiesFromCodec</a>
+                        <a class="trait" href="JsonEntitiesFromCodecs.html" title="Interpreter for algebra.JsonEntitiesFromCodecs that decodes JSON requests and encodes JSON responses using Akka HTTP."></a>
+                        <a href="JsonEntitiesFromCodecs.html" title="Interpreter for algebra.JsonEntitiesFromCodecs that decodes JSON requests and encodes JSON responses using Akka HTTP.">JsonEntitiesFromCodecs</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="JsonEntitiesFromEncodersAndDecoders.html" title="Interpreter for endpoints.algebra.JsonEntities that decodes JSON entities with a endpoints.algebra.Decoder and encodes JSON entities with an endpoints.algebra.Encoder."></a>
+                        <a href="JsonEntitiesFromEncodersAndDecoders.html" title="Interpreter for endpoints.algebra.JsonEntities that decodes JSON entities with a endpoints.algebra.Decoder and encodes JSON entities with an endpoints.algebra.Encoder.">JsonEntitiesFromEncodersAndDecoders</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="JsonEntitiesFromSchemas.html" title="Interpreter for algebra.JsonEntitiesFromSchemas that decodes JSON requests and encodes JSON responses using Akka HTTP."></a>
+                        <a href="JsonEntitiesFromSchemas.html" title="Interpreter for algebra.JsonEntitiesFromSchemas that decodes JSON requests and encodes JSON responses using Akka HTTP.">JsonEntitiesFromSchemas</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
                         <a class="trait" href="Methods.html" title="algebra.Methods interpreter that decodes and encodes methods."></a>
@@ -228,7 +204,7 @@
 
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p><a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">algebra.StatusCodes</a> interpreter that decodes and encodes methods.
-</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/julienrf/endpoints/blob/v0.12.0/akka-http/server/src/main/scala/endpoints/akkahttp/server/StatusCodes.scala" target="_blank">StatusCodes.scala</a></dd></dl><div class="toggleContainer block">
+</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/julienrf/endpoints/blob/v0.13.0/akka-http/server/src/main/scala/endpoints/akkahttp/server/StatusCodes.scala" target="_blank">StatusCodes.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -237,12 +213,12 @@
             <span class="toggle">
               Known Subclasses
             </span>
-            <div class="subClasses hiddenContent"><a href="BasicAuthentication.html" class="extype" name="endpoints.akkahttp.server.BasicAuthentication">BasicAuthentication</a>, <a href="Endpoints.html" class="extype" name="endpoints.akkahttp.server.Endpoints">Endpoints</a>, <a href="EndpointsWithCustomErrors.html" class="extype" name="endpoints.akkahttp.server.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a>, <a href="JsonEntities.html" class="extype" name="endpoints.akkahttp.server.JsonEntities">JsonEntities</a>, <a href="JsonEntitiesFromCodec.html" class="extype" name="endpoints.akkahttp.server.JsonEntitiesFromCodec">JsonEntitiesFromCodec</a>, <a href="MuxEndpoints.html" class="extype" name="endpoints.akkahttp.server.MuxEndpoints">MuxEndpoints</a>, <a href="Urls.html" class="extype" name="endpoints.akkahttp.server.Urls">Urls</a>, <a href="circe/JsonSchemaEntities.html" class="extype" name="endpoints.akkahttp.server.circe.JsonSchemaEntities">JsonSchemaEntities</a>, <a href="playjson/JsonSchemaEntities.html" class="extype" name="endpoints.akkahttp.server.playjson.JsonSchemaEntities">JsonSchemaEntities</a></div>
+            <div class="subClasses hiddenContent"><a href="BasicAuthentication.html" class="extype" name="endpoints.akkahttp.server.BasicAuthentication">BasicAuthentication</a>, <a href="Endpoints.html" class="extype" name="endpoints.akkahttp.server.Endpoints">Endpoints</a>, <a href="EndpointsWithCustomErrors.html" class="extype" name="endpoints.akkahttp.server.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a>, <a href="JsonEntities.html" class="extype" name="endpoints.akkahttp.server.JsonEntities">JsonEntities</a>, <a href="JsonEntitiesFromCodecs.html" class="extype" name="endpoints.akkahttp.server.JsonEntitiesFromCodecs">JsonEntitiesFromCodecs</a>, <a href="JsonEntitiesFromEncodersAndDecoders.html" class="extype" name="endpoints.akkahttp.server.JsonEntitiesFromEncodersAndDecoders">JsonEntitiesFromEncodersAndDecoders</a>, <a href="JsonEntitiesFromSchemas.html" class="extype" name="endpoints.akkahttp.server.JsonEntitiesFromSchemas">JsonEntitiesFromSchemas</a>, <a href="MuxEndpoints.html" class="extype" name="endpoints.akkahttp.server.MuxEndpoints">MuxEndpoints</a>, <a href="Urls.html" class="extype" name="endpoints.akkahttp.server.Urls">Urls</a></div>
           </div><div class="toggleContainer block diagram-container" id="inheritance-diagram-container">
                 <span class="toggle diagram-link">
                   Type Hierarchy
                 </span>
-                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph1" viewBox="0.00 0.00 250.00 155.00" height="155pt" width="250pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 151)" class="graph" id="page0,1_graph0"><polygon points="-4,4 -4,-151 246,-151 246,4 -4,4" stroke="transparent" fill="#ffffff"></polygon><g class="cluster" id="clust1"></g><g class="cluster" id="clust2"></g><!-- node0 --><g class="node this trait" id="graph1_0"><g id="a_this trait|graph1_0"><a xlink:title="endpoints.akkahttp.server.StatusCodes (this trait)" xlink:href="#inheritance-diagram"><path d="M186.6667,-86C186.6667,-86 106.3333,-86 106.3333,-86 102.1667,-86 98,-81.8333 98,-77.6667 98,-77.6667 98,-69.3333 98,-69.3333 98,-65.1667 102.1667,-61 106.3333,-61 106.3333,-61 186.6667,-61 186.6667,-61 190.8333,-61 195,-65.1667 195,-69.3333 195,-69.3333 195,-77.6667 195,-77.6667 195,-81.8333 190.8333,-86 186.6667,-86" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-80.5" x="108.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-71.1" x="129.5" text-anchor="start">StatusCodes</text></a></g></g><!-- node1 --><g class="node trait" id="graph1_1"><g id="a_trait|graph1_1"><a xlink:title="endpoints.akkahttp.server.EndpointsWithCustomErrors" xlink:href="EndpointsWithCustomErrors.html#inheritance-diagram"><path d="M154.6667,-25C154.6667,-25 8.3333,-25 8.3333,-25 4.1667,-25 0,-20.8333 0,-16.6667 0,-16.6667 0,-8.3333 0,-8.3333 0,-4.1667 4.1667,0 8.3333,0 8.3333,0 154.6667,0 154.6667,0 158.8333,0 163,-4.1667 163,-8.3333 163,-8.3333 163,-16.6667 163,-16.6667 163,-20.8333 158.8333,-25 154.6667,-25" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-19.5" x="10.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="31.5" text-anchor="start">EndpointsWithCustomErrors</text></a></g></g><!-- node0&#45;&gt;node1 --><g class="edge inheritance" id="graph1_0_1"><g id="a_inheritance|graph1_0_1"><a xlink:title="EndpointsWithCustomErrors is a subtype of StatusCodes"><path d="M127.7891,-55.9406C117.2951,-46.0923 104.4464,-34.0343 94.9508,-25.123" stroke="#d4d4d4" fill="none"></path><polygon points="126.251,-57.857 133.032,-60.8608 129.6042,-54.284 126.251,-57.857" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node2 --><g class="node trait" id="graph1_2"><g id="a_trait|graph1_2"><a xlink:title="endpoints.akkahttp.server.Urls" xlink:href="Urls.html#inheritance-diagram"><path d="M233.6667,-25C233.6667,-25 189.3333,-25 189.3333,-25 185.1667,-25 181,-20.8333 181,-16.6667 181,-16.6667 181,-8.3333 181,-8.3333 181,-4.1667 185.1667,0 189.3333,0 189.3333,0 233.6667,0 233.6667,0 237.8333,0 242,-4.1667 242,-8.3333 242,-8.3333 242,-16.6667 242,-16.6667 242,-20.8333 237.8333,-25 233.6667,-25" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-19.5" x="191.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="212.5" text-anchor="start">Urls</text></a></g></g><!-- node0&#45;&gt;node2 --><g class="edge inheritance" id="graph1_0_2"><g id="a_inheritance|graph1_0_2"><a xlink:title="Urls is a subtype of StatusCodes"><path d="M165.2109,-55.9406C175.7049,-46.0923 188.5536,-34.0343 198.0492,-25.123" stroke="#d4d4d4" fill="none"></path><polygon points="163.3958,-54.284 159.968,-60.8608 166.749,-57.857 163.3958,-54.284" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node3 --><g class="node trait" id="graph1_3"><g id="a_trait|graph1_3"><a xlink:title="endpoints.algebra.StatusCodes" xlink:href="../../algebra/StatusCodes.html#inheritance-diagram"><path d="M204.1667,-147C204.1667,-147 88.8333,-147 88.8333,-147 84.6667,-147 80.5,-142.8333 80.5,-138.6667 80.5,-138.6667 80.5,-130.3333 80.5,-130.3333 80.5,-126.1667 84.6667,-122 88.8333,-122 88.8333,-122 204.1667,-122 204.1667,-122 208.3333,-122 212.5,-126.1667 212.5,-130.3333 212.5,-130.3333 212.5,-138.6667 212.5,-138.6667 212.5,-142.8333 208.3333,-147 204.1667,-147" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-141.5" x="90.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-132.1" x="111.5" text-anchor="start">algebra.StatusCodes</text></a></g></g><!-- node3&#45;&gt;node0 --><g class="edge inheritance" id="graph1_3_0"><g id="a_inheritance|graph1_3_0"><a xlink:title="StatusCodes is a subtype of algebra.StatusCodes"><path d="M146.5,-114.7386C146.5,-105.3393 146.5,-94.3803 146.5,-86.123" stroke="#d4d4d4" fill="none"></path><polygon points="144.0501,-114.8607 146.5,-121.8608 148.9501,-114.8608 144.0501,-114.8607" stroke="#d4d4d4" fill="none"></polygon></a></g></g></g></svg></div>
+                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph1" viewBox="0.00 0.00 252.00 155.00" height="155pt" width="252pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 151)" class="graph" id="graph0"><polygon points="-4,4 -4,-151 248,-151 248,4 -4,4" stroke="none" fill="white"></polygon><g class="cluster" id="clust1"></g><g class="cluster" id="clust2"></g><!-- node0 --><g class="node this trait" id="graph1_0"><g id="a_this trait|graph1_0"><a xlink:title="endpoints.akkahttp.server.StatusCodes (this trait)" xlink:href="#inheritance-diagram"><path d="M188.167,-86C188.167,-86 105.833,-86 105.833,-86 101.667,-86 97.5,-81.8333 97.5,-77.6667 97.5,-77.6667 97.5,-69.3333 97.5,-69.3333 97.5,-65.1667 101.667,-61 105.833,-61 105.833,-61 188.167,-61 188.167,-61 192.333,-61 196.5,-65.1667 196.5,-69.3333 196.5,-69.3333 196.5,-77.6667 196.5,-77.6667 196.5,-81.8333 192.333,-86 188.167,-86" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-80.5" x="108" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-71.1" x="129" text-anchor="start">StatusCodes</text></a></g></g><!-- node1 --><g class="node trait" id="graph1_1"><g id="a_trait|graph1_1"><a xlink:title="endpoints.akkahttp.server.EndpointsWithCustomErrors" xlink:href="EndpointsWithCustomErrors.html#inheritance-diagram"><path d="M155.667,-25C155.667,-25 8.33333,-25 8.33333,-25 4.16667,-25 0,-20.8333 0,-16.6667 0,-16.6667 0,-8.33333 0,-8.33333 0,-4.16667 4.16667,-0 8.33333,-0 8.33333,-0 155.667,-0 155.667,-0 159.833,-0 164,-4.16667 164,-8.33333 164,-8.33333 164,-16.6667 164,-16.6667 164,-20.8333 159.833,-25 155.667,-25" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-19.5" x="10" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="31" text-anchor="start">EndpointsWithCustomErrors</text></a></g></g><!-- node0&#45;&gt;node1 --><g class="edge inheritance" id="graph1_0_1"><g id="a_inheritance|graph1_0_1"><a xlink:title="EndpointsWithCustomErrors is a subtype of StatusCodes"><path d="M128.776,-55.9582C117.96,-46.141 104.512,-33.9342 94.8152,-25.1323" stroke="#d4d4d4" fill="none"></path><polygon points="127.328,-57.9529 134.158,-60.8435 130.622,-54.3246 127.328,-57.9529" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node2 --><g class="node trait" id="graph1_2"><g id="a_trait|graph1_2"><a xlink:title="endpoints.akkahttp.server.Urls" xlink:href="Urls.html#inheritance-diagram"><path d="M235.667,-25C235.667,-25 190.333,-25 190.333,-25 186.167,-25 182,-20.8333 182,-16.6667 182,-16.6667 182,-8.33333 182,-8.33333 182,-4.16667 186.167,-0 190.333,-0 190.333,-0 235.667,-0 235.667,-0 239.833,-0 244,-4.16667 244,-8.33333 244,-8.33333 244,-16.6667 244,-16.6667 244,-20.8333 239.833,-25 235.667,-25" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-19.5" x="192" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="213" text-anchor="start">Urls</text></a></g></g><!-- node0&#45;&gt;node2 --><g class="edge inheritance" id="graph1_0_2"><g id="a_inheritance|graph1_0_2"><a xlink:title="Urls is a subtype of StatusCodes"><path d="M165.504,-55.9582C176.486,-46.141 190.141,-33.9342 199.988,-25.1323" stroke="#d4d4d4" fill="none"></path><polygon points="163.625,-54.3516 160.039,-60.8435 166.891,-58.0048 163.625,-54.3516" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node3 --><g class="node trait" id="graph1_3"><g id="a_trait|graph1_3"><a xlink:title="endpoints.algebra.StatusCodes" xlink:href="../../algebra/StatusCodes.html#inheritance-diagram"><path d="M206.167,-147C206.167,-147 87.8333,-147 87.8333,-147 83.6667,-147 79.5,-142.833 79.5,-138.667 79.5,-138.667 79.5,-130.333 79.5,-130.333 79.5,-126.167 83.6667,-122 87.8333,-122 87.8333,-122 206.167,-122 206.167,-122 210.333,-122 214.5,-126.167 214.5,-130.333 214.5,-130.333 214.5,-138.667 214.5,-138.667 214.5,-142.833 210.333,-147 206.167,-147" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-141.5" x="90" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-132.1" x="111" text-anchor="start">algebra.StatusCodes</text></a></g></g><!-- node3&#45;&gt;node0 --><g class="edge inheritance" id="graph1_3_0"><g id="a_inheritance|graph1_3_0"><a xlink:title="StatusCodes is a subtype of algebra.StatusCodes"><path d="M147,-114.76C147,-105.367 147,-94.2882 147,-86.1323" stroke="#d4d4d4" fill="none"></path><polygon points="144.55,-114.843 147,-121.843 149.45,-114.844 144.55,-114.843" stroke="#d4d4d4" fill="none"></polygon></a></g></g></g></svg></div>
                 <div id="diagram-controls" class="hiddenContent">
                   <button id="diagram-zoom-out" class="diagram-btn"><i class="material-icons"></i></button>
                   <button id="diagram-zoom-in" class="diagram-btn"><i class="material-icons"></i></button>
@@ -264,7 +240,7 @@
           <div id="order">
             <span class="filtertype">Ordering</span>
             <ol>
-              
+              <li class="group out"><span>Grouped</span></li>
               <li class="alpha in"><span>Alphabetic</span></li>
               <li class="inherit out"><span>By Inheritance</span></li>
             </ol>
@@ -300,7 +276,7 @@
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="endpoints.akkahttp.server.StatusCodes.StatusCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+              <ol><li name="endpoints.akkahttp.server.StatusCodes.StatusCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="types">
       <a id="StatusCode=akka.http.scaladsl.model.StatusCode"></a><a id="StatusCode:StatusCode"></a>
       <span class="permalink">
       <a href="../../../endpoints/akkahttp/server/StatusCodes.html#StatusCode=akka.http.scaladsl.model.StatusCode" title="Permalink">
@@ -312,7 +288,7 @@
         <span class="kind">type</span>
       </span>
       <span class="symbol">
-        <span class="name">StatusCode</span><span class="result alias"> = <a href="https://doc.akka.io/api/akka-http/10.1.10/akka/http/scaladsl/model/StatusCode.html#akka.http.scaladsl.model.StatusCode" class="extype" name="akka.http.scaladsl.model.StatusCode">akka.http.scaladsl.model.StatusCode</a></span>
+        <span class="name">StatusCode</span><span class="result alias"> = <a href="https://doc.akka.io/api/akka-http/10.1.11/akka/http/scaladsl/model/StatusCode.html#akka.http.scaladsl.model.StatusCode" class="extype" name="akka.http.scaladsl.model.StatusCode">akka.http.scaladsl.model.StatusCode</a></span>
       </span>
       
       <p class="shortcomment cmt">HTTP Status Code</p><div class="fullcomment"><div class="comment cmt"><p>HTTP Status Code</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.akkahttp.server.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd></dl></div>
@@ -415,7 +391,7 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="endpoints.akkahttp.server.StatusCodes#Accepted" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.akkahttp.server.StatusCodes#Accepted" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="Accepted:akka.http.scaladsl.model.StatusCodes.Success"></a><a id="Accepted:Success"></a>
       <span class="permalink">
       <a href="../../../endpoints/akkahttp/server/StatusCodes.html#Accepted:akka.http.scaladsl.model.StatusCodes.Success" title="Permalink">
@@ -430,8 +406,8 @@
         <span class="name">Accepted</span><span class="result">: <span class="extype" name="akka.http.scaladsl.model.StatusCodes.Success">Success</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.akkahttp.server.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd></dl></div>
-    </li><li name="endpoints.akkahttp.server.StatusCodes#BadRequest" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.akkahttp.server.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd></dl></div>
+    </li><li name="endpoints.akkahttp.server.StatusCodes#BadRequest" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="BadRequest:akka.http.scaladsl.model.StatusCodes.ClientError"></a><a id="BadRequest:ClientError"></a>
       <span class="permalink">
       <a href="../../../endpoints/akkahttp/server/StatusCodes.html#BadRequest:akka.http.scaladsl.model.StatusCodes.ClientError" title="Permalink">
@@ -446,10 +422,10 @@
         <span class="name">BadRequest</span><span class="result">: <span class="extype" name="akka.http.scaladsl.model.StatusCodes.ClientError">ClientError</span></span>
       </span>
       
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.akkahttp.server.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd><dt>Note</dt><dd><span class="cmt"><p>You should use the <code>badRequest</code> constructor provided by the <span class="extype" name="Responses">Responses</span>
-      trait to ensure that errors produced by <i>endponits</i> are consistently
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.akkahttp.server.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd><dt>Note</dt><dd><span class="cmt"><p>You should use the <code>badRequest</code> constructor provided by the <a href="../../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">endpoints.algebra.Responses</a>
+      trait to ensure that errors produced by <i>endpoints</i> are consistently
       handled by interpreters.</p></span></dd></dl></div>
-    </li><li name="endpoints.akkahttp.server.StatusCodes#Created" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.akkahttp.server.StatusCodes#Created" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="Created:akka.http.scaladsl.model.StatusCodes.Success"></a><a id="Created:Success"></a>
       <span class="permalink">
       <a href="../../../endpoints/akkahttp/server/StatusCodes.html#Created:akka.http.scaladsl.model.StatusCodes.Success" title="Permalink">
@@ -464,8 +440,8 @@
         <span class="name">Created</span><span class="result">: <span class="extype" name="akka.http.scaladsl.model.StatusCodes.Success">Success</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.akkahttp.server.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd></dl></div>
-    </li><li name="endpoints.akkahttp.server.StatusCodes#Forbidden" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.akkahttp.server.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd></dl></div>
+    </li><li name="endpoints.akkahttp.server.StatusCodes#Forbidden" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="Forbidden:akka.http.scaladsl.model.StatusCodes.ClientError"></a><a id="Forbidden:ClientError"></a>
       <span class="permalink">
       <a href="../../../endpoints/akkahttp/server/StatusCodes.html#Forbidden:akka.http.scaladsl.model.StatusCodes.ClientError" title="Permalink">
@@ -480,8 +456,8 @@
         <span class="name">Forbidden</span><span class="result">: <span class="extype" name="akka.http.scaladsl.model.StatusCodes.ClientError">ClientError</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.akkahttp.server.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd></dl></div>
-    </li><li name="endpoints.akkahttp.server.StatusCodes#InternalServerError" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.akkahttp.server.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd></dl></div>
+    </li><li name="endpoints.akkahttp.server.StatusCodes#InternalServerError" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="InternalServerError:akka.http.scaladsl.model.StatusCodes.ServerError"></a><a id="InternalServerError:ServerError"></a>
       <span class="permalink">
       <a href="../../../endpoints/akkahttp/server/StatusCodes.html#InternalServerError:akka.http.scaladsl.model.StatusCodes.ServerError" title="Permalink">
@@ -497,9 +473,9 @@
       </span>
       
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.akkahttp.server.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd><dt>Note</dt><dd><span class="cmt"><p>You should use the <code>internalServerError</code> constructor provided by the
-      <span class="extype" name="Responses">Responses</span> trait to ensure that errors produced by <i>endpoints</i>
+      <a href="../../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">endpoints.algebra.Responses</a> trait to ensure that errors produced by <i>endpoints</i>
       are consistently handled by interpreters.</p></span></dd></dl></div>
-    </li><li name="endpoints.akkahttp.server.StatusCodes#NoContent" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.akkahttp.server.StatusCodes#NoContent" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="NoContent:akka.http.scaladsl.model.StatusCodes.Success"></a><a id="NoContent:Success"></a>
       <span class="permalink">
       <a href="../../../endpoints/akkahttp/server/StatusCodes.html#NoContent:akka.http.scaladsl.model.StatusCodes.Success" title="Permalink">
@@ -514,8 +490,8 @@
         <span class="name">NoContent</span><span class="result">: <span class="extype" name="akka.http.scaladsl.model.StatusCodes.Success">Success</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.akkahttp.server.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd></dl></div>
-    </li><li name="endpoints.akkahttp.server.StatusCodes#NotFound" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.akkahttp.server.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd></dl></div>
+    </li><li name="endpoints.akkahttp.server.StatusCodes#NotFound" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="NotFound:akka.http.scaladsl.model.StatusCodes.ClientError"></a><a id="NotFound:ClientError"></a>
       <span class="permalink">
       <a href="../../../endpoints/akkahttp/server/StatusCodes.html#NotFound:akka.http.scaladsl.model.StatusCodes.ClientError" title="Permalink">
@@ -530,8 +506,8 @@
         <span class="name">NotFound</span><span class="result">: <span class="extype" name="akka.http.scaladsl.model.StatusCodes.ClientError">ClientError</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.akkahttp.server.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd></dl></div>
-    </li><li name="endpoints.akkahttp.server.StatusCodes#NotImplemented" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.akkahttp.server.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd></dl></div>
+    </li><li name="endpoints.akkahttp.server.StatusCodes#NotImplemented" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="NotImplemented:akka.http.scaladsl.model.StatusCodes.ServerError"></a><a id="NotImplemented:ServerError"></a>
       <span class="permalink">
       <a href="../../../endpoints/akkahttp/server/StatusCodes.html#NotImplemented:akka.http.scaladsl.model.StatusCodes.ServerError" title="Permalink">
@@ -546,8 +522,8 @@
         <span class="name">NotImplemented</span><span class="result">: <span class="extype" name="akka.http.scaladsl.model.StatusCodes.ServerError">ServerError</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.akkahttp.server.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd></dl></div>
-    </li><li name="endpoints.akkahttp.server.StatusCodes#OK" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.akkahttp.server.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd></dl></div>
+    </li><li name="endpoints.akkahttp.server.StatusCodes#OK" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="OK:akka.http.scaladsl.model.StatusCodes.Success"></a><a id="OK:Success"></a>
       <span class="permalink">
       <a href="../../../endpoints/akkahttp/server/StatusCodes.html#OK:akka.http.scaladsl.model.StatusCodes.Success" title="Permalink">
@@ -562,8 +538,8 @@
         <span class="name">OK</span><span class="result">: <span class="extype" name="akka.http.scaladsl.model.StatusCodes.Success">Success</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.akkahttp.server.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd></dl></div>
-    </li><li name="endpoints.akkahttp.server.StatusCodes#Unauthorized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.akkahttp.server.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd></dl></div>
+    </li><li name="endpoints.akkahttp.server.StatusCodes#Unauthorized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="Unauthorized:akka.http.scaladsl.model.StatusCodes.ClientError"></a><a id="Unauthorized:ClientError"></a>
       <span class="permalink">
       <a href="../../../endpoints/akkahttp/server/StatusCodes.html#Unauthorized:akka.http.scaladsl.model.StatusCodes.ClientError" title="Permalink">
@@ -578,7 +554,7 @@
         <span class="name">Unauthorized</span><span class="result">: <span class="extype" name="akka.http.scaladsl.model.StatusCodes.ClientError">ClientError</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.akkahttp.server.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd></dl></div>
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.akkahttp.server.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <span class="permalink">
@@ -1041,7 +1017,13 @@
         </div>
 
         <div id="groupedMembers">
-        <div class="group" name="Ungrouped">
+        <div class="group" name="types">
+              <h3>Types</h3>
+              <div class="comment cmt"><p>Types introduced by the algebra</p></div>
+            </div><div class="group" name="operations">
+              <h3>Operations</h3>
+              <div class="comment cmt"><p>Operations creating and transforming values</p></div>
+            </div><div class="group" name="Ungrouped">
               <h3>Ungrouped</h3>
               
             </div>

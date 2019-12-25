@@ -119,22 +119,6 @@
       <p class="shortcomment cmt">Client interpreters backed by Akka HTTP
 </p><div class="fullcomment"><div class="comment cmt"><p>Client interpreters backed by Akka HTTP
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="endpoints.akkahttp">akkahttp</a></dd></dl></div>
-    </li><li name="endpoints.akkahttp.client.circe" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="circe"></a><a id="circe:circe"></a>
-      <span class="permalink">
-      <a href="../../../endpoints/akkahttp/client/circe/index.html" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">package</span>
-      </span>
-      <span class="symbol">
-        <a title="" href="circe/index.html"><span class="name">circe</span></a>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="endpoints.akkahttp.client">client</a></dd></dl></div>
     </li><li class="current-entities indented3">
                         <a class="object" href="" title=""></a>
                         <a class="trait" href="AkkaHttpRequestExecutor.html" title=""></a>
@@ -161,8 +145,12 @@
                         <a href="EndpointsWithCustomErrors.html" title="Akka-HTTP based interpreter.">EndpointsWithCustomErrors</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
-                        <a class="trait" href="JsonEntitiesFromCodec.html" title="Interpreter for endpoints.algebra.JsonEntitiesFromCodec that encodes JSON request and decodes JSON responses using Akka HTTP."></a>
-                        <a href="JsonEntitiesFromCodec.html" title="Interpreter for endpoints.algebra.JsonEntitiesFromCodec that encodes JSON request and decodes JSON responses using Akka HTTP.">JsonEntitiesFromCodec</a>
+                        <a class="trait" href="JsonEntitiesFromCodecs.html" title="Interpreter for endpoints.algebra.JsonEntitiesFromCodecs that encodes JSON request and decodes JSON responses using Akka HTTP."></a>
+                        <a href="JsonEntitiesFromCodecs.html" title="Interpreter for endpoints.algebra.JsonEntitiesFromCodecs that encodes JSON request and decodes JSON responses using Akka HTTP.">JsonEntitiesFromCodecs</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="JsonEntitiesFromSchemas.html" title="Interpreter for endpoints.algebra.JsonEntitiesFromSchemas that encodes JSON request and decodes JSON responses using Akka HTTP."></a>
+                        <a href="JsonEntitiesFromSchemas.html" title="Interpreter for endpoints.algebra.JsonEntitiesFromSchemas that encodes JSON request and decodes JSON responses using Akka HTTP.">JsonEntitiesFromSchemas</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
                         <a class="trait" href="Methods.html" title=""></a>
@@ -209,7 +197,7 @@
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/julienrf/endpoints/blob/v0.12.0/akka-http/client/src/main/scala/endpoints/akkahttp/client/EndpointsSettings.scala" target="_blank">EndpointsSettings.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/julienrf/endpoints/blob/v0.13.0/akka-http/client/src/main/scala/endpoints/akkahttp/client/EndpointsSettings.scala" target="_blank">EndpointsSettings.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -342,7 +330,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">cachedHostConnectionPool</span><span class="params">(<span name="host">host: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="port">port: <a href="https://www.scala-lang.org/api/2.12.10/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="system">system: <a href="https://doc.akka.io/api/akka/2.5.25/akka/actor/ActorSystem.html#akka.actor.ActorSystem" class="extype" name="akka.actor.ActorSystem">ActorSystem</a></span>, <span name="materializer">materializer: <a href="https://doc.akka.io/api/akka/2.5.25/akka/stream/Materializer.html#akka.stream.Materializer" class="extype" name="akka.stream.Materializer">Materializer</a></span>)</span><span class="result">: <a href="AkkaHttpRequestExecutor.html" class="extype" name="endpoints.akkahttp.client.AkkaHttpRequestExecutor">AkkaHttpRequestExecutor</a></span>
+        <span class="name">cachedHostConnectionPool</span><span class="params">(<span name="host">host: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="port">port: <a href="https://www.scala-lang.org/api/2.12.10/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="system">system: <a href="https://doc.akka.io/api/akka/2.6.1/akka/actor/ActorSystem.html#akka.actor.ActorSystem" class="extype" name="akka.actor.ActorSystem">ActorSystem</a></span>, <span name="materializer">materializer: <a href="https://doc.akka.io/api/akka/2.6.1/akka/stream/Materializer.html#akka.stream.Materializer" class="extype" name="akka.stream.Materializer">Materializer</a></span>)</span><span class="result">: <a href="AkkaHttpRequestExecutor.html" class="extype" name="endpoints.akkahttp.client.AkkaHttpRequestExecutor">AkkaHttpRequestExecutor</a></span>
       </span>
       
       
@@ -382,7 +370,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">default</span><span class="params">(<span name="poolClientFlow">poolClientFlow: <a href="https://doc.akka.io/api/akka/2.5.25/akka/stream/scaladsl/Flow.html#akka.stream.scaladsl.Flow" class="extype" name="akka.stream.scaladsl.Flow">Flow</a>[(<a href="https://doc.akka.io/api/akka-http/10.1.10/akka/http/scaladsl/model/HttpRequest.html#akka.http.scaladsl.model.HttpRequest" class="extype" name="akka.http.scaladsl.model.HttpRequest">HttpRequest</a>, <a href="https://www.scala-lang.org/api/2.12.10/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>), (<a href="https://www.scala-lang.org/api/2.12.10/scala/util/Try.html#scala.util.Try" class="extype" name="scala.util.Try">Try</a>[<a href="https://doc.akka.io/api/akka-http/10.1.10/akka/http/scaladsl/model/HttpResponse.html#akka.http.scaladsl.model.HttpResponse" class="extype" name="akka.http.scaladsl.model.HttpResponse">HttpResponse</a>], <a href="https://www.scala-lang.org/api/2.12.10/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>), <span class="extype" name="akka.http.scaladsl.Http.HostConnectionPool">HostConnectionPool</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="materializer">materializer: <a href="https://doc.akka.io/api/akka/2.5.25/akka/stream/Materializer.html#akka.stream.Materializer" class="extype" name="akka.stream.Materializer">Materializer</a></span>)</span><span class="result">: <a href="AkkaHttpRequestExecutor.html" class="extype" name="endpoints.akkahttp.client.AkkaHttpRequestExecutor">AkkaHttpRequestExecutor</a></span>
+        <span class="name">default</span><span class="params">(<span name="poolClientFlow">poolClientFlow: <a href="https://doc.akka.io/api/akka/2.6.1/akka/stream/scaladsl/Flow.html#akka.stream.scaladsl.Flow" class="extype" name="akka.stream.scaladsl.Flow">Flow</a>[(<a href="https://doc.akka.io/api/akka-http/10.1.11/akka/http/scaladsl/model/HttpRequest.html#akka.http.scaladsl.model.HttpRequest" class="extype" name="akka.http.scaladsl.model.HttpRequest">HttpRequest</a>, <a href="https://www.scala-lang.org/api/2.12.10/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>), (<a href="https://www.scala-lang.org/api/2.12.10/scala/util/Try.html#scala.util.Try" class="extype" name="scala.util.Try">Try</a>[<a href="https://doc.akka.io/api/akka-http/10.1.11/akka/http/scaladsl/model/HttpResponse.html#akka.http.scaladsl.model.HttpResponse" class="extype" name="akka.http.scaladsl.model.HttpResponse">HttpResponse</a>], <a href="https://www.scala-lang.org/api/2.12.10/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>), <span class="extype" name="akka.http.scaladsl.Http.HostConnectionPool">HostConnectionPool</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="materializer">materializer: <a href="https://doc.akka.io/api/akka/2.6.1/akka/stream/Materializer.html#akka.stream.Materializer" class="extype" name="akka.stream.Materializer">Materializer</a></span>)</span><span class="result">: <a href="AkkaHttpRequestExecutor.html" class="extype" name="endpoints.akkahttp.client.AkkaHttpRequestExecutor">AkkaHttpRequestExecutor</a></span>
       </span>
       
       

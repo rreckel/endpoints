@@ -135,22 +135,6 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="endpoints.play.server">server</a></dd></dl></div>
-    </li><li name="endpoints.play.server.playjson" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="playjson"></a><a id="playjson:playjson"></a>
-      <span class="permalink">
-      <a href="../../../endpoints/play/server/playjson/index.html" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">package</span>
-      </span>
-      <span class="symbol">
-        <a title="" href="playjson/index.html"><span class="name">playjson</span></a>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="endpoints.play.server">server</a></dd></dl></div>
     </li><li class="current-entities indented3">
                         <span class="separator"></span>
                         <a class="trait" href="Assets.html" title="Interpreter for algebra.Assets that performs routing using Play framework"></a>
@@ -173,8 +157,16 @@
                         <a href="" title="Interpreter for algebra.Endpoints that performs routing using Play framework.">EndpointsWithCustomErrors</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
-                        <a class="trait" href="JsonEntitiesFromCodec.html" title="Interpreter for endpoints.algebra.JsonEntitiesFromCodec that decodes JSON requests and encodes JSON responses."></a>
-                        <a href="JsonEntitiesFromCodec.html" title="Interpreter for endpoints.algebra.JsonEntitiesFromCodec that decodes JSON requests and encodes JSON responses.">JsonEntitiesFromCodec</a>
+                        <a class="trait" href="JsonEntitiesFromCodecs.html" title="Interpreter for algebra.JsonEntitiesFromCodecs that decodes JSON requests and encodes JSON responses."></a>
+                        <a href="JsonEntitiesFromCodecs.html" title="Interpreter for algebra.JsonEntitiesFromCodecs that decodes JSON requests and encodes JSON responses.">JsonEntitiesFromCodecs</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="JsonEntitiesFromEncodersAndDecoders.html" title="Interpreter for algebra.JsonEntities that decodes JSON entities with a algebra.Decoder and encodes JSON entities with an algebra.Encoder."></a>
+                        <a href="JsonEntitiesFromEncodersAndDecoders.html" title="Interpreter for algebra.JsonEntities that decodes JSON entities with a algebra.Decoder and encodes JSON entities with an algebra.Encoder.">JsonEntitiesFromEncodersAndDecoders</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="JsonEntitiesFromSchemas.html" title="Interpreter for algebra.JsonEntitiesFromSchemas that decodes JSON requests and encodes JSON responses."></a>
+                        <a href="JsonEntitiesFromSchemas.html" title="Interpreter for algebra.JsonEntitiesFromSchemas that decodes JSON requests and encodes JSON responses.">JsonEntitiesFromSchemas</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
                         <a class="trait" href="LowLevelEndpoints.html" title=""></a>
@@ -235,7 +227,7 @@
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Interpreter for <a href="../../algebra/Endpoints.html" class="extype" name="endpoints.algebra.Endpoints">algebra.Endpoints</a> that performs routing using Play framework.</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/julienrf/endpoints/blob/v0.12.0/play/server/src/main/scala/endpoints/play/server/Endpoints.scala" target="_blank">Endpoints.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Interpreter for <a href="../../algebra/Endpoints.html" class="extype" name="endpoints.algebra.Endpoints">algebra.Endpoints</a> that performs routing using Play framework.</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/julienrf/endpoints/blob/v0.13.0/play/server/src/main/scala/endpoints/play/server/Endpoints.scala" target="_blank">Endpoints.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -244,12 +236,12 @@
             <span class="toggle">
               Known Subclasses
             </span>
-            <div class="subClasses hiddenContent"><a href="Assets.html" class="extype" name="endpoints.play.server.Assets">Assets</a>, <a href="BasicAuthentication.html" class="extype" name="endpoints.play.server.BasicAuthentication">BasicAuthentication</a>, <a href="Endpoints.html" class="extype" name="endpoints.play.server.Endpoints">Endpoints</a>, <a href="JsonEntitiesFromCodec.html" class="extype" name="endpoints.play.server.JsonEntitiesFromCodec">JsonEntitiesFromCodec</a>, <a href="LowLevelEndpoints.html" class="extype" name="endpoints.play.server.LowLevelEndpoints">LowLevelEndpoints</a>, <a href="MuxEndpoints.html" class="extype" name="endpoints.play.server.MuxEndpoints">MuxEndpoints</a>, <a href="circe/JsonEntities.html" class="extype" name="endpoints.play.server.circe.JsonEntities">JsonEntities</a>, <a href="circe/JsonEntitiesFromCodec.html" class="extype" name="endpoints.play.server.circe.JsonEntitiesFromCodec">JsonEntitiesFromCodec</a>, <a href="circe/JsonSchemaEntities.html" class="extype" name="endpoints.play.server.circe.JsonSchemaEntities">JsonSchemaEntities</a>, <a href="playjson/JsonSchemaEntities.html" class="extype" name="endpoints.play.server.playjson.JsonSchemaEntities">JsonSchemaEntities</a></div>
+            <div class="subClasses hiddenContent"><a href="Assets.html" class="extype" name="endpoints.play.server.Assets">Assets</a>, <a href="BasicAuthentication.html" class="extype" name="endpoints.play.server.BasicAuthentication">BasicAuthentication</a>, <a href="Endpoints.html" class="extype" name="endpoints.play.server.Endpoints">Endpoints</a>, <a href="JsonEntitiesFromCodecs.html" class="extype" name="endpoints.play.server.JsonEntitiesFromCodecs">JsonEntitiesFromCodecs</a>, <a href="JsonEntitiesFromEncodersAndDecoders.html" class="extype" name="endpoints.play.server.JsonEntitiesFromEncodersAndDecoders">JsonEntitiesFromEncodersAndDecoders</a>, <a href="JsonEntitiesFromSchemas.html" class="extype" name="endpoints.play.server.JsonEntitiesFromSchemas">JsonEntitiesFromSchemas</a>, <a href="LowLevelEndpoints.html" class="extype" name="endpoints.play.server.LowLevelEndpoints">LowLevelEndpoints</a>, <a href="MuxEndpoints.html" class="extype" name="endpoints.play.server.MuxEndpoints">MuxEndpoints</a>, <a href="circe/JsonEntities.html" class="extype" name="endpoints.play.server.circe.JsonEntities">JsonEntities</a>, <a href="circe/JsonEntitiesFromCodecs.html" class="extype" name="endpoints.play.server.circe.JsonEntitiesFromCodecs">JsonEntitiesFromCodecs</a></div>
           </div><div class="toggleContainer block diagram-container" id="inheritance-diagram-container">
                 <span class="toggle diagram-link">
                   Type Hierarchy
                 </span>
-                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph1" viewBox="0.00 0.00 1009.50 155.00" height="155pt" width="1010pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 151)" class="graph" id="page0,1_graph0"><polygon points="-4,4 -4,-151 1005.5,-151 1005.5,4 -4,4" stroke="transparent" fill="#ffffff"></polygon><g class="cluster" id="clust1"></g><g class="cluster" id="clust2"></g><!-- node0 --><g class="node this trait" id="graph1_0"><g id="a_this trait|graph1_0"><a xlink:title="endpoints.play.server.EndpointsWithCustomErrors (this trait)" xlink:href="#inheritance-diagram"><path d="M527.1667,-86C527.1667,-86 380.8333,-86 380.8333,-86 376.6667,-86 372.5,-81.8333 372.5,-77.6667 372.5,-77.6667 372.5,-69.3333 372.5,-69.3333 372.5,-65.1667 376.6667,-61 380.8333,-61 380.8333,-61 527.1667,-61 527.1667,-61 531.3333,-61 535.5,-65.1667 535.5,-69.3333 535.5,-69.3333 535.5,-77.6667 535.5,-77.6667 535.5,-81.8333 531.3333,-86 527.1667,-86" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-80.5" x="383" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-71.1" x="404" text-anchor="start">EndpointsWithCustomErrors</text></a></g></g><!-- node1 --><g class="node trait" id="graph1_1"><g id="a_trait|graph1_1"><a xlink:title="endpoints.play.server.Assets" xlink:href="Assets.html#inheritance-diagram"><path d="M63.6667,-25C63.6667,-25 8.3333,-25 8.3333,-25 4.1667,-25 0,-20.8333 0,-16.6667 0,-16.6667 0,-8.3333 0,-8.3333 0,-4.1667 4.1667,0 8.3333,0 8.3333,0 63.6667,0 63.6667,0 67.8333,0 72,-4.1667 72,-8.3333 72,-8.3333 72,-16.6667 72,-16.6667 72,-20.8333 67.8333,-25 63.6667,-25" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-19.5" x="10" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="31" text-anchor="start">Assets</text></a></g></g><!-- node0&#45;&gt;node1 --><g class="edge inheritance" id="graph1_0_1"><g id="a_inheritance|graph1_0_1"><a xlink:title="Assets is a subtype of EndpointsWithCustomErrors"><path d="M365.0889,-65.5169C289.1506,-57.8472 177.2531,-44.5239 81,-25 78.1393,-24.4197 75.1932,-23.7555 72.2424,-23.0423" stroke="#d4d4d4" fill="none"></path><polygon points="365.1144,-67.9816 372.3237,-66.2414 365.6028,-63.106 365.1144,-67.9816" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node2 --><g class="node trait" id="graph1_2"><g id="a_trait|graph1_2"><a xlink:title="endpoints.play.server.BasicAuthentication" xlink:href="BasicAuthentication.html#inheritance-diagram"><path d="M209.6667,-25C209.6667,-25 98.3333,-25 98.3333,-25 94.1667,-25 90,-20.8333 90,-16.6667 90,-16.6667 90,-8.3333 90,-8.3333 90,-4.1667 94.1667,0 98.3333,0 98.3333,0 209.6667,0 209.6667,0 213.8333,0 218,-4.1667 218,-8.3333 218,-8.3333 218,-16.6667 218,-16.6667 218,-20.8333 213.8333,-25 209.6667,-25" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-19.5" x="100" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="121" text-anchor="start">BasicAuthentication</text></a></g></g><!-- node0&#45;&gt;node2 --><g class="edge inheritance" id="graph1_0_2"><g id="a_inheritance|graph1_0_2"><a xlink:title="BasicAuthentication is a subtype of EndpointsWithCustomErrors"><path d="M385.1187,-59.4941C334.0369,-49.1075 265.0047,-35.071 215.7163,-25.049" stroke="#d4d4d4" fill="none"></path><polygon points="384.8557,-61.9407 392.2036,-60.9347 385.8321,-57.139 384.8557,-61.9407" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node3 --><g class="node trait" id="graph1_3"><g id="a_trait|graph1_3"><a xlink:title="endpoints.play.server.Endpoints" xlink:href="Endpoints.html#inheritance-diagram"><path d="M313.6667,-25C313.6667,-25 244.3333,-25 244.3333,-25 240.1667,-25 236,-20.8333 236,-16.6667 236,-16.6667 236,-8.3333 236,-8.3333 236,-4.1667 240.1667,0 244.3333,0 244.3333,0 313.6667,0 313.6667,0 317.8333,0 322,-4.1667 322,-8.3333 322,-8.3333 322,-16.6667 322,-16.6667 322,-20.8333 317.8333,-25 313.6667,-25" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-19.5" x="246" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="267" text-anchor="start">Endpoints</text></a></g></g><!-- node0&#45;&gt;node3 --><g class="edge inheritance" id="graph1_0_3"><g id="a_inheritance|graph1_0_3"><a xlink:title="Endpoints is a subtype of EndpointsWithCustomErrors"><path d="M410.8337,-58.4534C381.3436,-48.174 342.7225,-34.7118 314.9139,-25.0185" stroke="#d4d4d4" fill="none"></path><polygon points="410.3235,-60.8701 417.7399,-60.8608 411.9364,-56.2432 410.3235,-60.8701" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node4 --><g class="node trait" id="graph1_4"><g id="a_trait|graph1_4"><a xlink:title="endpoints.play.server.circe.JsonEntities" xlink:href="circe/JsonEntities.html#inheritance-diagram"><path d="M425.1667,-25C425.1667,-25 348.8333,-25 348.8333,-25 344.6667,-25 340.5,-20.8333 340.5,-16.6667 340.5,-16.6667 340.5,-8.3333 340.5,-8.3333 340.5,-4.1667 344.6667,0 348.8333,0 348.8333,0 425.1667,0 425.1667,0 429.3333,0 433.5,-4.1667 433.5,-8.3333 433.5,-8.3333 433.5,-16.6667 433.5,-16.6667 433.5,-20.8333 429.3333,-25 425.1667,-25" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-19.5" x="351" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="372" text-anchor="start">JsonEntities</text></a></g></g><!-- node0&#45;&gt;node4 --><g class="edge inheritance" id="graph1_0_4"><g id="a_inheritance|graph1_0_4"><a xlink:title="JsonEntities is a subtype of EndpointsWithCustomErrors"><path d="M434.7134,-55.9406C423.8965,-46.0923 410.6525,-34.0343 400.8647,-25.123" stroke="#d4d4d4" fill="none"></path><polygon points="433.292,-57.9598 440.1176,-60.8608 436.5909,-54.3365 433.292,-57.9598" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node5 --><g class="node trait" id="graph1_5"><g id="a_trait|graph1_5"><a xlink:title="endpoints.play.server.JsonEntitiesFromCodec" xlink:href="JsonEntitiesFromCodec.html#inheritance-diagram"><path d="M583.6667,-25C583.6667,-25 460.3333,-25 460.3333,-25 456.1667,-25 452,-20.8333 452,-16.6667 452,-16.6667 452,-8.3333 452,-8.3333 452,-4.1667 456.1667,0 460.3333,0 460.3333,0 583.6667,0 583.6667,0 587.8333,0 592,-4.1667 592,-8.3333 592,-8.3333 592,-16.6667 592,-16.6667 592,-20.8333 587.8333,-25 583.6667,-25" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-19.5" x="462" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="483" text-anchor="start">JsonEntitiesFromCodec</text></a></g></g><!-- node0&#45;&gt;node5 --><g class="edge inheritance" id="graph1_0_5"><g id="a_inheritance|graph1_0_5"><a xlink:title="JsonEntitiesFromCodec is a subtype of EndpointsWithCustomErrors"><path d="M473.5744,-55.9406C484.5528,-46.0923 497.9945,-34.0343 507.9284,-25.123" stroke="#d4d4d4" fill="none"></path><polygon points="471.6643,-54.3627 468.0896,-60.8608 474.9363,-58.0102 471.6643,-54.3627" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node6 --><g class="node trait" id="graph1_6"><g id="a_trait|graph1_6"><a xlink:title="endpoints.play.server.circe.JsonSchemaEntities" xlink:href="circe/JsonSchemaEntities.html#inheritance-diagram"><path d="M727.6667,-25C727.6667,-25 618.3333,-25 618.3333,-25 614.1667,-25 610,-20.8333 610,-16.6667 610,-16.6667 610,-8.3333 610,-8.3333 610,-4.1667 614.1667,0 618.3333,0 618.3333,0 727.6667,0 727.6667,0 731.8333,0 736,-4.1667 736,-8.3333 736,-8.3333 736,-16.6667 736,-16.6667 736,-20.8333 731.8333,-25 727.6667,-25" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-19.5" x="620" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="641" text-anchor="start">JsonSchemaEntities</text></a></g></g><!-- node0&#45;&gt;node6 --><g class="edge inheritance" id="graph1_0_6"><g id="a_inheritance|graph1_0_6"><a xlink:title="JsonSchemaEntities is a subtype of EndpointsWithCustomErrors"><path d="M505.8927,-59.0459C543.0129,-48.7065 592.4816,-34.9275 627.9471,-25.049" stroke="#d4d4d4" fill="none"></path><polygon points="505.1973,-56.6962 499.1114,-60.9347 506.5121,-61.4165 505.1973,-56.6962" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node7 --><g class="node trait" id="graph1_7"><g id="a_trait|graph1_7"><a xlink:title="endpoints.play.server.playjson.JsonSchemaEntities" xlink:href="playjson/JsonSchemaEntities.html#inheritance-diagram"><path d="M871.6667,-25C871.6667,-25 762.3333,-25 762.3333,-25 758.1667,-25 754,-20.8333 754,-16.6667 754,-16.6667 754,-8.3333 754,-8.3333 754,-4.1667 758.1667,0 762.3333,0 762.3333,0 871.6667,0 871.6667,0 875.8333,0 880,-4.1667 880,-8.3333 880,-8.3333 880,-16.6667 880,-16.6667 880,-20.8333 875.8333,-25 871.6667,-25" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-19.5" x="764" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="785" text-anchor="start">JsonSchemaEntities</text></a></g></g><!-- node0&#45;&gt;node7 --><g class="edge inheritance" id="graph1_0_7"><g id="a_inheritance|graph1_0_7"><a xlink:title="JsonSchemaEntities is a subtype of EndpointsWithCustomErrors"><path d="M536.9924,-59.8208C595.2221,-50.1857 674.8889,-36.9285 745,-25 747.8767,-24.5106 750.8176,-24.0082 753.7881,-23.4991" stroke="#d4d4d4" fill="none"></path><polygon points="536.5059,-57.4179 529.9996,-60.9775 537.3056,-62.2522 536.5059,-57.4179" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node8 --><g class="node trait" id="graph1_8"><g id="a_trait|graph1_8"><a xlink:title="endpoints.play.server.MuxEndpoints" xlink:href="MuxEndpoints.html#inheritance-diagram"><path d="M993.1667,-25C993.1667,-25 906.8333,-25 906.8333,-25 902.6667,-25 898.5,-20.8333 898.5,-16.6667 898.5,-16.6667 898.5,-8.3333 898.5,-8.3333 898.5,-4.1667 902.6667,0 906.8333,0 906.8333,0 993.1667,0 993.1667,0 997.3333,0 1001.5,-4.1667 1001.5,-8.3333 1001.5,-8.3333 1001.5,-16.6667 1001.5,-16.6667 1001.5,-20.8333 997.3333,-25 993.1667,-25" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-19.5" x="909" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="930" text-anchor="start">MuxEndpoints</text></a></g></g><!-- node0&#45;&gt;node8 --><g class="edge inheritance" id="graph1_0_8"><g id="a_inheritance|graph1_0_8"><a xlink:title="MuxEndpoints is a subtype of EndpointsWithCustomErrors"><path d="M542.719,-65.994C630.8502,-57.9774 769.6968,-43.8344 889,-25 892.0966,-24.5111 895.2745,-23.9726 898.4754,-23.402" stroke="#d4d4d4" fill="none"></path><polygon points="542.4226,-63.5608 535.6719,-66.6318 542.8643,-68.4408 542.4226,-63.5608" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node9 --><g class="node trait" id="graph1_9"><g id="a_trait|graph1_9"><a xlink:title="endpoints.algebra.EndpointsWithCustomErrors" xlink:href="../../algebra/EndpointsWithCustomErrors.html#inheritance-diagram"><path d="M352.6667,-147C352.6667,-147 171.3333,-147 171.3333,-147 167.1667,-147 163,-142.8333 163,-138.6667 163,-138.6667 163,-130.3333 163,-130.3333 163,-126.1667 167.1667,-122 171.3333,-122 171.3333,-122 352.6667,-122 352.6667,-122 356.8333,-122 361,-126.1667 361,-130.3333 361,-130.3333 361,-138.6667 361,-138.6667 361,-142.8333 356.8333,-147 352.6667,-147" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-141.5" x="173" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-132.1" x="194" text-anchor="start">algebra.EndpointsWithCustomErrors</text></a></g></g><!-- node9&#45;&gt;node0 --><g class="edge inheritance" id="graph1_9_0"><g id="a_inheritance|graph1_9_0"><a xlink:title="EndpointsWithCustomErrors is a subtype of algebra.EndpointsWithCustomErrors"><path d="M308.5427,-119.713C340.9985,-109.4015 383.8299,-95.7936 414.5974,-86.0185" stroke="#d4d4d4" fill="none"></path><polygon points="307.7121,-117.4061 301.7825,-121.8608 309.1958,-122.0761 307.7121,-117.4061" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node10 --><g class="node trait" id="graph1_10"><g id="a_trait|graph1_10"><a xlink:title="endpoints.play.server.Urls" xlink:href="Urls.html#inheritance-diagram"><path d="M432.1667,-147C432.1667,-147 387.8333,-147 387.8333,-147 383.6667,-147 379.5,-142.8333 379.5,-138.6667 379.5,-138.6667 379.5,-130.3333 379.5,-130.3333 379.5,-126.1667 383.6667,-122 387.8333,-122 387.8333,-122 432.1667,-122 432.1667,-122 436.3333,-122 440.5,-126.1667 440.5,-130.3333 440.5,-130.3333 440.5,-138.6667 440.5,-138.6667 440.5,-142.8333 436.3333,-147 432.1667,-147" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-141.5" x="390" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-132.1" x="411" text-anchor="start">Urls</text></a></g></g><!-- node10&#45;&gt;node0 --><g class="edge inheritance" id="graph1_10_0"><g id="a_inheritance|graph1_10_0"><a xlink:title="EndpointsWithCustomErrors is a subtype of Urls"><path d="M423.2559,-116.1225C430.2465,-106.431 438.6439,-94.7891 444.8949,-86.123" stroke="#d4d4d4" fill="none"></path><polygon points="421.2249,-114.7503 419.1168,-121.8608 425.1989,-117.6168 421.2249,-114.7503" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node11 --><g class="node trait" id="graph1_11"><g id="a_trait|graph1_11"><a xlink:title="endpoints.play.server.Methods" xlink:href="Methods.html#inheritance-diagram"><path d="M530.6667,-147C530.6667,-147 467.3333,-147 467.3333,-147 463.1667,-147 459,-142.8333 459,-138.6667 459,-138.6667 459,-130.3333 459,-130.3333 459,-126.1667 463.1667,-122 467.3333,-122 467.3333,-122 530.6667,-122 530.6667,-122 534.8333,-122 539,-126.1667 539,-130.3333 539,-130.3333 539,-138.6667 539,-138.6667 539,-142.8333 534.8333,-147 530.6667,-147" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-141.5" x="469" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-132.1" x="490" text-anchor="start">Methods</text></a></g></g><!-- node11&#45;&gt;node0 --><g class="edge inheritance" id="graph1_11_0"><g id="a_inheritance|graph1_11_0"><a xlink:title="EndpointsWithCustomErrors is a subtype of Methods"><path d="M485.4428,-116.1225C478.2933,-106.431 469.7051,-94.7891 463.3121,-86.123" stroke="#d4d4d4" fill="none"></path><polygon points="483.5488,-117.6821 489.676,-121.8608 487.492,-114.7732 483.5488,-117.6821" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node12 --><g class="node trait" id="graph1_12"><g id="a_trait|graph1_12"><a xlink:title="endpoints.play.server.StatusCodes" xlink:href="StatusCodes.html#inheritance-diagram"><path d="M646.1667,-147C646.1667,-147 565.8333,-147 565.8333,-147 561.6667,-147 557.5,-142.8333 557.5,-138.6667 557.5,-138.6667 557.5,-130.3333 557.5,-130.3333 557.5,-126.1667 561.6667,-122 565.8333,-122 565.8333,-122 646.1667,-122 646.1667,-122 650.3333,-122 654.5,-126.1667 654.5,-130.3333 654.5,-130.3333 654.5,-138.6667 654.5,-138.6667 654.5,-142.8333 650.3333,-147 646.1667,-147" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-141.5" x="568" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-132.1" x="589" text-anchor="start">StatusCodes</text></a></g></g><!-- node12&#45;&gt;node0 --><g class="edge inheritance" id="graph1_12_0"><g id="a_inheritance|graph1_12_0"><a xlink:title="EndpointsWithCustomErrors is a subtype of StatusCodes"><path d="M567.8568,-119.1925C542.3272,-108.9471 509.1437,-95.63 485.1938,-86.0185" stroke="#d4d4d4" fill="none"></path><polygon points="567.0966,-121.5273 574.5055,-121.8608 568.9216,-116.9799 567.0966,-121.5273" stroke="#d4d4d4" fill="none"></polygon></a></g></g></g></svg></div>
+                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph1" viewBox="0.00 0.00 983.50 155.00" height="155pt" width="984pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 151)" class="graph" id="graph0"><polygon points="-4,4 -4,-151 979.5,-151 979.5,4 -4,4" stroke="none" fill="white"></polygon><g class="cluster" id="clust1"></g><g class="cluster" id="clust2"></g><!-- node0 --><g class="node this trait" id="graph1_0"><g id="a_this trait|graph1_0"><a xlink:title="endpoints.play.server.EndpointsWithCustomErrors (this trait)" xlink:href="#inheritance-diagram"><path d="M475.667,-86C475.667,-86 328.333,-86 328.333,-86 324.167,-86 320,-81.8333 320,-77.6667 320,-77.6667 320,-69.3333 320,-69.3333 320,-65.1667 324.167,-61 328.333,-61 328.333,-61 475.667,-61 475.667,-61 479.833,-61 484,-65.1667 484,-69.3333 484,-69.3333 484,-77.6667 484,-77.6667 484,-81.8333 479.833,-86 475.667,-86" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-80.5" x="330" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-71.1" x="351" text-anchor="start">EndpointsWithCustomErrors</text></a></g></g><!-- node1 --><g class="node trait" id="graph1_1"><g id="a_trait|graph1_1"><a xlink:title="endpoints.play.server.Assets" xlink:href="Assets.html#inheritance-diagram"><path d="M65.6667,-25C65.6667,-25 8.33333,-25 8.33333,-25 4.16667,-25 0,-20.8333 0,-16.6667 0,-16.6667 0,-8.33333 0,-8.33333 0,-4.16667 4.16667,-0 8.33333,-0 8.33333,-0 65.6667,-0 65.6667,-0 69.8333,-0 74,-4.16667 74,-8.33333 74,-8.33333 74,-16.6667 74,-16.6667 74,-20.8333 69.8333,-25 65.6667,-25" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-19.5" x="10" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="31" text-anchor="start">Assets</text></a></g></g><!-- node0&#45;&gt;node1 --><g class="edge inheritance" id="graph1_0_1"><g id="a_inheritance|graph1_0_1"><a xlink:title="Assets is a subtype of EndpointsWithCustomErrors"><path d="M312.359,-61.5205C248.206,-53.087 159.938,-40.3077 83,-25 80.0935,-24.4217 77.0948,-23.7787 74.0872,-23.1005" stroke="#d4d4d4" fill="none"></path><polygon points="312.409,-63.9977 319.667,-62.4761 313.044,-59.1391 312.409,-63.9977" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node2 --><g class="node trait" id="graph1_2"><g id="a_trait|graph1_2"><a xlink:title="endpoints.play.server.BasicAuthentication" xlink:href="BasicAuthentication.html#inheritance-diagram"><path d="M211.667,-25C211.667,-25 100.333,-25 100.333,-25 96.1667,-25 92,-20.8333 92,-16.6667 92,-16.6667 92,-8.33333 92,-8.33333 92,-4.16667 96.1667,-0 100.333,-0 100.333,-0 211.667,-0 211.667,-0 215.833,-0 220,-4.16667 220,-8.33333 220,-8.33333 220,-16.6667 220,-16.6667 220,-20.8333 215.833,-25 211.667,-25" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-19.5" x="102" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="123" text-anchor="start">BasicAuthentication</text></a></g></g><!-- node0&#45;&gt;node2 --><g class="edge inheritance" id="graph1_0_2"><g id="a_inheritance|graph1_0_2"><a xlink:title="BasicAuthentication is a subtype of EndpointsWithCustomErrors"><path d="M346.989,-59.3062C304.172,-49.0372 245.328,-34.9243 204.314,-25.0875" stroke="#d4d4d4" fill="none"></path><polygon points="346.606,-61.7339 353.985,-60.9841 347.749,-56.9691 346.606,-61.7339" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node3 --><g class="node trait" id="graph1_3"><g id="a_trait|graph1_3"><a xlink:title="endpoints.play.server.Endpoints" xlink:href="Endpoints.html#inheritance-diagram"><path d="M317.167,-25C317.167,-25 246.833,-25 246.833,-25 242.667,-25 238.5,-20.8333 238.5,-16.6667 238.5,-16.6667 238.5,-8.33333 238.5,-8.33333 238.5,-4.16667 242.667,-0 246.833,-0 246.833,-0 317.167,-0 317.167,-0 321.333,-0 325.5,-4.16667 325.5,-8.33333 325.5,-8.33333 325.5,-16.6667 325.5,-16.6667 325.5,-20.8333 321.333,-25 317.167,-25" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-19.5" x="249" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="270" text-anchor="start">Endpoints</text></a></g></g><!-- node0&#45;&gt;node3 --><g class="edge inheritance" id="graph1_0_3"><g id="a_inheritance|graph1_0_3"><a xlink:title="Endpoints is a subtype of EndpointsWithCustomErrors"><path d="M372.164,-57.8308C351.669,-47.7538 324.826,-34.5561 305.773,-25.1884" stroke="#d4d4d4" fill="none"></path><polygon points="371.215,-60.0942 378.578,-60.9841 373.377,-55.6969 371.215,-60.0942" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node4 --><g class="node trait" id="graph1_4"><g id="a_trait|graph1_4"><a xlink:title="endpoints.play.server.circe.JsonEntities" xlink:href="circe/JsonEntities.html#inheritance-diagram"><path d="M452.167,-25C452.167,-25 351.833,-25 351.833,-25 347.667,-25 343.5,-20.8333 343.5,-16.6667 343.5,-16.6667 343.5,-8.33333 343.5,-8.33333 343.5,-4.16667 347.667,-0 351.833,-0 351.833,-0 452.167,-0 452.167,-0 456.333,-0 460.5,-4.16667 460.5,-8.33333 460.5,-8.33333 460.5,-16.6667 460.5,-16.6667 460.5,-20.8333 456.333,-25 452.167,-25" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-19.5" x="354" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="375" text-anchor="start">circe.JsonEntities</text></a></g></g><!-- node0&#45;&gt;node4 --><g class="edge inheritance" id="graph1_0_4"><g id="a_inheritance|graph1_0_4"><a xlink:title="circe.JsonEntities is a subtype of EndpointsWithCustomErrors"><path d="M402,-53.7603C402,-44.3675 402,-33.2882 402,-25.1323" stroke="#d4d4d4" fill="none"></path><polygon points="399.55,-53.8435 402,-60.8435 404.45,-53.8435 399.55,-53.8435" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node5 --><g class="node trait" id="graph1_5"><g id="a_trait|graph1_5"><a xlink:title="endpoints.play.server.JsonEntitiesFromCodecs" xlink:href="JsonEntitiesFromCodecs.html#inheritance-diagram"><path d="M617.167,-25C617.167,-25 486.833,-25 486.833,-25 482.667,-25 478.5,-20.8333 478.5,-16.6667 478.5,-16.6667 478.5,-8.33333 478.5,-8.33333 478.5,-4.16667 482.667,-0 486.833,-0 486.833,-0 617.167,-0 617.167,-0 621.333,-0 625.5,-4.16667 625.5,-8.33333 625.5,-8.33333 625.5,-16.6667 625.5,-16.6667 625.5,-20.8333 621.333,-25 617.167,-25" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-19.5" x="489" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="510" text-anchor="start">JsonEntitiesFromCodecs</text></a></g></g><!-- node0&#45;&gt;node5 --><g class="edge inheritance" id="graph1_0_5"><g id="a_inheritance|graph1_0_5"><a xlink:title="JsonEntitiesFromCodecs is a subtype of EndpointsWithCustomErrors"><path d="M437.993,-58.3426C463.86,-48.1683 498.305,-34.62 522.54,-25.0875" stroke="#d4d4d4" fill="none"></path><polygon points="436.895,-56.1419 431.278,-60.9841 438.689,-60.7018 436.895,-56.1419" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node6 --><g class="node trait" id="graph1_6"><g id="a_trait|graph1_6"><a xlink:title="endpoints.play.server.JsonEntitiesFromEncodersAndDecoders" xlink:href="JsonEntitiesFromEncodersAndDecoders.html#inheritance-diagram"><path d="M846.167,-25C846.167,-25 651.833,-25 651.833,-25 647.667,-25 643.5,-20.8333 643.5,-16.6667 643.5,-16.6667 643.5,-8.33333 643.5,-8.33333 643.5,-4.16667 647.667,-0 651.833,-0 651.833,-0 846.167,-0 846.167,-0 850.333,-0 854.5,-4.16667 854.5,-8.33333 854.5,-8.33333 854.5,-16.6667 854.5,-16.6667 854.5,-20.8333 850.333,-25 846.167,-25" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-19.5" x="654" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="675" text-anchor="start">JsonEntitiesFromEncodersAndDecoders</text></a></g></g><!-- node0&#45;&gt;node6 --><g class="edge inheritance" id="graph1_0_6"><g id="a_inheritance|graph1_0_6"><a xlink:title="JsonEntitiesFromEncodersAndDecoders is a subtype of EndpointsWithCustomErrors"><path d="M476.639,-59.8093C537.361,-49.4848 622.331,-35.0374 681.146,-25.0371" stroke="#d4d4d4" fill="none"></path><polygon points="476.219,-57.3954 469.729,-60.9841 477.041,-62.226 476.219,-57.3954" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node7 --><g class="node trait" id="graph1_7"><g id="a_trait|graph1_7"><a xlink:title="endpoints.play.server.MuxEndpoints" xlink:href="MuxEndpoints.html#inheritance-diagram"><path d="M967.167,-25C967.167,-25 880.833,-25 880.833,-25 876.667,-25 872.5,-20.8333 872.5,-16.6667 872.5,-16.6667 872.5,-8.33333 872.5,-8.33333 872.5,-4.16667 876.667,-0 880.833,-0 880.833,-0 967.167,-0 967.167,-0 971.333,-0 975.5,-4.16667 975.5,-8.33333 975.5,-8.33333 975.5,-16.6667 975.5,-16.6667 975.5,-20.8333 971.333,-25 967.167,-25" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-19.5" x="883" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="904" text-anchor="start">MuxEndpoints</text></a></g></g><!-- node0&#45;&gt;node7 --><g class="edge inheritance" id="graph1_0_7"><g id="a_inheritance|graph1_0_7"><a xlink:title="MuxEndpoints is a subtype of EndpointsWithCustomErrors"><path d="M491.224,-65.6415C584.484,-57.9315 734.937,-43.9666 864,-25 866.728,-24.5991 869.521,-24.1609 872.338,-23.6973" stroke="#d4d4d4" fill="none"></path><polygon points="490.829,-63.2156 484.053,-66.2313 491.23,-68.0991 490.829,-63.2156" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node8 --><g class="node trait" id="graph1_8"><g id="a_trait|graph1_8"><a xlink:title="endpoints.algebra.EndpointsWithCustomErrors" xlink:href="../../algebra/EndpointsWithCustomErrors.html#inheritance-diagram"><path d="M299.167,-147C299.167,-147 116.833,-147 116.833,-147 112.667,-147 108.5,-142.833 108.5,-138.667 108.5,-138.667 108.5,-130.333 108.5,-130.333 108.5,-126.167 112.667,-122 116.833,-122 116.833,-122 299.167,-122 299.167,-122 303.333,-122 307.5,-126.167 307.5,-130.333 307.5,-130.333 307.5,-138.667 307.5,-138.667 307.5,-142.833 303.333,-147 299.167,-147" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-141.5" x="119" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-132.1" x="140" text-anchor="start">algebra.EndpointsWithCustomErrors</text></a></g></g><!-- node8&#45;&gt;node0 --><g class="edge inheritance" id="graph1_8_0"><g id="a_inheritance|graph1_8_0"><a xlink:title="EndpointsWithCustomErrors is a subtype of algebra.EndpointsWithCustomErrors"><path d="M252.853,-119.859C286.486,-109.631 332.021,-95.7823 363.899,-86.0875" stroke="#d4d4d4" fill="none"></path><polygon points="251.85,-117.603 245.866,-121.984 253.276,-122.291 251.85,-117.603" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node9 --><g class="node trait" id="graph1_9"><g id="a_trait|graph1_9"><a xlink:title="endpoints.play.server.Urls" xlink:href="Urls.html#inheritance-diagram"><path d="M379.667,-147C379.667,-147 334.333,-147 334.333,-147 330.167,-147 326,-142.833 326,-138.667 326,-138.667 326,-130.333 326,-130.333 326,-126.167 330.167,-122 334.333,-122 334.333,-122 379.667,-122 379.667,-122 383.833,-122 388,-126.167 388,-130.333 388,-130.333 388,-138.667 388,-138.667 388,-142.833 383.833,-147 379.667,-147" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-141.5" x="336" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-132.1" x="357" text-anchor="start">Urls</text></a></g></g><!-- node9&#45;&gt;node0 --><g class="edge inheritance" id="graph1_9_0"><g id="a_inheritance|graph1_9_0"><a xlink:title="EndpointsWithCustomErrors is a subtype of Urls"><path d="M370.239,-116.142C377.615,-106.472 386.599,-94.6919 393.128,-86.1323" stroke="#d4d4d4" fill="none"></path><polygon points="368.188,-114.792 365.891,-121.843 372.084,-117.763 368.188,-114.792" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node10 --><g class="node trait" id="graph1_10"><g id="a_trait|graph1_10"><a xlink:title="endpoints.play.server.Methods" xlink:href="Methods.html#inheritance-diagram"><path d="M479.167,-147C479.167,-147 414.833,-147 414.833,-147 410.667,-147 406.5,-142.833 406.5,-138.667 406.5,-138.667 406.5,-130.333 406.5,-130.333 406.5,-126.167 410.667,-122 414.833,-122 414.833,-122 479.167,-122 479.167,-122 483.333,-122 487.5,-126.167 487.5,-130.333 487.5,-130.333 487.5,-138.667 487.5,-138.667 487.5,-142.833 483.333,-147 479.167,-147" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-141.5" x="417" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-132.1" x="438" text-anchor="start">Methods</text></a></g></g><!-- node10&#45;&gt;node0 --><g class="edge inheritance" id="graph1_10_0"><g id="a_inheritance|graph1_10_0"><a xlink:title="EndpointsWithCustomErrors is a subtype of Methods"><path d="M433.761,-116.142C426.385,-106.472 417.401,-94.6919 410.872,-86.1323" stroke="#d4d4d4" fill="none"></path><polygon points="431.916,-117.763 438.109,-121.843 435.812,-114.792 431.916,-117.763" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node11 --><g class="node trait" id="graph1_11"><g id="a_trait|graph1_11"><a xlink:title="endpoints.play.server.StatusCodes" xlink:href="StatusCodes.html#inheritance-diagram"><path d="M596.167,-147C596.167,-147 513.833,-147 513.833,-147 509.667,-147 505.5,-142.833 505.5,-138.667 505.5,-138.667 505.5,-130.333 505.5,-130.333 505.5,-126.167 509.667,-122 513.833,-122 513.833,-122 596.167,-122 596.167,-122 600.333,-122 604.5,-126.167 604.5,-130.333 604.5,-130.333 604.5,-138.667 604.5,-138.667 604.5,-142.833 600.333,-147 596.167,-147" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-141.5" x="516" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-132.1" x="537" text-anchor="start">StatusCodes</text></a></g></g><!-- node11&#45;&gt;node0 --><g class="edge inheritance" id="graph1_11_0"><g id="a_inheritance|graph1_11_0"><a xlink:title="EndpointsWithCustomErrors is a subtype of StatusCodes"><path d="M518.287,-119.343C491.902,-109.168 456.769,-95.62 432.049,-86.0875" stroke="#d4d4d4" fill="none"></path><polygon points="517.724,-121.751 525.137,-121.984 519.487,-117.18 517.724,-121.751" stroke="#d4d4d4" fill="none"></polygon></a></g></g></g></svg></div>
                 <div id="diagram-controls" class="hiddenContent">
                   <button id="diagram-zoom-out" class="diagram-btn"><i class="material-icons"></i></button>
                   <button id="diagram-zoom-in" class="diagram-btn"><i class="material-icons"></i></button>
@@ -271,7 +263,7 @@
           <div id="order">
             <span class="filtertype">Ordering</span>
             <ol>
-              
+              <li class="group out"><span>Grouped</span></li>
               <li class="alpha in"><span>Alphabetic</span></li>
               <li class="inherit out"><span>By Inheritance</span></li>
             </ol>
@@ -390,7 +382,7 @@
       </span>
       
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">summary</dt><dd class="cmt"><p>Short description</p></dd><dt class="param">description</dt><dd class="cmt"><p>Detailed description</p></dd><dt class="param">tags</dt><dd class="cmt"><p>OpenAPI tags</p></dd><dt class="param">callbacks</dt><dd class="cmt"><p>Callbacks indexed by event name</p></dd><dt class="param">deprecated</dt><dd class="cmt"><p>Indicates whether this endpoint is deprecated or not</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/EndpointsWithCustomErrors.html" class="extype" name="endpoints.algebra.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a></dd></dl></div>
-    </li><li name="endpoints.algebra.Responses.ResponseSyntax" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.algebra.Responses.ResponseSyntax" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="ResponseSyntax[A]extendsAnyRef"></a><a id="ResponseSyntax[A]:(Responses.this)#ResponseSyntax[A]"></a>
       <span class="permalink">
       <a href="../../../endpoints/algebra/Responses$ResponseSyntax.html" title="Permalink">
@@ -405,8 +397,9 @@
         <a title="Extension methods for Response." href="../../algebra/Responses$ResponseSyntax.html"><span class="name">ResponseSyntax</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="result"> extends <a href="../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
-      <p class="shortcomment cmt">Extension methods for <a href="../../algebra/Responses.html#Response[A]" class="extmbr" name="endpoints.algebra.Responses.Response">Response</a>.</p><div class="fullcomment"><div class="comment cmt"><p>Extension methods for <a href="../../algebra/Responses.html#Response[A]" class="extmbr" name="endpoints.algebra.Responses.Response">Response</a>.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd></dl></div>
-    </li><li name="endpoints.algebra.Urls.PathOps" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt">Extension methods for <a href="../../algebra/Responses.html#Response[A]" class="extmbr" name="endpoints.algebra.Responses.Response">Response</a>.</p><div class="fullcomment"><div class="comment cmt"><p>Extension methods for <a href="../../algebra/Responses.html#Response[A]" class="extmbr" name="endpoints.algebra.Responses.Response">Response</a>.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd></dl></div>
+    </li><li name="endpoints.algebra.Urls.PathOps" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="PathOps[A]extendsAnyRef"></a><a id="PathOps[A]:PathOps[A]"></a>
       <span class="permalink">
       <a href="../../../endpoints/algebra/Urls$PathOps.html" title="Permalink">
@@ -422,7 +415,7 @@
       </span>
       
       <p class="shortcomment cmt">Convenient methods for <a href="../../algebra/Urls.html#Path[A]&lt;:Urls.this.Url[A]" class="extmbr" name="endpoints.algebra.Urls.Path">Path</a>s.</p><div class="fullcomment"><div class="comment cmt"><p>Convenient methods for <a href="../../algebra/Urls.html#Path[A]&lt;:Urls.this.Url[A]" class="extmbr" name="endpoints.algebra.Urls.Path">Path</a>s.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
-    </li><li name="endpoints.algebra.Urls.QueryStringSyntax" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.algebra.Urls.QueryStringSyntax" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="QueryStringSyntax[A]extendsAnyRef"></a><a id="QueryStringSyntax[A]:QueryStringSyntax[A]"></a>
       <span class="permalink">
       <a href="../../../endpoints/algebra/Urls$QueryStringSyntax.html" title="Permalink">
@@ -453,8 +446,8 @@
         <span class="name">CallbacksDocs</span><span class="result alias"> = <a href="https://www.scala-lang.org/api/2.12.10/scala/collection/immutable/Map.html#scala.collection.immutable.Map" class="extype" name="scala.collection.immutable.Map">Map</a>[<span class="extype" name="scala.Predef.String">String</span>, <a href="#CallbackDocsextendsProductwithSerializable" class="extmbr" name="endpoints.algebra.EndpointsWithCustomErrors.CallbackDocs">CallbackDocs</a>]</span>
       </span>
       
-      <p class="shortcomment cmt">Callbacks indexed by URL pattern</p><div class="fullcomment"><div class="comment cmt"><p>Callbacks indexed by URL pattern</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/EndpointsWithCustomErrors.html" class="extype" name="endpoints.algebra.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a></dd><dt>See also</dt><dd><span class="cmt"><p><span class="extype" name="&quot;Swagger">Documentation&quot; https://swagger.io/docs/specification/callbacks/</span></p></span></dd></dl></div>
-    </li><li name="endpoints.algebra.Errors.ClientErrors" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt">Callbacks indexed by URL pattern</p><div class="fullcomment"><div class="comment cmt"><p>Callbacks indexed by URL pattern</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/EndpointsWithCustomErrors.html" class="extype" name="endpoints.algebra.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a></dd><dt>See also</dt><dd><span class="cmt"><p>Swagger Documentation at <a href="https://swagger.io/docs/specification/callbacks/" target="_blank">https://swagger.io/docs/specification/callbacks/</a></p></span></dd></dl></div>
+    </li><li name="endpoints.algebra.Errors.ClientErrors" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="types">
       <a id="ClientErrors"></a><a id="ClientErrors:ClientErrors"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#ClientErrors" title="Permalink">
@@ -519,7 +512,7 @@
       
       <p class="shortcomment cmt">An HTTP request.</p><div class="fullcomment"><div class="comment cmt"><p>An HTTP request.</p><p>Has an instance of <code>InvariantFunctor</code>.
 </p></div></div>
-    </li><li name="endpoints.play.server.EndpointsWithCustomErrors.RequestEntity" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.play.server.EndpointsWithCustomErrors.RequestEntity" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="types">
       <a id="RequestEntity[A]=play.api.mvc.BodyParser[A]"></a><a id="RequestEntity[A]:RequestEntity[A]"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#RequestEntity[A]=play.api.mvc.BodyParser[A]" title="Permalink">
@@ -531,7 +524,7 @@
         <span class="kind">type</span>
       </span>
       <span class="symbol">
-        <span class="name">RequestEntity</span><span class="tparams">[<span name="A">A</span>]</span><span class="result alias"> = <a href="https://www.playframework.com/documentation/2.7.3/api/scala/play/api/mvc/BodyParser.html#play.api.mvc.BodyParser" class="extype" name="play.api.mvc.BodyParser">BodyParser</a>[<span class="extype" name="endpoints.play.server.EndpointsWithCustomErrors.RequestEntity.A">A</span>]</span>
+        <span class="name">RequestEntity</span><span class="tparams">[<span name="A">A</span>]</span><span class="result alias"> = <a href="https://www.playframework.com/documentation/2.8.0/api/scala/play/api/mvc/BodyParser.html#play.api.mvc.BodyParser" class="extype" name="play.api.mvc.BodyParser">BodyParser</a>[<span class="extype" name="endpoints.play.server.EndpointsWithCustomErrors.RequestEntity.A">A</span>]</span>
       </span>
       
       <p class="shortcomment cmt">Decodes a request entity</p><div class="fullcomment"><div class="comment cmt"><p>Decodes a request entity</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.play.server.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a> → <a href="../../algebra/Requests.html" class="extype" name="endpoints.algebra.Requests">Requests</a></dd></dl></div>
@@ -547,12 +540,12 @@
         <span class="kind">type</span>
       </span>
       <span class="symbol">
-        <span class="name">RequestExtractor</span><span class="tparams">[<span name="A">A</span>]</span><span class="result alias"> = (<a href="https://www.playframework.com/documentation/2.7.3/api/scala/play/api/mvc/RequestHeader.html#play.api.mvc.RequestHeader" class="extype" name="play.api.mvc.RequestHeader">RequestHeader</a>) ⇒ <a href="https://www.scala-lang.org/api/2.12.10/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="endpoints.play.server.Urls.RequestExtractor.A">A</span>]</span>
+        <span class="name">RequestExtractor</span><span class="tparams">[<span name="A">A</span>]</span><span class="result alias"> = (<a href="https://www.playframework.com/documentation/2.8.0/api/scala/play/api/mvc/RequestHeader.html#play.api.mvc.RequestHeader" class="extype" name="play.api.mvc.RequestHeader">RequestHeader</a>) ⇒ <a href="https://www.scala-lang.org/api/2.12.10/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="endpoints.play.server.Urls.RequestExtractor.A">A</span>]</span>
       </span>
       
       <p class="shortcomment cmt">Convenient type alias modeling the extraction of an <code>A</code> information from request headers.</p><div class="fullcomment"><div class="comment cmt"><p>Convenient type alias modeling the extraction of an <code>A</code> information from request headers.</p><p>This type has an instance of <code>Applicative</code>.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Urls.html" class="extype" name="endpoints.play.server.Urls">Urls</a></dd></dl></div>
-    </li><li name="endpoints.play.server.EndpointsWithCustomErrors.RequestHeaders" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.play.server.EndpointsWithCustomErrors.RequestHeaders" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="types">
       <a id="RequestHeaders[A]=play.api.mvc.Headers=&gt;endpoints.Validated[A]"></a><a id="RequestHeaders[A]:RequestHeaders[A]"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#RequestHeaders[A]=play.api.mvc.Headers=&gt;endpoints.Validated[A]" title="Permalink">
@@ -564,14 +557,13 @@
         <span class="kind">type</span>
       </span>
       <span class="symbol">
-        <span class="name">RequestHeaders</span><span class="tparams">[<span name="A">A</span>]</span><span class="result alias"> = (<a href="https://www.playframework.com/documentation/2.7.3/api/scala/play/api/mvc/Headers.html#play.api.mvc.Headers" class="extype" name="play.api.mvc.Headers">Headers</a>) ⇒ <a href="../../Validated.html" class="extype" name="endpoints.Validated">Validated</a>[<span class="extype" name="endpoints.play.server.EndpointsWithCustomErrors.RequestHeaders.A">A</span>]</span>
+        <span class="name">RequestHeaders</span><span class="tparams">[<span name="A">A</span>]</span><span class="result alias"> = (<a href="https://www.playframework.com/documentation/2.8.0/api/scala/play/api/mvc/Headers.html#play.api.mvc.Headers" class="extype" name="play.api.mvc.Headers">Headers</a>) ⇒ <a href="../../Validated.html" class="extype" name="endpoints.Validated">Validated</a>[<span class="extype" name="endpoints.play.server.EndpointsWithCustomErrors.RequestHeaders.A">A</span>]</span>
       </span>
       
       <p class="shortcomment cmt">An attempt to extract an <code>A</code> from a request headers.</p><div class="fullcomment"><div class="comment cmt"><p>An attempt to extract an <code>A</code> from a request headers.</p><p>Models failure by returning a <code>Left(result)</code>. That makes it possible
 to early return an HTTP response if a header is wrong (e.g. if
-an authentication information is missing)
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.play.server.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a> → <a href="../../algebra/Requests.html" class="extype" name="endpoints.algebra.Requests">Requests</a></dd></dl></div>
-    </li><li name="endpoints.play.server.EndpointsWithCustomErrors.Response" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+an authentication information is missing)</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.play.server.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a> → <a href="../../algebra/Requests.html" class="extype" name="endpoints.algebra.Requests">Requests</a></dd></dl></div>
+    </li><li name="endpoints.play.server.EndpointsWithCustomErrors.Response" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="types">
       <a id="Response[A]=A=&gt;play.api.mvc.Result"></a><a id="Response[A]:Response[A]"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#Response[A]=A=&gt;play.api.mvc.Result" title="Permalink">
@@ -583,13 +575,11 @@ an authentication information is missing)
         <span class="kind">type</span>
       </span>
       <span class="symbol">
-        <span class="name">Response</span><span class="tparams">[<span name="A">A</span>]</span><span class="result alias"> = (<span class="extype" name="endpoints.play.server.EndpointsWithCustomErrors.Response.A">A</span>) ⇒ <a href="https://www.playframework.com/documentation/2.7.3/api/scala/play/api/mvc/Result.html#play.api.mvc.Result" class="extype" name="play.api.mvc.Result">Result</a></span>
+        <span class="name">Response</span><span class="tparams">[<span name="A">A</span>]</span><span class="result alias"> = (<span class="extype" name="endpoints.play.server.EndpointsWithCustomErrors.Response.A">A</span>) ⇒ <a href="https://www.playframework.com/documentation/2.8.0/api/scala/play/api/mvc/Result.html#play.api.mvc.Result" class="extype" name="play.api.mvc.Result">Result</a></span>
       </span>
       
-      <p class="shortcomment cmt">Turns the <code>A</code> information into a proper Play <code>Result</code>
-</p><div class="fullcomment"><div class="comment cmt"><p>Turns the <code>A</code> information into a proper Play <code>Result</code>
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.play.server.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a> → <a href="../../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd></dl></div>
-    </li><li name="endpoints.play.server.EndpointsWithCustomErrors.ResponseEntity" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt">Turns the <code>A</code> information into a proper Play <code>Result</code></p><div class="fullcomment"><div class="comment cmt"><p>Turns the <code>A</code> information into a proper Play <code>Result</code></p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.play.server.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a> → <a href="../../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd></dl></div>
+    </li><li name="endpoints.play.server.EndpointsWithCustomErrors.ResponseEntity" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="types">
       <a id="ResponseEntity[A]=play.api.http.Writeable[A]"></a><a id="ResponseEntity[A]:ResponseEntity[A]"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#ResponseEntity[A]=play.api.http.Writeable[A]" title="Permalink">
@@ -601,11 +591,11 @@ an authentication information is missing)
         <span class="kind">type</span>
       </span>
       <span class="symbol">
-        <span class="name">ResponseEntity</span><span class="tparams">[<span name="A">A</span>]</span><span class="result alias"> = <a href="https://www.playframework.com/documentation/2.7.3/api/scala/play/api/http/Writeable.html#play.api.http.Writeable" class="extype" name="play.api.http.Writeable">Writeable</a>[<span class="extype" name="endpoints.play.server.EndpointsWithCustomErrors.ResponseEntity.A">A</span>]</span>
+        <span class="name">ResponseEntity</span><span class="tparams">[<span name="A">A</span>]</span><span class="result alias"> = <a href="https://www.playframework.com/documentation/2.8.0/api/scala/play/api/http/Writeable.html#play.api.http.Writeable" class="extype" name="play.api.http.Writeable">Writeable</a>[<span class="extype" name="endpoints.play.server.EndpointsWithCustomErrors.ResponseEntity.A">A</span>]</span>
       </span>
       
       <p class="shortcomment cmt">An HTTP response entity carrying an information of type A</p><div class="fullcomment"><div class="comment cmt"><p>An HTTP response entity carrying an information of type A</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.play.server.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a> → <a href="../../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd></dl></div>
-    </li><li name="endpoints.algebra.Errors.ServerError" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.algebra.Errors.ServerError" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="types">
       <a id="ServerError"></a><a id="ServerError:ServerError"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#ServerError" title="Permalink">
@@ -621,7 +611,7 @@ an authentication information is missing)
       </span>
       
       <p class="shortcomment cmt">Error raised by the business logic of a server</p><div class="fullcomment"><div class="comment cmt"><p>Error raised by the business logic of a server</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Errors.html" class="extype" name="endpoints.algebra.Errors">Errors</a></dd></dl></div>
-    </li><li name="endpoints.play.server.StatusCodes.StatusCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.play.server.StatusCodes.StatusCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="types">
       <a id="StatusCode=play.api.mvc.Results.Status"></a><a id="StatusCode:StatusCode"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#StatusCode=play.api.mvc.Results.Status" title="Permalink">
@@ -788,7 +778,7 @@ an authentication information is missing)
 
         <div class="values members">
               <h3>Abstract Value Members</h3>
-              <ol><li name="endpoints.algebra.Errors#clientErrorsResponseEntity" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+              <ol><li name="endpoints.algebra.Errors#clientErrorsResponseEntity" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="operations">
       <a id="clientErrorsResponseEntity:Errors.this.ResponseEntity[Errors.this.ClientErrors]"></a><a id="clientErrorsResponseEntity:ResponseEntity[ClientErrors]"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#clientErrorsResponseEntity:Errors.this.ResponseEntity[Errors.this.ClientErrors]" title="Permalink">
@@ -803,9 +793,8 @@ an authentication information is missing)
         <span class="name">clientErrorsResponseEntity</span><span class="result">: <a href="#ResponseEntity[A]=play.api.http.Writeable[A]" class="extmbr" name="endpoints.play.server.EndpointsWithCustomErrors.ResponseEntity">ResponseEntity</a>[<a href="#ClientErrors" class="extmbr" name="endpoints.play.server.EndpointsWithCustomErrors.ClientErrors">ClientErrors</a>]</span>
       </span>
       
-      <p class="shortcomment cmt">Format of the response entity carrying the client errors.</p><div class="fullcomment"><div class="comment cmt"><p>Format of the response entity carrying the client errors.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Errors.html" class="extype" name="endpoints.algebra.Errors">Errors</a></dd></dl></div>
-    </li><li name="endpoints.algebra.Errors#clientErrorsToInvalid" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt">Format of the response entity carrying the client errors.</p><div class="fullcomment"><div class="comment cmt"><p>Format of the response entity carrying the client errors.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Errors.html" class="extype" name="endpoints.algebra.Errors">Errors</a></dd></dl></div>
+    </li><li name="endpoints.algebra.Errors#clientErrorsToInvalid" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="operations">
       <a id="clientErrorsToInvalid(clientErrors:Errors.this.ClientErrors):endpoints.Invalid"></a><a id="clientErrorsToInvalid(ClientErrors):Invalid"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#clientErrorsToInvalid(clientErrors:Errors.this.ClientErrors):endpoints.Invalid" title="Permalink">
@@ -820,8 +809,8 @@ an authentication information is missing)
         <span class="name">clientErrorsToInvalid</span><span class="params">(<span name="clientErrors">clientErrors: <a href="#ClientErrors" class="extmbr" name="endpoints.play.server.EndpointsWithCustomErrors.ClientErrors">ClientErrors</a></span>)</span><span class="result">: <a href="../../Invalid.html" class="extype" name="endpoints.Invalid">Invalid</a></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Errors.html" class="extype" name="endpoints.algebra.Errors">Errors</a></dd></dl></div>
-    </li><li name="endpoints.algebra.Errors#invalidToClientErrors" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt">Convert the <a href="../../algebra/Errors.html#ClientErrors" class="extmbr" name="endpoints.algebra.Errors.ClientErrors">ClientErrors</a> type into the <i>endpoints</i> internal client error type</p><div class="fullcomment"><div class="comment cmt"><p>Convert the <a href="../../algebra/Errors.html#ClientErrors" class="extmbr" name="endpoints.algebra.Errors.ClientErrors">ClientErrors</a> type into the <i>endpoints</i> internal client error type</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Errors.html" class="extype" name="endpoints.algebra.Errors">Errors</a></dd></dl></div>
+    </li><li name="endpoints.algebra.Errors#invalidToClientErrors" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="operations">
       <a id="invalidToClientErrors(invalid:endpoints.Invalid):Errors.this.ClientErrors"></a><a id="invalidToClientErrors(Invalid):ClientErrors"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#invalidToClientErrors(invalid:endpoints.Invalid):Errors.this.ClientErrors" title="Permalink">
@@ -836,8 +825,8 @@ an authentication information is missing)
         <span class="name">invalidToClientErrors</span><span class="params">(<span name="invalid">invalid: <a href="../../Invalid.html" class="extype" name="endpoints.Invalid">Invalid</a></span>)</span><span class="result">: <a href="#ClientErrors" class="extmbr" name="endpoints.play.server.EndpointsWithCustomErrors.ClientErrors">ClientErrors</a></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Errors.html" class="extype" name="endpoints.algebra.Errors">Errors</a></dd></dl></div>
-    </li><li name="endpoints.play.server.EndpointsWithCustomErrors#playComponents" visbl="prt" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt">Convert the <i>endpoints</i> internal client error type into the <a href="../../algebra/Errors.html#ClientErrors" class="extmbr" name="endpoints.algebra.Errors.ClientErrors">ClientErrors</a> type</p><div class="fullcomment"><div class="comment cmt"><p>Convert the <i>endpoints</i> internal client error type into the <a href="../../algebra/Errors.html#ClientErrors" class="extmbr" name="endpoints.algebra.Errors.ClientErrors">ClientErrors</a> type</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Errors.html" class="extype" name="endpoints.algebra.Errors">Errors</a></dd></dl></div>
+    </li><li name="endpoints.play.server.EndpointsWithCustomErrors#playComponents" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="playComponents:endpoints.play.server.PlayComponents"></a><a id="playComponents:PlayComponents"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#playComponents:endpoints.play.server.PlayComponents" title="Permalink">
@@ -852,8 +841,8 @@ an authentication information is missing)
         <span class="name">playComponents</span><span class="result">: <a href="PlayComponents.html" class="extype" name="endpoints.play.server.PlayComponents">PlayComponents</a></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
-    </li><li name="endpoints.algebra.Errors#serverErrorResponseEntity" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      
+    </li><li name="endpoints.algebra.Errors#serverErrorResponseEntity" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="operations">
       <a id="serverErrorResponseEntity:Errors.this.ResponseEntity[Errors.this.ServerError]"></a><a id="serverErrorResponseEntity:ResponseEntity[ServerError]"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#serverErrorResponseEntity:Errors.this.ResponseEntity[Errors.this.ServerError]" title="Permalink">
@@ -868,9 +857,8 @@ an authentication information is missing)
         <span class="name">serverErrorResponseEntity</span><span class="result">: <a href="#ResponseEntity[A]=play.api.http.Writeable[A]" class="extmbr" name="endpoints.play.server.EndpointsWithCustomErrors.ResponseEntity">ResponseEntity</a>[<a href="#ServerError" class="extmbr" name="endpoints.play.server.EndpointsWithCustomErrors.ServerError">ServerError</a>]</span>
       </span>
       
-      <p class="shortcomment cmt">Format of the response entity carrying the server error.</p><div class="fullcomment"><div class="comment cmt"><p>Format of the response entity carrying the server error.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Errors.html" class="extype" name="endpoints.algebra.Errors">Errors</a></dd></dl></div>
-    </li><li name="endpoints.algebra.Errors#serverErrorToThrowable" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt">Format of the response entity carrying the server error.</p><div class="fullcomment"><div class="comment cmt"><p>Format of the response entity carrying the server error.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Errors.html" class="extype" name="endpoints.algebra.Errors">Errors</a></dd></dl></div>
+    </li><li name="endpoints.algebra.Errors#serverErrorToThrowable" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="operations">
       <a id="serverErrorToThrowable(serverError:Errors.this.ServerError):Throwable"></a><a id="serverErrorToThrowable(ServerError):Throwable"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#serverErrorToThrowable(serverError:Errors.this.ServerError):Throwable" title="Permalink">
@@ -885,8 +873,8 @@ an authentication information is missing)
         <span class="name">serverErrorToThrowable</span><span class="params">(<span name="serverError">serverError: <a href="#ServerError" class="extmbr" name="endpoints.play.server.EndpointsWithCustomErrors.ServerError">ServerError</a></span>)</span><span class="result">: <a href="../../../scala/index.html#Throwable=Throwable" class="extmbr" name="scala.Throwable">Throwable</a></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Errors.html" class="extype" name="endpoints.algebra.Errors">Errors</a></dd></dl></div>
-    </li><li name="endpoints.algebra.Errors#throwableToServerError" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt">Convert the <a href="../../algebra/Errors.html#ServerError" class="extmbr" name="endpoints.algebra.Errors.ServerError">ServerError</a> type into the <i>endpoints</i> internal server error type</p><div class="fullcomment"><div class="comment cmt"><p>Convert the <a href="../../algebra/Errors.html#ServerError" class="extmbr" name="endpoints.algebra.Errors.ServerError">ServerError</a> type into the <i>endpoints</i> internal server error type</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Errors.html" class="extype" name="endpoints.algebra.Errors">Errors</a></dd></dl></div>
+    </li><li name="endpoints.algebra.Errors#throwableToServerError" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="operations">
       <a id="throwableToServerError(throwable:Throwable):Errors.this.ServerError"></a><a id="throwableToServerError(Throwable):ServerError"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#throwableToServerError(throwable:Throwable):Errors.this.ServerError" title="Permalink">
@@ -901,7 +889,7 @@ an authentication information is missing)
         <span class="name">throwableToServerError</span><span class="params">(<span name="throwable">throwable: <a href="../../../scala/index.html#Throwable=Throwable" class="extmbr" name="scala.Throwable">Throwable</a></span>)</span><span class="result">: <a href="#ServerError" class="extmbr" name="endpoints.play.server.EndpointsWithCustomErrors.ServerError">ServerError</a></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Errors.html" class="extype" name="endpoints.algebra.Errors">Errors</a></dd></dl></div>
+      <p class="shortcomment cmt">Convert the <i>endpoints</i> internal server error type into the <a href="../../algebra/Errors.html#ServerError" class="extmbr" name="endpoints.algebra.Errors.ServerError">ServerError</a> type</p><div class="fullcomment"><div class="comment cmt"><p>Convert the <i>endpoints</i> internal server error type into the <a href="../../algebra/Errors.html#ServerError" class="extmbr" name="endpoints.algebra.Errors.ServerError">ServerError</a> type</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Errors.html" class="extype" name="endpoints.algebra.Errors">Errors</a></dd></dl></div>
     </li></ol>
             </div>
 
@@ -999,7 +987,7 @@ an authentication information is missing)
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="endpoints.play.server.StatusCodes#Accepted" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.play.server.StatusCodes#Accepted" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="Accepted:play.api.mvc.Results.Status"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#Accepted:play.api.mvc.Results.Status" title="Permalink">
@@ -1014,8 +1002,8 @@ an authentication information is missing)
         <span class="name">Accepted</span><span class="result">: <span class="extype" name="play.api.mvc.Results.Status">play.api.mvc.Results.Status</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="StatusCodes.html" class="extype" name="endpoints.play.server.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd></dl></div>
-    </li><li name="endpoints.play.server.StatusCodes#BadRequest" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="StatusCodes.html" class="extype" name="endpoints.play.server.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd></dl></div>
+    </li><li name="endpoints.play.server.StatusCodes#BadRequest" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="BadRequest:play.api.mvc.Results.Status"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#BadRequest:play.api.mvc.Results.Status" title="Permalink">
@@ -1030,10 +1018,10 @@ an authentication information is missing)
         <span class="name">BadRequest</span><span class="result">: <span class="extype" name="play.api.mvc.Results.Status">play.api.mvc.Results.Status</span></span>
       </span>
       
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="StatusCodes.html" class="extype" name="endpoints.play.server.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd><dt>Note</dt><dd><span class="cmt"><p>You should use the <code>badRequest</code> constructor provided by the <span class="extype" name="Responses">Responses</span>
-      trait to ensure that errors produced by <i>endponits</i> are consistently
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="StatusCodes.html" class="extype" name="endpoints.play.server.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd><dt>Note</dt><dd><span class="cmt"><p>You should use the <code>badRequest</code> constructor provided by the <a href="../../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">endpoints.algebra.Responses</a>
+      trait to ensure that errors produced by <i>endpoints</i> are consistently
       handled by interpreters.</p></span></dd></dl></div>
-    </li><li name="endpoints.play.server.StatusCodes#Created" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.play.server.StatusCodes#Created" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="Created:play.api.mvc.Results.Status"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#Created:play.api.mvc.Results.Status" title="Permalink">
@@ -1048,8 +1036,8 @@ an authentication information is missing)
         <span class="name">Created</span><span class="result">: <span class="extype" name="play.api.mvc.Results.Status">play.api.mvc.Results.Status</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="StatusCodes.html" class="extype" name="endpoints.play.server.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd></dl></div>
-    </li><li name="endpoints.play.server.Methods#Delete" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="StatusCodes.html" class="extype" name="endpoints.play.server.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd></dl></div>
+    </li><li name="endpoints.play.server.Methods#Delete" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="Delete:Methods.this.Method"></a><a id="Delete:Method"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#Delete:Methods.this.Method" title="Permalink">
@@ -1064,7 +1052,7 @@ an authentication information is missing)
         <span class="name">Delete</span><span class="result">: <a href="#MethodextendsProductwithSerializable" class="extmbr" name="endpoints.play.server.Methods.Method">Method</a></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Methods.html" class="extype" name="endpoints.play.server.Methods">Methods</a> → <a href="../../algebra/Methods.html" class="extype" name="endpoints.algebra.Methods">Methods</a></dd></dl></div>
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Methods.html" class="extype" name="endpoints.play.server.Methods">Methods</a> → <a href="../../algebra/Methods.html" class="extype" name="endpoints.algebra.Methods">Methods</a></dd></dl></div>
     </li><li name="endpoints.play.server.EndpointsWithCustomErrors#EmptyEndpointToPlayHandler" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="EmptyEndpointToPlayHandler[A,B](endpoint:EndpointsWithCustomErrors.this.Endpoint[A,B])(implicitev:Unit=:=B):EndpointsWithCustomErrors.this.ToPlayHandler"></a><a id="EmptyEndpointToPlayHandler[A,B](Endpoint[A,B])(=:=[Unit,B]):ToPlayHandler"></a>
       <span class="permalink">
@@ -1081,7 +1069,7 @@ an authentication information is missing)
       </span>
       
       
-    </li><li name="endpoints.play.server.StatusCodes#Forbidden" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.play.server.StatusCodes#Forbidden" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="Forbidden:play.api.mvc.Results.Status"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#Forbidden:play.api.mvc.Results.Status" title="Permalink">
@@ -1096,8 +1084,8 @@ an authentication information is missing)
         <span class="name">Forbidden</span><span class="result">: <span class="extype" name="play.api.mvc.Results.Status">play.api.mvc.Results.Status</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="StatusCodes.html" class="extype" name="endpoints.play.server.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd></dl></div>
-    </li><li name="endpoints.play.server.Methods#Get" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="StatusCodes.html" class="extype" name="endpoints.play.server.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd></dl></div>
+    </li><li name="endpoints.play.server.Methods#Get" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="Get:Methods.this.Method"></a><a id="Get:Method"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#Get:Methods.this.Method" title="Permalink">
@@ -1112,8 +1100,8 @@ an authentication information is missing)
         <span class="name">Get</span><span class="result">: <a href="#MethodextendsProductwithSerializable" class="extmbr" name="endpoints.play.server.Methods.Method">Method</a></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Methods.html" class="extype" name="endpoints.play.server.Methods">Methods</a> → <a href="../../algebra/Methods.html" class="extype" name="endpoints.algebra.Methods">Methods</a></dd></dl></div>
-    </li><li name="endpoints.play.server.StatusCodes#InternalServerError" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Methods.html" class="extype" name="endpoints.play.server.Methods">Methods</a> → <a href="../../algebra/Methods.html" class="extype" name="endpoints.algebra.Methods">Methods</a></dd></dl></div>
+    </li><li name="endpoints.play.server.StatusCodes#InternalServerError" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="InternalServerError:play.api.mvc.Results.Status"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#InternalServerError:play.api.mvc.Results.Status" title="Permalink">
@@ -1129,9 +1117,9 @@ an authentication information is missing)
       </span>
       
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="StatusCodes.html" class="extype" name="endpoints.play.server.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd><dt>Note</dt><dd><span class="cmt"><p>You should use the <code>internalServerError</code> constructor provided by the
-      <span class="extype" name="Responses">Responses</span> trait to ensure that errors produced by <i>endpoints</i>
+      <a href="../../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">endpoints.algebra.Responses</a> trait to ensure that errors produced by <i>endpoints</i>
       are consistently handled by interpreters.</p></span></dd></dl></div>
-    </li><li name="endpoints.play.server.StatusCodes#NoContent" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.play.server.StatusCodes#NoContent" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="NoContent:play.api.mvc.Results.Status"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#NoContent:play.api.mvc.Results.Status" title="Permalink">
@@ -1146,8 +1134,8 @@ an authentication information is missing)
         <span class="name">NoContent</span><span class="result">: <span class="extype" name="play.api.mvc.Results.Status">play.api.mvc.Results.Status</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="StatusCodes.html" class="extype" name="endpoints.play.server.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd></dl></div>
-    </li><li name="endpoints.play.server.StatusCodes#NotFound" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="StatusCodes.html" class="extype" name="endpoints.play.server.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd></dl></div>
+    </li><li name="endpoints.play.server.StatusCodes#NotFound" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="NotFound:play.api.mvc.Results.Status"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#NotFound:play.api.mvc.Results.Status" title="Permalink">
@@ -1162,8 +1150,8 @@ an authentication information is missing)
         <span class="name">NotFound</span><span class="result">: <span class="extype" name="play.api.mvc.Results.Status">play.api.mvc.Results.Status</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="StatusCodes.html" class="extype" name="endpoints.play.server.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd></dl></div>
-    </li><li name="endpoints.play.server.StatusCodes#NotImplemented" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="StatusCodes.html" class="extype" name="endpoints.play.server.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd></dl></div>
+    </li><li name="endpoints.play.server.StatusCodes#NotImplemented" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="NotImplemented:play.api.mvc.Results.Status"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#NotImplemented:play.api.mvc.Results.Status" title="Permalink">
@@ -1178,8 +1166,8 @@ an authentication information is missing)
         <span class="name">NotImplemented</span><span class="result">: <span class="extype" name="play.api.mvc.Results.Status">play.api.mvc.Results.Status</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="StatusCodes.html" class="extype" name="endpoints.play.server.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd></dl></div>
-    </li><li name="endpoints.play.server.StatusCodes#OK" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="StatusCodes.html" class="extype" name="endpoints.play.server.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd></dl></div>
+    </li><li name="endpoints.play.server.StatusCodes#OK" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="OK:play.api.mvc.Results.Status"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#OK:play.api.mvc.Results.Status" title="Permalink">
@@ -1194,8 +1182,8 @@ an authentication information is missing)
         <span class="name">OK</span><span class="result">: <span class="extype" name="play.api.mvc.Results.Status">play.api.mvc.Results.Status</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="StatusCodes.html" class="extype" name="endpoints.play.server.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd></dl></div>
-    </li><li name="endpoints.play.server.Methods#Options" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="StatusCodes.html" class="extype" name="endpoints.play.server.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd></dl></div>
+    </li><li name="endpoints.play.server.Methods#Options" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="Options:Methods.this.Method"></a><a id="Options:Method"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#Options:Methods.this.Method" title="Permalink">
@@ -1210,8 +1198,8 @@ an authentication information is missing)
         <span class="name">Options</span><span class="result">: <a href="#MethodextendsProductwithSerializable" class="extmbr" name="endpoints.play.server.Methods.Method">Method</a></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Methods.html" class="extype" name="endpoints.play.server.Methods">Methods</a> → <a href="../../algebra/Methods.html" class="extype" name="endpoints.algebra.Methods">Methods</a></dd></dl></div>
-    </li><li name="endpoints.play.server.Methods#Patch" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Methods.html" class="extype" name="endpoints.play.server.Methods">Methods</a> → <a href="../../algebra/Methods.html" class="extype" name="endpoints.algebra.Methods">Methods</a></dd></dl></div>
+    </li><li name="endpoints.play.server.Methods#Patch" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="Patch:Methods.this.Method"></a><a id="Patch:Method"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#Patch:Methods.this.Method" title="Permalink">
@@ -1226,8 +1214,8 @@ an authentication information is missing)
         <span class="name">Patch</span><span class="result">: <a href="#MethodextendsProductwithSerializable" class="extmbr" name="endpoints.play.server.Methods.Method">Method</a></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Methods.html" class="extype" name="endpoints.play.server.Methods">Methods</a> → <a href="../../algebra/Methods.html" class="extype" name="endpoints.algebra.Methods">Methods</a></dd></dl></div>
-    </li><li name="endpoints.play.server.Methods#Post" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Methods.html" class="extype" name="endpoints.play.server.Methods">Methods</a> → <a href="../../algebra/Methods.html" class="extype" name="endpoints.algebra.Methods">Methods</a></dd></dl></div>
+    </li><li name="endpoints.play.server.Methods#Post" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="Post:Methods.this.Method"></a><a id="Post:Method"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#Post:Methods.this.Method" title="Permalink">
@@ -1242,8 +1230,8 @@ an authentication information is missing)
         <span class="name">Post</span><span class="result">: <a href="#MethodextendsProductwithSerializable" class="extmbr" name="endpoints.play.server.Methods.Method">Method</a></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Methods.html" class="extype" name="endpoints.play.server.Methods">Methods</a> → <a href="../../algebra/Methods.html" class="extype" name="endpoints.algebra.Methods">Methods</a></dd></dl></div>
-    </li><li name="endpoints.play.server.Methods#Put" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Methods.html" class="extype" name="endpoints.play.server.Methods">Methods</a> → <a href="../../algebra/Methods.html" class="extype" name="endpoints.algebra.Methods">Methods</a></dd></dl></div>
+    </li><li name="endpoints.play.server.Methods#Put" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="Put:Methods.this.Method"></a><a id="Put:Method"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#Put:Methods.this.Method" title="Permalink">
@@ -1258,8 +1246,8 @@ an authentication information is missing)
         <span class="name">Put</span><span class="result">: <a href="#MethodextendsProductwithSerializable" class="extmbr" name="endpoints.play.server.Methods.Method">Method</a></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Methods.html" class="extype" name="endpoints.play.server.Methods">Methods</a> → <a href="../../algebra/Methods.html" class="extype" name="endpoints.algebra.Methods">Methods</a></dd></dl></div>
-    </li><li name="endpoints.play.server.StatusCodes#Unauthorized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Methods.html" class="extype" name="endpoints.play.server.Methods">Methods</a> → <a href="../../algebra/Methods.html" class="extype" name="endpoints.algebra.Methods">Methods</a></dd></dl></div>
+    </li><li name="endpoints.play.server.StatusCodes#Unauthorized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="Unauthorized:play.api.mvc.Results.Status"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#Unauthorized:play.api.mvc.Results.Status" title="Permalink">
@@ -1274,7 +1262,7 @@ an authentication information is missing)
         <span class="name">Unauthorized</span><span class="result">: <span class="extype" name="play.api.mvc.Results.Status">play.api.mvc.Results.Status</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="StatusCodes.html" class="extype" name="endpoints.play.server.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd></dl></div>
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="StatusCodes.html" class="extype" name="endpoints.play.server.StatusCodes">StatusCodes</a> → <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">StatusCodes</a></dd></dl></div>
     </li><li name="endpoints.play.server.Urls#applicativeRequestExtractor" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="applicativeRequestExtractor:play.api.libs.functional.Applicative[Urls.this.RequestExtractor]"></a><a id="applicativeRequestExtractor:Applicative[RequestExtractor]"></a>
       <span class="permalink">
@@ -1307,7 +1295,7 @@ an authentication information is missing)
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="endpoints.algebra.Responses#badRequest" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.algebra.Responses#badRequest" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="badRequest(docs:endpoints.algebra.Documentation):Responses.this.Response[Responses.this.ClientErrors]"></a><a id="badRequest(Documentation):Response[ClientErrors]"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#badRequest(docs:endpoints.algebra.Documentation):Responses.this.Response[Responses.this.ClientErrors]" title="Permalink">
@@ -1323,7 +1311,7 @@ an authentication information is missing)
       </span>
       
       <p class="shortcomment cmt">Bad Request (400) response, with an entity of type <code>ClientErrors</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Bad Request (400) response, with an entity of type <code>ClientErrors</code>.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd><dt>See also</dt><dd><span class="cmt"><p><a href="../../algebra/Errors.html" class="extype" name="endpoints.algebra.Errors">endpoints.algebra.Errors</a> and <a href="../../algebra/BuiltInErrors.html" class="extype" name="endpoints.algebra.BuiltInErrors">endpoints.algebra.BuiltInErrors</a></p></span></dd></dl></div>
-    </li><li name="endpoints.algebra.Urls#booleanQueryString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.algebra.Urls#booleanQueryString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="booleanQueryString:Urls.this.QueryStringParam[Boolean]"></a><a id="booleanQueryString:QueryStringParam[Boolean]"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#booleanQueryString:Urls.this.QueryStringParam[Boolean]" title="Permalink">
@@ -1374,7 +1362,7 @@ an authentication information is missing)
 Client interpreters accept either one or the other response.
 Documentation interpreters list all the possible responses.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.play.server.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a> → <a href="../../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd></dl></div>
-    </li><li name="endpoints.algebra.Errors#clientErrorsResponse" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.algebra.Errors#clientErrorsResponse" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="clientErrorsResponse:Errors.this.Response[Errors.this.ClientErrors]"></a><a id="clientErrorsResponse:Response[ClientErrors]"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#clientErrorsResponse:Errors.this.Response[Errors.this.ClientErrors]" title="Permalink">
@@ -1433,7 +1421,7 @@ a request fails.</p><p>The provided implementation forwards to <code>badRequest<
       </span>
       
       <p class="shortcomment cmt">Concatenates two <code>QueryString</code>s</p><div class="fullcomment"><div class="comment cmt"><p>Concatenates two <code>QueryString</code>s</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Urls.html" class="extype" name="endpoints.play.server.Urls">Urls</a> → <a href="../../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
-    </li><li name="endpoints.algebra.Requests#delete" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.algebra.Requests#delete" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="delete[UrlP,HeadersP,Out](url:Requests.this.Url[UrlP],docs:endpoints.algebra.Documentation,headers:Requests.this.RequestHeaders[HeadersP])(implicittuplerUH:endpoints.Tupler.Aux[UrlP,HeadersP,Out]):Requests.this.Request[Out]"></a><a id="delete[UrlP,HeadersP,Out](Url[UrlP],Documentation,RequestHeaders[HeadersP])(Tupler.Aux[UrlP,HeadersP,Out]):Request[Out]"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#delete[UrlP,HeadersP,Out](url:Requests.this.Url[UrlP],docs:endpoints.algebra.Documentation,headers:Requests.this.RequestHeaders[HeadersP])(implicittuplerUH:endpoints.Tupler.Aux[UrlP,HeadersP,Out]):Requests.this.Request[Out]" title="Permalink">
@@ -1449,7 +1437,7 @@ a request fails.</p><p>The provided implementation forwards to <code>badRequest<
       </span>
       
       <p class="shortcomment cmt">Helper method to perform DELETE request</p><div class="fullcomment"><div class="comment cmt"><p>Helper method to perform DELETE request</p></div><dl class="paramcmts block"><dt class="tparam">UrlP</dt><dd class="cmt"><p>Payload carried by url</p></dd><dt class="tparam">HeadersP</dt><dd class="cmt"><p>Payload carried by headers</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Requests.html" class="extype" name="endpoints.algebra.Requests">Requests</a></dd></dl></div>
-    </li><li name="endpoints.algebra.Urls#doubleQueryString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.algebra.Urls#doubleQueryString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="doubleQueryString:Urls.this.QueryStringParam[Double]"></a><a id="doubleQueryString:QueryStringParam[Double]"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#doubleQueryString:Urls.this.QueryStringParam[Double]" title="Permalink">
@@ -1464,8 +1452,8 @@ a request fails.</p><p>The provided implementation forwards to <code>badRequest<
         <span class="name">doubleQueryString</span><span class="result">: <a href="#QueryStringParam[A]extendsAnyRef" class="extmbr" name="endpoints.play.server.Urls.QueryStringParam">QueryStringParam</a>[<a href="https://www.scala-lang.org/api/2.12.10/scala/Double.html#scala.Double" class="extype" name="scala.Double">Double</a>]</span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
-    </li><li name="endpoints.algebra.Urls#doubleSegment" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt">Codec for query string parameters of type <code>Double</code></p><div class="fullcomment"><div class="comment cmt"><p>Codec for query string parameters of type <code>Double</code></p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
+    </li><li name="endpoints.algebra.Urls#doubleSegment" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="doubleSegment:Urls.this.Segment[Double]"></a><a id="doubleSegment:Segment[Double]"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#doubleSegment:Urls.this.Segment[Double]" title="Permalink">
@@ -1480,7 +1468,7 @@ a request fails.</p><p>The provided implementation forwards to <code>badRequest<
         <span class="name">doubleSegment</span><span class="result">: <a href="#Segment[A]extendsAnyRef" class="extmbr" name="endpoints.play.server.Urls.Segment">Segment</a>[<a href="https://www.scala-lang.org/api/2.12.10/scala/Double.html#scala.Double" class="extype" name="scala.Double">Double</a>]</span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
+      <p class="shortcomment cmt">Segment codec for type <code>Double</code></p><div class="fullcomment"><div class="comment cmt"><p>Segment codec for type <code>Double</code></p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
     </li><li name="endpoints.algebra.Urls#dummyPathToUrl" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="dummyPathToUrl[A](p:Urls.this.Path[A]):Urls.this.Url[A]"></a><a id="dummyPathToUrl[A](Path[A]):Url[A]"></a>
       <span class="permalink">
@@ -1496,8 +1484,8 @@ a request fails.</p><p>The provided implementation forwards to <code>badRequest<
         <span class="name">dummyPathToUrl</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="p">p: <a href="#Path[A]extendsUrls.this.Url[A]" class="extmbr" name="endpoints.play.server.Urls.Path">Path</a>[<span class="extype" name="endpoints.algebra.Urls.dummyPathToUrl.A">A</span>]</span>)</span><span class="result">: <a href="#Url[A]extendsAnyRef" class="extmbr" name="endpoints.play.server.Urls.Url">Url</a>[<span class="extype" name="endpoints.algebra.Urls.dummyPathToUrl.A">A</span>]</span>
       </span>
       
-      <p class="shortcomment cmt">Implicit conversion to get rid of intellij errors when defining paths.</p><div class="fullcomment"><div class="comment cmt"><p>Implicit conversion to get rid of intellij errors when defining paths. Effectively should not be called.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
-    </li><li name="endpoints.play.server.EndpointsWithCustomErrors#emptyHeaders" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt">Implicit conversion to get rid of intellij errors when defining paths.</p><div class="fullcomment"><div class="comment cmt"><p>Implicit conversion to get rid of intellij errors when defining paths. Effectively should not be called.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd><dt>See also</dt><dd><span class="cmt"><p><a href="https://youtrack.jetbrains.com/issue/SCL-16284" target="_blank">https://youtrack.jetbrains.com/issue/SCL-16284</a></p></span></dd></dl></div>
+    </li><li name="endpoints.play.server.EndpointsWithCustomErrors#emptyHeaders" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="emptyHeaders:EndpointsWithCustomErrors.this.RequestHeaders[Unit]"></a><a id="emptyHeaders:RequestHeaders[Unit]"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#emptyHeaders:EndpointsWithCustomErrors.this.RequestHeaders[Unit]" title="Permalink">
@@ -1513,7 +1501,7 @@ a request fails.</p><p>The provided implementation forwards to <code>badRequest<
       </span>
       
       <p class="shortcomment cmt">Always succeeds in extracting no information from the headers</p><div class="fullcomment"><div class="comment cmt"><p>Always succeeds in extracting no information from the headers</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.play.server.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a> → <a href="../../algebra/Requests.html" class="extype" name="endpoints.algebra.Requests">Requests</a></dd></dl></div>
-    </li><li name="endpoints.play.server.EndpointsWithCustomErrors#emptyRequest" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.play.server.EndpointsWithCustomErrors#emptyRequest" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="emptyRequest:play.api.mvc.BodyParser[Unit]"></a><a id="emptyRequest:BodyParser[Unit]"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#emptyRequest:play.api.mvc.BodyParser[Unit]" title="Permalink">
@@ -1525,13 +1513,12 @@ a request fails.</p><p>The provided implementation forwards to <code>badRequest<
         <span class="kind">lazy val</span>
       </span>
       <span class="symbol">
-        <span class="name">emptyRequest</span><span class="result">: <a href="https://www.playframework.com/documentation/2.7.3/api/scala/play/api/mvc/BodyParser.html#play.api.mvc.BodyParser" class="extype" name="play.api.mvc.BodyParser">BodyParser</a>[<a href="https://www.scala-lang.org/api/2.12.10/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a>]</span>
+        <span class="name">emptyRequest</span><span class="result">: <a href="https://www.playframework.com/documentation/2.8.0/api/scala/play/api/mvc/BodyParser.html#play.api.mvc.BodyParser" class="extype" name="play.api.mvc.BodyParser">BodyParser</a>[<a href="https://www.scala-lang.org/api/2.12.10/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a>]</span>
       </span>
       
       <p class="shortcomment cmt">Empty request -- request without a body.</p><div class="fullcomment"><div class="comment cmt"><p>Empty request -- request without a body.
-Use <code>description</code> of <a href="../../algebra/Endpoints.html#endpoint[A,B](request:EndpointsWithCustomErrors.this.Request[A],response:EndpointsWithCustomErrors.this.Response[B],docs:EndpointsWithCustomErrors.this.EndpointDocs):EndpointsWithCustomErrors.this.Endpoint[A,B]" class="extmbr" name="endpoints.algebra.Endpoints#endpoint">endpoints.algebra.Endpoints#endpoint</a> to document an empty body.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.play.server.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a> → <a href="../../algebra/Requests.html" class="extype" name="endpoints.algebra.Requests">Requests</a></dd></dl></div>
-    </li><li name="endpoints.play.server.EndpointsWithCustomErrors#emptyResponse" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+Use <code>description</code> of <a href="../../algebra/Endpoints.html#endpoint[A,B](request:EndpointsWithCustomErrors.this.Request[A],response:EndpointsWithCustomErrors.this.Response[B],docs:EndpointsWithCustomErrors.this.EndpointDocs):EndpointsWithCustomErrors.this.Endpoint[A,B]" class="extmbr" name="endpoints.algebra.Endpoints#endpoint">endpoints.algebra.Endpoints#endpoint</a> to document an empty body.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.play.server.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a> → <a href="../../algebra/Requests.html" class="extype" name="endpoints.algebra.Requests">Requests</a></dd></dl></div>
+    </li><li name="endpoints.play.server.EndpointsWithCustomErrors#emptyResponse" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="emptyResponse:EndpointsWithCustomErrors.this.ResponseEntity[Unit]"></a><a id="emptyResponse:ResponseEntity[Unit]"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#emptyResponse:EndpointsWithCustomErrors.this.ResponseEntity[Unit]" title="Permalink">
@@ -1547,7 +1534,7 @@ Use <code>description</code> of <a href="../../algebra/Endpoints.html#endpoint[A
       </span>
       
       <p class="shortcomment cmt">An empty response entity</p><div class="fullcomment"><div class="comment cmt"><p>An empty response entity</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.play.server.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a> → <a href="../../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd></dl></div>
-    </li><li name="endpoints.play.server.EndpointsWithCustomErrors#endpoint" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.play.server.EndpointsWithCustomErrors#endpoint" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="endpoint[A,B](request:EndpointsWithCustomErrors.this.Request[A],response:EndpointsWithCustomErrors.this.Response[B],docs:EndpointsWithCustomErrors.this.EndpointDocs):EndpointsWithCustomErrors.this.Endpoint[A,B]"></a><a id="endpoint[A,B](Request[A],Response[B],EndpointDocs):Endpoint[A,B]"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#endpoint[A,B](request:EndpointsWithCustomErrors.this.Request[A],response:EndpointsWithCustomErrors.this.Response[B],docs:EndpointsWithCustomErrors.this.EndpointDocs):EndpointsWithCustomErrors.this.Endpoint[A,B]" title="Permalink">
@@ -1753,7 +1740,7 @@ Use <code>description</code> of <a href="../../algebra/Endpoints.html#endpoint[A
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Urls.html" class="extype" name="endpoints.play.server.Urls">Urls</a></dd></dl></div>
-    </li><li name="endpoints.algebra.Requests#get" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.algebra.Requests#get" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="get[UrlP,HeadersP,Out](url:Requests.this.Url[UrlP],docs:endpoints.algebra.Documentation,headers:Requests.this.RequestHeaders[HeadersP])(implicittuplerUH:endpoints.Tupler.Aux[UrlP,HeadersP,Out]):Requests.this.Request[Out]"></a><a id="get[UrlP,HeadersP,Out](Url[UrlP],Documentation,RequestHeaders[HeadersP])(Tupler.Aux[UrlP,HeadersP,Out]):Request[Out]"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#get[UrlP,HeadersP,Out](url:Requests.this.Url[UrlP],docs:endpoints.algebra.Documentation,headers:Requests.this.RequestHeaders[HeadersP])(implicittuplerUH:endpoints.Tupler.Aux[UrlP,HeadersP,Out]):Requests.this.Request[Out]" title="Permalink">
@@ -1800,7 +1787,7 @@ Use <code>description</code> of <a href="../../algebra/Endpoints.html#endpoint[A
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">handleClientErrors</span><span class="params">(<span name="invalid">invalid: <a href="../../Invalid.html" class="extype" name="endpoints.Invalid">Invalid</a></span>)</span><span class="result">: <a href="https://www.playframework.com/documentation/2.7.3/api/scala/play/api/mvc/Result.html#play.api.mvc.Result" class="extype" name="play.api.mvc.Result">Result</a></span>
+        <span class="name">handleClientErrors</span><span class="params">(<span name="invalid">invalid: <a href="../../Invalid.html" class="extype" name="endpoints.Invalid">Invalid</a></span>)</span><span class="result">: <a href="https://www.playframework.com/documentation/2.8.0/api/scala/play/api/mvc/Result.html#play.api.mvc.Result" class="extype" name="play.api.mvc.Result">Result</a></span>
       </span>
       
       <p class="shortcomment cmt">This method is called by <i>endpoints</i> when decoding a request failed.</p><div class="fullcomment"><div class="comment cmt"><p>This method is called by <i>endpoints</i> when decoding a request failed.</p><p>The provided implementation calls <code>clientErrorsResponse</code> to construct
@@ -1818,7 +1805,7 @@ a response containing the errors.</p><p>This method can be overridden to customi
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">handleServerError</span><span class="params">(<span name="throwable">throwable: <a href="../../../scala/index.html#Throwable=Throwable" class="extmbr" name="scala.Throwable">Throwable</a></span>)</span><span class="result">: <a href="https://www.playframework.com/documentation/2.7.3/api/scala/play/api/mvc/Result.html#play.api.mvc.Result" class="extype" name="play.api.mvc.Result">Result</a></span>
+        <span class="name">handleServerError</span><span class="params">(<span name="throwable">throwable: <a href="../../../scala/index.html#Throwable=Throwable" class="extmbr" name="scala.Throwable">Throwable</a></span>)</span><span class="result">: <a href="https://www.playframework.com/documentation/2.8.0/api/scala/play/api/mvc/Result.html#play.api.mvc.Result" class="extype" name="play.api.mvc.Result">Result</a></span>
       </span>
       
       <p class="shortcomment cmt">This method is called by <i>endpoints</i> when an exception is thrown during
@@ -1845,7 +1832,7 @@ a response containing the error message.</p><p>This method can be overridden to 
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="endpoints.play.server.EndpointsWithCustomErrors#header" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.play.server.EndpointsWithCustomErrors#header" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="header(name:String,docs:Option[String]):play.api.mvc.Headers=&gt;endpoints.Validated[String]"></a><a id="header(String,Option[String]):(Headers)⇒Validated[String]"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#header(name:String,docs:Option[String]):play.api.mvc.Headers=&gt;endpoints.Validated[String]" title="Permalink">
@@ -1857,10 +1844,10 @@ a response containing the error message.</p><p>This method can be overridden to 
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">header</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="docs">docs: <a href="https://www.scala-lang.org/api/2.12.10/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result">: (<a href="https://www.playframework.com/documentation/2.7.3/api/scala/play/api/mvc/Headers.html#play.api.mvc.Headers" class="extype" name="play.api.mvc.Headers">Headers</a>) ⇒ <a href="../../Validated.html" class="extype" name="endpoints.Validated">Validated</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+        <span class="name">header</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="docs">docs: <a href="https://www.scala-lang.org/api/2.12.10/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result">: (<a href="https://www.playframework.com/documentation/2.8.0/api/scala/play/api/mvc/Headers.html#play.api.mvc.Headers" class="extype" name="play.api.mvc.Headers">Headers</a>) ⇒ <a href="../../Validated.html" class="extype" name="endpoints.Validated">Validated</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.play.server.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a> → <a href="../../algebra/Requests.html" class="extype" name="endpoints.algebra.Requests">Requests</a></dd></dl></div>
+      <p class="shortcomment cmt">A required request header</p><div class="fullcomment"><div class="comment cmt"><p>A required request header</p></div><dl class="paramcmts block"><dt class="param">name</dt><dd class="cmt"><p>Header name (e.g., “Authorization”)</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.play.server.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a> → <a href="../../algebra/Requests.html" class="extype" name="endpoints.algebra.Requests">Requests</a></dd></dl></div>
     </li><li name="endpoints.play.server.EndpointsWithCustomErrors#htmlResponse" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="htmlResponse:EndpointsWithCustomErrors.this.ResponseEntity[play.twirl.api.Html]"></a><a id="htmlResponse:ResponseEntity[Html]"></a>
       <span class="permalink">
@@ -1877,7 +1864,7 @@ a response containing the error message.</p><p>This method can be overridden to 
       </span>
       
       <p class="shortcomment cmt">A successful HTTP response (status code 200) with an HTML entity</p>
-    </li><li name="endpoints.algebra.Urls#intQueryString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.algebra.Urls#intQueryString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="intQueryString:Urls.this.QueryStringParam[Int]"></a><a id="intQueryString:QueryStringParam[Int]"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#intQueryString:Urls.this.QueryStringParam[Int]" title="Permalink">
@@ -1893,7 +1880,7 @@ a response containing the error message.</p><p>This method can be overridden to 
       </span>
       
       <p class="shortcomment cmt">Ability to define <code>Int</code> query string parameters</p><div class="fullcomment"><div class="comment cmt"><p>Ability to define <code>Int</code> query string parameters</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
-    </li><li name="endpoints.algebra.Urls#intSegment" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.algebra.Urls#intSegment" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="intSegment:Urls.this.Segment[Int]"></a><a id="intSegment:Segment[Int]"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#intSegment:Urls.this.Segment[Int]" title="Permalink">
@@ -1909,7 +1896,7 @@ a response containing the error message.</p><p>This method can be overridden to 
       </span>
       
       <p class="shortcomment cmt">Ability to define <code>Int</code> path segments</p><div class="fullcomment"><div class="comment cmt"><p>Ability to define <code>Int</code> path segments</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
-    </li><li name="endpoints.algebra.Responses#internalServerError" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.algebra.Responses#internalServerError" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="internalServerError(docs:endpoints.algebra.Documentation):Responses.this.Response[Responses.this.ServerError]"></a><a id="internalServerError(Documentation):Response[ServerError]"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#internalServerError(docs:endpoints.algebra.Documentation):Responses.this.Response[Responses.this.ServerError]" title="Permalink">
@@ -1957,7 +1944,7 @@ a response containing the error message.</p><p>This method can be overridden to 
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="endpoints.algebra.Urls#longQueryString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.algebra.Urls#longQueryString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="longQueryString:Urls.this.QueryStringParam[Long]"></a><a id="longQueryString:QueryStringParam[Long]"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#longQueryString:Urls.this.QueryStringParam[Long]" title="Permalink">
@@ -1973,7 +1960,7 @@ a response containing the error message.</p><p>This method can be overridden to 
       </span>
       
       <p class="shortcomment cmt">Query string parameter containing a <code>Long</code> value</p><div class="fullcomment"><div class="comment cmt"><p>Query string parameter containing a <code>Long</code> value</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
-    </li><li name="endpoints.algebra.Urls#longSegment" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.algebra.Urls#longSegment" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="longSegment:Urls.this.Segment[Long]"></a><a id="longSegment:Segment[Long]"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#longSegment:Urls.this.Segment[Long]" title="Permalink">
@@ -2043,7 +2030,7 @@ a response containing the error message.</p><p>This method can be overridden to 
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="endpoints.algebra.Responses#ok" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.algebra.Responses#ok" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="ok[A](entity:Responses.this.ResponseEntity[A],docs:endpoints.algebra.Documentation):Responses.this.Response[A]"></a><a id="ok[A](ResponseEntity[A],Documentation):Response[A]"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#ok[A](entity:Responses.this.ResponseEntity[A],docs:endpoints.algebra.Documentation):Responses.this.Response[A]" title="Permalink">
@@ -2058,10 +2045,8 @@ a response containing the error message.</p><p>This method can be overridden to 
         <span class="name">ok</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="entity">entity: <a href="#ResponseEntity[A]=play.api.http.Writeable[A]" class="extmbr" name="endpoints.play.server.EndpointsWithCustomErrors.ResponseEntity">ResponseEntity</a>[<span class="extype" name="endpoints.algebra.Responses.ok.A">A</span>]</span>, <span name="docs">docs: <a href="../../algebra/index.html#Documentation=Option[String]" class="extmbr" name="endpoints.algebra.Documentation">Documentation</a> = <span class="symbol"><span class="name"><a href="../../../scala/index.html">None</a></span></span></span>)</span><span class="result">: <a href="#Response[A]=A=&gt;play.api.mvc.Result" class="extmbr" name="endpoints.play.server.EndpointsWithCustomErrors.Response">Response</a>[<span class="extype" name="endpoints.algebra.Responses.ok.A">A</span>]</span>
       </span>
       
-      <p class="shortcomment cmt">OK (200) Response with the given entity
-</p><div class="fullcomment"><div class="comment cmt"><p>OK (200) Response with the given entity
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd></dl></div>
-    </li><li name="endpoints.play.server.EndpointsWithCustomErrors#optHeader" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt">OK (200) Response with the given entity</p><div class="fullcomment"><div class="comment cmt"><p>OK (200) Response with the given entity</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd></dl></div>
+    </li><li name="endpoints.play.server.EndpointsWithCustomErrors#optHeader" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="optHeader(name:String,docs:Option[String]):play.api.mvc.Headers=&gt;endpoints.Validated[Option[String]]"></a><a id="optHeader(String,Option[String]):(Headers)⇒Validated[Option[String]]"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#optHeader(name:String,docs:Option[String]):play.api.mvc.Headers=&gt;endpoints.Validated[Option[String]]" title="Permalink">
@@ -2073,11 +2058,11 @@ a response containing the error message.</p><p>This method can be overridden to 
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">optHeader</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="docs">docs: <a href="https://www.scala-lang.org/api/2.12.10/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result">: (<a href="https://www.playframework.com/documentation/2.7.3/api/scala/play/api/mvc/Headers.html#play.api.mvc.Headers" class="extype" name="play.api.mvc.Headers">Headers</a>) ⇒ <a href="../../Validated.html" class="extype" name="endpoints.Validated">Validated</a>[<a href="https://www.scala-lang.org/api/2.12.10/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="scala.Predef.String">String</span>]]</span>
+        <span class="name">optHeader</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="docs">docs: <a href="https://www.scala-lang.org/api/2.12.10/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result">: (<a href="https://www.playframework.com/documentation/2.8.0/api/scala/play/api/mvc/Headers.html#play.api.mvc.Headers" class="extype" name="play.api.mvc.Headers">Headers</a>) ⇒ <a href="../../Validated.html" class="extype" name="endpoints.Validated">Validated</a>[<a href="https://www.scala-lang.org/api/2.12.10/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="scala.Predef.String">String</span>]]</span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.play.server.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a> → <a href="../../algebra/Requests.html" class="extype" name="endpoints.algebra.Requests">Requests</a></dd></dl></div>
-    </li><li name="endpoints.play.server.Urls#optionalQueryStringParam" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt">An optional request header</p><div class="fullcomment"><div class="comment cmt"><p>An optional request header</p></div><dl class="paramcmts block"><dt class="param">name</dt><dd class="cmt"><p>Header name (e.g., “Authorization”)</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.play.server.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a> → <a href="../../algebra/Requests.html" class="extype" name="endpoints.algebra.Requests">Requests</a></dd></dl></div>
+    </li><li name="endpoints.play.server.Urls#optionalQueryStringParam" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="optionalQueryStringParam[A](implicitparam:Urls.this.QueryStringParam[A]):Urls.this.QueryStringParam[Option[A]]"></a><a id="optionalQueryStringParam[A](QueryStringParam[A]):QueryStringParam[Option[A]]"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#optionalQueryStringParam[A](implicitparam:Urls.this.QueryStringParam[A]):Urls.this.QueryStringParam[Option[A]]" title="Permalink">
@@ -2097,7 +2082,7 @@ Server interpreters must accept incoming requests whose optional query string pa
 Server interpreters must report a failure for incoming requests whose optional query string
 parameters are present, but malformed.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Urls.html" class="extype" name="endpoints.play.server.Urls">Urls</a> → <a href="../../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
-    </li><li name="endpoints.algebra.Urls#path" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.algebra.Urls#path" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="path:Urls.this.Path[Unit]"></a><a id="path:Path[Unit]"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#path:Urls.this.Path[Unit]" title="Permalink">
@@ -2128,8 +2113,8 @@ parameters are present, but malformed.
         <span class="name">pathPartialInvariantFunctor</span><span class="result">: <a href="../../PartialInvariantFunctor.html" class="extype" name="endpoints.PartialInvariantFunctor">PartialInvariantFunctor</a>[<a href="#Path[A]extendsUrls.this.Url[A]" class="extmbr" name="endpoints.play.server.Urls.Path">Path</a>]</span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Urls.html" class="extype" name="endpoints.play.server.Urls">Urls</a> → <a href="../../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
-    </li><li name="endpoints.algebra.Requests#post" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt">Provides <code>xmap</code> and <code>xmapPartial</code> operations.</p><div class="fullcomment"><div class="comment cmt"><p>Provides <code>xmap</code> and <code>xmapPartial</code> operations.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Urls.html" class="extype" name="endpoints.play.server.Urls">Urls</a> → <a href="../../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd><dt>See also</dt><dd><span class="cmt"><p><a href="../../PartialInvariantFunctorSyntax$PartialInvariantFunctorSyntax.html" class="extype" name="endpoints.PartialInvariantFunctorSyntax.PartialInvariantFunctorSyntax">PartialInvariantFunctorSyntax</a> and <a href="../../InvariantFunctorSyntax$InvariantFunctorSyntax.html" class="extype" name="endpoints.InvariantFunctorSyntax.InvariantFunctorSyntax">InvariantFunctorSyntax</a></p></span></dd></dl></div>
+    </li><li name="endpoints.algebra.Requests#post" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="post[UrlP,BodyP,HeadersP,UrlAndBodyPTupled,Out](url:Requests.this.Url[UrlP],entity:Requests.this.RequestEntity[BodyP],docs:endpoints.algebra.Documentation,headers:Requests.this.RequestHeaders[HeadersP])(implicittuplerUB:endpoints.Tupler.Aux[UrlP,BodyP,UrlAndBodyPTupled],implicittuplerUBH:endpoints.Tupler.Aux[UrlAndBodyPTupled,HeadersP,Out]):Requests.this.Request[Out]"></a><a id="post[UrlP,BodyP,HeadersP,UrlAndBodyPTupled,Out](Url[UrlP],RequestEntity[BodyP],Documentation,RequestHeaders[HeadersP])(Tupler.Aux[UrlP,BodyP,UrlAndBodyPTupled],Tupler.Aux[UrlAndBodyPTupled,HeadersP,Out]):Request[Out]"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#post[UrlP,BodyP,HeadersP,UrlAndBodyPTupled,Out](url:Requests.this.Url[UrlP],entity:Requests.this.RequestEntity[BodyP],docs:endpoints.algebra.Documentation,headers:Requests.this.RequestHeaders[HeadersP])(implicittuplerUB:endpoints.Tupler.Aux[UrlP,BodyP,UrlAndBodyPTupled],implicittuplerUBH:endpoints.Tupler.Aux[UrlAndBodyPTupled,HeadersP,Out]):Requests.this.Request[Out]" title="Permalink">
@@ -2145,7 +2130,7 @@ parameters are present, but malformed.
       </span>
       
       <p class="shortcomment cmt">Helper method to perform POST request</p><div class="fullcomment"><div class="comment cmt"><p>Helper method to perform POST request</p></div><dl class="paramcmts block"><dt class="tparam">UrlP</dt><dd class="cmt"><p>Payload carried by url</p></dd><dt class="tparam">BodyP</dt><dd class="cmt"><p>Payload carried by body</p></dd><dt class="tparam">HeadersP</dt><dd class="cmt"><p>Payload carried by headers</p></dd><dt class="tparam">UrlAndBodyPTupled</dt><dd class="cmt"><p>Payloads of Url and Body tupled together by <a href="../../Tupler.html" class="extype" name="endpoints.Tupler">Tupler</a></p></dd><dt class="param">docs</dt><dd class="cmt"><p>Request documentation</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Requests.html" class="extype" name="endpoints.algebra.Requests">Requests</a></dd></dl></div>
-    </li><li name="endpoints.algebra.Requests#put" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.algebra.Requests#put" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="put[UrlP,BodyP,HeadersP,UrlAndBodyPTupled,Out](url:Requests.this.Url[UrlP],entity:Requests.this.RequestEntity[BodyP],docs:endpoints.algebra.Documentation,headers:Requests.this.RequestHeaders[HeadersP])(implicittuplerUB:endpoints.Tupler.Aux[UrlP,BodyP,UrlAndBodyPTupled],implicittuplerUBH:endpoints.Tupler.Aux[UrlAndBodyPTupled,HeadersP,Out]):Requests.this.Request[Out]"></a><a id="put[UrlP,BodyP,HeadersP,UrlAndBodyPTupled,Out](Url[UrlP],RequestEntity[BodyP],Documentation,RequestHeaders[HeadersP])(Tupler.Aux[UrlP,BodyP,UrlAndBodyPTupled],Tupler.Aux[UrlAndBodyPTupled,HeadersP,Out]):Request[Out]"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#put[UrlP,BodyP,HeadersP,UrlAndBodyPTupled,Out](url:Requests.this.Url[UrlP],entity:Requests.this.RequestEntity[BodyP],docs:endpoints.algebra.Documentation,headers:Requests.this.RequestHeaders[HeadersP])(implicittuplerUB:endpoints.Tupler.Aux[UrlP,BodyP,UrlAndBodyPTupled],implicittuplerUBH:endpoints.Tupler.Aux[UrlAndBodyPTupled,HeadersP,Out]):Requests.this.Request[Out]" title="Permalink">
@@ -2161,7 +2146,7 @@ parameters are present, but malformed.
       </span>
       
       <p class="shortcomment cmt">Helper method to perform PUT request</p><div class="fullcomment"><div class="comment cmt"><p>Helper method to perform PUT request</p></div><dl class="paramcmts block"><dt class="tparam">UrlP</dt><dd class="cmt"><p>Payload carried by url</p></dd><dt class="tparam">BodyP</dt><dd class="cmt"><p>Payload carried by body</p></dd><dt class="tparam">HeadersP</dt><dd class="cmt"><p>Payload carried by headers</p></dd><dt class="tparam">UrlAndBodyPTupled</dt><dd class="cmt"><p>Payloads of Url and Body tupled together by <a href="../../Tupler.html" class="extype" name="endpoints.Tupler">Tupler</a></p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Requests.html" class="extype" name="endpoints.algebra.Requests">Requests</a></dd></dl></div>
-    </li><li name="endpoints.play.server.Urls#qs" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.play.server.Urls#qs" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="qs[A](name:String,docs:endpoints.algebra.Documentation)(implicitvalue:Urls.this.QueryStringParam[A]):Urls.this.QueryString[A]"></a><a id="qs[A](String,Documentation)(QueryStringParam[A]):QueryString[A]"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#qs[A](name:String,docs:endpoints.algebra.Documentation)(implicitvalue:Urls.this.QueryStringParam[A]):Urls.this.QueryString[A]" title="Permalink">
@@ -2194,7 +2179,7 @@ qs[<span class="std">List</span>[<span class="std">Long</span>]](<span class="li
         <span class="name">queryStringParamPartialInvFunctor</span><span class="result">: <a href="../../PartialInvariantFunctor.html" class="extype" name="endpoints.PartialInvariantFunctor">PartialInvariantFunctor</a>[<a href="#QueryStringParam[A]extendsAnyRef" class="extmbr" name="endpoints.play.server.Urls.QueryStringParam">QueryStringParam</a>]</span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Urls.html" class="extype" name="endpoints.play.server.Urls">Urls</a> → <a href="../../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
+      <p class="shortcomment cmt">Provides <code>xmap</code> and <code>xmapPartial</code> operations.</p><div class="fullcomment"><div class="comment cmt"><p>Provides <code>xmap</code> and <code>xmapPartial</code> operations.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Urls.html" class="extype" name="endpoints.play.server.Urls">Urls</a> → <a href="../../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd><dt>See also</dt><dd><span class="cmt"><p><a href="../../PartialInvariantFunctorSyntax$PartialInvariantFunctorSyntax.html" class="extype" name="endpoints.PartialInvariantFunctorSyntax.PartialInvariantFunctorSyntax">PartialInvariantFunctorSyntax</a> and <a href="../../InvariantFunctorSyntax$InvariantFunctorSyntax.html" class="extype" name="endpoints.InvariantFunctorSyntax.InvariantFunctorSyntax">InvariantFunctorSyntax</a></p></span></dd></dl></div>
     </li><li name="endpoints.play.server.Urls#queryStringPartialInvFunctor" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="queryStringPartialInvFunctor:endpoints.PartialInvariantFunctor[Urls.this.QueryString]"></a><a id="queryStringPartialInvFunctor:PartialInvariantFunctor[QueryString]"></a>
       <span class="permalink">
@@ -2210,7 +2195,7 @@ qs[<span class="std">List</span>[<span class="std">Long</span>]](<span class="li
         <span class="name">queryStringPartialInvFunctor</span><span class="result">: <a href="../../PartialInvariantFunctor.html" class="extype" name="endpoints.PartialInvariantFunctor">PartialInvariantFunctor</a>[<a href="#QueryString[A]extendsAnyRef" class="extmbr" name="endpoints.play.server.Urls.QueryString">QueryString</a>]</span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Urls.html" class="extype" name="endpoints.play.server.Urls">Urls</a> → <a href="../../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
+      <p class="shortcomment cmt">Provides <code>xmap</code> and <code>xmapPartial</code> operations.</p><div class="fullcomment"><div class="comment cmt"><p>Provides <code>xmap</code> and <code>xmapPartial</code> operations.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Urls.html" class="extype" name="endpoints.play.server.Urls">Urls</a> → <a href="../../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd><dt>See also</dt><dd><span class="cmt"><p><a href="../../PartialInvariantFunctorSyntax$PartialInvariantFunctorSyntax.html" class="extype" name="endpoints.PartialInvariantFunctorSyntax.PartialInvariantFunctorSyntax">PartialInvariantFunctorSyntax</a> and <a href="../../InvariantFunctorSyntax$InvariantFunctorSyntax.html" class="extype" name="endpoints.InvariantFunctorSyntax.InvariantFunctorSyntax">InvariantFunctorSyntax</a></p></span></dd></dl></div>
     </li><li name="endpoints.play.server.EndpointsWithCustomErrors#redirect" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="redirect[A](other:=&gt;EndpointsWithCustomErrors.this.Endpoint[A,_])(args:A):EndpointsWithCustomErrors.this.Response[Unit]"></a><a id="redirect[A](⇒Endpoint[A,_])(A):Response[Unit]"></a>
       <span class="permalink">
@@ -2227,7 +2212,7 @@ qs[<span class="std">List</span>[<span class="std">Long</span>]](<span class="li
       </span>
       
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">other</dt><dd class="cmt"><p>Endpoint to redirect to</p></dd><dt class="param">args</dt><dd class="cmt"><p>Arguments to pass to the endpoint to generate its URL</p></dd><dt>returns</dt><dd class="cmt"><p>An HTTP response redirecting to another endpoint (using 303 code status).</p></dd></dl></div>
-    </li><li name="endpoints.play.server.Urls#remainingSegments" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.play.server.Urls#remainingSegments" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="remainingSegments(name:String,docs:endpoints.algebra.Documentation):Urls.this.Path[String]"></a><a id="remainingSegments(String,Documentation):Path[String]"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#remainingSegments(name:String,docs:endpoints.algebra.Documentation):Urls.this.Path[String]" title="Permalink">
@@ -2243,7 +2228,7 @@ qs[<span class="std">List</span>[<span class="std">Long</span>]](<span class="li
       </span>
       
       <p class="shortcomment cmt">The remaining segments of the path.</p><div class="fullcomment"><div class="comment cmt"><p>The remaining segments of the path. The <code>String</code> value carried by this <code>Path</code> is still URL-encoded.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Urls.html" class="extype" name="endpoints.play.server.Urls">Urls</a> → <a href="../../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
-    </li><li name="endpoints.play.server.Urls#repeatedQueryStringParam" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.play.server.Urls#repeatedQueryStringParam" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="repeatedQueryStringParam[A,CC[X]&lt;:Iterable[X]](implicitparam:Urls.this.QueryStringParam[A],implicitfactory:collection.compat.Factory[A,CC[A]]):Urls.this.QueryStringParam[CC[A]]"></a><a id="repeatedQueryStringParam[A,CC[X]&lt;:Iterable[X]](QueryStringParam[A],scala.collection.compat.Factory[A,CC[A]]):QueryStringParam[CC[A]]"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#repeatedQueryStringParam[A,CC[X]&lt;:Iterable[X]](implicitparam:Urls.this.QueryStringParam[A],implicitfactory:collection.compat.Factory[A,CC[A]]):Urls.this.QueryStringParam[CC[A]]" title="Permalink">
@@ -2276,7 +2261,7 @@ case, its value is an empty collection), and report a failure if at least one va
         <span class="name">reqEntityInvFunctor</span><span class="result">: <a href="../../InvariantFunctor.html" class="extype" name="endpoints.InvariantFunctor">InvariantFunctor</a>[<a href="#RequestEntity[A]=play.api.mvc.BodyParser[A]" class="extmbr" name="endpoints.play.server.EndpointsWithCustomErrors.RequestEntity">RequestEntity</a>]</span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.play.server.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a> → <a href="../../algebra/Requests.html" class="extype" name="endpoints.algebra.Requests">Requests</a></dd></dl></div>
+      <p class="shortcomment cmt">Provides <code>xmap</code> operation.</p><div class="fullcomment"><div class="comment cmt"><p>Provides <code>xmap</code> operation.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.play.server.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a> → <a href="../../algebra/Requests.html" class="extype" name="endpoints.algebra.Requests">Requests</a></dd><dt>See also</dt><dd><span class="cmt"><p><a href="../../InvariantFunctorSyntax$InvariantFunctorSyntax.html" class="extype" name="endpoints.InvariantFunctorSyntax.InvariantFunctorSyntax">InvariantFunctorSyntax</a></p></span></dd></dl></div>
     </li><li name="endpoints.play.server.EndpointsWithCustomErrors#reqHeadersInvFunctor" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="reqHeadersInvFunctor:endpoints.InvariantFunctor[EndpointsWithCustomErrors.this.RequestHeaders]"></a><a id="reqHeadersInvFunctor:InvariantFunctor[RequestHeaders]"></a>
       <span class="permalink">
@@ -2292,7 +2277,7 @@ case, its value is an empty collection), and report a failure if at least one va
         <span class="name">reqHeadersInvFunctor</span><span class="result">: <a href="../../InvariantFunctor.html" class="extype" name="endpoints.InvariantFunctor">InvariantFunctor</a>[<a href="#RequestHeaders[A]=play.api.mvc.Headers=&gt;endpoints.Validated[A]" class="extmbr" name="endpoints.play.server.EndpointsWithCustomErrors.RequestHeaders">RequestHeaders</a>]</span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.play.server.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a> → <a href="../../algebra/Requests.html" class="extype" name="endpoints.algebra.Requests">Requests</a></dd></dl></div>
+      <p class="shortcomment cmt">Provides <code>xmap</code> operation.</p><div class="fullcomment"><div class="comment cmt"><p>Provides <code>xmap</code> operation.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.play.server.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a> → <a href="../../algebra/Requests.html" class="extype" name="endpoints.algebra.Requests">Requests</a></dd><dt>See also</dt><dd><span class="cmt"><p><a href="../../InvariantFunctorSyntax$InvariantFunctorSyntax.html" class="extype" name="endpoints.InvariantFunctorSyntax.InvariantFunctorSyntax">InvariantFunctorSyntax</a></p></span></dd></dl></div>
     </li><li name="endpoints.play.server.EndpointsWithCustomErrors#reqHeadersSemigroupal" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="reqHeadersSemigroupal:endpoints.Semigroupal[EndpointsWithCustomErrors.this.RequestHeaders]"></a><a id="reqHeadersSemigroupal:Semigroupal[RequestHeaders]"></a>
       <span class="permalink">
@@ -2308,8 +2293,8 @@ case, its value is an empty collection), and report a failure if at least one va
         <span class="name">reqHeadersSemigroupal</span><span class="result">: <a href="../../Semigroupal.html" class="extype" name="endpoints.Semigroupal">Semigroupal</a>[<a href="#RequestHeaders[A]=play.api.mvc.Headers=&gt;endpoints.Validated[A]" class="extmbr" name="endpoints.play.server.EndpointsWithCustomErrors.RequestHeaders">RequestHeaders</a>]</span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.play.server.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a> → <a href="../../algebra/Requests.html" class="extype" name="endpoints.algebra.Requests">Requests</a></dd></dl></div>
-    </li><li name="endpoints.play.server.EndpointsWithCustomErrors#request" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt">Provides <code>++</code> operation.</p><div class="fullcomment"><div class="comment cmt"><p>Provides <code>++</code> operation.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.play.server.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a> → <a href="../../algebra/Requests.html" class="extype" name="endpoints.algebra.Requests">Requests</a></dd><dt>See also</dt><dd><span class="cmt"><p><a href="../../SemigroupalSyntax$SemigroupalSyntax.html" class="extype" name="endpoints.SemigroupalSyntax.SemigroupalSyntax">SemigroupalSyntax</a></p></span></dd></dl></div>
+    </li><li name="endpoints.play.server.EndpointsWithCustomErrors#request" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="request[A,B,C,AB,Out](method:EndpointsWithCustomErrors.this.Method,url:EndpointsWithCustomErrors.this.Url[A],entity:EndpointsWithCustomErrors.this.RequestEntity[B],docs:endpoints.algebra.Documentation,headers:EndpointsWithCustomErrors.this.RequestHeaders[C])(implicittuplerAB:endpoints.Tupler.Aux[A,B,AB],implicittuplerABC:endpoints.Tupler.Aux[AB,C,Out]):EndpointsWithCustomErrors.this.Request[Out]"></a><a id="request[A,B,C,AB,Out](Method,Url[A],RequestEntity[B],Documentation,RequestHeaders[C])(Tupler.Aux[A,B,AB],Tupler.Aux[AB,C,Out]):Request[Out]"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#request[A,B,C,AB,Out](method:EndpointsWithCustomErrors.this.Method,url:EndpointsWithCustomErrors.this.Url[A],entity:EndpointsWithCustomErrors.this.RequestEntity[B],docs:endpoints.algebra.Documentation,headers:EndpointsWithCustomErrors.this.RequestHeaders[C])(implicittuplerAB:endpoints.Tupler.Aux[A,B,AB],implicittuplerABC:endpoints.Tupler.Aux[AB,C,Out]):EndpointsWithCustomErrors.this.Request[Out]" title="Permalink">
@@ -2326,7 +2311,7 @@ case, its value is an empty collection), and report a failure if at least one va
       
       <p class="shortcomment cmt">Decodes a request.</p><div class="fullcomment"><div class="comment cmt"><p>Decodes a request.
 </p></div><dl class="paramcmts block"><dt class="param">method</dt><dd class="cmt"><p>Request method</p></dd><dt class="param">url</dt><dd class="cmt"><p>Request URL</p></dd><dt class="param">entity</dt><dd class="cmt"><p>Request entity</p></dd><dt class="param">docs</dt><dd class="cmt"><p>Request documentation</p></dd><dt class="param">headers</dt><dd class="cmt"><p>Request headers</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.play.server.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a> → <a href="../../algebra/Requests.html" class="extype" name="endpoints.algebra.Requests">Requests</a></dd></dl></div>
-    </li><li name="endpoints.play.server.EndpointsWithCustomErrors#response" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.play.server.EndpointsWithCustomErrors#response" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="response[A](statusCode:EndpointsWithCustomErrors.this.StatusCode,entity:EndpointsWithCustomErrors.this.ResponseEntity[A],docs:endpoints.algebra.Documentation):A=&gt;play.api.mvc.Result"></a><a id="response[A](StatusCode,ResponseEntity[A],Documentation):(A)⇒Result"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#response[A](statusCode:EndpointsWithCustomErrors.this.StatusCode,entity:EndpointsWithCustomErrors.this.ResponseEntity[A],docs:endpoints.algebra.Documentation):A=&gt;play.api.mvc.Result" title="Permalink">
@@ -2338,12 +2323,12 @@ case, its value is an empty collection), and report a failure if at least one va
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">response</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="statusCode">statusCode: <a href="#StatusCode=play.api.mvc.Results.Status" class="extmbr" name="endpoints.play.server.EndpointsWithCustomErrors.StatusCode">StatusCode</a></span>, <span name="entity">entity: <a href="#ResponseEntity[A]=play.api.http.Writeable[A]" class="extmbr" name="endpoints.play.server.EndpointsWithCustomErrors.ResponseEntity">ResponseEntity</a>[<span class="extype" name="endpoints.play.server.EndpointsWithCustomErrors.response.A">A</span>]</span>, <span name="docs">docs: <a href="../../algebra/index.html#Documentation=Option[String]" class="extmbr" name="endpoints.algebra.Documentation">Documentation</a> = <span class="symbol"><span class="name"><a href="../../../scala/index.html">None</a></span></span></span>)</span><span class="result">: (<span class="extype" name="endpoints.play.server.EndpointsWithCustomErrors.response.A">A</span>) ⇒ <a href="https://www.playframework.com/documentation/2.7.3/api/scala/play/api/mvc/Result.html#play.api.mvc.Result" class="extype" name="play.api.mvc.Result">Result</a></span>
+        <span class="name">response</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="statusCode">statusCode: <a href="#StatusCode=play.api.mvc.Results.Status" class="extmbr" name="endpoints.play.server.EndpointsWithCustomErrors.StatusCode">StatusCode</a></span>, <span name="entity">entity: <a href="#ResponseEntity[A]=play.api.http.Writeable[A]" class="extmbr" name="endpoints.play.server.EndpointsWithCustomErrors.ResponseEntity">ResponseEntity</a>[<span class="extype" name="endpoints.play.server.EndpointsWithCustomErrors.response.A">A</span>]</span>, <span name="docs">docs: <a href="../../algebra/index.html#Documentation=Option[String]" class="extmbr" name="endpoints.algebra.Documentation">Documentation</a> = <span class="symbol"><span class="name"><a href="../../../scala/index.html">None</a></span></span></span>)</span><span class="result">: (<span class="extype" name="endpoints.play.server.EndpointsWithCustomErrors.response.A">A</span>) ⇒ <a href="https://www.playframework.com/documentation/2.8.0/api/scala/play/api/mvc/Result.html#play.api.mvc.Result" class="extype" name="play.api.mvc.Result">Result</a></span>
       </span>
       
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">statusCode</dt><dd class="cmt"><p>Response status code</p></dd><dt class="param">entity</dt><dd class="cmt"><p>Response entity</p></dd><dt class="param">docs</dt><dd class="cmt"><p>Response documentation
-Server interpreters construct a response with the given status and entity.
-Client interpreters accept a response only if it has a corresponding status code.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.play.server.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a> → <a href="../../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd></dl></div>
+      <p class="shortcomment cmt">Server interpreters construct a response with the given status and entity.</p><div class="fullcomment"><div class="comment cmt"><p>Server interpreters construct a response with the given status and entity.
+Client interpreters accept a response only if it has a corresponding status code.
+</p></div><dl class="paramcmts block"><dt class="param">statusCode</dt><dd class="cmt"><p>Response status code</p></dd><dt class="param">entity</dt><dd class="cmt"><p>Response entity</p></dd><dt class="param">docs</dt><dd class="cmt"><p>Response documentation</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.play.server.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a> → <a href="../../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd></dl></div>
     </li><li name="endpoints.play.server.EndpointsWithCustomErrors#responseInvFunctor" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="responseInvFunctor:endpoints.InvariantFunctor[EndpointsWithCustomErrors.this.Response]"></a><a id="responseInvFunctor:InvariantFunctor[Response]"></a>
       <span class="permalink">
@@ -2359,7 +2344,7 @@ Client interpreters accept a response only if it has a corresponding status code
         <span class="name">responseInvFunctor</span><span class="result">: <a href="../../InvariantFunctor.html" class="extype" name="endpoints.InvariantFunctor">InvariantFunctor</a>[<a href="#Response[A]=A=&gt;play.api.mvc.Result" class="extmbr" name="endpoints.play.server.EndpointsWithCustomErrors.Response">Response</a>]</span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.play.server.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a> → <a href="../../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd></dl></div>
+      <p class="shortcomment cmt">Provides the operation <code>xmap</code> to the type <code>Response</code></p><div class="fullcomment"><div class="comment cmt"><p>Provides the operation <code>xmap</code> to the type <code>Response</code></p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.play.server.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a> → <a href="../../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd><dt>See also</dt><dd><span class="cmt"><p><a href="../../InvariantFunctorSyntax$InvariantFunctorSyntax.html" class="extype" name="endpoints.InvariantFunctorSyntax.InvariantFunctorSyntax">InvariantFunctorSyntax</a></p></span></dd></dl></div>
     </li><li name="endpoints.play.server.EndpointsWithCustomErrors#routesFromEndpoints" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="routesFromEndpoints(endpoints:EndpointsWithCustomErrors.this.ToPlayHandler*):PartialFunction[play.api.mvc.RequestHeader,play.api.mvc.Handler]"></a><a id="routesFromEndpoints(ToPlayHandler*):PartialFunction[RequestHeader,Handler]"></a>
       <span class="permalink">
@@ -2372,13 +2357,13 @@ Client interpreters accept a response only if it has a corresponding status code
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">routesFromEndpoints</span><span class="params">(<span name="endpoints">endpoints: <a href="EndpointsWithCustomErrors$ToPlayHandler.html" class="extype" name="endpoints.play.server.EndpointsWithCustomErrors.ToPlayHandler">ToPlayHandler</a>*</span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/PartialFunction.html#scala.PartialFunction" class="extype" name="scala.PartialFunction">PartialFunction</a>[<a href="https://www.playframework.com/documentation/2.7.3/api/scala/play/api/mvc/RequestHeader.html#play.api.mvc.RequestHeader" class="extype" name="play.api.mvc.RequestHeader">RequestHeader</a>, <a href="https://www.playframework.com/documentation/2.7.3/api/scala/play/api/mvc/Handler.html#play.api.mvc.Handler" class="extype" name="play.api.mvc.Handler">Handler</a>]</span>
+        <span class="name">routesFromEndpoints</span><span class="params">(<span name="endpoints">endpoints: <a href="EndpointsWithCustomErrors$ToPlayHandler.html" class="extype" name="endpoints.play.server.EndpointsWithCustomErrors.ToPlayHandler">ToPlayHandler</a>*</span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/PartialFunction.html#scala.PartialFunction" class="extype" name="scala.PartialFunction">PartialFunction</a>[<a href="https://www.playframework.com/documentation/2.8.0/api/scala/play/api/mvc/RequestHeader.html#play.api.mvc.RequestHeader" class="extype" name="play.api.mvc.RequestHeader">RequestHeader</a>, <a href="https://www.playframework.com/documentation/2.8.0/api/scala/play/api/mvc/Handler.html#play.api.mvc.Handler" class="extype" name="play.api.mvc.Handler">Handler</a>]</span>
       </span>
       
       <p class="shortcomment cmt">Builds a Play router out of endpoint definitions.</p><div class="fullcomment"><div class="comment cmt"><p>Builds a Play router out of endpoint definitions.</p><pre><span class="kw">val</span> routes = routesFromEndpoints(
   inc.implementedBy(x <span class="kw">=&gt;</span> x + <span class="num">1</span>)
 )</pre></div></div>
-    </li><li name="endpoints.play.server.Urls#segment" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.play.server.Urls#segment" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="segment[A](name:String,docs:endpoints.algebra.Documentation)(implicitA:Urls.this.Segment[A]):Urls.this.Path[A]"></a><a id="segment[A](String,Documentation)(Segment[A]):Path[A]"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#segment[A](name:String,docs:endpoints.algebra.Documentation)(implicitA:Urls.this.Segment[A]):Urls.this.Path[A]" title="Permalink">
@@ -2409,8 +2394,8 @@ Client interpreters accept a response only if it has a corresponding status code
         <span class="name">segmentPartialInvFunctor</span><span class="result">: <a href="../../PartialInvariantFunctor.html" class="extype" name="endpoints.PartialInvariantFunctor">PartialInvariantFunctor</a>[<a href="#Segment[A]extendsAnyRef" class="extmbr" name="endpoints.play.server.Urls.Segment">Segment</a>]</span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Urls.html" class="extype" name="endpoints.play.server.Urls">Urls</a> → <a href="../../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
-    </li><li name="endpoints.algebra.Errors#serverErrorResponse" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt">Provides <code>xmap</code> and <code>xmapPartial</code> operations.</p><div class="fullcomment"><div class="comment cmt"><p>Provides <code>xmap</code> and <code>xmapPartial</code> operations.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Urls.html" class="extype" name="endpoints.play.server.Urls">Urls</a> → <a href="../../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd><dt>See also</dt><dd><span class="cmt"><p><a href="../../PartialInvariantFunctorSyntax$PartialInvariantFunctorSyntax.html" class="extype" name="endpoints.PartialInvariantFunctorSyntax.PartialInvariantFunctorSyntax">PartialInvariantFunctorSyntax</a> and <a href="../../InvariantFunctorSyntax$InvariantFunctorSyntax.html" class="extype" name="endpoints.InvariantFunctorSyntax.InvariantFunctorSyntax">InvariantFunctorSyntax</a></p></span></dd></dl></div>
+    </li><li name="endpoints.algebra.Errors#serverErrorResponse" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="serverErrorResponse:Errors.this.Response[Errors.this.ServerError]"></a><a id="serverErrorResponse:Response[ServerError]"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#serverErrorResponse:Errors.this.Response[Errors.this.ServerError]" title="Permalink">
@@ -2427,9 +2412,8 @@ Client interpreters accept a response only if it has a corresponding status code
       
       <p class="shortcomment cmt">Response used by the <i>endpoints</i> library when the
 business logic of an endpoint fails.</p><div class="fullcomment"><div class="comment cmt"><p>Response used by the <i>endpoints</i> library when the
-business logic of an endpoint fails.</p><p>The provided implementation forwards to <code>internalServerError</code>
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Errors.html" class="extype" name="endpoints.algebra.Errors">Errors</a></dd></dl></div>
-    </li><li name="endpoints.play.server.Urls#staticPathSegment" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+business logic of an endpoint fails.</p><p>The provided implementation forwards to <code>internalServerError</code></p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Errors.html" class="extype" name="endpoints.algebra.Errors">Errors</a></dd></dl></div>
+    </li><li name="endpoints.play.server.Urls#staticPathSegment" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="staticPathSegment(segment:String):Urls.this.Path[Unit]"></a><a id="staticPathSegment(String):Path[Unit]"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#staticPathSegment(segment:String):Urls.this.Path[Unit]" title="Permalink">
@@ -2445,7 +2429,7 @@ business logic of an endpoint fails.</p><p>The provided implementation forwards 
       </span>
       
       <p class="shortcomment cmt">A path segment whose value is the given <code>segment</code></p><div class="fullcomment"><div class="comment cmt"><p>A path segment whose value is the given <code>segment</code></p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Urls.html" class="extype" name="endpoints.play.server.Urls">Urls</a> → <a href="../../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
-    </li><li name="endpoints.play.server.Urls#stringQueryString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.play.server.Urls#stringQueryString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="stringQueryString:Urls.this.QueryStringParam[String]"></a><a id="stringQueryString:QueryStringParam[String]"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#stringQueryString:Urls.this.QueryStringParam[String]" title="Permalink">
@@ -2461,7 +2445,7 @@ business logic of an endpoint fails.</p><p>The provided implementation forwards 
       </span>
       
       <p class="shortcomment cmt">Ability to define <code>String</code> query string parameters</p><div class="fullcomment"><div class="comment cmt"><p>Ability to define <code>String</code> query string parameters</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Urls.html" class="extype" name="endpoints.play.server.Urls">Urls</a> → <a href="../../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
-    </li><li name="endpoints.play.server.Urls#stringSegment" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.play.server.Urls#stringSegment" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="stringSegment:Urls.this.Segment[String]"></a><a id="stringSegment:Segment[String]"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#stringSegment:Urls.this.Segment[String]" title="Permalink">
@@ -2480,8 +2464,7 @@ business logic of an endpoint fails.</p><p>The provided implementation forwards 
 Servers should return an URL-decoded string value,
 and clients should take an URL-decoded string value.</p><div class="fullcomment"><div class="comment cmt"><p>Ability to define <code>String</code> path segments
 Servers should return an URL-decoded string value,
-and clients should take an URL-decoded string value.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Urls.html" class="extype" name="endpoints.play.server.Urls">Urls</a> → <a href="../../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
+and clients should take an URL-decoded string value.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Urls.html" class="extype" name="endpoints.play.server.Urls">Urls</a> → <a href="../../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
       <span class="permalink">
@@ -2498,7 +2481,7 @@ and clients should take an URL-decoded string value.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="endpoints.play.server.EndpointsWithCustomErrors#textRequest" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.play.server.EndpointsWithCustomErrors#textRequest" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="textRequest:play.api.mvc.BodyParser[String]"></a><a id="textRequest:BodyParser[String]"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#textRequest:play.api.mvc.BodyParser[String]" title="Permalink">
@@ -2510,12 +2493,11 @@ and clients should take an URL-decoded string value.
         <span class="kind">lazy val</span>
       </span>
       <span class="symbol">
-        <span class="name">textRequest</span><span class="result">: <a href="https://www.playframework.com/documentation/2.7.3/api/scala/play/api/mvc/BodyParser.html#play.api.mvc.BodyParser" class="extype" name="play.api.mvc.BodyParser">BodyParser</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+        <span class="name">textRequest</span><span class="result">: <a href="https://www.playframework.com/documentation/2.8.0/api/scala/play/api/mvc/BodyParser.html#play.api.mvc.BodyParser" class="extype" name="play.api.mvc.BodyParser">BodyParser</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>
       </span>
       
-      <p class="shortcomment cmt">Request with a <code>String</code> body.</p><div class="fullcomment"><div class="comment cmt"><p>Request with a <code>String</code> body.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.play.server.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a> → <a href="../../algebra/Requests.html" class="extype" name="endpoints.algebra.Requests">Requests</a></dd></dl></div>
-    </li><li name="endpoints.play.server.EndpointsWithCustomErrors#textResponse" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt">Request with a <code>String</code> body.</p><div class="fullcomment"><div class="comment cmt"><p>Request with a <code>String</code> body.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.play.server.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a> → <a href="../../algebra/Requests.html" class="extype" name="endpoints.algebra.Requests">Requests</a></dd></dl></div>
+    </li><li name="endpoints.play.server.EndpointsWithCustomErrors#textResponse" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="textResponse:EndpointsWithCustomErrors.this.ResponseEntity[String]"></a><a id="textResponse:ResponseEntity[String]"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#textResponse:EndpointsWithCustomErrors.this.ResponseEntity[String]" title="Permalink">
@@ -2578,7 +2560,7 @@ and clients should take an URL-decoded string value.
         <span class="name">urlPartialInvFunctor</span><span class="result">: <a href="../../PartialInvariantFunctor.html" class="extype" name="endpoints.PartialInvariantFunctor">PartialInvariantFunctor</a>[<a href="#Url[A]extendsAnyRef" class="extmbr" name="endpoints.play.server.Urls.Url">Url</a>]</span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Urls.html" class="extype" name="endpoints.play.server.Urls">Urls</a> → <a href="../../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
+      <p class="shortcomment cmt">Provides <code>xmap</code> and <code>xmapPartial</code> operations</p><div class="fullcomment"><div class="comment cmt"><p>Provides <code>xmap</code> and <code>xmapPartial</code> operations</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Urls.html" class="extype" name="endpoints.play.server.Urls">Urls</a> → <a href="../../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd><dt>See also</dt><dd><span class="cmt"><p><a href="../../PartialInvariantFunctorSyntax$PartialInvariantFunctorSyntax.html" class="extype" name="endpoints.PartialInvariantFunctorSyntax.PartialInvariantFunctorSyntax">PartialInvariantFunctorSyntax</a> and <a href="../../InvariantFunctorSyntax$InvariantFunctorSyntax.html" class="extype" name="endpoints.InvariantFunctorSyntax.InvariantFunctorSyntax">InvariantFunctorSyntax</a></p></span></dd></dl></div>
     </li><li name="endpoints.play.server.Urls#urlWithQueryString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="urlWithQueryString[A,B](path:Urls.this.Path[A],qs:Urls.this.QueryString[B])(implicittupler:endpoints.Tupler[A,B]):Urls.this.Url[tupler.Out]"></a><a id="urlWithQueryString[A,B](Path[A],QueryString[B])(Tupler[A,B]):Url[Out]"></a>
       <span class="permalink">
@@ -2611,7 +2593,7 @@ and clients should take an URL-decoded string value.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Urls.html" class="extype" name="endpoints.play.server.Urls">Urls</a></dd></dl></div>
-    </li><li name="endpoints.algebra.Urls#uuidQueryString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.algebra.Urls#uuidQueryString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="uuidQueryString:Urls.this.QueryStringParam[java.util.UUID]"></a><a id="uuidQueryString:QueryStringParam[UUID]"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#uuidQueryString:Urls.this.QueryStringParam[java.util.UUID]" title="Permalink">
@@ -2627,7 +2609,7 @@ and clients should take an URL-decoded string value.
       </span>
       
       <p class="shortcomment cmt">Ability to define <code>UUID</code> query string parameters</p><div class="fullcomment"><div class="comment cmt"><p>Ability to define <code>UUID</code> query string parameters</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
-    </li><li name="endpoints.algebra.Urls#uuidSegment" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.algebra.Urls#uuidSegment" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="uuidSegment:Urls.this.Segment[java.util.UUID]"></a><a id="uuidSegment:Segment[UUID]"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#uuidSegment:Urls.this.Segment[java.util.UUID]" title="Permalink">
@@ -2711,7 +2693,7 @@ and clients should take an URL-decoded string value.
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="endpoints.algebra.Responses#wheneverFound" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="endpoints.algebra.Responses#wheneverFound" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="wheneverFound[A](responseA:Responses.this.Response[A],notFoundDocs:endpoints.algebra.Documentation):Responses.this.Response[Option[A]]"></a><a id="wheneverFound[A](Response[A],Documentation):Response[Option[A]]"></a>
       <span class="permalink">
       <a href="../../../endpoints/play/server/EndpointsWithCustomErrors.html#wheneverFound[A](responseA:Responses.this.Response[A],notFoundDocs:endpoints.algebra.Documentation):Responses.this.Response[Option[A]]" title="Permalink">
@@ -2810,7 +2792,13 @@ an empty HTTP response whose status code is 404 (Not Found).
         </div>
 
         <div id="groupedMembers">
-        <div class="group" name="Ungrouped">
+        <div class="group" name="types">
+              <h3>Types</h3>
+              <div class="comment cmt"><p>Types introduced by the algebra</p></div>
+            </div><div class="group" name="operations">
+              <h3>Operations</h3>
+              <div class="comment cmt"><p>Operations creating and transforming values</p></div>
+            </div><div class="group" name="Ungrouped">
               <h3>Ungrouped</h3>
               
             </div>

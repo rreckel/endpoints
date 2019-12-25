@@ -119,22 +119,6 @@
       <p class="shortcomment cmt">Client interpreters backed by Akka HTTP
 </p><div class="fullcomment"><div class="comment cmt"><p>Client interpreters backed by Akka HTTP
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="endpoints.akkahttp">akkahttp</a></dd></dl></div>
-    </li><li name="endpoints.akkahttp.client.circe" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="circe"></a><a id="circe:circe"></a>
-      <span class="permalink">
-      <a href="../../../endpoints/akkahttp/client/circe/index.html" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">package</span>
-      </span>
-      <span class="symbol">
-        <a title="" href="circe/index.html"><span class="name">circe</span></a>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="endpoints.akkahttp.client">client</a></dd></dl></div>
     </li><li class="current-entities indented3">
                         <a class="object" href="AkkaHttpRequestExecutor$.html" title=""></a>
                         <a class="trait" href="" title=""></a>
@@ -161,8 +145,12 @@
                         <a href="EndpointsWithCustomErrors.html" title="Akka-HTTP based interpreter.">EndpointsWithCustomErrors</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
-                        <a class="trait" href="JsonEntitiesFromCodec.html" title="Interpreter for endpoints.algebra.JsonEntitiesFromCodec that encodes JSON request and decodes JSON responses using Akka HTTP."></a>
-                        <a href="JsonEntitiesFromCodec.html" title="Interpreter for endpoints.algebra.JsonEntitiesFromCodec that encodes JSON request and decodes JSON responses using Akka HTTP.">JsonEntitiesFromCodec</a>
+                        <a class="trait" href="JsonEntitiesFromCodecs.html" title="Interpreter for endpoints.algebra.JsonEntitiesFromCodecs that encodes JSON request and decodes JSON responses using Akka HTTP."></a>
+                        <a href="JsonEntitiesFromCodecs.html" title="Interpreter for endpoints.algebra.JsonEntitiesFromCodecs that encodes JSON request and decodes JSON responses using Akka HTTP.">JsonEntitiesFromCodecs</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="JsonEntitiesFromSchemas.html" title="Interpreter for endpoints.algebra.JsonEntitiesFromSchemas that encodes JSON request and decodes JSON responses using Akka HTTP."></a>
+                        <a href="JsonEntitiesFromSchemas.html" title="Interpreter for endpoints.algebra.JsonEntitiesFromSchemas that encodes JSON request and decodes JSON responses using Akka HTTP.">JsonEntitiesFromSchemas</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
                         <a class="trait" href="Methods.html" title=""></a>
@@ -209,7 +197,7 @@
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/julienrf/endpoints/blob/v0.12.0/akka-http/client/src/main/scala/endpoints/akkahttp/client/EndpointsSettings.scala" target="_blank">EndpointsSettings.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/julienrf/endpoints/blob/v0.13.0/akka-http/client/src/main/scala/endpoints/akkahttp/client/EndpointsSettings.scala" target="_blank">EndpointsSettings.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -218,7 +206,7 @@
                 <span class="toggle diagram-link">
                   Type Hierarchy
                 </span>
-                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph1" viewBox="0.00 0.00 210.00 118.00" height="118pt" width="210pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 114)" class="graph" id="page0,1_graph0"><polygon points="-4,4 -4,-114 206,-114 206,4 -4,4" stroke="transparent" fill="#ffffff"></polygon><g class="cluster" id="clust1"></g><g class="cluster" id="clust2"></g><!-- node0 --><g class="node this trait" id="graph1_0"><g id="a_this trait|graph1_0"><a xlink:title="endpoints.akkahttp.client.AkkaHttpRequestExecutor (this trait)" xlink:href="#inheritance-diagram"><path d="M169.6667,-49C169.6667,-49 32.3333,-49 32.3333,-49 28.1667,-49 24,-44.8333 24,-40.6667 24,-40.6667 24,-32.3333 24,-32.3333 24,-28.1667 28.1667,-24 32.3333,-24 32.3333,-24 169.6667,-24 169.6667,-24 173.8333,-24 178,-28.1667 178,-32.3333 178,-32.3333 178,-40.6667 178,-40.6667 178,-44.8333 173.8333,-49 169.6667,-49" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-43.5" x="34" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-34.1" x="55" text-anchor="start">AkkaHttpRequestExecutor</text></a></g></g><!-- node1 --><g class="node class" id="graph1_1"><g id="a_class|graph1_1"><a xlink:title="scala.AnyRef"><path d="M130.1667,-110C130.1667,-110 71.8333,-110 71.8333,-110 67.6667,-110 63.5,-105.8333 63.5,-101.6667 63.5,-101.6667 63.5,-93.3333 63.5,-93.3333 63.5,-89.1667 67.6667,-85 71.8333,-85 71.8333,-85 130.1667,-85 130.1667,-85 134.3333,-85 138.5,-89.1667 138.5,-93.3333 138.5,-93.3333 138.5,-101.6667 138.5,-101.6667 138.5,-105.8333 134.3333,-110 130.1667,-110" stroke="#418565" fill="#418565"></path><image xlink:href="../../../lib/class_diagram.png" y="-104.5" x="74" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-95.1" x="95" text-anchor="start">AnyRef</text></a></g></g><!-- node1&#45;&gt;node0 --><g class="edge inheritance" id="graph1_1_0"><g id="a_inheritance|graph1_1_0"><a xlink:title="AkkaHttpRequestExecutor is a subtype of AnyRef"><path d="M101,-77.7386C101,-68.3393 101,-57.3803 101,-49.123" stroke="#d4d4d4" fill="none"></path><polygon points="98.5501,-77.8607 101,-84.8608 103.4501,-77.8608 98.5501,-77.8607" stroke="#d4d4d4" fill="none"></polygon></a></g></g></g></svg></div>
+                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph1" viewBox="0.00 0.00 210.00 118.00" height="118pt" width="210pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 114)" class="graph" id="graph0"><polygon points="-4,4 -4,-114 206,-114 206,4 -4,4" stroke="none" fill="white"></polygon><g class="cluster" id="clust1"></g><g class="cluster" id="clust2"></g><!-- node0 --><g class="node this trait" id="graph1_0"><g id="a_this trait|graph1_0"><a xlink:title="endpoints.akkahttp.client.AkkaHttpRequestExecutor (this trait)" xlink:href="#inheritance-diagram"><path d="M169.167,-49C169.167,-49 32.8333,-49 32.8333,-49 28.6667,-49 24.5,-44.8333 24.5,-40.6667 24.5,-40.6667 24.5,-32.3333 24.5,-32.3333 24.5,-28.1667 28.6667,-24 32.8333,-24 32.8333,-24 169.167,-24 169.167,-24 173.333,-24 177.5,-28.1667 177.5,-32.3333 177.5,-32.3333 177.5,-40.6667 177.5,-40.6667 177.5,-44.8333 173.333,-49 169.167,-49" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-43.5" x="35" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-34.1" x="56" text-anchor="start">AkkaHttpRequestExecutor</text></a></g></g><!-- node1 --><g class="node class" id="graph1_1"><g id="a_class|graph1_1"><a xlink:title="scala.AnyRef"><path d="M129.167,-110C129.167,-110 72.8333,-110 72.8333,-110 68.6667,-110 64.5,-105.833 64.5,-101.667 64.5,-101.667 64.5,-93.3333 64.5,-93.3333 64.5,-89.1667 68.6667,-85 72.8333,-85 72.8333,-85 129.167,-85 129.167,-85 133.333,-85 137.5,-89.1667 137.5,-93.3333 137.5,-93.3333 137.5,-101.667 137.5,-101.667 137.5,-105.833 133.333,-110 129.167,-110" stroke="#418565" fill="#418565"></path><image xlink:href="../../../lib/class_diagram.png" y="-104.5" x="75" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-95.1" x="96" text-anchor="start">AnyRef</text></a></g></g><!-- node1&#45;&gt;node0 --><g class="edge inheritance" id="graph1_1_0"><g id="a_inheritance|graph1_1_0"><a xlink:title="AkkaHttpRequestExecutor is a subtype of AnyRef"><path d="M101,-77.7603C101,-68.3675 101,-57.2882 101,-49.1323" stroke="#d4d4d4" fill="none"></path><polygon points="98.5501,-77.8435 101,-84.8435 103.45,-77.8435 98.5501,-77.8435" stroke="#d4d4d4" fill="none"></polygon></a></g></g></g></svg></div>
                 <div id="diagram-controls" class="hiddenContent">
                   <button id="diagram-zoom-out" class="diagram-btn"><i class="material-icons"></i></button>
                   <button id="diagram-zoom-in" class="diagram-btn"><i class="material-icons"></i></button>
@@ -290,7 +278,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="params">(<span name="request">request: <a href="https://doc.akka.io/api/akka-http/10.1.10/akka/http/scaladsl/model/HttpRequest.html#akka.http.scaladsl.model.HttpRequest" class="extype" name="akka.http.scaladsl.model.HttpRequest">HttpRequest</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/concurrent/Future.html#scala.concurrent.Future" class="extype" name="scala.concurrent.Future">Future</a>[<a href="https://doc.akka.io/api/akka-http/10.1.10/akka/http/scaladsl/model/HttpResponse.html#akka.http.scaladsl.model.HttpResponse" class="extype" name="akka.http.scaladsl.model.HttpResponse">HttpResponse</a>]</span>
+        <span class="name">apply</span><span class="params">(<span name="request">request: <a href="https://doc.akka.io/api/akka-http/10.1.11/akka/http/scaladsl/model/HttpRequest.html#akka.http.scaladsl.model.HttpRequest" class="extype" name="akka.http.scaladsl.model.HttpRequest">HttpRequest</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/concurrent/Future.html#scala.concurrent.Future" class="extype" name="scala.concurrent.Future">Future</a>[<a href="https://doc.akka.io/api/akka-http/10.1.11/akka/http/scaladsl/model/HttpResponse.html#akka.http.scaladsl.model.HttpResponse" class="extype" name="akka.http.scaladsl.model.HttpResponse">HttpResponse</a>]</span>
       </span>
       
       

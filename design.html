@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="theme/css/foundation.min.css">
     <link rel="stylesheet" href="theme/css/app.css">
     
-     <link rel="stylesheet" href="theme/highlight.js/styles/github-gist.css">  <link rel="stylesheet" href="theme/css/foundation-icons.custom.css"> 
+     <link rel="stylesheet" href="theme/highlight.js/styles/github-gist.css">  <link rel="stylesheet" href="theme/css/mermaid.custom.css">  <link rel="stylesheet" href="theme/css/foundation-icons.custom.css"> 
     
-     <link rel="prev" href="algebras-and-interpreters.html"  title="Algebras and interpreters"  />  <link rel="next" href="guides.html"  title="Guides"  />  <link rel="start" href="index.html"  title="Introduction"  />  <link rel="toc" href="site-contents.html"  title="Table of Contents"  /> 
+     <link rel="prev" href="quick-start.html"  title="Quick start"  />  <link rel="next" href="algebras-and-interpreters.html"  title="Algebras and interpreters"  />  <link rel="start" href="index.html"  title="Introduction"  />  <link rel="toc" href="site-contents.html"  title="Table of Contents"  /> 
   </head>
   <body>
     <div class="expanded row">
@@ -21,7 +21,7 @@
             <div class="row">
               <div class="large-12 columns a_limited top-bar">
                 <div class="top-bar-left">
-                  <p>endpoints 0.12.0</p>
+                  <p>endpoints 0.13.0</p>
 
                 </div>
                 <div class="top-bar-right align-right row">
@@ -46,11 +46,11 @@
   <ul class="menu align-right simple a_navbar a_navbar_top">
     
       
-        <li><a href="algebras-and-interpreters.html"  title="Algebras and interpreters" ><span class="a_foundation_icon"></span>  Previous</a></li>
+        <li><a href="quick-start.html"  title="Quick start" ><span class="a_foundation_icon"></span>  Previous</a></li>
       
     
       
-        <li><a href="guides.html"  title="Guides" ><span class="a_foundation_icon"></span>  Next</a></li>
+        <li><a href="algebras-and-interpreters.html"  title="Algebras and interpreters" ><span class="a_foundation_icon"></span>  Next</a></li>
       
     
       
@@ -60,14 +60,44 @@
   </ul>
  
                 
+                   <noscript> <blockquote class="warning">
+<p>This page requires JavaScript. Please enable JavaScript in your browser.</p>
+</blockquote>
+ </noscript> 
+                
                 <h1 id="design-in-a-nutshell" class="a_section" data-magellan-target="design-in-a-nutshell">Design in a nutshell<a class="a_hlink" href="#design-in-a-nutshell"></a></h1>
-<p>The <code class="hljs">endpoints.algebra.Endpoints</code> trait used in the <a href="quick-start.html">quick start</a> provides members that
-bring <strong>vocabulary</strong> to describe HTTP endpoints (e.g. the <code class="hljs">endpoint</code>, <code class="hljs">get</code>, <code class="hljs">post</code>,
-etc. methods), but these members are all abstract. Furthermore,
-<strong>their types are also abstract</strong>.</p>
-<p>For instance, consider the following truncated version of <code class="hljs">endpoints.algebra.Endpoints</code>:</p>
+<p>You have seen in the <a href="quick-start.html">quick start</a> page that using the <em>endpoints</em> library consists in
+first defining abstract <strong>descriptions</strong> of HTTP endpoints, and then producing clients, servers, or
+documentation, by <strong>interpreting</strong> these descriptions. This page takes a step back to
+explain the underlying architecture of the library, and then provides some guidelines
+to embrace this design.</p>
+<h2 id="descriptions-and-interpretations" class="a_section" data-magellan-target="descriptions-and-interpretations">Descriptions and Interpretations<a class="a_hlink" href="#descriptions-and-interpretations"></a></h2>
+<p>Here is an example of endpoint description:</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
-<pre class="hljs"><code class="language-scala"><span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">Endpoints</span> </span>{
+<pre class="hljs"><code class="language-scala"><span class="hljs-keyword">import</span> endpoints.{algebra, generic}
+
+<span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">CounterEndpoints</span></span>
+  <span class="hljs-keyword">extends</span> algebra.<span class="hljs-type">Endpoints</span>
+    <span class="hljs-keyword">with</span> algebra.<span class="hljs-type">JsonEntitiesFromSchemas</span>
+    <span class="hljs-keyword">with</span> generic.<span class="hljs-type">JsonSchemas</span> {
+
+<span class="hljs-keyword">val</span> currentValue: <span class="hljs-type">Endpoint</span>[<span class="hljs-type">Unit</span>, <span class="hljs-type">Counter</span>] =
+  endpoint(get(path / <span class="hljs-string">"current-value"</span>), ok(jsonResponse[<span class="hljs-type">Counter</span>]))
+
+}</code></pre>
+<a href="https://github.com/julienrf/endpoints/blob/v0.13.0/documentation/examples/quickstart/endpoints/src/main/scala/quickstart/CounterEndpoints.scala#L5-L47" class="a_sourcelink">CounterEndpoints.scala</a></div></div>
+<p>Endpoint descriptions are defined in terms of operations (e.g., <code class="hljs">endpoint</code>, <code class="hljs">get</code>, <code class="hljs">path</code>, <code class="hljs">ok</code>, etc.)
+provided by traits living in the <a href="api/endpoints/algebra/index.html"><code class="hljs">endpoints.algebra</code> package</a>.
+These operations are all <strong>abstract</strong>. Furthermore, their return <strong>types</strong> are also abstract. Their
+purpose is only to define the <strong>rules</strong> for constructing and combining parts of HTTP endpoint
+descriptions. This is why they are called “algebra interfaces”, or just <strong>algebras</strong>.</p>
+<p>For instance, consider the following truncated version of the
+<a href="api/endpoints/algebra/Endpoints.html"><code class="hljs">Endpoints</code> algebra</a>:</p>
+<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
+<pre class="hljs"><code class="language-scala"><span class="hljs-keyword">package</span> endpoints.algebra
+
+<span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">Endpoints</span> </span>{
+  <span class="hljs-comment">/** A request that uses the method GET and the given URL */</span>
   <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get</span></span>[<span class="hljs-type">A</span>](url: <span class="hljs-type">Url</span>[<span class="hljs-type">A</span>]): <span class="hljs-type">Request</span>[<span class="hljs-type">A</span>]
 
   <span class="hljs-comment">/** A request that carries an `A` information */</span>
@@ -77,34 +107,122 @@ etc. methods), but these members are all abstract. Furthermore,
 }
 </code></pre>
 </div></div>
-<p>The <code class="hljs">get</code> method builds a <code class="hljs">Request[A]</code> out of an <code class="hljs">Url[A]</code>. Let’s put aside the <code class="hljs">Url[A]</code> type and focus on
-<code class="hljs">Request[A]</code>.</p>
-<p>The <code class="hljs">Request[A]</code> type defines an HTTP request that <em>carries</em> an information <code class="hljs">A</code>. From a client point
-of view, this <code class="hljs">A</code> is what is <strong>needed</strong> to build a <code class="hljs">Request[A]</code>. From a server point of view, this <code class="hljs">A</code>
-is what is <strong>provided</strong> when processing a <code class="hljs">Request[A]</code>.</p>
-<p>Let’s see the semantics that is given to <code class="hljs">Request[A]</code> by the <code class="hljs">endpoints.xhr.Endpoints</code> trait:</p>
+<p>Here, the <code class="hljs">get</code> method provides a way to define an HTTP request description from a URL description.</p>
+<blockquote class="note">
+<p>Since the <code class="hljs">Request[A]</code> type is abstract, the <em>only</em> way to construct a value of that type is
+by calling a method that returns a <code class="hljs">Request[A]</code>, such as the method <code class="hljs">get</code>, in the above
+code. For this reason, we say that the method <code class="hljs">get</code> is a <strong>constructor</strong> for <code class="hljs">Request[A]</code>.</p>
+</blockquote>
+<p>The <code class="hljs">Request[A]</code> type models an HTTP request that <em>carries</em> an information of type <code class="hljs">A</code>. From a client
+point of view, this <code class="hljs">A</code> is what is <strong>needed</strong> to build a <code class="hljs">Request[A]</code>. Conversely, from a server point
+of view, this <code class="hljs">A</code> is what is <strong>provided</strong> by an incoming a <code class="hljs">Request[A]</code>.</p>
+<p>You have seen in the “quick start” page that <strong>interpreters</strong> give semantics to the algebras. They
+do so by fixing their type members and implementing their methods accordingly. For instance, here is the
+semantics given to <code class="hljs">Request[A]</code> by the Scala.js client interpreter:</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
-<pre class="hljs"><code class="language-scala"><span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">Endpoints</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">algebra</span>.<span class="hljs-title">Endpoints</span> </span>{
+<pre class="hljs"><code class="language-scala"><span class="hljs-keyword">package</span> endpoints.xhr
+
+<span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">Endpoints</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">endpoints</span>.<span class="hljs-title">algebra</span>.<span class="hljs-title">Endpoints</span> </span>{
   <span class="hljs-class"><span class="hljs-keyword">type</span> <span class="hljs-title">Request</span>[<span class="hljs-type">A</span>] </span>= js.<span class="hljs-type">Function1</span>[<span class="hljs-type">A</span>, <span class="hljs-type">XMLHttpRequest</span>]
 }
 </code></pre>
 </div></div>
 <p>As previously said, from a client point of view we want to send requests and get responses. So, <code class="hljs">Request[A]</code>
-has the semantics of a recipe to build an <code class="hljs">XMLHttpRequest</code> out of an <code class="hljs">A</code> value.</p>
-<p>Here is the semantics given by the <code class="hljs">endpoints.play.server.Endpoints</code> trait:</p>
+has the semantics of a function that builds an <code class="hljs">XMLHttpRequest</code> out of an <code class="hljs">A</code> value.</p>
+<p>Here is the semantics given by the Play-based server interpreter:</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
-<pre class="hljs"><code class="language-scala"><span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">Endpoints</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">algebra</span>.<span class="hljs-title">Endpoints</span> </span>{
+<pre class="hljs"><code class="language-scala"><span class="hljs-keyword">package</span> endpoints.play.server
+
+<span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">Endpoints</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">endpoints</span>.<span class="hljs-title">algebra</span>.<span class="hljs-title">Endpoints</span> </span>{
   <span class="hljs-class"><span class="hljs-keyword">type</span> <span class="hljs-title">Request</span>[<span class="hljs-type">A</span>] </span>= <span class="hljs-type">RequestHeader</span> =&gt; <span class="hljs-type">Option</span>[<span class="hljs-type">BodyParser</span>[<span class="hljs-type">A</span>]]
 }
 </code></pre>
 </div></div>
 <p>The aim of the <code class="hljs">endpoints.play.server.Endpoints</code> trait is to provide a Play router for a given set of HTTP endpoints. So,
 a <code class="hljs">Request[A]</code> is a function that checks if an incoming request matches this endpoint, and in such
-a case it returns a <code class="hljs">BodyParser[A]</code> that pulls an <code class="hljs">A</code> out of the request.</p>
-<p>As you can see, each implementation brings its own <strong>concrete semantic type</strong> for <code class="hljs">Request[A]</code>.</p>
-<p>According to B. Oliveira [1], we say that <code class="hljs">endpoints.algebra.Endpoints</code> is an <em>object algebra interface</em> and that <code class="hljs">endpoints.xhr.Endpoints</code>
-and <code class="hljs">endpoints.play.server.Endpoints</code> are <em>object algebras</em>. Note that we use an encoding borrowed from C. Hofer [2], which encodes
-<em>carrier types</em> with type members rather than type parameters.</p>
+a case it returns a <code class="hljs">BodyParser[A]</code> that decodes a value of type <code class="hljs">A</code> from the request.</p>
+<p>As you can see, each interpreter brings its own <strong>concrete semantic type</strong> for <code class="hljs">Request[A]</code>. Client
+interpreters typically fix the <code class="hljs">Request[A]</code> type to a function that <em>takes</em> an <code class="hljs">A</code> as parameter. Conversely,
+server interpreters typically fix the <code class="hljs">Request[A]</code> type to a function that <em>returns</em> an <code class="hljs">A</code>. Can you guess
+what documentation interpreters do with this type parameter <code class="hljs">A</code>? You can see the answer
+<a href="api/endpoints/openapi/Requests.html#Request[A]=Requests.this.DocumentedRequest">here</a>. It is
+discarded because this type <code class="hljs">A</code> models the information that is carried by an actual request, at run-time,
+but the documentation is static (so, there is no <code class="hljs">A</code> value to deal with).</p>
+<blockquote class="note">
+<p>This technique has been described in details by Bruno C. d. S. Oliveira <em>et al.</em> [1].
+Note that we use a variant discovered by Christian Hofer <em>et al.</em> [2], which uses
+type members rather than type parameters.</p>
+</blockquote>
+<h3 id="summary" class="a_section" data-magellan-target="summary">Summary<a class="a_hlink" href="#summary"></a></h3>
+<p><strong>Algebras</strong> are traits that provide abstract type members and methods defining how to
+<strong>construct</strong> and <strong>combine</strong> endpoint descriptions.</p>
+<p><strong>Interpreters</strong> are traits that extend algebras, and give them a concrete meaning by
+fixing their type members and implementing their methods accordingly.</p>
+<h2 id="modular-algebras" class="a_section" data-magellan-target="modular-algebras">Modular Algebras<a class="a_hlink" href="#modular-algebras"></a></h2>
+<p>The separation between descriptions and interpretations provides one dimension of
+modularity: a same endpoint description can be interpreted with a client interpreter,
+a server interpreter, or documentation interpreter. Even more, the client and server
+stacks can be completely different (one can use Play framework while the other uses
+Akka, for instance). Here is a diagram illustrating the fact that multiple
+interpreters can be applied to a same algebra:</p>
+<div class="mermaid" id="_id0"><pre class="mermaid_src" style="display: none">graph BT
+  algebra.Endpoints
+  play.server.Endpoints --&gt; algebra.Endpoints
+  akkahttp.client.Endpoints --&gt; algebra.Endpoints
+  openapi.Endpoints --&gt; algebra.Endpoints
+</pre></div>
+<blockquote class="note">
+<p>From that perspective, endpoint descriptions are equivalent to protobuf or Swagger
+files: they are machine-readable descriptors for a service. As a consequence, if you
+want to share a descriptor of your service with the outside world, one option is
+to publish the artifact containing the traits that provide your endpoint descriptions.
+Downstream users will then be able to turn these descriptions to a client of
+their choice by applying the interpreter of their choice. Of course, this works only
+if your users use Scala. For the rest of the world, you can distribute the
+descriptor produced by the OpenAPI interpreter.</p>
+</blockquote>
+<p>The fact that algebras are defined in traits and that we can mix several traits
+together provides a second dimension of modularity: the algebra itself is modular.
+For instance, you have seen in the code example at the top of this page that two
+algebras were used together: <code class="hljs">algebra.Endpoints</code> and <code class="hljs">algebra.JsonEntitiesFromSchemas</code>.
+The diagram below shows a couple of algebras and their relations:</p>
+<div class="mermaid" id="_id1"><pre class="mermaid_src" style="display: none">graph BT
+  algebra.Endpoints
+  algebra.JsonEntitiesFromSchemas --&gt; algebra.Endpoints
+  algebra.BasicAuthentication --&gt; algebra.Endpoints
+</pre></div>
+<p>We say that the <code class="hljs">BasicAuthentication</code> algebra <strong>enriches</strong> the <code class="hljs">Endpoints</code> algebra
+with operations related to authentication.</p>
+<p>The fact that algebras are modular is a double-edged sword. On one hand, having several
+algebra modules makes it possible for some interpreters to support only a subset of them.
+Consider for instance an algebra for describing Web Sockets. Not all HTTP clients or servers
+have a good support of Web Sockets, which means that not all HTTP clients or servers could
+interpret such an algebra. However, this is not a problem: that algebra module can
+be skipped, and the interpreters can focus on supporting only the modules that are
+relevant to them. Another benefit is that the algebras provided by the <em>endpoints</em> library
+can be extended <em>outside</em> of the library itself. Any application-specific concern can
+be introduced as another algebra without having to make the <em>endpoints</em> library aware of
+it. This point is illustrated in the
+<a href="guides/custom-authentication.html">authentication example</a>.</p>
+<p>On the other hand, a modular algebra means that you have to select the algebra modules
+to use before you can write endpoint descriptions. For instance, the provided
+<code class="hljs">Endpoints</code> algebra is minimalist and is unlikely to be enough for your needs. Most
+probably, you will complete it with one of the <code class="hljs">JsonEntities</code> algebras. Once you have
+settled on the algebra modules you want to use, you will have to find the matching
+interpreter modules. In general, interpreters follow a specific
+<a href="algebras-and-interpreters.html#naming-conventions">naming convention</a> that should make
+this process easier.</p>
+<p>Another consequence of the modularity of the algebras is that the library <em>intentionally</em>
+provides a minimal set of features. The aim is to cover most users’ needs in the main
+algebra, and let the community experiment with other algebra modules on their own before
+considering including them into the main algebra.</p>
+<h3 id="summary-1" class="a_section" data-magellan-target="summary-1">Summary<a class="a_hlink" href="#summary-1"></a></h3>
+<p>Algebras are <strong>modular</strong>. You select the algebras that provide the features
+you need, and you can even create your own algebras for more specific needs.
+The more algebras are used, the less interpreters can interpret them.</p>
+<h2 id="next-step" class="a_section" data-magellan-target="next-step">Next Step<a class="a_hlink" href="#next-step"></a></h2>
+<p>Discover the hierarchy of <a href="algebras-and-interpreters.html">algebras</a>.</p>
+<hr />
 <ul>
 <li>[1] B. C. d. S. Oliveira et. al. Extensibility for the Masses, Practical Extensibility with Object Algebras, ECOOP,
 2012 (<a href="https://www.cs.utexas.edu/~wcook/Drafts/2012/ecoop2012.pdf">pdf</a>)</li>
@@ -115,11 +233,11 @@ and <code class="hljs">endpoints.play.server.Endpoints</code> are <em>object alg
   <ul class="menu align-right simple a_navbar a_navbar_bottom">
     
       
-        <li><a href="algebras-and-interpreters.html"  title="Algebras and interpreters" ><span class="a_foundation_icon"></span>  Previous</a></li>
+        <li><a href="quick-start.html"  title="Quick start" ><span class="a_foundation_icon"></span>  Previous</a></li>
       
     
       
-        <li><a href="guides.html"  title="Guides" ><span class="a_foundation_icon"></span>  Next</a></li>
+        <li><a href="algebras-and-interpreters.html"  title="Algebras and interpreters" ><span class="a_foundation_icon"></span>  Next</a></li>
       
     
       
@@ -163,19 +281,19 @@ and <code class="hljs">endpoints.play.server.Endpoints</code> are <em>object alg
     
   </li>
   
-  <li >
+  <li  class="a_thispage" >
     
       
-        <a href="algebras-and-interpreters.html">Algebras and interpreters</a>
+        <a href="design.html">Design in a nutshell</a>
       
     
     
   </li>
   
-  <li  class="a_thispage" >
+  <li >
     
       
-        <a href="design.html">Design in a nutshell</a>
+        <a href="algebras-and-interpreters.html">Algebras and interpreters</a>
       
     
     
@@ -216,6 +334,76 @@ and <code class="hljs">endpoints.play.server.Endpoints</code> are <em>object alg
               
               
               
+                <div class="small-12 medium-12 large-2 large-order-3 columns a_show-for-xlarge" data-sticky-container>
+                  <nav class="a_pagenav" data-sticky data-sticky-on="large" data-anchor="_sections">
+                     <header><p>On This Page</p>
+</header> 
+                    <ul class="vertical menu" data-magellan>
+                       
+  
+    <li>
+      
+         <a href="#design-in-a-nutshell">Design in a nutshell</a> 
+      
+      
+        <ul class="vertical menu">  
+  
+    <li>
+      
+         <a href="#descriptions-and-interpretations">Descriptions and Interpretations</a> 
+      
+      
+        <ul class="vertical menu">  
+  
+    <li>
+      
+         <a href="#summary">Summary</a> 
+      
+      
+    </li>
+  
+  </ul>
+      
+    </li>
+  
+  
+  
+    <li>
+      
+         <a href="#modular-algebras">Modular Algebras</a> 
+      
+      
+        <ul class="vertical menu">  
+  
+    <li>
+      
+         <a href="#summary-1">Summary</a> 
+      
+      
+    </li>
+  
+  </ul>
+      
+    </li>
+  
+  
+  
+    <li>
+      
+         <a href="#next-step">Next Step</a> 
+      
+      
+    </li>
+  
+  </ul>
+      
+    </li>
+  
+ 
+                    </ul>
+                  </nav>
+                </div>
+              
             </div>
           </div>
         </div>
@@ -239,7 +427,7 @@ and <code class="hljs">endpoints.play.server.Endpoints</code> are <em>object alg
     <script src="theme/js/jquery.min.js"></script>
     <script src="theme/js/what-input.min.js"></script>
     <script src="theme/js/foundation.min.js"></script>
-    
+     <script src="theme/js/mermaidAPI-0.5.8.min.js"></script> 
     <script src="theme/js/app.js"></script>
     
   </body>

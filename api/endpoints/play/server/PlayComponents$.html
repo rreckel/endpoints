@@ -135,22 +135,6 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="endpoints.play.server">server</a></dd></dl></div>
-    </li><li name="endpoints.play.server.playjson" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="playjson"></a><a id="playjson:playjson"></a>
-      <span class="permalink">
-      <a href="../../../endpoints/play/server/playjson/index.html" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">package</span>
-      </span>
-      <span class="symbol">
-        <a title="" href="playjson/index.html"><span class="name">playjson</span></a>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="endpoints.play.server">server</a></dd></dl></div>
     </li><li class="current-entities indented3">
                         <span class="separator"></span>
                         <a class="trait" href="Assets.html" title="Interpreter for algebra.Assets that performs routing using Play framework"></a>
@@ -173,8 +157,16 @@
                         <a href="EndpointsWithCustomErrors.html" title="Interpreter for algebra.Endpoints that performs routing using Play framework.">EndpointsWithCustomErrors</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
-                        <a class="trait" href="JsonEntitiesFromCodec.html" title="Interpreter for endpoints.algebra.JsonEntitiesFromCodec that decodes JSON requests and encodes JSON responses."></a>
-                        <a href="JsonEntitiesFromCodec.html" title="Interpreter for endpoints.algebra.JsonEntitiesFromCodec that decodes JSON requests and encodes JSON responses.">JsonEntitiesFromCodec</a>
+                        <a class="trait" href="JsonEntitiesFromCodecs.html" title="Interpreter for algebra.JsonEntitiesFromCodecs that decodes JSON requests and encodes JSON responses."></a>
+                        <a href="JsonEntitiesFromCodecs.html" title="Interpreter for algebra.JsonEntitiesFromCodecs that decodes JSON requests and encodes JSON responses.">JsonEntitiesFromCodecs</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="JsonEntitiesFromEncodersAndDecoders.html" title="Interpreter for algebra.JsonEntities that decodes JSON entities with a algebra.Decoder and encodes JSON entities with an algebra.Encoder."></a>
+                        <a href="JsonEntitiesFromEncodersAndDecoders.html" title="Interpreter for algebra.JsonEntities that decodes JSON entities with a algebra.Decoder and encodes JSON entities with an algebra.Encoder.">JsonEntitiesFromEncodersAndDecoders</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="JsonEntitiesFromSchemas.html" title="Interpreter for algebra.JsonEntitiesFromSchemas that decodes JSON requests and encodes JSON responses."></a>
+                        <a href="JsonEntitiesFromSchemas.html" title="Interpreter for algebra.JsonEntitiesFromSchemas that decodes JSON requests and encodes JSON responses.">JsonEntitiesFromSchemas</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
                         <a class="trait" href="LowLevelEndpoints.html" title=""></a>
@@ -237,7 +229,7 @@
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/julienrf/endpoints/blob/v0.12.0/play/server/src/main/scala/endpoints/play/server/PlayComponents.scala" target="_blank">PlayComponents.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/julienrf/endpoints/blob/v0.13.0/play/server/src/main/scala/endpoints/play/server/PlayComponents.scala" target="_blank">PlayComponents.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -448,7 +440,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">fromBuiltInComponents</span><span class="params">(<span name="builtInComponents">builtInComponents: <a href="https://www.playframework.com/documentation/2.7.3/api/scala/play/api/BuiltInComponents.html#play.api.BuiltInComponents" class="extype" name="play.api.BuiltInComponents">BuiltInComponents</a></span>)</span><span class="result">: <a href="PlayComponents.html" class="extype" name="endpoints.play.server.PlayComponents">PlayComponents</a></span>
+        <span class="name">fromBuiltInComponents</span><span class="params">(<span name="builtInComponents">builtInComponents: <a href="https://www.playframework.com/documentation/2.8.0/api/scala/play/api/BuiltInComponents.html#play.api.BuiltInComponents" class="extype" name="play.api.BuiltInComponents">BuiltInComponents</a></span>)</span><span class="result">: <a href="PlayComponents.html" class="extype" name="endpoints.play.server.PlayComponents">PlayComponents</a></span>
       </span>
       
       <p class="shortcomment cmt">Creates the <code>PlayComponents</code> from a <code>BuiltInComponents</code> instance</p><div class="fullcomment"><div class="comment cmt"><p>Creates the <code>PlayComponents</code> from a <code>BuiltInComponents</code> instance</p><p>This can be useful in conjunction with the usage of <code>fromXxxWithComponents</code>

@@ -143,18 +143,18 @@
                         <a href="BasicAuthentication.html" title="Provides vocabulary to describe endpoints that use Basic HTTP authentication.">BasicAuthentication</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
-                        <a class="trait" href="BuiltInErrors.html" title="Uses endpoints built-in error types:"></a>
-                        <a href="BuiltInErrors.html" title="Uses endpoints built-in error types:">BuiltInErrors</a>
+                        <a class="trait" href="BuiltInErrors.html" title="Interpreter for the Errors algebra that uses endpoints built-in error types:"></a>
+                        <a href="BuiltInErrors.html" title="Interpreter for the Errors algebra that uses endpoints built-in error types:">BuiltInErrors</a>
                       </li><li class="current-entities indented2">
-                        <span class="separator"></span>
+                        <a class="object" href="Codec$.html" title=""></a>
                         <a class="trait" href="Codec.html" title="A way to encode and decode values"></a>
                         <a href="Codec.html" title="A way to encode and decode values">Codec</a>
                       </li><li class="current-entities indented2">
-                        <span class="separator"></span>
+                        <a class="object" href="Decoder$.html" title=""></a>
                         <a class="trait" href="Decoder.html" title="A way to decode a From value into a To value."></a>
                         <a href="Decoder.html" title="A way to decode a From value into a To value.">Decoder</a>
                       </li><li class="current-entities indented2">
-                        <span class="separator"></span>
+                        <a class="object" href="Encoder$.html" title=""></a>
                         <a class="trait" href="Encoder.html" title="A way to encode a From value into a To value"></a>
                         <a href="Encoder.html" title="A way to encode a From value into a To value">Encoder</a>
                       </li><li class="current-entities indented2">
@@ -171,20 +171,20 @@
                         <a href="Errors.html" title="Defines the error types used to model client and server errors.">Errors</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
-                        <a class="object" href="InvalidCodec$.html" title=""></a>
-                        <a href="InvalidCodec$.html" title="">InvalidCodec</a>
+                        <a class="trait" href="JsonCodecs.html" title="Fixes both the JsonRequest and JsonResponse types to be a same JsonCodec type."></a>
+                        <a href="JsonCodecs.html" title="Fixes both the JsonRequest and JsonResponse types to be a same JsonCodec type.">JsonCodecs</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="trait" href="JsonEntities.html" title="Algebra interface for describing JSON entities in requests and responses."></a>
                         <a href="JsonEntities.html" title="Algebra interface for describing JSON entities in requests and responses.">JsonEntities</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
-                        <a class="trait" href="JsonEntitiesFromCodec.html" title="Fixes both the JsonRequest and JsonResponse types to be Codec."></a>
-                        <a href="JsonEntitiesFromCodec.html" title="Fixes both the JsonRequest and JsonResponse types to be Codec.">JsonEntitiesFromCodec</a>
+                        <a class="trait" href="JsonEntitiesFromCodecs.html" title="Turns a JsonCodec into a Codec."></a>
+                        <a href="JsonEntitiesFromCodecs.html" title="Turns a JsonCodec into a Codec.">JsonEntitiesFromCodecs</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
-                        <a class="trait" href="JsonSchemaEntities.html" title="Partially applies the endpoints.algebra.JsonEntities algebra interface to fix the JsonRequest and JsonResponse types to be JsonSchema."></a>
-                        <a href="JsonSchemaEntities.html" title="Partially applies the endpoints.algebra.JsonEntities algebra interface to fix the JsonRequest and JsonResponse types to be JsonSchema.">JsonSchemaEntities</a>
+                        <a class="trait" href="JsonEntitiesFromSchemas.html" title="Partially applies the JsonEntities algebra interface to fix the JsonRequest and JsonResponse types to be JsonSchema."></a>
+                        <a href="JsonEntitiesFromSchemas.html" title="Partially applies the JsonEntities algebra interface to fix the JsonRequest and JsonResponse types to be JsonSchema.">JsonEntitiesFromSchemas</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="trait" href="JsonSchemas.html" title="An algebra interface for describing algebraic data types."></a>
@@ -254,7 +254,7 @@
 
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Multiplexed request type
-</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/julienrf/endpoints/blob/v0.12.0/algebras/algebra/src/main/scala/endpoints/algebra/MuxEndpoints.scala" target="_blank">MuxEndpoints.scala</a></dd></dl><div class="toggleContainer block">
+</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/julienrf/endpoints/blob/v0.13.0/algebras/algebra/src/main/scala/endpoints/algebra/MuxEndpoints.scala" target="_blank">MuxEndpoints.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -263,7 +263,7 @@
                 <span class="toggle diagram-link">
                   Type Hierarchy
                 </span>
-                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph1" viewBox="0.00 0.00 152.00 118.00" height="118pt" width="152pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 114)" class="graph" id="page0,1_graph0"><polygon points="-4,4 -4,-114 148,-114 148,4 -4,4" stroke="transparent" fill="#ffffff"></polygon><g class="cluster" id="clust1"></g><g class="cluster" id="clust2"></g><!-- node0 --><g class="node this trait" id="graph1_0"><g id="a_this trait|graph1_0"><a xlink:title="endpoints.algebra.MuxRequest (this trait)" xlink:href="#inheritance-diagram"><path d="M111.6667,-49C111.6667,-49 32.3333,-49 32.3333,-49 28.1667,-49 24,-44.8333 24,-40.6667 24,-40.6667 24,-32.3333 24,-32.3333 24,-28.1667 28.1667,-24 32.3333,-24 32.3333,-24 111.6667,-24 111.6667,-24 115.8333,-24 120,-28.1667 120,-32.3333 120,-32.3333 120,-40.6667 120,-40.6667 120,-44.8333 115.8333,-49 111.6667,-49" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-43.5" x="34" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-34.1" x="55" text-anchor="start">MuxRequest</text></a></g></g><!-- node1 --><g class="node class" id="graph1_1"><g id="a_class|graph1_1"><a xlink:title="scala.AnyRef"><path d="M101.1667,-110C101.1667,-110 42.8333,-110 42.8333,-110 38.6667,-110 34.5,-105.8333 34.5,-101.6667 34.5,-101.6667 34.5,-93.3333 34.5,-93.3333 34.5,-89.1667 38.6667,-85 42.8333,-85 42.8333,-85 101.1667,-85 101.1667,-85 105.3333,-85 109.5,-89.1667 109.5,-93.3333 109.5,-93.3333 109.5,-101.6667 109.5,-101.6667 109.5,-105.8333 105.3333,-110 101.1667,-110" stroke="#418565" fill="#418565"></path><image xlink:href="../../lib/class_diagram.png" y="-104.5" x="45" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-95.1" x="66" text-anchor="start">AnyRef</text></a></g></g><!-- node1&#45;&gt;node0 --><g class="edge inheritance" id="graph1_1_0"><g id="a_inheritance|graph1_1_0"><a xlink:title="MuxRequest is a subtype of AnyRef"><path d="M72,-77.7386C72,-68.3393 72,-57.3803 72,-49.123" stroke="#d4d4d4" fill="none"></path><polygon points="69.5501,-77.8607 72,-84.8608 74.4501,-77.8608 69.5501,-77.8607" stroke="#d4d4d4" fill="none"></polygon></a></g></g></g></svg></div>
+                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph1" viewBox="0.00 0.00 152.00 118.00" height="118pt" width="152pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 114)" class="graph" id="graph0"><polygon points="-4,4 -4,-114 148,-114 148,4 -4,4" stroke="none" fill="white"></polygon><g class="cluster" id="clust1"></g><g class="cluster" id="clust2"></g><!-- node0 --><g class="node this trait" id="graph1_0"><g id="a_this trait|graph1_0"><a xlink:title="endpoints.algebra.MuxRequest (this trait)" xlink:href="#inheritance-diagram"><path d="M111.667,-49C111.667,-49 32.3333,-49 32.3333,-49 28.1667,-49 24,-44.8333 24,-40.6667 24,-40.6667 24,-32.3333 24,-32.3333 24,-28.1667 28.1667,-24 32.3333,-24 32.3333,-24 111.667,-24 111.667,-24 115.833,-24 120,-28.1667 120,-32.3333 120,-32.3333 120,-40.6667 120,-40.6667 120,-44.8333 115.833,-49 111.667,-49" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-43.5" x="34" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-34.1" x="55" text-anchor="start">MuxRequest</text></a></g></g><!-- node1 --><g class="node class" id="graph1_1"><g id="a_class|graph1_1"><a xlink:title="scala.AnyRef"><path d="M100.167,-110C100.167,-110 43.8333,-110 43.8333,-110 39.6667,-110 35.5,-105.833 35.5,-101.667 35.5,-101.667 35.5,-93.3333 35.5,-93.3333 35.5,-89.1667 39.6667,-85 43.8333,-85 43.8333,-85 100.167,-85 100.167,-85 104.333,-85 108.5,-89.1667 108.5,-93.3333 108.5,-93.3333 108.5,-101.667 108.5,-101.667 108.5,-105.833 104.333,-110 100.167,-110" stroke="#418565" fill="#418565"></path><image xlink:href="../../lib/class_diagram.png" y="-104.5" x="46" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-95.1" x="67" text-anchor="start">AnyRef</text></a></g></g><!-- node1&#45;&gt;node0 --><g class="edge inheritance" id="graph1_1_0"><g id="a_inheritance|graph1_1_0"><a xlink:title="MuxRequest is a subtype of AnyRef"><path d="M72,-77.7603C72,-68.3675 72,-57.2882 72,-49.1323" stroke="#d4d4d4" fill="none"></path><polygon points="69.5501,-77.8435 72,-84.8435 74.4501,-77.8435 69.5501,-77.8435" stroke="#d4d4d4" fill="none"></polygon></a></g></g></g></svg></div>
                 <div id="diagram-controls" class="hiddenContent">
                   <button id="diagram-zoom-out" class="diagram-btn"><i class="material-icons"></i></button>
                   <button id="diagram-zoom-in" class="diagram-btn"><i class="material-icons"></i></button>
@@ -336,7 +336,7 @@
         <span class="name">Response</span>
       </span>
       
-      
+      <p class="shortcomment cmt">Type of the response for <code>this</code> specific request</p>
     </li></ol>
             </div>
 
