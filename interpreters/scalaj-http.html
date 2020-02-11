@@ -21,7 +21,7 @@
             <div class="row">
               <div class="large-12 columns a_limited top-bar">
                 <div class="top-bar-left">
-                  <p>endpoints 0.13.0</p>
+                  <p>endpoints 0.14.0</p>
 
                 </div>
                 <div class="top-bar-right align-right row">
@@ -55,7 +55,7 @@
                 <h1 id="scalaj-http" class="a_section" data-magellan-target="scalaj-http">scalaj-http<a class="a_hlink" href="#scalaj-http"></a></h1>
 <p>Client interpreter backed by <a href="https://github.com/scalaj/scalaj-http">scalaj-http</a>.</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
-<pre class="hljs"><code class="language-scala"><span class="hljs-string">"org.julienrf"</span> %% <span class="hljs-string">"endpoints-scalaj-client"</span> % <span class="hljs-string">"0.13.0"</span>
+<pre class="hljs"><code class="language-scala"><span class="hljs-string">"org.julienrf"</span> %% <span class="hljs-string">"endpoints-scalaj-client"</span> % <span class="hljs-string">"0.14.0"</span>
 </code></pre>
 </div></div>
 <p><a href="../api/endpoints/scalaj/client/index.html">API documentation</a></p>
@@ -66,11 +66,11 @@ or asynchronously.</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
 <pre class="hljs"><code class="language-scala"><span class="hljs-keyword">val</span> someResource: <span class="hljs-type">Endpoint</span>[<span class="hljs-type">Int</span>, <span class="hljs-type">String</span>] =
   endpoint(get(path / <span class="hljs-string">"some-resource"</span> / segment[<span class="hljs-type">Int</span>]()), ok(textResponse))</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.13.0/algebras/algebra/src/test/scala/endpoints/algebra/EndpointsDocs.scala#L75-L76" class="a_sourcelink">EndpointsDocs.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.14.0/algebras/algebra/src/test/scala/endpoints/algebra/EndpointsDocs.scala#L75-L76" class="a_sourcelink">EndpointsDocs.scala</a></div></div>
 <p>It can be asynchronously invoked as follows:</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
 <pre class="hljs"><code class="language-scala"><span class="hljs-keyword">val</span> eventuallyString: <span class="hljs-type">Future</span>[<span class="hljs-type">String</span>] = someResource.callAsync(<span class="hljs-number">42</span>)</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.13.0/scalaj/client/src/test/scala/endpoints/scalaj/client/EndpointsDocs.scala#L11" class="a_sourcelink">EndpointsDocs.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.14.0/scalaj/client/src/test/scala/endpoints/scalaj/client/EndpointsDocs.scala#L11" class="a_sourcelink">EndpointsDocs.scala</a></div></div>
 
                  
   <ul class="menu align-right simple a_navbar a_navbar_bottom">

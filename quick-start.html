@@ -21,7 +21,7 @@
             <div class="row">
               <div class="large-12 columns a_limited top-bar">
                 <div class="top-bar-left">
-                  <p>endpoints 0.13.0</p>
+                  <p>endpoints 0.14.0</p>
 
                 </div>
                 <div class="top-bar-right align-right row">
@@ -96,9 +96,9 @@ list.</p>
 <pre class="hljs"><code class="language-scala"><span class="hljs-keyword">val</span> shared =
   crossProject(<span class="hljs-type">JSPlatform</span>, <span class="hljs-type">JVMPlatform</span>).crossType(<span class="hljs-type">CrossType</span>.<span class="hljs-type">Pure</span>).settings(
     libraryDependencies ++= <span class="hljs-type">Seq</span>(
-      <span class="hljs-string">"org.julienrf"</span> %%% <span class="hljs-string">"endpoints-algebra"</span> % <span class="hljs-string">"0.13.0"</span>,
+      <span class="hljs-string">"org.julienrf"</span> %%% <span class="hljs-string">"endpoints-algebra"</span> % <span class="hljs-string">"0.14.0"</span>,
       <span class="hljs-comment">// optional, see explanation below</span>
-      <span class="hljs-string">"org.julienrf"</span> %%% <span class="hljs-string">"endpoints-json-schema-generic"</span> % <span class="hljs-string">"0.13.0"</span>
+      <span class="hljs-string">"org.julienrf"</span> %%% <span class="hljs-string">"endpoints-json-schema-generic"</span> % <span class="hljs-string">"0.14.0"</span>
     )
   )
 
@@ -107,13 +107,13 @@ list.</p>
 
 <span class="hljs-keyword">val</span> client =
   project.enablePlugins(<span class="hljs-type">ScalaJSPlugin</span>).settings(
-    libraryDependencies += <span class="hljs-string">"org.julienrf"</span> %%% <span class="hljs-string">"endpoints-xhr-client"</span> % <span class="hljs-string">"0.13.0"</span>
+    libraryDependencies += <span class="hljs-string">"org.julienrf"</span> %%% <span class="hljs-string">"endpoints-xhr-client"</span> % <span class="hljs-string">"0.14.0"</span>
   ).dependsOn(sharedJS)
 
 <span class="hljs-keyword">val</span> server =
   project.settings(
     libraryDependencies ++= <span class="hljs-type">Seq</span>(
-      <span class="hljs-string">"org.julienrf"</span> %% <span class="hljs-string">"endpoints-akka-http-server"</span> % <span class="hljs-string">"0.13.0"</span>,
+      <span class="hljs-string">"org.julienrf"</span> %% <span class="hljs-string">"endpoints-akka-http-server"</span> % <span class="hljs-string">"0.14.0"</span>,
       <span class="hljs-string">"org.scala-stm"</span> %% <span class="hljs-string">"scala-stm"</span> % <span class="hljs-string">"0.8"</span>
     )
   ).dependsOn(sharedJVM)
@@ -169,7 +169,7 @@ for getting a counter value and one for incrementing it:</p>
 
 <span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Counter</span>(<span class="hljs-params">value: <span class="hljs-type">Int</span></span>)</span>
 <span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Increment</span>(<span class="hljs-params">step: <span class="hljs-type">Int</span></span>)</span></code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.13.0/documentation/examples/quickstart/endpoints/src/main/scala/quickstart/CounterEndpoints.scala#L4-L51" class="a_sourcelink">CounterEndpoints.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.14.0/documentation/examples/quickstart/endpoints/src/main/scala/quickstart/CounterEndpoints.scala#L4-L51" class="a_sourcelink">CounterEndpoints.scala</a></div></div>
 <p>The <code class="hljs">currentValue</code> and <code class="hljs">increment</code> members define the endpoints for getting the counter
 current value or incrementing it, as their names suggest. The <code class="hljs">counterSchema</code> and
 <code class="hljs">incrementSchema</code> members define a JSON schema that will be used to serialize and
@@ -190,7 +190,7 @@ the hood. Defines the following <code class="hljs">CounterClient</code> object i
   <span class="hljs-keyword">extends</span> <span class="hljs-type">CounterEndpoints</span>
     <span class="hljs-keyword">with</span> xhr.thenable.<span class="hljs-type">Endpoints</span>
     <span class="hljs-keyword">with</span> xhr.<span class="hljs-type">JsonEntitiesFromSchemas</span></code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.13.0/documentation/examples/quickstart/client/src/main/scala/quickstart/CounterClient.scala#L4-L14" class="a_sourcelink">CounterClient.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.14.0/documentation/examples/quickstart/client/src/main/scala/quickstart/CounterClient.scala#L4-L14" class="a_sourcelink">CounterClient.scala</a></div></div>
 <p>And then, the <code class="hljs">CounterClient</code> object can be used as follows:</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
 <pre class="hljs"><code class="language-scala"><span class="hljs-keyword">import</span> scala.scalajs.js
@@ -200,7 +200,7 @@ the hood. Defines the following <code class="hljs">CounterClient</code> object i
   * deserializes the JSON response as a `Counter`.
   */</span>
 <span class="hljs-keyword">val</span> eventuallyCounter: js.<span class="hljs-type">Thenable</span>[<span class="hljs-type">Counter</span>] = <span class="hljs-type">CounterClient</span>.currentValue(())</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.13.0/documentation/examples/quickstart/client/src/main/scala/quickstart/Usage.scala#L6-L12" class="a_sourcelink">Usage.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.14.0/documentation/examples/quickstart/client/src/main/scala/quickstart/Usage.scala#L6-L12" class="a_sourcelink">Usage.scala</a></div></div>
 <p>And also:</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
 <pre class="hljs"><code class="language-scala"><span class="hljs-comment">/**
@@ -208,7 +208,7 @@ the hood. Defines the following <code class="hljs">CounterClient</code> object i
   * on the `increment` endpoint.
   */</span>
 <span class="hljs-keyword">val</span> eventuallyDone: js.<span class="hljs-type">Thenable</span>[<span class="hljs-type">Unit</span>] = <span class="hljs-type">CounterClient</span>.increment(<span class="hljs-type">Increment</span>(<span class="hljs-number">42</span>))</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.13.0/documentation/examples/quickstart/client/src/main/scala/quickstart/Usage.scala#L16-L20" class="a_sourcelink">Usage.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.14.0/documentation/examples/quickstart/client/src/main/scala/quickstart/Usage.scala#L16-L20" class="a_sourcelink">Usage.scala</a></div></div>
 <p>As you can see, invoking an endpoint consists of calling a function on the <code class="hljs">CounterClient</code> object.
 The <em>endpoints</em> library then builds an HTTP request (according to the endpoint description), sends
 it to the server, and eventually decodes the HTTP response (according to the endpoint description).</p>
@@ -248,7 +248,7 @@ that uses Akka HTTP under the hood. Create the following <code class="hljs">Coun
     currentValueRoute ~ incrementRoute
 
 }</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.13.0/documentation/examples/quickstart/server/src/main/scala/quickstart/CounterServer.scala#L4-L35" class="a_sourcelink">CounterServer.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.14.0/documentation/examples/quickstart/server/src/main/scala/quickstart/CounterServer.scala#L4-L35" class="a_sourcelink">CounterServer.scala</a></div></div>
 <p>The <code class="hljs">routes</code> value produced by the <em>endpoints</em> library is a <code class="hljs">Route</code> value directly
 usable by Akka HTTP. The last section shows how to setup an Akka HTTP server that
 uses these routes.</p>
@@ -276,7 +276,7 @@ object in the <code class="hljs">server</code> project:</p>
     )(currentValue, increment)
 
 }</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.13.0/documentation/examples/quickstart/server/src/main/scala/quickstart/CounterDocumentation.scala#L4-L20" class="a_sourcelink">CounterDocumentation.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.14.0/documentation/examples/quickstart/server/src/main/scala/quickstart/CounterDocumentation.scala#L4-L20" class="a_sourcelink">CounterDocumentation.scala</a></div></div>
 <p>This code defines a <code class="hljs">CounterDocumentation</code> object with an <code class="hljs">api</code> member containing an OpenAPI object documenting
 the <code class="hljs">currentValue</code> and <code class="hljs">increment</code> endpoints.</p>
 <h2 id="running-the-application" class="a_section" data-magellan-target="running-the-application">Running the application<a class="a_hlink" href="#running-the-application"></a></h2>
@@ -305,7 +305,7 @@ Define the following <code class="hljs">Main</code> object:</p>
       .implementedBy(_ =&gt; <span class="hljs-type">CounterDocumentation</span>.api)
 
 }</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.13.0/documentation/examples/quickstart/server/src/main/scala/quickstart/Main.scala#L4-L27" class="a_sourcelink">Main.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.14.0/documentation/examples/quickstart/server/src/main/scala/quickstart/Main.scala#L4-L27" class="a_sourcelink">Main.scala</a></div></div>
 <p>You can then browse the
 <a href="http://localhost:8000/current-value">http://localhost:8000/current-value</a>
 URL to query the counter value, or the

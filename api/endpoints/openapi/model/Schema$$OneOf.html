@@ -140,12 +140,24 @@
                         <a href="Schema$$AllOf.html" title="">AllOf</a>
                       </li><li class="current-entities indented4">
                         <span class="separator"></span>
+                        <a class="trait" href="Schema$$Alternatives.html" title=""></a>
+                        <a href="Schema$$Alternatives.html" title="">Alternatives</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
                         <a class="class" href="Schema$$Array.html" title=""></a>
                         <a href="Schema$$Array.html" title="">Array</a>
                       </li><li class="current-entities indented4">
                         <span class="separator"></span>
+                        <a class="class" href="Schema$$DiscriminatedAlternatives.html" title=""></a>
+                        <a href="Schema$$DiscriminatedAlternatives.html" title="">DiscriminatedAlternatives</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
                         <a class="class" href="Schema$$Enum.html" title=""></a>
                         <a href="Schema$$Enum.html" title="">Enum</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Schema$$EnumeratedAlternatives.html" title=""></a>
+                        <a href="Schema$$EnumeratedAlternatives.html" title="">EnumeratedAlternatives</a>
                       </li><li class="current-entities indented4">
                         <span class="separator"></span>
                         <a class="class" href="Schema$$Object.html" title=""></a>
@@ -189,12 +201,12 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">OneOf</span><span class="params">(<span name="discriminatorName">discriminatorName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="alternatives">alternatives: <a href="../../../scala/index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[(<span class="extype" name="scala.Predef.String">String</span>, <a href="Schema.html" class="extype" name="endpoints.openapi.model.Schema">Schema</a>)]</span>, <span name="description">description: <a href="https://www.scala-lang.org/api/2.12.10/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="example">example: <a href="https://www.scala-lang.org/api/2.12.10/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="ujson.Value">Value</span>]</span>)</span><span class="result"> extends <a href="Schema.html" class="extype" name="endpoints.openapi.model.Schema">Schema</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <span class="name">OneOf</span><span class="params">(<span name="alternatives">alternatives: <a href="Schema$$Alternatives.html" class="extype" name="endpoints.openapi.model.Schema.Alternatives">Alternatives</a></span>, <span name="description">description: <a href="https://www.scala-lang.org/api/2.12.10/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="example">example: <a href="https://www.scala-lang.org/api/2.12.10/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="ujson.Value">Value</span>]</span>)</span><span class="result"> extends <a href="Schema.html" class="extype" name="endpoints.openapi.model.Schema">Schema</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/julienrf/endpoints/blob/v0.13.0/openapi/openapi/src/main/scala/endpoints/openapi/model/OpenApi.scala" target="_blank">OpenApi.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/julienrf/endpoints/blob/v0.14.0/openapi/openapi/src/main/scala/endpoints/openapi/model/OpenApi.scala" target="_blank">OpenApi.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -260,9 +272,9 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="endpoints.openapi.model.Schema.OneOf#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(discriminatorName:String,alternatives:List[(String,endpoints.openapi.model.Schema)],description:Option[String],example:Option[ujson.Value]):endpoints.openapi.model.Schema.OneOf"></a><a id="&lt;init&gt;:OneOf"></a>
+      <a id="&lt;init&gt;(alternatives:endpoints.openapi.model.Schema.Alternatives,description:Option[String],example:Option[ujson.Value]):endpoints.openapi.model.Schema.OneOf"></a><a id="&lt;init&gt;:OneOf"></a>
       <span class="permalink">
-      <a href="../../../endpoints/openapi/model/Schema$$OneOf.html#&lt;init&gt;(discriminatorName:String,alternatives:List[(String,endpoints.openapi.model.Schema)],description:Option[String],example:Option[ujson.Value]):endpoints.openapi.model.Schema.OneOf" title="Permalink">
+      <a href="../../../endpoints/openapi/model/Schema$$OneOf.html#&lt;init&gt;(alternatives:endpoints.openapi.model.Schema.Alternatives,description:Option[String],example:Option[ujson.Value]):endpoints.openapi.model.Schema.OneOf" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -271,7 +283,7 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">OneOf</span><span class="params">(<span name="discriminatorName">discriminatorName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="alternatives">alternatives: <a href="../../../scala/index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[(<span class="extype" name="scala.Predef.String">String</span>, <a href="Schema.html" class="extype" name="endpoints.openapi.model.Schema">Schema</a>)]</span>, <span name="description">description: <a href="https://www.scala-lang.org/api/2.12.10/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="example">example: <a href="https://www.scala-lang.org/api/2.12.10/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="ujson.Value">Value</span>]</span>)</span>
+        <span class="name">OneOf</span><span class="params">(<span name="alternatives">alternatives: <a href="Schema$$Alternatives.html" class="extype" name="endpoints.openapi.model.Schema.Alternatives">Alternatives</a></span>, <span name="description">description: <a href="https://www.scala-lang.org/api/2.12.10/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="example">example: <a href="https://www.scala-lang.org/api/2.12.10/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="ujson.Value">Value</span>]</span>)</span>
       </span>
       
       
@@ -377,9 +389,9 @@
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="endpoints.openapi.model.Schema.OneOf#alternatives" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="alternatives:List[(String,endpoints.openapi.model.Schema)]"></a><a id="alternatives:List[(String,Schema)]"></a>
+      <a id="alternatives:endpoints.openapi.model.Schema.Alternatives"></a><a id="alternatives:Alternatives"></a>
       <span class="permalink">
-      <a href="../../../endpoints/openapi/model/Schema$$OneOf.html#alternatives:List[(String,endpoints.openapi.model.Schema)]" title="Permalink">
+      <a href="../../../endpoints/openapi/model/Schema$$OneOf.html#alternatives:endpoints.openapi.model.Schema.Alternatives" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -388,7 +400,7 @@
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">alternatives</span><span class="result">: <a href="../../../scala/index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[(<span class="extype" name="scala.Predef.String">String</span>, <a href="Schema.html" class="extype" name="endpoints.openapi.model.Schema">Schema</a>)]</span>
+        <span class="name">alternatives</span><span class="result">: <a href="Schema$$Alternatives.html" class="extype" name="endpoints.openapi.model.Schema.Alternatives">Alternatives</a></span>
       </span>
       
       
@@ -448,22 +460,6 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.openapi.model.Schema.OneOf">OneOf</a> → <a href="Schema.html" class="extype" name="endpoints.openapi.model.Schema">Schema</a></dd></dl></div>
-    </li><li name="endpoints.openapi.model.Schema.OneOf#discriminatorName" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="discriminatorName:String"></a>
-      <span class="permalink">
-      <a href="../../../endpoints/openapi/model/Schema$$OneOf.html#discriminatorName:String" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">discriminatorName</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
-      </span>
-      
-      
     </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A"></a><a id="ensuring((OneOf)⇒Boolean,⇒Any):OneOf"></a>
       <span class="permalink">

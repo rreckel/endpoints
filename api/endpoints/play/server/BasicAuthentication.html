@@ -149,6 +149,14 @@
                         <a href="BuiltInErrors.html" title="">BuiltInErrors</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
+                        <a class="trait" href="ChunkedEntities.html" title="Interpreter for the algebra.ChunkedEntities algebra in the endpoints.play.server family."></a>
+                        <a href="ChunkedEntities.html" title="Interpreter for the algebra.ChunkedEntities algebra in the endpoints.play.server family.">ChunkedEntities</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="ChunkedJsonEntities.html" title="Interpreter for the algebra.ChunkedJsonEntities algebra in the endpoints.play.server family."></a>
+                        <a href="ChunkedJsonEntities.html" title="Interpreter for the algebra.ChunkedJsonEntities algebra in the endpoints.play.server family.">ChunkedJsonEntities</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
                         <a class="trait" href="Endpoints.html" title="Interpreter for algebra.Endpoints that performs routing using Play framework, and uses algebra.BuiltInErrors to model client and server errors."></a>
                         <a href="Endpoints.html" title="Interpreter for algebra.Endpoints that performs routing using Play framework, and uses algebra.BuiltInErrors to model client and server errors.">Endpoints</a>
                       </li><li class="current-entities indented3">
@@ -227,7 +235,7 @@
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/julienrf/endpoints/blob/v0.13.0/play/server/src/main/scala/endpoints/play/server/BasicAuthentication.scala" target="_blank">BasicAuthentication.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/julienrf/endpoints/blob/v0.14.0/play/server/src/main/scala/endpoints/play/server/BasicAuthentication.scala" target="_blank">BasicAuthentication.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -470,7 +478,7 @@
         <span class="kind">type</span>
       </span>
       <span class="symbol">
-        <span class="name">RequestEntity</span><span class="tparams">[<span name="A">A</span>]</span><span class="result alias"> = <a href="https://www.playframework.com/documentation/2.8.0/api/scala/play/api/mvc/BodyParser.html#play.api.mvc.BodyParser" class="extype" name="play.api.mvc.BodyParser">BodyParser</a>[<span class="extype" name="endpoints.play.server.EndpointsWithCustomErrors.RequestEntity.A">A</span>]</span>
+        <span class="name">RequestEntity</span><span class="tparams">[<span name="A">A</span>]</span><span class="result alias"> = <a href="https://www.playframework.com/documentation/2.8.1/api/scala/play/api/mvc/BodyParser.html#play.api.mvc.BodyParser" class="extype" name="play.api.mvc.BodyParser">BodyParser</a>[<span class="extype" name="endpoints.play.server.EndpointsWithCustomErrors.RequestEntity.A">A</span>]</span>
       </span>
       
       <p class="shortcomment cmt">Decodes a request entity</p><div class="fullcomment"><div class="comment cmt"><p>Decodes a request entity</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="EndpointsWithCustomErrors.html" class="extype" name="endpoints.play.server.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a> → <a href="../../algebra/Requests.html" class="extype" name="endpoints.algebra.Requests">Requests</a></dd></dl></div>
@@ -486,7 +494,7 @@
         <span class="kind">type</span>
       </span>
       <span class="symbol">
-        <span class="name">RequestExtractor</span><span class="tparams">[<span name="A">A</span>]</span><span class="result alias"> = (<a href="https://www.playframework.com/documentation/2.8.0/api/scala/play/api/mvc/RequestHeader.html#play.api.mvc.RequestHeader" class="extype" name="play.api.mvc.RequestHeader">RequestHeader</a>) ⇒ <a href="https://www.scala-lang.org/api/2.12.10/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="endpoints.play.server.Urls.RequestExtractor.A">A</span>]</span>
+        <span class="name">RequestExtractor</span><span class="tparams">[<span name="A">A</span>]</span><span class="result alias"> = (<a href="https://www.playframework.com/documentation/2.8.1/api/scala/play/api/mvc/RequestHeader.html#play.api.mvc.RequestHeader" class="extype" name="play.api.mvc.RequestHeader">RequestHeader</a>) ⇒ <a href="https://www.scala-lang.org/api/2.12.10/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="endpoints.play.server.Urls.RequestExtractor.A">A</span>]</span>
       </span>
       
       <p class="shortcomment cmt">Convenient type alias modeling the extraction of an <code>A</code> information from request headers.</p><div class="fullcomment"><div class="comment cmt"><p>Convenient type alias modeling the extraction of an <code>A</code> information from request headers.</p><p>This type has an instance of <code>Applicative</code>.
@@ -503,7 +511,7 @@
         <span class="kind">type</span>
       </span>
       <span class="symbol">
-        <span class="name">RequestHeaders</span><span class="tparams">[<span name="A">A</span>]</span><span class="result alias"> = (<a href="https://www.playframework.com/documentation/2.8.0/api/scala/play/api/mvc/Headers.html#play.api.mvc.Headers" class="extype" name="play.api.mvc.Headers">Headers</a>) ⇒ <a href="../../Validated.html" class="extype" name="endpoints.Validated">Validated</a>[<span class="extype" name="endpoints.play.server.EndpointsWithCustomErrors.RequestHeaders.A">A</span>]</span>
+        <span class="name">RequestHeaders</span><span class="tparams">[<span name="A">A</span>]</span><span class="result alias"> = (<a href="https://www.playframework.com/documentation/2.8.1/api/scala/play/api/mvc/Headers.html#play.api.mvc.Headers" class="extype" name="play.api.mvc.Headers">Headers</a>) ⇒ <a href="../../Validated.html" class="extype" name="endpoints.Validated">Validated</a>[<span class="extype" name="endpoints.play.server.EndpointsWithCustomErrors.RequestHeaders.A">A</span>]</span>
       </span>
       
       <p class="shortcomment cmt">An attempt to extract an <code>A</code> from a request headers.</p><div class="fullcomment"><div class="comment cmt"><p>An attempt to extract an <code>A</code> from a request headers.</p><p>Models failure by returning a <code>Left(result)</code>. That makes it possible
@@ -521,14 +529,14 @@ an authentication information is missing)</p></div><dl class="attributes block">
         <span class="kind">type</span>
       </span>
       <span class="symbol">
-        <span class="name">Response</span><span class="tparams">[<span name="A">A</span>]</span><span class="result alias"> = (<span class="extype" name="endpoints.play.server.EndpointsWithCustomErrors.Response.A">A</span>) ⇒ <a href="https://www.playframework.com/documentation/2.8.0/api/scala/play/api/mvc/Result.html#play.api.mvc.Result" class="extype" name="play.api.mvc.Result">Result</a></span>
+        <span class="name">Response</span><span class="tparams">[<span name="A">A</span>]</span><span class="result alias"> = (<span class="extype" name="endpoints.play.server.EndpointsWithCustomErrors.Response.A">A</span>) ⇒ <a href="https://www.playframework.com/documentation/2.8.1/api/scala/play/api/mvc/Result.html#play.api.mvc.Result" class="extype" name="play.api.mvc.Result">Result</a></span>
       </span>
       
       <p class="shortcomment cmt">Turns the <code>A</code> information into a proper Play <code>Result</code></p><div class="fullcomment"><div class="comment cmt"><p>Turns the <code>A</code> information into a proper Play <code>Result</code></p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="EndpointsWithCustomErrors.html" class="extype" name="endpoints.play.server.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a> → <a href="../../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd></dl></div>
     </li><li name="endpoints.play.server.EndpointsWithCustomErrors.ResponseEntity" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="types">
-      <a id="ResponseEntity[A]=play.api.http.Writeable[A]"></a><a id="ResponseEntity[A]:ResponseEntity[A]"></a>
+      <a id="ResponseEntity[A]=A=&gt;play.api.http.HttpEntity"></a><a id="ResponseEntity[A]:ResponseEntity[A]"></a>
       <span class="permalink">
-      <a href="../../../endpoints/play/server/BasicAuthentication.html#ResponseEntity[A]=play.api.http.Writeable[A]" title="Permalink">
+      <a href="../../../endpoints/play/server/BasicAuthentication.html#ResponseEntity[A]=A=&gt;play.api.http.HttpEntity" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -537,10 +545,29 @@ an authentication information is missing)</p></div><dl class="attributes block">
         <span class="kind">type</span>
       </span>
       <span class="symbol">
-        <span class="name">ResponseEntity</span><span class="tparams">[<span name="A">A</span>]</span><span class="result alias"> = <a href="https://www.playframework.com/documentation/2.8.0/api/scala/play/api/http/Writeable.html#play.api.http.Writeable" class="extype" name="play.api.http.Writeable">Writeable</a>[<span class="extype" name="endpoints.play.server.EndpointsWithCustomErrors.ResponseEntity.A">A</span>]</span>
+        <span class="name">ResponseEntity</span><span class="tparams">[<span name="A">A</span>]</span><span class="result alias"> = (<span class="extype" name="endpoints.play.server.EndpointsWithCustomErrors.ResponseEntity.A">A</span>) ⇒ <a href="https://www.playframework.com/documentation/2.8.1/api/scala/play/api/http/HttpEntity.html#play.api.http.HttpEntity" class="extype" name="play.api.http.HttpEntity">HttpEntity</a></span>
       </span>
       
       <p class="shortcomment cmt">An HTTP response entity carrying an information of type A</p><div class="fullcomment"><div class="comment cmt"><p>An HTTP response entity carrying an information of type A</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="EndpointsWithCustomErrors.html" class="extype" name="endpoints.play.server.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a> → <a href="../../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd></dl></div>
+    </li><li name="endpoints.play.server.EndpointsWithCustomErrors.ResponseHeaders" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="types">
+      <a id="ResponseHeaders[A]=A=&gt;Seq[(String,String)]"></a><a id="ResponseHeaders[A]:ResponseHeaders[A]"></a>
+      <span class="permalink">
+      <a href="../../../endpoints/play/server/BasicAuthentication.html#ResponseHeaders[A]=A=&gt;Seq[(String,String)]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ResponseHeaders</span><span class="tparams">[<span name="A">A</span>]</span><span class="result alias"> = (<span class="extype" name="endpoints.play.server.EndpointsWithCustomErrors.ResponseHeaders.A">A</span>) ⇒ <a href="../../../scala/index.html#Seq[+A]=Seq[A]" class="extmbr" name="scala.Seq">Seq</a>[(<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>)]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Information carried by responses’ headers.</p><div class="fullcomment"><div class="comment cmt"><p>Information carried by responses’ headers.</p><p>You can construct values of type <code>ResponseHeaders</code> by using the operations <a href="#responseHeader(name:String,docs:endpoints.algebra.Documentation):EndpointsWithCustomErrors.this.ResponseHeaders[String]" class="extmbr" name="endpoints.play.server.BasicAuthentication#responseHeader">responseHeader</a>,
+<a href="#optResponseHeader(name:String,docs:endpoints.algebra.Documentation):EndpointsWithCustomErrors.this.ResponseHeaders[Option[String]]" class="extmbr" name="endpoints.play.server.BasicAuthentication#optResponseHeader">optResponseHeader</a>, or <a href="#emptyResponseHeaders:EndpointsWithCustomErrors.this.ResponseHeaders[Unit]" class="extmbr" name="endpoints.play.server.BasicAuthentication#emptyResponseHeaders">emptyResponseHeaders</a>.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="EndpointsWithCustomErrors.html" class="extype" name="endpoints.play.server.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a> → <a href="../../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd><dt>Note</dt><dd><span class="cmt"><p>This type has implicit methods provided by the <a href="../../SemigroupalSyntax$SemigroupalSyntax.html" class="extype" name="endpoints.SemigroupalSyntax.SemigroupalSyntax">SemigroupalSyntax</a>
+      and <a href="../../PartialInvariantFunctorSyntax$PartialInvariantFunctorSyntax.html" class="extype" name="endpoints.PartialInvariantFunctorSyntax.PartialInvariantFunctorSyntax">PartialInvariantFunctorSyntax</a> classes.</p></span></dd></dl></div>
     </li><li name="endpoints.algebra.Errors.ServerError" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="types">
       <a id="ServerError"></a><a id="ServerError:ServerError"></a>
       <span class="permalink">
@@ -788,7 +815,7 @@ an authentication information is missing)</p></div><dl class="attributes block">
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">clientErrorsResponseEntity</span><span class="result">: <a href="#ResponseEntity[A]=play.api.http.Writeable[A]" class="extmbr" name="endpoints.play.server.BasicAuthentication.ResponseEntity">ResponseEntity</a>[<a href="#ClientErrors" class="extmbr" name="endpoints.play.server.BasicAuthentication.ClientErrors">ClientErrors</a>]</span>
+        <span class="name">clientErrorsResponseEntity</span><span class="result">: <a href="#ResponseEntity[A]=A=&gt;play.api.http.HttpEntity" class="extmbr" name="endpoints.play.server.BasicAuthentication.ResponseEntity">ResponseEntity</a>[<a href="#ClientErrors" class="extmbr" name="endpoints.play.server.BasicAuthentication.ClientErrors">ClientErrors</a>]</span>
       </span>
       
       <p class="shortcomment cmt">Format of the response entity carrying the client errors.</p><div class="fullcomment"><div class="comment cmt"><p>Format of the response entity carrying the client errors.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Errors.html" class="extype" name="endpoints.algebra.Errors">Errors</a></dd></dl></div>
@@ -852,7 +879,7 @@ an authentication information is missing)</p></div><dl class="attributes block">
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">serverErrorResponseEntity</span><span class="result">: <a href="#ResponseEntity[A]=play.api.http.Writeable[A]" class="extmbr" name="endpoints.play.server.BasicAuthentication.ResponseEntity">ResponseEntity</a>[<a href="#ServerError" class="extmbr" name="endpoints.play.server.BasicAuthentication.ServerError">ServerError</a>]</span>
+        <span class="name">serverErrorResponseEntity</span><span class="result">: <a href="#ResponseEntity[A]=A=&gt;play.api.http.HttpEntity" class="extmbr" name="endpoints.play.server.BasicAuthentication.ResponseEntity">ResponseEntity</a>[<a href="#ServerError" class="extmbr" name="endpoints.play.server.BasicAuthentication.ServerError">ServerError</a>]</span>
       </span>
       
       <p class="shortcomment cmt">Format of the response entity carrying the server error.</p><div class="fullcomment"><div class="comment cmt"><p>Format of the response entity carrying the server error.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Errors.html" class="extype" name="endpoints.algebra.Errors">Errors</a></dd></dl></div>
@@ -1333,9 +1360,9 @@ information <code>E</code>, the headers information <code>H</code>, and the <cod
 servers reject the request with an Unauthorized (401) status code.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.play.server.BasicAuthentication">BasicAuthentication</a> → <a href="../../algebra/BasicAuthentication.html" class="extype" name="endpoints.algebra.BasicAuthentication">BasicAuthentication</a></dd></dl></div>
     </li><li name="endpoints.algebra.Responses#badRequest" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
-      <a id="badRequest(docs:endpoints.algebra.Documentation):Responses.this.Response[Responses.this.ClientErrors]"></a><a id="badRequest(Documentation):Response[ClientErrors]"></a>
+      <a id="badRequest[A,R](docs:endpoints.algebra.Documentation,headers:Responses.this.ResponseHeaders[A])(implicittupler:endpoints.Tupler.Aux[Responses.this.ClientErrors,A,R]):Responses.this.Response[R]"></a><a id="badRequest[A,R](Documentation,ResponseHeaders[A])(Tupler.Aux[ClientErrors,A,R]):Response[R]"></a>
       <span class="permalink">
-      <a href="../../../endpoints/play/server/BasicAuthentication.html#badRequest(docs:endpoints.algebra.Documentation):Responses.this.Response[Responses.this.ClientErrors]" title="Permalink">
+      <a href="../../../endpoints/play/server/BasicAuthentication.html#badRequest[A,R](docs:endpoints.algebra.Documentation,headers:Responses.this.ResponseHeaders[A])(implicittupler:endpoints.Tupler.Aux[Responses.this.ClientErrors,A,R]):Responses.this.Response[R]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1344,7 +1371,7 @@ servers reject the request with an Unauthorized (401) status code.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">badRequest</span><span class="params">(<span name="docs">docs: <a href="../../algebra/index.html#Documentation=Option[String]" class="extmbr" name="endpoints.algebra.Documentation">Documentation</a> = <span class="symbol"><span class="name"><a href="../../../scala/index.html">None</a></span></span></span>)</span><span class="result">: <a href="#Response[A]=A=&gt;play.api.mvc.Result" class="extmbr" name="endpoints.play.server.BasicAuthentication.Response">Response</a>[<a href="#ClientErrors" class="extmbr" name="endpoints.play.server.BasicAuthentication.ClientErrors">ClientErrors</a>]</span>
+        <span class="name">badRequest</span><span class="tparams">[<span name="A">A</span>, <span name="R">R</span>]</span><span class="params">(<span name="docs">docs: <a href="../../algebra/index.html#Documentation=Option[String]" class="extmbr" name="endpoints.algebra.Documentation">Documentation</a> = <span class="symbol"><span class="name"><a href="../../../scala/index.html">None</a></span></span></span>, <span name="headers">headers: <a href="#ResponseHeaders[A]=A=&gt;Seq[(String,String)]" class="extmbr" name="endpoints.play.server.BasicAuthentication.ResponseHeaders">ResponseHeaders</a>[<span class="extype" name="endpoints.algebra.Responses.badRequest.A">A</span>] = <span class="symbol"><span class="name"><a href="../../algebra/Responses.html#emptyResponseHeaders:Responses.this.ResponseHeaders[Unit]">emptyResponseHeaders</a></span></span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="tupler">tupler: <a href="../../Tupler$.html#Aux[A,B,Out0]=endpoints.Tupler[A,B]{typeOut=Out0}" class="extmbr" name="endpoints.Tupler.Aux">Tupler.Aux</a>[<a href="#ClientErrors" class="extmbr" name="endpoints.play.server.BasicAuthentication.ClientErrors">ClientErrors</a>, <span class="extype" name="endpoints.algebra.Responses.badRequest.A">A</span>, <span class="extype" name="endpoints.algebra.Responses.badRequest.R">R</span>]</span>)</span><span class="result">: <a href="#Response[A]=A=&gt;play.api.mvc.Result" class="extmbr" name="endpoints.play.server.BasicAuthentication.Response">Response</a>[<span class="extype" name="endpoints.algebra.Responses.badRequest.R">R</span>]</span>
       </span>
       
       <p class="shortcomment cmt">Bad Request (400) response, with an entity of type <code>ClientErrors</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Bad Request (400) response, with an entity of type <code>ClientErrors</code>.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd><dt>See also</dt><dd><span class="cmt"><p><a href="../../algebra/Errors.html" class="extype" name="endpoints.algebra.Errors">endpoints.algebra.Errors</a> and <a href="../../algebra/BuiltInErrors.html" class="extype" name="endpoints.algebra.BuiltInErrors">endpoints.algebra.BuiltInErrors</a></p></span></dd></dl></div>
@@ -1550,7 +1577,7 @@ a request fails.</p><p>The provided implementation forwards to <code>badRequest<
         <span class="kind">lazy val</span>
       </span>
       <span class="symbol">
-        <span class="name">emptyRequest</span><span class="result">: <a href="https://www.playframework.com/documentation/2.8.0/api/scala/play/api/mvc/BodyParser.html#play.api.mvc.BodyParser" class="extype" name="play.api.mvc.BodyParser">BodyParser</a>[<a href="https://www.scala-lang.org/api/2.12.10/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a>]</span>
+        <span class="name">emptyRequest</span><span class="result">: <a href="https://www.playframework.com/documentation/2.8.1/api/scala/play/api/mvc/BodyParser.html#play.api.mvc.BodyParser" class="extype" name="play.api.mvc.BodyParser">BodyParser</a>[<a href="https://www.scala-lang.org/api/2.12.10/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a>]</span>
       </span>
       
       <p class="shortcomment cmt">Empty request -- request without a body.</p><div class="fullcomment"><div class="comment cmt"><p>Empty request -- request without a body.
@@ -1567,10 +1594,27 @@ Use <code>description</code> of <a href="../../algebra/Endpoints.html#endpoint[A
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">emptyResponse</span><span class="result">: <a href="#ResponseEntity[A]=play.api.http.Writeable[A]" class="extmbr" name="endpoints.play.server.BasicAuthentication.ResponseEntity">ResponseEntity</a>[<a href="https://www.scala-lang.org/api/2.12.10/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a>]</span>
+        <span class="name">emptyResponse</span><span class="result">: <a href="#ResponseEntity[A]=A=&gt;play.api.http.HttpEntity" class="extmbr" name="endpoints.play.server.BasicAuthentication.ResponseEntity">ResponseEntity</a>[<a href="https://www.scala-lang.org/api/2.12.10/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a>]</span>
       </span>
       
       <p class="shortcomment cmt">An empty response entity</p><div class="fullcomment"><div class="comment cmt"><p>An empty response entity</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="EndpointsWithCustomErrors.html" class="extype" name="endpoints.play.server.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a> → <a href="../../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd></dl></div>
+    </li><li name="endpoints.play.server.EndpointsWithCustomErrors#emptyResponseHeaders" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
+      <a id="emptyResponseHeaders:EndpointsWithCustomErrors.this.ResponseHeaders[Unit]"></a><a id="emptyResponseHeaders:ResponseHeaders[Unit]"></a>
+      <span class="permalink">
+      <a href="../../../endpoints/play/server/BasicAuthentication.html#emptyResponseHeaders:EndpointsWithCustomErrors.this.ResponseHeaders[Unit]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">emptyResponseHeaders</span><span class="result">: <a href="#ResponseHeaders[A]=A=&gt;Seq[(String,String)]" class="extmbr" name="endpoints.play.server.BasicAuthentication.ResponseHeaders">ResponseHeaders</a>[<a href="https://www.scala-lang.org/api/2.12.10/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">No particular response header.</p><div class="fullcomment"><div class="comment cmt"><p>No particular response header.
+Client interpreters should ignore information carried by response headers.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="EndpointsWithCustomErrors.html" class="extype" name="endpoints.play.server.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a> → <a href="../../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd></dl></div>
     </li><li name="endpoints.play.server.EndpointsWithCustomErrors#endpoint" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="endpoint[A,B](request:EndpointsWithCustomErrors.this.Request[A],response:EndpointsWithCustomErrors.this.Response[B],docs:EndpointsWithCustomErrors.this.EndpointDocs):EndpointsWithCustomErrors.this.Endpoint[A,B]"></a><a id="endpoint[A,B](Request[A],Response[B],EndpointDocs):Endpoint[A,B]"></a>
       <span class="permalink">
@@ -1824,7 +1868,7 @@ Use <code>description</code> of <a href="../../algebra/Endpoints.html#endpoint[A
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">handleClientErrors</span><span class="params">(<span name="invalid">invalid: <a href="../../Invalid.html" class="extype" name="endpoints.Invalid">Invalid</a></span>)</span><span class="result">: <a href="https://www.playframework.com/documentation/2.8.0/api/scala/play/api/mvc/Result.html#play.api.mvc.Result" class="extype" name="play.api.mvc.Result">Result</a></span>
+        <span class="name">handleClientErrors</span><span class="params">(<span name="invalid">invalid: <a href="../../Invalid.html" class="extype" name="endpoints.Invalid">Invalid</a></span>)</span><span class="result">: <a href="https://www.playframework.com/documentation/2.8.1/api/scala/play/api/mvc/Result.html#play.api.mvc.Result" class="extype" name="play.api.mvc.Result">Result</a></span>
       </span>
       
       <p class="shortcomment cmt">This method is called by <i>endpoints</i> when decoding a request failed.</p><div class="fullcomment"><div class="comment cmt"><p>This method is called by <i>endpoints</i> when decoding a request failed.</p><p>The provided implementation calls <code>clientErrorsResponse</code> to construct
@@ -1842,7 +1886,7 @@ a response containing the errors.</p><p>This method can be overridden to customi
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">handleServerError</span><span class="params">(<span name="throwable">throwable: <a href="../../../scala/index.html#Throwable=Throwable" class="extmbr" name="scala.Throwable">Throwable</a></span>)</span><span class="result">: <a href="https://www.playframework.com/documentation/2.8.0/api/scala/play/api/mvc/Result.html#play.api.mvc.Result" class="extype" name="play.api.mvc.Result">Result</a></span>
+        <span class="name">handleServerError</span><span class="params">(<span name="throwable">throwable: <a href="../../../scala/index.html#Throwable=Throwable" class="extmbr" name="scala.Throwable">Throwable</a></span>)</span><span class="result">: <a href="https://www.playframework.com/documentation/2.8.1/api/scala/play/api/mvc/Result.html#play.api.mvc.Result" class="extype" name="play.api.mvc.Result">Result</a></span>
       </span>
       
       <p class="shortcomment cmt">This method is called by <i>endpoints</i> when an exception is thrown during
@@ -1881,7 +1925,7 @@ a response containing the error message.</p><p>This method can be overridden to 
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">header</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="docs">docs: <a href="https://www.scala-lang.org/api/2.12.10/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result">: (<a href="https://www.playframework.com/documentation/2.8.0/api/scala/play/api/mvc/Headers.html#play.api.mvc.Headers" class="extype" name="play.api.mvc.Headers">Headers</a>) ⇒ <a href="../../Validated.html" class="extype" name="endpoints.Validated">Validated</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+        <span class="name">header</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="docs">docs: <a href="https://www.scala-lang.org/api/2.12.10/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result">: (<a href="https://www.playframework.com/documentation/2.8.1/api/scala/play/api/mvc/Headers.html#play.api.mvc.Headers" class="extype" name="play.api.mvc.Headers">Headers</a>) ⇒ <a href="../../Validated.html" class="extype" name="endpoints.Validated">Validated</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>
       </span>
       
       <p class="shortcomment cmt">A required request header</p><div class="fullcomment"><div class="comment cmt"><p>A required request header</p></div><dl class="paramcmts block"><dt class="param">name</dt><dd class="cmt"><p>Header name (e.g., “Authorization”)</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="EndpointsWithCustomErrors.html" class="extype" name="endpoints.play.server.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a> → <a href="../../algebra/Requests.html" class="extype" name="endpoints.algebra.Requests">Requests</a></dd></dl></div>
@@ -1897,7 +1941,7 @@ a response containing the error message.</p><p>This method can be overridden to 
         <span class="kind">lazy val</span>
       </span>
       <span class="symbol">
-        <span class="name">htmlResponse</span><span class="result">: <a href="#ResponseEntity[A]=play.api.http.Writeable[A]" class="extmbr" name="endpoints.play.server.BasicAuthentication.ResponseEntity">ResponseEntity</a>[<span class="extype" name="play.twirl.api.Html">Html</span>]</span>
+        <span class="name">htmlResponse</span><span class="result">: <a href="#ResponseEntity[A]=A=&gt;play.api.http.HttpEntity" class="extmbr" name="endpoints.play.server.BasicAuthentication.ResponseEntity">ResponseEntity</a>[<span class="extype" name="play.twirl.api.Html">Html</span>]</span>
       </span>
       
       <p class="shortcomment cmt">A successful HTTP response (status code 200) with an HTML entity</p><div class="fullcomment"><div class="comment cmt"><p>A successful HTTP response (status code 200) with an HTML entity</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="EndpointsWithCustomErrors.html" class="extype" name="endpoints.play.server.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a></dd></dl></div>
@@ -1934,9 +1978,9 @@ a response containing the error message.</p><p>This method can be overridden to 
       
       <p class="shortcomment cmt">Ability to define <code>Int</code> path segments</p><div class="fullcomment"><div class="comment cmt"><p>Ability to define <code>Int</code> path segments</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
     </li><li name="endpoints.algebra.Responses#internalServerError" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
-      <a id="internalServerError(docs:endpoints.algebra.Documentation):Responses.this.Response[Responses.this.ServerError]"></a><a id="internalServerError(Documentation):Response[ServerError]"></a>
+      <a id="internalServerError[A,R](docs:endpoints.algebra.Documentation,headers:Responses.this.ResponseHeaders[A])(implicittupler:endpoints.Tupler.Aux[Responses.this.ServerError,A,R]):Responses.this.Response[R]"></a><a id="internalServerError[A,R](Documentation,ResponseHeaders[A])(Tupler.Aux[ServerError,A,R]):Response[R]"></a>
       <span class="permalink">
-      <a href="../../../endpoints/play/server/BasicAuthentication.html#internalServerError(docs:endpoints.algebra.Documentation):Responses.this.Response[Responses.this.ServerError]" title="Permalink">
+      <a href="../../../endpoints/play/server/BasicAuthentication.html#internalServerError[A,R](docs:endpoints.algebra.Documentation,headers:Responses.this.ResponseHeaders[A])(implicittupler:endpoints.Tupler.Aux[Responses.this.ServerError,A,R]):Responses.this.Response[R]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1945,7 +1989,7 @@ a response containing the error message.</p><p>This method can be overridden to 
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">internalServerError</span><span class="params">(<span name="docs">docs: <a href="../../algebra/index.html#Documentation=Option[String]" class="extmbr" name="endpoints.algebra.Documentation">Documentation</a> = <span class="symbol"><span class="name"><a href="../../../scala/index.html">None</a></span></span></span>)</span><span class="result">: <a href="#Response[A]=A=&gt;play.api.mvc.Result" class="extmbr" name="endpoints.play.server.BasicAuthentication.Response">Response</a>[<a href="#ServerError" class="extmbr" name="endpoints.play.server.BasicAuthentication.ServerError">ServerError</a>]</span>
+        <span class="name">internalServerError</span><span class="tparams">[<span name="A">A</span>, <span name="R">R</span>]</span><span class="params">(<span name="docs">docs: <a href="../../algebra/index.html#Documentation=Option[String]" class="extmbr" name="endpoints.algebra.Documentation">Documentation</a> = <span class="symbol"><span class="name"><a href="../../../scala/index.html">None</a></span></span></span>, <span name="headers">headers: <a href="#ResponseHeaders[A]=A=&gt;Seq[(String,String)]" class="extmbr" name="endpoints.play.server.BasicAuthentication.ResponseHeaders">ResponseHeaders</a>[<span class="extype" name="endpoints.algebra.Responses.internalServerError.A">A</span>] = <span class="symbol"><span class="name"><a href="../../algebra/Responses.html#emptyResponseHeaders:Responses.this.ResponseHeaders[Unit]">emptyResponseHeaders</a></span></span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="tupler">tupler: <a href="../../Tupler$.html#Aux[A,B,Out0]=endpoints.Tupler[A,B]{typeOut=Out0}" class="extmbr" name="endpoints.Tupler.Aux">Tupler.Aux</a>[<a href="#ServerError" class="extmbr" name="endpoints.play.server.BasicAuthentication.ServerError">ServerError</a>, <span class="extype" name="endpoints.algebra.Responses.internalServerError.A">A</span>, <span class="extype" name="endpoints.algebra.Responses.internalServerError.R">R</span>]</span>)</span><span class="result">: <a href="#Response[A]=A=&gt;play.api.mvc.Result" class="extmbr" name="endpoints.play.server.BasicAuthentication.Response">Response</a>[<span class="extype" name="endpoints.algebra.Responses.internalServerError.R">R</span>]</span>
       </span>
       
       <p class="shortcomment cmt">Internal Server Error (500) response, with an entity of type <code>ServerError</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Internal Server Error (500) response, with an entity of type <code>ServerError</code>.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd><dt>See also</dt><dd><span class="cmt"><p><a href="../../algebra/Errors.html" class="extype" name="endpoints.algebra.Errors">endpoints.algebra.Errors</a> and <a href="../../algebra/BuiltInErrors.html" class="extype" name="endpoints.algebra.BuiltInErrors">endpoints.algebra.BuiltInErrors</a></p></span></dd></dl></div>
@@ -2068,9 +2112,9 @@ a response containing the error message.</p><p>This method can be overridden to 
               
         </dd></dl></div>
     </li><li name="endpoints.algebra.Responses#ok" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
-      <a id="ok[A](entity:Responses.this.ResponseEntity[A],docs:endpoints.algebra.Documentation):Responses.this.Response[A]"></a><a id="ok[A](ResponseEntity[A],Documentation):Response[A]"></a>
+      <a id="ok[A,B,R](entity:Responses.this.ResponseEntity[A],docs:endpoints.algebra.Documentation,headers:Responses.this.ResponseHeaders[B])(implicittupler:endpoints.Tupler.Aux[A,B,R]):Responses.this.Response[R]"></a><a id="ok[A,B,R](ResponseEntity[A],Documentation,ResponseHeaders[B])(Tupler.Aux[A,B,R]):Response[R]"></a>
       <span class="permalink">
-      <a href="../../../endpoints/play/server/BasicAuthentication.html#ok[A](entity:Responses.this.ResponseEntity[A],docs:endpoints.algebra.Documentation):Responses.this.Response[A]" title="Permalink">
+      <a href="../../../endpoints/play/server/BasicAuthentication.html#ok[A,B,R](entity:Responses.this.ResponseEntity[A],docs:endpoints.algebra.Documentation,headers:Responses.this.ResponseHeaders[B])(implicittupler:endpoints.Tupler.Aux[A,B,R]):Responses.this.Response[R]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2079,7 +2123,7 @@ a response containing the error message.</p><p>This method can be overridden to 
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">ok</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="entity">entity: <a href="#ResponseEntity[A]=play.api.http.Writeable[A]" class="extmbr" name="endpoints.play.server.BasicAuthentication.ResponseEntity">ResponseEntity</a>[<span class="extype" name="endpoints.algebra.Responses.ok.A">A</span>]</span>, <span name="docs">docs: <a href="../../algebra/index.html#Documentation=Option[String]" class="extmbr" name="endpoints.algebra.Documentation">Documentation</a> = <span class="symbol"><span class="name"><a href="../../../scala/index.html">None</a></span></span></span>)</span><span class="result">: <a href="#Response[A]=A=&gt;play.api.mvc.Result" class="extmbr" name="endpoints.play.server.BasicAuthentication.Response">Response</a>[<span class="extype" name="endpoints.algebra.Responses.ok.A">A</span>]</span>
+        <span class="name">ok</span><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="R">R</span>]</span><span class="params">(<span name="entity">entity: <a href="#ResponseEntity[A]=A=&gt;play.api.http.HttpEntity" class="extmbr" name="endpoints.play.server.BasicAuthentication.ResponseEntity">ResponseEntity</a>[<span class="extype" name="endpoints.algebra.Responses.ok.A">A</span>]</span>, <span name="docs">docs: <a href="../../algebra/index.html#Documentation=Option[String]" class="extmbr" name="endpoints.algebra.Documentation">Documentation</a> = <span class="symbol"><span class="name"><a href="../../../scala/index.html">None</a></span></span></span>, <span name="headers">headers: <a href="#ResponseHeaders[A]=A=&gt;Seq[(String,String)]" class="extmbr" name="endpoints.play.server.BasicAuthentication.ResponseHeaders">ResponseHeaders</a>[<span class="extype" name="endpoints.algebra.Responses.ok.B">B</span>] = <span class="symbol"><span class="name"><a href="../../algebra/Responses.html#emptyResponseHeaders:Responses.this.ResponseHeaders[Unit]">emptyResponseHeaders</a></span></span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="tupler">tupler: <a href="../../Tupler$.html#Aux[A,B,Out0]=endpoints.Tupler[A,B]{typeOut=Out0}" class="extmbr" name="endpoints.Tupler.Aux">Tupler.Aux</a>[<span class="extype" name="endpoints.algebra.Responses.ok.A">A</span>, <span class="extype" name="endpoints.algebra.Responses.ok.B">B</span>, <span class="extype" name="endpoints.algebra.Responses.ok.R">R</span>]</span>)</span><span class="result">: <a href="#Response[A]=A=&gt;play.api.mvc.Result" class="extmbr" name="endpoints.play.server.BasicAuthentication.Response">Response</a>[<span class="extype" name="endpoints.algebra.Responses.ok.R">R</span>]</span>
       </span>
       
       <p class="shortcomment cmt">OK (200) Response with the given entity</p><div class="fullcomment"><div class="comment cmt"><p>OK (200) Response with the given entity</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd></dl></div>
@@ -2095,10 +2139,31 @@ a response containing the error message.</p><p>This method can be overridden to 
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">optHeader</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="docs">docs: <a href="https://www.scala-lang.org/api/2.12.10/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result">: (<a href="https://www.playframework.com/documentation/2.8.0/api/scala/play/api/mvc/Headers.html#play.api.mvc.Headers" class="extype" name="play.api.mvc.Headers">Headers</a>) ⇒ <a href="../../Validated.html" class="extype" name="endpoints.Validated">Validated</a>[<a href="https://www.scala-lang.org/api/2.12.10/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="scala.Predef.String">String</span>]]</span>
+        <span class="name">optHeader</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="docs">docs: <a href="https://www.scala-lang.org/api/2.12.10/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result">: (<a href="https://www.playframework.com/documentation/2.8.1/api/scala/play/api/mvc/Headers.html#play.api.mvc.Headers" class="extype" name="play.api.mvc.Headers">Headers</a>) ⇒ <a href="../../Validated.html" class="extype" name="endpoints.Validated">Validated</a>[<a href="https://www.scala-lang.org/api/2.12.10/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="scala.Predef.String">String</span>]]</span>
       </span>
       
       <p class="shortcomment cmt">An optional request header</p><div class="fullcomment"><div class="comment cmt"><p>An optional request header</p></div><dl class="paramcmts block"><dt class="param">name</dt><dd class="cmt"><p>Header name (e.g., “Authorization”)</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="EndpointsWithCustomErrors.html" class="extype" name="endpoints.play.server.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a> → <a href="../../algebra/Requests.html" class="extype" name="endpoints.algebra.Requests">Requests</a></dd></dl></div>
+    </li><li name="endpoints.play.server.EndpointsWithCustomErrors#optResponseHeader" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
+      <a id="optResponseHeader(name:String,docs:endpoints.algebra.Documentation):EndpointsWithCustomErrors.this.ResponseHeaders[Option[String]]"></a><a id="optResponseHeader(String,Documentation):ResponseHeaders[Option[String]]"></a>
+      <span class="permalink">
+      <a href="../../../endpoints/play/server/BasicAuthentication.html#optResponseHeader(name:String,docs:endpoints.algebra.Documentation):EndpointsWithCustomErrors.this.ResponseHeaders[Option[String]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">optResponseHeader</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="docs">docs: <a href="../../algebra/index.html#Documentation=Option[String]" class="extmbr" name="endpoints.algebra.Documentation">Documentation</a> = <span class="symbol"><span class="name"><a href="../../../scala/index.html">None</a></span></span></span>)</span><span class="result">: <a href="#ResponseHeaders[A]=A=&gt;Seq[(String,String)]" class="extmbr" name="endpoints.play.server.BasicAuthentication.ResponseHeaders">ResponseHeaders</a>[<a href="https://www.scala-lang.org/api/2.12.10/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="scala.Predef.String">String</span>]]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Response headers optionally containing a header with the given <code>name</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Response headers optionally containing a header with the given <code>name</code>.
+Client interpreters should model the header value as <code>Some[String]</code>, or
+<code>None</code> if the response header is missing.
+Server interpreters should produce such a response header.
+Documentation interpreters should document this header.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="EndpointsWithCustomErrors.html" class="extype" name="endpoints.play.server.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a> → <a href="../../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd></dl></div>
     </li><li name="endpoints.play.server.Urls#optionalQueryStringParam" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="optionalQueryStringParam[A](implicitparam:Urls.this.QueryStringParam[A]):Urls.this.QueryStringParam[Option[A]]"></a><a id="optionalQueryStringParam[A](QueryStringParam[A]):QueryStringParam[Option[A]]"></a>
       <span class="permalink">
@@ -2349,9 +2414,9 @@ case, its value is an empty collection), and report a failure if at least one va
       <p class="shortcomment cmt">Decodes a request.</p><div class="fullcomment"><div class="comment cmt"><p>Decodes a request.
 </p></div><dl class="paramcmts block"><dt class="param">method</dt><dd class="cmt"><p>Request method</p></dd><dt class="param">url</dt><dd class="cmt"><p>Request URL</p></dd><dt class="param">entity</dt><dd class="cmt"><p>Request entity</p></dd><dt class="param">docs</dt><dd class="cmt"><p>Request documentation</p></dd><dt class="param">headers</dt><dd class="cmt"><p>Request headers</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="EndpointsWithCustomErrors.html" class="extype" name="endpoints.play.server.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a> → <a href="../../algebra/Requests.html" class="extype" name="endpoints.algebra.Requests">Requests</a></dd></dl></div>
     </li><li name="endpoints.play.server.EndpointsWithCustomErrors#response" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
-      <a id="response[A](statusCode:EndpointsWithCustomErrors.this.StatusCode,entity:EndpointsWithCustomErrors.this.ResponseEntity[A],docs:endpoints.algebra.Documentation):A=&gt;play.api.mvc.Result"></a><a id="response[A](StatusCode,ResponseEntity[A],Documentation):(A)⇒Result"></a>
+      <a id="response[A,B,R](statusCode:EndpointsWithCustomErrors.this.StatusCode,entity:EndpointsWithCustomErrors.this.ResponseEntity[A],docs:endpoints.algebra.Documentation,headers:EndpointsWithCustomErrors.this.ResponseHeaders[B])(implicittupler:endpoints.Tupler.Aux[A,B,R]):EndpointsWithCustomErrors.this.Response[R]"></a><a id="response[A,B,R](StatusCode,ResponseEntity[A],Documentation,ResponseHeaders[B])(Tupler.Aux[A,B,R]):Response[R]"></a>
       <span class="permalink">
-      <a href="../../../endpoints/play/server/BasicAuthentication.html#response[A](statusCode:EndpointsWithCustomErrors.this.StatusCode,entity:EndpointsWithCustomErrors.this.ResponseEntity[A],docs:endpoints.algebra.Documentation):A=&gt;play.api.mvc.Result" title="Permalink">
+      <a href="../../../endpoints/play/server/BasicAuthentication.html#response[A,B,R](statusCode:EndpointsWithCustomErrors.this.StatusCode,entity:EndpointsWithCustomErrors.this.ResponseEntity[A],docs:endpoints.algebra.Documentation,headers:EndpointsWithCustomErrors.this.ResponseHeaders[B])(implicittupler:endpoints.Tupler.Aux[A,B,R]):EndpointsWithCustomErrors.this.Response[R]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2360,12 +2425,71 @@ case, its value is an empty collection), and report a failure if at least one va
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">response</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="statusCode">statusCode: <a href="#StatusCode=play.api.mvc.Results.Status" class="extmbr" name="endpoints.play.server.BasicAuthentication.StatusCode">StatusCode</a></span>, <span name="entity">entity: <a href="#ResponseEntity[A]=play.api.http.Writeable[A]" class="extmbr" name="endpoints.play.server.BasicAuthentication.ResponseEntity">ResponseEntity</a>[<span class="extype" name="endpoints.play.server.EndpointsWithCustomErrors.response.A">A</span>]</span>, <span name="docs">docs: <a href="../../algebra/index.html#Documentation=Option[String]" class="extmbr" name="endpoints.algebra.Documentation">Documentation</a> = <span class="symbol"><span class="name"><a href="../../../scala/index.html">None</a></span></span></span>)</span><span class="result">: (<span class="extype" name="endpoints.play.server.EndpointsWithCustomErrors.response.A">A</span>) ⇒ <a href="https://www.playframework.com/documentation/2.8.0/api/scala/play/api/mvc/Result.html#play.api.mvc.Result" class="extype" name="play.api.mvc.Result">Result</a></span>
+        <span class="name">response</span><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="R">R</span>]</span><span class="params">(<span name="statusCode">statusCode: <a href="#StatusCode=play.api.mvc.Results.Status" class="extmbr" name="endpoints.play.server.BasicAuthentication.StatusCode">StatusCode</a></span>, <span name="entity">entity: <a href="#ResponseEntity[A]=A=&gt;play.api.http.HttpEntity" class="extmbr" name="endpoints.play.server.BasicAuthentication.ResponseEntity">ResponseEntity</a>[<span class="extype" name="endpoints.play.server.EndpointsWithCustomErrors.response.A">A</span>]</span>, <span name="docs">docs: <a href="../../algebra/index.html#Documentation=Option[String]" class="extmbr" name="endpoints.algebra.Documentation">Documentation</a> = <span class="symbol"><span class="name"><a href="../../../scala/index.html">None</a></span></span></span>, <span name="headers">headers: <a href="#ResponseHeaders[A]=A=&gt;Seq[(String,String)]" class="extmbr" name="endpoints.play.server.BasicAuthentication.ResponseHeaders">ResponseHeaders</a>[<span class="extype" name="endpoints.play.server.EndpointsWithCustomErrors.response.B">B</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="tupler">tupler: <a href="../../Tupler$.html#Aux[A,B,Out0]=endpoints.Tupler[A,B]{typeOut=Out0}" class="extmbr" name="endpoints.Tupler.Aux">Tupler.Aux</a>[<span class="extype" name="endpoints.play.server.EndpointsWithCustomErrors.response.A">A</span>, <span class="extype" name="endpoints.play.server.EndpointsWithCustomErrors.response.B">B</span>, <span class="extype" name="endpoints.play.server.EndpointsWithCustomErrors.response.R">R</span>]</span>)</span><span class="result">: <a href="#Response[A]=A=&gt;play.api.mvc.Result" class="extmbr" name="endpoints.play.server.BasicAuthentication.Response">Response</a>[<span class="extype" name="endpoints.play.server.EndpointsWithCustomErrors.response.R">R</span>]</span>
       </span>
       
       <p class="shortcomment cmt">Server interpreters construct a response with the given status and entity.</p><div class="fullcomment"><div class="comment cmt"><p>Server interpreters construct a response with the given status and entity.
 Client interpreters accept a response only if it has a corresponding status code.
-</p></div><dl class="paramcmts block"><dt class="param">statusCode</dt><dd class="cmt"><p>Response status code</p></dd><dt class="param">entity</dt><dd class="cmt"><p>Response entity</p></dd><dt class="param">docs</dt><dd class="cmt"><p>Response documentation</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="EndpointsWithCustomErrors.html" class="extype" name="endpoints.play.server.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a> → <a href="../../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd></dl></div>
+</p></div><dl class="paramcmts block"><dt class="param">statusCode</dt><dd class="cmt"><p>Response status code</p></dd><dt class="param">entity</dt><dd class="cmt"><p>Response entity</p></dd><dt class="param">docs</dt><dd class="cmt"><p>Response documentation</p></dd><dt class="param">headers</dt><dd class="cmt"><p>Response headers</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="EndpointsWithCustomErrors.html" class="extype" name="endpoints.play.server.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a> → <a href="../../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd></dl></div>
+    </li><li name="endpoints.play.server.EndpointsWithCustomErrors#responseHeader" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
+      <a id="responseHeader(name:String,docs:endpoints.algebra.Documentation):EndpointsWithCustomErrors.this.ResponseHeaders[String]"></a><a id="responseHeader(String,Documentation):ResponseHeaders[String]"></a>
+      <span class="permalink">
+      <a href="../../../endpoints/play/server/BasicAuthentication.html#responseHeader(name:String,docs:endpoints.algebra.Documentation):EndpointsWithCustomErrors.this.ResponseHeaders[String]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">responseHeader</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="docs">docs: <a href="../../algebra/index.html#Documentation=Option[String]" class="extmbr" name="endpoints.algebra.Documentation">Documentation</a> = <span class="symbol"><span class="name"><a href="../../../scala/index.html">None</a></span></span></span>)</span><span class="result">: <a href="#ResponseHeaders[A]=A=&gt;Seq[(String,String)]" class="extmbr" name="endpoints.play.server.BasicAuthentication.ResponseHeaders">ResponseHeaders</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Response headers containing a header with the given <code>name</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Response headers containing a header with the given <code>name</code>.
+Client interpreters should model the header value as <code>String</code>, or
+fail if the response header is missing.
+Server interpreters should produce such a response header.
+Documentation interpreters should document this header.</p><p>Example:</p><pre><span class="kw">val</span> versionedResource: Endpoint[<span class="std">Unit</span>, (SomeResource, <span class="std">String</span>)] =
+  endpoint(
+    get(path / <span class="lit">"versioned-resource"</span>),
+    ok(
+      jsonResponse[SomeResource],
+      headers = responseHeader(<span class="lit">"ETag"</span>)
+    )
+  )</pre></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="EndpointsWithCustomErrors.html" class="extype" name="endpoints.play.server.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a> → <a href="../../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd></dl></div>
+    </li><li name="endpoints.play.server.EndpointsWithCustomErrors#responseHeadersInvFunctor" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="responseHeadersInvFunctor:endpoints.PartialInvariantFunctor[EndpointsWithCustomErrors.this.ResponseHeaders]"></a><a id="responseHeadersInvFunctor:PartialInvariantFunctor[ResponseHeaders]"></a>
+      <span class="permalink">
+      <a href="../../../endpoints/play/server/BasicAuthentication.html#responseHeadersInvFunctor:endpoints.PartialInvariantFunctor[EndpointsWithCustomErrors.this.ResponseHeaders]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">responseHeadersInvFunctor</span><span class="result">: <a href="../../PartialInvariantFunctor.html" class="extype" name="endpoints.PartialInvariantFunctor">PartialInvariantFunctor</a>[<a href="#ResponseHeaders[A]=A=&gt;Seq[(String,String)]" class="extmbr" name="endpoints.play.server.BasicAuthentication.ResponseHeaders">ResponseHeaders</a>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Provides <code>xmap</code> and <code>xmapPartial</code> operations.</p><div class="fullcomment"><div class="comment cmt"><p>Provides <code>xmap</code> and <code>xmapPartial</code> operations.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="EndpointsWithCustomErrors.html" class="extype" name="endpoints.play.server.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a> → <a href="../../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd><dt>See also</dt><dd><span class="cmt"><p><a href="../../PartialInvariantFunctorSyntax$PartialInvariantFunctorSyntax.html" class="extype" name="endpoints.PartialInvariantFunctorSyntax.PartialInvariantFunctorSyntax">PartialInvariantFunctorSyntax</a></p></span></dd></dl></div>
+    </li><li name="endpoints.play.server.EndpointsWithCustomErrors#responseHeadersSemigroupal" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="responseHeadersSemigroupal:endpoints.Semigroupal[EndpointsWithCustomErrors.this.ResponseHeaders]"></a><a id="responseHeadersSemigroupal:Semigroupal[ResponseHeaders]"></a>
+      <span class="permalink">
+      <a href="../../../endpoints/play/server/BasicAuthentication.html#responseHeadersSemigroupal:endpoints.Semigroupal[EndpointsWithCustomErrors.this.ResponseHeaders]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">responseHeadersSemigroupal</span><span class="result">: <a href="../../Semigroupal.html" class="extype" name="endpoints.Semigroupal">Semigroupal</a>[<a href="#ResponseHeaders[A]=A=&gt;Seq[(String,String)]" class="extmbr" name="endpoints.play.server.BasicAuthentication.ResponseHeaders">ResponseHeaders</a>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Provides <code>++</code> operation.</p><div class="fullcomment"><div class="comment cmt"><p>Provides <code>++</code> operation.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="EndpointsWithCustomErrors.html" class="extype" name="endpoints.play.server.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a> → <a href="../../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd><dt>See also</dt><dd><span class="cmt"><p><a href="../../SemigroupalSyntax$SemigroupalSyntax.html" class="extype" name="endpoints.SemigroupalSyntax.SemigroupalSyntax">SemigroupalSyntax</a></p></span></dd></dl></div>
     </li><li name="endpoints.play.server.EndpointsWithCustomErrors#responseInvFunctor" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="responseInvFunctor:endpoints.InvariantFunctor[EndpointsWithCustomErrors.this.Response]"></a><a id="responseInvFunctor:InvariantFunctor[Response]"></a>
       <span class="permalink">
@@ -2394,7 +2518,7 @@ Client interpreters accept a response only if it has a corresponding status code
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">routesFromEndpoints</span><span class="params">(<span name="endpoints">endpoints: <a href="#ToPlayHandlerextendsAnyRef" class="extmbr" name="endpoints.play.server.EndpointsWithCustomErrors.ToPlayHandler">ToPlayHandler</a>*</span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/PartialFunction.html#scala.PartialFunction" class="extype" name="scala.PartialFunction">PartialFunction</a>[<a href="https://www.playframework.com/documentation/2.8.0/api/scala/play/api/mvc/RequestHeader.html#play.api.mvc.RequestHeader" class="extype" name="play.api.mvc.RequestHeader">RequestHeader</a>, <a href="https://www.playframework.com/documentation/2.8.0/api/scala/play/api/mvc/Handler.html#play.api.mvc.Handler" class="extype" name="play.api.mvc.Handler">Handler</a>]</span>
+        <span class="name">routesFromEndpoints</span><span class="params">(<span name="endpoints">endpoints: <a href="#ToPlayHandlerextendsAnyRef" class="extmbr" name="endpoints.play.server.EndpointsWithCustomErrors.ToPlayHandler">ToPlayHandler</a>*</span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/PartialFunction.html#scala.PartialFunction" class="extype" name="scala.PartialFunction">PartialFunction</a>[<a href="https://www.playframework.com/documentation/2.8.1/api/scala/play/api/mvc/RequestHeader.html#play.api.mvc.RequestHeader" class="extype" name="play.api.mvc.RequestHeader">RequestHeader</a>, <a href="https://www.playframework.com/documentation/2.8.1/api/scala/play/api/mvc/Handler.html#play.api.mvc.Handler" class="extype" name="play.api.mvc.Handler">Handler</a>]</span>
       </span>
       
       <p class="shortcomment cmt">Builds a Play router out of endpoint definitions.</p><div class="fullcomment"><div class="comment cmt"><p>Builds a Play router out of endpoint definitions.</p><pre><span class="kw">val</span> routes = routesFromEndpoints(
@@ -2530,7 +2654,7 @@ and clients should take an URL-decoded string value.</p></div><dl class="attribu
         <span class="kind">lazy val</span>
       </span>
       <span class="symbol">
-        <span class="name">textRequest</span><span class="result">: <a href="https://www.playframework.com/documentation/2.8.0/api/scala/play/api/mvc/BodyParser.html#play.api.mvc.BodyParser" class="extype" name="play.api.mvc.BodyParser">BodyParser</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+        <span class="name">textRequest</span><span class="result">: <a href="https://www.playframework.com/documentation/2.8.1/api/scala/play/api/mvc/BodyParser.html#play.api.mvc.BodyParser" class="extype" name="play.api.mvc.BodyParser">BodyParser</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>
       </span>
       
       <p class="shortcomment cmt">Request with a <code>String</code> body.</p><div class="fullcomment"><div class="comment cmt"><p>Request with a <code>String</code> body.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="EndpointsWithCustomErrors.html" class="extype" name="endpoints.play.server.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a> → <a href="../../algebra/Requests.html" class="extype" name="endpoints.algebra.Requests">Requests</a></dd></dl></div>
@@ -2546,7 +2670,7 @@ and clients should take an URL-decoded string value.</p></div><dl class="attribu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">textResponse</span><span class="result">: <a href="#ResponseEntity[A]=play.api.http.Writeable[A]" class="extmbr" name="endpoints.play.server.BasicAuthentication.ResponseEntity">ResponseEntity</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+        <span class="name">textResponse</span><span class="result">: <a href="#ResponseEntity[A]=A=&gt;play.api.http.HttpEntity" class="extmbr" name="endpoints.play.server.BasicAuthentication.ResponseEntity">ResponseEntity</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>
       </span>
       
       <p class="shortcomment cmt">A text entity</p><div class="fullcomment"><div class="comment cmt"><p>A text entity</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="EndpointsWithCustomErrors.html" class="extype" name="endpoints.play.server.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a> → <a href="../../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd></dl></div>

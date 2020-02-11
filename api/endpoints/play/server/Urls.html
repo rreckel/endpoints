@@ -149,6 +149,14 @@
                         <a href="BuiltInErrors.html" title="">BuiltInErrors</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
+                        <a class="trait" href="ChunkedEntities.html" title="Interpreter for the algebra.ChunkedEntities algebra in the endpoints.play.server family."></a>
+                        <a href="ChunkedEntities.html" title="Interpreter for the algebra.ChunkedEntities algebra in the endpoints.play.server family.">ChunkedEntities</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="ChunkedJsonEntities.html" title="Interpreter for the algebra.ChunkedJsonEntities algebra in the endpoints.play.server family."></a>
+                        <a href="ChunkedJsonEntities.html" title="Interpreter for the algebra.ChunkedJsonEntities algebra in the endpoints.play.server family.">ChunkedJsonEntities</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
                         <a class="trait" href="Endpoints.html" title="Interpreter for algebra.Endpoints that performs routing using Play framework, and uses algebra.BuiltInErrors to model client and server errors."></a>
                         <a href="Endpoints.html" title="Interpreter for algebra.Endpoints that performs routing using Play framework, and uses algebra.BuiltInErrors to model client and server errors.">Endpoints</a>
                       </li><li class="current-entities indented3">
@@ -228,7 +236,7 @@
 
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p><a href="../../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">algebra.Urls</a> interpreter that decodes and encodes URLs.
-</p></div><dl class="attributes block"> <dt>Self Type</dt><dd><a href="EndpointsWithCustomErrors.html" class="extype" name="endpoints.play.server.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a></dd><dt>Source</dt><dd><a href="https://github.com/julienrf/endpoints/blob/v0.13.0/play/server/src/main/scala/endpoints/play/server/Urls.scala" target="_blank">Urls.scala</a></dd></dl><div class="toggleContainer block">
+</p></div><dl class="attributes block"> <dt>Self Type</dt><dd><a href="EndpointsWithCustomErrors.html" class="extype" name="endpoints.play.server.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a></dd><dt>Source</dt><dd><a href="https://github.com/julienrf/endpoints/blob/v0.14.0/play/server/src/main/scala/endpoints/play/server/Urls.scala" target="_blank">Urls.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -237,7 +245,7 @@
             <span class="toggle">
               Known Subclasses
             </span>
-            <div class="subClasses hiddenContent"><a href="Assets.html" class="extype" name="endpoints.play.server.Assets">Assets</a>, <a href="BasicAuthentication.html" class="extype" name="endpoints.play.server.BasicAuthentication">BasicAuthentication</a>, <a href="Endpoints.html" class="extype" name="endpoints.play.server.Endpoints">Endpoints</a>, <a href="EndpointsWithCustomErrors.html" class="extype" name="endpoints.play.server.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a>, <a href="JsonEntitiesFromCodecs.html" class="extype" name="endpoints.play.server.JsonEntitiesFromCodecs">JsonEntitiesFromCodecs</a>, <a href="JsonEntitiesFromEncodersAndDecoders.html" class="extype" name="endpoints.play.server.JsonEntitiesFromEncodersAndDecoders">JsonEntitiesFromEncodersAndDecoders</a>, <a href="JsonEntitiesFromSchemas.html" class="extype" name="endpoints.play.server.JsonEntitiesFromSchemas">JsonEntitiesFromSchemas</a>, <a href="LowLevelEndpoints.html" class="extype" name="endpoints.play.server.LowLevelEndpoints">LowLevelEndpoints</a>, <a href="MuxEndpoints.html" class="extype" name="endpoints.play.server.MuxEndpoints">MuxEndpoints</a>, <a href="circe/JsonEntities.html" class="extype" name="endpoints.play.server.circe.JsonEntities">JsonEntities</a>, <a href="circe/JsonEntitiesFromCodecs.html" class="extype" name="endpoints.play.server.circe.JsonEntitiesFromCodecs">JsonEntitiesFromCodecs</a></div>
+            <div class="subClasses hiddenContent"><a href="Assets.html" class="extype" name="endpoints.play.server.Assets">Assets</a>, <a href="BasicAuthentication.html" class="extype" name="endpoints.play.server.BasicAuthentication">BasicAuthentication</a>, <a href="ChunkedEntities.html" class="extype" name="endpoints.play.server.ChunkedEntities">ChunkedEntities</a>, <a href="ChunkedJsonEntities.html" class="extype" name="endpoints.play.server.ChunkedJsonEntities">ChunkedJsonEntities</a>, <a href="Endpoints.html" class="extype" name="endpoints.play.server.Endpoints">Endpoints</a>, <a href="EndpointsWithCustomErrors.html" class="extype" name="endpoints.play.server.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a>, <a href="JsonEntitiesFromCodecs.html" class="extype" name="endpoints.play.server.JsonEntitiesFromCodecs">JsonEntitiesFromCodecs</a>, <a href="JsonEntitiesFromEncodersAndDecoders.html" class="extype" name="endpoints.play.server.JsonEntitiesFromEncodersAndDecoders">JsonEntitiesFromEncodersAndDecoders</a>, <a href="JsonEntitiesFromSchemas.html" class="extype" name="endpoints.play.server.JsonEntitiesFromSchemas">JsonEntitiesFromSchemas</a>, <a href="LowLevelEndpoints.html" class="extype" name="endpoints.play.server.LowLevelEndpoints">LowLevelEndpoints</a>, <a href="MuxEndpoints.html" class="extype" name="endpoints.play.server.MuxEndpoints">MuxEndpoints</a>, <a href="circe/JsonEntities.html" class="extype" name="endpoints.play.server.circe.JsonEntities">JsonEntities</a>, <a href="circe/JsonEntitiesFromCodecs.html" class="extype" name="endpoints.play.server.circe.JsonEntitiesFromCodecs">JsonEntitiesFromCodecs</a></div>
           </div><div class="toggleContainer block diagram-container" id="inheritance-diagram-container">
                 <span class="toggle diagram-link">
                   Type Hierarchy
@@ -444,7 +452,7 @@
         <span class="kind">type</span>
       </span>
       <span class="symbol">
-        <span class="name">RequestExtractor</span><span class="tparams">[<span name="A">A</span>]</span><span class="result alias"> = (<a href="https://www.playframework.com/documentation/2.8.0/api/scala/play/api/mvc/RequestHeader.html#play.api.mvc.RequestHeader" class="extype" name="play.api.mvc.RequestHeader">RequestHeader</a>) ⇒ <a href="https://www.scala-lang.org/api/2.12.10/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="endpoints.play.server.Urls.RequestExtractor.A">A</span>]</span>
+        <span class="name">RequestExtractor</span><span class="tparams">[<span name="A">A</span>]</span><span class="result alias"> = (<a href="https://www.playframework.com/documentation/2.8.1/api/scala/play/api/mvc/RequestHeader.html#play.api.mvc.RequestHeader" class="extype" name="play.api.mvc.RequestHeader">RequestHeader</a>) ⇒ <a href="https://www.scala-lang.org/api/2.12.10/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="endpoints.play.server.Urls.RequestExtractor.A">A</span>]</span>
       </span>
       
       <p class="shortcomment cmt">Convenient type alias modeling the extraction of an <code>A</code> information from request headers.</p><div class="fullcomment"><div class="comment cmt"><p>Convenient type alias modeling the extraction of an <code>A</code> information from request headers.</p><p>This type has an instance of <code>Applicative</code>.
@@ -936,7 +944,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">handleClientErrors</span><span class="params">(<span name="invalid">invalid: <a href="../../Invalid.html" class="extype" name="endpoints.Invalid">Invalid</a></span>)</span><span class="result">: <a href="https://www.playframework.com/documentation/2.8.0/api/scala/play/api/mvc/Result.html#play.api.mvc.Result" class="extype" name="play.api.mvc.Result">Result</a></span>
+        <span class="name">handleClientErrors</span><span class="params">(<span name="invalid">invalid: <a href="../../Invalid.html" class="extype" name="endpoints.Invalid">Invalid</a></span>)</span><span class="result">: <a href="https://www.playframework.com/documentation/2.8.1/api/scala/play/api/mvc/Result.html#play.api.mvc.Result" class="extype" name="play.api.mvc.Result">Result</a></span>
       </span>
       
       <p class="shortcomment cmt">This method is called by <i>endpoints</i> when decoding a request failed.</p><div class="fullcomment"><div class="comment cmt"><p>This method is called by <i>endpoints</i> when decoding a request failed.</p><p>The provided implementation calls <code>clientErrorsResponse</code> to construct

@@ -103,7 +103,7 @@
       <p class="shortcomment cmt">Interpreters producing an OpenAPI model of endpoints.</p><div class="fullcomment"><div class="comment cmt"><p>Interpreters producing an OpenAPI model of endpoints.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="endpoints">endpoints</a></dd></dl></div>
     </li><li name="endpoints.openapi.Requests" visbl="pub" class="indented3 " data-isabs="true" fullComment="yes" group="interpreters">
-      <a id="RequestsextendsRequestswithUrlswithMethods"></a><a id="Requests:Requests"></a>
+      <a id="RequestsextendsRequestswithUrlswithMethodswithHeaders"></a><a id="Requests:Requests"></a>
       <span class="permalink">
       <a href="../../endpoints/openapi/Requests.html" title="Permalink">
         <i class="material-icons"></i>
@@ -114,7 +114,7 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="Interpreter for algebra.Requests." href="Requests.html"><span class="name">Requests</span></a><span class="result"> extends <a href="../algebra/Requests.html" class="extype" name="endpoints.algebra.Requests">algebra.Requests</a> with <a href="Urls.html" class="extype" name="endpoints.openapi.Urls">Urls</a> with <a href="Methods.html" class="extype" name="endpoints.openapi.Methods">Methods</a></span>
+        <a title="Interpreter for algebra.Requests." href="Requests.html"><span class="name">Requests</span></a><span class="result"> extends <a href="../algebra/Requests.html" class="extype" name="endpoints.algebra.Requests">algebra.Requests</a> with <a href="Urls.html" class="extype" name="endpoints.openapi.Urls">Urls</a> with <a href="Methods.html" class="extype" name="endpoints.openapi.Methods">Methods</a> with <a href="Headers.html" class="extype" name="endpoints.openapi.Headers">Headers</a></span>
       </span>
       
       <p class="shortcomment cmt">Interpreter for <a href="../algebra/Requests.html" class="extype" name="endpoints.algebra.Requests">algebra.Requests</a>.</p><div class="fullcomment"><div class="comment cmt"><p>Interpreter for <a href="../algebra/Requests.html" class="extype" name="endpoints.algebra.Requests">algebra.Requests</a>.
@@ -125,12 +125,12 @@
                         <a href="Methods$Delete$.html" title="">Delete</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
-                        <a class="class" href="Requests$DocumentedHeader.html" title=""></a>
-                        <a href="Requests$DocumentedHeader.html" title="">DocumentedHeader</a>
+                        <a class="class" href="Headers$DocumentedHeader.html" title=""></a>
+                        <a href="Headers$DocumentedHeader.html" title="">DocumentedHeader</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
-                        <a class="class" href="Requests$DocumentedHeaders.html" title=""></a>
-                        <a href="Requests$DocumentedHeaders.html" title="">DocumentedHeaders</a>
+                        <a class="class" href="Headers$DocumentedHeaders.html" title=""></a>
+                        <a href="Headers$DocumentedHeaders.html" title="">DocumentedHeaders</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
                         <a class="class" href="Urls$DocumentedParameter.html" title=""></a>
@@ -218,12 +218,12 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">DocumentedRequest</span><span class="params">(<span name="method">method: <a href="Requests.html#MethodextendsAnyRef" class="extmbr" name="endpoints.openapi.Methods.Method">Requests.Method</a></span>, <span name="url">url: <a href="Requests.html#DocumentedUrlextendsProductwithSerializable" class="extmbr" name="endpoints.openapi.Urls.DocumentedUrl">Requests.DocumentedUrl</a></span>, <span name="headers">headers: <a href="Requests$DocumentedHeaders.html" class="extype" name="endpoints.openapi.Requests.DocumentedHeaders">DocumentedHeaders</a></span>, <span name="documentation">documentation: <a href="../algebra/index.html#Documentation=Option[String]" class="extmbr" name="endpoints.algebra.Documentation">Documentation</a></span>, <span name="entity">entity: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <a href="model/MediaType.html" class="extype" name="endpoints.openapi.model.MediaType">MediaType</a>]</span>)</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.10/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <span class="name">DocumentedRequest</span><span class="params">(<span name="method">method: <a href="Requests.html#MethodextendsAnyRef" class="extmbr" name="endpoints.openapi.Methods.Method">Requests.Method</a></span>, <span name="url">url: <a href="Requests.html#DocumentedUrlextendsProductwithSerializable" class="extmbr" name="endpoints.openapi.Urls.DocumentedUrl">Requests.DocumentedUrl</a></span>, <span name="headers">headers: <a href="Requests.html#DocumentedHeadersextendsProductwithSerializable" class="extmbr" name="endpoints.openapi.Headers.DocumentedHeaders">Requests.DocumentedHeaders</a></span>, <span name="documentation">documentation: <a href="../algebra/index.html#Documentation=Option[String]" class="extmbr" name="endpoints.algebra.Documentation">Documentation</a></span>, <span name="entity">entity: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <a href="model/MediaType.html" class="extype" name="endpoints.openapi.model.MediaType">MediaType</a>]</span>)</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.10/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/julienrf/endpoints/blob/v0.13.0/openapi/openapi/src/main/scala/endpoints/openapi/Requests.scala" target="_blank">Requests.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/julienrf/endpoints/blob/v0.14.0/openapi/openapi/src/main/scala/endpoints/openapi/Requests.scala" target="_blank">Requests.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -300,7 +300,7 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">DocumentedRequest</span><span class="params">(<span name="method">method: <a href="Requests.html#MethodextendsAnyRef" class="extmbr" name="endpoints.openapi.Methods.Method">Requests.Method</a></span>, <span name="url">url: <a href="Requests.html#DocumentedUrlextendsProductwithSerializable" class="extmbr" name="endpoints.openapi.Urls.DocumentedUrl">Requests.DocumentedUrl</a></span>, <span name="headers">headers: <a href="Requests$DocumentedHeaders.html" class="extype" name="endpoints.openapi.Requests.DocumentedHeaders">DocumentedHeaders</a></span>, <span name="documentation">documentation: <a href="../algebra/index.html#Documentation=Option[String]" class="extmbr" name="endpoints.algebra.Documentation">Documentation</a></span>, <span name="entity">entity: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <a href="model/MediaType.html" class="extype" name="endpoints.openapi.model.MediaType">MediaType</a>]</span>)</span>
+        <span class="name">DocumentedRequest</span><span class="params">(<span name="method">method: <a href="Requests.html#MethodextendsAnyRef" class="extmbr" name="endpoints.openapi.Methods.Method">Requests.Method</a></span>, <span name="url">url: <a href="Requests.html#DocumentedUrlextendsProductwithSerializable" class="extmbr" name="endpoints.openapi.Urls.DocumentedUrl">Requests.DocumentedUrl</a></span>, <span name="headers">headers: <a href="Requests.html#DocumentedHeadersextendsProductwithSerializable" class="extmbr" name="endpoints.openapi.Headers.DocumentedHeaders">Requests.DocumentedHeaders</a></span>, <span name="documentation">documentation: <a href="../algebra/index.html#Documentation=Option[String]" class="extmbr" name="endpoints.algebra.Documentation">Documentation</a></span>, <span name="entity">entity: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <a href="model/MediaType.html" class="extype" name="endpoints.openapi.model.MediaType">MediaType</a>]</span>)</span>
       </span>
       
       
@@ -638,7 +638,7 @@
               
         </dd></dl></div>
     </li><li name="endpoints.openapi.Requests.DocumentedRequest#headers" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="headers:Requests.this.DocumentedHeaders"></a><a id="headers:DocumentedHeaders"></a>
+      <a id="headers:Requests.this.DocumentedHeaders"></a><a id="headers:Requests.DocumentedHeaders"></a>
       <span class="permalink">
       <a href="../../endpoints/openapi/Requests$DocumentedRequest.html#headers:Requests.this.DocumentedHeaders" title="Permalink">
         <i class="material-icons"></i>
@@ -649,7 +649,7 @@
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">headers</span><span class="result">: <a href="Requests$DocumentedHeaders.html" class="extype" name="endpoints.openapi.Requests.DocumentedHeaders">DocumentedHeaders</a></span>
+        <span class="name">headers</span><span class="result">: <a href="Requests.html#DocumentedHeadersextendsProductwithSerializable" class="extmbr" name="endpoints.openapi.Headers.DocumentedHeaders">Requests.DocumentedHeaders</a></span>
       </span>
       
       

@@ -138,7 +138,7 @@
 
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>An interpreter for <a href="../algebra/JsonSchemas.html" class="extype" name="endpoints.algebra.JsonSchemas">endpoints.algebra.JsonSchemas</a> that produces a circe codec.
-</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/julienrf/endpoints/blob/v0.13.0/json-schema/json-schema-circe/src/main/scala/endpoints/circe/JsonSchemas.scala" target="_blank">JsonSchemas.scala</a></dd></dl><div class="toggleContainer block">
+</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/julienrf/endpoints/blob/v0.14.0/json-schema/json-schema-circe/src/main/scala/endpoints/circe/JsonSchemas.scala" target="_blank">JsonSchemas.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -1162,6 +1162,31 @@ for a GeoJSON point:</p><pre><span class="kw">case</span> <span class="kw">class
       </span>
       
       <p class="shortcomment cmt">The JSON schema of a record with a single optional field <code>name</code> of type <code>A</code></p><div class="fullcomment"><div class="comment cmt"><p>The JSON schema of a record with a single optional field <code>name</code> of type <code>A</code></p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.circe.JsonSchemas">JsonSchemas</a> → <a href="../algebra/JsonSchemas.html" class="extype" name="endpoints.algebra.JsonSchemas">JsonSchemas</a></dd></dl></div>
+    </li><li name="endpoints.circe.JsonSchemas#orFallbackToJsonSchema" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="orFallbackToJsonSchema[A,B](schemaA:JsonSchemas.this.JsonSchema[A],schemaB:JsonSchemas.this.JsonSchema[B]):JsonSchemas.this.JsonSchema[Either[A,B]]"></a><a id="orFallbackToJsonSchema[A,B](JsonSchema[A],JsonSchema[B]):JsonSchema[Either[A,B]]"></a>
+      <span class="permalink">
+      <a href="../../endpoints/circe/JsonSchemas.html#orFallbackToJsonSchema[A,B](schemaA:JsonSchemas.this.JsonSchema[A],schemaB:JsonSchemas.this.JsonSchema[B]):JsonSchemas.this.JsonSchema[Either[A,B]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">orFallbackToJsonSchema</span><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>]</span><span class="params">(<span name="schemaA">schemaA: <a href="JsonSchemas$JsonSchema.html" class="extype" name="endpoints.circe.JsonSchemas.JsonSchema">JsonSchema</a>[<span class="extype" name="endpoints.circe.JsonSchemas.orFallbackToJsonSchema.A">A</span>]</span>, <span name="schemaB">schemaB: <a href="JsonSchemas$JsonSchema.html" class="extype" name="endpoints.circe.JsonSchemas.JsonSchema">JsonSchema</a>[<span class="extype" name="endpoints.circe.JsonSchemas.orFallbackToJsonSchema.B">B</span>]</span>)</span><span class="result">: <a href="JsonSchemas$JsonSchema.html" class="extype" name="endpoints.circe.JsonSchemas.JsonSchema">JsonSchema</a>[<a href="../../scala/index.html#Either[+A,+B]=scala.util.Either[A,B]" class="extmbr" name="scala.Either">Either</a>[<span class="extype" name="endpoints.circe.JsonSchemas.orFallbackToJsonSchema.A">A</span>, <span class="extype" name="endpoints.circe.JsonSchemas.orFallbackToJsonSchema.B">B</span>]]</span>
+      </span>
+      
+      <p class="shortcomment cmt">A schema that can be either <code>schemaA</code> or <code>schemaB</code>.</p><div class="fullcomment"><div class="comment cmt"><p>A schema that can be either <code>schemaA</code> or <code>schemaB</code>.</p><p>Documentation interpreter produce a <code>oneOf</code> JSON schema.
+Encoder interpreters forward to either <code>schemaA</code> or <code>schemaB</code>.
+Decoder interpreters first try to decode with <code>schemaA</code>, and fallback to <code>schemaB</code>
+in case of failure.</p><p>The difference between this operation and the operation <code>orElse</code> on “tagged” schemas
+is that this operation does not rely on a discriminator field between the alternative
+schemas. As a consequence, decoding is slower than with “tagged” schemas and provides
+less precise error messages.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.circe.JsonSchemas">JsonSchemas</a> → <a href="../algebra/JsonSchemas.html" class="extype" name="endpoints.algebra.JsonSchemas">JsonSchemas</a></dd><dt>Note</dt><dd><span class="cmt"><p>Be careful to use <i>disjoint</i> schemas for <code>A</code> and <code>B</code> (none must be a subtype
+      of the other), otherwise, a value of type <code>B</code> might also be successfully
+      decoded as a value of type <code>A</code>, and this could have surprising consequences.</p></span></dd></dl></div>
     </li><li name="endpoints.circe.JsonSchemas#recordPartialInvFunctor" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="recordPartialInvFunctor:endpoints.PartialInvariantFunctor[JsonSchemas.this.Record]"></a><a id="recordPartialInvFunctor:PartialInvariantFunctor[Record]"></a>
       <span class="permalink">
@@ -1749,7 +1774,7 @@ for a GeoJSON point:</p><pre><span class="kw">case</span> <span class="kw">class
         <span class="name">withExampleJsonSchema</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="schema">schema: <a href="JsonSchemas$JsonSchema.html" class="extype" name="endpoints.circe.JsonSchemas.JsonSchema">JsonSchema</a>[<span class="extype" name="endpoints.circe.JsonSchemas.withExampleJsonSchema.A">A</span>]</span>, <span name="example">example: <span class="extype" name="endpoints.circe.JsonSchemas.withExampleJsonSchema.A">A</span></span>)</span><span class="result">: <a href="JsonSchemas$JsonSchema.html" class="extype" name="endpoints.circe.JsonSchemas.JsonSchema">JsonSchema</a>[<span class="extype" name="endpoints.circe.JsonSchemas.withExampleJsonSchema.A">A</span>]</span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.circe.JsonSchemas">JsonSchemas</a> → <a href="../algebra/JsonSchemas.html" class="extype" name="endpoints.algebra.JsonSchemas">JsonSchemas</a></dd></dl></div>
+      <p class="shortcomment cmt">Include an example value within the given schema</p><div class="fullcomment"><div class="comment cmt"><p>Include an example value within the given schema</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.circe.JsonSchemas">JsonSchemas</a> → <a href="../algebra/JsonSchemas.html" class="extype" name="endpoints.algebra.JsonSchemas">JsonSchemas</a></dd></dl></div>
     </li><li name="endpoints.circe.JsonSchemas#zipRecords" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="zipRecords[A,B](recordA:JsonSchemas.this.Record[A],recordB:JsonSchemas.this.Record[B])(implicitt:endpoints.Tupler[A,B]):JsonSchemas.this.Record[t.Out]"></a><a id="zipRecords[A,B](Record[A],Record[B])(Tupler[A,B]):Record[Out]"></a>
       <span class="permalink">

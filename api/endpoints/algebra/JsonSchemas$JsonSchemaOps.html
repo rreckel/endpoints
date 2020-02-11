@@ -214,7 +214,7 @@ named “name”, and the second one has type <code>Int</code> and name “age�
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Implicit methods for values of type <a href="JsonSchemas.html#JsonSchema[A]" class="extmbr" name="endpoints.algebra.JsonSchemas.JsonSchema">JsonSchema</a></p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/julienrf/endpoints/blob/v0.13.0/json-schema/json-schema/src/main/scala/endpoints/algebra/JsonSchemas.scala" target="_blank">JsonSchemas.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Implicit methods for values of type <a href="JsonSchemas.html#JsonSchema[A]" class="extmbr" name="endpoints.algebra.JsonSchemas.JsonSchema">JsonSchema</a></p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/julienrf/endpoints/blob/v0.14.0/json-schema/json-schema/src/main/scala/endpoints/algebra/JsonSchemas.scala" target="_blank">JsonSchemas.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -701,6 +701,31 @@ named “name”, and the second one has type <code>Int</code> and name “age�
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li name="endpoints.algebra.JsonSchemas.JsonSchemaOps#orFallbackTo" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="orFallbackTo[B](schemaB:JsonSchemas.this.JsonSchema[B]):JsonSchemas.this.JsonSchema[Either[A,B]]"></a><a id="orFallbackTo[B](JsonSchema[B]):JsonSchema[Either[A,B]]"></a>
+      <span class="permalink">
+      <a href="../../endpoints/algebra/JsonSchemas$JsonSchemaOps.html#orFallbackTo[B](schemaB:JsonSchemas.this.JsonSchema[B]):JsonSchemas.this.JsonSchema[Either[A,B]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">orFallbackTo</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="schemaB">schemaB: <a href="JsonSchemas.html#JsonSchema[A]" class="extmbr" name="endpoints.algebra.JsonSchemas.JsonSchema">JsonSchema</a>[<span class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps.orFallbackTo.B">B</span>]</span>)</span><span class="result">: <a href="JsonSchemas.html#JsonSchema[A]" class="extmbr" name="endpoints.algebra.JsonSchemas.JsonSchema">JsonSchema</a>[<a href="../../scala/index.html#Either[+A,+B]=scala.util.Either[A,B]" class="extmbr" name="scala.Either">Either</a>[<span class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps.A">A</span>, <span class="extype" name="endpoints.algebra.JsonSchemas.JsonSchemaOps.orFallbackTo.B">B</span>]]</span>
+      </span>
+      
+      <p class="shortcomment cmt">A schema that can be either <code>schemaA</code> or <code>schemaB</code>.</p><div class="fullcomment"><div class="comment cmt"><p>A schema that can be either <code>schemaA</code> or <code>schemaB</code>.</p><p>Documentation interpreter produce a <code>oneOf</code> JSON schema.
+Encoder interpreters forward to either <code>schemaA</code> or <code>schemaB</code>.
+Decoder interpreters first try to decode with <code>schemaA</code>, and fallback to <code>schemaB</code>
+in case of failure.</p><p>The difference between this operation and the operation <code>orElse</code> on “tagged” schemas
+is that this operation does not rely on a discriminator field between the alternative
+schemas. As a consequence, decoding is slower than with “tagged” schemas and provides
+less precise error messages.
+</p></div><dl class="paramcmts block"><dt class="param">schemaB</dt><dd class="cmt"><p>fallback schema</p></dd></dl><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>Be careful to use <i>disjoint</i> schemas for <code>A</code> and <code>B</code> (none must be a subtype
+      of the other), otherwise, a value of type <code>B</code> might also be successfully
+      decoded as a value of type <code>A</code>, and this could have surprising consequences.</p></span></dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
       <span class="permalink">

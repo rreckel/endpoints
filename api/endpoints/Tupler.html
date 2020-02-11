@@ -315,6 +315,10 @@
                         <a href="Tupler4.html" title="">Tupler4</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
+                        <a class="trait" href="Tupler5.html" title=""></a>
+                        <a href="Tupler5.html" title="">Tupler5</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
                         <a class="trait" href="TuplerAppend.html" title="Generated trait that provides Tupler instances for appending to tuples from 3 to 21 elements"></a>
                         <a href="TuplerAppend.html" title="Generated trait that provides Tupler instances for appending to tuples from 3 to 21 elements">TuplerAppend</a>
                       </li><li class="current-entities indented1">
@@ -357,7 +361,7 @@
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Defines a strategy for tupling <code>A</code> and <code>B</code> values, according to types <code>A</code> and <code>B</code>.</p><p>The actual implementation avoids nested tuples and eliminates <code>Unit</code>, so that instead of ending with, e.g.,
 the following type:</p><pre>((<span class="std">Unit</span>, <span class="std">Int</span>), (((<span class="std">Unit</span>, <span class="std">Unit</span>), <span class="std">String</span>)))</pre><p>We just get:</p><pre>(<span class="std">Int</span>, <span class="std">String</span>)</pre><p>The following rules are implemented (by increasing priority):</p><ul><li>A, B               -&gt; (A, B)</li><li>A, (B, C)          -&gt; (A, B, C)</li><li>(A, B), C          -&gt; (A, B, C)</li><li>(A, B), (C, D)     -&gt; (A, B, C, D)</li><li>A, (B, C, D, E)    -&gt; (A, B, C, D, E)</li><li>(A, B), (C, D, E)  -&gt; (A, B, C, D, E)</li><li>(A, B, C), D       -&gt; (A, B, C, D)</li><li>(A, B, C, D), E    -&gt; (A, B, C, D, E)</li><li>(A, B, C, D, E), F -&gt; (A, B, C, D, E, F)</li><li>A, Unit            -&gt; A</li><li>Unit, A            -&gt; A
-</li></ul></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/julienrf/endpoints/blob/v0.13.0/json-schema/json-schema/src/main/scala/endpoints/Tupler.scala" target="_blank">Tupler.scala</a></dd></dl><div class="toggleContainer block">
+</li></ul></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/julienrf/endpoints/blob/v0.14.0/json-schema/json-schema/src/main/scala/endpoints/Tupler.scala" target="_blank">Tupler.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>

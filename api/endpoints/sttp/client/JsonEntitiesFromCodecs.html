@@ -183,7 +183,7 @@
 
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Interpreter for <a href="../../algebra/JsonEntitiesFromCodecs.html" class="extype" name="endpoints.algebra.JsonEntitiesFromCodecs">endpoints.algebra.JsonEntitiesFromCodecs</a> that encodes JSON request
-</p></div><dl class="attributes block"> <dt>Self Type</dt><dd><a href="" class="extype" name="endpoints.sttp.client.JsonEntitiesFromCodecs">JsonEntitiesFromCodecs</a>[<span class="extype" name="endpoints.sttp.client.JsonEntitiesFromCodecs.R">R</span>] with <a href="EndpointsWithCustomErrors.html" class="extype" name="endpoints.sttp.client.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a>[<span class="extype" name="endpoints.sttp.client.JsonEntitiesFromCodecs.R">R</span>]</dd><dt>Source</dt><dd><a href="https://github.com/julienrf/endpoints/blob/v0.13.0/sttp/client/src/main/scala/endpoints/sttp/client/JsonEntitiesFromCodecs.scala" target="_blank">JsonEntitiesFromCodecs.scala</a></dd></dl><div class="toggleContainer block">
+</p></div><dl class="attributes block"> <dt>Self Type</dt><dd><a href="" class="extype" name="endpoints.sttp.client.JsonEntitiesFromCodecs">JsonEntitiesFromCodecs</a>[<span class="extype" name="endpoints.sttp.client.JsonEntitiesFromCodecs.R">R</span>] with <a href="EndpointsWithCustomErrors.html" class="extype" name="endpoints.sttp.client.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a>[<span class="extype" name="endpoints.sttp.client.JsonEntitiesFromCodecs.R">R</span>]</dd><dt>Source</dt><dd><a href="https://github.com/julienrf/endpoints/blob/v0.14.0/sttp/client/src/main/scala/endpoints/sttp/client/JsonEntitiesFromCodecs.scala" target="_blank">JsonEntitiesFromCodecs.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -633,6 +633,25 @@ and can be combined with the <code>&amp;</code> operation:</p><pre><span class="
       </span>
       
       <p class="shortcomment cmt">An HTTP response entity carrying an information of type A</p><div class="fullcomment"><div class="comment cmt"><p>An HTTP response entity carrying an information of type A</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd></dl></div>
+    </li><li name="endpoints.algebra.Responses.ResponseHeaders" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="types">
+      <a id="ResponseHeaders[A]"></a><a id="ResponseHeaders[A]:(JsonEntitiesFromCodecs.this)#ResponseHeaders[A]"></a>
+      <span class="permalink">
+      <a href="../../../endpoints/sttp/client/JsonEntitiesFromCodecs.html#ResponseHeaders[A]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ResponseHeaders</span><span class="tparams">[<span name="A">A</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Information carried by responses’ headers.</p><div class="fullcomment"><div class="comment cmt"><p>Information carried by responses’ headers.</p><p>You can construct values of type <code>ResponseHeaders</code> by using the operations <a href="#responseHeader(name:String,docs:endpoints.algebra.Documentation):Responses.this.ResponseHeaders[String]" class="extmbr" name="endpoints.sttp.client.JsonEntitiesFromCodecs#responseHeader">responseHeader</a>,
+<a href="#optResponseHeader(name:String,docs:endpoints.algebra.Documentation):Responses.this.ResponseHeaders[Option[String]]" class="extmbr" name="endpoints.sttp.client.JsonEntitiesFromCodecs#optResponseHeader">optResponseHeader</a>, or <a href="#emptyResponseHeaders:Responses.this.ResponseHeaders[Unit]" class="extmbr" name="endpoints.sttp.client.JsonEntitiesFromCodecs#emptyResponseHeaders">emptyResponseHeaders</a>.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd><dt>Note</dt><dd><span class="cmt"><p>This type has implicit methods provided by the <a href="../../SemigroupalSyntax$SemigroupalSyntax.html" class="extype" name="endpoints.SemigroupalSyntax.SemigroupalSyntax">SemigroupalSyntax</a>
+      and <a href="../../PartialInvariantFunctorSyntax$PartialInvariantFunctorSyntax.html" class="extype" name="endpoints.PartialInvariantFunctorSyntax.PartialInvariantFunctorSyntax">PartialInvariantFunctorSyntax</a> classes.</p></span></dd></dl></div>
     </li><li name="endpoints.algebra.Urls.Segment" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="types">
       <a id="Segment[A]"></a><a id="Segment[A]:(JsonEntitiesFromCodecs.this)#Segment[A]"></a>
       <span class="permalink">
@@ -1099,6 +1118,23 @@ Use <code>description</code> of <a href="../../algebra/Endpoints.html#endpoint[A
       </span>
       
       <p class="shortcomment cmt">Empty response entity</p><div class="fullcomment"><div class="comment cmt"><p>Empty response entity</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd></dl></div>
+    </li><li name="endpoints.algebra.Responses#emptyResponseHeaders" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="operations">
+      <a id="emptyResponseHeaders:Responses.this.ResponseHeaders[Unit]"></a><a id="emptyResponseHeaders:(JsonEntitiesFromCodecs.this)#ResponseHeaders[Unit]"></a>
+      <span class="permalink">
+      <a href="../../../endpoints/sttp/client/JsonEntitiesFromCodecs.html#emptyResponseHeaders:Responses.this.ResponseHeaders[Unit]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">emptyResponseHeaders</span><span class="result">: (<a href="" class="extype" name="endpoints.sttp.client.JsonEntitiesFromCodecs">JsonEntitiesFromCodecs</a>.this)#<span class="extype" name="endpoints.sttp.client.EndpointsWithCustomErrors.ResponseHeaders">ResponseHeaders</span>[<a href="https://www.scala-lang.org/api/2.12.10/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">No particular response header.</p><div class="fullcomment"><div class="comment cmt"><p>No particular response header.
+Client interpreters should ignore information carried by response headers.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd></dl></div>
     </li><li name="endpoints.algebra.EndpointsWithCustomErrors#endpoint" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="operations">
       <a id="endpoint[A,B](request:EndpointsWithCustomErrors.this.Request[A],response:EndpointsWithCustomErrors.this.Response[B],docs:EndpointsWithCustomErrors.this.EndpointDocs):EndpointsWithCustomErrors.this.Endpoint[A,B]"></a><a id="endpoint[A,B]((JsonEntitiesFromCodecs.this)#Request[A],(JsonEntitiesFromCodecs.this)#Response[B],(JsonEntitiesFromCodecs.this)#EndpointDocs):(JsonEntitiesFromCodecs.this)#Endpoint[A,B]"></a>
       <span class="permalink">
@@ -1164,6 +1200,27 @@ Use <code>description</code> of <a href="../../algebra/Endpoints.html#endpoint[A
       </span>
       
       <p class="shortcomment cmt">An optional request header</p><div class="fullcomment"><div class="comment cmt"><p>An optional request header</p></div><dl class="paramcmts block"><dt class="param">name</dt><dd class="cmt"><p>Header name (e.g., “Authorization”)</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Requests.html" class="extype" name="endpoints.algebra.Requests">Requests</a></dd></dl></div>
+    </li><li name="endpoints.algebra.Responses#optResponseHeader" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="operations">
+      <a id="optResponseHeader(name:String,docs:endpoints.algebra.Documentation):Responses.this.ResponseHeaders[Option[String]]"></a><a id="optResponseHeader(String,Documentation):(JsonEntitiesFromCodecs.this)#ResponseHeaders[Option[String]]"></a>
+      <span class="permalink">
+      <a href="../../../endpoints/sttp/client/JsonEntitiesFromCodecs.html#optResponseHeader(name:String,docs:endpoints.algebra.Documentation):Responses.this.ResponseHeaders[Option[String]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">optResponseHeader</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="docs">docs: <a href="../../algebra/index.html#Documentation=Option[String]" class="extmbr" name="endpoints.algebra.Documentation">Documentation</a> = <span class="symbol"><span class="name"><a href="../../../scala/index.html">None</a></span></span></span>)</span><span class="result">: (<a href="" class="extype" name="endpoints.sttp.client.JsonEntitiesFromCodecs">JsonEntitiesFromCodecs</a>.this)#<span class="extype" name="endpoints.sttp.client.EndpointsWithCustomErrors.ResponseHeaders">ResponseHeaders</span>[<a href="https://www.scala-lang.org/api/2.12.10/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="scala.Predef.String">String</span>]]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Response headers optionally containing a header with the given <code>name</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Response headers optionally containing a header with the given <code>name</code>.
+Client interpreters should model the header value as <code>Some[String]</code>, or
+<code>None</code> if the response header is missing.
+Server interpreters should produce such a response header.
+Documentation interpreters should document this header.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd></dl></div>
     </li><li name="endpoints.algebra.Urls#optionalQueryStringParam" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="operations">
       <a id="optionalQueryStringParam[A](implicitevidence$1:Urls.this.QueryStringParam[A]):Urls.this.QueryStringParam[Option[A]]"></a><a id="optionalQueryStringParam[A]((JsonEntitiesFromCodecs.this)#QueryStringParam[A]):(JsonEntitiesFromCodecs.this)#QueryStringParam[Option[A]]"></a>
       <span class="permalink">
@@ -1351,9 +1408,9 @@ case, its value is an empty collection), and report a failure if at least one va
 </p><div class="fullcomment"><div class="comment cmt"><p>Request for given parameters
 </p></div><dl class="paramcmts block"><dt class="tparam">UrlP</dt><dd class="cmt"><p>Payload carried by url</p></dd><dt class="tparam">BodyP</dt><dd class="cmt"><p>Payload carried by body</p></dd><dt class="tparam">HeadersP</dt><dd class="cmt"><p>Payload carried by headers</p></dd><dt class="tparam">UrlAndBodyPTupled</dt><dd class="cmt"><p>Payloads of Url and Body tupled together by <a href="../../Tupler.html" class="extype" name="endpoints.Tupler">Tupler</a></p></dd><dt class="param">method</dt><dd class="cmt"><p>Request method</p></dd><dt class="param">url</dt><dd class="cmt"><p>Request URL</p></dd><dt class="param">entity</dt><dd class="cmt"><p>Request entity</p></dd><dt class="param">docs</dt><dd class="cmt"><p>Request documentation</p></dd><dt class="param">headers</dt><dd class="cmt"><p>Request headers</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Requests.html" class="extype" name="endpoints.algebra.Requests">Requests</a></dd></dl></div>
     </li><li name="endpoints.algebra.Responses#response" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="operations">
-      <a id="response[A](statusCode:Responses.this.StatusCode,entity:Responses.this.ResponseEntity[A],docs:endpoints.algebra.Documentation):Responses.this.Response[A]"></a><a id="response[A]((JsonEntitiesFromCodecs.this)#StatusCode,(JsonEntitiesFromCodecs.this)#ResponseEntity[A],Documentation):(JsonEntitiesFromCodecs.this)#Response[A]"></a>
+      <a id="response[A,B,R](statusCode:Responses.this.StatusCode,entity:Responses.this.ResponseEntity[A],docs:endpoints.algebra.Documentation,headers:Responses.this.ResponseHeaders[B])(implicittupler:endpoints.Tupler.Aux[A,B,R]):Responses.this.Response[R]"></a><a id="response[A,B,R]((JsonEntitiesFromCodecs.this)#StatusCode,(JsonEntitiesFromCodecs.this)#ResponseEntity[A],Documentation,(JsonEntitiesFromCodecs.this)#ResponseHeaders[B])(Tupler.Aux[A,B,R]):(JsonEntitiesFromCodecs.this)#Response[R]"></a>
       <span class="permalink">
-      <a href="../../../endpoints/sttp/client/JsonEntitiesFromCodecs.html#response[A](statusCode:Responses.this.StatusCode,entity:Responses.this.ResponseEntity[A],docs:endpoints.algebra.Documentation):Responses.this.Response[A]" title="Permalink">
+      <a href="../../../endpoints/sttp/client/JsonEntitiesFromCodecs.html#response[A,B,R](statusCode:Responses.this.StatusCode,entity:Responses.this.ResponseEntity[A],docs:endpoints.algebra.Documentation,headers:Responses.this.ResponseHeaders[B])(implicittupler:endpoints.Tupler.Aux[A,B,R]):Responses.this.Response[R]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1362,12 +1419,71 @@ case, its value is an empty collection), and report a failure if at least one va
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">response</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="statusCode">statusCode: (<a href="" class="extype" name="endpoints.sttp.client.JsonEntitiesFromCodecs">JsonEntitiesFromCodecs</a>.this)#<span class="extype" name="endpoints.sttp.client.StatusCodes.StatusCode">StatusCode</span></span>, <span name="entity">entity: (<a href="" class="extype" name="endpoints.sttp.client.JsonEntitiesFromCodecs">JsonEntitiesFromCodecs</a>.this)#<span class="extype" name="endpoints.sttp.client.EndpointsWithCustomErrors.ResponseEntity">ResponseEntity</span>[<span class="extype" name="endpoints.algebra.Responses.response.A">A</span>]</span>, <span name="docs">docs: <a href="../../algebra/index.html#Documentation=Option[String]" class="extmbr" name="endpoints.algebra.Documentation">Documentation</a> = <span class="symbol"><span class="name"><a href="../../../scala/index.html">None</a></span></span></span>)</span><span class="result">: (<a href="" class="extype" name="endpoints.sttp.client.JsonEntitiesFromCodecs">JsonEntitiesFromCodecs</a>.this)#<span class="extype" name="endpoints.sttp.client.EndpointsWithCustomErrors.Response">Response</span>[<span class="extype" name="endpoints.algebra.Responses.response.A">A</span>]</span>
+        <span class="name">response</span><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="R">R</span>]</span><span class="params">(<span name="statusCode">statusCode: (<a href="" class="extype" name="endpoints.sttp.client.JsonEntitiesFromCodecs">JsonEntitiesFromCodecs</a>.this)#<span class="extype" name="endpoints.sttp.client.StatusCodes.StatusCode">StatusCode</span></span>, <span name="entity">entity: (<a href="" class="extype" name="endpoints.sttp.client.JsonEntitiesFromCodecs">JsonEntitiesFromCodecs</a>.this)#<span class="extype" name="endpoints.sttp.client.EndpointsWithCustomErrors.ResponseEntity">ResponseEntity</span>[<span class="extype" name="endpoints.algebra.Responses.response.A">A</span>]</span>, <span name="docs">docs: <a href="../../algebra/index.html#Documentation=Option[String]" class="extmbr" name="endpoints.algebra.Documentation">Documentation</a> = <span class="symbol"><span class="name"><a href="../../../scala/index.html">None</a></span></span></span>, <span name="headers">headers: (<a href="" class="extype" name="endpoints.sttp.client.JsonEntitiesFromCodecs">JsonEntitiesFromCodecs</a>.this)#<span class="extype" name="endpoints.sttp.client.EndpointsWithCustomErrors.ResponseHeaders">ResponseHeaders</span>[<span class="extype" name="endpoints.algebra.Responses.response.B">B</span>] = <span class="symbol"><span class="name"><a href="../../algebra/Responses.html#emptyResponseHeaders:Responses.this.ResponseHeaders[Unit]">emptyResponseHeaders</a></span></span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="tupler">tupler: <a href="../../Tupler$.html#Aux[A,B,Out0]=endpoints.Tupler[A,B]{typeOut=Out0}" class="extmbr" name="endpoints.Tupler.Aux">Tupler.Aux</a>[<span class="extype" name="endpoints.algebra.Responses.response.A">A</span>, <span class="extype" name="endpoints.algebra.Responses.response.B">B</span>, <span class="extype" name="endpoints.algebra.Responses.response.R">R</span>]</span>)</span><span class="result">: (<a href="" class="extype" name="endpoints.sttp.client.JsonEntitiesFromCodecs">JsonEntitiesFromCodecs</a>.this)#<span class="extype" name="endpoints.sttp.client.EndpointsWithCustomErrors.Response">Response</span>[<span class="extype" name="endpoints.algebra.Responses.response.R">R</span>]</span>
       </span>
       
       <p class="shortcomment cmt">Server interpreters construct a response with the given status and entity.</p><div class="fullcomment"><div class="comment cmt"><p>Server interpreters construct a response with the given status and entity.
 Client interpreters accept a response only if it has a corresponding status code.
-</p></div><dl class="paramcmts block"><dt class="param">statusCode</dt><dd class="cmt"><p>Response status code</p></dd><dt class="param">entity</dt><dd class="cmt"><p>Response entity</p></dd><dt class="param">docs</dt><dd class="cmt"><p>Response documentation</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd></dl></div>
+</p></div><dl class="paramcmts block"><dt class="param">statusCode</dt><dd class="cmt"><p>Response status code</p></dd><dt class="param">entity</dt><dd class="cmt"><p>Response entity</p></dd><dt class="param">docs</dt><dd class="cmt"><p>Response documentation</p></dd><dt class="param">headers</dt><dd class="cmt"><p>Response headers</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd></dl></div>
+    </li><li name="endpoints.algebra.Responses#responseHeader" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="operations">
+      <a id="responseHeader(name:String,docs:endpoints.algebra.Documentation):Responses.this.ResponseHeaders[String]"></a><a id="responseHeader(String,Documentation):(JsonEntitiesFromCodecs.this)#ResponseHeaders[String]"></a>
+      <span class="permalink">
+      <a href="../../../endpoints/sttp/client/JsonEntitiesFromCodecs.html#responseHeader(name:String,docs:endpoints.algebra.Documentation):Responses.this.ResponseHeaders[String]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">responseHeader</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="docs">docs: <a href="../../algebra/index.html#Documentation=Option[String]" class="extmbr" name="endpoints.algebra.Documentation">Documentation</a> = <span class="symbol"><span class="name"><a href="../../../scala/index.html">None</a></span></span></span>)</span><span class="result">: (<a href="" class="extype" name="endpoints.sttp.client.JsonEntitiesFromCodecs">JsonEntitiesFromCodecs</a>.this)#<span class="extype" name="endpoints.sttp.client.EndpointsWithCustomErrors.ResponseHeaders">ResponseHeaders</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Response headers containing a header with the given <code>name</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Response headers containing a header with the given <code>name</code>.
+Client interpreters should model the header value as <code>String</code>, or
+fail if the response header is missing.
+Server interpreters should produce such a response header.
+Documentation interpreters should document this header.</p><p>Example:</p><pre><span class="kw">val</span> versionedResource: Endpoint[<span class="std">Unit</span>, (SomeResource, <span class="std">String</span>)] =
+  endpoint(
+    get(path / <span class="lit">"versioned-resource"</span>),
+    ok(
+      jsonResponse[SomeResource],
+      headers = responseHeader(<span class="lit">"ETag"</span>)
+    )
+  )</pre></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd></dl></div>
+    </li><li name="endpoints.algebra.Responses#responseHeadersInvFunctor" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="responseHeadersInvFunctor:endpoints.PartialInvariantFunctor[Responses.this.ResponseHeaders]"></a><a id="responseHeadersInvFunctor:PartialInvariantFunctor[(JsonEntitiesFromCodecs.this)#ResponseHeaders]"></a>
+      <span class="permalink">
+      <a href="../../../endpoints/sttp/client/JsonEntitiesFromCodecs.html#responseHeadersInvFunctor:endpoints.PartialInvariantFunctor[Responses.this.ResponseHeaders]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">responseHeadersInvFunctor</span><span class="result">: <a href="../../PartialInvariantFunctor.html" class="extype" name="endpoints.PartialInvariantFunctor">PartialInvariantFunctor</a>[(<a href="" class="extype" name="endpoints.sttp.client.JsonEntitiesFromCodecs">JsonEntitiesFromCodecs</a>.this)#<span class="extype" name="endpoints.sttp.client.EndpointsWithCustomErrors.ResponseHeaders">ResponseHeaders</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Provides <code>xmap</code> and <code>xmapPartial</code> operations.</p><div class="fullcomment"><div class="comment cmt"><p>Provides <code>xmap</code> and <code>xmapPartial</code> operations.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd><dt>See also</dt><dd><span class="cmt"><p><a href="../../PartialInvariantFunctorSyntax$PartialInvariantFunctorSyntax.html" class="extype" name="endpoints.PartialInvariantFunctorSyntax.PartialInvariantFunctorSyntax">PartialInvariantFunctorSyntax</a></p></span></dd></dl></div>
+    </li><li name="endpoints.algebra.Responses#responseHeadersSemigroupal" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="responseHeadersSemigroupal:endpoints.Semigroupal[Responses.this.ResponseHeaders]"></a><a id="responseHeadersSemigroupal:Semigroupal[(JsonEntitiesFromCodecs.this)#ResponseHeaders]"></a>
+      <span class="permalink">
+      <a href="../../../endpoints/sttp/client/JsonEntitiesFromCodecs.html#responseHeadersSemigroupal:endpoints.Semigroupal[Responses.this.ResponseHeaders]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">responseHeadersSemigroupal</span><span class="result">: <a href="../../Semigroupal.html" class="extype" name="endpoints.Semigroupal">Semigroupal</a>[(<a href="" class="extype" name="endpoints.sttp.client.JsonEntitiesFromCodecs">JsonEntitiesFromCodecs</a>.this)#<span class="extype" name="endpoints.sttp.client.EndpointsWithCustomErrors.ResponseHeaders">ResponseHeaders</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Provides <code>++</code> operation.</p><div class="fullcomment"><div class="comment cmt"><p>Provides <code>++</code> operation.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd><dt>See also</dt><dd><span class="cmt"><p><a href="../../SemigroupalSyntax.html" class="extype" name="endpoints.SemigroupalSyntax">SemigroupalSyntax</a></p></span></dd></dl></div>
     </li><li name="endpoints.algebra.Responses#responseInvFunctor" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="responseInvFunctor:endpoints.InvariantFunctor[Responses.this.Response]"></a><a id="responseInvFunctor:InvariantFunctor[(JsonEntitiesFromCodecs.this)#Response]"></a>
       <span class="permalink">
@@ -1710,9 +1826,9 @@ and clients should take an URL-decoded string value.</p></div><dl class="attribu
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li name="endpoints.algebra.Responses#badRequest" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
-      <a id="badRequest(docs:endpoints.algebra.Documentation):Responses.this.Response[Responses.this.ClientErrors]"></a><a id="badRequest(Documentation):(JsonEntitiesFromCodecs.this)#Response[(JsonEntitiesFromCodecs.this)#ClientErrors]"></a>
+      <a id="badRequest[A,R](docs:endpoints.algebra.Documentation,headers:Responses.this.ResponseHeaders[A])(implicittupler:endpoints.Tupler.Aux[Responses.this.ClientErrors,A,R]):Responses.this.Response[R]"></a><a id="badRequest[A,R](Documentation,(JsonEntitiesFromCodecs.this)#ResponseHeaders[A])(Tupler.Aux[(JsonEntitiesFromCodecs.this)#ClientErrors,A,R]):(JsonEntitiesFromCodecs.this)#Response[R]"></a>
       <span class="permalink">
-      <a href="../../../endpoints/sttp/client/JsonEntitiesFromCodecs.html#badRequest(docs:endpoints.algebra.Documentation):Responses.this.Response[Responses.this.ClientErrors]" title="Permalink">
+      <a href="../../../endpoints/sttp/client/JsonEntitiesFromCodecs.html#badRequest[A,R](docs:endpoints.algebra.Documentation,headers:Responses.this.ResponseHeaders[A])(implicittupler:endpoints.Tupler.Aux[Responses.this.ClientErrors,A,R]):Responses.this.Response[R]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1721,7 +1837,7 @@ and clients should take an URL-decoded string value.</p></div><dl class="attribu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">badRequest</span><span class="params">(<span name="docs">docs: <a href="../../algebra/index.html#Documentation=Option[String]" class="extmbr" name="endpoints.algebra.Documentation">Documentation</a> = <span class="symbol"><span class="name"><a href="../../../scala/index.html">None</a></span></span></span>)</span><span class="result">: (<a href="" class="extype" name="endpoints.sttp.client.JsonEntitiesFromCodecs">JsonEntitiesFromCodecs</a>.this)#<span class="extype" name="endpoints.sttp.client.EndpointsWithCustomErrors.Response">Response</span>[(<a href="" class="extype" name="endpoints.sttp.client.JsonEntitiesFromCodecs">JsonEntitiesFromCodecs</a>.this)#<span class="extype" name="endpoints.algebra.Errors.ClientErrors">ClientErrors</span>]</span>
+        <span class="name">badRequest</span><span class="tparams">[<span name="A">A</span>, <span name="R">R</span>]</span><span class="params">(<span name="docs">docs: <a href="../../algebra/index.html#Documentation=Option[String]" class="extmbr" name="endpoints.algebra.Documentation">Documentation</a> = <span class="symbol"><span class="name"><a href="../../../scala/index.html">None</a></span></span></span>, <span name="headers">headers: (<a href="" class="extype" name="endpoints.sttp.client.JsonEntitiesFromCodecs">JsonEntitiesFromCodecs</a>.this)#<span class="extype" name="endpoints.sttp.client.EndpointsWithCustomErrors.ResponseHeaders">ResponseHeaders</span>[<span class="extype" name="endpoints.algebra.Responses.badRequest.A">A</span>] = <span class="symbol"><span class="name"><a href="../../algebra/Responses.html#emptyResponseHeaders:Responses.this.ResponseHeaders[Unit]">emptyResponseHeaders</a></span></span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="tupler">tupler: <a href="../../Tupler$.html#Aux[A,B,Out0]=endpoints.Tupler[A,B]{typeOut=Out0}" class="extmbr" name="endpoints.Tupler.Aux">Tupler.Aux</a>[(<a href="" class="extype" name="endpoints.sttp.client.JsonEntitiesFromCodecs">JsonEntitiesFromCodecs</a>.this)#<span class="extype" name="endpoints.algebra.Errors.ClientErrors">ClientErrors</span>, <span class="extype" name="endpoints.algebra.Responses.badRequest.A">A</span>, <span class="extype" name="endpoints.algebra.Responses.badRequest.R">R</span>]</span>)</span><span class="result">: (<a href="" class="extype" name="endpoints.sttp.client.JsonEntitiesFromCodecs">JsonEntitiesFromCodecs</a>.this)#<span class="extype" name="endpoints.sttp.client.EndpointsWithCustomErrors.Response">Response</span>[<span class="extype" name="endpoints.algebra.Responses.badRequest.R">R</span>]</span>
       </span>
       
       <p class="shortcomment cmt">Bad Request (400) response, with an entity of type <code>ClientErrors</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Bad Request (400) response, with an entity of type <code>ClientErrors</code>.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd><dt>See also</dt><dd><span class="cmt"><p><a href="../../algebra/Errors.html" class="extype" name="endpoints.algebra.Errors">endpoints.algebra.Errors</a> and <a href="../../algebra/BuiltInErrors.html" class="extype" name="endpoints.algebra.BuiltInErrors">endpoints.algebra.BuiltInErrors</a></p></span></dd></dl></div>
@@ -2092,9 +2208,9 @@ a request fails.</p><p>The provided implementation forwards to <code>badRequest<
       
       <p class="shortcomment cmt">Ability to define <code>Int</code> path segments</p><div class="fullcomment"><div class="comment cmt"><p>Ability to define <code>Int</code> path segments</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">Urls</a></dd></dl></div>
     </li><li name="endpoints.algebra.Responses#internalServerError" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
-      <a id="internalServerError(docs:endpoints.algebra.Documentation):Responses.this.Response[Responses.this.ServerError]"></a><a id="internalServerError(Documentation):(JsonEntitiesFromCodecs.this)#Response[(JsonEntitiesFromCodecs.this)#ServerError]"></a>
+      <a id="internalServerError[A,R](docs:endpoints.algebra.Documentation,headers:Responses.this.ResponseHeaders[A])(implicittupler:endpoints.Tupler.Aux[Responses.this.ServerError,A,R]):Responses.this.Response[R]"></a><a id="internalServerError[A,R](Documentation,(JsonEntitiesFromCodecs.this)#ResponseHeaders[A])(Tupler.Aux[(JsonEntitiesFromCodecs.this)#ServerError,A,R]):(JsonEntitiesFromCodecs.this)#Response[R]"></a>
       <span class="permalink">
-      <a href="../../../endpoints/sttp/client/JsonEntitiesFromCodecs.html#internalServerError(docs:endpoints.algebra.Documentation):Responses.this.Response[Responses.this.ServerError]" title="Permalink">
+      <a href="../../../endpoints/sttp/client/JsonEntitiesFromCodecs.html#internalServerError[A,R](docs:endpoints.algebra.Documentation,headers:Responses.this.ResponseHeaders[A])(implicittupler:endpoints.Tupler.Aux[Responses.this.ServerError,A,R]):Responses.this.Response[R]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2103,7 +2219,7 @@ a request fails.</p><p>The provided implementation forwards to <code>badRequest<
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">internalServerError</span><span class="params">(<span name="docs">docs: <a href="../../algebra/index.html#Documentation=Option[String]" class="extmbr" name="endpoints.algebra.Documentation">Documentation</a> = <span class="symbol"><span class="name"><a href="../../../scala/index.html">None</a></span></span></span>)</span><span class="result">: (<a href="" class="extype" name="endpoints.sttp.client.JsonEntitiesFromCodecs">JsonEntitiesFromCodecs</a>.this)#<span class="extype" name="endpoints.sttp.client.EndpointsWithCustomErrors.Response">Response</span>[(<a href="" class="extype" name="endpoints.sttp.client.JsonEntitiesFromCodecs">JsonEntitiesFromCodecs</a>.this)#<span class="extype" name="endpoints.algebra.Errors.ServerError">ServerError</span>]</span>
+        <span class="name">internalServerError</span><span class="tparams">[<span name="A">A</span>, <span name="R">R</span>]</span><span class="params">(<span name="docs">docs: <a href="../../algebra/index.html#Documentation=Option[String]" class="extmbr" name="endpoints.algebra.Documentation">Documentation</a> = <span class="symbol"><span class="name"><a href="../../../scala/index.html">None</a></span></span></span>, <span name="headers">headers: (<a href="" class="extype" name="endpoints.sttp.client.JsonEntitiesFromCodecs">JsonEntitiesFromCodecs</a>.this)#<span class="extype" name="endpoints.sttp.client.EndpointsWithCustomErrors.ResponseHeaders">ResponseHeaders</span>[<span class="extype" name="endpoints.algebra.Responses.internalServerError.A">A</span>] = <span class="symbol"><span class="name"><a href="../../algebra/Responses.html#emptyResponseHeaders:Responses.this.ResponseHeaders[Unit]">emptyResponseHeaders</a></span></span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="tupler">tupler: <a href="../../Tupler$.html#Aux[A,B,Out0]=endpoints.Tupler[A,B]{typeOut=Out0}" class="extmbr" name="endpoints.Tupler.Aux">Tupler.Aux</a>[(<a href="" class="extype" name="endpoints.sttp.client.JsonEntitiesFromCodecs">JsonEntitiesFromCodecs</a>.this)#<span class="extype" name="endpoints.algebra.Errors.ServerError">ServerError</span>, <span class="extype" name="endpoints.algebra.Responses.internalServerError.A">A</span>, <span class="extype" name="endpoints.algebra.Responses.internalServerError.R">R</span>]</span>)</span><span class="result">: (<a href="" class="extype" name="endpoints.sttp.client.JsonEntitiesFromCodecs">JsonEntitiesFromCodecs</a>.this)#<span class="extype" name="endpoints.sttp.client.EndpointsWithCustomErrors.Response">Response</span>[<span class="extype" name="endpoints.algebra.Responses.internalServerError.R">R</span>]</span>
       </span>
       
       <p class="shortcomment cmt">Internal Server Error (500) response, with an entity of type <code>ServerError</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Internal Server Error (500) response, with an entity of type <code>ServerError</code>.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd><dt>See also</dt><dd><span class="cmt"><p><a href="../../algebra/Errors.html" class="extype" name="endpoints.algebra.Errors">endpoints.algebra.Errors</a> and <a href="../../algebra/BuiltInErrors.html" class="extype" name="endpoints.algebra.BuiltInErrors">endpoints.algebra.BuiltInErrors</a></p></span></dd></dl></div>
@@ -2242,9 +2358,9 @@ a request fails.</p><p>The provided implementation forwards to <code>badRequest<
               
         </dd></dl></div>
     </li><li name="endpoints.algebra.Responses#ok" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
-      <a id="ok[A](entity:Responses.this.ResponseEntity[A],docs:endpoints.algebra.Documentation):Responses.this.Response[A]"></a><a id="ok[A]((JsonEntitiesFromCodecs.this)#ResponseEntity[A],Documentation):(JsonEntitiesFromCodecs.this)#Response[A]"></a>
+      <a id="ok[A,B,R](entity:Responses.this.ResponseEntity[A],docs:endpoints.algebra.Documentation,headers:Responses.this.ResponseHeaders[B])(implicittupler:endpoints.Tupler.Aux[A,B,R]):Responses.this.Response[R]"></a><a id="ok[A,B,R]((JsonEntitiesFromCodecs.this)#ResponseEntity[A],Documentation,(JsonEntitiesFromCodecs.this)#ResponseHeaders[B])(Tupler.Aux[A,B,R]):(JsonEntitiesFromCodecs.this)#Response[R]"></a>
       <span class="permalink">
-      <a href="../../../endpoints/sttp/client/JsonEntitiesFromCodecs.html#ok[A](entity:Responses.this.ResponseEntity[A],docs:endpoints.algebra.Documentation):Responses.this.Response[A]" title="Permalink">
+      <a href="../../../endpoints/sttp/client/JsonEntitiesFromCodecs.html#ok[A,B,R](entity:Responses.this.ResponseEntity[A],docs:endpoints.algebra.Documentation,headers:Responses.this.ResponseHeaders[B])(implicittupler:endpoints.Tupler.Aux[A,B,R]):Responses.this.Response[R]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2253,7 +2369,7 @@ a request fails.</p><p>The provided implementation forwards to <code>badRequest<
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">ok</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="entity">entity: (<a href="" class="extype" name="endpoints.sttp.client.JsonEntitiesFromCodecs">JsonEntitiesFromCodecs</a>.this)#<span class="extype" name="endpoints.sttp.client.EndpointsWithCustomErrors.ResponseEntity">ResponseEntity</span>[<span class="extype" name="endpoints.algebra.Responses.ok.A">A</span>]</span>, <span name="docs">docs: <a href="../../algebra/index.html#Documentation=Option[String]" class="extmbr" name="endpoints.algebra.Documentation">Documentation</a> = <span class="symbol"><span class="name"><a href="../../../scala/index.html">None</a></span></span></span>)</span><span class="result">: (<a href="" class="extype" name="endpoints.sttp.client.JsonEntitiesFromCodecs">JsonEntitiesFromCodecs</a>.this)#<span class="extype" name="endpoints.sttp.client.EndpointsWithCustomErrors.Response">Response</span>[<span class="extype" name="endpoints.algebra.Responses.ok.A">A</span>]</span>
+        <span class="name">ok</span><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="R">R</span>]</span><span class="params">(<span name="entity">entity: (<a href="" class="extype" name="endpoints.sttp.client.JsonEntitiesFromCodecs">JsonEntitiesFromCodecs</a>.this)#<span class="extype" name="endpoints.sttp.client.EndpointsWithCustomErrors.ResponseEntity">ResponseEntity</span>[<span class="extype" name="endpoints.algebra.Responses.ok.A">A</span>]</span>, <span name="docs">docs: <a href="../../algebra/index.html#Documentation=Option[String]" class="extmbr" name="endpoints.algebra.Documentation">Documentation</a> = <span class="symbol"><span class="name"><a href="../../../scala/index.html">None</a></span></span></span>, <span name="headers">headers: (<a href="" class="extype" name="endpoints.sttp.client.JsonEntitiesFromCodecs">JsonEntitiesFromCodecs</a>.this)#<span class="extype" name="endpoints.sttp.client.EndpointsWithCustomErrors.ResponseHeaders">ResponseHeaders</span>[<span class="extype" name="endpoints.algebra.Responses.ok.B">B</span>] = <span class="symbol"><span class="name"><a href="../../algebra/Responses.html#emptyResponseHeaders:Responses.this.ResponseHeaders[Unit]">emptyResponseHeaders</a></span></span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="tupler">tupler: <a href="../../Tupler$.html#Aux[A,B,Out0]=endpoints.Tupler[A,B]{typeOut=Out0}" class="extmbr" name="endpoints.Tupler.Aux">Tupler.Aux</a>[<span class="extype" name="endpoints.algebra.Responses.ok.A">A</span>, <span class="extype" name="endpoints.algebra.Responses.ok.B">B</span>, <span class="extype" name="endpoints.algebra.Responses.ok.R">R</span>]</span>)</span><span class="result">: (<a href="" class="extype" name="endpoints.sttp.client.JsonEntitiesFromCodecs">JsonEntitiesFromCodecs</a>.this)#<span class="extype" name="endpoints.sttp.client.EndpointsWithCustomErrors.Response">Response</span>[<span class="extype" name="endpoints.algebra.Responses.ok.R">R</span>]</span>
       </span>
       
       <p class="shortcomment cmt">OK (200) Response with the given entity</p><div class="fullcomment"><div class="comment cmt"><p>OK (200) Response with the given entity</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd></dl></div>

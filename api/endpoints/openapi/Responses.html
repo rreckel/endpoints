@@ -132,12 +132,24 @@
                         <a href="BuiltInErrors.html" title="">BuiltInErrors</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
+                        <a class="trait" href="ChunkedEntities.html" title="Interpreter for the algebra.ChunkedEntities algebra in the endpoints.openapi family."></a>
+                        <a href="ChunkedEntities.html" title="Interpreter for the algebra.ChunkedEntities algebra in the endpoints.openapi family.">ChunkedEntities</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="trait" href="ChunkedJsonEntities.html" title="Interpreter for the algebra.ChunkedJsonEntities algebra in the endpoints.openapi family."></a>
+                        <a href="ChunkedJsonEntities.html" title="Interpreter for the algebra.ChunkedJsonEntities algebra in the endpoints.openapi family.">ChunkedJsonEntities</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
                         <a class="trait" href="Endpoints.html" title="Interpreter for algebra.Endpoints that produces an endpoints.openapi.model.OpenApi instance for endpoints, and uses algebra.BuiltInErrors to model client and server errors."></a>
                         <a href="Endpoints.html" title="Interpreter for algebra.Endpoints that produces an endpoints.openapi.model.OpenApi instance for endpoints, and uses algebra.BuiltInErrors to model client and server errors.">Endpoints</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="trait" href="EndpointsWithCustomErrors.html" title="Interpreter for algebra.Endpoints that produces an endpoints.openapi.model.OpenApi instance for endpoints."></a>
                         <a href="EndpointsWithCustomErrors.html" title="Interpreter for algebra.Endpoints that produces an endpoints.openapi.model.OpenApi instance for endpoints.">EndpointsWithCustomErrors</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="trait" href="Headers.html" title="Internal."></a>
+                        <a href="Headers.html" title="Internal.">Headers</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="trait" href="JsonEntities.html" title="Partial interpreter for algebra.JsonEntities."></a>
@@ -201,27 +213,27 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <span class="name">Responses</span><span class="result"> extends <a href="../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">algebra.Responses</a> with <a href="StatusCodes.html" class="extype" name="endpoints.openapi.StatusCodes">StatusCodes</a></span>
+        <span class="name">Responses</span><span class="result"> extends <a href="../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">algebra.Responses</a> with <a href="StatusCodes.html" class="extype" name="endpoints.openapi.StatusCodes">StatusCodes</a> with <a href="Headers.html" class="extype" name="endpoints.openapi.Headers">Headers</a></span>
       </span>
       </h4>
 
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Interpreter for <a href="../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">algebra.Responses</a>
-</p></div><dl class="attributes block"> <dt>Self Type</dt><dd><a href="" class="extype" name="endpoints.openapi.Responses">Responses</a> with <a href="../algebra/Errors.html" class="extype" name="endpoints.algebra.Errors">Errors</a></dd><dt>Source</dt><dd><a href="https://github.com/julienrf/endpoints/blob/v0.13.0/openapi/openapi/src/main/scala/endpoints/openapi/Responses.scala" target="_blank">Responses.scala</a></dd></dl><div class="toggleContainer block">
+</p></div><dl class="attributes block"> <dt>Self Type</dt><dd><a href="" class="extype" name="endpoints.openapi.Responses">Responses</a> with <a href="../algebra/Errors.html" class="extype" name="endpoints.algebra.Errors">Errors</a></dd><dt>Source</dt><dd><a href="https://github.com/julienrf/endpoints/blob/v0.14.0/openapi/openapi/src/main/scala/endpoints/openapi/Responses.scala" target="_blank">Responses.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="StatusCodes.html" class="extype" name="endpoints.openapi.StatusCodes">StatusCodes</a>, <a href="../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">algebra.Responses</a>, <a href="../InvariantFunctorSyntax.html" class="extype" name="endpoints.InvariantFunctorSyntax">endpoints.InvariantFunctorSyntax</a>, <a href="../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">algebra.StatusCodes</a>, <a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
+          <div class="superTypes hiddenContent"><a href="Headers.html" class="extype" name="endpoints.openapi.Headers">Headers</a>, <a href="StatusCodes.html" class="extype" name="endpoints.openapi.StatusCodes">StatusCodes</a>, <a href="../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">algebra.Responses</a>, <a href="../PartialInvariantFunctorSyntax.html" class="extype" name="endpoints.PartialInvariantFunctorSyntax">endpoints.PartialInvariantFunctorSyntax</a>, <a href="../InvariantFunctorSyntax.html" class="extype" name="endpoints.InvariantFunctorSyntax">endpoints.InvariantFunctorSyntax</a>, <a href="../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">algebra.StatusCodes</a>, <a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
         </div><div class="toggleContainer block">
             <span class="toggle">
               Known Subclasses
             </span>
-            <div class="subClasses hiddenContent"><a href="Assets.html" class="extype" name="endpoints.openapi.Assets">Assets</a>, <a href="BasicAuthentication.html" class="extype" name="endpoints.openapi.BasicAuthentication">BasicAuthentication</a>, <a href="Endpoints.html" class="extype" name="endpoints.openapi.Endpoints">Endpoints</a>, <a href="EndpointsWithCustomErrors.html" class="extype" name="endpoints.openapi.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a>, <a href="JsonEntities.html" class="extype" name="endpoints.openapi.JsonEntities">JsonEntities</a>, <a href="JsonEntitiesFromSchemas.html" class="extype" name="endpoints.openapi.JsonEntitiesFromSchemas">JsonEntitiesFromSchemas</a>, <a href="MuxEndpoints.html" class="extype" name="endpoints.openapi.MuxEndpoints">MuxEndpoints</a></div>
+            <div class="subClasses hiddenContent"><a href="Assets.html" class="extype" name="endpoints.openapi.Assets">Assets</a>, <a href="BasicAuthentication.html" class="extype" name="endpoints.openapi.BasicAuthentication">BasicAuthentication</a>, <a href="ChunkedEntities.html" class="extype" name="endpoints.openapi.ChunkedEntities">ChunkedEntities</a>, <a href="ChunkedJsonEntities.html" class="extype" name="endpoints.openapi.ChunkedJsonEntities">ChunkedJsonEntities</a>, <a href="Endpoints.html" class="extype" name="endpoints.openapi.Endpoints">Endpoints</a>, <a href="EndpointsWithCustomErrors.html" class="extype" name="endpoints.openapi.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a>, <a href="JsonEntities.html" class="extype" name="endpoints.openapi.JsonEntities">JsonEntities</a>, <a href="JsonEntitiesFromSchemas.html" class="extype" name="endpoints.openapi.JsonEntitiesFromSchemas">JsonEntitiesFromSchemas</a>, <a href="MuxEndpoints.html" class="extype" name="endpoints.openapi.MuxEndpoints">MuxEndpoints</a></div>
           </div><div class="toggleContainer block diagram-container" id="inheritance-diagram-container">
                 <span class="toggle diagram-link">
                   Type Hierarchy
                 </span>
-                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph1" viewBox="0.00 0.00 252.00 155.00" height="155pt" width="252pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 151)" class="graph" id="graph0"><polygon points="-4,4 -4,-151 248,-151 248,4 -4,4" stroke="none" fill="white"></polygon><g class="cluster" id="clust1"></g><g class="cluster" id="clust2"></g><!-- node0 --><g class="node this trait" id="graph1_0"><g id="a_this trait|graph1_0"><a xlink:title="endpoints.openapi.Responses (this trait)" xlink:href="#inheritance-diagram"><path d="M166.167,-86C166.167,-86 90.8333,-86 90.8333,-86 86.6667,-86 82.5,-81.8333 82.5,-77.6667 82.5,-77.6667 82.5,-69.3333 82.5,-69.3333 82.5,-65.1667 86.6667,-61 90.8333,-61 90.8333,-61 166.167,-61 166.167,-61 170.333,-61 174.5,-65.1667 174.5,-69.3333 174.5,-69.3333 174.5,-77.6667 174.5,-77.6667 174.5,-81.8333 170.333,-86 166.167,-86" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-80.5" x="92.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-71.1" x="113.5" text-anchor="start">Responses</text></a></g></g><!-- node1 --><g class="node trait" id="graph1_1"><g id="a_trait|graph1_1"><a xlink:title="endpoints.openapi.EndpointsWithCustomErrors" xlink:href="EndpointsWithCustomErrors.html#inheritance-diagram"><path d="M202.167,-25C202.167,-25 54.8333,-25 54.8333,-25 50.6667,-25 46.5,-20.8333 46.5,-16.6667 46.5,-16.6667 46.5,-8.33333 46.5,-8.33333 46.5,-4.16667 50.6667,-0 54.8333,-0 54.8333,-0 202.167,-0 202.167,-0 206.333,-0 210.5,-4.16667 210.5,-8.33333 210.5,-8.33333 210.5,-16.6667 210.5,-16.6667 210.5,-20.8333 206.333,-25 202.167,-25" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-19.5" x="56.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="77.5" text-anchor="start">EndpointsWithCustomErrors</text></a></g></g><!-- node0&#45;&gt;node1 --><g class="edge inheritance" id="graph1_0_1"><g id="a_inheritance|graph1_0_1"><a xlink:title="EndpointsWithCustomErrors is a subtype of Responses"><path d="M128.5,-53.7603C128.5,-44.3675 128.5,-33.2882 128.5,-25.1323" stroke="#d4d4d4" fill="none"></path><polygon points="126.05,-53.8435 128.5,-60.8435 130.95,-53.8435 126.05,-53.8435" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node2 --><g class="node trait" id="graph1_2"><g id="a_trait|graph1_2"><a xlink:title="endpoints.algebra.Responses" xlink:href="../algebra/Responses.html#inheritance-diagram"><path d="M118.667,-147C118.667,-147 8.33333,-147 8.33333,-147 4.16667,-147 -7.10543e-15,-142.833 -7.10543e-15,-138.667 -7.10543e-15,-138.667 -7.10543e-15,-130.333 -7.10543e-15,-130.333 -7.10543e-15,-126.167 4.16667,-122 8.33333,-122 8.33333,-122 118.667,-122 118.667,-122 122.833,-122 127,-126.167 127,-130.333 127,-130.333 127,-138.667 127,-138.667 127,-142.833 122.833,-147 118.667,-147" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-141.5" x="10.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-132.1" x="31.5" text-anchor="start">algebra.Responses</text></a></g></g><!-- node2&#45;&gt;node0 --><g class="edge inheritance" id="graph1_2_0"><g id="a_inheritance|graph1_2_0"><a xlink:title="Responses is a subtype of algebra.Responses"><path d="M81.724,-116.958C92.5396,-107.141 105.988,-94.9342 115.685,-86.1323" stroke="#d4d4d4" fill="none"></path><polygon points="79.8785,-115.325 76.3419,-121.843 83.1718,-118.953 79.8785,-115.325" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node3 --><g class="node trait" id="graph1_3"><g id="a_trait|graph1_3"><a xlink:title="endpoints.openapi.StatusCodes" xlink:href="StatusCodes.html#inheritance-diagram"><path d="M235.667,-147C235.667,-147 153.333,-147 153.333,-147 149.167,-147 145,-142.833 145,-138.667 145,-138.667 145,-130.333 145,-130.333 145,-126.167 149.167,-122 153.333,-122 153.333,-122 235.667,-122 235.667,-122 239.833,-122 244,-126.167 244,-130.333 244,-130.333 244,-138.667 244,-138.667 244,-142.833 239.833,-147 235.667,-147" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-141.5" x="155.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-132.1" x="176.5" text-anchor="start">StatusCodes</text></a></g></g><!-- node3&#45;&gt;node0 --><g class="edge inheritance" id="graph1_3_0"><g id="a_inheritance|graph1_3_0"><a xlink:title="Responses is a subtype of StatusCodes"><path d="M175.996,-116.958C165.014,-107.141 151.359,-94.9342 141.512,-86.1323" stroke="#d4d4d4" fill="none"></path><polygon points="174.609,-119.005 181.461,-121.843 177.875,-115.352 174.609,-119.005" stroke="#d4d4d4" fill="none"></polygon></a></g></g></g></svg></div>
+                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph1" viewBox="0.00 0.00 351.00 155.00" height="155pt" width="351pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 151)" class="graph" id="graph0"><polygon points="-4,4 -4,-151 347,-151 347,4 -4,4" stroke="none" fill="white"></polygon><g class="cluster" id="clust1"></g><g class="cluster" id="clust2"></g><!-- node0 --><g class="node this trait" id="graph1_0"><g id="a_this trait|graph1_0"><a xlink:title="endpoints.openapi.Responses (this trait)" xlink:href="#inheritance-diagram"><path d="M232.167,-86C232.167,-86 156.833,-86 156.833,-86 152.667,-86 148.5,-81.8333 148.5,-77.6667 148.5,-77.6667 148.5,-69.3333 148.5,-69.3333 148.5,-65.1667 152.667,-61 156.833,-61 156.833,-61 232.167,-61 232.167,-61 236.333,-61 240.5,-65.1667 240.5,-69.3333 240.5,-69.3333 240.5,-77.6667 240.5,-77.6667 240.5,-81.8333 236.333,-86 232.167,-86" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-80.5" x="158.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-71.1" x="179.5" text-anchor="start">Responses</text></a></g></g><!-- node1 --><g class="node trait" id="graph1_1"><g id="a_trait|graph1_1"><a xlink:title="endpoints.openapi.EndpointsWithCustomErrors" xlink:href="EndpointsWithCustomErrors.html#inheritance-diagram"><path d="M268.167,-25C268.167,-25 120.833,-25 120.833,-25 116.667,-25 112.5,-20.8333 112.5,-16.6667 112.5,-16.6667 112.5,-8.33333 112.5,-8.33333 112.5,-4.16667 116.667,-0 120.833,-0 120.833,-0 268.167,-0 268.167,-0 272.333,-0 276.5,-4.16667 276.5,-8.33333 276.5,-8.33333 276.5,-16.6667 276.5,-16.6667 276.5,-20.8333 272.333,-25 268.167,-25" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-19.5" x="122.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="143.5" text-anchor="start">EndpointsWithCustomErrors</text></a></g></g><!-- node0&#45;&gt;node1 --><g class="edge inheritance" id="graph1_0_1"><g id="a_inheritance|graph1_0_1"><a xlink:title="EndpointsWithCustomErrors is a subtype of Responses"><path d="M194.5,-53.7603C194.5,-44.3675 194.5,-33.2882 194.5,-25.1323" stroke="#d4d4d4" fill="none"></path><polygon points="192.05,-53.8435 194.5,-60.8435 196.95,-53.8435 192.05,-53.8435" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node2 --><g class="node trait" id="graph1_2"><g id="a_trait|graph1_2"><a xlink:title="endpoints.algebra.Responses" xlink:href="../algebra/Responses.html#inheritance-diagram"><path d="M118.667,-147C118.667,-147 8.33333,-147 8.33333,-147 4.16667,-147 -7.10543e-15,-142.833 -7.10543e-15,-138.667 -7.10543e-15,-138.667 -7.10543e-15,-130.333 -7.10543e-15,-130.333 -7.10543e-15,-126.167 4.16667,-122 8.33333,-122 8.33333,-122 118.667,-122 118.667,-122 122.833,-122 127,-126.167 127,-130.333 127,-130.333 127,-138.667 127,-138.667 127,-142.833 122.833,-147 118.667,-147" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-141.5" x="10.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-132.1" x="31.5" text-anchor="start">algebra.Responses</text></a></g></g><!-- node2&#45;&gt;node0 --><g class="edge inheritance" id="graph1_2_0"><g id="a_inheritance|graph1_2_0"><a xlink:title="Responses is a subtype of algebra.Responses"><path d="M95.4909,-119.092C117.937,-108.983 147.568,-95.6372 168.548,-86.1884" stroke="#d4d4d4" fill="none"></path><polygon points="94.4455,-116.876 89.0691,-121.984 96.4578,-121.343 94.4455,-116.876" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node3 --><g class="node trait" id="graph1_3"><g id="a_trait|graph1_3"><a xlink:title="endpoints.openapi.StatusCodes" xlink:href="StatusCodes.html#inheritance-diagram"><path d="M235.667,-147C235.667,-147 153.333,-147 153.333,-147 149.167,-147 145,-142.833 145,-138.667 145,-138.667 145,-130.333 145,-130.333 145,-126.167 149.167,-122 153.333,-122 153.333,-122 235.667,-122 235.667,-122 239.833,-122 244,-126.167 244,-130.333 244,-130.333 244,-138.667 244,-138.667 244,-142.833 239.833,-147 235.667,-147" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-141.5" x="155.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-132.1" x="176.5" text-anchor="start">StatusCodes</text></a></g></g><!-- node3&#45;&gt;node0 --><g class="edge inheritance" id="graph1_3_0"><g id="a_inheritance|graph1_3_0"><a xlink:title="Responses is a subtype of StatusCodes"><path d="M194.5,-114.76C194.5,-105.367 194.5,-94.2882 194.5,-86.1323" stroke="#d4d4d4" fill="none"></path><polygon points="192.05,-114.843 194.5,-121.843 196.95,-114.844 192.05,-114.843" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node4 --><g class="node trait" id="graph1_4"><g id="a_trait|graph1_4"><a xlink:title="endpoints.openapi.Headers" xlink:href="Headers.html#inheritance-diagram"><path d="M334.667,-147C334.667,-147 270.333,-147 270.333,-147 266.167,-147 262,-142.833 262,-138.667 262,-138.667 262,-130.333 262,-130.333 262,-126.167 266.167,-122 270.333,-122 270.333,-122 334.667,-122 334.667,-122 338.833,-122 343,-126.167 343,-130.333 343,-130.333 343,-138.667 343,-138.667 343,-142.833 338.833,-147 334.667,-147" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-141.5" x="272.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-132.1" x="293.5" text-anchor="start">Headers</text></a></g></g><!-- node4&#45;&gt;node0 --><g class="edge inheritance" id="graph1_4_0"><g id="a_inheritance|graph1_4_0"><a xlink:title="Responses is a subtype of Headers"><path d="M274.926,-118.437C256.575,-108.412 232.821,-95.4344 215.896,-86.1884" stroke="#d4d4d4" fill="none"></path><polygon points="274.102,-120.778 281.42,-121.984 276.452,-116.478 274.102,-120.778" stroke="#d4d4d4" fill="none"></polygon></a></g></g></g></svg></div>
                 <div id="diagram-controls" class="hiddenContent">
                   <button id="diagram-zoom-out" class="diagram-btn"><i class="material-icons"></i></button>
                   <button id="diagram-zoom-in" class="diagram-btn"><i class="material-icons"></i></button>
@@ -252,7 +264,7 @@
                   <span class="filtertype">Inherited<br />
                   </span>
                   <ol id="linearization">
-                    <li class="in" name="endpoints.openapi.Responses"><span>Responses</span></li><li class="in" name="endpoints.openapi.StatusCodes"><span>StatusCodes</span></li><li class="in" name="endpoints.algebra.Responses"><span>Responses</span></li><li class="in" name="endpoints.InvariantFunctorSyntax"><span>InvariantFunctorSyntax</span></li><li class="in" name="endpoints.algebra.StatusCodes"><span>StatusCodes</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                    <li class="in" name="endpoints.openapi.Responses"><span>Responses</span></li><li class="in" name="endpoints.openapi.Headers"><span>Headers</span></li><li class="in" name="endpoints.openapi.StatusCodes"><span>StatusCodes</span></li><li class="in" name="endpoints.algebra.Responses"><span>Responses</span></li><li class="in" name="endpoints.PartialInvariantFunctorSyntax"><span>PartialInvariantFunctorSyntax</span></li><li class="in" name="endpoints.InvariantFunctorSyntax"><span>InvariantFunctorSyntax</span></li><li class="in" name="endpoints.algebra.StatusCodes"><span>StatusCodes</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                   </ol>
                 </div><div class="ancestors">
                   <span class="filtertype">Implicitly<br />
@@ -298,6 +310,22 @@
 <code>InvariantFunctor[F]</code> instance.</p><div class="fullcomment"><div class="comment cmt"><p>Extension methods for values of type <code>F[A]</code> for which there is an implicit
 <code>InvariantFunctor[F]</code> instance.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../InvariantFunctorSyntax.html" class="extype" name="endpoints.InvariantFunctorSyntax">InvariantFunctorSyntax</a></dd></dl></div>
+    </li><li name="endpoints.PartialInvariantFunctorSyntax.PartialInvariantFunctorSyntax" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="PartialInvariantFunctorSyntax[A,F[_]]extendsAnyRef"></a><a id="PartialInvariantFunctorSyntax[A,F[_]]:PartialInvariantFunctorSyntax[A,F]"></a>
+      <span class="permalink">
+      <a href="../../endpoints/PartialInvariantFunctorSyntax$PartialInvariantFunctorSyntax.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../PartialInvariantFunctorSyntax$PartialInvariantFunctorSyntax.html"><span class="name">PartialInvariantFunctorSyntax</span></a><span class="tparams">[<span name="A">A</span>, <span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="result"> extends <a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../PartialInvariantFunctorSyntax.html" class="extype" name="endpoints.PartialInvariantFunctorSyntax">PartialInvariantFunctorSyntax</a></dd></dl></div>
     </li><li name="endpoints.algebra.Responses.ResponseSyntax" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
       <a id="ResponseSyntax[A]extendsAnyRef"></a><a id="ResponseSyntax[A]:(Responses.this)#ResponseSyntax[A]"></a>
       <span class="permalink">
@@ -315,6 +343,38 @@
       
       <p class="shortcomment cmt">Extension methods for <a href="../algebra/Responses.html#Response[A]" class="extmbr" name="endpoints.algebra.Responses.Response">Response</a>.</p><div class="fullcomment"><div class="comment cmt"><p>Extension methods for <a href="../algebra/Responses.html#Response[A]" class="extmbr" name="endpoints.algebra.Responses.Response">Response</a>.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd></dl></div>
+    </li><li name="endpoints.openapi.Headers.DocumentedHeader" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="DocumentedHeaderextendsProductwithSerializable"></a><a id="DocumentedHeader:DocumentedHeader"></a>
+      <span class="permalink">
+      <a href="../../endpoints/openapi/Headers$DocumentedHeader.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="Headers$DocumentedHeader.html"><span class="name">DocumentedHeader</span></a><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="description">description: <a href="https://www.scala-lang.org/api/2.12.10/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="required">required: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>, <span name="schema">schema: <a href="model/Schema.html" class="extype" name="endpoints.openapi.model.Schema">Schema</a></span>)</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.10/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Headers.html" class="extype" name="endpoints.openapi.Headers">Headers</a></dd></dl></div>
+    </li><li name="endpoints.openapi.Headers.DocumentedHeaders" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="DocumentedHeadersextendsProductwithSerializable"></a><a id="DocumentedHeaders:DocumentedHeaders"></a>
+      <span class="permalink">
+      <a href="../../endpoints/openapi/Headers$DocumentedHeaders.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="Headers$DocumentedHeaders.html"><span class="name">DocumentedHeaders</span></a><span class="params">(<span name="value">value: <a href="../../scala/index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<a href="Headers$DocumentedHeader.html" class="extype" name="endpoints.openapi.Headers.DocumentedHeader">DocumentedHeader</a>]</span>)</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.10/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">value</dt><dd class="cmt"><p>List of request header names (e.g. “Authorization”)</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Headers.html" class="extype" name="endpoints.openapi.Headers">Headers</a></dd></dl></div>
     </li><li name="endpoints.openapi.Responses.DocumentedResponse" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="DocumentedResponseextendsProductwithSerializable"></a><a id="DocumentedResponse:(Responses.this)#DocumentedResponse"></a>
       <span class="permalink">
@@ -327,10 +387,10 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a title="" href="Responses$DocumentedResponse.html"><span class="name">DocumentedResponse</span></a><span class="params">(<span name="status">status: (<a href="" class="extype" name="endpoints.openapi.Responses">Responses</a>.this)#<span class="extype" name="endpoints.openapi.StatusCodes.StatusCode">StatusCode</span></span>, <span name="documentation">documentation: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="content">content: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <a href="model/MediaType.html" class="extype" name="endpoints.openapi.model.MediaType">MediaType</a>]</span>)</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.10/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="Responses$DocumentedResponse.html"><span class="name">DocumentedResponse</span></a><span class="params">(<span name="status">status: (<a href="" class="extype" name="endpoints.openapi.Responses">Responses</a>.this)#<span class="extype" name="endpoints.openapi.StatusCodes.StatusCode">StatusCode</span></span>, <span name="documentation">documentation: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="headers">headers: (<a href="" class="extype" name="endpoints.openapi.Responses">Responses</a>.this)#<span class="extype" name="endpoints.openapi.Headers.DocumentedHeaders">DocumentedHeaders</span></span>, <span name="content">content: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <a href="model/MediaType.html" class="extype" name="endpoints.openapi.model.MediaType">MediaType</a>]</span>)</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.10/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">status</dt><dd class="cmt"><p>Response status code (e.g. OK or NotFound)</p></dd><dt class="param">documentation</dt><dd class="cmt"><p>Human readable documentation. Not optional because its required by openapi</p></dd><dt class="param">content</dt><dd class="cmt"><p>Map that associates each possible content-type (e.g. “text/html”) with a <code>MediaType</code> description</p></dd></dl></div>
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">status</dt><dd class="cmt"><p>Response status code (e.g. OK or NotFound)</p></dd><dt class="param">documentation</dt><dd class="cmt"><p>Human readable documentation. Not optional because its required by openapi</p></dd><dt class="param">headers</dt><dd class="cmt"><p>Response headers documentation</p></dd><dt class="param">content</dt><dd class="cmt"><p>Map that associates each possible content-type (e.g. “text/html”) with a <code>MediaType</code> description</p></dd></dl></div>
     </li><li name="endpoints.openapi.Responses.Response" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="types">
       <a id="Response[A]=List[Responses.this.DocumentedResponse]"></a><a id="Response[A]:(Responses.this)#Response[A]"></a>
       <span class="permalink">
@@ -366,6 +426,25 @@
       </span>
       
       <p class="shortcomment cmt">An HTTP response entity carrying an information of type A</p><div class="fullcomment"><div class="comment cmt"><p>An HTTP response entity carrying an information of type A</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.openapi.Responses">Responses</a> → <a href="../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd></dl></div>
+    </li><li name="endpoints.openapi.Responses.ResponseHeaders" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="types">
+      <a id="ResponseHeaders[A]=Responses.this.DocumentedHeaders"></a><a id="ResponseHeaders[A]:(Responses.this)#ResponseHeaders[A]"></a>
+      <span class="permalink">
+      <a href="../../endpoints/openapi/Responses.html#ResponseHeaders[A]=Responses.this.DocumentedHeaders" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ResponseHeaders</span><span class="tparams">[<span name="A">A</span>]</span><span class="result alias"> = (<a href="" class="extype" name="endpoints.openapi.Responses">Responses</a>.this)#<span class="extype" name="endpoints.openapi.Headers.DocumentedHeaders">DocumentedHeaders</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Information carried by responses’ headers.</p><div class="fullcomment"><div class="comment cmt"><p>Information carried by responses’ headers.</p><p>You can construct values of type <code>ResponseHeaders</code> by using the operations <a href="#responseHeader(name:String,docs:endpoints.algebra.Documentation):Responses.this.ResponseHeaders[String]" class="extmbr" name="endpoints.openapi.Responses#responseHeader">responseHeader</a>,
+<a href="#optResponseHeader(name:String,docs:endpoints.algebra.Documentation):Responses.this.ResponseHeaders[Option[String]]" class="extmbr" name="endpoints.openapi.Responses#optResponseHeader">optResponseHeader</a>, or <a href="#emptyResponseHeaders:Responses.this.ResponseHeaders[Unit]" class="extmbr" name="endpoints.openapi.Responses#emptyResponseHeaders">emptyResponseHeaders</a>.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.openapi.Responses">Responses</a> → <a href="../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd><dt>Note</dt><dd><span class="cmt"><p>This type has implicit methods provided by the <a href="../SemigroupalSyntax.html" class="extype" name="endpoints.SemigroupalSyntax">SemigroupalSyntax</a>
+      and <a href="../PartialInvariantFunctorSyntax$PartialInvariantFunctorSyntax.html" class="extype" name="endpoints.PartialInvariantFunctorSyntax.PartialInvariantFunctorSyntax">PartialInvariantFunctorSyntax</a> classes.</p></span></dd></dl></div>
     </li><li name="endpoints.openapi.StatusCodes.StatusCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="types">
       <a id="StatusCode=Int"></a><a id="StatusCode:(Responses.this)#StatusCode"></a>
       <span class="permalink">
@@ -662,9 +741,9 @@
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li name="endpoints.algebra.Responses#badRequest" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
-      <a id="badRequest(docs:endpoints.algebra.Documentation):Responses.this.Response[Responses.this.ClientErrors]"></a><a id="badRequest(Documentation):(Responses.this)#Response[(Responses.this)#ClientErrors]"></a>
+      <a id="badRequest[A,R](docs:endpoints.algebra.Documentation,headers:Responses.this.ResponseHeaders[A])(implicittupler:endpoints.Tupler.Aux[Responses.this.ClientErrors,A,R]):Responses.this.Response[R]"></a><a id="badRequest[A,R](Documentation,(Responses.this)#ResponseHeaders[A])(Tupler.Aux[(Responses.this)#ClientErrors,A,R]):(Responses.this)#Response[R]"></a>
       <span class="permalink">
-      <a href="../../endpoints/openapi/Responses.html#badRequest(docs:endpoints.algebra.Documentation):Responses.this.Response[Responses.this.ClientErrors]" title="Permalink">
+      <a href="../../endpoints/openapi/Responses.html#badRequest[A,R](docs:endpoints.algebra.Documentation,headers:Responses.this.ResponseHeaders[A])(implicittupler:endpoints.Tupler.Aux[Responses.this.ClientErrors,A,R]):Responses.this.Response[R]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -673,7 +752,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">badRequest</span><span class="params">(<span name="docs">docs: <a href="../algebra/index.html#Documentation=Option[String]" class="extmbr" name="endpoints.algebra.Documentation">Documentation</a> = <span class="symbol"><span class="name"><a href="../../scala/index.html">None</a></span></span></span>)</span><span class="result">: (<a href="" class="extype" name="endpoints.openapi.Responses">Responses</a>.this)#<span class="extype" name="endpoints.openapi.Responses.Response">Response</span>[(<a href="" class="extype" name="endpoints.openapi.Responses">Responses</a>.this)#<span class="extype" name="endpoints.algebra.Errors.ClientErrors">ClientErrors</span>]</span>
+        <span class="name">badRequest</span><span class="tparams">[<span name="A">A</span>, <span name="R">R</span>]</span><span class="params">(<span name="docs">docs: <a href="../algebra/index.html#Documentation=Option[String]" class="extmbr" name="endpoints.algebra.Documentation">Documentation</a> = <span class="symbol"><span class="name"><a href="../../scala/index.html">None</a></span></span></span>, <span name="headers">headers: (<a href="" class="extype" name="endpoints.openapi.Responses">Responses</a>.this)#<span class="extype" name="endpoints.openapi.Responses.ResponseHeaders">ResponseHeaders</span>[<span class="extype" name="endpoints.algebra.Responses.badRequest.A">A</span>] = <span class="symbol"><span class="name"><a href="../algebra/Responses.html#emptyResponseHeaders:Responses.this.ResponseHeaders[Unit]">emptyResponseHeaders</a></span></span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="tupler">tupler: <a href="../Tupler$.html#Aux[A,B,Out0]=endpoints.Tupler[A,B]{typeOut=Out0}" class="extmbr" name="endpoints.Tupler.Aux">Tupler.Aux</a>[(<a href="" class="extype" name="endpoints.openapi.Responses">Responses</a>.this)#<span class="extype" name="endpoints.algebra.Errors.ClientErrors">ClientErrors</span>, <span class="extype" name="endpoints.algebra.Responses.badRequest.A">A</span>, <span class="extype" name="endpoints.algebra.Responses.badRequest.R">R</span>]</span>)</span><span class="result">: (<a href="" class="extype" name="endpoints.openapi.Responses">Responses</a>.this)#<span class="extype" name="endpoints.openapi.Responses.Response">Response</span>[<span class="extype" name="endpoints.algebra.Responses.badRequest.R">R</span>]</span>
       </span>
       
       <p class="shortcomment cmt">Bad Request (400) response, with an entity of type <code>ClientErrors</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Bad Request (400) response, with an entity of type <code>ClientErrors</code>.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd><dt>See also</dt><dd><span class="cmt"><p><a href="../algebra/Errors.html" class="extype" name="endpoints.algebra.Errors">endpoints.algebra.Errors</a> and <a href="../algebra/BuiltInErrors.html" class="extype" name="endpoints.algebra.BuiltInErrors">endpoints.algebra.BuiltInErrors</a></p></span></dd></dl></div>
@@ -736,6 +815,23 @@ Documentation interpreters list all the possible responses.
       </span>
       
       <p class="shortcomment cmt">Empty response entity</p><div class="fullcomment"><div class="comment cmt"><p>Empty response entity</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.openapi.Responses">Responses</a> → <a href="../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd></dl></div>
+    </li><li name="endpoints.openapi.Responses#emptyResponseHeaders" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
+      <a id="emptyResponseHeaders:Responses.this.ResponseHeaders[Unit]"></a><a id="emptyResponseHeaders:(Responses.this)#ResponseHeaders[Unit]"></a>
+      <span class="permalink">
+      <a href="../../endpoints/openapi/Responses.html#emptyResponseHeaders:Responses.this.ResponseHeaders[Unit]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">emptyResponseHeaders</span><span class="result">: (<a href="" class="extype" name="endpoints.openapi.Responses">Responses</a>.this)#<span class="extype" name="endpoints.openapi.Responses.ResponseHeaders">ResponseHeaders</span>[<a href="https://www.scala-lang.org/api/2.12.10/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">No particular response header.</p><div class="fullcomment"><div class="comment cmt"><p>No particular response header.
+Client interpreters should ignore information carried by response headers.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.openapi.Responses">Responses</a> → <a href="../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd></dl></div>
     </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A"></a><a id="ensuring((Responses)⇒Boolean,⇒Any):Responses"></a>
       <span class="permalink">
@@ -932,9 +1028,9 @@ Documentation interpreters list all the possible responses.
               
         </dd></dl></div>
     </li><li name="endpoints.algebra.Responses#internalServerError" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
-      <a id="internalServerError(docs:endpoints.algebra.Documentation):Responses.this.Response[Responses.this.ServerError]"></a><a id="internalServerError(Documentation):(Responses.this)#Response[(Responses.this)#ServerError]"></a>
+      <a id="internalServerError[A,R](docs:endpoints.algebra.Documentation,headers:Responses.this.ResponseHeaders[A])(implicittupler:endpoints.Tupler.Aux[Responses.this.ServerError,A,R]):Responses.this.Response[R]"></a><a id="internalServerError[A,R](Documentation,(Responses.this)#ResponseHeaders[A])(Tupler.Aux[(Responses.this)#ServerError,A,R]):(Responses.this)#Response[R]"></a>
       <span class="permalink">
-      <a href="../../endpoints/openapi/Responses.html#internalServerError(docs:endpoints.algebra.Documentation):Responses.this.Response[Responses.this.ServerError]" title="Permalink">
+      <a href="../../endpoints/openapi/Responses.html#internalServerError[A,R](docs:endpoints.algebra.Documentation,headers:Responses.this.ResponseHeaders[A])(implicittupler:endpoints.Tupler.Aux[Responses.this.ServerError,A,R]):Responses.this.Response[R]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -943,7 +1039,7 @@ Documentation interpreters list all the possible responses.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">internalServerError</span><span class="params">(<span name="docs">docs: <a href="../algebra/index.html#Documentation=Option[String]" class="extmbr" name="endpoints.algebra.Documentation">Documentation</a> = <span class="symbol"><span class="name"><a href="../../scala/index.html">None</a></span></span></span>)</span><span class="result">: (<a href="" class="extype" name="endpoints.openapi.Responses">Responses</a>.this)#<span class="extype" name="endpoints.openapi.Responses.Response">Response</span>[(<a href="" class="extype" name="endpoints.openapi.Responses">Responses</a>.this)#<span class="extype" name="endpoints.algebra.Errors.ServerError">ServerError</span>]</span>
+        <span class="name">internalServerError</span><span class="tparams">[<span name="A">A</span>, <span name="R">R</span>]</span><span class="params">(<span name="docs">docs: <a href="../algebra/index.html#Documentation=Option[String]" class="extmbr" name="endpoints.algebra.Documentation">Documentation</a> = <span class="symbol"><span class="name"><a href="../../scala/index.html">None</a></span></span></span>, <span name="headers">headers: (<a href="" class="extype" name="endpoints.openapi.Responses">Responses</a>.this)#<span class="extype" name="endpoints.openapi.Responses.ResponseHeaders">ResponseHeaders</span>[<span class="extype" name="endpoints.algebra.Responses.internalServerError.A">A</span>] = <span class="symbol"><span class="name"><a href="../algebra/Responses.html#emptyResponseHeaders:Responses.this.ResponseHeaders[Unit]">emptyResponseHeaders</a></span></span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="tupler">tupler: <a href="../Tupler$.html#Aux[A,B,Out0]=endpoints.Tupler[A,B]{typeOut=Out0}" class="extmbr" name="endpoints.Tupler.Aux">Tupler.Aux</a>[(<a href="" class="extype" name="endpoints.openapi.Responses">Responses</a>.this)#<span class="extype" name="endpoints.algebra.Errors.ServerError">ServerError</span>, <span class="extype" name="endpoints.algebra.Responses.internalServerError.A">A</span>, <span class="extype" name="endpoints.algebra.Responses.internalServerError.R">R</span>]</span>)</span><span class="result">: (<a href="" class="extype" name="endpoints.openapi.Responses">Responses</a>.this)#<span class="extype" name="endpoints.openapi.Responses.Response">Response</span>[<span class="extype" name="endpoints.algebra.Responses.internalServerError.R">R</span>]</span>
       </span>
       
       <p class="shortcomment cmt">Internal Server Error (500) response, with an entity of type <code>ServerError</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Internal Server Error (500) response, with an entity of type <code>ServerError</code>.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd><dt>See also</dt><dd><span class="cmt"><p><a href="../algebra/Errors.html" class="extype" name="endpoints.algebra.Errors">endpoints.algebra.Errors</a> and <a href="../algebra/BuiltInErrors.html" class="extype" name="endpoints.algebra.BuiltInErrors">endpoints.algebra.BuiltInErrors</a></p></span></dd></dl></div>
@@ -1018,9 +1114,9 @@ Documentation interpreters list all the possible responses.
               
         </dd></dl></div>
     </li><li name="endpoints.algebra.Responses#ok" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
-      <a id="ok[A](entity:Responses.this.ResponseEntity[A],docs:endpoints.algebra.Documentation):Responses.this.Response[A]"></a><a id="ok[A]((Responses.this)#ResponseEntity[A],Documentation):(Responses.this)#Response[A]"></a>
+      <a id="ok[A,B,R](entity:Responses.this.ResponseEntity[A],docs:endpoints.algebra.Documentation,headers:Responses.this.ResponseHeaders[B])(implicittupler:endpoints.Tupler.Aux[A,B,R]):Responses.this.Response[R]"></a><a id="ok[A,B,R]((Responses.this)#ResponseEntity[A],Documentation,(Responses.this)#ResponseHeaders[B])(Tupler.Aux[A,B,R]):(Responses.this)#Response[R]"></a>
       <span class="permalink">
-      <a href="../../endpoints/openapi/Responses.html#ok[A](entity:Responses.this.ResponseEntity[A],docs:endpoints.algebra.Documentation):Responses.this.Response[A]" title="Permalink">
+      <a href="../../endpoints/openapi/Responses.html#ok[A,B,R](entity:Responses.this.ResponseEntity[A],docs:endpoints.algebra.Documentation,headers:Responses.this.ResponseHeaders[B])(implicittupler:endpoints.Tupler.Aux[A,B,R]):Responses.this.Response[R]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1029,14 +1125,14 @@ Documentation interpreters list all the possible responses.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">ok</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="entity">entity: (<a href="" class="extype" name="endpoints.openapi.Responses">Responses</a>.this)#<span class="extype" name="endpoints.openapi.Responses.ResponseEntity">ResponseEntity</span>[<span class="extype" name="endpoints.algebra.Responses.ok.A">A</span>]</span>, <span name="docs">docs: <a href="../algebra/index.html#Documentation=Option[String]" class="extmbr" name="endpoints.algebra.Documentation">Documentation</a> = <span class="symbol"><span class="name"><a href="../../scala/index.html">None</a></span></span></span>)</span><span class="result">: (<a href="" class="extype" name="endpoints.openapi.Responses">Responses</a>.this)#<span class="extype" name="endpoints.openapi.Responses.Response">Response</span>[<span class="extype" name="endpoints.algebra.Responses.ok.A">A</span>]</span>
+        <span class="name">ok</span><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="R">R</span>]</span><span class="params">(<span name="entity">entity: (<a href="" class="extype" name="endpoints.openapi.Responses">Responses</a>.this)#<span class="extype" name="endpoints.openapi.Responses.ResponseEntity">ResponseEntity</span>[<span class="extype" name="endpoints.algebra.Responses.ok.A">A</span>]</span>, <span name="docs">docs: <a href="../algebra/index.html#Documentation=Option[String]" class="extmbr" name="endpoints.algebra.Documentation">Documentation</a> = <span class="symbol"><span class="name"><a href="../../scala/index.html">None</a></span></span></span>, <span name="headers">headers: (<a href="" class="extype" name="endpoints.openapi.Responses">Responses</a>.this)#<span class="extype" name="endpoints.openapi.Responses.ResponseHeaders">ResponseHeaders</span>[<span class="extype" name="endpoints.algebra.Responses.ok.B">B</span>] = <span class="symbol"><span class="name"><a href="../algebra/Responses.html#emptyResponseHeaders:Responses.this.ResponseHeaders[Unit]">emptyResponseHeaders</a></span></span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="tupler">tupler: <a href="../Tupler$.html#Aux[A,B,Out0]=endpoints.Tupler[A,B]{typeOut=Out0}" class="extmbr" name="endpoints.Tupler.Aux">Tupler.Aux</a>[<span class="extype" name="endpoints.algebra.Responses.ok.A">A</span>, <span class="extype" name="endpoints.algebra.Responses.ok.B">B</span>, <span class="extype" name="endpoints.algebra.Responses.ok.R">R</span>]</span>)</span><span class="result">: (<a href="" class="extype" name="endpoints.openapi.Responses">Responses</a>.this)#<span class="extype" name="endpoints.openapi.Responses.Response">Response</span>[<span class="extype" name="endpoints.algebra.Responses.ok.R">R</span>]</span>
       </span>
       
       <p class="shortcomment cmt">OK (200) Response with the given entity</p><div class="fullcomment"><div class="comment cmt"><p>OK (200) Response with the given entity</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd></dl></div>
-    </li><li name="endpoints.openapi.Responses#response" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
-      <a id="response[A](statusCode:Responses.this.StatusCode,entity:Responses.this.ResponseEntity[A],docs:endpoints.algebra.Documentation):Responses.this.Response[A]"></a><a id="response[A]((Responses.this)#StatusCode,(Responses.this)#ResponseEntity[A],Documentation):(Responses.this)#Response[A]"></a>
+    </li><li name="endpoints.openapi.Responses#optResponseHeader" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
+      <a id="optResponseHeader(name:String,docs:endpoints.algebra.Documentation):Responses.this.ResponseHeaders[Option[String]]"></a><a id="optResponseHeader(String,Documentation):(Responses.this)#ResponseHeaders[Option[String]]"></a>
       <span class="permalink">
-      <a href="../../endpoints/openapi/Responses.html#response[A](statusCode:Responses.this.StatusCode,entity:Responses.this.ResponseEntity[A],docs:endpoints.algebra.Documentation):Responses.this.Response[A]" title="Permalink">
+      <a href="../../endpoints/openapi/Responses.html#optResponseHeader(name:String,docs:endpoints.algebra.Documentation):Responses.this.ResponseHeaders[Option[String]]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1045,12 +1141,92 @@ Documentation interpreters list all the possible responses.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">response</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="statusCode">statusCode: (<a href="" class="extype" name="endpoints.openapi.Responses">Responses</a>.this)#<span class="extype" name="endpoints.openapi.StatusCodes.StatusCode">StatusCode</span></span>, <span name="entity">entity: (<a href="" class="extype" name="endpoints.openapi.Responses">Responses</a>.this)#<span class="extype" name="endpoints.openapi.Responses.ResponseEntity">ResponseEntity</span>[<span class="extype" name="endpoints.openapi.Responses.response.A">A</span>]</span>, <span name="docs">docs: <a href="../algebra/index.html#Documentation=Option[String]" class="extmbr" name="endpoints.algebra.Documentation">Documentation</a> = <span class="symbol"><span class="name"><a href="../../scala/index.html">None</a></span></span></span>)</span><span class="result">: (<a href="" class="extype" name="endpoints.openapi.Responses">Responses</a>.this)#<span class="extype" name="endpoints.openapi.Responses.Response">Response</span>[<span class="extype" name="endpoints.openapi.Responses.response.A">A</span>]</span>
+        <span class="name">optResponseHeader</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="docs">docs: <a href="../algebra/index.html#Documentation=Option[String]" class="extmbr" name="endpoints.algebra.Documentation">Documentation</a> = <span class="symbol"><span class="name"><a href="../../scala/index.html">None</a></span></span></span>)</span><span class="result">: (<a href="" class="extype" name="endpoints.openapi.Responses">Responses</a>.this)#<span class="extype" name="endpoints.openapi.Responses.ResponseHeaders">ResponseHeaders</span>[<a href="https://www.scala-lang.org/api/2.12.10/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="scala.Predef.String">String</span>]]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Response headers optionally containing a header with the given <code>name</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Response headers optionally containing a header with the given <code>name</code>.
+Client interpreters should model the header value as <code>Some[String]</code>, or
+<code>None</code> if the response header is missing.
+Server interpreters should produce such a response header.
+Documentation interpreters should document this header.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.openapi.Responses">Responses</a> → <a href="../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd></dl></div>
+    </li><li name="endpoints.openapi.Responses#response" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
+      <a id="response[A,B,R](statusCode:Responses.this.StatusCode,entity:Responses.this.ResponseEntity[A],docs:endpoints.algebra.Documentation,headers:Responses.this.ResponseHeaders[B])(implicittupler:endpoints.Tupler.Aux[A,B,R]):Responses.this.Response[R]"></a><a id="response[A,B,R]((Responses.this)#StatusCode,(Responses.this)#ResponseEntity[A],Documentation,(Responses.this)#ResponseHeaders[B])(Tupler.Aux[A,B,R]):(Responses.this)#Response[R]"></a>
+      <span class="permalink">
+      <a href="../../endpoints/openapi/Responses.html#response[A,B,R](statusCode:Responses.this.StatusCode,entity:Responses.this.ResponseEntity[A],docs:endpoints.algebra.Documentation,headers:Responses.this.ResponseHeaders[B])(implicittupler:endpoints.Tupler.Aux[A,B,R]):Responses.this.Response[R]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">response</span><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="R">R</span>]</span><span class="params">(<span name="statusCode">statusCode: (<a href="" class="extype" name="endpoints.openapi.Responses">Responses</a>.this)#<span class="extype" name="endpoints.openapi.StatusCodes.StatusCode">StatusCode</span></span>, <span name="entity">entity: (<a href="" class="extype" name="endpoints.openapi.Responses">Responses</a>.this)#<span class="extype" name="endpoints.openapi.Responses.ResponseEntity">ResponseEntity</span>[<span class="extype" name="endpoints.openapi.Responses.response.A">A</span>]</span>, <span name="docs">docs: <a href="../algebra/index.html#Documentation=Option[String]" class="extmbr" name="endpoints.algebra.Documentation">Documentation</a> = <span class="symbol"><span class="name"><a href="../../scala/index.html">None</a></span></span></span>, <span name="headers">headers: (<a href="" class="extype" name="endpoints.openapi.Responses">Responses</a>.this)#<span class="extype" name="endpoints.openapi.Responses.ResponseHeaders">ResponseHeaders</span>[<span class="extype" name="endpoints.openapi.Responses.response.B">B</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="tupler">tupler: <a href="../Tupler$.html#Aux[A,B,Out0]=endpoints.Tupler[A,B]{typeOut=Out0}" class="extmbr" name="endpoints.Tupler.Aux">Tupler.Aux</a>[<span class="extype" name="endpoints.openapi.Responses.response.A">A</span>, <span class="extype" name="endpoints.openapi.Responses.response.B">B</span>, <span class="extype" name="endpoints.openapi.Responses.response.R">R</span>]</span>)</span><span class="result">: (<a href="" class="extype" name="endpoints.openapi.Responses">Responses</a>.this)#<span class="extype" name="endpoints.openapi.Responses.Response">Response</span>[<span class="extype" name="endpoints.openapi.Responses.response.R">R</span>]</span>
       </span>
       
       <p class="shortcomment cmt">Server interpreters construct a response with the given status and entity.</p><div class="fullcomment"><div class="comment cmt"><p>Server interpreters construct a response with the given status and entity.
 Client interpreters accept a response only if it has a corresponding status code.
-</p></div><dl class="paramcmts block"><dt class="param">statusCode</dt><dd class="cmt"><p>Response status code</p></dd><dt class="param">entity</dt><dd class="cmt"><p>Response entity</p></dd><dt class="param">docs</dt><dd class="cmt"><p>Response documentation</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.openapi.Responses">Responses</a> → <a href="../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd></dl></div>
+</p></div><dl class="paramcmts block"><dt class="param">statusCode</dt><dd class="cmt"><p>Response status code</p></dd><dt class="param">entity</dt><dd class="cmt"><p>Response entity</p></dd><dt class="param">docs</dt><dd class="cmt"><p>Response documentation</p></dd><dt class="param">headers</dt><dd class="cmt"><p>Response headers</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.openapi.Responses">Responses</a> → <a href="../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd></dl></div>
+    </li><li name="endpoints.openapi.Responses#responseHeader" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="operations">
+      <a id="responseHeader(name:String,docs:endpoints.algebra.Documentation):Responses.this.ResponseHeaders[String]"></a><a id="responseHeader(String,Documentation):(Responses.this)#ResponseHeaders[String]"></a>
+      <span class="permalink">
+      <a href="../../endpoints/openapi/Responses.html#responseHeader(name:String,docs:endpoints.algebra.Documentation):Responses.this.ResponseHeaders[String]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">responseHeader</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="docs">docs: <a href="../algebra/index.html#Documentation=Option[String]" class="extmbr" name="endpoints.algebra.Documentation">Documentation</a> = <span class="symbol"><span class="name"><a href="../../scala/index.html">None</a></span></span></span>)</span><span class="result">: (<a href="" class="extype" name="endpoints.openapi.Responses">Responses</a>.this)#<span class="extype" name="endpoints.openapi.Responses.ResponseHeaders">ResponseHeaders</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Response headers containing a header with the given <code>name</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Response headers containing a header with the given <code>name</code>.
+Client interpreters should model the header value as <code>String</code>, or
+fail if the response header is missing.
+Server interpreters should produce such a response header.
+Documentation interpreters should document this header.</p><p>Example:</p><pre><span class="kw">val</span> versionedResource: Endpoint[<span class="std">Unit</span>, (SomeResource, <span class="std">String</span>)] =
+  endpoint(
+    get(path / <span class="lit">"versioned-resource"</span>),
+    ok(
+      jsonResponse[SomeResource],
+      headers = responseHeader(<span class="lit">"ETag"</span>)
+    )
+  )</pre></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.openapi.Responses">Responses</a> → <a href="../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd></dl></div>
+    </li><li name="endpoints.openapi.Responses#responseHeadersInvFunctor" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="responseHeadersInvFunctor:endpoints.PartialInvariantFunctor[Responses.this.ResponseHeaders]"></a><a id="responseHeadersInvFunctor:PartialInvariantFunctor[(Responses.this)#ResponseHeaders]"></a>
+      <span class="permalink">
+      <a href="../../endpoints/openapi/Responses.html#responseHeadersInvFunctor:endpoints.PartialInvariantFunctor[Responses.this.ResponseHeaders]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">responseHeadersInvFunctor</span><span class="result">: <a href="../PartialInvariantFunctor.html" class="extype" name="endpoints.PartialInvariantFunctor">PartialInvariantFunctor</a>[(<a href="" class="extype" name="endpoints.openapi.Responses">Responses</a>.this)#<span class="extype" name="endpoints.openapi.Responses.ResponseHeaders">ResponseHeaders</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Provides <code>xmap</code> and <code>xmapPartial</code> operations.</p><div class="fullcomment"><div class="comment cmt"><p>Provides <code>xmap</code> and <code>xmapPartial</code> operations.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.openapi.Responses">Responses</a> → <a href="../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd><dt>See also</dt><dd><span class="cmt"><p><a href="../PartialInvariantFunctorSyntax$PartialInvariantFunctorSyntax.html" class="extype" name="endpoints.PartialInvariantFunctorSyntax.PartialInvariantFunctorSyntax">PartialInvariantFunctorSyntax</a></p></span></dd></dl></div>
+    </li><li name="endpoints.openapi.Responses#responseHeadersSemigroupal" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="responseHeadersSemigroupal:endpoints.Semigroupal[Responses.this.ResponseHeaders]"></a><a id="responseHeadersSemigroupal:Semigroupal[(Responses.this)#ResponseHeaders]"></a>
+      <span class="permalink">
+      <a href="../../endpoints/openapi/Responses.html#responseHeadersSemigroupal:endpoints.Semigroupal[Responses.this.ResponseHeaders]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">responseHeadersSemigroupal</span><span class="result">: <a href="../Semigroupal.html" class="extype" name="endpoints.Semigroupal">Semigroupal</a>[(<a href="" class="extype" name="endpoints.openapi.Responses">Responses</a>.this)#<span class="extype" name="endpoints.openapi.Responses.ResponseHeaders">ResponseHeaders</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Provides <code>++</code> operation.</p><div class="fullcomment"><div class="comment cmt"><p>Provides <code>++</code> operation.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="endpoints.openapi.Responses">Responses</a> → <a href="../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">Responses</a></dd><dt>See also</dt><dd><span class="cmt"><p><a href="../SemigroupalSyntax.html" class="extype" name="endpoints.SemigroupalSyntax">SemigroupalSyntax</a></p></span></dd></dl></div>
     </li><li name="endpoints.openapi.Responses#responseInvFunctor" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="responseInvFunctor:endpoints.InvariantFunctor[Responses.this.Response]"></a><a id="responseInvFunctor:InvariantFunctor[(Responses.this)#Response]"></a>
       <span class="permalink">
@@ -1231,10 +1407,14 @@ an empty HTTP response whose status code is 404 (Not Found).
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="endpoints.openapi.StatusCodes">
+        <div class="parent" name="endpoints.openapi.Headers">
+              <h3>Inherited from <a href="Headers.html" class="extype" name="endpoints.openapi.Headers">Headers</a></h3>
+            </div><div class="parent" name="endpoints.openapi.StatusCodes">
               <h3>Inherited from <a href="StatusCodes.html" class="extype" name="endpoints.openapi.StatusCodes">StatusCodes</a></h3>
             </div><div class="parent" name="endpoints.algebra.Responses">
               <h3>Inherited from <a href="../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">algebra.Responses</a></h3>
+            </div><div class="parent" name="endpoints.PartialInvariantFunctorSyntax">
+              <h3>Inherited from <a href="../PartialInvariantFunctorSyntax.html" class="extype" name="endpoints.PartialInvariantFunctorSyntax">endpoints.PartialInvariantFunctorSyntax</a></h3>
             </div><div class="parent" name="endpoints.InvariantFunctorSyntax">
               <h3>Inherited from <a href="../InvariantFunctorSyntax.html" class="extype" name="endpoints.InvariantFunctorSyntax">endpoints.InvariantFunctorSyntax</a></h3>
             </div><div class="parent" name="endpoints.algebra.StatusCodes">

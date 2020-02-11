@@ -21,7 +21,7 @@
             <div class="row">
               <div class="large-12 columns a_limited top-bar">
                 <div class="top-bar-left">
-                  <p>endpoints 0.13.0</p>
+                  <p>endpoints 0.14.0</p>
 
                 </div>
                 <div class="top-bar-right align-right row">
@@ -54,7 +54,7 @@
                 
                 <h1 id="openapi" class="a_section" data-magellan-target="openapi">OpenAPI<a class="a_hlink" href="#openapi"></a></h1>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
-<pre class="hljs"><code class="language-scala"><span class="hljs-string">"org.julienrf"</span> %% <span class="hljs-string">"endpoints-openapi"</span> % <span class="hljs-string">"0.13.0"</span>
+<pre class="hljs"><code class="language-scala"><span class="hljs-string">"org.julienrf"</span> %% <span class="hljs-string">"endpoints-openapi"</span> % <span class="hljs-string">"0.14.0"</span>
 </code></pre>
 </div></div>
 <p><a href="../api/endpoints/openapi/index.html">API documentation</a></p>
@@ -77,7 +77,7 @@ to generate an OpenAPI document.</p>
     )
 
 }</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.13.0/algebras/algebra/src/test/scala/endpoints/algebra/EndpointsDocs.scala#L93-L103" class="a_sourcelink">EndpointsDocs.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.14.0/algebras/algebra/src/test/scala/endpoints/algebra/EndpointsDocs.scala#L93-L103" class="a_sourcelink">EndpointsDocs.scala</a></div></div>
 <p>It can be documented as follows:</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
 <pre class="hljs"><code class="language-scala"><span class="hljs-keyword">import</span> endpoints.openapi
@@ -91,13 +91,13 @@ to generate an OpenAPI document.</p>
     )
 
 }</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.13.0/openapi/openapi/src/test/scala/endpoints/openapi/EndpointsDocs.scala#L6-L21" class="a_sourcelink">EndpointsDocs.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.14.0/openapi/openapi/src/test/scala/endpoints/openapi/EndpointsDocs.scala#L6-L21" class="a_sourcelink">EndpointsDocs.scala</a></div></div>
 <p>The value returned by the <code class="hljs">openApi</code> method has type <code class="hljs">endpoints.openapi.models.OpenApi</code>,
 which is an abstract model for OpenAPI documents. You can encode it into JSON by using the
 <code class="hljs">OpenApi.stringEncoder</code> encoder.</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
 <pre class="hljs"><code class="language-scala"><span class="hljs-keyword">val</span> apiJson: <span class="hljs-type">String</span> = <span class="hljs-type">OpenApi</span>.stringEncoder.encode(api)</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.13.0/openapi/openapi/src/test/scala/endpoints/openapi/EndpointsDocs.scala#L18" class="a_sourcelink">EndpointsDocs.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.14.0/openapi/openapi/src/test/scala/endpoints/openapi/EndpointsDocs.scala#L18" class="a_sourcelink">EndpointsDocs.scala</a></div></div>
 <p>In case the endpoint that serves the documentation is itself defined using <em>endpoints</em>,
 you can use the <code class="hljs">JsonEntitiesFromEncoderAndDecoder</code> interpreter to define an endpoint
 returning the <code class="hljs">OpenApi</code> document as a JSON entity. Here is an example using Akka
@@ -114,7 +114,7 @@ HTTP:</p>
       .implementedBy(_ =&gt; <span class="hljs-type">CounterDocumentation</span>.api)
 
 }</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.13.0/documentation/examples/quickstart/server/src/main/scala/quickstart/Main.scala#L16-L26" class="a_sourcelink">Main.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.14.0/documentation/examples/quickstart/server/src/main/scala/quickstart/Main.scala#L16-L26" class="a_sourcelink">Main.scala</a></div></div>
 <p>Finally, the <code class="hljs">apiJson</code> value contains the following JSON document:</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
 <pre class="hljs"><code class="language-json">{

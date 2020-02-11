@@ -21,7 +21,7 @@
             <div class="row">
               <div class="large-12 columns a_limited top-bar">
                 <div class="top-bar-left">
-                  <p>endpoints 0.13.0</p>
+                  <p>endpoints 0.14.0</p>
 
                 </div>
                 <div class="top-bar-right align-right row">
@@ -55,7 +55,7 @@
                 <h1 id="play-json" class="a_section" data-magellan-target="play-json">Play JSON<a class="a_hlink" href="#play-json"></a></h1>
 <p>Builds <a href="https://github.com/playframework/play-json">Play JSON</a> Reads and Writes out of JSON schema definitions.</p>
 <div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
-<pre class="hljs"><code class="language-scala"><span class="hljs-string">"org.julienrf"</span> %% <span class="hljs-string">"endpoints-json-schema-playjson"</span> % <span class="hljs-string">"0.13.0"</span>
+<pre class="hljs"><code class="language-scala"><span class="hljs-string">"org.julienrf"</span> %% <span class="hljs-string">"endpoints-json-schema-playjson"</span> % <span class="hljs-string">"0.14.0"</span>
 </code></pre>
 </div></div>
 <p><a href="../api/endpoints/playjson/JsonSchemas.html">API documentation</a></p>
@@ -66,7 +66,7 @@ that provides both a <code class="hljs">Reads[A]</code> and a <code class="hljs"
 <pre class="hljs"><code class="language-scala"><span class="hljs-keyword">sealed</span> <span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">Shape</span></span>
 <span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Circle</span>(<span class="hljs-params">radius: <span class="hljs-type">Double</span></span>) <span class="hljs-keyword">extends</span> <span class="hljs-title">Shape</span></span>
 <span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Rectangle</span>(<span class="hljs-params">width: <span class="hljs-type">Double</span>, height: <span class="hljs-type">Double</span></span>) <span class="hljs-keyword">extends</span> <span class="hljs-title">Shape</span></span></code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.13.0/json-schema/json-schema/src/test/scala/endpoints/algebra/JsonSchemasDocs.scala#L18-L20" class="a_sourcelink">JsonSchemasDocs.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.14.0/json-schema/json-schema/src/test/scala/endpoints/algebra/JsonSchemasDocs.scala#L18-L20" class="a_sourcelink">JsonSchemasDocs.scala</a></div></div>
 <p>Assuming that there is an implicit <code class="hljs">JsonSchema[Shape]</code> definition,
 we can encode a <code class="hljs">Shape</code> into JSON and decode it using the usual
 Play JSON operations:</p>
@@ -75,7 +75,7 @@ Play JSON operations:</p>
 <span class="hljs-keyword">val</span> shape: <span class="hljs-type">Shape</span> = <span class="hljs-type">Circle</span>(<span class="hljs-number">42</span>)
 <span class="hljs-keyword">val</span> shapeJson: <span class="hljs-type">JsValue</span> = <span class="hljs-type">Json</span>.toJson(shape)
 <span class="hljs-keyword">val</span> maybeShape: <span class="hljs-type">JsResult</span>[<span class="hljs-type">Shape</span>] = <span class="hljs-type">Json</span>.fromJson[<span class="hljs-type">Shape</span>](shapeJson)</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.13.0/json-schema/json-schema-playjson/src/test/scala/endpoints/playjson/JsonSchemasDocs.scala#L9-L12" class="a_sourcelink">JsonSchemasDocs.scala</a></div></div>
+<a href="https://github.com/julienrf/endpoints/blob/v0.14.0/json-schema/json-schema-playjson/src/test/scala/endpoints/playjson/JsonSchemasDocs.scala#L9-L12" class="a_sourcelink">JsonSchemasDocs.scala</a></div></div>
 
                  
   <ul class="menu align-right simple a_navbar a_navbar_bottom">
