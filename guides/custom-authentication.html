@@ -228,10 +228,10 @@ julienrf/endpoints
   <li>signalling a bad request in case the authentication failed.</li>
 </ul>
 <p>A JWT contains information about the logged-in user (for instance, his name), and that information is serialized and is cryptographically signed by the server (that’s why clients can not forge an arbitrary JWT). In our case, the user information we are interested in is only its name:</p>
-<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/documentation/examples/authentication/src/main/scala/authentication/Authentication.scala#L120" target="_blank" title="Go to snippet source"></a><code class="language-scala">case class UserInfo(name: String)</code></pre>
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/documentation/examples/authentication/src/main/scala/authentication/Authentication.scala#L120" target="_blank" title="Go to snippet source"></a><code class="language-scala">case class UserInfo(name: String)</code></pre>
 <p>The type used to model the authentication token will be different on client-side and server-side. On server-side, we are only interested in the user info and we want to let the algebra interpreter serialize and sign it. However, on client-side we need to also keep the serialized form since clients can not compute it. Since we want to represent the same concept with different concrete types on the server and client sides, we model it in the algebra with an abstract type member <code>AuthenticationToken</code>.</p>
 <p>In the end, we need to add the following members to our algebra:</p>
-<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/documentation/examples/authentication/src/main/scala/authentication/Authentication.scala#L9-L115" target="_blank" title="Go to snippet source"></a><code class="language-scala">import endpoints.algebra
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/documentation/examples/authentication/src/main/scala/authentication/Authentication.scala#L9-L115" target="_blank" title="Go to snippet source"></a><code class="language-scala">import endpoints.algebra
 
 /**
   * Algebra interface for defining authenticated endpoints using JWT.
@@ -261,7 +261,7 @@ trait Authentication extends algebra.Endpoints {
 }</code></pre>
 <p>We define our algebra in a trait named <code>Authentication</code>, which extends the main algebra, <code>algebra.Endpoints</code>.</p>
 <p>Given this new algebra, we can now describe the login endpoint as follows:</p>
-<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/documentation/examples/authentication/src/main/scala/authentication/Usage.scala#L4-L48" target="_blank" title="Go to snippet source"></a><code class="language-scala">import endpoints.algebra
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/documentation/examples/authentication/src/main/scala/authentication/Usage.scala#L4-L48" target="_blank" title="Go to snippet source"></a><code class="language-scala">import endpoints.algebra
 
 trait AuthenticationEndpoints extends algebra.Endpoints with Authentication {
 
@@ -279,7 +279,7 @@ trait AuthenticationEndpoints extends algebra.Endpoints with Authentication {
 <p>The endpoint takes request using the <code>GET</code> method, the <code>/login</code> URL and a query string parameter <code>apiKey</code> containing the credentials. The returned response is either a “Bad Request”, or a “Ok” with the issued authentication token.</p>
 <h3><a href="#server-interpreter" name="server-interpreter" class="anchor"><span class="anchor-link"></span></a>Server interpreter</h3>
 <p>The server interpreter fixes the <code>AuthenticationToken</code> type member to <code>UserInfo</code> and implements the <code>authenticationToken</code> and <code>wheneverValid</code> methods:</p>
-<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/documentation/examples/authentication/src/main/scala/authentication/Authentication.scala#L14-L278" target="_blank" title="Go to snippet source"></a><code class="language-scala">import endpoints.play.server
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/documentation/examples/authentication/src/main/scala/authentication/Authentication.scala#L14-L278" target="_blank" title="Go to snippet source"></a><code class="language-scala">import endpoints.play.server
 import pdi.jwt.JwtSession
 import pdi.jwt.JwtSession.RichResult
 
@@ -302,7 +302,7 @@ trait ServerAuthentication extends Authentication with server.Endpoints {
 <p>The <code>authenticationToken</code> operation is straightforwardly implemented by building an <code>Ok</code> response and adding it a JWT session containing a <code>user</code> property with the contents of our <code>UserInfo</code>. The management of the JWT session is delegated to the <a href="https://github.com/pauldijou/jwt-scala">pauldijou/jwt-scala</a> library, which attaches the issued JWT to the <code>Authorization</code> header of the response.</p>
 <p>The <code>wheneverValid</code> operation checks whether the response value is defined or not. In case it is empty, it returns a <code>BadRequest</code> response, otherwise it calls the underlying response.</p>
 <p>With this interpreter, the implementation of the login endpoint looks like the following:</p>
-<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/documentation/examples/authentication/src/main/scala/authentication/Usage.scala#L8-L93" target="_blank" title="Go to snippet source"></a><code class="language-scala">import endpoints.play.server
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/documentation/examples/authentication/src/main/scala/authentication/Usage.scala#L8-L93" target="_blank" title="Go to snippet source"></a><code class="language-scala">import endpoints.play.server
 
 class Server(
     val playComponents: PlayComponents,
@@ -335,7 +335,7 @@ class Server(
 <p>The traits provided by <em>endpoints</em> are shown in gray.</p>
 <h3><a href="#client-interpreter" name="client-interpreter" class="anchor"><span class="anchor-link"></span></a>Client interpreter</h3>
 <p>The implementation of the client interpreter repeats the same recipe: we define a trait <code>ClientAuthentication</code>, which extends <code>Authentication</code> and mixes a <code>client.Endpoints</code> base interpreter:</p>
-<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/documentation/examples/authentication/src/main/scala/authentication/Authentication.scala#L20-L210" target="_blank" title="Go to snippet source"></a><code class="language-scala">import endpoints.play.client
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/documentation/examples/authentication/src/main/scala/authentication/Authentication.scala#L20-L210" target="_blank" title="Go to snippet source"></a><code class="language-scala">import endpoints.play.client
 
 /**
   * Interpreter for the [[Authentication]] algebra interface that produces
@@ -379,7 +379,7 @@ trait ClientAuthentication extends client.Endpoints with Authentication {
 <p>This contrasts with the <code>wheneverValid</code> operation, which models the fact that the API key supplied by the user can be invalid. In such a case, we really want the failure to surface to the end-user, hence the usage of <code>Option</code>. The implementation checks whether the status is 400, in which case it returns <code>None</code>, otherwise it returns the underlying response wrapped in a <code>Some</code>.</p>
 <h3><a href="#putting-things-together" name="putting-things-together" class="anchor"><span class="anchor-link"></span></a>Putting things together</h3>
 <p>If we create an instance of our <code>Client</code> an run our <code>Server</code>, we can test that the following scenarios work as expected:</p>
-<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/documentation/examples/authentication/src/test/scala/authentication/AuthenticationTest.scala#L96-L105" target="_blank" title="Go to snippet source"></a><code class="language-scala">&quot;wrong login using client&quot; in {
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/documentation/examples/authentication/src/test/scala/authentication/AuthenticationTest.scala#L96-L105" target="_blank" title="Go to snippet source"></a><code class="language-scala">&quot;wrong login using client&quot; in {
   for {
     loginResult &lt;- client.login(&quot;unknown&quot;)
   } yield assert(loginResult.isEmpty)
@@ -395,7 +395,7 @@ trait ClientAuthentication extends client.Endpoints with Authentication {
 <p>Such protected endpoints take requests containing the serialized token in their <code>Authorization</code> HTTP header, and return a 401 (<code>Unauthorized</code>) response in case the token is not found or is invalid.</p>
 <h3><a href="#algebra" name="algebra" class="anchor"><span class="anchor-link"></span></a>Algebra</h3>
 <p>To define protected endpoints, we need to enrich the <code>Authentication</code> algebra with additional vocabulary. First, we need a way to define that requests that must contain the authentication token. Second, we need a way to define that responses might be <code>Unauthorized</code>. Last, we need a convenient <code>Endpoint</code> constructor that puts all the pieces together.</p>
-<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/documentation/examples/authentication/src/main/scala/authentication/Authentication.scala#L60-L111" target="_blank" title="Go to snippet source"></a><code class="language-scala">/**
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/documentation/examples/authentication/src/main/scala/authentication/Authentication.scala#L60-L111" target="_blank" title="Go to snippet source"></a><code class="language-scala">/**
   * A request with the given `method`, `url` and `entity`, and which is rejected by the server if it
   * doesn’t contain a valid JWT.
   */
@@ -452,7 +452,7 @@ final def authenticatedEndpoint[U, E, R, UE, UET](
 <p>This <code>authenticatedEndpoint</code> operation is final, and it is the only user-facing operation for defining protected endpoints (the two other operations are private). It guarantees that the request will always have the authentication token in its headers, and that the response can always be <code>Unauthorized</code>.</p><div class="callout note "><div class="callout-title">Note</div>
 <p>The <code>authenticatedRequest</code> operation takes several type parameters. In particular, they model the type of the request URL (<code>U</code>) and entity (<code>E</code>). These types must be tracked by the type system so that, eventually, an <code>Endpoint[Req, Resp]</code> is built, where the <code>Req</code> type is a tuple of all the information (URL and entity) carried by the request. In this example we enrich the request headers with the authentication token. However, instead of simply returning nested tuples (e.g. <code>((U, E), AuthenticationToken)</code>), we rely on implicit <code>Tupler</code> instances to compute the type of the tuple. <code>Tupler</code> instances are defined in a way that always flattens nested tuples (e.g. they will return <code>(U, E, AuthenticationToken)</code>) and removes <code>Unit</code> types (e.g. if the URL is static—of type <code>Url[Unit]</code>—the tuplers return <code>(E, AuthenticationToken)</code>).</p></div>
 <p>The <code>authenticatedEndpoint</code> operation can be used as follows:</p>
-<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/documentation/examples/authentication/src/main/scala/authentication/Usage.scala#L33-L44" target="_blank" title="Go to snippet source"></a><code class="language-scala">/**
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/documentation/examples/authentication/src/main/scala/authentication/Usage.scala#L33-L44" target="_blank" title="Go to snippet source"></a><code class="language-scala">/**
   * Some resource requiring the request to provide a valid JWT token. Returns a message
   * “Hello &#39;&#39;user_name&#39;&#39;” if the request is correctly authenticated, otherwise returns
   * an `Unauthorized` HTTP response.
@@ -467,7 +467,7 @@ val someResource: Endpoint[AuthenticationToken, String] =
 <p>Since the request URL is static and the request has no entity, the information carried by the request is just the <code>AuthenticationToken</code>.</p>
 <h3><a href="#server-interpreter" name="server-interpreter" class="anchor"><span class="anchor-link"></span></a>Server interpreter</h3>
 <p>Our Play-based server is implemented as follows:</p>
-<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/documentation/examples/authentication/src/main/scala/authentication/Authentication.scala#L234-L274" target="_blank" title="Go to snippet source"></a><code class="language-scala">def authenticatedRequest[U, E, UE, UET](
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/documentation/examples/authentication/src/main/scala/authentication/Authentication.scala#L234-L274" target="_blank" title="Go to snippet source"></a><code class="language-scala">def authenticatedRequest[U, E, UE, UET](
     method: Method,
     url: Url[U],
     entity: RequestEntity[E]
@@ -509,12 +509,12 @@ val someResource: Endpoint[AuthenticationToken, String] =
 // is not properly authenticated
 def wheneverAuthenticated[A](response: Response[A]): Response[A] = response</code></pre>
 <p>And the protected endpoint can be implemented as follows:</p>
-<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/documentation/examples/authentication/src/main/scala/authentication/Usage.scala#L86-L88" target="_blank" title="Go to snippet source"></a><code class="language-scala">// Note that the `AuthenticationToken` is available to the implementations
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/documentation/examples/authentication/src/main/scala/authentication/Usage.scala#L86-L88" target="_blank" title="Go to snippet source"></a><code class="language-scala">// Note that the `AuthenticationToken` is available to the implementations
 // It can be used to check authorizations
 someResource.implementedBy(token =&gt; s&quot;Hello ${token.name}!&quot;)</code></pre>
 <h3><a href="#client-interpreter" name="client-interpreter" class="anchor"><span class="anchor-link"></span></a>Client interpreter</h3>
 <p>And our Play-based client is implemented as follows:</p>
-<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/documentation/examples/authentication/src/main/scala/authentication/Authentication.scala#L179-L206" target="_blank" title="Go to snippet source"></a><code class="language-scala">def authenticatedRequest[U, E, UE, UET](
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/documentation/examples/authentication/src/main/scala/authentication/Authentication.scala#L179-L206" target="_blank" title="Go to snippet source"></a><code class="language-scala">def authenticatedRequest[U, E, UE, UET](
     method: Method,
     url: Url[U],
     entity: RequestEntity[E]
@@ -544,7 +544,7 @@ def wheneverAuthenticated[A](response: Response[A]): Response[A] = {
 }</code></pre>
 <h3><a href="#putting-things-together" name="putting-things-together" class="anchor"><span class="anchor-link"></span></a>Putting things together</h3>
 <p>Our <code>Client</code> and <code>Server</code> instances are now able to have more sophisticated exchanges:</p>
-<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/documentation/examples/authentication/src/test/scala/authentication/AuthenticationTest.scala#L108-L115" target="_blank" title="Go to snippet source"></a><code class="language-scala">&quot;login and access protected resource&quot; in {
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/documentation/examples/authentication/src/test/scala/authentication/AuthenticationTest.scala#L108-L115" target="_blank" title="Go to snippet source"></a><code class="language-scala">&quot;login and access protected resource&quot; in {
   for {
     maybeToken &lt;- client.login(&quot;foobar&quot;)
     token = maybeToken.get
@@ -558,7 +558,7 @@ def wheneverAuthenticated[A](response: Response[A]): Response[A] = {
 <p>We only demonstrated how to implement client and server interpreters but the same approach can be used with documentation interpreters.</p>
 </div>
 <div>
-<a href="https://github.com/julienrf/endpoints/tree/0.15.0/documentation/manual/src/paradox/guides/custom-authentication.md" title="Edit this page" class="md-source-file md-edit">
+<a href="https://github.com/julienrf/endpoints/tree/v0.15.0/documentation/manual/src/paradox/guides/custom-authentication.md" title="Edit this page" class="md-source-file md-edit">
 Edit this page
 </a>
 </div>

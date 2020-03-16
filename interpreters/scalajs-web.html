@@ -190,17 +190,17 @@ julienrf/endpoints
 <p>The <code>Endpoints</code> interpreter fixes the type <code>Endpoint[A, B]</code> to a function from <code>A</code> to <code>Result[B]</code>, where <code>Result</code> is abstract and is intended to be defined by more specialized interpreters.</p>
 <p>An example of such an interpreter is <code>endpoints.xhr.client.future.Endpoints</code>, which fixes the <code>Result[A]</code> type to <code>scala.concurrent.Future[A]</code>.</p>
 <p>This means that, given the following endpoint definition:</p>
-<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/algebras/algebra/src/test/scala/endpoints/algebra/EndpointsDocs.scala#L84-L85" target="_blank" title="Go to snippet source"></a><code class="language-scala">val someResource: Endpoint[Int, String] =
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/algebras/algebra/src/test/scala/endpoints/algebra/EndpointsDocs.scala#L84-L85" target="_blank" title="Go to snippet source"></a><code class="language-scala">val someResource: Endpoint[Int, String] =
   endpoint(get(path / &quot;some-resource&quot; / segment[Int]()), ok(textResponse))</code></pre>
 <p>It can be invoked as follows:</p>
-<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/xhr/client/src/test/scala/endpoints/xhr/future/EndpointsDocs.scala#L10" target="_blank" title="Go to snippet source"></a><code class="language-scala">val eventuallyString: Future[String] = someResource(42)</code></pre>
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/xhr/client/src/test/scala/endpoints/xhr/future/EndpointsDocs.scala#L10" target="_blank" title="Go to snippet source"></a><code class="language-scala">val eventuallyString: Future[String] = someResource(42)</code></pre>
 <p>Another example is <code>endpoints.xhr.client.faithful.Endpoints</code>, which fixes the <code>Result[A]</code> type to <code>faithful.Future[A]</code>. This interpreter requires an additional dependency (which, in turn, depends on the <a href="https://github.com/julienrf/faithful">faithful</a> library):</p>
 <pre class="prettyprint"><code class="language-scala">// Provides endpoints.xhr.client.faithful.Endpoints
 &quot;org.julienrf&quot; %%% &quot;endpoints-xhr-client-faithful&quot; % &quot;0.15.0&quot;
 </code></pre>
 </div>
 <div>
-<a href="https://github.com/julienrf/endpoints/tree/0.15.0/documentation/manual/src/paradox/interpreters/scalajs-web.md" title="Edit this page" class="md-source-file md-edit">
+<a href="https://github.com/julienrf/endpoints/tree/v0.15.0/documentation/manual/src/paradox/interpreters/scalajs-web.md" title="Edit this page" class="md-source-file md-edit">
 Edit this page
 </a>
 </div>

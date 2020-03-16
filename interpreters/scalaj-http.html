@@ -189,13 +189,13 @@ julienrf/endpoints
 <p><a href="/api/endpoints/scalaj/client/index.html">API documentation</a></p>
 <p>The <code>Endpoints</code> interpreter fixes the <code>Endpoint[A, B]</code> type to a type that provide methods to invoke the endpoint synchronously or asynchronously.</p>
 <p>Given the following endpoint definition:</p>
-<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/algebras/algebra/src/test/scala/endpoints/algebra/EndpointsDocs.scala#L84-L85" target="_blank" title="Go to snippet source"></a><code class="language-scala">val someResource: Endpoint[Int, String] =
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/algebras/algebra/src/test/scala/endpoints/algebra/EndpointsDocs.scala#L84-L85" target="_blank" title="Go to snippet source"></a><code class="language-scala">val someResource: Endpoint[Int, String] =
   endpoint(get(path / &quot;some-resource&quot; / segment[Int]()), ok(textResponse))</code></pre>
 <p>It can be asynchronously invoked as follows:</p>
-<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/scalaj/client/src/test/scala/endpoints/scalaj/client/EndpointsDocs.scala#L11" target="_blank" title="Go to snippet source"></a><code class="language-scala">val eventuallyString: Future[String] = someResource.callAsync(42)</code></pre>
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/scalaj/client/src/test/scala/endpoints/scalaj/client/EndpointsDocs.scala#L11" target="_blank" title="Go to snippet source"></a><code class="language-scala">val eventuallyString: Future[String] = someResource.callAsync(42)</code></pre>
 </div>
 <div>
-<a href="https://github.com/julienrf/endpoints/tree/0.15.0/documentation/manual/src/paradox/interpreters/scalaj-http.md" title="Edit this page" class="md-source-file md-edit">
+<a href="https://github.com/julienrf/endpoints/tree/v0.15.0/documentation/manual/src/paradox/interpreters/scalaj-http.md" title="Edit this page" class="md-source-file md-edit">
 Edit this page
 </a>
 </div>

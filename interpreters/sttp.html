@@ -189,15 +189,15 @@ julienrf/endpoints
 <p><a href="/api/endpoints/sttp/client/index.html">API documentation</a></p>
 <p>The <code>Endpoints</code> interpreter is parameterized by an sttp backend of type <code>SttpBackend[R, Nothing]</code>, for some type constructor <code>R[_]</code>.</p>
 <p>The <code>Endpoint[A, B]</code> type is fixed as follows:</p>
-<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/sttp/client/src/main/scala/endpoints/sttp/client/Endpoints.scala#L294" target="_blank" title="Go to snippet source"></a><code class="language-scala">type Endpoint[A, B] = A =&gt; R[B]</code></pre>
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/sttp/client/src/main/scala/endpoints/sttp/client/Endpoints.scala#L294" target="_blank" title="Go to snippet source"></a><code class="language-scala">type Endpoint[A, B] = A =&gt; R[B]</code></pre>
 <p>This means that, given the following endpoint definition:</p>
-<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/algebras/algebra/src/test/scala/endpoints/algebra/EndpointsDocs.scala#L84-L85" target="_blank" title="Go to snippet source"></a><code class="language-scala">val someResource: Endpoint[Int, String] =
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/algebras/algebra/src/test/scala/endpoints/algebra/EndpointsDocs.scala#L84-L85" target="_blank" title="Go to snippet source"></a><code class="language-scala">val someResource: Endpoint[Int, String] =
   endpoint(get(path / &quot;some-resource&quot; / segment[Int]()), ok(textResponse))</code></pre>
 <p>It can be invoked as follows with the <code>HttpURLConnectionBackend</code>, for instance:</p>
-<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/sttp/client/src/test/scala/endpoints/sttp/client/EndpointsDocs.scala#L9" target="_blank" title="Go to snippet source"></a><code class="language-scala">val string: String = someResource(42)</code></pre>
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/sttp/client/src/test/scala/endpoints/sttp/client/EndpointsDocs.scala#L9" target="_blank" title="Go to snippet source"></a><code class="language-scala">val string: String = someResource(42)</code></pre>
 </div>
 <div>
-<a href="https://github.com/julienrf/endpoints/tree/0.15.0/documentation/manual/src/paradox/interpreters/sttp.md" title="Edit this page" class="md-source-file md-edit">
+<a href="https://github.com/julienrf/endpoints/tree/v0.15.0/documentation/manual/src/paradox/interpreters/sttp.md" title="Edit this page" class="md-source-file md-edit">
 Edit this page
 </a>
 </div>

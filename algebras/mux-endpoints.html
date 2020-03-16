@@ -192,7 +192,7 @@ julienrf/endpoints
 <p>The algebra enriches the <code>Endpoints</code> algebra with the concept of <code>MuxEndpoint[Req, Resp, Transport]</code>, defining a multiplexed endpoint with a request containing a type <code>Req</code>, a response of type <code>Resp</code>, and serializing data to and from the <code>Transport</code> type.</p>
 <p>For instance, the type <code>MuxEndpoint[Command, Event, Json]</code> defines and endpoint whose requests contain <code>Command</code> values, whose responses contain <code>Event</code> values, and which serialize commands and events to <code>Json</code>.</p>
 <p>Since the type of a response can vary according to the type of specific request, multiplexed endpoints require that request types extend the <code>MuxRequest</code> type:</p>
-<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/algebras/algebra/src/test/scala/endpoints/algebra/MuxEndpointsDocs.scala#L11-L29" target="_blank" title="Go to snippet source"></a><code class="language-scala">val users: MuxEndpoint[Command, Event, Json] =
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/algebras/algebra/src/test/scala/endpoints/algebra/MuxEndpointsDocs.scala#L11-L29" target="_blank" title="Go to snippet source"></a><code class="language-scala">val users: MuxEndpoint[Command, Event, Json] =
   muxEndpoint[Command, Event, Json](
     post(path / &quot;users&quot;, jsonRequest[Json]),
     ok(jsonResponse[Json])
@@ -215,7 +215,7 @@ case class UserDeleted(id: Long) extends Event</code></pre>
 <p>Typically, client interpreters fix the <code>MuxEndpoint[Req, Resp, Transport]</code> type to be a function from <code>Req</code> to <code>Future[Req#Response]</code>, so that calling <code>users(CreateUser(&quot;Alice&quot;))</code> (statically) returns a <code>Future[CreatedUser]</code>, and calling <code>users(DeleteUser(42))</code> returns a <code>Future[DeletedUser]</code>.</p>
 </div>
 <div>
-<a href="https://github.com/julienrf/endpoints/tree/0.15.0/documentation/manual/src/paradox/algebras/mux-endpoints.md" title="Edit this page" class="md-source-file md-edit">
+<a href="https://github.com/julienrf/endpoints/tree/v0.15.0/documentation/manual/src/paradox/algebras/mux-endpoints.md" title="Edit this page" class="md-source-file md-edit">
 Edit this page
 </a>
 </div>

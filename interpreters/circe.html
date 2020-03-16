@@ -189,17 +189,17 @@ julienrf/endpoints
 <p><a href="/api/endpoints/circe/JsonSchemas.html">API documentation</a></p>
 <p>The <code>JsonSchemas</code> interpreter fixes the <code>JsonSchema[A]</code> to a type that provides both an <code>io.circe.Encoder[A]</code> and an <code>io.circe.Decoder[A]</code>.</p>
 <p>Given the following type definition:</p>
-<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/json-schema/json-schema/src/test/scala/endpoints/algebra/JsonSchemasDocs.scala#L18-L20" target="_blank" title="Go to snippet source"></a><code class="language-scala">sealed trait Shape
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/json-schema/json-schema/src/test/scala/endpoints/algebra/JsonSchemasDocs.scala#L18-L20" target="_blank" title="Go to snippet source"></a><code class="language-scala">sealed trait Shape
 case class Circle(radius: Double) extends Shape
 case class Rectangle(width: Double, height: Double) extends Shape</code></pre>
 <p>Assuming that there is an implicit <code>JsonSchema[Shape]</code> definition, we can encode a <code>Shape</code> into JSON and decode it using the usual circe operations:</p>
-<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/json-schema/json-schema-circe/src/test/scala/endpoints/circe/JsonSchemasDocs.scala#L11-L14" target="_blank" title="Go to snippet source"></a><code class="language-scala">import JsonSchema._
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/json-schema/json-schema-circe/src/test/scala/endpoints/circe/JsonSchemasDocs.scala#L11-L14" target="_blank" title="Go to snippet source"></a><code class="language-scala">import JsonSchema._
 val shape: Shape = Circle(42)
 val shapeJson: Json = shape.asJson
 val maybeShape: Either[circe.Error, Shape] = shapeJson.as[Shape]</code></pre>
 </div>
 <div>
-<a href="https://github.com/julienrf/endpoints/tree/0.15.0/documentation/manual/src/paradox/interpreters/circe.md" title="Edit this page" class="md-source-file md-edit">
+<a href="https://github.com/julienrf/endpoints/tree/v0.15.0/documentation/manual/src/paradox/interpreters/circe.md" title="Edit this page" class="md-source-file md-edit">
 Edit this page
 </a>
 </div>

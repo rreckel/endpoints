@@ -217,7 +217,7 @@ julienrf/endpoints
 <p><a href="/api/endpoints/algebra/ChunkedEntities.html">API documentation</a></p>
 <p>The <code>ChunkedEntities</code> module enriches the <code>Endpoints</code> algebra with operations for defining request and responses entities carrying stream of values.</p>
 <p>For instance, you can define an endpoint streaming a binary file as follows:</p>
-<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/algebras/algebra/src/test/scala/endpoints/algebra/ChunkedEntitiesDocs.scala#L6-L7" target="_blank" title="Go to snippet source"></a><code class="language-scala">val logo: Endpoint[Unit, Chunks[Array[Byte]]] =
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/algebras/algebra/src/test/scala/endpoints/algebra/ChunkedEntitiesDocs.scala#L6-L7" target="_blank" title="Go to snippet source"></a><code class="language-scala">val logo: Endpoint[Unit, Chunks[Array[Byte]]] =
   endpoint(get(path / &quot;logo.png&quot;), ok(bytesChunksResponse))</code></pre>
 <p>The return type, <code>Endpoint[Unit, Chunks[Array[Byte]]]</code>, represents an endpoint whose request takes no parameter (<code>Unit</code>) and whose response produces a stream of <code>Array[Byte]</code> chunks.</p>
 <p>Responses are streamed using the <a href="https://en.wikipedia.org/wiki/Chunked_transfer_encoding">chunked transfer-encoding</a>, which is supported by most HTTP 1.1 clients and servers.</p>
@@ -226,7 +226,7 @@ julienrf/endpoints
 </code></pre>
 <p><a href="/api/endpoints/algebra/ChunkedJsonEntities.html">API documentation</a></p>
 <p>Clients and servers have to agree on the serialization format used by response chunks and WebSocket messages. The <code>ChunkedJsonEntities</code> module provides a <code>jsonChunksRequest</code> constructor and a <code>jsonChunksResponse</code> constructor for defining request entities and response entities carrying streams of values that are serialized into JSON:</p>
-<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/algebras/algebra/src/test/scala/endpoints/algebra/ChunkedEntitiesDocs.scala#L13-L20" target="_blank" title="Go to snippet source"></a><code class="language-scala">trait JsonStreamingExample
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/algebras/algebra/src/test/scala/endpoints/algebra/ChunkedEntitiesDocs.scala#L13-L20" target="_blank" title="Go to snippet source"></a><code class="language-scala">trait JsonStreamingExample
     extends endpoints.algebra.Endpoints
     with endpoints.algebra.ChunkedJsonEntities
     with endpoints.algebra.JsonEntitiesFromSchemas {
@@ -236,7 +236,7 @@ julienrf/endpoints
 }</code></pre>
 <p>This example uses the <code>JsonEntitiesFromSchemas</code> algebra to derive the JSON serialization format from a JSON schema, which can also be reused by the OpenAPI interpreter.</p>
 <p>Eventually, mix a <code>JsonEntitiesFromSchemas</code> interpreter of your choice to turn the JSON schemas into proper JSON codecs. For instance, for Akka-Http:</p>
-<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/akka-http/server/src/test/scala/endpoints/akkahttp/server/ChunkedEntitiesDocs.scala#L26-L38" target="_blank" title="Go to snippet source"></a><code class="language-scala">import akka.stream.scaladsl.Source
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/akka-http/server/src/test/scala/endpoints/akkahttp/server/ChunkedEntitiesDocs.scala#L26-L38" target="_blank" title="Go to snippet source"></a><code class="language-scala">import akka.stream.scaladsl.Source
 import endpoints.akkahttp.server
 
 object JsonStreamingExampleServer
@@ -262,7 +262,7 @@ trait ProtobufChunkedEntities extends algebra.ChunkedEntities {
 <p>And then, the <code>protobufChunksRequest</code> operation would have to be implemented on each interpreter.</p>
 </div>
 <div>
-<a href="https://github.com/julienrf/endpoints/tree/0.15.0/documentation/manual/src/paradox/algebras/chunked-entities.md" title="Edit this page" class="md-source-file md-edit">
+<a href="https://github.com/julienrf/endpoints/tree/v0.15.0/documentation/manual/src/paradox/algebras/chunked-entities.md" title="Edit this page" class="md-source-file md-edit">
 Edit this page
 </a>
 </div>

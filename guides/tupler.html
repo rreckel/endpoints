@@ -222,7 +222,7 @@ julienrf/endpoints
 <p>The goal of the <code>Tupler</code> type is to compute more useful tuple types by discarding the <code>Unit</code> parameters. For instance, it produces a <code>Request[Long]</code> instead of a <code>Request[(Long, Unit)]</code>. Additionally, nested tuples are flattened: <code>Request[((Long, Boolean), String)]</code> becomes <code>Request[(Long, Boolean, String)]</code>.</p>
 <h2><a href="#how-it-works" name="how-it-works" class="anchor"><span class="anchor-link"></span></a>How it works</h2>
 <p>The <code>Tupler[A, B]</code> type takes two type parameters <code>A</code> and <code>B</code> and defines an abstract type member <code>Out</code>. This <code>Out</code> type defines the “useful” form of tupling <code>A</code> and <code>B</code>.</p>
-<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/json-schema/json-schema/src/main/scala/endpoints/Tupler.scala#L33-L39" target="_blank" title="Go to snippet source"></a><code class="language-scala">trait Tupler[A, B] {
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/json-schema/json-schema/src/main/scala/endpoints/Tupler.scala#L33-L39" target="_blank" title="Go to snippet source"></a><code class="language-scala">trait Tupler[A, B] {
   type Out
 }</code></pre>
 <p>Algebra operations that want to tuple types <code>A</code> and <code>B</code> take as parameter an implicit <code>tupler: Tupler[A, B]</code> and return a <code>tupler.Out</code> instead of an <code>(A, B)</code>.</p>
@@ -236,7 +236,7 @@ julienrf/endpoints
 <p>When the operation that takes an implicit <code>Tupler</code> as parameter is called, appropriate instances of <code>Tupler</code> will compute the type of the resulting tuple, by discarding <code>Unit</code> types and flattening nested tuples.</p>
 </div>
 <div>
-<a href="https://github.com/julienrf/endpoints/tree/0.15.0/documentation/manual/src/paradox/guides/tupler.md" title="Edit this page" class="md-source-file md-edit">
+<a href="https://github.com/julienrf/endpoints/tree/v0.15.0/documentation/manual/src/paradox/guides/tupler.md" title="Edit this page" class="md-source-file md-edit">
 Edit this page
 </a>
 </div>

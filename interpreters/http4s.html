@@ -213,10 +213,10 @@ julienrf/endpoints
 <h2><a href="#endpoints" name="endpoints" class="anchor"><span class="anchor-link"></span></a><code>Endpoints</code></h2>
 <p>The <code>Endpoints</code> interpreter provides a <code>routesFromEndpoints</code> operation that turns a sequence of endpoints with their implementation into an <code>org.http4s.HttpRoutes[F]</code> value that can be integrated to your http4s application.</p>
 <p>For instance, given the following endpoint definition:</p>
-<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/algebras/algebra/src/test/scala/endpoints/algebra/EndpointsDocs.scala#L84-L85" target="_blank" title="Go to snippet source"></a><code class="language-scala">val someResource: Endpoint[Int, String] =
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/algebras/algebra/src/test/scala/endpoints/algebra/EndpointsDocs.scala#L84-L85" target="_blank" title="Go to snippet source"></a><code class="language-scala">val someResource: Endpoint[Int, String] =
   endpoint(get(path / &quot;some-resource&quot; / segment[Int]()), ok(textResponse))</code></pre>
 <p>It can be implemented as follows:</p>
-<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/http4s/server/src/test/scala/endpoints/http4s/server/EndpointsDocs.scala#L9-L13" target="_blank" title="Go to snippet source"></a><code class="language-scala">val routes: HttpRoutes[IO] = HttpRoutes.of(
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/http4s/server/src/test/scala/endpoints/http4s/server/EndpointsDocs.scala#L9-L13" target="_blank" title="Go to snippet source"></a><code class="language-scala">val routes: HttpRoutes[IO] = HttpRoutes.of(
   routesFromEndpoints(
     someResource.implementedBy(x =&gt; s&quot;Received $x&quot;)
   )
@@ -232,7 +232,7 @@ julienrf/endpoints
 <p>If an exception is thrown during request decoding, or when running the business logic, or when encoding the response, <em>endpoints</em> returns an “Internal Server Error” (500) response reporting the error in a JSON array. You can change this behavior by overriding the <a href="/api/endpoints/http4s/server/EndpointsWithCustomErrors.html">handleServerError</a> method.</p>
 </div>
 <div>
-<a href="https://github.com/julienrf/endpoints/tree/0.15.0/documentation/manual/src/paradox/interpreters/http4s.md" title="Edit this page" class="md-source-file md-edit">
+<a href="https://github.com/julienrf/endpoints/tree/v0.15.0/documentation/manual/src/paradox/interpreters/http4s.md" title="Edit this page" class="md-source-file md-edit">
 Edit this page
 </a>
 </div>

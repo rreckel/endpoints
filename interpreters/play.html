@@ -214,12 +214,12 @@ julienrf/endpoints
 </code></pre>
 <p><a href="/api/endpoints/play/client/index.html">API documentation</a></p>
 <p>The <code>Endpoints</code> interpreter fixes the <code>Endpoint[A, B]</code> type to a function from <code>A</code> to <code>Future[B]</code>:</p>
-<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/play/client/src/main/scala/endpoints/play/client/Endpoints.scala#L248" target="_blank" title="Go to snippet source"></a><code class="language-scala">type Endpoint[A, B] = A =&gt; Future[B]</code></pre>
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/play/client/src/main/scala/endpoints/play/client/Endpoints.scala#L248" target="_blank" title="Go to snippet source"></a><code class="language-scala">type Endpoint[A, B] = A =&gt; Future[B]</code></pre>
 <p>This means that, given the following endpoint definition:</p>
-<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/algebras/algebra/src/test/scala/endpoints/algebra/EndpointsDocs.scala#L84-L85" target="_blank" title="Go to snippet source"></a><code class="language-scala">val someResource: Endpoint[Int, String] =
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/algebras/algebra/src/test/scala/endpoints/algebra/EndpointsDocs.scala#L84-L85" target="_blank" title="Go to snippet source"></a><code class="language-scala">val someResource: Endpoint[Int, String] =
   endpoint(get(path / &quot;some-resource&quot; / segment[Int]()), ok(textResponse))</code></pre>
 <p>It can be invoked as follows:</p>
-<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/play/client/src/test/scala/endpoints/play/client/EndpointsDocs.scala#L10" target="_blank" title="Go to snippet source"></a><code class="language-scala">val eventuallyString: Future[String] = someResource(42)</code></pre>
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/play/client/src/test/scala/endpoints/play/client/EndpointsDocs.scala#L10" target="_blank" title="Go to snippet source"></a><code class="language-scala">val eventuallyString: Future[String] = someResource(42)</code></pre>
 <h2><a href="#server" name="server" class="anchor"><span class="anchor-link"></span></a>Server</h2>
 <pre class="prettyprint"><code class="language-scala">&quot;org.julienrf&quot; %% &quot;endpoints-play-server&quot; % &quot;0.15.0&quot;
 </code></pre>
@@ -227,15 +227,15 @@ julienrf/endpoints
 <h3><a href="#endpoints" name="endpoints" class="anchor"><span class="anchor-link"></span></a><code>Endpoints</code></h3>
 <p>The <code>Endpoints</code> interpreter provides a <code>routesFromEndpoints</code> operation that turns a sequence of endpoints with their implementation into a <code>play.api.routing.Router.Routes</code> value that can be integrated to your Play application.</p>
 <p>For instance, given the following endpoint definition:</p>
-<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/algebras/algebra/src/test/scala/endpoints/algebra/EndpointsDocs.scala#L84-L85" target="_blank" title="Go to snippet source"></a><code class="language-scala">val someResource: Endpoint[Int, String] =
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/algebras/algebra/src/test/scala/endpoints/algebra/EndpointsDocs.scala#L84-L85" target="_blank" title="Go to snippet source"></a><code class="language-scala">val someResource: Endpoint[Int, String] =
   endpoint(get(path / &quot;some-resource&quot; / segment[Int]()), ok(textResponse))</code></pre>
 <p>It can be implemented as follows:</p>
-<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/play/server/src/test/scala/endpoints/play/server/EndpointsDocs.scala#L9-L12" target="_blank" title="Go to snippet source"></a><code class="language-scala">val routes: Router.Routes =
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/play/server/src/test/scala/endpoints/play/server/EndpointsDocs.scala#L9-L12" target="_blank" title="Go to snippet source"></a><code class="language-scala">val routes: Router.Routes =
   routesFromEndpoints(
     someResource.implementedBy(x =&gt; s&quot;Received $x&quot;)
   )</code></pre>
 <p>In practice, the routes are put in a class taking an <code>endpoints.play.server.PlayComponents</code> parameter. An HTTP server can then be started as in the following example:</p>
-<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/documentation/examples/documented/src/main/scala/counter/Counter.scala#L121-L163" target="_blank" title="Go to snippet source"></a><code class="language-scala">object Main {
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/documentation/examples/documented/src/main/scala/counter/Counter.scala#L121-L163" target="_blank" title="Go to snippet source"></a><code class="language-scala">object Main {
   // JVM entry point that starts the HTTP server
   def main(args: Array[String]): Unit = {
     val playConfig = ServerConfig(port =
@@ -253,10 +253,10 @@ julienrf/endpoints
 <h3><a href="#chunkedentities" name="chunkedentities" class="anchor"><span class="anchor-link"></span></a><code>ChunkedEntities</code></h3>
 <p>The <code>ChunkedEntities</code> interpreter fixes the type <code>Chunks[A]</code> to <code>akka.stream.scaladsl.Source[A, _]</code>.</p>
 <p>For instance, given the following chunked endpoint definition:</p>
-<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/algebras/algebra/src/test/scala/endpoints/algebra/ChunkedEntitiesDocs.scala#L6-L7" target="_blank" title="Go to snippet source"></a><code class="language-scala">val logo: Endpoint[Unit, Chunks[Array[Byte]]] =
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/algebras/algebra/src/test/scala/endpoints/algebra/ChunkedEntitiesDocs.scala#L6-L7" target="_blank" title="Go to snippet source"></a><code class="language-scala">val logo: Endpoint[Unit, Chunks[Array[Byte]]] =
   endpoint(get(path / &quot;logo.png&quot;), ok(bytesChunksResponse))</code></pre>
 <p>It can be implemented as follows:</p>
-<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/play/server/src/test/scala/endpoints/play/server/ChunkedEntitiesDocs.scala#L13-L19" target="_blank" title="Go to snippet source"></a><code class="language-scala">import akka.stream.scaladsl.FileIO
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/play/server/src/test/scala/endpoints/play/server/ChunkedEntitiesDocs.scala#L13-L19" target="_blank" title="Go to snippet source"></a><code class="language-scala">import akka.stream.scaladsl.FileIO
 import java.nio.file.Paths
 
 val logoHandler =
@@ -273,7 +273,7 @@ val logoHandler =
 <p>If an exception is thrown during request decoding, or when running the business logic, or when encoding the response, <em>endpoints</em> returns an “Internal Server Error” (500) response reporting the error in a JSON array. You can change this behavior by overriding the <a href="/api/endpoints/play/server/Endpoints.html">handleServerError</a> method.</p>
 </div>
 <div>
-<a href="https://github.com/julienrf/endpoints/tree/0.15.0/documentation/manual/src/paradox/interpreters/play.md" title="Edit this page" class="md-source-file md-edit">
+<a href="https://github.com/julienrf/endpoints/tree/v0.15.0/documentation/manual/src/paradox/interpreters/play.md" title="Edit this page" class="md-source-file md-edit">
 Edit this page
 </a>
 </div>

@@ -219,14 +219,14 @@ julienrf/endpoints
 <h2><a href="#endpoint" name="endpoint" class="anchor"><span class="anchor-link"></span></a>Endpoint</h2>
 <p>The algebra introduces the concept of <code>Endpoint[A, B]</code>: an HTTP endpoint whose request carries an information of type <code>A</code> and whose response carries an information of type <code>B</code>. For instance, an endpoint of type <code>Endpoint[Long, Option[User]]</code> has a request containing a <code>Long</code> (for instance, a user id), and a response optionally containing a <code>User</code>.</p>
 <p>You can define an endpoint by using the <code>endpoint</code> constructor:</p>
-<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/algebras/algebra/src/test/scala/endpoints/algebra/EndpointsDocs.scala#L9-L13" target="_blank" title="Go to snippet source"></a><code class="language-scala">// An endpoint whose requests use the HTTP verb “GET” and the URL
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/algebras/algebra/src/test/scala/endpoints/algebra/EndpointsDocs.scala#L9-L13" target="_blank" title="Go to snippet source"></a><code class="language-scala">// An endpoint whose requests use the HTTP verb “GET” and the URL
 // path “/some-resource”, and whose responses have an entity of
 // type “text/plain”
 val someResource: Endpoint[Unit, String] =
   endpoint(get(path / &quot;some-resource&quot;), ok(textResponse))</code></pre>
 <p>The <code>endpoint</code> constructor takes two parameters, the request description (of type <code>Request[A]</code>) and the response description (of type <code>Response[B]</code>), which are documented in the following sections.</p>
 <p>It also takes optional parameters carrying documentation information:</p>
-<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/algebras/algebra/src/test/scala/endpoints/algebra/EndpointsDocs.scala#L18-L22" target="_blank" title="Go to snippet source"></a><code class="language-scala">endpoint(
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/algebras/algebra/src/test/scala/endpoints/algebra/EndpointsDocs.scala#L18-L22" target="_blank" title="Go to snippet source"></a><code class="language-scala">endpoint(
   get(path / &quot;some-resource&quot;),
   ok(textResponse),
   docs = EndpointDocs(description = Some(&quot;The contents of some resource&quot;))
@@ -234,16 +234,16 @@ val someResource: Endpoint[Unit, String] =
 <h2><a href="#request" name="request" class="anchor"><span class="anchor-link"></span></a>Request</h2>
 <p>The <code>Request[A]</code> type models an HTTP request carrying some information of type <code>A</code>. For instance, a <code>Request[Long]</code> value is a request containing a <code>Long</code> value.</p>
 <p>A request is defined in terms of an HTTP verb, an URL, an entity and headers:</p>
-<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/algebras/algebra/src/test/scala/endpoints/algebra/EndpointsDocs.scala#L26-L28" target="_blank" title="Go to snippet source"></a><code class="language-scala">// A request that uses the verb “GET”, the URL path “/foo”,
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/algebras/algebra/src/test/scala/endpoints/algebra/EndpointsDocs.scala#L26-L28" target="_blank" title="Go to snippet source"></a><code class="language-scala">// A request that uses the verb “GET”, the URL path “/foo”,
 // no entity, no documentation, and no headers
 request(Get, path / &quot;foo&quot;, emptyRequest, None, emptyRequestHeaders)</code></pre>
 <p>For convenience, <code>get</code>, <code>post</code>, <code>put</code> and <code>delete</code> methods are provided:</p>
-<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/algebras/algebra/src/test/scala/endpoints/algebra/EndpointsDocs.scala#L32" target="_blank" title="Go to snippet source"></a><code class="language-scala">get(path / &quot;foo&quot;) // Same as above</code></pre>
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/algebras/algebra/src/test/scala/endpoints/algebra/EndpointsDocs.scala#L32" target="_blank" title="Go to snippet source"></a><code class="language-scala">get(path / &quot;foo&quot;) // Same as above</code></pre>
 <p>The next sections document how to describe URLs, request headers and request entities.</p>
 <h3><a href="#url" name="url" class="anchor"><span class="anchor-link"></span></a>URL</h3>
 <p>The <code>Url[A]</code> type models an URL carrying some information of type <code>A</code>. For instance, an <code>Url[Long]</code> value is an URL containing a <code>Long</code> value.</p>
 <p>An URL is defined by a path and a query string. Here are some self-explanatory examples of URLs:</p>
-<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/algebras/algebra/src/test/scala/endpoints/algebra/EndpointsDocs.scala#L36-L52" target="_blank" title="Go to snippet source"></a><code class="language-scala">path // the root path “/”
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/algebras/algebra/src/test/scala/endpoints/algebra/EndpointsDocs.scala#L36-L52" target="_blank" title="Go to snippet source"></a><code class="language-scala">path // the root path “/”
 path / &quot;users&quot; // “/users”
 path / &quot;users&quot; / segment[Long]() // “/users/1234”, “/users/5678”, …
 path / &quot;assets&quot; / remainingSegments() // “/assets/images/logo.png”
@@ -262,7 +262,7 @@ path / &quot;articles&quot; /? qs[List[String]](
 path /? (qs[String](&quot;q&quot;) &amp; qs[String](&quot;lang&quot;)) // “/?q=foo&amp;lang=en”, …</code></pre>
 <p>The examples above show that basic types (e.g., <code>Int</code>, <code>String</code>, etc.) are supported out of the box as query and path parameters. A user-defined type <code>T</code> can be supported either by - defining implicit instances of <code>Segment[T]</code> (for path parameters) or <code>QueryStringParam[T]</code> (for query string  parameters), - transforming or refining already supported types by using <code>xmap</code> or <code>xmapPartial</code> (see next section).</p>
 <p>Path segments and query string parameters can take additional parameters containing documentation:</p>
-<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/algebras/algebra/src/test/scala/endpoints/algebra/EndpointsDocs.scala#L56-L62" target="_blank" title="Go to snippet source"></a><code class="language-scala">// “/users/{id}”
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/algebras/algebra/src/test/scala/endpoints/algebra/EndpointsDocs.scala#L56-L62" target="_blank" title="Go to snippet source"></a><code class="language-scala">// “/users/{id}”
 path / &quot;users&quot; / segment[Long](&quot;id&quot;, docs = Some(&quot;A user id&quot;))
 
 // “/?q=foo&amp;lang=en”, …
@@ -272,15 +272,15 @@ path /? (query &amp; lang)</code></pre>
 <h4><a href="#transforming-and-refining-url-constituents" name="transforming-and-refining-url-constituents" class="anchor"><span class="anchor-link"></span></a>Transforming and Refining URL Constituents</h4>
 <p>All the data types involved in a URL description (<code>Path[A]</code>, <code>Segment[A]</code>, <code>QueryString[A]</code>, etc.) have an <code>xmap</code> and an <code>xmapPartial</code> operations, for transforming or refining their carried type.</p>
 <p>For instance, consider the following user-defined <code>Location</code> type, containing a <code>longitude</code> and a <code>latitude</code>:</p>
-<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/algebras/algebra/src/test/scala/endpoints/algebra/client/EndpointsTestSuite.scala#L339" target="_blank" title="Go to snippet source"></a><code class="language-scala">case class Location(longitude: Double, latitude: Double)</code></pre>
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/algebras/algebra/src/test/scala/endpoints/algebra/client/EndpointsTestSuite.scala#L339" target="_blank" title="Go to snippet source"></a><code class="language-scala">case class Location(longitude: Double, latitude: Double)</code></pre>
 <p>The <code>QueryString[Location]</code> type means “a query string that carries a <code>Location</code>”. We can define a value of type <code>QueryString[Location]</code> by <em>transforming</em> a query string that carries the longitude and latitude parameters as follows:</p>
-<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/algebras/algebra/src/test/scala/endpoints/algebra/client/EndpointsTestSuite.scala#L343-L346" target="_blank" title="Go to snippet source"></a><code class="language-scala">val locationQueryString: QueryString[Location] =
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/algebras/algebra/src/test/scala/endpoints/algebra/client/EndpointsTestSuite.scala#L343-L346" target="_blank" title="Go to snippet source"></a><code class="language-scala">val locationQueryString: QueryString[Location] =
   (qs[Double](&quot;lon&quot;) &amp; qs[Double](&quot;lat&quot;)).xmap {
     case (lon, lat) =&gt; Location(lon, lat)
   } { location =&gt; (location.longitude, location.latitude) }</code></pre>
 <p>The <code>xmap</code> operation requires the source type and the target type to be equivalent (in the above case, the source type is <code>(Double, Double)</code> and the target type is <code>Location</code>).</p>
 <p>In case the target type is smaller than the source type, you can use the <code>xmapPartial</code> operation, which <em>refines</em> the carried type. As an example, here is how you can define a <code>Segment[LocalDate]</code>:</p>
-<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/algebras/algebra/src/test/scala/endpoints/algebra/EndpointsDocs.scala#L89-L99" target="_blank" title="Go to snippet source"></a><code class="language-scala">import java.time.LocalDate
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/algebras/algebra/src/test/scala/endpoints/algebra/EndpointsDocs.scala#L89-L99" target="_blank" title="Go to snippet source"></a><code class="language-scala">import java.time.LocalDate
 import endpoints.{Invalid, Valid}
 implicit def localDateSegment(
     implicit string: Segment[String]
@@ -302,13 +302,13 @@ implicit def localDateSegment(
 <p>The <code>Response[A]</code> type models an HTTP response carrying some information of type <code>A</code>. For instance, a <code>Response[User]</code> value describes an HTTP response containing a user: client interpreters decode a <code>User</code> from the response entity, server interpreters encode a <code>User</code> as a response entity, and documentation interpreters render the serialization schema of a <code>User</code>.</p>
 <h3><a href="#constructing-responses" name="constructing-responses" class="anchor"><span class="anchor-link"></span></a>Constructing Responses</h3>
 <p>A response is defined in terms of a status, headers and an entity. Here is an example of a simple OK response with no entity and no headers:</p>
-<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/algebras/algebra/src/test/scala/endpoints/algebra/EndpointsDocs.scala#L66-L67" target="_blank" title="Go to snippet source"></a><code class="language-scala">// An HTTP response with status code 200 (Ok) and no entity
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/algebras/algebra/src/test/scala/endpoints/algebra/EndpointsDocs.scala#L66-L67" target="_blank" title="Go to snippet source"></a><code class="language-scala">// An HTTP response with status code 200 (Ok) and no entity
 val nothing: Response[Unit] = ok(emptyResponse)</code></pre>
 <p>There is a more general response constructor taking the status as parameter:</p>
-<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/algebras/algebra/src/test/scala/endpoints/algebra/EndpointsDocs.scala#L71-L72" target="_blank" title="Go to snippet source"></a><code class="language-scala">// An HTTP response with status code 200 (Ok) and a text entity
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/algebras/algebra/src/test/scala/endpoints/algebra/EndpointsDocs.scala#L71-L72" target="_blank" title="Go to snippet source"></a><code class="language-scala">// An HTTP response with status code 200 (Ok) and a text entity
 val aTextResponse: Response[String] = response(OK, textResponse)</code></pre>
 <p>Additional documentation about the response can be passed as an extra parameter:</p>
-<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/algebras/algebra/src/test/scala/endpoints/algebra/EndpointsDocs.scala#L76-L79" target="_blank" title="Go to snippet source"></a><code class="language-scala">ok(
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/algebras/algebra/src/test/scala/endpoints/algebra/EndpointsDocs.scala#L76-L79" target="_blank" title="Go to snippet source"></a><code class="language-scala">ok(
   emptyResponse,
   docs = Some(&quot;A response with an OK status code and no entity&quot;)
 )</code></pre>
@@ -321,18 +321,18 @@ val aTextResponse: Response[String] = response(OK, textResponse)</code></pre>
 <h3><a href="#transforming-responses" name="transforming-responses" class="anchor"><span class="anchor-link"></span></a>Transforming Responses</h3>
 <p>Responses have methods provided by the <a href="/api/endpoints/algebra/Responses$ResponseSyntax.html"><code>ResponseSyntax</code></a> and the <a href="/api/endpoints/InvariantFunctorSyntax$InvariantFunctorSyntax.html"><code>InvariantFunctorSyntax</code></a> implicit classes, whose usage is illustrated in the remaining of this section.</p>
 <p>The <code>orNotFound</code> operation is useful to handle resources that may not be found: </p>
-<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/algebras/algebra/src/test/scala/endpoints/algebra/JsonEntitiesDocs.scala#L22-L26" target="_blank" title="Go to snippet source"></a><code class="language-scala">val getUser: Endpoint[Long, Option[User]] =
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/algebras/algebra/src/test/scala/endpoints/algebra/JsonEntitiesDocs.scala#L22-L26" target="_blank" title="Go to snippet source"></a><code class="language-scala">val getUser: Endpoint[Long, Option[User]] =
   endpoint(
     get(path / &quot;user&quot; / segment[Long](&quot;id&quot;)),
     ok(jsonResponse[User]).orNotFound()
   )</code></pre>
 <p>In this example, servers can produce a Not Found (404) response by returning <code>None</code>, and an OK (200) response containing a user by returning a <code>Some[User]</code> value. Conversely, clients interpret a Not Found response as a <code>None</code> value, and an OK response (with a valid user entity) as a <code>Some[User]</code> value.</p>
 <p>More generally, you can describe an alternative between two possible responses by using the <code>orElse</code> operation:</p>
-<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/algebras/algebra/src/test/scala/endpoints/algebra/JsonEntitiesDocs.scala#L30-L31" target="_blank" title="Go to snippet source"></a><code class="language-scala">val maybeUserResponse: Response[Either[Unit, User]] =
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/algebras/algebra/src/test/scala/endpoints/algebra/JsonEntitiesDocs.scala#L30-L31" target="_blank" title="Go to snippet source"></a><code class="language-scala">val maybeUserResponse: Response[Either[Unit, User]] =
   response(NotImplemented, emptyResponse).orElse(ok(jsonResponse[User]))</code></pre>
 <p>In this example, servers can produce a Not Implemented (501) response by returning <code>Left(())</code>, and an OK (200) response containing a user by returning <code>Right(user)</code>. Conversely, clients interpret a Not Implemented response as a <code>Left(())</code> value, and an OK response (with a valid user entity) as a <code>Right(user)</code> value.</p>
 <p>You can also transform the type produced by the alternative responses into a more convenient type to work with, by using the <code>xmap</code> operation. For instance, here is how to transform a <code>Response[Either[Unit, User]]</code> into a <code>Response[Option[User]]</code>:</p>
-<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/algebras/algebra/src/test/scala/endpoints/algebra/JsonEntitiesDocs.scala#L36-L42" target="_blank" title="Go to snippet source"></a><code class="language-scala">val maybeUserResponse: Response[Option[User]] =
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/algebras/algebra/src/test/scala/endpoints/algebra/JsonEntitiesDocs.scala#L36-L42" target="_blank" title="Go to snippet source"></a><code class="language-scala">val maybeUserResponse: Response[Option[User]] =
   response(NotImplemented, emptyResponse)
     .orElse(ok(jsonResponse[User]))
     .xmap {
@@ -351,7 +351,7 @@ val aTextResponse: Response[String] = response(OK, textResponse)</code></pre>
 <p>See how you can describe endpoints with <a href="json-entities.html">JSON entities</a>.</p>
 </div>
 <div>
-<a href="https://github.com/julienrf/endpoints/tree/0.15.0/documentation/manual/src/paradox/algebras/endpoints.md" title="Edit this page" class="md-source-file md-edit">
+<a href="https://github.com/julienrf/endpoints/tree/v0.15.0/documentation/manual/src/paradox/algebras/endpoints.md" title="Edit this page" class="md-source-file md-edit">
 Edit this page
 </a>
 </div>

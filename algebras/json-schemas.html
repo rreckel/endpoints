@@ -220,9 +220,9 @@ julienrf/endpoints
 <h3><a href="#basic-types-and-record-types" name="basic-types-and-record-types" class="anchor"><span class="anchor-link"></span></a>Basic types and record types</h3>
 <p>The trait provides some predefined JSON schemas (for <code>String</code>, <code>Int</code>, <code>Boolean</code>, <code>Seq</code>, etc.) and ways to combine them together to build more complex schemas.</p>
 <p>For instance, given the following <code>Rectangle</code> data type:</p>
-<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/json-schema/json-schema/src/test/scala/endpoints/algebra/JsonSchemasDocs.scala#L7" target="_blank" title="Go to snippet source"></a><code class="language-scala">case class Rectangle(width: Double, height: Double)</code></pre>
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/json-schema/json-schema/src/test/scala/endpoints/algebra/JsonSchemasDocs.scala#L7" target="_blank" title="Go to snippet source"></a><code class="language-scala">case class Rectangle(width: Double, height: Double)</code></pre>
 <p>We can represent instances of <code>Rectangle</code> in JSON with a JSON object having properties corresponding to the case class fields. A JSON schema for such objects would be defined as follows:</p>
-<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/json-schema/json-schema/src/test/scala/endpoints/algebra/JsonSchemasDocs.scala#L10-L13" target="_blank" title="Go to snippet source"></a><code class="language-scala">implicit val rectangleSchema: JsonSchema[Rectangle] = (
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/json-schema/json-schema/src/test/scala/endpoints/algebra/JsonSchemasDocs.scala#L10-L13" target="_blank" title="Go to snippet source"></a><code class="language-scala">implicit val rectangleSchema: JsonSchema[Rectangle] = (
   field[Double](&quot;width&quot;, Some(&quot;Rectangle width&quot;)) zip
     field[Double](&quot;height&quot;)
 ).xmap((Rectangle.apply _).tupled)(rect =&gt; (rect.width, rect.height))</code></pre>
@@ -231,11 +231,11 @@ julienrf/endpoints
 <p>In the above example, we actually define two JSON object schemas (one for the <code>width</code> field, of type <code>Record[Double]</code>, and one for the <code>height</code> field, of type <code>Record[Double]</code>), and then we combine them into a single JSON object schema by using the <code>zip</code> operation. Finally, we call the <code>xmap</code> operation to turn the <code>Record[(Double, Double)]</code> value returned by the <code>zip</code> operation into a <code>Record[Rectangle]</code>.</p>
 <h3><a href="#sum-types-sealed-traits-" name="sum-types-sealed-traits-" class="anchor"><span class="anchor-link"></span></a>Sum types (sealed traits)</h3>
 <p>It is also possible to define schemas for sum types. Consider the following type definition, defining a <code>Shape</code>, which can be either a <code>Circle</code> or a <code>Rectangle</code>:</p>
-<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/json-schema/json-schema/src/test/scala/endpoints/algebra/JsonSchemasDocs.scala#L18-L20" target="_blank" title="Go to snippet source"></a><code class="language-scala">sealed trait Shape
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/json-schema/json-schema/src/test/scala/endpoints/algebra/JsonSchemasDocs.scala#L18-L20" target="_blank" title="Go to snippet source"></a><code class="language-scala">sealed trait Shape
 case class Circle(radius: Double) extends Shape
 case class Rectangle(width: Double, height: Double) extends Shape</code></pre>
 <p>A possible JSON schema for this data type consists in using a JSON object with a discriminator field indicating whether the <code>Shape</code> is a <code>Rectangle</code> or a <code>Circle</code>. Such a schema can be defined as follows:</p>
-<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/json-schema/json-schema/src/test/scala/endpoints/algebra/JsonSchemasDocs.scala#L35-L45" target="_blank" title="Go to snippet source"></a><code class="language-scala">// Given a `circleSchema: Record[Circle]` and a `rectangleSchema: Record[Rectangle]`
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/json-schema/json-schema/src/test/scala/endpoints/algebra/JsonSchemasDocs.scala#L35-L45" target="_blank" title="Go to snippet source"></a><code class="language-scala">// Given a `circleSchema: Record[Circle]` and a `rectangleSchema: Record[Rectangle]`
 (
   circleSchema.tagged(&quot;Circle&quot;) orElse
     rectangleSchema.tagged(&quot;Rectangle&quot;)
@@ -253,7 +253,7 @@ case class Rectangle(width: Double, height: Double) extends Shape</code></pre>
 <p>By default, the discriminator field is named <code>type</code>, but you can use another field name either by overriding the <code>defaultDiscriminatorName</code> method of the algebra, or by wrapping the <code>Tagged</code> schema in a <code>withDiscriminator</code> call specifying the field name to use.</p>
 <h3><a href="#refining-schemas" name="refining-schemas" class="anchor"><span class="anchor-link"></span></a>Refining schemas</h3>
 <p>The examples above show how to use <code>xmap</code> to transform a <code>JsonSchema[A]</code> into a <code>JsonSchema[B]</code>. In case the transformation function from <code>A</code> to <code>B</code> can fail (for example, if it applies additional validation), you can use <code>xmapPartial</code> instead of <code>xmap</code>:</p>
-<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/json-schema/json-schema/src/test/scala/endpoints/algebra/JsonSchemasFixtures.scala#L92-L96" target="_blank" title="Go to snippet source"></a><code class="language-scala">val evenNumberSchema: JsonSchema[Int] =
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/json-schema/json-schema/src/test/scala/endpoints/algebra/JsonSchemasFixtures.scala#L92-L96" target="_blank" title="Go to snippet source"></a><code class="language-scala">val evenNumberSchema: JsonSchema[Int] =
   intJsonSchema.xmapPartial { n =&gt;
     if (n % 2 == 0) Valid(n)
     else Invalid(s&quot;Invalid even integer &#39;$n&#39;&quot;)
@@ -267,19 +267,19 @@ case class Rectangle(width: Double, height: Double) extends Shape</code></pre>
   <li>Third-party libraries, e.g. Enumeratum</li>
 </ul>
 <p>For example, an enumeration with three possible values can be defined as a sealed trait with three case objects:</p>
-<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/json-schema/json-schema/src/test/scala/endpoints/algebra/JsonSchemasDocs.scala#L52-L55" target="_blank" title="Go to snippet source"></a><code class="language-scala">sealed trait Status
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/json-schema/json-schema/src/test/scala/endpoints/algebra/JsonSchemasDocs.scala#L52-L55" target="_blank" title="Go to snippet source"></a><code class="language-scala">sealed trait Status
 case object Active extends Status
 case object Inactive extends Status
 case object Obsolete extends Status</code></pre>
 <p>The method <code>stringEnumeration</code> in the <code>JsonSchemas</code> algebra supports mapping the enum values to JSON strings. It has two parameters: the possible values, and a function to encode an enum value as a string.</p>
-<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/json-schema/json-schema/src/test/scala/endpoints/algebra/JsonSchemasDocs.scala#L58-L59" target="_blank" title="Go to snippet source"></a><code class="language-scala">implicit lazy val statusSchema: JsonSchema[Status] =
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/json-schema/json-schema/src/test/scala/endpoints/algebra/JsonSchemasDocs.scala#L58-L59" target="_blank" title="Go to snippet source"></a><code class="language-scala">implicit lazy val statusSchema: JsonSchema[Status] =
   stringEnumeration[Status](Seq(Active, Inactive, Obsolete))(_.toString)</code></pre>
 <p>The resulting <code>JsonSchema[Status]</code> allows defining JSON members with string values that are mapped to our case objects.</p>
 <p>It will work similarly for other representations of enumerated values. Most of them provide <code>values</code> which can conveniently be passed into <code>stringEnumeration</code>. However, it is still possible to explicitly pass a certain subset of allowed values.</p>
 <h3><a href="#tuples" name="tuples" class="anchor"><span class="anchor-link"></span></a>Tuples</h3>
 <p>JSON schemas for tuples from 2 to 22 elements are provided out of the box. For instance, if there are implicit <code>JsonSchema</code> instances for types <code>A</code>, <code>B</code>, and <code>C</code>, then you can summon a <code>JsonSchema[(A, B, C)]</code>. Tuples are modeled in JSON with arrays, as recommended in the <a href="https://json-schema.org/understanding-json-schema/reference/array.html#tuple-validation">JSON Schema documentation</a>.</p>
 <p>Here is an example of JSON schema for a GeoJSON <code>Point</code>, where GPS coordinates are modeled with a pair (longitude, latitude):</p>
-<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/json-schema/json-schema/src/test/scala/endpoints/algebra/JsonSchemasDocs.scala#L72-L78" target="_blank" title="Go to snippet source"></a><code class="language-scala">type Coordinates = (Double, Double) // (Longitude, Latitude)
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/json-schema/json-schema/src/test/scala/endpoints/algebra/JsonSchemasDocs.scala#L72-L78" target="_blank" title="Go to snippet source"></a><code class="language-scala">type Coordinates = (Double, Double) // (Longitude, Latitude)
 case class Point(coordinates: Coordinates)
 
 implicit val pointSchema: JsonSchema[Point] =
@@ -288,14 +288,14 @@ implicit val pointSchema: JsonSchema[Point] =
     .xmap(Point(_))(_.coordinates)</code></pre>
 <h3><a href="#recursive-types" name="recursive-types" class="anchor"><span class="anchor-link"></span></a>Recursive types</h3>
 <p>You can reference a currently being defined schema without causing a <code>StackOverflow</code> error by wrapping it in the <code>lazyRecord</code> or <code>lazyTagged</code> constructor:</p>
-<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/json-schema/json-schema/src/test/scala/endpoints/algebra/JsonSchemasDocs.scala#L64-L68" target="_blank" title="Go to snippet source"></a><code class="language-scala">case class Recursive(next: Option[Recursive])
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/json-schema/json-schema/src/test/scala/endpoints/algebra/JsonSchemasDocs.scala#L64-L68" target="_blank" title="Go to snippet source"></a><code class="language-scala">case class Recursive(next: Option[Recursive])
 
 val recursiveSchema: Record[Recursive] = (
   optField(&quot;next&quot;)(lazyRecord(recursiveSchema, &quot;Rec&quot;))
 ).xmap(Recursive)(_.next)</code></pre>
 <h3><a href="#alternatives-between-schemas" name="alternatives-between-schemas" class="anchor"><span class="anchor-link"></span></a>Alternatives between schemas</h3>
 <p>You can define a schema as an alternative between other schemas with the operation <code>orFallbackTo</code>:</p>
-<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/json-schema/json-schema/src/test/scala/endpoints/algebra/JsonSchemasFixtures.scala#L107-L108" target="_blank" title="Go to snippet source"></a><code class="language-scala">val intOrBoolean: JsonSchema[Either[Int, Boolean]] =
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/json-schema/json-schema/src/test/scala/endpoints/algebra/JsonSchemasFixtures.scala#L107-L108" target="_blank" title="Go to snippet source"></a><code class="language-scala">val intOrBoolean: JsonSchema[Either[Int, Boolean]] =
   intJsonSchema.orFallbackTo(booleanJsonSchema)</code></pre><div class="callout warning "><div class="callout-title">Warning</div>
 <p>Because decoders derived from schemas defined with the operation <code>orFallbackTo</code> literally “fallback” from one alternative to another, it makes it impossible to report good decoding failure messages. You should generally prefer using <code>orElse</code> on “tagged” schemas.</p></div>
 <h3><a href="#schemas-documentation" name="schemas-documentation" class="anchor"><span class="anchor-link"></span></a>Schemas documentation</h3>
@@ -303,7 +303,7 @@ val recursiveSchema: Record[Recursive] = (
 <p>You can give names to schemas. These names are used by the OpenAPI interpreter to group the schema definitions at one place, and then reference each schema by its name (see the <a href="https://swagger.io/docs/specification/components/">Swagger “Components Section” documentation</a>).</p>
 <p>Use the <code>named</code> method to give a name to a <code>Record</code>, a <code>Tagged</code>, or an <code>Enum</code> schema.</p>
 <p>You can also include examples of values for a schema (see the <a href="https://swagger.io/docs/specification/adding-examples/">Swagger “Adding Examples” documentation</a>). This is done by using the <code>withExample</code> operation:</p>
-<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/json-schema/json-schema/src/test/scala/endpoints/algebra/JsonSchemasDocs.scala#L84-L88" target="_blank" title="Go to snippet source"></a><code class="language-scala">implicit val rectangleSchema: JsonSchema[Rectangle] = (
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/json-schema/json-schema/src/test/scala/endpoints/algebra/JsonSchemasDocs.scala#L84-L88" target="_blank" title="Go to snippet source"></a><code class="language-scala">implicit val rectangleSchema: JsonSchema[Rectangle] = (
   field[Double](&quot;width&quot;, Some(&quot;Rectangle width&quot;)) zip
     field[Double](&quot;height&quot;)
 ).xmap(Rectangle.tupled)(rect =&gt; (rect.width, rect.height))
@@ -333,7 +333,7 @@ val recursiveSchema: Record[Recursive] = (
 <p><a href="/api/endpoints/generic/JsonSchemas.html">API documentation</a></p>
 <h3><a href="#json-schemas-derivation" name="json-schemas-derivation" class="anchor"><span class="anchor-link"></span></a>JSON schemas derivation</h3>
 <p>With this module, defining the JSON schema of the <code>Shape</code> data type is reduced to the following:</p>
-<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/json-schema/json-schema-generic/src/test/scala/endpoints/generic/JsonSchemasDocs.scala#L10" target="_blank" title="Go to snippet source"></a><code class="language-scala">implicit val shapeSchema: JsonSchema[Shape] = genericJsonSchema</code></pre>
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/json-schema/json-schema-generic/src/test/scala/endpoints/generic/JsonSchemasDocs.scala#L10" target="_blank" title="Go to snippet source"></a><code class="language-scala">implicit val shapeSchema: JsonSchema[Shape] = genericJsonSchema</code></pre>
 <p>The <code>genericJsonSchema</code> operation builds a JSON schema for the given type. The rules for deriving the schema are the following:</p>
 <ul>
   <li>the schema of a case class is a JSON object,</li>
@@ -345,7 +345,7 @@ val recursiveSchema: Record[Recursive] = (
   <li>the schema is named by the <code>@name</code> annotation, if present, or by invoking the  <code>classTagToSchemaName</code> operation with the <code>ClassTag</code> of the type for which the schema  is derived.</li>
 </ul>
 <p>Here is an example that illustrates how to configure the generic schema derivation process:</p>
-<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/json-schema/json-schema-generic/src/test/scala/endpoints/generic/JsonSchemasDocs.scala#L24-L35" target="_blank" title="Go to snippet source"></a><code class="language-scala">@discriminator(&quot;kind&quot;)
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/json-schema/json-schema-generic/src/test/scala/endpoints/generic/JsonSchemasDocs.scala#L24-L35" target="_blank" title="Go to snippet source"></a><code class="language-scala">@discriminator(&quot;kind&quot;)
 @name(&quot;ShapeSchema&quot;)
 sealed trait Shape
 
@@ -360,7 +360,7 @@ case class Rectangle(
 <p>In case you need to transform further a generically derived schema, you might want to use the <code>genericRecord</code> or <code>genericTagged</code> operations instead of <code>genericJsonSchema</code>. These operations have a more specific return type than <code>genericJsonSchema</code>: <code>genericRecord</code> returns a <code>Record</code>, and <code>genericTagged</code> returns a <code>Tagged</code>.</p>
 <h3><a href="#json-schemas-transformation" name="json-schemas-transformation" class="anchor"><span class="anchor-link"></span></a>JSON schemas transformation</h3>
 <p>The module also takes advantage shapeless to provide a more convenient <code>as</code> operation for transforming JSON schema definitions, instead of <code>xmap</code>:</p>
-<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/json-schema/json-schema-generic/src/test/scala/endpoints/generic/JsonSchemasDocs.scala#L15-L18" target="_blank" title="Go to snippet source"></a><code class="language-scala">implicit val rectangleSchema: JsonSchema[Rectangle] = (
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/json-schema/json-schema-generic/src/test/scala/endpoints/generic/JsonSchemasDocs.scala#L15-L18" target="_blank" title="Go to snippet source"></a><code class="language-scala">implicit val rectangleSchema: JsonSchema[Rectangle] = (
   field[Double](&quot;width&quot;) zip
     field[Double](&quot;height&quot;)
 ).as[Rectangle]</code></pre>
@@ -369,7 +369,7 @@ case class Rectangle(
 <p>Please see the README of that project for more information on how to use it and its differences with the module provided by <em>endpoints</em>.</p>
 </div>
 <div>
-<a href="https://github.com/julienrf/endpoints/tree/0.15.0/documentation/manual/src/paradox/algebras/json-schemas.md" title="Edit this page" class="md-source-file md-edit">
+<a href="https://github.com/julienrf/endpoints/tree/v0.15.0/documentation/manual/src/paradox/algebras/json-schemas.md" title="Edit this page" class="md-source-file md-edit">
 Edit this page
 </a>
 </div>
