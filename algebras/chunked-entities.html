@@ -1,304 +1,338 @@
 <!DOCTYPE html>
-<html class="no-js" lang="eng" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chunked Entities</title>
-    <link rel="stylesheet" href="../theme/css/foundation.min.css">
-    <link rel="stylesheet" href="../theme/css/app.css">
-    
-     <link rel="stylesheet" href="../theme/highlight.js/styles/github-gist.css">  <link rel="stylesheet" href="../theme/css/foundation-icons.custom.css"> 
-    
-     <link rel="toc" href="../site-contents.html"  title="Table of Contents"  /> 
-  </head>
-  <body>
-    <div class="expanded row">
-      <div class="small-12 medium-12 large-12 columns align-self-top">
-        <div class="row">
-          
-          <header class="large-12 columns align-self-top a_header">
-            <div class="row">
-              <div class="large-12 columns a_limited top-bar">
-                <div class="top-bar-left">
-                  <p>endpoints 0.14.0</p>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="description" content="manual">
+<meta name="generator" content="Paradox, paradox-material-theme=0.6.0, mkdocs-material=3.0.3">
 
-                </div>
-                <div class="top-bar-right align-right row">
-                  
-                  
-                    <form action="../site-search.html" method="get" class="align-right a_search">
-                      <input name="q" type="search"  placeholder="Search
-" >
-                      <button><img alt="&#1F50D;" src="../theme/images/search.svg" /></button>
-                    </form>
-                  
-                </div>
-              </div>
-            </div>
-          </header>
-          
-          <div class="small-12 medium-12 large-12 columns align-self-top a_limited a_main">
-            <div class="row">
-              
-              <main class="columns large-order-2 sections" id="_sections">
-                 
-  <ul class="menu align-right simple a_navbar a_navbar_top">
-    
-      
-        <li><a href="../site-contents.html"  title="Table of Contents" ><span class="a_foundation_icon"></span>  Contents</a></li>
-      
-    
-  </ul>
- 
-                
-                <h1 id="chunked-entities" class="a_section" data-magellan-target="chunked-entities">Chunked Entities<a class="a_hlink" href="#chunked-entities"></a></h1>
-<h2 id="chunkedentities" class="a_section" data-magellan-target="chunkedentities"><code class="hljs">ChunkedEntities</code><a class="a_hlink" href="#chunkedentities"></a></h2>
-<p>This algebra provides vocabulary to describe endpoints whose requests or
-responses are streamed using the “chunked transfer-encoding” supported by HTTP1.1.</p>
-<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
-<pre class="hljs"><code class="language-scala"><span class="hljs-string">"org.julienrf"</span> %% <span class="hljs-string">"endpoints-algebra"</span> % <span class="hljs-string">"0.14.0"</span>
+<meta name="lang:clipboard.copy" content="Copy to clipboard">
+<meta name="lang:clipboard.copied" content="Copied to clipboard">
+<meta name="lang:search.language" content="">
+<meta name="lang:search.pipeline.stopwords" content="true">
+<meta name="lang:search.pipeline.trimmer" content="true">
+<meta name="lang:search.result.none" content="No matching documents">
+<meta name="lang:search.result.one" content="1 matching document">
+<meta name="lang:search.result.other" content="# matching documents">
+<meta name="lang:search.tokenizer" content="[\s\-]+">
+
+
+<meta name="description" content="manual">
+<link rel="shortcut icon" href="../assets/images/favicon.png">
+<title>Chunked Entities · endpoints</title>
+<link rel="stylesheet" href="../assets/stylesheets/application.451f80e5.css">
+<link rel="stylesheet" href="../lib/material__tabs/dist/mdc.tabs.min.css">
+<link rel="stylesheet" href="../lib/prettify/prettify.css">
+<script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+<style>
+body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}
+code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}
+</style>
+<link rel="stylesheet" href="../assets/fonts/font-awesome.css">
+<link rel="stylesheet" href="../assets/fonts/material-icons.css">
+<link rel="stylesheet" href="../assets/stylesheets/paradox-material-theme.css">
+<link rel="stylesheet" href="../snippets.css">
+</head>
+<body
+>
+<input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+<input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+<label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+<header class="md-header" data-md-component="header">
+<nav class="md-header-nav md-grid">
+<div class="md-flex">
+<div class="md-flex__cell md-flex__cell--shrink">
+<a href="../index.html" title="endpoints" class="md-header-nav__button md-logo">
+<i class="md-icon">local_library</i>
+</a>
+</div>
+<div class="md-flex__cell md-flex__cell--shrink">
+<label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+</div>
+<div class="md-flex__cell md-flex__cell--stretch">
+<div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+<span class="md-header-nav__topic">
+endpoints
+</span>
+<span class="md-header-nav__topic">
+Chunked Entities
+</span>
+</div>
+</div>
+<div class="md-flex__cell md-flex__cell--shrink">
+<label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+<label class="md-icon md-search__icon" for="__search"></label>
+<button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">&#xE5CD;</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix>
+<div class="md-search-result" data-md-component="result">
+<div class="md-search-result__meta">
+Type to start searching
+</div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="md-flex__cell md-flex__cell--shrink">
+<div class="md-header-nav__source">
+<a href="https://github.com/julienrf/endpoints"
+title="Go to repository"
+class="md-source"
+data-md-source="github">
+<div class="md-source__icon">
+<i class="fa fa-github"></i>
+</div>
+<div class="md-source__repository">
+julienrf/endpoints
+</div>
+</a>
+
+</div>
+</div>
+</div>
+</nav>
+</header>
+
+<div class="md-container">
+<main class="md-main">
+<div class="md-main__inner md-grid" data-md-component="container">
+<div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav class="md-nav md-nav--primary" data-md-level="0" style="visibility: hidden">
+<label class="md-nav__title md-nav__title--site" for="drawer">
+<a href="../index.html" title="endpoints" class="md-nav__button md-logo">
+<span class="md-nav__button md-logo">
+<i class="md-icon">local_library</i>
+</a>
+<a href="../index.html" title="endpoints">
+endpoints
+</a>
+</label>
+<div class="md-nav__source">
+<a href="https://github.com/julienrf/endpoints"
+title="Go to repository"
+class="md-source"
+data-md-source="github">
+<div class="md-source__icon">
+<i class="fa fa-github"></i>
+</div>
+<div class="md-source__repository">
+julienrf/endpoints
+</div>
+</a>
+
+</div>
+<ul>
+  <li><a href="../use-cases.html" class="page">Use Cases</a></li>
+  <li><a href="../quick-start.html" class="page">Quick start</a></li>
+  <li><a href="../design.html" class="page">Design in a nutshell</a></li>
+  <li><a href="../algebras-and-interpreters.html" class="page">Algebras and interpreters</a>
+  <ul>
+    <li><a href="../algebras/endpoints.html" class="page"><code>Endpoints</code></a></li>
+    <li><a href="../algebras/json-entities.html" class="page">JSON Entities</a></li>
+    <li><a href="../algebras/json-schemas.html" class="page">JSON Schemas</a></li>
+    <li><a href="../algebras/chunked-entities.html" class="active page">Chunked Entities</a></li>
+    <li><a href="../algebras/assets.html" class="page">Assets</a></li>
+    <li><a href="../algebras/mux-endpoints.html" class="page">Multiplexed Endpoints</a></li>
+    <li><a href="../interpreters/akka-http.html" class="page">Akka HTTP</a></li>
+    <li><a href="../interpreters/play.html" class="page">Play framework</a></li>
+    <li><a href="../interpreters/http4s.html" class="page">http4s</a></li>
+    <li><a href="../interpreters/scalajs-web.html" class="page">Scala.js web client</a></li>
+    <li><a href="../interpreters/scalaj-http.html" class="page">scalaj-http</a></li>
+    <li><a href="../interpreters/sttp.html" class="page">sttp</a></li>
+    <li><a href="../interpreters/openapi.html" class="page">OpenAPI</a></li>
+    <li><a href="../interpreters/circe.html" class="page">Circe</a></li>
+    <li><a href="../interpreters/play-json.html" class="page">Play JSON</a></li>
+  </ul></li>
+  <li><a href="../guides.html" class="page">Guides</a>
+  <ul>
+    <li><a href="../guides/tupler.html" class="page"><code>Tupler</code></a></li>
+    <li><a href="../guides/custom-authentication.html" class="page">Application-specific authentication</a></li>
+  </ul></li>
+  <li><a href="../comparison.html" class="page">Comparison with similar tools</a></li>
+  <li><a href="../talks.html" class="page">Talks and Publications</a></li>
+</ul>
+<nav class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">Table of contents</label>
+<ul>
+  <li><a href="../algebras/chunked-entities.html#chunked-entities" class="header">Chunked Entities</a>
+  <ul>
+    <li><a href="../algebras/chunked-entities.html#chunkedentities" class="header"><code>ChunkedEntities</code></a></li>
+    <li><a href="../algebras/chunked-entities.html#chunkedjsonentities" class="header"><code>ChunkedJsonEntities</code></a></li>
+    <li><a href="../algebras/chunked-entities.html#custom-serialization-format" class="header">Custom Serialization Format</a></li>
+  </ul></li>
+</ul>
+</nav>
+
+</nav>
+<ul style="display: none">
+<li class="md-nav__item md-version" id="project.version">
+<label class="md-nav__link" for="__version">
+<i class="md-icon" title="Version">label_outline</i> 0.15.0
+</label>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">Table of contents</label>
+<ul>
+  <li><a href="../algebras/chunked-entities.html#chunked-entities" class="header">Chunked Entities</a>
+  <ul>
+    <li><a href="../algebras/chunked-entities.html#chunkedentities" class="header"><code>ChunkedEntities</code></a></li>
+    <li><a href="../algebras/chunked-entities.html#chunkedjsonentities" class="header"><code>ChunkedJsonEntities</code></a></li>
+    <li><a href="../algebras/chunked-entities.html#custom-serialization-format" class="header">Custom Serialization Format</a></li>
+  </ul></li>
+</ul>
+</nav>
+
+</div>
+</div>
+</div>
+<div class="md-content">
+<article class="md-content__inner md-typeset">
+<div class="md-content__searchable">
+<h1><a href="#chunked-entities" name="chunked-entities" class="anchor"><span class="anchor-link"></span></a>Chunked Entities</h1>
+<h2><a href="#chunkedentities" name="chunkedentities" class="anchor"><span class="anchor-link"></span></a><code>ChunkedEntities</code></h2>
+<p>This algebra provides vocabulary to describe endpoints whose requests or responses are streamed using the “chunked transfer-encoding” supported by HTTP1.1.</p>
+<pre class="prettyprint"><code class="language-scala">&quot;org.julienrf&quot; %% &quot;endpoints-algebra&quot; % &quot;0.15.0&quot;
 </code></pre>
-</div></div>
-<p><a href="../api/endpoints/algebra/ChunkedEntities.html">API documentation</a></p>
-<p>The <code class="hljs">ChunkedEntities</code> module enriches the <code class="hljs">Endpoints</code> algebra with operations for defining
-request and responses entities carrying stream of values.</p>
+<p><a href="/api/endpoints/algebra/ChunkedEntities.html">API documentation</a></p>
+<p>The <code>ChunkedEntities</code> module enriches the <code>Endpoints</code> algebra with operations for defining request and responses entities carrying stream of values.</p>
 <p>For instance, you can define an endpoint streaming a binary file as follows:</p>
-<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
-<pre class="hljs"><code class="language-scala"><span class="hljs-keyword">val</span> logo: <span class="hljs-type">Endpoint</span>[<span class="hljs-type">Unit</span>, <span class="hljs-type">Chunks</span>[<span class="hljs-type">Array</span>[<span class="hljs-type">Byte</span>]]] =
-  endpoint(get(path / <span class="hljs-string">"logo.png"</span>), ok(bytesChunksResponse))</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.14.0/algebras/algebra/src/test/scala/endpoints/algebra/ChunkedEntitiesDocs.scala#L6-L7" class="a_sourcelink">ChunkedEntitiesDocs.scala</a></div></div>
-<p>The return type, <code class="hljs">Endpoint[Unit, Chunks[Array[Byte]]]</code>, represents an endpoint whose request
-takes no parameter (<code class="hljs">Unit</code>) and whose response produces a stream of <code class="hljs">Array[Byte]</code> chunks.</p>
-<p>Responses are streamed using the
-<a href="https://en.wikipedia.org/wiki/Chunked_transfer_encoding">chunked transfer-encoding</a>,
-which is supported by most HTTP 1.1 clients and servers.</p>
-<h2 id="chunkedjsonentities" class="a_section" data-magellan-target="chunkedjsonentities"><code class="hljs">ChunkedJsonEntities</code><a class="a_hlink" href="#chunkedjsonentities"></a></h2>
-<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
-<pre class="hljs"><code class="language-scala"><span class="hljs-string">"org.julienrf"</span> %% <span class="hljs-string">"endpoints-algebra"</span> % <span class="hljs-string">"0.14.0"</span>
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/algebras/algebra/src/test/scala/endpoints/algebra/ChunkedEntitiesDocs.scala#L6-L7" target="_blank" title="Go to snippet source"></a><code class="language-scala">val logo: Endpoint[Unit, Chunks[Array[Byte]]] =
+  endpoint(get(path / &quot;logo.png&quot;), ok(bytesChunksResponse))</code></pre>
+<p>The return type, <code>Endpoint[Unit, Chunks[Array[Byte]]]</code>, represents an endpoint whose request takes no parameter (<code>Unit</code>) and whose response produces a stream of <code>Array[Byte]</code> chunks.</p>
+<p>Responses are streamed using the <a href="https://en.wikipedia.org/wiki/Chunked_transfer_encoding">chunked transfer-encoding</a>, which is supported by most HTTP 1.1 clients and servers.</p>
+<h2><a href="#chunkedjsonentities" name="chunkedjsonentities" class="anchor"><span class="anchor-link"></span></a><code>ChunkedJsonEntities</code></h2>
+<pre class="prettyprint"><code class="language-scala">&quot;org.julienrf&quot; %% &quot;endpoints-algebra&quot; % &quot;0.15.0&quot;
 </code></pre>
-</div></div>
-<p><a href="../api/endpoints/algebra/ChunkedJsonEntities.html">API documentation</a></p>
-<p>Clients and servers have to agree on the serialization format used by response
-chunks and WebSocket messages. The <code class="hljs">ChunkedJsonEntities</code> module provides a <code class="hljs">jsonChunksRequest</code>
-constructor and a <code class="hljs">jsonChunksResponse</code> constructor for defining request entities and response
-entities carrying streams of values that are serialized into JSON:</p>
-<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
-<pre class="hljs"><code class="language-scala"><span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">JsonStreamingExample</span></span>
-  <span class="hljs-keyword">extends</span> endpoints.algebra.<span class="hljs-type">Endpoints</span>
-    <span class="hljs-keyword">with</span> endpoints.algebra.<span class="hljs-type">ChunkedJsonEntities</span>
-    <span class="hljs-keyword">with</span> endpoints.algebra.<span class="hljs-type">JsonEntitiesFromSchemas</span> {
+<p><a href="/api/endpoints/algebra/ChunkedJsonEntities.html">API documentation</a></p>
+<p>Clients and servers have to agree on the serialization format used by response chunks and WebSocket messages. The <code>ChunkedJsonEntities</code> module provides a <code>jsonChunksRequest</code> constructor and a <code>jsonChunksResponse</code> constructor for defining request entities and response entities carrying streams of values that are serialized into JSON:</p>
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/algebras/algebra/src/test/scala/endpoints/algebra/ChunkedEntitiesDocs.scala#L13-L20" target="_blank" title="Go to snippet source"></a><code class="language-scala">trait JsonStreamingExample
+    extends endpoints.algebra.Endpoints
+    with endpoints.algebra.ChunkedJsonEntities
+    with endpoints.algebra.JsonEntitiesFromSchemas {
 
-  <span class="hljs-keyword">val</span> ticks = endpoint(get(path / <span class="hljs-string">"ticks"</span>), ok(jsonChunksResponse[<span class="hljs-type">Unit</span>]))
+  val ticks = endpoint(get(path / &quot;ticks&quot;), ok(jsonChunksResponse[Unit]))
 
 }</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.14.0/algebras/algebra/src/test/scala/endpoints/algebra/ChunkedEntitiesDocs.scala#L13-L20" class="a_sourcelink">ChunkedEntitiesDocs.scala</a></div></div>
-<p>This example uses the <code class="hljs">JsonEntitiesFromSchemas</code> algebra to derive the JSON serialization
-format from a JSON schema, which can also be reused by the OpenAPI interpreter.</p>
-<p>Eventually, mix a <code class="hljs">JsonEntitiesFromSchemas</code> interpreter of your choice to turn the JSON
-schemas into proper JSON codecs. For instance, for Akka-Http:</p>
-<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
-<pre class="hljs"><code class="language-scala"><span class="hljs-keyword">import</span> akka.stream.scaladsl.<span class="hljs-type">Source</span>
-<span class="hljs-keyword">import</span> endpoints.akkahttp.server
+<p>This example uses the <code>JsonEntitiesFromSchemas</code> algebra to derive the JSON serialization format from a JSON schema, which can also be reused by the OpenAPI interpreter.</p>
+<p>Eventually, mix a <code>JsonEntitiesFromSchemas</code> interpreter of your choice to turn the JSON schemas into proper JSON codecs. For instance, for Akka-Http:</p>
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/akka-http/server/src/test/scala/endpoints/akkahttp/server/ChunkedEntitiesDocs.scala#L26-L38" target="_blank" title="Go to snippet source"></a><code class="language-scala">import akka.stream.scaladsl.Source
+import endpoints.akkahttp.server
 
-<span class="hljs-class"><span class="hljs-keyword">object</span> <span class="hljs-title">JsonStreamingExampleServer</span></span>
-  <span class="hljs-keyword">extends</span> <span class="hljs-type">JsonStreamingExample</span>
-    <span class="hljs-keyword">with</span> server.<span class="hljs-type">Endpoints</span>
-    <span class="hljs-keyword">with</span> server.<span class="hljs-type">ChunkedJsonEntities</span>
-    <span class="hljs-keyword">with</span> server.<span class="hljs-type">JsonEntitiesFromSchemas</span> {
+object JsonStreamingExampleServer
+    extends JsonStreamingExample
+    with server.Endpoints
+    with server.ChunkedJsonEntities
+    with server.JsonEntitiesFromSchemas {
 
-  <span class="hljs-keyword">val</span> routes =
-    ticks.implementedBy(_ =&gt; <span class="hljs-type">Source</span>.tick(<span class="hljs-number">0.</span>seconds, <span class="hljs-number">1.</span>second, ()))
+  val routes =
+    ticks.implementedBy(_ =&gt; Source.tick(0.seconds, 1.second, ()))
 
 }</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.14.0/akka-http/server/src/test/scala/endpoints/akkahttp/server/ChunkedEntitiesDocs.scala#L24-L36" class="a_sourcelink">ChunkedEntitiesDocs.scala</a></div></div>
-<h2 id="custom-serialization-format" class="a_section" data-magellan-target="custom-serialization-format">Custom Serialization Format<a class="a_hlink" href="#custom-serialization-format"></a></h2>
-<p>Support for other serialization formats can be added by defining an operation
-returning a <code class="hljs">Chunks[A]</code> value. For instance, the
-<a href="https://developers.google.com/protocol-buffers">Protocol Buffers</a> format would be
-supported as follows (using <a href="https://julien-lafont.github.io/protoless/">protoless</a>):</p>
-<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
-<pre class="hljs"><code class="language-scala"><span class="hljs-keyword">import</span> endpoints.algebra
-<span class="hljs-keyword">import</span> io.protoless.messages.{<span class="hljs-type">Decoder</span>, <span class="hljs-type">Encoder</span>}
+<h2><a href="#custom-serialization-format" name="custom-serialization-format" class="anchor"><span class="anchor-link"></span></a>Custom Serialization Format</h2>
+<p>Support for other serialization formats can be added by defining an operation returning a <code>Chunks[A]</code> value. For instance, the <a href="https://developers.google.com/protocol-buffers">Protocol Buffers</a> format would be supported as follows (using <a href="https://julien-lafont.github.io/protoless/">protoless</a>):</p>
+<pre class="prettyprint"><code class="language-scala">import endpoints.algebra
+import io.protoless.messages.{Decoder, Encoder}
 
-<span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">ProtobufChunkedEntities</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">algebra</span>.<span class="hljs-title">ChunkedEntities</span> </span>{
-  <span class="hljs-comment">/** Streams containing values of type `A`, serialized with the given protobuf codec */</span>
-  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">protobufChunksRequest</span></span>[<span class="hljs-type">A</span> : <span class="hljs-type">Encoder</span> : <span class="hljs-type">Decoder</span>]: <span class="hljs-type">RequestEntity</span>[<span class="hljs-type">Chunks</span>[<span class="hljs-type">A</span>]]
+trait ProtobufChunkedEntities extends algebra.ChunkedEntities {
+  /** Streams containing values of type `A`, serialized with the given protobuf codec */
+  def protobufChunksRequest[A : Encoder : Decoder]: RequestEntity[Chunks[A]]
 }
 </code></pre>
-</div></div>
-<p>And then, the <code class="hljs">protobufChunksRequest</code> operation would have to be implemented on each interpreter.</p>
+<p>And then, the <code>protobufChunksRequest</code> operation would have to be implemented on each interpreter.</p>
+</div>
+<div>
+<a href="https://github.com/julienrf/endpoints/tree/0.15.0/documentation/manual/src/paradox/algebras/chunked-entities.md" title="Edit this page" class="md-source-file md-edit">
+Edit this page
+</a>
+</div>
+<div class="print-only">
+<span class="md-source-file md-version">
+0.15.0
+</span>
+</div>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-nav">
+<nav class="md-footer-nav__inner md-grid">
+<a href="../algebras/json-schemas.html" title="JSON Schemas" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+<div class="md-flex__cell md-flex__cell--shrink">
+<i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+</div>
+<div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+<span class="md-flex__ellipsis">
+<span class="md-footer-nav__direction">
+Previous
+</span>
+JSON Schemas
+</span>
+</div>
+</a>
+<a href="../algebras/assets.html" title="Assets" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+<div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+<span class="md-flex__ellipsis">
+<span class="md-footer-nav__direction">
+Next
+</span>
+Assets
+</span>
+</div>
+<div class="md-flex__cell md-flex__cell--shrink">
+<i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+</div>
+</a>
+</nav>
+</div>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+Powered by
+<a href="https://github.com/lightbend/paradox">Paradox</a>
+and
+<a href="https://jonas.github.io/paradox-material-theme/">Paradox Material Theme</a>
 
-                 
-  <ul class="menu align-right simple a_navbar a_navbar_bottom">
-    
-      
-        <li><a href="../site-contents.html"  title="Table of Contents" ><span class="a_foundation_icon"></span>  Contents</a></li>
-      
-    
-  </ul>
- 
-              </main>
-              
-              
-                <div data-sticky-container class="small-12 medium-12 large-2 large-order-1 columns a_sitenav_container">
-                  <nav class="a_sitenav" data-sticky data-sticky-on="large" data-anchor="_sections">
-                    
-                    <ul>
-                       
-  <li >
-    
-      
-        <a href="../index.html">Introduction</a>
-      
-    
-    
-  </li>
-  
-  <li >
-    
-      
-        <a href="../use-cases.html">Use Cases</a>
-      
-    
-    
-  </li>
-  
-  <li >
-    
-      
-        <a href="../quick-start.html">Quick start</a>
-      
-    
-    
-  </li>
-  
-  <li >
-    
-      
-        <a href="../design.html">Design in a nutshell</a>
-      
-    
-    
-  </li>
-  
-  <li >
-    
-      
-        <a href="../algebras-and-interpreters.html">Algebras and interpreters</a>
-      
-    
-    
-  </li>
-  
-  <li >
-    
-      
-        <a href="../guides.html">Guides</a>
-      
-    
-    
-  </li>
-  
-  <li >
-    
-      
-        <a href="../comparison.html">Comparison with similar tools</a>
-      
-    
-    
-  </li>
-  
-  <li >
-    
-      
-        <a href="../talks.html">Talks and Publications</a>
-      
-    
-    
-  </li>
- 
-                    </ul>
-                    
-                    
-                  </nav>
-                </div>
-              
-              
-              
-                <div class="small-12 medium-12 large-2 large-order-3 columns a_show-for-xlarge" data-sticky-container>
-                  <nav class="a_pagenav" data-sticky data-sticky-on="large" data-anchor="_sections">
-                     <header><p>On This Page</p>
-</header> 
-                    <ul class="vertical menu" data-magellan>
-                       
-  
-    <li>
-      
-         <a href="#chunked-entities">Chunked Entities</a> 
-      
-      
-        <ul class="vertical menu">  
-  
-    <li>
-      
-         <a href="#chunkedentities">ChunkedEntities</a> 
-      
-      
-    </li>
-  
-  
-  
-    <li>
-      
-         <a href="#chunkedjsonentities">ChunkedJsonEntities</a> 
-      
-      
-    </li>
-  
-  
-  
-    <li>
-      
-         <a href="#custom-serialization-format">Custom Serialization Format</a> 
-      
-      
-    </li>
-  
-  </ul>
-      
-    </li>
-  
- 
-                    </ul>
-                  </nav>
-                </div>
-              
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <footer class="small-12 medium-12 large-12 columns align-self-bottom a_footer">
-        <div class="row">
-          <div class="small-12 medium-12 large-12 columns top-bar">
-            <div class="top-bar-left">
-              
-            </div>
-            <div class="top-bar-right">
-              <p>Generated with <a href="https://github.com/szeiger/ornate">Ornate</a>.</p>
+</div>
+<div class="md-footer-social">
+<a href="https://github.com/julienrf/endpoints" class="md-footer-social__link fa fa-github"></a>
+</div>
 
-            </div>
-          </div>
-        </div>
-      </footer>
-    </div>
-    
-    <script src="../theme/js/jquery.min.js"></script>
-    <script src="../theme/js/what-input.min.js"></script>
-    <script src="../theme/js/foundation.min.js"></script>
-    
-    <script src="../theme/js/app.js"></script>
-    
-  </body>
+</div>
+</div>
+</footer>
+
+</div>
+<script src="../assets/javascripts/application.583bbe55.js"></script>
+<script src="../assets/javascripts/paradox-material-theme.js"></script>
+<script>app.initialize({version:"0.17",url:{base:"../."}})</script>
+<script type="text/javascript" src="../lib/prettify/prettify.js"></script>
+<script type="text/javascript" src="../lib/prettify/lang-scala.js"></script>
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function(event) {
+window.prettyPrint && prettyPrint();
+});
+</script>
+</body>
 </html>

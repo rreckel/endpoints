@@ -1,148 +1,285 @@
 <!DOCTYPE html>
-<html class="no-js" lang="eng" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OpenAPI</title>
-    <link rel="stylesheet" href="../theme/css/foundation.min.css">
-    <link rel="stylesheet" href="../theme/css/app.css">
-    
-     <link rel="stylesheet" href="../theme/highlight.js/styles/github-gist.css">  <link rel="stylesheet" href="../theme/css/foundation-icons.custom.css"> 
-    
-     <link rel="toc" href="../site-contents.html"  title="Table of Contents"  /> 
-  </head>
-  <body>
-    <div class="expanded row">
-      <div class="small-12 medium-12 large-12 columns align-self-top">
-        <div class="row">
-          
-          <header class="large-12 columns align-self-top a_header">
-            <div class="row">
-              <div class="large-12 columns a_limited top-bar">
-                <div class="top-bar-left">
-                  <p>endpoints 0.14.0</p>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="description" content="manual">
+<meta name="generator" content="Paradox, paradox-material-theme=0.6.0, mkdocs-material=3.0.3">
 
-                </div>
-                <div class="top-bar-right align-right row">
-                  
-                  
-                    <form action="../site-search.html" method="get" class="align-right a_search">
-                      <input name="q" type="search"  placeholder="Search
-" >
-                      <button><img alt="&#1F50D;" src="../theme/images/search.svg" /></button>
-                    </form>
-                  
-                </div>
-              </div>
-            </div>
-          </header>
-          
-          <div class="small-12 medium-12 large-12 columns align-self-top a_limited a_main">
-            <div class="row">
-              
-              <main class="columns large-order-2 sections" id="_sections">
-                 
-  <ul class="menu align-right simple a_navbar a_navbar_top">
-    
-      
-        <li><a href="../site-contents.html"  title="Table of Contents" ><span class="a_foundation_icon"></span>  Contents</a></li>
-      
-    
-  </ul>
- 
-                
-                <h1 id="openapi" class="a_section" data-magellan-target="openapi">OpenAPI<a class="a_hlink" href="#openapi"></a></h1>
-<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
-<pre class="hljs"><code class="language-scala"><span class="hljs-string">"org.julienrf"</span> %% <span class="hljs-string">"endpoints-openapi"</span> % <span class="hljs-string">"0.14.0"</span>
+<meta name="lang:clipboard.copy" content="Copy to clipboard">
+<meta name="lang:clipboard.copied" content="Copied to clipboard">
+<meta name="lang:search.language" content="">
+<meta name="lang:search.pipeline.stopwords" content="true">
+<meta name="lang:search.pipeline.trimmer" content="true">
+<meta name="lang:search.result.none" content="No matching documents">
+<meta name="lang:search.result.one" content="1 matching document">
+<meta name="lang:search.result.other" content="# matching documents">
+<meta name="lang:search.tokenizer" content="[\s\-]+">
+
+
+<meta name="description" content="manual">
+<link rel="shortcut icon" href="../assets/images/favicon.png">
+<title>OpenAPI · endpoints</title>
+<link rel="stylesheet" href="../assets/stylesheets/application.451f80e5.css">
+<link rel="stylesheet" href="../lib/material__tabs/dist/mdc.tabs.min.css">
+<link rel="stylesheet" href="../lib/prettify/prettify.css">
+<script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+<style>
+body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}
+code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}
+</style>
+<link rel="stylesheet" href="../assets/fonts/font-awesome.css">
+<link rel="stylesheet" href="../assets/fonts/material-icons.css">
+<link rel="stylesheet" href="../assets/stylesheets/paradox-material-theme.css">
+<link rel="stylesheet" href="../snippets.css">
+</head>
+<body
+>
+<input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+<input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+<label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+<header class="md-header" data-md-component="header">
+<nav class="md-header-nav md-grid">
+<div class="md-flex">
+<div class="md-flex__cell md-flex__cell--shrink">
+<a href="../index.html" title="endpoints" class="md-header-nav__button md-logo">
+<i class="md-icon">local_library</i>
+</a>
+</div>
+<div class="md-flex__cell md-flex__cell--shrink">
+<label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+</div>
+<div class="md-flex__cell md-flex__cell--stretch">
+<div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+<span class="md-header-nav__topic">
+endpoints
+</span>
+<span class="md-header-nav__topic">
+OpenAPI
+</span>
+</div>
+</div>
+<div class="md-flex__cell md-flex__cell--shrink">
+<label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+<label class="md-icon md-search__icon" for="__search"></label>
+<button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">&#xE5CD;</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix>
+<div class="md-search-result" data-md-component="result">
+<div class="md-search-result__meta">
+Type to start searching
+</div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="md-flex__cell md-flex__cell--shrink">
+<div class="md-header-nav__source">
+<a href="https://github.com/julienrf/endpoints"
+title="Go to repository"
+class="md-source"
+data-md-source="github">
+<div class="md-source__icon">
+<i class="fa fa-github"></i>
+</div>
+<div class="md-source__repository">
+julienrf/endpoints
+</div>
+</a>
+
+</div>
+</div>
+</div>
+</nav>
+</header>
+
+<div class="md-container">
+<main class="md-main">
+<div class="md-main__inner md-grid" data-md-component="container">
+<div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav class="md-nav md-nav--primary" data-md-level="0" style="visibility: hidden">
+<label class="md-nav__title md-nav__title--site" for="drawer">
+<a href="../index.html" title="endpoints" class="md-nav__button md-logo">
+<span class="md-nav__button md-logo">
+<i class="md-icon">local_library</i>
+</a>
+<a href="../index.html" title="endpoints">
+endpoints
+</a>
+</label>
+<div class="md-nav__source">
+<a href="https://github.com/julienrf/endpoints"
+title="Go to repository"
+class="md-source"
+data-md-source="github">
+<div class="md-source__icon">
+<i class="fa fa-github"></i>
+</div>
+<div class="md-source__repository">
+julienrf/endpoints
+</div>
+</a>
+
+</div>
+<ul>
+  <li><a href="../use-cases.html" class="page">Use Cases</a></li>
+  <li><a href="../quick-start.html" class="page">Quick start</a></li>
+  <li><a href="../design.html" class="page">Design in a nutshell</a></li>
+  <li><a href="../algebras-and-interpreters.html" class="page">Algebras and interpreters</a>
+  <ul>
+    <li><a href="../algebras/endpoints.html" class="page"><code>Endpoints</code></a></li>
+    <li><a href="../algebras/json-entities.html" class="page">JSON Entities</a></li>
+    <li><a href="../algebras/json-schemas.html" class="page">JSON Schemas</a></li>
+    <li><a href="../algebras/chunked-entities.html" class="page">Chunked Entities</a></li>
+    <li><a href="../algebras/assets.html" class="page">Assets</a></li>
+    <li><a href="../algebras/mux-endpoints.html" class="page">Multiplexed Endpoints</a></li>
+    <li><a href="../interpreters/akka-http.html" class="page">Akka HTTP</a></li>
+    <li><a href="../interpreters/play.html" class="page">Play framework</a></li>
+    <li><a href="../interpreters/http4s.html" class="page">http4s</a></li>
+    <li><a href="../interpreters/scalajs-web.html" class="page">Scala.js web client</a></li>
+    <li><a href="../interpreters/scalaj-http.html" class="page">scalaj-http</a></li>
+    <li><a href="../interpreters/sttp.html" class="page">sttp</a></li>
+    <li><a href="../interpreters/openapi.html" class="active page">OpenAPI</a></li>
+    <li><a href="../interpreters/circe.html" class="page">Circe</a></li>
+    <li><a href="../interpreters/play-json.html" class="page">Play JSON</a></li>
+  </ul></li>
+  <li><a href="../guides.html" class="page">Guides</a>
+  <ul>
+    <li><a href="../guides/tupler.html" class="page"><code>Tupler</code></a></li>
+    <li><a href="../guides/custom-authentication.html" class="page">Application-specific authentication</a></li>
+  </ul></li>
+  <li><a href="../comparison.html" class="page">Comparison with similar tools</a></li>
+  <li><a href="../talks.html" class="page">Talks and Publications</a></li>
+</ul>
+<nav class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">Table of contents</label>
+<ul>
+  <li><a href="../interpreters/openapi.html#openapi" class="header">OpenAPI</a>
+  <ul>
+    <li><a href="../interpreters/openapi.html#endpoints" class="header">Endpoints</a></li>
+    <li><a href="../interpreters/openapi.html#json-entities" class="header">JSON entities</a></li>
+  </ul></li>
+</ul>
+</nav>
+
+</nav>
+<ul style="display: none">
+<li class="md-nav__item md-version" id="project.version">
+<label class="md-nav__link" for="__version">
+<i class="md-icon" title="Version">label_outline</i> 0.15.0
+</label>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">Table of contents</label>
+<ul>
+  <li><a href="../interpreters/openapi.html#openapi" class="header">OpenAPI</a>
+  <ul>
+    <li><a href="../interpreters/openapi.html#endpoints" class="header">Endpoints</a></li>
+    <li><a href="../interpreters/openapi.html#json-entities" class="header">JSON entities</a></li>
+  </ul></li>
+</ul>
+</nav>
+
+</div>
+</div>
+</div>
+<div class="md-content">
+<article class="md-content__inner md-typeset">
+<div class="md-content__searchable">
+<h1><a href="#openapi" name="openapi" class="anchor"><span class="anchor-link"></span></a>OpenAPI</h1>
+<pre class="prettyprint"><code class="language-scala">&quot;org.julienrf&quot; %% &quot;endpoints-openapi&quot; % &quot;0.15.0&quot;
 </code></pre>
-</div></div>
-<p><a href="../api/endpoints/openapi/index.html">API documentation</a></p>
-<p>This family of interpreters produces static documentation for endpoint definitions,
-in the form of an <a href="https://www.openapis.org/">OpenAPI document</a>.</p>
-<h2 id="endpoints" class="a_section" data-magellan-target="endpoints">Endpoints<a class="a_hlink" href="#endpoints"></a></h2>
-<p>The <code class="hljs">Endpoints</code> interpreter provides an <code class="hljs">openApi</code> method
-that takes as parameter a sequence of endpoints for which
-to generate an OpenAPI document.</p>
+<p><a href="/api/endpoints/openapi/index.html">API documentation</a></p>
+<p>This family of interpreters produces static documentation for endpoint definitions, in the form of an <a href="https://www.openapis.org/">OpenAPI document</a>.</p>
+<h2><a href="#endpoints" name="endpoints" class="anchor"><span class="anchor-link"></span></a>Endpoints</h2>
+<p>The <code>Endpoints</code> interpreter provides an <code>openApi</code> method that takes as parameter a sequence of endpoints for which to generate an OpenAPI document.</p>
 <p>Given the following endpoint definition:</p>
-<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
-<pre class="hljs"><code class="language-scala"><span class="hljs-keyword">import</span> endpoints.algebra
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/algebras/algebra/src/test/scala/endpoints/algebra/EndpointsDocs.scala#L104-L114" target="_blank" title="Go to snippet source"></a><code class="language-scala">import endpoints.algebra
 
-<span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">DocumentedEndpoints</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">algebra</span>.<span class="hljs-title">Endpoints</span> </span>{
+trait DocumentedEndpoints extends algebra.Endpoints {
 
-  <span class="hljs-keyword">val</span> someDocumentedResource: <span class="hljs-type">Endpoint</span>[<span class="hljs-type">Int</span>, <span class="hljs-type">String</span>] =
+  val someDocumentedResource: Endpoint[Int, String] =
     endpoint(
-      get(path / <span class="hljs-string">"some-resource"</span> / segment[<span class="hljs-type">Int</span>](<span class="hljs-string">"id"</span>)),
-      ok(textResponse, docs = <span class="hljs-type">Some</span>(<span class="hljs-string">"The content of the resource"</span>))
+      get(path / &quot;some-resource&quot; / segment[Int](&quot;id&quot;)),
+      ok(textResponse, docs = Some(&quot;The content of the resource&quot;))
     )
 
 }</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.14.0/algebras/algebra/src/test/scala/endpoints/algebra/EndpointsDocs.scala#L93-L103" class="a_sourcelink">EndpointsDocs.scala</a></div></div>
 <p>It can be documented as follows:</p>
-<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
-<pre class="hljs"><code class="language-scala"><span class="hljs-keyword">import</span> endpoints.openapi
-<span class="hljs-keyword">import</span> endpoints.openapi.model.{<span class="hljs-type">Info</span>, <span class="hljs-type">OpenApi</span>}
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/openapi/openapi/src/test/scala/endpoints/openapi/EndpointsDocs.scala#L6-L21" target="_blank" title="Go to snippet source"></a><code class="language-scala">import endpoints.openapi
+import endpoints.openapi.model.{Info, OpenApi}
 
-<span class="hljs-class"><span class="hljs-keyword">object</span> <span class="hljs-title">EndpointsDocs</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">DocumentedEndpoints</span> <span class="hljs-keyword">with</span> <span class="hljs-title">openapi</span>.<span class="hljs-title">Endpoints</span> </span>{
+object EndpointsDocs extends DocumentedEndpoints with openapi.Endpoints {
 
-  <span class="hljs-keyword">val</span> api: <span class="hljs-type">OpenApi</span> =
-    openApi(<span class="hljs-type">Info</span>(title = <span class="hljs-string">"API to get some resource"</span>, version = <span class="hljs-string">"1.0"</span>))(
+  val api: OpenApi =
+    openApi(Info(title = &quot;API to get some resource&quot;, version = &quot;1.0&quot;))(
       someDocumentedResource
     )
 
 }</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.14.0/openapi/openapi/src/test/scala/endpoints/openapi/EndpointsDocs.scala#L6-L21" class="a_sourcelink">EndpointsDocs.scala</a></div></div>
-<p>The value returned by the <code class="hljs">openApi</code> method has type <code class="hljs">endpoints.openapi.models.OpenApi</code>,
-which is an abstract model for OpenAPI documents. You can encode it into JSON by using the
-<code class="hljs">OpenApi.stringEncoder</code> encoder.</p>
-<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
-<pre class="hljs"><code class="language-scala"><span class="hljs-keyword">val</span> apiJson: <span class="hljs-type">String</span> = <span class="hljs-type">OpenApi</span>.stringEncoder.encode(api)</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.14.0/openapi/openapi/src/test/scala/endpoints/openapi/EndpointsDocs.scala#L18" class="a_sourcelink">EndpointsDocs.scala</a></div></div>
-<p>In case the endpoint that serves the documentation is itself defined using <em>endpoints</em>,
-you can use the <code class="hljs">JsonEntitiesFromEncoderAndDecoder</code> interpreter to define an endpoint
-returning the <code class="hljs">OpenApi</code> document as a JSON entity. Here is an example using Akka
-HTTP:</p>
-<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
-<pre class="hljs"><code class="language-scala"><span class="hljs-keyword">import</span> endpoints.openapi.model.<span class="hljs-type">OpenApi</span>
-<span class="hljs-keyword">import</span> endpoints.akkahttp.server
+<p>The value returned by the <code>openApi</code> method has type <code>endpoints.openapi.models.OpenApi</code>, which is an abstract model for OpenAPI documents. You can encode it into JSON by using the <code>OpenApi.stringEncoder</code> encoder. </p>
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/openapi/openapi/src/test/scala/endpoints/openapi/EndpointsDocs.scala#L18" target="_blank" title="Go to snippet source"></a><code class="language-scala">val apiJson: String = OpenApi.stringEncoder.encode(api)</code></pre>
+<p>In case the endpoint that serves the documentation is itself defined using <em>endpoints</em>, you can use the <code>JsonEntitiesFromEncoderAndDecoder</code> interpreter to define an endpoint returning the <code>OpenApi</code> document as a JSON entity. Here is an example using Akka HTTP:</p>
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/documentation/examples/quickstart/server/src/main/scala/quickstart/Main.scala#L16-L27" target="_blank" title="Go to snippet source"></a><code class="language-scala">import endpoints.openapi.model.OpenApi
+import endpoints.akkahttp.server
 
-<span class="hljs-class"><span class="hljs-keyword">object</span> <span class="hljs-title">DocumentationServer</span></span>
-  <span class="hljs-keyword">extends</span> server.<span class="hljs-type">Endpoints</span> <span class="hljs-keyword">with</span> server.<span class="hljs-type">JsonEntitiesFromEncodersAndDecoders</span> {
+object DocumentationServer
+    extends server.Endpoints
+    with server.JsonEntitiesFromEncodersAndDecoders {
 
-  <span class="hljs-keyword">val</span> routes =
-    endpoint(get(path / <span class="hljs-string">"documentation.json"</span>), ok(jsonResponse[<span class="hljs-type">OpenApi</span>]))
-      .implementedBy(_ =&gt; <span class="hljs-type">CounterDocumentation</span>.api)
+  val routes =
+    endpoint(get(path / &quot;documentation.json&quot;), ok(jsonResponse[OpenApi]))
+      .implementedBy(_ =&gt; CounterDocumentation.api)
 
 }</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.14.0/documentation/examples/quickstart/server/src/main/scala/quickstart/Main.scala#L16-L26" class="a_sourcelink">Main.scala</a></div></div>
-<p>Finally, the <code class="hljs">apiJson</code> value contains the following JSON document:</p>
-<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
-<pre class="hljs"><code class="language-json">{
-  <span class="hljs-attr">"openapi"</span> : <span class="hljs-string">"3.0.0"</span>,
-  <span class="hljs-attr">"info"</span> : {
-    <span class="hljs-attr">"title"</span> : <span class="hljs-string">"API to get some resource"</span>,
-    <span class="hljs-attr">"version"</span> : <span class="hljs-string">"1.0"</span>
+<p>Finally, the <code>apiJson</code> value contains the following JSON document:</p>
+<pre class="prettyprint"><code class="language-json">{
+  &quot;openapi&quot; : &quot;3.0.0&quot;,
+  &quot;info&quot; : {
+    &quot;title&quot; : &quot;API to get some resource&quot;,
+    &quot;version&quot; : &quot;1.0&quot;
   },
-  <span class="hljs-attr">"paths"</span> : {
-    <span class="hljs-attr">"/some-resource/{id}"</span> : {
-      <span class="hljs-attr">"get"</span> : {
-        <span class="hljs-attr">"parameters"</span> : [
+  &quot;paths&quot; : {
+    &quot;/some-resource/{id}&quot; : {
+      &quot;get&quot; : {
+        &quot;parameters&quot; : [
           {
-            <span class="hljs-attr">"name"</span> : <span class="hljs-string">"id"</span>,
-            <span class="hljs-attr">"in"</span> : <span class="hljs-string">"path"</span>,
-            <span class="hljs-attr">"schema"</span> : {
-              <span class="hljs-attr">"type"</span> : <span class="hljs-string">"integer"</span>
+            &quot;name&quot; : &quot;id&quot;,
+            &quot;in&quot; : &quot;path&quot;,
+            &quot;schema&quot; : {
+              &quot;type&quot; : &quot;integer&quot;
             },
-            <span class="hljs-attr">"required"</span> : <span class="hljs-literal">true</span>
+            &quot;required&quot; : true
           }
         ],
-        <span class="hljs-attr">"responses"</span> : {
-          <span class="hljs-attr">"200"</span> : {
-            <span class="hljs-attr">"description"</span> : <span class="hljs-string">"The content of the resource"</span>,
-            <span class="hljs-attr">"content"</span> : {
-              <span class="hljs-attr">"text/plain"</span> : {
-                <span class="hljs-attr">"schema"</span> : {
-                  <span class="hljs-attr">"type"</span> : <span class="hljs-string">"string"</span>
+        &quot;responses&quot; : {
+          &quot;200&quot; : {
+            &quot;description&quot; : &quot;The content of the resource&quot;,
+            &quot;content&quot; : {
+              &quot;text/plain&quot; : {
+                &quot;schema&quot; : {
+                  &quot;type&quot; : &quot;string&quot;
                 }
               }
             }
@@ -153,174 +290,81 @@ HTTP:</p>
   }
 }
 </code></pre>
-</div></div>
-<h2 id="json-entities" class="a_section" data-magellan-target="json-entities">JSON entities<a class="a_hlink" href="#json-entities"></a></h2>
-<p>To properly document the underlying JSON schema of your <a href="../algebras/json-entities.html">JSON entities</a>,
-you have to define these schemas by using the
-<a href="../algebras/json-entities.html#jsonentitiesfromschemas">JsonEntitiesFromSchemas</a>
-algebra (and its corresponding interpreter).</p>
+<h2><a href="#json-entities" name="json-entities" class="anchor"><span class="anchor-link"></span></a>JSON entities</h2>
+<p>To properly document the underlying JSON schema of your <a href="../algebras/json-entities.html">JSON entities</a>, you have to define these schemas by using the <a href="../algebras/json-entities.html#jsonentitiesfromschemas">JsonEntitiesFromSchemas</a> algebra (and its corresponding interpreter).</p>
+</div>
+<div>
+<a href="https://github.com/julienrf/endpoints/tree/0.15.0/documentation/manual/src/paradox/interpreters/openapi.md" title="Edit this page" class="md-source-file md-edit">
+Edit this page
+</a>
+</div>
+<div class="print-only">
+<span class="md-source-file md-version">
+0.15.0
+</span>
+</div>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-nav">
+<nav class="md-footer-nav__inner md-grid">
+<a href="../interpreters/sttp.html" title="sttp" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+<div class="md-flex__cell md-flex__cell--shrink">
+<i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+</div>
+<div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+<span class="md-flex__ellipsis">
+<span class="md-footer-nav__direction">
+Previous
+</span>
+sttp
+</span>
+</div>
+</a>
+<a href="../interpreters/circe.html" title="Circe" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+<div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+<span class="md-flex__ellipsis">
+<span class="md-footer-nav__direction">
+Next
+</span>
+Circe
+</span>
+</div>
+<div class="md-flex__cell md-flex__cell--shrink">
+<i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+</div>
+</a>
+</nav>
+</div>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+Powered by
+<a href="https://github.com/lightbend/paradox">Paradox</a>
+and
+<a href="https://jonas.github.io/paradox-material-theme/">Paradox Material Theme</a>
 
-                 
-  <ul class="menu align-right simple a_navbar a_navbar_bottom">
-    
-      
-        <li><a href="../site-contents.html"  title="Table of Contents" ><span class="a_foundation_icon"></span>  Contents</a></li>
-      
-    
-  </ul>
- 
-              </main>
-              
-              
-                <div data-sticky-container class="small-12 medium-12 large-2 large-order-1 columns a_sitenav_container">
-                  <nav class="a_sitenav" data-sticky data-sticky-on="large" data-anchor="_sections">
-                    
-                    <ul>
-                       
-  <li >
-    
-      
-        <a href="../index.html">Introduction</a>
-      
-    
-    
-  </li>
-  
-  <li >
-    
-      
-        <a href="../use-cases.html">Use Cases</a>
-      
-    
-    
-  </li>
-  
-  <li >
-    
-      
-        <a href="../quick-start.html">Quick start</a>
-      
-    
-    
-  </li>
-  
-  <li >
-    
-      
-        <a href="../design.html">Design in a nutshell</a>
-      
-    
-    
-  </li>
-  
-  <li >
-    
-      
-        <a href="../algebras-and-interpreters.html">Algebras and interpreters</a>
-      
-    
-    
-  </li>
-  
-  <li >
-    
-      
-        <a href="../guides.html">Guides</a>
-      
-    
-    
-  </li>
-  
-  <li >
-    
-      
-        <a href="../comparison.html">Comparison with similar tools</a>
-      
-    
-    
-  </li>
-  
-  <li >
-    
-      
-        <a href="../talks.html">Talks and Publications</a>
-      
-    
-    
-  </li>
- 
-                    </ul>
-                    
-                    
-                  </nav>
-                </div>
-              
-              
-              
-                <div class="small-12 medium-12 large-2 large-order-3 columns a_show-for-xlarge" data-sticky-container>
-                  <nav class="a_pagenav" data-sticky data-sticky-on="large" data-anchor="_sections">
-                     <header><p>On This Page</p>
-</header> 
-                    <ul class="vertical menu" data-magellan>
-                       
-  
-    <li>
-      
-         <a href="#openapi">OpenAPI</a> 
-      
-      
-        <ul class="vertical menu">  
-  
-    <li>
-      
-         <a href="#endpoints">Endpoints</a> 
-      
-      
-    </li>
-  
-  
-  
-    <li>
-      
-         <a href="#json-entities">JSON entities</a> 
-      
-      
-    </li>
-  
-  </ul>
-      
-    </li>
-  
- 
-                    </ul>
-                  </nav>
-                </div>
-              
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <footer class="small-12 medium-12 large-12 columns align-self-bottom a_footer">
-        <div class="row">
-          <div class="small-12 medium-12 large-12 columns top-bar">
-            <div class="top-bar-left">
-              
-            </div>
-            <div class="top-bar-right">
-              <p>Generated with <a href="https://github.com/szeiger/ornate">Ornate</a>.</p>
+</div>
+<div class="md-footer-social">
+<a href="https://github.com/julienrf/endpoints" class="md-footer-social__link fa fa-github"></a>
+</div>
 
-            </div>
-          </div>
-        </div>
-      </footer>
-    </div>
-    
-    <script src="../theme/js/jquery.min.js"></script>
-    <script src="../theme/js/what-input.min.js"></script>
-    <script src="../theme/js/foundation.min.js"></script>
-    
-    <script src="../theme/js/app.js"></script>
-    
-  </body>
+</div>
+</div>
+</footer>
+
+</div>
+<script src="../assets/javascripts/application.583bbe55.js"></script>
+<script src="../assets/javascripts/paradox-material-theme.js"></script>
+<script>app.initialize({version:"0.17",url:{base:"../."}})</script>
+<script type="text/javascript" src="../lib/prettify/prettify.js"></script>
+<script type="text/javascript" src="../lib/prettify/lang-scala.js"></script>
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function(event) {
+window.prettyPrint && prettyPrint();
+});
+</script>
+</body>
 </html>

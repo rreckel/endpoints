@@ -1,371 +1,349 @@
 <!DOCTYPE html>
-<html class="no-js" lang="eng" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Play framework</title>
-    <link rel="stylesheet" href="../theme/css/foundation.min.css">
-    <link rel="stylesheet" href="../theme/css/app.css">
-    
-     <link rel="stylesheet" href="../theme/highlight.js/styles/github-gist.css">  <link rel="stylesheet" href="../theme/css/foundation-icons.custom.css"> 
-    
-     <link rel="toc" href="../site-contents.html"  title="Table of Contents"  /> 
-  </head>
-  <body>
-    <div class="expanded row">
-      <div class="small-12 medium-12 large-12 columns align-self-top">
-        <div class="row">
-          
-          <header class="large-12 columns align-self-top a_header">
-            <div class="row">
-              <div class="large-12 columns a_limited top-bar">
-                <div class="top-bar-left">
-                  <p>endpoints 0.14.0</p>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="description" content="manual">
+<meta name="generator" content="Paradox, paradox-material-theme=0.6.0, mkdocs-material=3.0.3">
 
-                </div>
-                <div class="top-bar-right align-right row">
-                  
-                  
-                    <form action="../site-search.html" method="get" class="align-right a_search">
-                      <input name="q" type="search"  placeholder="Search
-" >
-                      <button><img alt="&#1F50D;" src="../theme/images/search.svg" /></button>
-                    </form>
-                  
-                </div>
-              </div>
-            </div>
-          </header>
-          
-          <div class="small-12 medium-12 large-12 columns align-self-top a_limited a_main">
-            <div class="row">
-              
-              <main class="columns large-order-2 sections" id="_sections">
-                 
-  <ul class="menu align-right simple a_navbar a_navbar_top">
-    
-      
-        <li><a href="../site-contents.html"  title="Table of Contents" ><span class="a_foundation_icon"></span>  Contents</a></li>
-      
-    
-  </ul>
- 
-                
-                <h1 id="play-framework" class="a_section" data-magellan-target="play-framework">Play framework<a class="a_hlink" href="#play-framework"></a></h1>
+<meta name="lang:clipboard.copy" content="Copy to clipboard">
+<meta name="lang:clipboard.copied" content="Copied to clipboard">
+<meta name="lang:search.language" content="">
+<meta name="lang:search.pipeline.stopwords" content="true">
+<meta name="lang:search.pipeline.trimmer" content="true">
+<meta name="lang:search.result.none" content="No matching documents">
+<meta name="lang:search.result.one" content="1 matching document">
+<meta name="lang:search.result.other" content="# matching documents">
+<meta name="lang:search.tokenizer" content="[\s\-]+">
+
+
+<meta name="description" content="manual">
+<link rel="shortcut icon" href="../assets/images/favicon.png">
+<title>Play framework · endpoints</title>
+<link rel="stylesheet" href="../assets/stylesheets/application.451f80e5.css">
+<link rel="stylesheet" href="../lib/material__tabs/dist/mdc.tabs.min.css">
+<link rel="stylesheet" href="../lib/prettify/prettify.css">
+<script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+<style>
+body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}
+code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}
+</style>
+<link rel="stylesheet" href="../assets/fonts/font-awesome.css">
+<link rel="stylesheet" href="../assets/fonts/material-icons.css">
+<link rel="stylesheet" href="../assets/stylesheets/paradox-material-theme.css">
+<link rel="stylesheet" href="../snippets.css">
+</head>
+<body
+>
+<input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+<input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+<label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+<header class="md-header" data-md-component="header">
+<nav class="md-header-nav md-grid">
+<div class="md-flex">
+<div class="md-flex__cell md-flex__cell--shrink">
+<a href="../index.html" title="endpoints" class="md-header-nav__button md-logo">
+<i class="md-icon">local_library</i>
+</a>
+</div>
+<div class="md-flex__cell md-flex__cell--shrink">
+<label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+</div>
+<div class="md-flex__cell md-flex__cell--stretch">
+<div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+<span class="md-header-nav__topic">
+endpoints
+</span>
+<span class="md-header-nav__topic">
+Play framework
+</span>
+</div>
+</div>
+<div class="md-flex__cell md-flex__cell--shrink">
+<label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+<label class="md-icon md-search__icon" for="__search"></label>
+<button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">&#xE5CD;</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix>
+<div class="md-search-result" data-md-component="result">
+<div class="md-search-result__meta">
+Type to start searching
+</div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="md-flex__cell md-flex__cell--shrink">
+<div class="md-header-nav__source">
+<a href="https://github.com/julienrf/endpoints"
+title="Go to repository"
+class="md-source"
+data-md-source="github">
+<div class="md-source__icon">
+<i class="fa fa-github"></i>
+</div>
+<div class="md-source__repository">
+julienrf/endpoints
+</div>
+</a>
+
+</div>
+</div>
+</div>
+</nav>
+</header>
+
+<div class="md-container">
+<main class="md-main">
+<div class="md-main__inner md-grid" data-md-component="container">
+<div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav class="md-nav md-nav--primary" data-md-level="0" style="visibility: hidden">
+<label class="md-nav__title md-nav__title--site" for="drawer">
+<a href="../index.html" title="endpoints" class="md-nav__button md-logo">
+<span class="md-nav__button md-logo">
+<i class="md-icon">local_library</i>
+</a>
+<a href="../index.html" title="endpoints">
+endpoints
+</a>
+</label>
+<div class="md-nav__source">
+<a href="https://github.com/julienrf/endpoints"
+title="Go to repository"
+class="md-source"
+data-md-source="github">
+<div class="md-source__icon">
+<i class="fa fa-github"></i>
+</div>
+<div class="md-source__repository">
+julienrf/endpoints
+</div>
+</a>
+
+</div>
+<ul>
+  <li><a href="../use-cases.html" class="page">Use Cases</a></li>
+  <li><a href="../quick-start.html" class="page">Quick start</a></li>
+  <li><a href="../design.html" class="page">Design in a nutshell</a></li>
+  <li><a href="../algebras-and-interpreters.html" class="page">Algebras and interpreters</a>
+  <ul>
+    <li><a href="../algebras/endpoints.html" class="page"><code>Endpoints</code></a></li>
+    <li><a href="../algebras/json-entities.html" class="page">JSON Entities</a></li>
+    <li><a href="../algebras/json-schemas.html" class="page">JSON Schemas</a></li>
+    <li><a href="../algebras/chunked-entities.html" class="page">Chunked Entities</a></li>
+    <li><a href="../algebras/assets.html" class="page">Assets</a></li>
+    <li><a href="../algebras/mux-endpoints.html" class="page">Multiplexed Endpoints</a></li>
+    <li><a href="../interpreters/akka-http.html" class="page">Akka HTTP</a></li>
+    <li><a href="../interpreters/play.html" class="active page">Play framework</a></li>
+    <li><a href="../interpreters/http4s.html" class="page">http4s</a></li>
+    <li><a href="../interpreters/scalajs-web.html" class="page">Scala.js web client</a></li>
+    <li><a href="../interpreters/scalaj-http.html" class="page">scalaj-http</a></li>
+    <li><a href="../interpreters/sttp.html" class="page">sttp</a></li>
+    <li><a href="../interpreters/openapi.html" class="page">OpenAPI</a></li>
+    <li><a href="../interpreters/circe.html" class="page">Circe</a></li>
+    <li><a href="../interpreters/play-json.html" class="page">Play JSON</a></li>
+  </ul></li>
+  <li><a href="../guides.html" class="page">Guides</a>
+  <ul>
+    <li><a href="../guides/tupler.html" class="page"><code>Tupler</code></a></li>
+    <li><a href="../guides/custom-authentication.html" class="page">Application-specific authentication</a></li>
+  </ul></li>
+  <li><a href="../comparison.html" class="page">Comparison with similar tools</a></li>
+  <li><a href="../talks.html" class="page">Talks and Publications</a></li>
+</ul>
+<nav class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">Table of contents</label>
+<ul>
+  <li><a href="../interpreters/play.html#play-framework" class="header">Play framework</a>
+  <ul>
+    <li><a href="../interpreters/play.html#client" class="header">Client</a></li>
+    <li><a href="../interpreters/play.html#server" class="header">Server</a></li>
+  </ul></li>
+</ul>
+</nav>
+
+</nav>
+<ul style="display: none">
+<li class="md-nav__item md-version" id="project.version">
+<label class="md-nav__link" for="__version">
+<i class="md-icon" title="Version">label_outline</i> 0.15.0
+</label>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">Table of contents</label>
+<ul>
+  <li><a href="../interpreters/play.html#play-framework" class="header">Play framework</a>
+  <ul>
+    <li><a href="../interpreters/play.html#client" class="header">Client</a></li>
+    <li><a href="../interpreters/play.html#server" class="header">Server</a></li>
+  </ul></li>
+</ul>
+</nav>
+
+</div>
+</div>
+</div>
+<div class="md-content">
+<article class="md-content__inner md-typeset">
+<div class="md-content__searchable">
+<h1><a href="#play-framework" name="play-framework" class="anchor"><span class="anchor-link"></span></a>Play framework</h1>
 <p>Client and server backed by <a href="https://www.playframework.com/">Play framework</a>.</p>
-<h2 id="client" class="a_section" data-magellan-target="client">Client<a class="a_hlink" href="#client"></a></h2>
-<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
-<pre class="hljs"><code class="language-scala"><span class="hljs-string">"org.julienrf"</span> %% <span class="hljs-string">"endpoints-play-client"</span> % <span class="hljs-string">"0.14.0"</span>
+<h2><a href="#client" name="client" class="anchor"><span class="anchor-link"></span></a>Client</h2>
+<pre class="prettyprint"><code class="language-scala">&quot;org.julienrf&quot; %% &quot;endpoints-play-client&quot; % &quot;0.15.0&quot;
 </code></pre>
-</div></div>
-<p><a href="../api/endpoints/play/client/index.html">API documentation</a></p>
-<p>The <code class="hljs">Endpoints</code> interpreter fixes the <code class="hljs">Endpoint[A, B]</code> type to a function from
-<code class="hljs">A</code> to <code class="hljs">Future[B]</code>:</p>
-<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
-<pre class="hljs"><code class="language-scala"><span class="hljs-class"><span class="hljs-keyword">type</span> <span class="hljs-title">Endpoint</span>[<span class="hljs-type">A</span>, <span class="hljs-type">B</span>] </span>= <span class="hljs-type">A</span> =&gt; <span class="hljs-type">Future</span>[<span class="hljs-type">B</span>]</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.14.0/play/client/src/main/scala/endpoints/play/client/Endpoints.scala#L178" class="a_sourcelink">Endpoints.scala</a></div></div>
+<p><a href="/api/endpoints/play/client/index.html">API documentation</a></p>
+<p>The <code>Endpoints</code> interpreter fixes the <code>Endpoint[A, B]</code> type to a function from <code>A</code> to <code>Future[B]</code>:</p>
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/play/client/src/main/scala/endpoints/play/client/Endpoints.scala#L248" target="_blank" title="Go to snippet source"></a><code class="language-scala">type Endpoint[A, B] = A =&gt; Future[B]</code></pre>
 <p>This means that, given the following endpoint definition:</p>
-<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
-<pre class="hljs"><code class="language-scala"><span class="hljs-keyword">val</span> someResource: <span class="hljs-type">Endpoint</span>[<span class="hljs-type">Int</span>, <span class="hljs-type">String</span>] =
-  endpoint(get(path / <span class="hljs-string">"some-resource"</span> / segment[<span class="hljs-type">Int</span>]()), ok(textResponse))</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.14.0/algebras/algebra/src/test/scala/endpoints/algebra/EndpointsDocs.scala#L75-L76" class="a_sourcelink">EndpointsDocs.scala</a></div></div>
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/algebras/algebra/src/test/scala/endpoints/algebra/EndpointsDocs.scala#L84-L85" target="_blank" title="Go to snippet source"></a><code class="language-scala">val someResource: Endpoint[Int, String] =
+  endpoint(get(path / &quot;some-resource&quot; / segment[Int]()), ok(textResponse))</code></pre>
 <p>It can be invoked as follows:</p>
-<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
-<pre class="hljs"><code class="language-scala"><span class="hljs-keyword">val</span> eventuallyString: <span class="hljs-type">Future</span>[<span class="hljs-type">String</span>] = someResource(<span class="hljs-number">42</span>)</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.14.0/play/client/src/test/scala/endpoints/play/client/EndpointsDocs.scala#L10" class="a_sourcelink">EndpointsDocs.scala</a></div></div>
-<h2 id="server" class="a_section" data-magellan-target="server">Server<a class="a_hlink" href="#server"></a></h2>
-<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
-<pre class="hljs"><code class="language-scala"><span class="hljs-string">"org.julienrf"</span> %% <span class="hljs-string">"endpoints-play-server"</span> % <span class="hljs-string">"0.14.0"</span>
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/play/client/src/test/scala/endpoints/play/client/EndpointsDocs.scala#L10" target="_blank" title="Go to snippet source"></a><code class="language-scala">val eventuallyString: Future[String] = someResource(42)</code></pre>
+<h2><a href="#server" name="server" class="anchor"><span class="anchor-link"></span></a>Server</h2>
+<pre class="prettyprint"><code class="language-scala">&quot;org.julienrf&quot; %% &quot;endpoints-play-server&quot; % &quot;0.15.0&quot;
 </code></pre>
-</div></div>
-<p><a href="../api/endpoints/play/server/index.html">API documentation</a></p>
-<h3 id="endpoints" class="a_section" data-magellan-target="endpoints"><code class="hljs">Endpoints</code><a class="a_hlink" href="#endpoints"></a></h3>
-<p>The <code class="hljs">Endpoints</code> interpreter provides a <code class="hljs">routesFromEndpoints</code> operation that turns
-a sequence of endpoints with their implementation into a <code class="hljs">play.api.routing.Router.Routes</code>
-value that can be integrated to your Play application.</p>
+<p><a href="/api/endpoints/play/server/index.html">API documentation</a></p>
+<h3><a href="#endpoints" name="endpoints" class="anchor"><span class="anchor-link"></span></a><code>Endpoints</code></h3>
+<p>The <code>Endpoints</code> interpreter provides a <code>routesFromEndpoints</code> operation that turns a sequence of endpoints with their implementation into a <code>play.api.routing.Router.Routes</code> value that can be integrated to your Play application.</p>
 <p>For instance, given the following endpoint definition:</p>
-<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
-<pre class="hljs"><code class="language-scala"><span class="hljs-keyword">val</span> someResource: <span class="hljs-type">Endpoint</span>[<span class="hljs-type">Int</span>, <span class="hljs-type">String</span>] =
-  endpoint(get(path / <span class="hljs-string">"some-resource"</span> / segment[<span class="hljs-type">Int</span>]()), ok(textResponse))</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.14.0/algebras/algebra/src/test/scala/endpoints/algebra/EndpointsDocs.scala#L75-L76" class="a_sourcelink">EndpointsDocs.scala</a></div></div>
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/algebras/algebra/src/test/scala/endpoints/algebra/EndpointsDocs.scala#L84-L85" target="_blank" title="Go to snippet source"></a><code class="language-scala">val someResource: Endpoint[Int, String] =
+  endpoint(get(path / &quot;some-resource&quot; / segment[Int]()), ok(textResponse))</code></pre>
 <p>It can be implemented as follows:</p>
-<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
-<pre class="hljs"><code class="language-scala"><span class="hljs-keyword">val</span> routes: <span class="hljs-type">Router</span>.<span class="hljs-type">Routes</span> =
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/play/server/src/test/scala/endpoints/play/server/EndpointsDocs.scala#L9-L12" target="_blank" title="Go to snippet source"></a><code class="language-scala">val routes: Router.Routes =
   routesFromEndpoints(
-    someResource.implementedBy(x =&gt; <span class="hljs-string">s"Received <span class="hljs-subst">$x</span>"</span>)
+    someResource.implementedBy(x =&gt; s&quot;Received $x&quot;)
   )</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.14.0/play/server/src/test/scala/endpoints/play/server/EndpointsDocs.scala#L9-L12" class="a_sourcelink">EndpointsDocs.scala</a></div></div>
-<p>In practice, the routes are put in a class taking an <code class="hljs">endpoints.play.server.PlayComponents</code>
-parameter. An HTTP server can then be started as in the following example:</p>
-<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
-<pre class="hljs"><code class="language-scala"><span class="hljs-class"><span class="hljs-keyword">object</span> <span class="hljs-title">Main</span> </span>{
-  <span class="hljs-comment">// JVM entry point that starts the HTTP server</span>
-  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span></span>(args: <span class="hljs-type">Array</span>[<span class="hljs-type">String</span>]): <span class="hljs-type">Unit</span> = {
-    <span class="hljs-keyword">val</span> playConfig = <span class="hljs-type">ServerConfig</span>(port = sys.props.get(<span class="hljs-string">"http.port"</span>).map(_.toInt).orElse(<span class="hljs-type">Some</span>(<span class="hljs-number">9000</span>)))
-    <span class="hljs-type">NettyServer</span>.fromRouterWithComponents(playConfig) { components =&gt;
-      <span class="hljs-keyword">val</span> playComponents = <span class="hljs-type">PlayComponents</span>.fromBuiltInComponents(components)
-      <span class="hljs-keyword">new</span> <span class="hljs-type">CounterServer</span>(playComponents).routes orElse <span class="hljs-keyword">new</span> <span class="hljs-type">DocumentationServer</span>(playComponents).routes
+<p>In practice, the routes are put in a class taking an <code>endpoints.play.server.PlayComponents</code> parameter. An HTTP server can then be started as in the following example:</p>
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/documentation/examples/documented/src/main/scala/counter/Counter.scala#L121-L163" target="_blank" title="Go to snippet source"></a><code class="language-scala">object Main {
+  // JVM entry point that starts the HTTP server
+  def main(args: Array[String]): Unit = {
+    val playConfig = ServerConfig(port =
+      sys.props.get(&quot;http.port&quot;).map(_.toInt).orElse(Some(9000))
+    )
+    NettyServer.fromRouterWithComponents(playConfig) { components =&gt;
+      val playComponents = PlayComponents.fromBuiltInComponents(components)
+      new CounterServer(playComponents).routes orElse new DocumentationServer(
+        playComponents
+      ).routes
     }
   }
 
 }</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.14.0/documentation/examples/documented/src/main/scala/counter/Counter.scala#L119-L154" class="a_sourcelink">Counter.scala</a></div></div>
-<h3 id="chunkedentities" class="a_section" data-magellan-target="chunkedentities"><code class="hljs">ChunkedEntities</code><a class="a_hlink" href="#chunkedentities"></a></h3>
-<p>The <code class="hljs">ChunkedEntities</code> interpreter fixes the type <code class="hljs">Chunks[A]</code> to <code class="hljs">akka.stream.scaladsl.Source[A, _]</code>.</p>
+<h3><a href="#chunkedentities" name="chunkedentities" class="anchor"><span class="anchor-link"></span></a><code>ChunkedEntities</code></h3>
+<p>The <code>ChunkedEntities</code> interpreter fixes the type <code>Chunks[A]</code> to <code>akka.stream.scaladsl.Source[A, _]</code>.</p>
 <p>For instance, given the following chunked endpoint definition:</p>
-<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
-<pre class="hljs"><code class="language-scala"><span class="hljs-keyword">val</span> logo: <span class="hljs-type">Endpoint</span>[<span class="hljs-type">Unit</span>, <span class="hljs-type">Chunks</span>[<span class="hljs-type">Array</span>[<span class="hljs-type">Byte</span>]]] =
-  endpoint(get(path / <span class="hljs-string">"logo.png"</span>), ok(bytesChunksResponse))</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.14.0/algebras/algebra/src/test/scala/endpoints/algebra/ChunkedEntitiesDocs.scala#L6-L7" class="a_sourcelink">ChunkedEntitiesDocs.scala</a></div></div>
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/algebras/algebra/src/test/scala/endpoints/algebra/ChunkedEntitiesDocs.scala#L6-L7" target="_blank" title="Go to snippet source"></a><code class="language-scala">val logo: Endpoint[Unit, Chunks[Array[Byte]]] =
+  endpoint(get(path / &quot;logo.png&quot;), ok(bytesChunksResponse))</code></pre>
 <p>It can be implemented as follows:</p>
-<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
-<pre class="hljs"><code class="language-scala"><span class="hljs-keyword">import</span> akka.stream.scaladsl.<span class="hljs-type">FileIO</span>
-<span class="hljs-keyword">import</span> java.nio.file.<span class="hljs-type">Paths</span>
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/play/server/src/test/scala/endpoints/play/server/ChunkedEntitiesDocs.scala#L13-L19" target="_blank" title="Go to snippet source"></a><code class="language-scala">import akka.stream.scaladsl.FileIO
+import java.nio.file.Paths
 
-<span class="hljs-keyword">val</span> logoHandler =
+val logoHandler =
   logo.implementedBy { _ =&gt;
-    <span class="hljs-type">FileIO</span>.fromPath(<span class="hljs-type">Paths</span>.get(<span class="hljs-string">"/foo/bar/logo.png"</span>)).map(_.toArray)
+    FileIO.fromPath(Paths.get(&quot;/foo/bar/logo.png&quot;)).map(_.toArray)
   }</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.14.0/play/server/src/test/scala/endpoints/play/server/ChunkedEntitiesDocs.scala#L12-L18" class="a_sourcelink">ChunkedEntitiesDocs.scala</a></div></div>
-<h3 id="error-handling" class="a_section" data-magellan-target="error-handling">Error handling<a class="a_hlink" href="#error-handling"></a></h3>
-<p>When the server processes requests, three kinds of errors can happen: the incoming request doesn’t match
-any endpoint, the request does match an endpoint but is invalid (e.g. one parameter has a wrong type), or
-an exception is thrown.</p>
-<h4 id="the-incoming-request-doesnt-match-any-endpoint" class="a_section" data-magellan-target="the-incoming-request-doesnt-match-any-endpoint">The incoming request doesn’t match any endpoint<a class="a_hlink" href="#the-incoming-request-doesnt-match-any-endpoint"></a></h4>
-<p>In that case, the router constructed by <em>endpoints</em> can’t do anything. You have to deal with such
-errors in the usual Play way: by using a custom <code class="hljs">play.api.http.HttpErrorHandler</code>.</p>
-<h4 id="the-incoming-request-is-invalid" class="a_section" data-magellan-target="the-incoming-request-is-invalid">The incoming request is invalid<a class="a_hlink" href="#the-incoming-request-is-invalid"></a></h4>
-<p>In that case, <em>endpoints</em> returns a “Bad Request” (400) response reporting all the errors in a
-JSON array. You can change this behavior by overriding the
-<a href="../api/endpoints/play/server/Urls.html#handleClientErrors(invalid:endpoints.Invalid):play.api.mvc.Result">handleClientErrors</a>
-method.</p>
-<h4 id="an-exception-is-thrown" class="a_section" data-magellan-target="an-exception-is-thrown">An exception is thrown<a class="a_hlink" href="#an-exception-is-thrown"></a></h4>
-<p>If an exception is thrown during request decoding, or when running the business logic, or when
-encoding the response, <em>endpoints</em> returns an “Internal Server Error” (500) response reporting
-the error in a JSON array. You can change this behavior by overriding the
-<a href="../api/endpoints/play/server/Endpoints.html#handleServerError(throwable:Throwable):play.api.mvc.Result">handleServerError</a>
-method.</p>
+<h3><a href="#error-handling" name="error-handling" class="anchor"><span class="anchor-link"></span></a>Error handling</h3>
+<p>When the server processes requests, three kinds of errors can happen: the incoming request doesn’t match any endpoint, the request does match an endpoint but is invalid (e.g. one parameter has a wrong type), or an exception is thrown.</p>
+<h4><a href="#the-incoming-request-doesn-t-match-any-endpoint" name="the-incoming-request-doesn-t-match-any-endpoint" class="anchor"><span class="anchor-link"></span></a>The incoming request doesn’t match any endpoint</h4>
+<p>In that case, the router constructed by <em>endpoints</em> can’t do anything. You have to deal with such errors in the usual Play way: by using a custom <code>play.api.http.HttpErrorHandler</code>.</p>
+<h4><a href="#the-incoming-request-is-invalid" name="the-incoming-request-is-invalid" class="anchor"><span class="anchor-link"></span></a>The incoming request is invalid</h4>
+<p>In that case, <em>endpoints</em> returns a “Bad Request” (400) response reporting all the errors in a JSON array. You can change this behavior by overriding the <a href="/api/endpoints/play/server/Urls.html">handleClientErrors</a> method.</p>
+<h4><a href="#an-exception-is-thrown" name="an-exception-is-thrown" class="anchor"><span class="anchor-link"></span></a>An exception is thrown</h4>
+<p>If an exception is thrown during request decoding, or when running the business logic, or when encoding the response, <em>endpoints</em> returns an “Internal Server Error” (500) response reporting the error in a JSON array. You can change this behavior by overriding the <a href="/api/endpoints/play/server/Endpoints.html">handleServerError</a> method.</p>
+</div>
+<div>
+<a href="https://github.com/julienrf/endpoints/tree/0.15.0/documentation/manual/src/paradox/interpreters/play.md" title="Edit this page" class="md-source-file md-edit">
+Edit this page
+</a>
+</div>
+<div class="print-only">
+<span class="md-source-file md-version">
+0.15.0
+</span>
+</div>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-nav">
+<nav class="md-footer-nav__inner md-grid">
+<a href="../interpreters/akka-http.html" title="Akka HTTP" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+<div class="md-flex__cell md-flex__cell--shrink">
+<i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+</div>
+<div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+<span class="md-flex__ellipsis">
+<span class="md-footer-nav__direction">
+Previous
+</span>
+Akka HTTP
+</span>
+</div>
+</a>
+<a href="../interpreters/http4s.html" title="http4s" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+<div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+<span class="md-flex__ellipsis">
+<span class="md-footer-nav__direction">
+Next
+</span>
+http4s
+</span>
+</div>
+<div class="md-flex__cell md-flex__cell--shrink">
+<i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+</div>
+</a>
+</nav>
+</div>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+Powered by
+<a href="https://github.com/lightbend/paradox">Paradox</a>
+and
+<a href="https://jonas.github.io/paradox-material-theme/">Paradox Material Theme</a>
 
-                 
-  <ul class="menu align-right simple a_navbar a_navbar_bottom">
-    
-      
-        <li><a href="../site-contents.html"  title="Table of Contents" ><span class="a_foundation_icon"></span>  Contents</a></li>
-      
-    
-  </ul>
- 
-              </main>
-              
-              
-                <div data-sticky-container class="small-12 medium-12 large-2 large-order-1 columns a_sitenav_container">
-                  <nav class="a_sitenav" data-sticky data-sticky-on="large" data-anchor="_sections">
-                    
-                    <ul>
-                       
-  <li >
-    
-      
-        <a href="../index.html">Introduction</a>
-      
-    
-    
-  </li>
-  
-  <li >
-    
-      
-        <a href="../use-cases.html">Use Cases</a>
-      
-    
-    
-  </li>
-  
-  <li >
-    
-      
-        <a href="../quick-start.html">Quick start</a>
-      
-    
-    
-  </li>
-  
-  <li >
-    
-      
-        <a href="../design.html">Design in a nutshell</a>
-      
-    
-    
-  </li>
-  
-  <li >
-    
-      
-        <a href="../algebras-and-interpreters.html">Algebras and interpreters</a>
-      
-    
-    
-  </li>
-  
-  <li >
-    
-      
-        <a href="../guides.html">Guides</a>
-      
-    
-    
-  </li>
-  
-  <li >
-    
-      
-        <a href="../comparison.html">Comparison with similar tools</a>
-      
-    
-    
-  </li>
-  
-  <li >
-    
-      
-        <a href="../talks.html">Talks and Publications</a>
-      
-    
-    
-  </li>
- 
-                    </ul>
-                    
-                    
-                  </nav>
-                </div>
-              
-              
-              
-                <div class="small-12 medium-12 large-2 large-order-3 columns a_show-for-xlarge" data-sticky-container>
-                  <nav class="a_pagenav" data-sticky data-sticky-on="large" data-anchor="_sections">
-                     <header><p>On This Page</p>
-</header> 
-                    <ul class="vertical menu" data-magellan>
-                       
-  
-    <li>
-      
-         <a href="#play-framework">Play framework</a> 
-      
-      
-        <ul class="vertical menu">  
-  
-    <li>
-      
-         <a href="#client">Client</a> 
-      
-      
-    </li>
-  
-  
-  
-    <li>
-      
-         <a href="#server">Server</a> 
-      
-      
-        <ul class="vertical menu">  
-  
-    <li>
-      
-         <a href="#endpoints">Endpoints</a> 
-      
-      
-    </li>
-  
-  
-  
-    <li>
-      
-         <a href="#chunkedentities">ChunkedEntities</a> 
-      
-      
-    </li>
-  
-  
-  
-    <li>
-      
-         <a href="#error-handling">Error handling</a> 
-      
-      
-        <ul class="vertical menu">  
-  
-    <li>
-      
-         <a href="#the-incoming-request-doesnt-match-any-endpoint">The incoming request doesn’t match any endpoint</a> 
-      
-      
-    </li>
-  
-  
-  
-    <li>
-      
-         <a href="#the-incoming-request-is-invalid">The incoming request is invalid</a> 
-      
-      
-    </li>
-  
-  
-  
-    <li>
-      
-         <a href="#an-exception-is-thrown">An exception is thrown</a> 
-      
-      
-    </li>
-  
-  </ul>
-      
-    </li>
-  
-  </ul>
-      
-    </li>
-  
-  </ul>
-      
-    </li>
-  
- 
-                    </ul>
-                  </nav>
-                </div>
-              
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <footer class="small-12 medium-12 large-12 columns align-self-bottom a_footer">
-        <div class="row">
-          <div class="small-12 medium-12 large-12 columns top-bar">
-            <div class="top-bar-left">
-              
-            </div>
-            <div class="top-bar-right">
-              <p>Generated with <a href="https://github.com/szeiger/ornate">Ornate</a>.</p>
+</div>
+<div class="md-footer-social">
+<a href="https://github.com/julienrf/endpoints" class="md-footer-social__link fa fa-github"></a>
+</div>
 
-            </div>
-          </div>
-        </div>
-      </footer>
-    </div>
-    
-    <script src="../theme/js/jquery.min.js"></script>
-    <script src="../theme/js/what-input.min.js"></script>
-    <script src="../theme/js/foundation.min.js"></script>
-    
-    <script src="../theme/js/app.js"></script>
-    
-  </body>
+</div>
+</div>
+</footer>
+
+</div>
+<script src="../assets/javascripts/application.583bbe55.js"></script>
+<script src="../assets/javascripts/paradox-material-theme.js"></script>
+<script>app.initialize({version:"0.17",url:{base:"../."}})</script>
+<script type="text/javascript" src="../lib/prettify/prettify.js"></script>
+<script type="text/javascript" src="../lib/prettify/lang-scala.js"></script>
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function(event) {
+window.prettyPrint && prettyPrint();
+});
+</script>
+</body>
 </html>

@@ -1,580 +1,445 @@
 <!DOCTYPE html>
-<html class="no-js" lang="eng" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JSON schemas</title>
-    <link rel="stylesheet" href="../theme/css/foundation.min.css">
-    <link rel="stylesheet" href="../theme/css/app.css">
-    
-     <link rel="stylesheet" href="../theme/highlight.js/styles/github-gist.css">  <link rel="stylesheet" href="../theme/css/foundation-icons.custom.css"> 
-    
-     <link rel="toc" href="../site-contents.html"  title="Table of Contents"  /> 
-  </head>
-  <body>
-    <div class="expanded row">
-      <div class="small-12 medium-12 large-12 columns align-self-top">
-        <div class="row">
-          
-          <header class="large-12 columns align-self-top a_header">
-            <div class="row">
-              <div class="large-12 columns a_limited top-bar">
-                <div class="top-bar-left">
-                  <p>endpoints 0.14.0</p>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="description" content="manual">
+<meta name="generator" content="Paradox, paradox-material-theme=0.6.0, mkdocs-material=3.0.3">
 
-                </div>
-                <div class="top-bar-right align-right row">
-                  
-                  
-                    <form action="../site-search.html" method="get" class="align-right a_search">
-                      <input name="q" type="search"  placeholder="Search
-" >
-                      <button><img alt="&#1F50D;" src="../theme/images/search.svg" /></button>
-                    </form>
-                  
-                </div>
-              </div>
-            </div>
-          </header>
-          
-          <div class="small-12 medium-12 large-12 columns align-self-top a_limited a_main">
-            <div class="row">
-              
-              <main class="columns large-order-2 sections" id="_sections">
-                 
-  <ul class="menu align-right simple a_navbar a_navbar_top">
-    
-      
-        <li><a href="../site-contents.html"  title="Table of Contents" ><span class="a_foundation_icon"></span>  Contents</a></li>
-      
-    
-  </ul>
- 
-                
-                <h1 id="json-schemas" class="a_section" data-magellan-target="json-schemas">JSON schemas<a class="a_hlink" href="#json-schemas"></a></h1>
-<h2 id="jsonschemas" class="a_section" data-magellan-target="jsonschemas"><code class="hljs">JsonSchemas</code><a class="a_hlink" href="#jsonschemas"></a></h2>
+<meta name="lang:clipboard.copy" content="Copy to clipboard">
+<meta name="lang:clipboard.copied" content="Copied to clipboard">
+<meta name="lang:search.language" content="">
+<meta name="lang:search.pipeline.stopwords" content="true">
+<meta name="lang:search.pipeline.trimmer" content="true">
+<meta name="lang:search.result.none" content="No matching documents">
+<meta name="lang:search.result.one" content="1 matching document">
+<meta name="lang:search.result.other" content="# matching documents">
+<meta name="lang:search.tokenizer" content="[\s\-]+">
+
+
+<meta name="description" content="manual">
+<link rel="shortcut icon" href="../assets/images/favicon.png">
+<title>JSON Schemas · endpoints</title>
+<link rel="stylesheet" href="../assets/stylesheets/application.451f80e5.css">
+<link rel="stylesheet" href="../lib/material__tabs/dist/mdc.tabs.min.css">
+<link rel="stylesheet" href="../lib/prettify/prettify.css">
+<script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+<style>
+body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}
+code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}
+</style>
+<link rel="stylesheet" href="../assets/fonts/font-awesome.css">
+<link rel="stylesheet" href="../assets/fonts/material-icons.css">
+<link rel="stylesheet" href="../assets/stylesheets/paradox-material-theme.css">
+<link rel="stylesheet" href="../snippets.css">
+</head>
+<body
+>
+<input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+<input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+<label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+<header class="md-header" data-md-component="header">
+<nav class="md-header-nav md-grid">
+<div class="md-flex">
+<div class="md-flex__cell md-flex__cell--shrink">
+<a href="../index.html" title="endpoints" class="md-header-nav__button md-logo">
+<i class="md-icon">local_library</i>
+</a>
+</div>
+<div class="md-flex__cell md-flex__cell--shrink">
+<label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+</div>
+<div class="md-flex__cell md-flex__cell--stretch">
+<div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+<span class="md-header-nav__topic">
+endpoints
+</span>
+<span class="md-header-nav__topic">
+JSON Schemas
+</span>
+</div>
+</div>
+<div class="md-flex__cell md-flex__cell--shrink">
+<label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+<label class="md-icon md-search__icon" for="__search"></label>
+<button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">&#xE5CD;</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix>
+<div class="md-search-result" data-md-component="result">
+<div class="md-search-result__meta">
+Type to start searching
+</div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="md-flex__cell md-flex__cell--shrink">
+<div class="md-header-nav__source">
+<a href="https://github.com/julienrf/endpoints"
+title="Go to repository"
+class="md-source"
+data-md-source="github">
+<div class="md-source__icon">
+<i class="fa fa-github"></i>
+</div>
+<div class="md-source__repository">
+julienrf/endpoints
+</div>
+</a>
+
+</div>
+</div>
+</div>
+</nav>
+</header>
+
+<div class="md-container">
+<main class="md-main">
+<div class="md-main__inner md-grid" data-md-component="container">
+<div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav class="md-nav md-nav--primary" data-md-level="0" style="visibility: hidden">
+<label class="md-nav__title md-nav__title--site" for="drawer">
+<a href="../index.html" title="endpoints" class="md-nav__button md-logo">
+<span class="md-nav__button md-logo">
+<i class="md-icon">local_library</i>
+</a>
+<a href="../index.html" title="endpoints">
+endpoints
+</a>
+</label>
+<div class="md-nav__source">
+<a href="https://github.com/julienrf/endpoints"
+title="Go to repository"
+class="md-source"
+data-md-source="github">
+<div class="md-source__icon">
+<i class="fa fa-github"></i>
+</div>
+<div class="md-source__repository">
+julienrf/endpoints
+</div>
+</a>
+
+</div>
+<ul>
+  <li><a href="../use-cases.html" class="page">Use Cases</a></li>
+  <li><a href="../quick-start.html" class="page">Quick start</a></li>
+  <li><a href="../design.html" class="page">Design in a nutshell</a></li>
+  <li><a href="../algebras-and-interpreters.html" class="page">Algebras and interpreters</a>
+  <ul>
+    <li><a href="../algebras/endpoints.html" class="page"><code>Endpoints</code></a></li>
+    <li><a href="../algebras/json-entities.html" class="page">JSON Entities</a></li>
+    <li><a href="../algebras/json-schemas.html" class="active page">JSON Schemas</a></li>
+    <li><a href="../algebras/chunked-entities.html" class="page">Chunked Entities</a></li>
+    <li><a href="../algebras/assets.html" class="page">Assets</a></li>
+    <li><a href="../algebras/mux-endpoints.html" class="page">Multiplexed Endpoints</a></li>
+    <li><a href="../interpreters/akka-http.html" class="page">Akka HTTP</a></li>
+    <li><a href="../interpreters/play.html" class="page">Play framework</a></li>
+    <li><a href="../interpreters/http4s.html" class="page">http4s</a></li>
+    <li><a href="../interpreters/scalajs-web.html" class="page">Scala.js web client</a></li>
+    <li><a href="../interpreters/scalaj-http.html" class="page">scalaj-http</a></li>
+    <li><a href="../interpreters/sttp.html" class="page">sttp</a></li>
+    <li><a href="../interpreters/openapi.html" class="page">OpenAPI</a></li>
+    <li><a href="../interpreters/circe.html" class="page">Circe</a></li>
+    <li><a href="../interpreters/play-json.html" class="page">Play JSON</a></li>
+  </ul></li>
+  <li><a href="../guides.html" class="page">Guides</a>
+  <ul>
+    <li><a href="../guides/tupler.html" class="page"><code>Tupler</code></a></li>
+    <li><a href="../guides/custom-authentication.html" class="page">Application-specific authentication</a></li>
+  </ul></li>
+  <li><a href="../comparison.html" class="page">Comparison with similar tools</a></li>
+  <li><a href="../talks.html" class="page">Talks and Publications</a></li>
+</ul>
+<nav class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">Table of contents</label>
+<ul>
+  <li><a href="../algebras/json-schemas.html#json-schemas" class="header">JSON Schemas</a>
+  <ul>
+    <li><a href="../algebras/json-schemas.html#jsonschemas" class="header"><code>JsonSchemas</code></a></li>
+    <li><a href="../algebras/json-schemas.html#generic-derivation-of-json-schemas-based-on-shapeless-" class="header">Generic derivation of JSON schemas (based on Shapeless)</a></li>
+    <li><a href="../algebras/json-schemas.html#generic-derivation-of-json-schemas-based-on-macros-" class="header">Generic derivation of JSON schemas (based on macros)</a></li>
+  </ul></li>
+</ul>
+</nav>
+
+</nav>
+<ul style="display: none">
+<li class="md-nav__item md-version" id="project.version">
+<label class="md-nav__link" for="__version">
+<i class="md-icon" title="Version">label_outline</i> 0.15.0
+</label>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">Table of contents</label>
+<ul>
+  <li><a href="../algebras/json-schemas.html#json-schemas" class="header">JSON Schemas</a>
+  <ul>
+    <li><a href="../algebras/json-schemas.html#jsonschemas" class="header"><code>JsonSchemas</code></a></li>
+    <li><a href="../algebras/json-schemas.html#generic-derivation-of-json-schemas-based-on-shapeless-" class="header">Generic derivation of JSON schemas (based on Shapeless)</a></li>
+    <li><a href="../algebras/json-schemas.html#generic-derivation-of-json-schemas-based-on-macros-" class="header">Generic derivation of JSON schemas (based on macros)</a></li>
+  </ul></li>
+</ul>
+</nav>
+
+</div>
+</div>
+</div>
+<div class="md-content">
+<article class="md-content__inner md-typeset">
+<div class="md-content__searchable">
+<h1><a href="#json-schemas" name="json-schemas" class="anchor"><span class="anchor-link"></span></a>JSON Schemas</h1>
+<h2><a href="#jsonschemas" name="jsonschemas" class="anchor"><span class="anchor-link"></span></a><code>JsonSchemas</code></h2>
 <p>This algebra provides vocabulary to define JSON schemas of data types.</p>
-<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
-<pre class="hljs"><code class="language-scala"><span class="hljs-string">"org.julienrf"</span> %% <span class="hljs-string">"endpoints-algebra-json-schema"</span> % <span class="hljs-string">"0.14.0"</span>
+<pre class="prettyprint"><code class="language-scala">&quot;org.julienrf&quot; %% &quot;endpoints-algebra-json-schema&quot; % &quot;0.15.0&quot;
 </code></pre>
-</div></div>
-<p><a href="../api/endpoints/algebra/JsonSchemas.html">API documentation</a></p>
-<blockquote class="note">
-<p>This module is dependency-free, it can be used independently of <em>endpoints</em>
-to define JSON schemas and interpret them as actual encoder, decoders or
-documentation.</p>
-</blockquote>
-<p>The algebra introduces the concept of <code class="hljs">JsonSchema[A]</code>: a JSON schema for a type <code class="hljs">A</code>.</p>
-<h3 id="basic-types-and-record-types" class="a_section" data-magellan-target="basic-types-and-record-types">Basic types and record types<a class="a_hlink" href="#basic-types-and-record-types"></a></h3>
-<p>The trait provides some predefined JSON schemas (for <code class="hljs">String</code>, <code class="hljs">Int</code>, <code class="hljs">Boolean</code>, <code class="hljs">Seq</code>, etc.)
-and ways to combine them together to build more complex schemas.</p>
-<p>For instance, given the following <code class="hljs">Rectangle</code> data type:</p>
-<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
-<pre class="hljs"><code class="language-scala"><span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Rectangle</span>(<span class="hljs-params">width: <span class="hljs-type">Double</span>, height: <span class="hljs-type">Double</span></span>)</span></code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.14.0/json-schema/json-schema/src/test/scala/endpoints/algebra/JsonSchemasDocs.scala#L7" class="a_sourcelink">JsonSchemasDocs.scala</a></div></div>
-<p>We can represent instances of <code class="hljs">Rectangle</code> in JSON with a JSON object having properties corresponding
-to the case class fields. A JSON schema for such objects would be defined as follows:</p>
-<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
-<pre class="hljs"><code class="language-scala"><span class="hljs-keyword">implicit</span> <span class="hljs-keyword">val</span> rectangleSchema: <span class="hljs-type">JsonSchema</span>[<span class="hljs-type">Rectangle</span>] = (
-  field[<span class="hljs-type">Double</span>](<span class="hljs-string">"width"</span>, <span class="hljs-type">Some</span>(<span class="hljs-string">"Rectangle width"</span>)) zip
-  field[<span class="hljs-type">Double</span>](<span class="hljs-string">"height"</span>)
-).xmap((<span class="hljs-type">Rectangle</span>.apply _).tupled)(rect =&gt; (rect.width, rect.height))</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.14.0/json-schema/json-schema/src/test/scala/endpoints/algebra/JsonSchemasDocs.scala#L10-L13" class="a_sourcelink">JsonSchemasDocs.scala</a></div></div>
-<p>The <code class="hljs">field</code> constructor defines a JSON object schema with one field of the given
-type and name (and an optional text documentation). A similar constructor, <code class="hljs">optField</code>,
-defines an optional field in a JSON object.</p>
-<p>The return type of <code class="hljs">rectangleSchema</code> is declared to be <code class="hljs">JsonSchema[Rectangle]</code>, but we could have
-used a more specific type: <code class="hljs">Record[Rectangle]</code>. This subtype of <code class="hljs">JsonSchema[Rectangle]</code> provides
-additional operations such as <code class="hljs">zip</code> or <code class="hljs">tagged</code> (see the next section).</p>
-<p>In the above example, we actually define two JSON object schemas (one for the <code class="hljs">width</code> field,
-of type <code class="hljs">Record[Double]</code>, and one for the <code class="hljs">height</code> field, of type <code class="hljs">Record[Double]</code>),
-and then we combine them into a single JSON object schema by using the <code class="hljs">zip</code> operation. Finally, we call the <code class="hljs">xmap</code> operation
-to turn the <code class="hljs">Record[(Double, Double)]</code> value returned by the <code class="hljs">zip</code> operation into
-a <code class="hljs">Record[Rectangle]</code>.</p>
-<h3 id="sum-types-sealed-traits" class="a_section" data-magellan-target="sum-types-sealed-traits">Sum types (sealed traits)<a class="a_hlink" href="#sum-types-sealed-traits"></a></h3>
-<p>It is also possible to define schemas for sum types. Consider the following type definition,
-defining a <code class="hljs">Shape</code>, which can be either a <code class="hljs">Circle</code> or a <code class="hljs">Rectangle</code>:</p>
-<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
-<pre class="hljs"><code class="language-scala"><span class="hljs-keyword">sealed</span> <span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">Shape</span></span>
-<span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Circle</span>(<span class="hljs-params">radius: <span class="hljs-type">Double</span></span>) <span class="hljs-keyword">extends</span> <span class="hljs-title">Shape</span></span>
-<span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Rectangle</span>(<span class="hljs-params">width: <span class="hljs-type">Double</span>, height: <span class="hljs-type">Double</span></span>) <span class="hljs-keyword">extends</span> <span class="hljs-title">Shape</span></span></code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.14.0/json-schema/json-schema/src/test/scala/endpoints/algebra/JsonSchemasDocs.scala#L18-L20" class="a_sourcelink">JsonSchemasDocs.scala</a></div></div>
-<p>A possible JSON schema for this data type consists in using a JSON object with a discriminator
-field indicating whether the <code class="hljs">Shape</code> is a <code class="hljs">Rectangle</code> or a <code class="hljs">Circle</code>. Such a schema can
-be defined as follows:</p>
-<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
-<pre class="hljs"><code class="language-scala"><span class="hljs-comment">// Given a `circleSchema: Record[Circle]` and a `rectangleSchema: Record[Rectangle]`</span>
+<p><a href="/api/endpoints/algebra/JsonSchemas.html">API documentation</a></p><div class="callout note "><div class="callout-title">Note</div>
+<p>This module is dependency-free, it can be used independently of <em>endpoints</em> to define JSON schemas and interpret them as actual encoder, decoders or documentation.</p></div>
+<p>The algebra introduces the concept of <code>JsonSchema[A]</code>: a JSON schema for a type <code>A</code>.</p>
+<h3><a href="#basic-types-and-record-types" name="basic-types-and-record-types" class="anchor"><span class="anchor-link"></span></a>Basic types and record types</h3>
+<p>The trait provides some predefined JSON schemas (for <code>String</code>, <code>Int</code>, <code>Boolean</code>, <code>Seq</code>, etc.) and ways to combine them together to build more complex schemas.</p>
+<p>For instance, given the following <code>Rectangle</code> data type:</p>
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/json-schema/json-schema/src/test/scala/endpoints/algebra/JsonSchemasDocs.scala#L7" target="_blank" title="Go to snippet source"></a><code class="language-scala">case class Rectangle(width: Double, height: Double)</code></pre>
+<p>We can represent instances of <code>Rectangle</code> in JSON with a JSON object having properties corresponding to the case class fields. A JSON schema for such objects would be defined as follows:</p>
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/json-schema/json-schema/src/test/scala/endpoints/algebra/JsonSchemasDocs.scala#L10-L13" target="_blank" title="Go to snippet source"></a><code class="language-scala">implicit val rectangleSchema: JsonSchema[Rectangle] = (
+  field[Double](&quot;width&quot;, Some(&quot;Rectangle width&quot;)) zip
+    field[Double](&quot;height&quot;)
+).xmap((Rectangle.apply _).tupled)(rect =&gt; (rect.width, rect.height))</code></pre>
+<p>The <code>field</code> constructor defines a JSON object schema with one field of the given type and name (and an optional text documentation). A similar constructor, <code>optField</code>, defines an optional field in a JSON object.</p>
+<p>The return type of <code>rectangleSchema</code> is declared to be <code>JsonSchema[Rectangle]</code>, but we could have used a more specific type: <code>Record[Rectangle]</code>. This subtype of <code>JsonSchema[Rectangle]</code> provides additional operations such as <code>zip</code> or <code>tagged</code> (see the next section).</p>
+<p>In the above example, we actually define two JSON object schemas (one for the <code>width</code> field, of type <code>Record[Double]</code>, and one for the <code>height</code> field, of type <code>Record[Double]</code>), and then we combine them into a single JSON object schema by using the <code>zip</code> operation. Finally, we call the <code>xmap</code> operation to turn the <code>Record[(Double, Double)]</code> value returned by the <code>zip</code> operation into a <code>Record[Rectangle]</code>.</p>
+<h3><a href="#sum-types-sealed-traits-" name="sum-types-sealed-traits-" class="anchor"><span class="anchor-link"></span></a>Sum types (sealed traits)</h3>
+<p>It is also possible to define schemas for sum types. Consider the following type definition, defining a <code>Shape</code>, which can be either a <code>Circle</code> or a <code>Rectangle</code>:</p>
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/json-schema/json-schema/src/test/scala/endpoints/algebra/JsonSchemasDocs.scala#L18-L20" target="_blank" title="Go to snippet source"></a><code class="language-scala">sealed trait Shape
+case class Circle(radius: Double) extends Shape
+case class Rectangle(width: Double, height: Double) extends Shape</code></pre>
+<p>A possible JSON schema for this data type consists in using a JSON object with a discriminator field indicating whether the <code>Shape</code> is a <code>Rectangle</code> or a <code>Circle</code>. Such a schema can be defined as follows:</p>
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/json-schema/json-schema/src/test/scala/endpoints/algebra/JsonSchemasDocs.scala#L35-L45" target="_blank" title="Go to snippet source"></a><code class="language-scala">// Given a `circleSchema: Record[Circle]` and a `rectangleSchema: Record[Rectangle]`
 (
-  circleSchema.tagged(<span class="hljs-string">"Circle"</span>) orElse
-  rectangleSchema.tagged(<span class="hljs-string">"Rectangle"</span>)
-).xmap[<span class="hljs-type">Shape</span>] {
-  <span class="hljs-keyword">case</span> <span class="hljs-type">Left</span>(circle) =&gt; circle
-  <span class="hljs-keyword">case</span> <span class="hljs-type">Right</span>(rect)  =&gt; rect
+  circleSchema.tagged(&quot;Circle&quot;) orElse
+    rectangleSchema.tagged(&quot;Rectangle&quot;)
+).xmap[Shape] {
+  case Left(circle) =&gt; circle
+  case Right(rect)  =&gt; rect
 } {
-  <span class="hljs-keyword">case</span> c: <span class="hljs-type">Circle</span>    =&gt; <span class="hljs-type">Left</span>(c)
-  <span class="hljs-keyword">case</span> r: <span class="hljs-type">Rectangle</span> =&gt; <span class="hljs-type">Right</span>(r)
+  case c: Circle    =&gt; Left(c)
+  case r: Rectangle =&gt; Right(r)
 }</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.14.0/json-schema/json-schema/src/test/scala/endpoints/algebra/JsonSchemasDocs.scala#L35-L45" class="a_sourcelink">JsonSchemasDocs.scala</a></div></div>
-<p>(We have omitted the definition of <code class="hljs">circleSchema</code> for the sake of conciseness)</p>
-<p>First, all the alternative record schemas (in this example, <code class="hljs">circeSchema</code> and <code class="hljs">rectangleSchema</code>) must
-be <code class="hljs">tagged</code> with a unique name. Then, the <code class="hljs">orElse</code> operation combines the alternative schemas into a
-single schema that accepts one of them.</p>
-<p>The result of the <code class="hljs">tagged</code> operation is a <code class="hljs">Tagged[A]</code> schema. This subtype of <code class="hljs">JsonSchema[A]</code> models a
-schema that accepts one of several alternative schemas. It provides the <code class="hljs">orElse</code> operation.</p>
-<p>The <code class="hljs">orElse</code> operation turns the <code class="hljs">Tagged[Circle]</code> and <code class="hljs">Tagged[Rectangle]</code> values into
-a <code class="hljs">Record[Either[Circle, Rectangle]]</code>, which is then, in this example, transformed into a
-<code class="hljs">Record[Shape]</code> by using <code class="hljs">xmap</code>.</p>
-<p>By default, the discriminator field is named <code class="hljs">type</code>, but you can use another field name either by
-overriding the <code class="hljs">defaultDiscriminatorName</code> method of the algebra, or by wrapping the <code class="hljs">Tagged</code> schema
-in a <code class="hljs">withDiscriminator</code> call specifying the field name to use.</p>
-<h3 id="refining-schemas" class="a_section" data-magellan-target="refining-schemas">Refining schemas<a class="a_hlink" href="#refining-schemas"></a></h3>
-<p>The examples above show how to use <code class="hljs">xmap</code> to transform a <code class="hljs">JsonSchema[A]</code> into a <code class="hljs">JsonSchema[B]</code>. In
-case the transformation function from <code class="hljs">A</code> to <code class="hljs">B</code> can fail (for example, if it applies additional
-validation), you can use <code class="hljs">xmapPartial</code> instead of <code class="hljs">xmap</code>:</p>
-<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
-<pre class="hljs"><code class="language-scala"><span class="hljs-keyword">val</span> evenNumberSchema: <span class="hljs-type">JsonSchema</span>[<span class="hljs-type">Int</span>] =
+<p>(We have omitted the definition of <code>circleSchema</code> for the sake of conciseness)</p>
+<p>First, all the alternative record schemas (in this example, <code>circeSchema</code> and <code>rectangleSchema</code>) must be <code>tagged</code> with a unique name. Then, the <code>orElse</code> operation combines the alternative schemas into a single schema that accepts one of them.</p>
+<p>The result of the <code>tagged</code> operation is a <code>Tagged[A]</code> schema. This subtype of <code>JsonSchema[A]</code> models a schema that accepts one of several alternative schemas. It provides the <code>orElse</code> operation.</p>
+<p>The <code>orElse</code> operation turns the <code>Tagged[Circle]</code> and <code>Tagged[Rectangle]</code> values into a <code>Record[Either[Circle, Rectangle]]</code>, which is then, in this example, transformed into a <code>Record[Shape]</code> by using <code>xmap</code>.</p>
+<p>By default, the discriminator field is named <code>type</code>, but you can use another field name either by overriding the <code>defaultDiscriminatorName</code> method of the algebra, or by wrapping the <code>Tagged</code> schema in a <code>withDiscriminator</code> call specifying the field name to use.</p>
+<h3><a href="#refining-schemas" name="refining-schemas" class="anchor"><span class="anchor-link"></span></a>Refining schemas</h3>
+<p>The examples above show how to use <code>xmap</code> to transform a <code>JsonSchema[A]</code> into a <code>JsonSchema[B]</code>. In case the transformation function from <code>A</code> to <code>B</code> can fail (for example, if it applies additional validation), you can use <code>xmapPartial</code> instead of <code>xmap</code>:</p>
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/json-schema/json-schema/src/test/scala/endpoints/algebra/JsonSchemasFixtures.scala#L92-L96" target="_blank" title="Go to snippet source"></a><code class="language-scala">val evenNumberSchema: JsonSchema[Int] =
   intJsonSchema.xmapPartial { n =&gt;
-    <span class="hljs-keyword">if</span> (n % <span class="hljs-number">2</span> == <span class="hljs-number">0</span>) <span class="hljs-type">Valid</span>(n)
-    <span class="hljs-keyword">else</span> <span class="hljs-type">Invalid</span>(<span class="hljs-string">s"Invalid even integer '<span class="hljs-subst">$n</span>'"</span>)
+    if (n % 2 == 0) Valid(n)
+    else Invalid(s&quot;Invalid even integer &#39;$n&#39;&quot;)
   }(n =&gt; n)</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.14.0/json-schema/json-schema/src/test/scala/endpoints/algebra/JsonSchemasTest.scala#L87-L91" class="a_sourcelink">JsonSchemasTest.scala</a></div></div>
 <p>In this example, we check that the decoded integer is even. If it is not, we return an error message.</p>
-<h3 id="enumerations" class="a_section" data-magellan-target="enumerations">Enumerations<a class="a_hlink" href="#enumerations"></a></h3>
+<h3><a href="#enumerations" name="enumerations" class="anchor"><span class="anchor-link"></span></a>Enumerations</h3>
 <p>There are different ways to represent enumerations in Scala:</p>
 <ul>
-<li><code class="hljs">scala.util.Enumeration</code></li>
-<li>Sealed trait with case objects</li>
-<li>Third-party libraries, e.g. Enumeratum</li>
+  <li><code>scala.util.Enumeration</code></li>
+  <li>Sealed trait with case objects</li>
+  <li>Third-party libraries, e.g. Enumeratum</li>
 </ul>
 <p>For example, an enumeration with three possible values can be defined as a sealed trait with three case objects:</p>
-<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
-<pre class="hljs"><code class="language-scala"><span class="hljs-keyword">sealed</span> <span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">Status</span></span>
-<span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">object</span> <span class="hljs-title">Active</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Status</span></span>
-<span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">object</span> <span class="hljs-title">Inactive</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Status</span></span>
-<span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">object</span> <span class="hljs-title">Obsolete</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Status</span></span></code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.14.0/json-schema/json-schema/src/test/scala/endpoints/algebra/JsonSchemasDocs.scala#L52-L55" class="a_sourcelink">JsonSchemasDocs.scala</a></div></div>
-<p>The method <code class="hljs">stringEnumeration</code> in the <code class="hljs">JsonSchemas</code> algebra supports mapping the enum values to JSON strings.
-It has two parameters: the possible values, and a function to encode an enum value as a string.</p>
-<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
-<pre class="hljs"><code class="language-scala"><span class="hljs-keyword">implicit</span> <span class="hljs-keyword">lazy</span> <span class="hljs-keyword">val</span> statusSchema: <span class="hljs-type">JsonSchema</span>[<span class="hljs-type">Status</span>] =
-  stringEnumeration[<span class="hljs-type">Status</span>](<span class="hljs-type">Seq</span>(<span class="hljs-type">Active</span>, <span class="hljs-type">Inactive</span>, <span class="hljs-type">Obsolete</span>))(_.toString)</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.14.0/json-schema/json-schema/src/test/scala/endpoints/algebra/JsonSchemasDocs.scala#L58-L59" class="a_sourcelink">JsonSchemasDocs.scala</a></div></div>
-<p>The resulting <code class="hljs">JsonSchema[Status]</code> allows defining JSON members with string values that are mapped to
-our case objects.</p>
-<p>It will work similarly for other representations of enumerated values.
-Most of them provide <code class="hljs">values</code> which can conveniently be passed into <code class="hljs">stringEnumeration</code>.
-However, it is still possible to explicitly pass a certain subset of allowed values.</p>
-<h3 id="tuples" class="a_section" data-magellan-target="tuples">Tuples<a class="a_hlink" href="#tuples"></a></h3>
-<p>JSON schemas for tuples from 2 to 22 elements are provided out of the box. For instance, if
-there are implicit <code class="hljs">JsonSchema</code> instances for types <code class="hljs">A</code>, <code class="hljs">B</code>, and <code class="hljs">C</code>, then you can summon
-a <code class="hljs">JsonSchema[(A, B, C)]</code>. Tuples are modeled in JSON with arrays, as recommended in the
-<a href="https://json-schema.org/understanding-json-schema/reference/array.html#tuple-validation">JSON Schema documentation</a>.</p>
-<p>Here is an example of JSON schema for a GeoJSON <code class="hljs">Point</code>, where GPS coordinates are modeled with a pair (longitude, latitude):</p>
-<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
-<pre class="hljs"><code class="language-scala"><span class="hljs-class"><span class="hljs-keyword">type</span> <span class="hljs-title">Coordinates</span> </span>= (<span class="hljs-type">Double</span>, <span class="hljs-type">Double</span>) <span class="hljs-comment">// (Longitude, Latitude)</span>
-<span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Point</span>(<span class="hljs-params">coordinates: <span class="hljs-type">Coordinates</span></span>)</span>
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/json-schema/json-schema/src/test/scala/endpoints/algebra/JsonSchemasDocs.scala#L52-L55" target="_blank" title="Go to snippet source"></a><code class="language-scala">sealed trait Status
+case object Active extends Status
+case object Inactive extends Status
+case object Obsolete extends Status</code></pre>
+<p>The method <code>stringEnumeration</code> in the <code>JsonSchemas</code> algebra supports mapping the enum values to JSON strings. It has two parameters: the possible values, and a function to encode an enum value as a string.</p>
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/json-schema/json-schema/src/test/scala/endpoints/algebra/JsonSchemasDocs.scala#L58-L59" target="_blank" title="Go to snippet source"></a><code class="language-scala">implicit lazy val statusSchema: JsonSchema[Status] =
+  stringEnumeration[Status](Seq(Active, Inactive, Obsolete))(_.toString)</code></pre>
+<p>The resulting <code>JsonSchema[Status]</code> allows defining JSON members with string values that are mapped to our case objects.</p>
+<p>It will work similarly for other representations of enumerated values. Most of them provide <code>values</code> which can conveniently be passed into <code>stringEnumeration</code>. However, it is still possible to explicitly pass a certain subset of allowed values.</p>
+<h3><a href="#tuples" name="tuples" class="anchor"><span class="anchor-link"></span></a>Tuples</h3>
+<p>JSON schemas for tuples from 2 to 22 elements are provided out of the box. For instance, if there are implicit <code>JsonSchema</code> instances for types <code>A</code>, <code>B</code>, and <code>C</code>, then you can summon a <code>JsonSchema[(A, B, C)]</code>. Tuples are modeled in JSON with arrays, as recommended in the <a href="https://json-schema.org/understanding-json-schema/reference/array.html#tuple-validation">JSON Schema documentation</a>.</p>
+<p>Here is an example of JSON schema for a GeoJSON <code>Point</code>, where GPS coordinates are modeled with a pair (longitude, latitude):</p>
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/json-schema/json-schema/src/test/scala/endpoints/algebra/JsonSchemasDocs.scala#L72-L78" target="_blank" title="Go to snippet source"></a><code class="language-scala">type Coordinates = (Double, Double) // (Longitude, Latitude)
+case class Point(coordinates: Coordinates)
 
-<span class="hljs-keyword">implicit</span> <span class="hljs-keyword">val</span> pointSchema: <span class="hljs-type">JsonSchema</span>[<span class="hljs-type">Point</span>] =
-  field[<span class="hljs-type">Coordinates</span>](<span class="hljs-string">"coordinates"</span>)
-    .tagged(<span class="hljs-string">"Point"</span>)
-    .xmap(<span class="hljs-type">Point</span>(_))(_.coordinates)</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.14.0/json-schema/json-schema/src/test/scala/endpoints/algebra/JsonSchemasDocs.scala#L72-L78" class="a_sourcelink">JsonSchemasDocs.scala</a></div></div>
-<h3 id="recursive-types" class="a_section" data-magellan-target="recursive-types">Recursive types<a class="a_hlink" href="#recursive-types"></a></h3>
-<p>You can reference a currently being defined schema without causing a <code class="hljs">StackOverflow</code> error
-by wrapping it in the <code class="hljs">lazyRecord</code> or <code class="hljs">lazyTagged</code> constructor:</p>
-<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
-<pre class="hljs"><code class="language-scala"><span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Recursive</span>(<span class="hljs-params">next: <span class="hljs-type">Option</span>[<span class="hljs-type">Recursive</span>]</span>)</span>
+implicit val pointSchema: JsonSchema[Point] =
+  field[Coordinates](&quot;coordinates&quot;)
+    .tagged(&quot;Point&quot;)
+    .xmap(Point(_))(_.coordinates)</code></pre>
+<h3><a href="#recursive-types" name="recursive-types" class="anchor"><span class="anchor-link"></span></a>Recursive types</h3>
+<p>You can reference a currently being defined schema without causing a <code>StackOverflow</code> error by wrapping it in the <code>lazyRecord</code> or <code>lazyTagged</code> constructor:</p>
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/json-schema/json-schema/src/test/scala/endpoints/algebra/JsonSchemasDocs.scala#L64-L68" target="_blank" title="Go to snippet source"></a><code class="language-scala">case class Recursive(next: Option[Recursive])
 
-<span class="hljs-keyword">val</span> recursiveSchema: <span class="hljs-type">Record</span>[<span class="hljs-type">Recursive</span>] = (
-  optField(<span class="hljs-string">"next"</span>)(lazyRecord(recursiveSchema, <span class="hljs-string">"Rec"</span>))
-).xmap(<span class="hljs-type">Recursive</span>)(_.next)</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.14.0/json-schema/json-schema/src/test/scala/endpoints/algebra/JsonSchemasDocs.scala#L64-L68" class="a_sourcelink">JsonSchemasDocs.scala</a></div></div>
-<h3 id="alternatives-between-schemas" class="a_section" data-magellan-target="alternatives-between-schemas">Alternatives between schemas<a class="a_hlink" href="#alternatives-between-schemas"></a></h3>
-<p>You can define a schema as an alternative between other schemas with the operation
-<code class="hljs">orFallbackTo</code>:</p>
-<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
-<pre class="hljs"><code class="language-scala"><span class="hljs-keyword">val</span> intOrBoolean: <span class="hljs-type">JsonSchema</span>[<span class="hljs-type">Either</span>[<span class="hljs-type">Int</span>, <span class="hljs-type">Boolean</span>]] =
-  intJsonSchema.orFallbackTo(booleanJsonSchema)</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.14.0/json-schema/json-schema/src/test/scala/endpoints/algebra/JsonSchemasTest.scala#L102-L103" class="a_sourcelink">JsonSchemasTest.scala</a></div></div>
-<blockquote class="warning">
-<p>Because decoders derived from schemas defined with the operation <code class="hljs">orFallbackTo</code> literally
-“fallback” from one alternative to another, it makes it impossible to report good decoding
-failure messages. You should generally prefer using <code class="hljs">orElse</code> on “tagged” schemas.</p>
-</blockquote>
-<h3 id="schemas-documentation" class="a_section" data-magellan-target="schemas-documentation">Schemas documentation<a class="a_hlink" href="#schemas-documentation"></a></h3>
-<p>Schema descriptions can include documentation information which is used by documentation
-interpreters such as the <a href="../interpreters/openapi.html">OpenAPI</a> interpreter. We have already
-seen in the first section that object fields could be documented with a description.
-This section shows two other features related to schemas documentation.</p>
-<p>You can give names to schemas. These names are used by the OpenAPI interpreter to group
-the schema definitions at one place, and then reference each schema by its name (see the
-<a href="https://swagger.io/docs/specification/components/">Swagger “Components Section” documentation</a>).</p>
-<p>Use the <code class="hljs">named</code> method to give a name to a <code class="hljs">Record</code>, a <code class="hljs">Tagged</code>, or an <code class="hljs">Enum</code> schema.</p>
-<p>You can also include examples of values for a schema (see the
-<a href="https://swagger.io/docs/specification/adding-examples/">Swagger “Adding Examples” documentation</a>).
-This is done by using the <code class="hljs">withExample</code> operation:</p>
-<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
-<pre class="hljs"><code class="language-scala"><span class="hljs-keyword">implicit</span> <span class="hljs-keyword">val</span> rectangleSchema: <span class="hljs-type">JsonSchema</span>[<span class="hljs-type">Rectangle</span>] = (
-  field[<span class="hljs-type">Double</span>](<span class="hljs-string">"width"</span>, <span class="hljs-type">Some</span>(<span class="hljs-string">"Rectangle width"</span>)) zip
-  field[<span class="hljs-type">Double</span>](<span class="hljs-string">"height"</span>)
-)
-  .xmap(<span class="hljs-type">Rectangle</span>.tupled)(rect =&gt; (rect.width, rect.height))
-  .withExample(<span class="hljs-type">Rectangle</span>(<span class="hljs-number">10</span>, <span class="hljs-number">20</span>))</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.14.0/json-schema/json-schema/src/test/scala/endpoints/algebra/JsonSchemasDocs.scala#L84-L89" class="a_sourcelink">JsonSchemasDocs.scala</a></div></div>
-<p>Applying the OpenAPI interpreter to this schema definition produces the
-following JSON document:</p>
-<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
-<pre class="hljs"><code class="language-javascript">{
-  <span class="hljs-string">"type"</span>: <span class="hljs-string">"object"</span>,
-  <span class="hljs-string">"properties"</span>: {
-    <span class="hljs-string">"width"</span>: {
-      <span class="hljs-string">"type"</span>: <span class="hljs-string">"number"</span>,
-      <span class="hljs-string">"format"</span>:<span class="hljs-string">"double"</span>,
-      <span class="hljs-string">"description"</span>: <span class="hljs-string">"Rectangle width"</span>
+val recursiveSchema: Record[Recursive] = (
+  optField(&quot;next&quot;)(lazyRecord(recursiveSchema, &quot;Rec&quot;))
+).xmap(Recursive)(_.next)</code></pre>
+<h3><a href="#alternatives-between-schemas" name="alternatives-between-schemas" class="anchor"><span class="anchor-link"></span></a>Alternatives between schemas</h3>
+<p>You can define a schema as an alternative between other schemas with the operation <code>orFallbackTo</code>:</p>
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/json-schema/json-schema/src/test/scala/endpoints/algebra/JsonSchemasFixtures.scala#L107-L108" target="_blank" title="Go to snippet source"></a><code class="language-scala">val intOrBoolean: JsonSchema[Either[Int, Boolean]] =
+  intJsonSchema.orFallbackTo(booleanJsonSchema)</code></pre><div class="callout warning "><div class="callout-title">Warning</div>
+<p>Because decoders derived from schemas defined with the operation <code>orFallbackTo</code> literally “fallback” from one alternative to another, it makes it impossible to report good decoding failure messages. You should generally prefer using <code>orElse</code> on “tagged” schemas.</p></div>
+<h3><a href="#schemas-documentation" name="schemas-documentation" class="anchor"><span class="anchor-link"></span></a>Schemas documentation</h3>
+<p>Schema descriptions can include documentation information which is used by documentation interpreters such as the <a href="../interpreters/openapi.html">OpenAPI</a> interpreter. We have already seen in the first section that object fields could be documented with a description. This section shows two other features related to schemas documentation.</p>
+<p>You can give names to schemas. These names are used by the OpenAPI interpreter to group the schema definitions at one place, and then reference each schema by its name (see the <a href="https://swagger.io/docs/specification/components/">Swagger “Components Section” documentation</a>).</p>
+<p>Use the <code>named</code> method to give a name to a <code>Record</code>, a <code>Tagged</code>, or an <code>Enum</code> schema.</p>
+<p>You can also include examples of values for a schema (see the <a href="https://swagger.io/docs/specification/adding-examples/">Swagger “Adding Examples” documentation</a>). This is done by using the <code>withExample</code> operation:</p>
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/json-schema/json-schema/src/test/scala/endpoints/algebra/JsonSchemasDocs.scala#L84-L88" target="_blank" title="Go to snippet source"></a><code class="language-scala">implicit val rectangleSchema: JsonSchema[Rectangle] = (
+  field[Double](&quot;width&quot;, Some(&quot;Rectangle width&quot;)) zip
+    field[Double](&quot;height&quot;)
+).xmap(Rectangle.tupled)(rect =&gt; (rect.width, rect.height))
+  .withExample(Rectangle(10, 20))</code></pre>
+<p>Applying the OpenAPI interpreter to this schema definition produces the following JSON document:</p>
+<pre class="prettyprint"><code class="language-javascript">{
+  &quot;type&quot;: &quot;object&quot;,
+  &quot;properties&quot;: {
+    &quot;width&quot;: {
+      &quot;type&quot;: &quot;number&quot;,
+      &quot;format&quot;:&quot;double&quot;,
+      &quot;description&quot;: &quot;Rectangle width&quot;
     },
-    <span class="hljs-string">"height"</span>:{
-      <span class="hljs-string">"type"</span>: <span class="hljs-string">"number"</span>,
-      <span class="hljs-string">"format"</span>: <span class="hljs-string">"double"</span>
+    &quot;height&quot;:{
+      &quot;type&quot;: &quot;number&quot;,
+      &quot;format&quot;: &quot;double&quot;
     }
   },
-  <span class="hljs-string">"required"</span>: [<span class="hljs-string">"width"</span>,<span class="hljs-string">"height"</span>],
-  <span class="hljs-string">"example"</span>: { <span class="hljs-string">"width"</span>: <span class="hljs-number">10</span>, <span class="hljs-string">"height"</span>: <span class="hljs-number">20</span> }
+  &quot;required&quot;: [&quot;width&quot;,&quot;height&quot;],
+  &quot;example&quot;: { &quot;width&quot;: 10, &quot;height&quot;: 20 }
 }
 </code></pre>
-</div></div>
-<h2 id="generic-derivation-of-json-schemas" class="a_section" data-magellan-target="generic-derivation-of-json-schemas">Generic derivation of JSON schemas (based on Shapeless)<a class="a_hlink" href="#generic-derivation-of-json-schemas"></a></h2>
-<p>The module presented in this section uses Shapeless to generically derive JSON schemas
-for algebraic data type definitions (sealed traits and case classes).</p>
-<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
-<pre class="hljs"><code class="language-scala"><span class="hljs-string">"org.julienrf"</span> %% <span class="hljs-string">"endpoints-json-schema-generic"</span> % <span class="hljs-string">"0.14.0"</span>
+<h2><a href="#generic-derivation-of-json-schemas-based-on-shapeless-" name="generic-derivation-of-json-schemas-based-on-shapeless-" class="anchor"><span class="anchor-link"></span></a>Generic derivation of JSON schemas (based on Shapeless)</h2>
+<p>The module presented in this section uses Shapeless to generically derive JSON schemas for algebraic data type definitions (sealed traits and case classes).</p>
+<pre class="prettyprint"><code class="language-scala">&quot;org.julienrf&quot; %% &quot;endpoints-json-schema-generic&quot; % &quot;0.15.0&quot;
 </code></pre>
-</div></div>
-<p><a href="../api/endpoints/generic/JsonSchemas.html">API documentation</a></p>
-<h3 id="json-schemas-derivation" class="a_section" data-magellan-target="json-schemas-derivation">JSON schemas derivation<a class="a_hlink" href="#json-schemas-derivation"></a></h3>
-<p>With this module, defining the JSON schema of the <code class="hljs">Shape</code> data type is
-reduced to the following:</p>
-<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
-<pre class="hljs"><code class="language-scala"><span class="hljs-keyword">implicit</span> <span class="hljs-keyword">val</span> shapeSchema: <span class="hljs-type">JsonSchema</span>[<span class="hljs-type">Shape</span>] = genericJsonSchema</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.14.0/json-schema/json-schema-generic/src/test/scala/endpoints/generic/JsonSchemasDocs.scala#L10" class="a_sourcelink">JsonSchemasDocs.scala</a></div></div>
-<p>The <code class="hljs">genericJsonSchema</code> operation builds a JSON schema for the given
-type. The rules for deriving the schema are the following:</p>
+<p><a href="/api/endpoints/generic/JsonSchemas.html">API documentation</a></p>
+<h3><a href="#json-schemas-derivation" name="json-schemas-derivation" class="anchor"><span class="anchor-link"></span></a>JSON schemas derivation</h3>
+<p>With this module, defining the JSON schema of the <code>Shape</code> data type is reduced to the following:</p>
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/json-schema/json-schema-generic/src/test/scala/endpoints/generic/JsonSchemasDocs.scala#L10" target="_blank" title="Go to snippet source"></a><code class="language-scala">implicit val shapeSchema: JsonSchema[Shape] = genericJsonSchema</code></pre>
+<p>The <code>genericJsonSchema</code> operation builds a JSON schema for the given type. The rules for deriving the schema are the following:</p>
 <ul>
-<li>the schema of a case class is a JSON object,</li>
-<li>the schema of a sealed trait is the alternative of its leaf case
-class schemas, discriminated by the case class names,</li>
-<li>each case class field has a corresponding required JSON object property of
-the same name and type (for instance, the generic schema for the <code class="hljs">Rectangle</code>
-type has a <code class="hljs">width</code> required property of type <code class="hljs">integer</code>),</li>
-<li>each case class field of type <code class="hljs">Option[A]</code> for some type <code class="hljs">A</code> has a corresponding
-optional JSON object property of the same name and type,</li>
-<li>documentation specific to case class fields can be defined by annotating the fields
-with the <code class="hljs">@docs</code> annotation,</li>
-<li>for sealed traits, the discriminator field name can be defined by the <code class="hljs">@discriminator</code>
-annotation, otherwise the <code class="hljs">defaultDiscriminatorName</code> value is used,</li>
-<li>the schema is named by the <code class="hljs">@name</code> annotation, if present, or by invoking the
-<code class="hljs">classTagToSchemaName</code> operation with the <code class="hljs">ClassTag</code> of the type for which the schema
-is derived.</li>
+  <li>the schema of a case class is a JSON object,</li>
+  <li>the schema of a sealed trait is the alternative of its leaf case  class schemas, discriminated by the case class names,</li>
+  <li>each case class field has a corresponding required JSON object property of  the same name and type (for instance, the generic schema for the <code>Rectangle</code>  type has a <code>width</code> required property of type <code>integer</code>),</li>
+  <li>each case class field of type <code>Option[A]</code> for some type <code>A</code> has a corresponding  optional JSON object property of the same name and type,</li>
+  <li>documentation specific to case class fields can be defined by annotating the fields  with the <code>@docs</code> annotation,</li>
+  <li>for sealed traits, the discriminator field name can be defined by the <code>@discriminator</code>  annotation, otherwise the <code>defaultDiscriminatorName</code> value is used,</li>
+  <li>the schema is named by the <code>@name</code> annotation, if present, or by invoking the  <code>classTagToSchemaName</code> operation with the <code>ClassTag</code> of the type for which the schema  is derived.</li>
 </ul>
 <p>Here is an example that illustrates how to configure the generic schema derivation process:</p>
-<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
-<pre class="hljs"><code class="language-scala"><span class="hljs-meta">@discriminator</span>(<span class="hljs-string">"kind"</span>)
-<span class="hljs-meta">@name</span>(<span class="hljs-string">"ShapeSchema"</span>)
-<span class="hljs-keyword">sealed</span> <span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">Shape</span></span>
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/json-schema/json-schema-generic/src/test/scala/endpoints/generic/JsonSchemasDocs.scala#L24-L35" target="_blank" title="Go to snippet source"></a><code class="language-scala">@discriminator(&quot;kind&quot;)
+@name(&quot;ShapeSchema&quot;)
+sealed trait Shape
 
-<span class="hljs-meta">@name</span>(<span class="hljs-string">"CircleSchema"</span>)
-<span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Circle</span>(<span class="hljs-params">radius: <span class="hljs-type">Double</span></span>) <span class="hljs-keyword">extends</span> <span class="hljs-title">Shape</span></span>
+@name(&quot;CircleSchema&quot;)
+case class Circle(radius: Double) extends Shape
 
-<span class="hljs-meta">@name</span>(<span class="hljs-string">"RectangleSchema"</span>)
-<span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Rectangle</span>(<span class="hljs-params">
-  @docs("<span class="hljs-type">Rectangle</span> width"</span>) <span class="hljs-title">width</span></span>: <span class="hljs-type">Double</span>,
-  height: <span class="hljs-type">Double</span>
+@name(&quot;RectangleSchema&quot;)
+case class Rectangle(
+    @docs(&quot;Rectangle width&quot;) width: Double,
+    height: Double
 )</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.14.0/json-schema/json-schema-generic/src/test/scala/endpoints/generic/JsonSchemasDocs.scala#L24-L35" class="a_sourcelink">JsonSchemasDocs.scala</a></div></div>
-<p>In case you need to transform further a generically derived schema, you might want to use the
-<code class="hljs">genericRecord</code> or <code class="hljs">genericTagged</code> operations instead of <code class="hljs">genericJsonSchema</code>. These operations
-have a more specific return type than <code class="hljs">genericJsonSchema</code>: <code class="hljs">genericRecord</code> returns a <code class="hljs">Record</code>,
-and <code class="hljs">genericTagged</code> returns a <code class="hljs">Tagged</code>.</p>
-<h3 id="json-schemas-transformation" class="a_section" data-magellan-target="json-schemas-transformation">JSON schemas transformation<a class="a_hlink" href="#json-schemas-transformation"></a></h3>
-<p>The module also takes advantage shapeless to provide a more convenient <code class="hljs">as</code> operation for
-transforming JSON schema definitions, instead of <code class="hljs">xmap</code>:</p>
-<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
-<pre class="hljs"><code class="language-scala"><span class="hljs-keyword">implicit</span> <span class="hljs-keyword">val</span> rectangleSchema: <span class="hljs-type">JsonSchema</span>[<span class="hljs-type">Rectangle</span>] = (
-  field[<span class="hljs-type">Double</span>](<span class="hljs-string">"width"</span>) zip
-  field[<span class="hljs-type">Double</span>](<span class="hljs-string">"height"</span>)
-).as[<span class="hljs-type">Rectangle</span>]</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.14.0/json-schema/json-schema-generic/src/test/scala/endpoints/generic/JsonSchemasDocs.scala#L15-L18" class="a_sourcelink">JsonSchemasDocs.scala</a></div></div>
-<h2 id="generic-derivation-of-json-schemas-based-on-macros" class="a_section" data-magellan-target="generic-derivation-of-json-schemas-based-on-macros">Generic derivation of JSON schemas (based on macros)<a class="a_hlink" href="#generic-derivation-of-json-schemas-based-on-macros"></a></h2>
-<p>An alternative to the module presented in the preceding section is provided
-as a third-party module:
-<a href="https://github.com/scalalandio/endpoints-json-schemas-macros">endpoints-json-schemas-macros</a>.</p>
-<p>Please see the README of that project for more information on how to use it
-and its differences with the module provided by <em>endpoints</em>.</p>
+<p>In case you need to transform further a generically derived schema, you might want to use the <code>genericRecord</code> or <code>genericTagged</code> operations instead of <code>genericJsonSchema</code>. These operations have a more specific return type than <code>genericJsonSchema</code>: <code>genericRecord</code> returns a <code>Record</code>, and <code>genericTagged</code> returns a <code>Tagged</code>.</p>
+<h3><a href="#json-schemas-transformation" name="json-schemas-transformation" class="anchor"><span class="anchor-link"></span></a>JSON schemas transformation</h3>
+<p>The module also takes advantage shapeless to provide a more convenient <code>as</code> operation for transforming JSON schema definitions, instead of <code>xmap</code>:</p>
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/json-schema/json-schema-generic/src/test/scala/endpoints/generic/JsonSchemasDocs.scala#L15-L18" target="_blank" title="Go to snippet source"></a><code class="language-scala">implicit val rectangleSchema: JsonSchema[Rectangle] = (
+  field[Double](&quot;width&quot;) zip
+    field[Double](&quot;height&quot;)
+).as[Rectangle]</code></pre>
+<h2><a href="#generic-derivation-of-json-schemas-based-on-macros-" name="generic-derivation-of-json-schemas-based-on-macros-" class="anchor"><span class="anchor-link"></span></a>Generic derivation of JSON schemas (based on macros)</h2>
+<p>An alternative to the module presented in the preceding section is provided as a third-party module: <a href="https://github.com/scalalandio/endpoints-json-schemas-macros">endpoints-json-schemas-macros</a>.</p>
+<p>Please see the README of that project for more information on how to use it and its differences with the module provided by <em>endpoints</em>.</p>
+</div>
+<div>
+<a href="https://github.com/julienrf/endpoints/tree/0.15.0/documentation/manual/src/paradox/algebras/json-schemas.md" title="Edit this page" class="md-source-file md-edit">
+Edit this page
+</a>
+</div>
+<div class="print-only">
+<span class="md-source-file md-version">
+0.15.0
+</span>
+</div>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-nav">
+<nav class="md-footer-nav__inner md-grid">
+<a href="../algebras/json-entities.html" title="JSON Entities" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+<div class="md-flex__cell md-flex__cell--shrink">
+<i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+</div>
+<div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+<span class="md-flex__ellipsis">
+<span class="md-footer-nav__direction">
+Previous
+</span>
+JSON Entities
+</span>
+</div>
+</a>
+<a href="../algebras/chunked-entities.html" title="Chunked Entities" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+<div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+<span class="md-flex__ellipsis">
+<span class="md-footer-nav__direction">
+Next
+</span>
+Chunked Entities
+</span>
+</div>
+<div class="md-flex__cell md-flex__cell--shrink">
+<i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+</div>
+</a>
+</nav>
+</div>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+Powered by
+<a href="https://github.com/lightbend/paradox">Paradox</a>
+and
+<a href="https://jonas.github.io/paradox-material-theme/">Paradox Material Theme</a>
 
-                 
-  <ul class="menu align-right simple a_navbar a_navbar_bottom">
-    
-      
-        <li><a href="../site-contents.html"  title="Table of Contents" ><span class="a_foundation_icon"></span>  Contents</a></li>
-      
-    
-  </ul>
- 
-              </main>
-              
-              
-                <div data-sticky-container class="small-12 medium-12 large-2 large-order-1 columns a_sitenav_container">
-                  <nav class="a_sitenav" data-sticky data-sticky-on="large" data-anchor="_sections">
-                    
-                    <ul>
-                       
-  <li >
-    
-      
-        <a href="../index.html">Introduction</a>
-      
-    
-    
-  </li>
-  
-  <li >
-    
-      
-        <a href="../use-cases.html">Use Cases</a>
-      
-    
-    
-  </li>
-  
-  <li >
-    
-      
-        <a href="../quick-start.html">Quick start</a>
-      
-    
-    
-  </li>
-  
-  <li >
-    
-      
-        <a href="../design.html">Design in a nutshell</a>
-      
-    
-    
-  </li>
-  
-  <li >
-    
-      
-        <a href="../algebras-and-interpreters.html">Algebras and interpreters</a>
-      
-    
-    
-  </li>
-  
-  <li >
-    
-      
-        <a href="../guides.html">Guides</a>
-      
-    
-    
-  </li>
-  
-  <li >
-    
-      
-        <a href="../comparison.html">Comparison with similar tools</a>
-      
-    
-    
-  </li>
-  
-  <li >
-    
-      
-        <a href="../talks.html">Talks and Publications</a>
-      
-    
-    
-  </li>
- 
-                    </ul>
-                    
-                    
-                  </nav>
-                </div>
-              
-              
-              
-                <div class="small-12 medium-12 large-2 large-order-3 columns a_show-for-xlarge" data-sticky-container>
-                  <nav class="a_pagenav" data-sticky data-sticky-on="large" data-anchor="_sections">
-                     <header><p>On This Page</p>
-</header> 
-                    <ul class="vertical menu" data-magellan>
-                       
-  
-    <li>
-      
-         <a href="#json-schemas">JSON schemas</a> 
-      
-      
-        <ul class="vertical menu">  
-  
-    <li>
-      
-         <a href="#jsonschemas">JsonSchemas</a> 
-      
-      
-        <ul class="vertical menu">  
-  
-    <li>
-      
-         <a href="#basic-types-and-record-types">Basic types and record types</a> 
-      
-      
-    </li>
-  
-  
-  
-    <li>
-      
-         <a href="#sum-types-sealed-traits">Sum types (sealed traits)</a> 
-      
-      
-    </li>
-  
-  
-  
-    <li>
-      
-         <a href="#refining-schemas">Refining schemas</a> 
-      
-      
-    </li>
-  
-  
-  
-    <li>
-      
-         <a href="#enumerations">Enumerations</a> 
-      
-      
-    </li>
-  
-  
-  
-    <li>
-      
-         <a href="#tuples">Tuples</a> 
-      
-      
-    </li>
-  
-  
-  
-    <li>
-      
-         <a href="#recursive-types">Recursive types</a> 
-      
-      
-    </li>
-  
-  
-  
-    <li>
-      
-         <a href="#alternatives-between-schemas">Alternatives between schemas</a> 
-      
-      
-    </li>
-  
-  
-  
-    <li>
-      
-         <a href="#schemas-documentation">Schemas documentation</a> 
-      
-      
-    </li>
-  
-  </ul>
-      
-    </li>
-  
-  
-  
-    <li>
-      
-         <a href="#generic-derivation-of-json-schemas">Generic derivation of JSON schemas (based on Shapeless)</a> 
-      
-      
-        <ul class="vertical menu">  
-  
-    <li>
-      
-         <a href="#json-schemas-derivation">JSON schemas derivation</a> 
-      
-      
-    </li>
-  
-  
-  
-    <li>
-      
-         <a href="#json-schemas-transformation">JSON schemas transformation</a> 
-      
-      
-    </li>
-  
-  </ul>
-      
-    </li>
-  
-  
-  
-    <li>
-      
-         <a href="#generic-derivation-of-json-schemas-based-on-macros">Generic derivation of JSON schemas (based on macros)</a> 
-      
-      
-    </li>
-  
-  </ul>
-      
-    </li>
-  
- 
-                    </ul>
-                  </nav>
-                </div>
-              
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <footer class="small-12 medium-12 large-12 columns align-self-bottom a_footer">
-        <div class="row">
-          <div class="small-12 medium-12 large-12 columns top-bar">
-            <div class="top-bar-left">
-              
-            </div>
-            <div class="top-bar-right">
-              <p>Generated with <a href="https://github.com/szeiger/ornate">Ornate</a>.</p>
+</div>
+<div class="md-footer-social">
+<a href="https://github.com/julienrf/endpoints" class="md-footer-social__link fa fa-github"></a>
+</div>
 
-            </div>
-          </div>
-        </div>
-      </footer>
-    </div>
-    
-    <script src="../theme/js/jquery.min.js"></script>
-    <script src="../theme/js/what-input.min.js"></script>
-    <script src="../theme/js/foundation.min.js"></script>
-    
-    <script src="../theme/js/app.js"></script>
-    
-  </body>
+</div>
+</div>
+</footer>
+
+</div>
+<script src="../assets/javascripts/application.583bbe55.js"></script>
+<script src="../assets/javascripts/paradox-material-theme.js"></script>
+<script>app.initialize({version:"0.17",url:{base:"../."}})</script>
+<script type="text/javascript" src="../lib/prettify/prettify.js"></script>
+<script type="text/javascript" src="../lib/prettify/lang-scala.js"></script>
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function(event) {
+window.prettyPrint && prettyPrint();
+});
+</script>
+</body>
 </html>

@@ -1,416 +1,56 @@
-<!DOCTYPE html >
-<html>
-        <head>
-          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title></title>
-          <meta name="description" content="" />
-          <meta name="keywords" content="" />
-          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-          
-      
-      <link href="../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
-      <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
-      <link href="../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
-      <script type="text/javascript" src="../../../lib/jquery.min.js"></script>
-      <script type="text/javascript" src="../../../lib/jquery.panzoom.min.js"></script>
-      <script type="text/javascript" src="../../../lib/jquery.mousewheel.min.js"></script>
-      <script type="text/javascript" src="../../../lib/index.js"></script>
-      <script type="text/javascript" src="../../../index.js"></script>
-      <script type="text/javascript" src="../../../lib/scheduler.js"></script>
-      <script type="text/javascript" src="../../../lib/template.js"></script>
-      <script type="text/javascript" src="../../../lib/modernizr.custom.js"></script><script type="text/javascript" src="../../../lib/diagrams.js" id="diagrams-js"></script>
-      <script type="text/javascript">
-        /* this variable can be used by the JS to determine the path to the root document */
-        var toRoot = '../../../';
-      </script>
-    
-        </head>
-        <body>
-      <div id="search">
-        <span id="doc-title"><span id="doc-version"></span></span>
-        <span class="close-results"><span class="left">&lt;</span> Back</span>
-        <div id="textfilter">
-          <span class="input">
-            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
-            <i class="clear material-icons"></i>
-            <i id="search-icon" class="material-icons"></i>
-          </span>
-        </div>
-    </div>
-      <div id="search-results">
-        <div id="search-progress">
-          <div id="progress-fill"></div>
-        </div>
-        <div id="results-content">
-          <div id="entity-results"></div>
-          <div id="member-results"></div>
-        </div>
-      </div>
-      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
-        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
-          <div id="subpackage-spacer">
-            <div id="packages">
-              <h1>Packages</h1>
-              <ul>
-                <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="_root_"></a><a id="root:_root_"></a>
-      <span class="permalink">
-      <a href="../../../index.html" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">package</span>
-      </span>
-      <span class="symbol">
-        <a title="" href="../../../index.html"><span class="name">root</span></a>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
-    </li><li name="_root_.endpoints" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="endpoints"></a><a id="endpoints:endpoints"></a>
-      <span class="permalink">
-      <a href="../../../endpoints/index.html" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">package</span>
-      </span>
-      <span class="symbol">
-        <a title="" href="../../index.html"><span class="name">endpoints</span></a>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
-    </li><li name="endpoints.scalaj" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="scalaj"></a><a id="scalaj:scalaj"></a>
-      <span class="permalink">
-      <a href="../../../endpoints/scalaj/index.html" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">package</span>
-      </span>
-      <span class="symbol">
-        <a title="" href="../index.html"><span class="name">scalaj</span></a>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="endpoints">endpoints</a></dd></dl></div>
-    </li><li name="endpoints.scalaj.client" visbl="pub" class="indented3 current" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="client"></a><a id="client:client"></a>
-      <span class="permalink">
-      <a href="../../../endpoints/scalaj/client/index.html" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">package</span>
-      </span>
-      <span class="symbol">
-        <span class="name">client</span>
-      </span>
-      
-      <p class="shortcomment cmt">Client interpreters backed by scalaj-http
+<!DOCTYPE html ><html><head><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/><title></title><meta content="" name="description"/><meta content="" name="keywords"/><meta http-equiv="content-type" content="text/html; charset=UTF-8"/><link href="../../../lib/index.css" media="screen" type="text/css" rel="stylesheet"/><link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet"/><link href="../../../lib/print.css" media="print" type="text/css" rel="stylesheet"/><link href="../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css"/><script type="text/javascript" src="../../../lib/jquery.min.js"></script><script type="text/javascript" src="../../../lib/index.js"></script><script type="text/javascript" src="../../../index.js"></script><script type="text/javascript" src="../../../lib/scheduler.js"></script><script type="text/javascript" src="../../../lib/template.js"></script><script type="text/javascript" src="https://d3js.org/d3.v4.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/graphlib-dot@0.6.2/dist/graphlib-dot.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dagre-d3/0.6.1/dagre-d3.min.js"></script><script type="text/javascript">/* this variable can be used by the JS to determine the path to the root document */
+var toRoot = '../../../';</script></head><body><div id="search"><span id="doc-title"><span id="doc-version"></span></span> <span class="close-results"><span class="left">&lt;</span> Back</span><div id="textfilter"><span class="input"><input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/"/><i class="clear material-icons"></i><i id="search-icon" class="material-icons"></i></span></div></div><div id="search-results"><div id="search-progress"><div id="progress-fill"></div></div><div id="results-content"><div id="entity-results"></div><div id="member-results"></div></div></div><div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;"><div id="content-container" style="-webkit-overflow-scrolling: touch;"><div id="subpackage-spacer"><div id="packages"><h1>Packages</h1><ul><li class="indented0 " name="_root_.root" group="Ungrouped" fullComment="yes" data-isabs="false" visbl="pub"><a id="_root_"></a><a id="root:_root_"></a> <span class="permalink"><a href="../../../index.html" title="Permalink"><i class="material-icons"></i></a></span> <span class="modifier_kind"><span class="modifier"></span> <span class="kind">package</span></span> <span class="symbol"><a href="../../../index.html" title=""><span class="name">root</span></a></span><div class="fullcomment"><dl class="attributes block"><dt>Definition Classes</dt><dd><a href="../../../index.html" name="_root_" id="_root_" class="extype">root</a></dd></dl></div></li><li class="indented1 " name="_root_.endpoints" group="Ungrouped" fullComment="yes" data-isabs="false" visbl="pub"><a id="endpoints"></a><a id="endpoints:endpoints"></a> <span class="permalink"><a href="../../../endpoints/index.html" title="Permalink"><i class="material-icons"></i></a></span> <span class="modifier_kind"><span class="modifier"></span> <span class="kind">package</span></span> <span class="symbol"><a href="../../index.html" title=""><span class="name">endpoints</span></a></span><div class="fullcomment"><dl class="attributes block"><dt>Definition Classes</dt><dd><a href="../../../index.html" name="_root_" id="_root_" class="extype">root</a></dd></dl></div></li><li class="indented2 " name="endpoints.scalaj" group="Ungrouped" fullComment="yes" data-isabs="false" visbl="pub"><a id="scalaj"></a><a id="scalaj:scalaj"></a> <span class="permalink"><a href="../../../endpoints/scalaj/index.html" title="Permalink"><i class="material-icons"></i></a></span> <span class="modifier_kind"><span class="modifier"></span> <span class="kind">package</span></span> <span class="symbol"><a href="../index.html" title=""><span class="name">scalaj</span></a></span><div class="fullcomment"><dl class="attributes block"><dt>Definition Classes</dt><dd><a href="../../index.html" name="endpoints" id="endpoints" class="extype">endpoints</a></dd></dl></div></li><li class="indented3 current" name="endpoints.scalaj.client" group="Ungrouped" fullComment="yes" data-isabs="false" visbl="pub"><a id="client"></a><a id="client:client"></a> <span class="permalink"><a href="../../../endpoints/scalaj/client/index.html" title="Permalink"><i class="material-icons"></i></a></span> <span class="modifier_kind"><span class="modifier"></span> <span class="kind">package</span></span> <span class="symbol"><span class="name">client</span></span><p class="shortcomment cmt">Client interpreters backed by scalaj-http
 </p><div class="fullcomment"><div class="comment cmt"><p>Client interpreters backed by scalaj-http
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="endpoints.scalaj">scalaj</a></dd></dl></div>
-    </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="trait" href="BasicAuthentication.html" title=""></a>
-                        <a href="BasicAuthentication.html" title="">BasicAuthentication</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="trait" href="BuiltInErrors.html" title=""></a>
-                        <a href="BuiltInErrors.html" title="">BuiltInErrors</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="trait" href="Endpoints.html" title=""></a>
-                        <a href="Endpoints.html" title="">Endpoints</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="trait" href="EndpointsWithCustomErrors.html" title=""></a>
-                        <a href="EndpointsWithCustomErrors.html" title="">EndpointsWithCustomErrors</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="trait" href="JsonEntitiesFromCodecs.html" title="Interpreter for endpoints.algebra.JsonEntitiesFromCodecs that encodes JSON requests and decodes JSON responses."></a>
-                        <a href="JsonEntitiesFromCodecs.html" title="Interpreter for endpoints.algebra.JsonEntitiesFromCodecs that encodes JSON requests and decodes JSON responses.">JsonEntitiesFromCodecs</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="trait" href="Methods.html" title=""></a>
-                        <a href="Methods.html" title="">Methods</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="trait" href="Requests.html" title=""></a>
-                        <a href="Requests.html" title="">Requests</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="trait" href="Responses.html" title=""></a>
-                        <a href="Responses.html" title="">Responses</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="trait" href="StatusCodes.html" title=""></a>
-                        <a href="StatusCodes.html" title="">StatusCodes</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="trait" href="Urls.html" title=""></a>
-                        <a href="Urls.html" title="">Urls</a>
-                      </li>
-              </ul>
-            </div>
-          </div>
-          <div id="content">
-            <body class="package value">
-      <div id="definition">
-        <div class="big-circle package">p</div>
-        <p id="owner"><a href="../../index.html" class="extype" name="endpoints">endpoints</a>.<a href="../index.html" class="extype" name="endpoints.scalaj">scalaj</a></p>
-        <h1>client<span class="permalink">
-      <a href="../../../endpoints/scalaj/client/index.html" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span></h1>
-        
-      </div>
+</p></div><dl class="attributes block"><dt>Definition Classes</dt><dd><a href="../index.html" name="endpoints.scalaj" id="endpoints.scalaj" class="extype">scalaj</a></dd></dl></div></li><li class="current-entities indented3"><span class="separator"></span> <a href="BasicAuthentication.html" title="" class="trait"></a><a href="BasicAuthentication.html" title="">BasicAuthentication</a></li><li class="current-entities indented3"><span class="separator"></span> <a href="BuiltInErrors.html" title="" class="trait"></a><a href="BuiltInErrors.html" title="">BuiltInErrors</a></li><li class="current-entities indented3"><span class="separator"></span> <a href="Endpoints.html" title="" class="trait"></a><a href="Endpoints.html" title="">Endpoints</a></li><li class="current-entities indented3"><span class="separator"></span> <a href="EndpointsWithCustomErrors.html" title="" class="trait"></a><a href="EndpointsWithCustomErrors.html" title="">EndpointsWithCustomErrors</a></li><li class="current-entities indented3"><span class="separator"></span> <a href="JsonEntitiesFromCodecs.html" title="Interpreter for endpoints.algebra.JsonEntitiesFromCodecs that encodes JSON requests and decodes JSON responses." class="trait"></a><a href="JsonEntitiesFromCodecs.html" title="Interpreter for endpoints.algebra.JsonEntitiesFromCodecs that encodes JSON requests and decodes JSON responses.">JsonEntitiesFromCodecs</a></li><li class="current-entities indented3"><span class="separator"></span> <a href="Methods.html" title="" class="trait"></a><a href="Methods.html" title="">Methods</a></li><li class="current-entities indented3"><span class="separator"></span> <a href="Requests.html" title="" class="trait"></a><a href="Requests.html" title="">Requests</a></li><li class="current-entities indented3"><span class="separator"></span> <a href="Responses.html" title="" class="trait"></a><a href="Responses.html" title="">Responses</a></li><li class="current-entities indented3"><span class="separator"></span> <a href="StatusCodes.html" title="" class="trait"></a><a href="StatusCodes.html" title="">StatusCodes</a></li><li class="current-entities indented3"><span class="separator"></span> <a href="Urls.html" title="" class="trait"></a><a href="Urls.html" title="">Urls</a></li></ul></div></div><div id="content"><body class="package value"><div id="definition"><div class="big-circle package">p</div><p id="owner"><a href="../../index.html" name="endpoints" id="endpoints" class="extype">endpoints</a>.<a href="../index.html" name="endpoints.scalaj" id="endpoints.scalaj" class="extype">scalaj</a></p><h1>client<span class="permalink"><a href="../../../endpoints/scalaj/client/index.html" title="Permalink"><i class="material-icons"></i></a></span></h1></div><h4 id="signature" class="signature"><span class="modifier_kind"><span class="modifier"></span> <span class="kind">package</span></span> <span class="symbol"><span class="name">client</span></span></h4><div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Client interpreters backed by scalaj-http
+</p></div><dl class="attributes block"><dt>Source</dt><dd><a href="https://github.com/julienrf/endpoints/blob/v0.15.0/scalaj/client/src/main/scala/endpoints/scalaj/client/package.scala" target="_blank">package.scala</a></dd></dl><div class="toggleContainer"><div class="toggle block"><span>Linear Supertypes</span><div class="superTypes hiddenContent"><a href="https://www.scala-lang.org/api/2.13.1/scala/AnyRef.html#scala.AnyRef" name="scala.AnyRef" id="scala.AnyRef" class="extype">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.13.1/scala/Any.html#scala.Any" name="scala.Any" id="scala.Any" class="extype">Any</a></div></div></div><div id="content-diagram-container" class="toggleContainer block diagram-container"><span class="toggle diagram-link">Content Hierarchy</span><div id="content-diagram" class="diagram hiddenContent"><svg id="graph1" class="package-diagram" width="800" height="600"></svg><script type="text/dot" id="dot1">
+digraph G {
+  
+  
+  node0 [URL="Urls.html#inheritance-diagram-container", label="Urls", id="graph1_0", class="default", tooltip="endpoints.scalaj.client.Urls"] ;
+  node1 [URL="StatusCodes.html#inheritance-diagram-container", label="StatusCodes", id="graph1_1", class="default", tooltip="endpoints.scalaj.client.StatusCodes"] ;
+  node2 [URL="Responses.html#inheritance-diagram-container", label="Responses", id="graph1_2", class="default", tooltip="endpoints.scalaj.client.Responses"] ;
+  node3 [URL="Requests.html#inheritance-diagram-container", label="Requests", id="graph1_3", class="default", tooltip="endpoints.scalaj.client.Requests"] ;
+  node4 [URL="Methods.html#inheritance-diagram-container", label="Methods", id="graph1_4", class="default", tooltip="endpoints.scalaj.client.Methods"] ;
+  node5 [URL="JsonEntitiesFromCodecs.html#inheritance-diagram-container", label="JsonEntitiesFromCodecs", id="graph1_5", class="default", tooltip="endpoints.scalaj.client.JsonEntitiesFromCodecs"] ;
+  node6 [URL="EndpointsWithCustomErrors.html#inheritance-diagram-container", label="EndpointsWithCustomErrors", id="graph1_6", class="default", tooltip="endpoints.scalaj.client.EndpointsWithCustomErrors"] ;
+  node7 [URL="Endpoints.html#inheritance-diagram-container", label="Endpoints", id="graph1_7", class="default", tooltip="endpoints.scalaj.client.Endpoints"] ;
+  node8 [URL="BuiltInErrors.html#inheritance-diagram-container", label="BuiltInErrors", id="graph1_8", class="default", tooltip="endpoints.scalaj.client.BuiltInErrors"] ;
+  node9 [URL="BasicAuthentication.html#inheritance-diagram-container", label="BasicAuthentication", id="graph1_9", class="default", tooltip="endpoints.scalaj.client.BasicAuthentication"] ;
+  
+  
+  node6 -> node9 [arrowtail="empty", dir="back", id="graph1_6_9", class="inheritance", tooltip="BasicAuthentication is a subtype of EndpointsWithCustomErrors"] ;
+  node6 -> node7 [arrowtail="empty", dir="back", id="graph1_6_7", class="inheritance", tooltip="Endpoints is a subtype of EndpointsWithCustomErrors"] ;node8 -> node7 [arrowtail="empty", dir="back", id="graph1_8_7", class="inheritance", tooltip="Endpoints is a subtype of BuiltInErrors"] ;
+  node3 -> node6 [arrowtail="empty", dir="back", id="graph1_3_6", class="inheritance", tooltip="EndpointsWithCustomErrors is a subtype of Requests"] ;node2 -> node6 [arrowtail="empty", dir="back", id="graph1_2_6", class="inheritance", tooltip="EndpointsWithCustomErrors is a subtype of Responses"] ;
+  node6 -> node5 [arrowtail="empty", dir="back", id="graph1_6_5", class="inheritance", tooltip="JsonEntitiesFromCodecs is a subtype of EndpointsWithCustomErrors"] ;
+  node0 -> node3 [arrowtail="empty", dir="back", id="graph1_0_3", class="inheritance", tooltip="Requests is a subtype of Urls"] ;node4 -> node3 [arrowtail="empty", dir="back", id="graph1_4_3", class="inheritance", tooltip="Requests is a subtype of Methods"] ;
+  node1 -> node2 [arrowtail="empty", dir="back", id="graph1_1_2", class="inheritance", tooltip="Responses is a subtype of StatusCodes"] ;
+}
+</script><script>$("#inheritance-diagram").bind('beforeShow', function() {
+  if ($("svg#graph1").children().length == 0) {
+    var dot = document.querySelector("#dot1").text;
+    var svg = d3.select("#graph1");
+    var inner = svg.append("g");
 
-      <h4 id="signature" class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">package</span>
-      </span>
-      <span class="symbol">
-        <span class="name">client</span>
-      </span>
-      </h4>
+    // Set up zoom support
+    var zoom = d3.zoom()
+        .on("zoom", function() {
+          inner.attr("transform", d3.event.transform);
+        });
+    svg.call(zoom);
 
-      
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Client interpreters backed by scalaj-http
-</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/julienrf/endpoints/blob/v0.14.0/scalaj/client/src/main/scala/endpoints/scalaj/client/package.scala" target="_blank">package.scala</a></dd></dl><div class="toggleContainer block">
-          <span class="toggle">
-            Linear Supertypes
-          </span>
-          <div class="superTypes hiddenContent"><a href="../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
-        </div><div class="toggleContainer block diagram-container" id="content-diagram-container">
-                <span class="toggle diagram-link">
-                  Content Hierarchy
-                </span>
-                <div class="diagram" id="content-diagram"><svg class="package-diagram" id="graph1" viewBox="0.00 0.00 429.50 216.00" height="216pt" width="430pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 212)" class="graph" id="graph0"><polygon points="-4,4 -4,-212 425.5,-212 425.5,4 -4,4" stroke="none" fill="white"></polygon><!-- node0 --><g class="node trait" id="graph1_0"><g id="a_trait|graph1_0"><a xlink:title="endpoints.scalaj.client.Urls" xlink:href="Urls.html#inheritance-diagram"><path d="M103.167,-208C103.167,-208 57.8333,-208 57.8333,-208 53.6667,-208 49.5,-203.833 49.5,-199.667 49.5,-199.667 49.5,-191.333 49.5,-191.333 49.5,-187.167 53.6667,-183 57.8333,-183 57.8333,-183 103.167,-183 103.167,-183 107.333,-183 111.5,-187.167 111.5,-191.333 111.5,-191.333 111.5,-199.667 111.5,-199.667 111.5,-203.833 107.333,-208 103.167,-208" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-202.5" x="59.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-193.1" x="80.5" text-anchor="start">Urls</text></a></g></g><!-- node3 --><g class="node trait" id="graph1_3"><g id="a_trait|graph1_3"><a xlink:title="endpoints.scalaj.client.Requests" xlink:href="Requests.html#inheritance-diagram"><path d="M204.167,-147C204.167,-147 136.833,-147 136.833,-147 132.667,-147 128.5,-142.833 128.5,-138.667 128.5,-138.667 128.5,-130.333 128.5,-130.333 128.5,-126.167 132.667,-122 136.833,-122 136.833,-122 204.167,-122 204.167,-122 208.333,-122 212.5,-126.167 212.5,-130.333 212.5,-130.333 212.5,-138.667 212.5,-138.667 212.5,-142.833 208.333,-147 204.167,-147" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-141.5" x="138.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-132.1" x="159.5" text-anchor="start">Requests</text></a></g></g><!-- node0&#45;&gt;node3 --><g class="edge inheritance" id="graph1_0_3"><g id="a_inheritance|graph1_0_3"><a xlink:title="Requests is a subtype of Urls"><path d="M104.505,-178.763C119.68,-168.815 138.96,-156.176 152.756,-147.132" stroke="#d4d4d4" fill="none"></path><polygon points="102.792,-176.957 98.2811,-182.843 105.479,-181.055 102.792,-176.957" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node1 --><g class="node trait" id="graph1_1"><g id="a_trait|graph1_1"><a xlink:title="endpoints.scalaj.client.StatusCodes" xlink:href="StatusCodes.html#inheritance-diagram"><path d="M319.667,-208C319.667,-208 237.333,-208 237.333,-208 233.167,-208 229,-203.833 229,-199.667 229,-199.667 229,-191.333 229,-191.333 229,-187.167 233.167,-183 237.333,-183 237.333,-183 319.667,-183 319.667,-183 323.833,-183 328,-187.167 328,-191.333 328,-191.333 328,-199.667 328,-199.667 328,-203.833 323.833,-208 319.667,-208" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-202.5" x="239.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-193.1" x="260.5" text-anchor="start">StatusCodes</text></a></g></g><!-- node2 --><g class="node trait" id="graph1_2"><g id="a_trait|graph1_2"><a xlink:title="endpoints.scalaj.client.Responses" xlink:href="Responses.html#inheritance-diagram"><path d="M315.167,-147C315.167,-147 239.833,-147 239.833,-147 235.667,-147 231.5,-142.833 231.5,-138.667 231.5,-138.667 231.5,-130.333 231.5,-130.333 231.5,-126.167 235.667,-122 239.833,-122 239.833,-122 315.167,-122 315.167,-122 319.333,-122 323.5,-126.167 323.5,-130.333 323.5,-130.333 323.5,-138.667 323.5,-138.667 323.5,-142.833 319.333,-147 315.167,-147" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-141.5" x="241.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-132.1" x="262.5" text-anchor="start">Responses</text></a></g></g><!-- node1&#45;&gt;node2 --><g class="edge inheritance" id="graph1_1_2"><g id="a_inheritance|graph1_1_2"><a xlink:title="Responses is a subtype of StatusCodes"><path d="M278.182,-175.76C278.023,-166.367 277.835,-155.288 277.697,-147.132" stroke="#d4d4d4" fill="none"></path><polygon points="275.734,-175.886 278.302,-182.843 280.633,-175.803 275.734,-175.886" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node6 --><g class="node trait" id="graph1_6"><g id="a_trait|graph1_6"><a xlink:title="endpoints.scalaj.client.EndpointsWithCustomErrors" xlink:href="EndpointsWithCustomErrors.html#inheritance-diagram"><path d="M297.167,-86C297.167,-86 149.833,-86 149.833,-86 145.667,-86 141.5,-81.8333 141.5,-77.6667 141.5,-77.6667 141.5,-69.3333 141.5,-69.3333 141.5,-65.1667 145.667,-61 149.833,-61 149.833,-61 297.167,-61 297.167,-61 301.333,-61 305.5,-65.1667 305.5,-69.3333 305.5,-69.3333 305.5,-77.6667 305.5,-77.6667 305.5,-81.8333 301.333,-86 297.167,-86" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-80.5" x="151.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-71.1" x="172.5" text-anchor="start">EndpointsWithCustomErrors</text></a></g></g><!-- node2&#45;&gt;node6 --><g class="edge inheritance" id="graph1_2_6"><g id="a_inheritance|graph1_2_6"><a xlink:title="EndpointsWithCustomErrors is a subtype of Responses"><path d="M261.863,-116.415C252.966,-106.694 242.055,-94.7727 234.146,-86.1323" stroke="#d4d4d4" fill="none"></path><polygon points="260.298,-118.334 266.831,-121.843 263.913,-115.026 260.298,-118.334" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node3&#45;&gt;node6 --><g class="edge inheritance" id="graph1_3_6"><g id="a_inheritance|graph1_3_6"><a xlink:title="EndpointsWithCustomErrors is a subtype of Requests"><path d="M185.847,-116.415C194.58,-106.694 205.289,-94.7727 213.051,-86.1323" stroke="#d4d4d4" fill="none"></path><polygon points="183.826,-114.999 180.971,-121.843 187.472,-118.273 183.826,-114.999" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node4 --><g class="node trait" id="graph1_4"><g id="a_trait|graph1_4"><a xlink:title="endpoints.scalaj.client.Methods" xlink:href="Methods.html#inheritance-diagram"><path d="M202.667,-208C202.667,-208 138.333,-208 138.333,-208 134.167,-208 130,-203.833 130,-199.667 130,-199.667 130,-191.333 130,-191.333 130,-187.167 134.167,-183 138.333,-183 138.333,-183 202.667,-183 202.667,-183 206.833,-183 211,-187.167 211,-191.333 211,-191.333 211,-199.667 211,-199.667 211,-203.833 206.833,-208 202.667,-208" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-202.5" x="140.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-193.1" x="161.5" text-anchor="start">Methods</text></a></g></g><!-- node4&#45;&gt;node3 --><g class="edge inheritance" id="graph1_4_3"><g id="a_inheritance|graph1_4_3"><a xlink:title="Requests is a subtype of Methods"><path d="M170.5,-175.76C170.5,-166.367 170.5,-155.288 170.5,-147.132" stroke="#d4d4d4" fill="none"></path><polygon points="168.05,-175.843 170.5,-182.843 172.95,-175.844 168.05,-175.843" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node5 --><g class="node trait" id="graph1_5"><g id="a_trait|graph1_5"><a xlink:title="endpoints.scalaj.client.JsonEntitiesFromCodecs" xlink:href="JsonEntitiesFromCodecs.html#inheritance-diagram"><path d="M138.667,-25C138.667,-25 8.33333,-25 8.33333,-25 4.16667,-25 0,-20.8333 0,-16.6667 0,-16.6667 0,-8.33333 0,-8.33333 0,-4.16667 4.16667,-0 8.33333,-0 8.33333,-0 138.667,-0 138.667,-0 142.833,-0 147,-4.16667 147,-8.33333 147,-8.33333 147,-16.6667 147,-16.6667 147,-20.8333 142.833,-25 138.667,-25" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-19.5" x="10.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="31.5" text-anchor="start">JsonEntitiesFromCodecs</text></a></g></g><!-- node6&#45;&gt;node5 --><g class="edge inheritance" id="graph1_6_5"><g id="a_inheritance|graph1_6_5"><a xlink:title="JsonEntitiesFromCodecs is a subtype of EndpointsWithCustomErrors"><path d="M187.507,-58.3426C161.64,-48.1683 127.195,-34.62 102.96,-25.0875" stroke="#d4d4d4" fill="none"></path><polygon points="186.811,-60.7018 194.222,-60.9841 188.605,-56.1419 186.811,-60.7018" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node7 --><g class="node trait" id="graph1_7"><g id="a_trait|graph1_7"><a xlink:title="endpoints.scalaj.client.Endpoints" xlink:href="Endpoints.html#inheritance-diagram"><path d="M396.667,-25C396.667,-25 326.333,-25 326.333,-25 322.167,-25 318,-20.8333 318,-16.6667 318,-16.6667 318,-8.33333 318,-8.33333 318,-4.16667 322.167,-0 326.333,-0 326.333,-0 396.667,-0 396.667,-0 400.833,-0 405,-4.16667 405,-8.33333 405,-8.33333 405,-16.6667 405,-16.6667 405,-20.8333 400.833,-25 396.667,-25" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-19.5" x="328.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="349.5" text-anchor="start">Endpoints</text></a></g></g><!-- node6&#45;&gt;node7 --><g class="edge inheritance" id="graph1_6_7"><g id="a_inheritance|graph1_6_7"><a xlink:title="Endpoints is a subtype of EndpointsWithCustomErrors"><path d="M256.896,-58.2219C280.578,-48.0972 311.966,-34.6777 334.161,-25.1884" stroke="#d4d4d4" fill="none"></path><polygon points="255.909,-55.9795 250.435,-60.9841 257.835,-60.485 255.909,-55.9795" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node9 --><g class="node trait" id="graph1_9"><g id="a_trait|graph1_9"><a xlink:title="endpoints.scalaj.client.BasicAuthentication" xlink:href="BasicAuthentication.html#inheritance-diagram"><path d="M285.167,-25C285.167,-25 173.833,-25 173.833,-25 169.667,-25 165.5,-20.8333 165.5,-16.6667 165.5,-16.6667 165.5,-8.33333 165.5,-8.33333 165.5,-4.16667 169.667,-0 173.833,-0 173.833,-0 285.167,-0 285.167,-0 289.333,-0 293.5,-4.16667 293.5,-8.33333 293.5,-8.33333 293.5,-16.6667 293.5,-16.6667 293.5,-20.8333 289.333,-25 285.167,-25" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-19.5" x="175.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="196.5" text-anchor="start">BasicAuthentication</text></a></g></g><!-- node6&#45;&gt;node9 --><g class="edge inheritance" id="graph1_6_9"><g id="a_inheritance|graph1_6_9"><a xlink:title="BasicAuthentication is a subtype of EndpointsWithCustomErrors"><path d="M225.406,-53.7603C226.361,-44.3675 227.488,-33.2882 228.317,-25.1323" stroke="#d4d4d4" fill="none"></path><polygon points="222.956,-53.6315 224.685,-60.8435 227.831,-54.1273 222.956,-53.6315" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node8 --><g class="node trait" id="graph1_8"><g id="a_trait|graph1_8"><a xlink:title="endpoints.scalaj.client.BuiltInErrors" xlink:href="BuiltInErrors.html#inheritance-diagram"><path d="M413.167,-86C413.167,-86 331.833,-86 331.833,-86 327.667,-86 323.5,-81.8333 323.5,-77.6667 323.5,-77.6667 323.5,-69.3333 323.5,-69.3333 323.5,-65.1667 327.667,-61 331.833,-61 331.833,-61 413.167,-61 413.167,-61 417.333,-61 421.5,-65.1667 421.5,-69.3333 421.5,-69.3333 421.5,-77.6667 421.5,-77.6667 421.5,-81.8333 417.333,-86 413.167,-86" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-80.5" x="333.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-71.1" x="354.5" text-anchor="start">BuiltInErrors</text></a></g></g><!-- node8&#45;&gt;node7 --><g class="edge inheritance" id="graph1_8_7"><g id="a_inheritance|graph1_8_7"><a xlink:title="Endpoints is a subtype of BuiltInErrors"><path d="M369.006,-53.7603C367.255,-44.3675 365.189,-33.2882 363.669,-25.1323" stroke="#d4d4d4" fill="none"></path><polygon points="366.635,-54.4111 370.327,-60.8435 371.452,-53.513 366.635,-54.4111" stroke="#d4d4d4" fill="none"></polygon></a></g></g></g></svg></div>
-                <div id="diagram-controls" class="hiddenContent">
-                  <button id="diagram-zoom-out" class="diagram-btn"><i class="material-icons"></i></button>
-                  <button id="diagram-zoom-in" class="diagram-btn"><i class="material-icons"></i></button>
-                  <button title="Toggle full-screen" id="diagram-fs" class="diagram-btn to-full"><i class="material-icons"></i></button>
-                </div>
-              </div></div>
-        
+    var render = new dagreD3.render();
+    var g = graphlibDot.read(dot);
+    render(inner, g);
 
-      
-
-      <div id="template">
-        <div id="allMembers">
-        
-
-        <div id="types" class="types members">
-              <h3>Type Members</h3>
-              <ol><li name="endpoints.scalaj.client.BasicAuthentication" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="interpreters">
-      <a id="BasicAuthenticationextendsBasicAuthenticationwithEndpointsWithCustomErrors"></a><a id="BasicAuthentication:BasicAuthentication"></a>
-      <span class="permalink">
-      <a href="../../../endpoints/scalaj/client/BasicAuthentication.html" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a title="" href="BasicAuthentication.html"><span class="name">BasicAuthentication</span></a><span class="result"> extends <a href="../../algebra/BasicAuthentication.html" class="extype" name="endpoints.algebra.BasicAuthentication">algebra.BasicAuthentication</a> with <a href="EndpointsWithCustomErrors.html" class="extype" name="endpoints.scalaj.client.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a></span>
-      </span>
-      
-      <p class="shortcomment cmt"></p>
-    </li><li name="endpoints.scalaj.client.BuiltInErrors" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="interpreters">
-      <a id="BuiltInErrorsextendsBuiltInErrors"></a><a id="BuiltInErrors:BuiltInErrors"></a>
-      <span class="permalink">
-      <a href="../../../endpoints/scalaj/client/BuiltInErrors.html" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a title="" href="BuiltInErrors.html"><span class="name">BuiltInErrors</span></a><span class="result"> extends <a href="../../algebra/BuiltInErrors.html" class="extype" name="endpoints.algebra.BuiltInErrors">algebra.BuiltInErrors</a></span>
-      </span>
-      
-      <p class="shortcomment cmt"></p>
-    </li><li name="endpoints.scalaj.client.Endpoints" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="interpreters">
-      <a id="EndpointsextendsEndpointswithEndpointsWithCustomErrorswithBuiltInErrors"></a><a id="Endpoints:Endpoints"></a>
-      <span class="permalink">
-      <a href="../../../endpoints/scalaj/client/Endpoints.html" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a title="" href="Endpoints.html"><span class="name">Endpoints</span></a><span class="result"> extends <a href="../../algebra/Endpoints.html" class="extype" name="endpoints.algebra.Endpoints">algebra.Endpoints</a> with <a href="EndpointsWithCustomErrors.html" class="extype" name="endpoints.scalaj.client.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a> with <a href="BuiltInErrors.html" class="extype" name="endpoints.scalaj.client.BuiltInErrors">BuiltInErrors</a></span>
-      </span>
-      
-      <p class="shortcomment cmt"></p>
-    </li><li name="endpoints.scalaj.client.EndpointsWithCustomErrors" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="interpreters">
-      <a id="EndpointsWithCustomErrorsextendsEndpointsWithCustomErrorswithRequestswithResponses"></a><a id="EndpointsWithCustomErrors:EndpointsWithCustomErrors"></a>
-      <span class="permalink">
-      <a href="../../../endpoints/scalaj/client/EndpointsWithCustomErrors.html" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a title="" href="EndpointsWithCustomErrors.html"><span class="name">EndpointsWithCustomErrors</span></a><span class="result"> extends <a href="../../algebra/EndpointsWithCustomErrors.html" class="extype" name="endpoints.algebra.EndpointsWithCustomErrors">algebra.EndpointsWithCustomErrors</a> with <a href="Requests.html" class="extype" name="endpoints.scalaj.client.Requests">Requests</a> with <a href="Responses.html" class="extype" name="endpoints.scalaj.client.Responses">Responses</a></span>
-      </span>
-      
-      <p class="shortcomment cmt"></p>
-    </li><li name="endpoints.scalaj.client.JsonEntitiesFromCodecs" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="interpreters">
-      <a id="JsonEntitiesFromCodecsextendsEndpointsWithCustomErrorswithJsonEntitiesFromCodecs"></a><a id="JsonEntitiesFromCodecs:JsonEntitiesFromCodecs"></a>
-      <span class="permalink">
-      <a href="../../../endpoints/scalaj/client/JsonEntitiesFromCodecs.html" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a title="Interpreter for endpoints.algebra.JsonEntitiesFromCodecs that encodes JSON requests and decodes JSON responses." href="JsonEntitiesFromCodecs.html"><span class="name">JsonEntitiesFromCodecs</span></a><span class="result"> extends <a href="EndpointsWithCustomErrors.html" class="extype" name="endpoints.scalaj.client.EndpointsWithCustomErrors">EndpointsWithCustomErrors</a> with <a href="../../algebra/JsonEntitiesFromCodecs.html" class="extype" name="endpoints.algebra.JsonEntitiesFromCodecs">algebra.JsonEntitiesFromCodecs</a></span>
-      </span>
-      
-      <p class="shortcomment cmt">Interpreter for <a href="../../algebra/JsonEntitiesFromCodecs.html" class="extype" name="endpoints.algebra.JsonEntitiesFromCodecs">endpoints.algebra.JsonEntitiesFromCodecs</a> that encodes JSON requests
-and decodes JSON responses.</p>
-    </li><li name="endpoints.scalaj.client.Methods" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="interpreters">
-      <a id="MethodsextendsMethods"></a><a id="Methods:Methods"></a>
-      <span class="permalink">
-      <a href="../../../endpoints/scalaj/client/Methods.html" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a title="" href="Methods.html"><span class="name">Methods</span></a><span class="result"> extends <a href="../../algebra/Methods.html" class="extype" name="endpoints.algebra.Methods">algebra.Methods</a></span>
-      </span>
-      
-      <p class="shortcomment cmt"></p>
-    </li><li name="endpoints.scalaj.client.Requests" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="interpreters">
-      <a id="RequestsextendsRequestswithUrlswithMethods"></a><a id="Requests:Requests"></a>
-      <span class="permalink">
-      <a href="../../../endpoints/scalaj/client/Requests.html" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a title="" href="Requests.html"><span class="name">Requests</span></a><span class="result"> extends <a href="../../algebra/Requests.html" class="extype" name="endpoints.algebra.Requests">algebra.Requests</a> with <a href="Urls.html" class="extype" name="endpoints.scalaj.client.Urls">Urls</a> with <a href="Methods.html" class="extype" name="endpoints.scalaj.client.Methods">Methods</a></span>
-      </span>
-      
-      <p class="shortcomment cmt"></p>
-    </li><li name="endpoints.scalaj.client.Responses" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="interpreters">
-      <a id="ResponsesextendsResponseswithStatusCodes"></a><a id="Responses:Responses"></a>
-      <span class="permalink">
-      <a href="../../../endpoints/scalaj/client/Responses.html" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a title="" href="Responses.html"><span class="name">Responses</span></a><span class="result"> extends <a href="../../algebra/Responses.html" class="extype" name="endpoints.algebra.Responses">algebra.Responses</a> with <a href="StatusCodes.html" class="extype" name="endpoints.scalaj.client.StatusCodes">StatusCodes</a></span>
-      </span>
-      
-      <p class="shortcomment cmt"></p>
-    </li><li name="endpoints.scalaj.client.StatusCodes" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="interpreters">
-      <a id="StatusCodesextendsStatusCodes"></a><a id="StatusCodes:StatusCodes"></a>
-      <span class="permalink">
-      <a href="../../../endpoints/scalaj/client/StatusCodes.html" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a title="" href="StatusCodes.html"><span class="name">StatusCodes</span></a><span class="result"> extends <a href="../../algebra/StatusCodes.html" class="extype" name="endpoints.algebra.StatusCodes">algebra.StatusCodes</a></span>
-      </span>
-      
-      <p class="shortcomment cmt"></p>
-    </li><li name="endpoints.scalaj.client.Urls" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="interpreters">
-      <a id="UrlsextendsUrls"></a><a id="Urls:Urls"></a>
-      <span class="permalink">
-      <a href="../../../endpoints/scalaj/client/Urls.html" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a title="" href="Urls.html"><span class="name">Urls</span></a><span class="result"> extends <a href="../../algebra/Urls.html" class="extype" name="endpoints.algebra.Urls">algebra.Urls</a></span>
-      </span>
-      
-      <p class="shortcomment cmt"></p>
-    </li></ol>
-            </div>
-
-        
-
-        
-
-        
-
-        
-        </div>
-
-        <div id="inheritedMembers">
-        <div class="parent" name="scala.AnyRef">
-              <h3>Inherited from <a href="../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></h3>
-            </div><div class="parent" name="scala.Any">
-              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></h3>
-            </div>
-        
-        </div>
-
-        <div id="groupedMembers">
-        <div class="group" name="interpreters">
-              <h3>Interpreters</h3>
-              
-            </div>
-        </div>
-
-      </div>
-
-      <div id="tooltip"></div>
-
-      <div id="footer">  </div>
-    </body>
-          </div>
-        </div>
-      </div>
-    </body>
-      </html>
+    inner.selectAll("g.node").each(function(v) {
+      // https://stackoverflow.com/questions/27381452/wrapping-existing-inline-svg-g-element-with-a-element
+      var tgt = $("#"+ g.node(v).id +" g.label text")[0];
+      var parent = tgt.parentNode;
+      var a = document.createElementNS('http://www.w3.org/2000/svg', 'a');
+      a.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', g.node(v).URL);
+      a.appendChild(tgt);
+      parent.appendChild(a);
+    });
+  }
+})</script></div></div></div><div id="template"><div id="allMembers"><div id="types" class="types members"><h3>Type Members</h3><ol><li class="indented0 " name="endpoints.scalaj.client.BasicAuthentication" group="interpreters" fullComment="no" data-isabs="true" visbl="pub"><a id="BasicAuthenticationextendsBasicAuthenticationwithEndpointsWithCustomErrors"></a><a id="BasicAuthentication:BasicAuthentication"></a> <span class="permalink"><a href="../../../endpoints/scalaj/client/BasicAuthentication.html" title="Permalink"><i class="material-icons"></i></a></span> <span class="modifier_kind"><span class="modifier"></span> <span class="kind">trait</span></span> <span class="symbol"><a href="BasicAuthentication.html" title=""><span class="name">BasicAuthentication</span></a><span class="result"> extends <a href="../../algebra/BasicAuthentication.html" name="endpoints.algebra.BasicAuthentication" id="endpoints.algebra.BasicAuthentication" class="extype">algebra.BasicAuthentication</a> with <a href="EndpointsWithCustomErrors.html" name="endpoints.scalaj.client.EndpointsWithCustomErrors" id="endpoints.scalaj.client.EndpointsWithCustomErrors" class="extype">EndpointsWithCustomErrors</a></span></span><p class="shortcomment cmt"></p></li><li class="indented0 " name="endpoints.scalaj.client.BuiltInErrors" group="interpreters" fullComment="no" data-isabs="true" visbl="pub"><a id="BuiltInErrorsextendsBuiltInErrors"></a><a id="BuiltInErrors:BuiltInErrors"></a> <span class="permalink"><a href="../../../endpoints/scalaj/client/BuiltInErrors.html" title="Permalink"><i class="material-icons"></i></a></span> <span class="modifier_kind"><span class="modifier"></span> <span class="kind">trait</span></span> <span class="symbol"><a href="BuiltInErrors.html" title=""><span class="name">BuiltInErrors</span></a><span class="result"> extends <a href="../../algebra/BuiltInErrors.html" name="endpoints.algebra.BuiltInErrors" id="endpoints.algebra.BuiltInErrors" class="extype">algebra.BuiltInErrors</a></span></span><p class="shortcomment cmt"></p></li><li class="indented0 " name="endpoints.scalaj.client.Endpoints" group="interpreters" fullComment="no" data-isabs="true" visbl="pub"><a id="EndpointsextendsEndpointswithEndpointsWithCustomErrorswithBuiltInErrors"></a><a id="Endpoints:Endpoints"></a> <span class="permalink"><a href="../../../endpoints/scalaj/client/Endpoints.html" title="Permalink"><i class="material-icons"></i></a></span> <span class="modifier_kind"><span class="modifier"></span> <span class="kind">trait</span></span> <span class="symbol"><a href="Endpoints.html" title=""><span class="name">Endpoints</span></a><span class="result"> extends <a href="../../algebra/Endpoints.html" name="endpoints.algebra.Endpoints" id="endpoints.algebra.Endpoints" class="extype">algebra.Endpoints</a> with <a href="EndpointsWithCustomErrors.html" name="endpoints.scalaj.client.EndpointsWithCustomErrors" id="endpoints.scalaj.client.EndpointsWithCustomErrors" class="extype">EndpointsWithCustomErrors</a> with <a href="BuiltInErrors.html" name="endpoints.scalaj.client.BuiltInErrors" id="endpoints.scalaj.client.BuiltInErrors" class="extype">BuiltInErrors</a></span></span><p class="shortcomment cmt"></p></li><li class="indented0 " name="endpoints.scalaj.client.EndpointsWithCustomErrors" group="interpreters" fullComment="no" data-isabs="true" visbl="pub"><a id="EndpointsWithCustomErrorsextendsEndpointsWithCustomErrorswithRequestswithResponses"></a><a id="EndpointsWithCustomErrors:EndpointsWithCustomErrors"></a> <span class="permalink"><a href="../../../endpoints/scalaj/client/EndpointsWithCustomErrors.html" title="Permalink"><i class="material-icons"></i></a></span> <span class="modifier_kind"><span class="modifier"></span> <span class="kind">trait</span></span> <span class="symbol"><a href="EndpointsWithCustomErrors.html" title=""><span class="name">EndpointsWithCustomErrors</span></a><span class="result"> extends <a href="../../algebra/EndpointsWithCustomErrors.html" name="endpoints.algebra.EndpointsWithCustomErrors" id="endpoints.algebra.EndpointsWithCustomErrors" class="extype">algebra.EndpointsWithCustomErrors</a> with <a href="Requests.html" name="endpoints.scalaj.client.Requests" id="endpoints.scalaj.client.Requests" class="extype">Requests</a> with <a href="Responses.html" name="endpoints.scalaj.client.Responses" id="endpoints.scalaj.client.Responses" class="extype">Responses</a></span></span><p class="shortcomment cmt"></p></li><li class="indented0 " name="endpoints.scalaj.client.JsonEntitiesFromCodecs" group="interpreters" fullComment="no" data-isabs="true" visbl="pub"><a id="JsonEntitiesFromCodecsextendsEndpointsWithCustomErrorswithJsonEntitiesFromCodecs"></a><a id="JsonEntitiesFromCodecs:JsonEntitiesFromCodecs"></a> <span class="permalink"><a href="../../../endpoints/scalaj/client/JsonEntitiesFromCodecs.html" title="Permalink"><i class="material-icons"></i></a></span> <span class="modifier_kind"><span class="modifier"></span> <span class="kind">trait</span></span> <span class="symbol"><a href="JsonEntitiesFromCodecs.html" title="Interpreter for endpoints.algebra.JsonEntitiesFromCodecs that encodes JSON requests and decodes JSON responses."><span class="name">JsonEntitiesFromCodecs</span></a><span class="result"> extends <a href="EndpointsWithCustomErrors.html" name="endpoints.scalaj.client.EndpointsWithCustomErrors" id="endpoints.scalaj.client.EndpointsWithCustomErrors" class="extype">EndpointsWithCustomErrors</a> with <a href="../../algebra/JsonEntitiesFromCodecs.html" name="endpoints.algebra.JsonEntitiesFromCodecs" id="endpoints.algebra.JsonEntitiesFromCodecs" class="extype">algebra.JsonEntitiesFromCodecs</a></span></span><p class="shortcomment cmt">Interpreter for <a href="../../algebra/JsonEntitiesFromCodecs.html" name="endpoints.algebra.JsonEntitiesFromCodecs" id="endpoints.algebra.JsonEntitiesFromCodecs" class="extype">endpoints.algebra.JsonEntitiesFromCodecs</a> that encodes JSON requests
+and decodes JSON responses.</p></li><li class="indented0 " name="endpoints.scalaj.client.Methods" group="interpreters" fullComment="no" data-isabs="true" visbl="pub"><a id="MethodsextendsMethods"></a><a id="Methods:Methods"></a> <span class="permalink"><a href="../../../endpoints/scalaj/client/Methods.html" title="Permalink"><i class="material-icons"></i></a></span> <span class="modifier_kind"><span class="modifier"></span> <span class="kind">trait</span></span> <span class="symbol"><a href="Methods.html" title=""><span class="name">Methods</span></a><span class="result"> extends <a href="../../algebra/Methods.html" name="endpoints.algebra.Methods" id="endpoints.algebra.Methods" class="extype">algebra.Methods</a></span></span><p class="shortcomment cmt"></p></li><li class="indented0 " name="endpoints.scalaj.client.Requests" group="interpreters" fullComment="no" data-isabs="true" visbl="pub"><a id="RequestsextendsRequestswithUrlswithMethods"></a><a id="Requests:Requests"></a> <span class="permalink"><a href="../../../endpoints/scalaj/client/Requests.html" title="Permalink"><i class="material-icons"></i></a></span> <span class="modifier_kind"><span class="modifier"></span> <span class="kind">trait</span></span> <span class="symbol"><a href="Requests.html" title=""><span class="name">Requests</span></a><span class="result"> extends <a href="../../algebra/Requests.html" name="endpoints.algebra.Requests" id="endpoints.algebra.Requests" class="extype">algebra.Requests</a> with <a href="Urls.html" name="endpoints.scalaj.client.Urls" id="endpoints.scalaj.client.Urls" class="extype">Urls</a> with <a href="Methods.html" name="endpoints.scalaj.client.Methods" id="endpoints.scalaj.client.Methods" class="extype">Methods</a></span></span><p class="shortcomment cmt"></p></li><li class="indented0 " name="endpoints.scalaj.client.Responses" group="interpreters" fullComment="no" data-isabs="true" visbl="pub"><a id="ResponsesextendsResponseswithStatusCodes"></a><a id="Responses:Responses"></a> <span class="permalink"><a href="../../../endpoints/scalaj/client/Responses.html" title="Permalink"><i class="material-icons"></i></a></span> <span class="modifier_kind"><span class="modifier"></span> <span class="kind">trait</span></span> <span class="symbol"><a href="Responses.html" title=""><span class="name">Responses</span></a><span class="result"> extends <a href="../../algebra/Responses.html" name="endpoints.algebra.Responses" id="endpoints.algebra.Responses" class="extype">algebra.Responses</a> with <a href="StatusCodes.html" name="endpoints.scalaj.client.StatusCodes" id="endpoints.scalaj.client.StatusCodes" class="extype">StatusCodes</a></span></span><p class="shortcomment cmt"></p></li><li class="indented0 " name="endpoints.scalaj.client.StatusCodes" group="interpreters" fullComment="no" data-isabs="true" visbl="pub"><a id="StatusCodesextendsStatusCodes"></a><a id="StatusCodes:StatusCodes"></a> <span class="permalink"><a href="../../../endpoints/scalaj/client/StatusCodes.html" title="Permalink"><i class="material-icons"></i></a></span> <span class="modifier_kind"><span class="modifier"></span> <span class="kind">trait</span></span> <span class="symbol"><a href="StatusCodes.html" title=""><span class="name">StatusCodes</span></a><span class="result"> extends <a href="../../algebra/StatusCodes.html" name="endpoints.algebra.StatusCodes" id="endpoints.algebra.StatusCodes" class="extype">algebra.StatusCodes</a></span></span><p class="shortcomment cmt"></p></li><li class="indented0 " name="endpoints.scalaj.client.Urls" group="interpreters" fullComment="no" data-isabs="true" visbl="pub"><a id="UrlsextendsUrls"></a><a id="Urls:Urls"></a> <span class="permalink"><a href="../../../endpoints/scalaj/client/Urls.html" title="Permalink"><i class="material-icons"></i></a></span> <span class="modifier_kind"><span class="modifier"></span> <span class="kind">trait</span></span> <span class="symbol"><a href="Urls.html" title=""><span class="name">Urls</span></a><span class="result"> extends <a href="../../algebra/Urls.html" name="endpoints.algebra.Urls" id="endpoints.algebra.Urls" class="extype">algebra.Urls</a></span></span><p class="shortcomment cmt"></p></li></ol></div></div><div id="inheritedMembers"><div name="scala.AnyRef" class="parent"><h3>Inherited from <a href="https://www.scala-lang.org/api/2.13.1/scala/AnyRef.html#scala.AnyRef" name="scala.AnyRef" id="scala.AnyRef" class="extype">AnyRef</a></h3></div><div name="scala.Any" class="parent"><h3>Inherited from <a href="https://www.scala-lang.org/api/2.13.1/scala/Any.html#scala.Any" name="scala.Any" id="scala.Any" class="extype">Any</a></h3></div></div><div id="groupedMembers"><div name="interpreters" class="group"><h3>Interpreters</h3></div></div></div><div id="tooltip"></div><div id="footer"></div></body></div></div></div></body></html>

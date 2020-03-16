@@ -1,434 +1,359 @@
 <!DOCTYPE html>
-<html class="no-js" lang="eng" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Design in a nutshell</title>
-    <link rel="stylesheet" href="theme/css/foundation.min.css">
-    <link rel="stylesheet" href="theme/css/app.css">
-    
-     <link rel="stylesheet" href="theme/highlight.js/styles/github-gist.css">  <link rel="stylesheet" href="theme/css/mermaid.custom.css">  <link rel="stylesheet" href="theme/css/foundation-icons.custom.css"> 
-    
-     <link rel="prev" href="quick-start.html"  title="Quick start"  />  <link rel="next" href="algebras-and-interpreters.html"  title="Algebras and interpreters"  />  <link rel="start" href="index.html"  title="Introduction"  />  <link rel="toc" href="site-contents.html"  title="Table of Contents"  /> 
-  </head>
-  <body>
-    <div class="expanded row">
-      <div class="small-12 medium-12 large-12 columns align-self-top">
-        <div class="row">
-          
-          <header class="large-12 columns align-self-top a_header">
-            <div class="row">
-              <div class="large-12 columns a_limited top-bar">
-                <div class="top-bar-left">
-                  <p>endpoints 0.14.0</p>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="description" content="manual">
+<meta name="generator" content="Paradox, paradox-material-theme=0.6.0, mkdocs-material=3.0.3">
 
-                </div>
-                <div class="top-bar-right align-right row">
-                  
-                  
-                    <form action="site-search.html" method="get" class="align-right a_search">
-                      <input name="q" type="search"  placeholder="Search
-" >
-                      <button><img alt="&#1F50D;" src="theme/images/search.svg" /></button>
-                    </form>
-                  
-                </div>
-              </div>
-            </div>
-          </header>
-          
-          <div class="small-12 medium-12 large-12 columns align-self-top a_limited a_main">
-            <div class="row">
-              
-              <main class="columns large-order-2 sections" id="_sections">
-                 
-  <ul class="menu align-right simple a_navbar a_navbar_top">
-    
-      
-        <li><a href="quick-start.html"  title="Quick start" ><span class="a_foundation_icon"></span>  Previous</a></li>
-      
-    
-      
-        <li><a href="algebras-and-interpreters.html"  title="Algebras and interpreters" ><span class="a_foundation_icon"></span>  Next</a></li>
-      
-    
-      
-        <li><a href="site-contents.html"  title="Table of Contents" ><span class="a_foundation_icon"></span>  Contents</a></li>
-      
-    
-  </ul>
- 
-                
-                   <noscript> <blockquote class="warning">
-<p>This page requires JavaScript. Please enable JavaScript in your browser.</p>
-</blockquote>
- </noscript> 
-                
-                <h1 id="design-in-a-nutshell" class="a_section" data-magellan-target="design-in-a-nutshell">Design in a nutshell<a class="a_hlink" href="#design-in-a-nutshell"></a></h1>
-<p>You have seen in the <a href="quick-start.html">quick start</a> page that using the <em>endpoints</em> library consists in
-first defining abstract <strong>descriptions</strong> of HTTP endpoints, and then producing clients, servers, or
-documentation, by <strong>interpreting</strong> these descriptions. This page takes a step back to
-explain the underlying architecture of the library, and then provides some guidelines
-to embrace this design.</p>
-<h2 id="descriptions-and-interpretations" class="a_section" data-magellan-target="descriptions-and-interpretations">Descriptions and Interpretations<a class="a_hlink" href="#descriptions-and-interpretations"></a></h2>
+<meta name="lang:clipboard.copy" content="Copy to clipboard">
+<meta name="lang:clipboard.copied" content="Copied to clipboard">
+<meta name="lang:search.language" content="">
+<meta name="lang:search.pipeline.stopwords" content="true">
+<meta name="lang:search.pipeline.trimmer" content="true">
+<meta name="lang:search.result.none" content="No matching documents">
+<meta name="lang:search.result.one" content="1 matching document">
+<meta name="lang:search.result.other" content="# matching documents">
+<meta name="lang:search.tokenizer" content="[\s\-]+">
+
+
+<meta name="description" content="manual">
+<link rel="shortcut icon" href="assets/images/favicon.png">
+<title>Design in a nutshell · endpoints</title>
+<link rel="stylesheet" href="assets/stylesheets/application.451f80e5.css">
+<link rel="stylesheet" href="lib/material__tabs/dist/mdc.tabs.min.css">
+<link rel="stylesheet" href="lib/prettify/prettify.css">
+<script src="assets/javascripts/modernizr.1aa3b519.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+<style>
+body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}
+code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}
+</style>
+<link rel="stylesheet" href="assets/fonts/font-awesome.css">
+<link rel="stylesheet" href="assets/fonts/material-icons.css">
+<link rel="stylesheet" href="assets/stylesheets/paradox-material-theme.css">
+<link rel="stylesheet" href="snippets.css">
+</head>
+<body
+>
+<input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+<input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+<label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+<header class="md-header" data-md-component="header">
+<nav class="md-header-nav md-grid">
+<div class="md-flex">
+<div class="md-flex__cell md-flex__cell--shrink">
+<a href="index.html" title="endpoints" class="md-header-nav__button md-logo">
+<i class="md-icon">local_library</i>
+</a>
+</div>
+<div class="md-flex__cell md-flex__cell--shrink">
+<label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+</div>
+<div class="md-flex__cell md-flex__cell--stretch">
+<div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+<span class="md-header-nav__topic">
+endpoints
+</span>
+<span class="md-header-nav__topic">
+Design in a nutshell
+</span>
+</div>
+</div>
+<div class="md-flex__cell md-flex__cell--shrink">
+<label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+<label class="md-icon md-search__icon" for="__search"></label>
+<button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">&#xE5CD;</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix>
+<div class="md-search-result" data-md-component="result">
+<div class="md-search-result__meta">
+Type to start searching
+</div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="md-flex__cell md-flex__cell--shrink">
+<div class="md-header-nav__source">
+<a href="https://github.com/julienrf/endpoints"
+title="Go to repository"
+class="md-source"
+data-md-source="github">
+<div class="md-source__icon">
+<i class="fa fa-github"></i>
+</div>
+<div class="md-source__repository">
+julienrf/endpoints
+</div>
+</a>
+
+</div>
+</div>
+</div>
+</nav>
+</header>
+
+<div class="md-container">
+<main class="md-main">
+<div class="md-main__inner md-grid" data-md-component="container">
+<div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav class="md-nav md-nav--primary" data-md-level="0" style="visibility: hidden">
+<label class="md-nav__title md-nav__title--site" for="drawer">
+<a href="index.html" title="endpoints" class="md-nav__button md-logo">
+<span class="md-nav__button md-logo">
+<i class="md-icon">local_library</i>
+</a>
+<a href="index.html" title="endpoints">
+endpoints
+</a>
+</label>
+<div class="md-nav__source">
+<a href="https://github.com/julienrf/endpoints"
+title="Go to repository"
+class="md-source"
+data-md-source="github">
+<div class="md-source__icon">
+<i class="fa fa-github"></i>
+</div>
+<div class="md-source__repository">
+julienrf/endpoints
+</div>
+</a>
+
+</div>
+<ul>
+  <li><a href="use-cases.html" class="page">Use Cases</a></li>
+  <li><a href="quick-start.html" class="page">Quick start</a></li>
+  <li><a href="design.html" class="active page">Design in a nutshell</a></li>
+  <li><a href="algebras-and-interpreters.html" class="page">Algebras and interpreters</a>
+  <ul>
+    <li><a href="algebras/endpoints.html" class="page"><code>Endpoints</code></a></li>
+    <li><a href="algebras/json-entities.html" class="page">JSON Entities</a></li>
+    <li><a href="algebras/json-schemas.html" class="page">JSON Schemas</a></li>
+    <li><a href="algebras/chunked-entities.html" class="page">Chunked Entities</a></li>
+    <li><a href="algebras/assets.html" class="page">Assets</a></li>
+    <li><a href="algebras/mux-endpoints.html" class="page">Multiplexed Endpoints</a></li>
+    <li><a href="interpreters/akka-http.html" class="page">Akka HTTP</a></li>
+    <li><a href="interpreters/play.html" class="page">Play framework</a></li>
+    <li><a href="interpreters/http4s.html" class="page">http4s</a></li>
+    <li><a href="interpreters/scalajs-web.html" class="page">Scala.js web client</a></li>
+    <li><a href="interpreters/scalaj-http.html" class="page">scalaj-http</a></li>
+    <li><a href="interpreters/sttp.html" class="page">sttp</a></li>
+    <li><a href="interpreters/openapi.html" class="page">OpenAPI</a></li>
+    <li><a href="interpreters/circe.html" class="page">Circe</a></li>
+    <li><a href="interpreters/play-json.html" class="page">Play JSON</a></li>
+  </ul></li>
+  <li><a href="guides.html" class="page">Guides</a>
+  <ul>
+    <li><a href="guides/tupler.html" class="page"><code>Tupler</code></a></li>
+    <li><a href="guides/custom-authentication.html" class="page">Application-specific authentication</a></li>
+  </ul></li>
+  <li><a href="comparison.html" class="page">Comparison with similar tools</a></li>
+  <li><a href="talks.html" class="page">Talks and Publications</a></li>
+</ul>
+<nav class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">Table of contents</label>
+<ul>
+  <li><a href="design.html#design-in-a-nutshell" class="header">Design in a nutshell</a>
+  <ul>
+    <li><a href="design.html#descriptions-and-interpretations" class="header">Descriptions and Interpretations</a></li>
+    <li><a href="design.html#modular-algebras" class="header">Modular Algebras</a></li>
+    <li><a href="design.html#next-step" class="header">Next Step</a></li>
+  </ul></li>
+</ul>
+</nav>
+
+</nav>
+<ul style="display: none">
+<li class="md-nav__item md-version" id="project.version">
+<label class="md-nav__link" for="__version">
+<i class="md-icon" title="Version">label_outline</i> 0.15.0
+</label>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">Table of contents</label>
+<ul>
+  <li><a href="design.html#design-in-a-nutshell" class="header">Design in a nutshell</a>
+  <ul>
+    <li><a href="design.html#descriptions-and-interpretations" class="header">Descriptions and Interpretations</a></li>
+    <li><a href="design.html#modular-algebras" class="header">Modular Algebras</a></li>
+    <li><a href="design.html#next-step" class="header">Next Step</a></li>
+  </ul></li>
+</ul>
+</nav>
+
+</div>
+</div>
+</div>
+<div class="md-content">
+<article class="md-content__inner md-typeset">
+<div class="md-content__searchable">
+<h1><a href="#design-in-a-nutshell" name="design-in-a-nutshell" class="anchor"><span class="anchor-link"></span></a>Design in a nutshell</h1>
+<p>You have seen in the <a href="quick-start.html">quick start</a> page that using the <em>endpoints</em> library consists in first defining abstract <strong>descriptions</strong> of HTTP endpoints, and then producing clients, servers, or documentation, by <strong>interpreting</strong> these descriptions. This page takes a step back to explain the underlying architecture of the library, and then provides some guidelines to embrace this design.</p>
+<h2><a href="#descriptions-and-interpretations" name="descriptions-and-interpretations" class="anchor"><span class="anchor-link"></span></a>Descriptions and Interpretations</h2>
 <p>Here is an example of endpoint description:</p>
-<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
-<pre class="hljs"><code class="language-scala"><span class="hljs-keyword">import</span> endpoints.{algebra, generic}
+<pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/0.15.0/documentation/examples/quickstart/endpoints/src/main/scala/quickstart/CounterEndpoints.scala#L5-L50" target="_blank" title="Go to snippet source"></a><code class="language-scala">import endpoints.{algebra, generic}
 
-<span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">CounterEndpoints</span></span>
-  <span class="hljs-keyword">extends</span> algebra.<span class="hljs-type">Endpoints</span>
-    <span class="hljs-keyword">with</span> algebra.<span class="hljs-type">JsonEntitiesFromSchemas</span>
-    <span class="hljs-keyword">with</span> generic.<span class="hljs-type">JsonSchemas</span> {
+trait CounterEndpoints
+    extends algebra.Endpoints
+    with algebra.JsonEntitiesFromSchemas
+    with generic.JsonSchemas {
 
-<span class="hljs-keyword">val</span> currentValue: <span class="hljs-type">Endpoint</span>[<span class="hljs-type">Unit</span>, <span class="hljs-type">Counter</span>] =
-  endpoint(get(path / <span class="hljs-string">"current-value"</span>), ok(jsonResponse[<span class="hljs-type">Counter</span>]))
+  val currentValue: Endpoint[Unit, Counter] =
+    endpoint(get(path / &quot;current-value&quot;), ok(jsonResponse[Counter]))
 
 }</code></pre>
-<a href="https://github.com/julienrf/endpoints/blob/v0.14.0/documentation/examples/quickstart/endpoints/src/main/scala/quickstart/CounterEndpoints.scala#L5-L47" class="a_sourcelink">CounterEndpoints.scala</a></div></div>
-<p>Endpoint descriptions are defined in terms of operations (e.g., <code class="hljs">endpoint</code>, <code class="hljs">get</code>, <code class="hljs">path</code>, <code class="hljs">ok</code>, etc.)
-provided by traits living in the <a href="api/endpoints/algebra/index.html"><code class="hljs">endpoints.algebra</code> package</a>.
-These operations are all <strong>abstract</strong>. Furthermore, their return <strong>types</strong> are also abstract. Their
-purpose is only to define the <strong>rules</strong> for constructing and combining parts of HTTP endpoint
-descriptions. This is why they are called “algebra interfaces”, or just <strong>algebras</strong>.</p>
-<p>For instance, consider the following truncated version of the
-<a href="api/endpoints/algebra/Endpoints.html"><code class="hljs">Endpoints</code> algebra</a>:</p>
-<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
-<pre class="hljs"><code class="language-scala"><span class="hljs-keyword">package</span> endpoints.algebra
+<p>Endpoint descriptions are defined in terms of operations (e.g., <code>endpoint</code>, <code>get</code>, <code>path</code>, <code>ok</code>, etc.) provided by traits living in the <a href="/api/endpoints/algebra/index.html"><code>endpoints.algebra</code> package</a>. These operations are all <strong>abstract</strong>. Furthermore, their return <strong>types</strong> are also abstract. Their purpose is only to define the <strong>rules</strong> for constructing and combining parts of HTTP endpoint descriptions. This is why they are called “algebra interfaces”, or just <strong>algebras</strong>.</p>
+<p>For instance, consider the following truncated version of the <a href="/api/endpoints/algebra/Endpoints.html"><code>Endpoints</code> algebra</a>:</p>
+<pre class="prettyprint"><code class="language-scala">package endpoints.algebra
 
-<span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">Endpoints</span> </span>{
-  <span class="hljs-comment">/** A request that uses the method GET and the given URL */</span>
-  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get</span></span>[<span class="hljs-type">A</span>](url: <span class="hljs-type">Url</span>[<span class="hljs-type">A</span>]): <span class="hljs-type">Request</span>[<span class="hljs-type">A</span>]
+trait Endpoints {
+  /** A request that uses the method GET and the given URL */
+  def get[A](url: Url[A]): Request[A]
 
-  <span class="hljs-comment">/** A request that carries an `A` information */</span>
-  <span class="hljs-class"><span class="hljs-keyword">type</span> <span class="hljs-title">Request</span>[<span class="hljs-type">A</span>]</span>
-  <span class="hljs-comment">/** An URL that carries an `A` information */</span>
-  <span class="hljs-class"><span class="hljs-keyword">type</span> <span class="hljs-title">Url</span>[<span class="hljs-type">A</span>]</span>
+  /** A request that carries an `A` information */
+  type Request[A]
+  /** An URL that carries an `A` information */
+  type Url[A]
 }
 </code></pre>
-</div></div>
-<p>Here, the <code class="hljs">get</code> method provides a way to define an HTTP request description from a URL description.</p>
-<blockquote class="note">
-<p>Since the <code class="hljs">Request[A]</code> type is abstract, the <em>only</em> way to construct a value of that type is
-by calling a method that returns a <code class="hljs">Request[A]</code>, such as the method <code class="hljs">get</code>, in the above
-code. For this reason, we say that the method <code class="hljs">get</code> is a <strong>constructor</strong> for <code class="hljs">Request[A]</code>.</p>
-</blockquote>
-<p>The <code class="hljs">Request[A]</code> type models an HTTP request that <em>carries</em> an information of type <code class="hljs">A</code>. From a client
-point of view, this <code class="hljs">A</code> is what is <strong>needed</strong> to build a <code class="hljs">Request[A]</code>. Conversely, from a server point
-of view, this <code class="hljs">A</code> is what is <strong>provided</strong> by an incoming a <code class="hljs">Request[A]</code>.</p>
-<p>You have seen in the “quick start” page that <strong>interpreters</strong> give semantics to the algebras. They
-do so by fixing their type members and implementing their methods accordingly. For instance, here is the
-semantics given to <code class="hljs">Request[A]</code> by the Scala.js client interpreter:</p>
-<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
-<pre class="hljs"><code class="language-scala"><span class="hljs-keyword">package</span> endpoints.xhr
+<p>Here, the <code>get</code> method provides a way to define an HTTP request description from a URL description.</p><div class="callout note "><div class="callout-title">Note</div>
+<p>Since the <code>Request[A]</code> type is abstract, the <em>only</em> way to construct a value of that type is by calling a method that returns a <code>Request[A]</code>, such as the method <code>get</code>, in the above code. For this reason, we say that the method <code>get</code> is a <strong>constructor</strong> for <code>Request[A]</code>.</p></div>
+<p>The <code>Request[A]</code> type models an HTTP request that <em>carries</em> an information of type <code>A</code>. From a client point of view, this <code>A</code> is what is <strong>needed</strong> to build a <code>Request[A]</code>. Conversely, from a server point of view, this <code>A</code> is what is <strong>provided</strong> by an incoming a <code>Request[A]</code>.</p>
+<p>You have seen in the “quick start” page that <strong>interpreters</strong> give semantics to the algebras. They do so by fixing their type members and implementing their methods accordingly. For instance, here is the semantics given to <code>Request[A]</code> by the Scala.js client interpreter:</p>
+<pre class="prettyprint"><code class="language-scala">package endpoints.xhr
 
-<span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">Endpoints</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">endpoints</span>.<span class="hljs-title">algebra</span>.<span class="hljs-title">Endpoints</span> </span>{
-  <span class="hljs-class"><span class="hljs-keyword">type</span> <span class="hljs-title">Request</span>[<span class="hljs-type">A</span>] </span>= js.<span class="hljs-type">Function1</span>[<span class="hljs-type">A</span>, <span class="hljs-type">XMLHttpRequest</span>]
+trait Endpoints extends endpoints.algebra.Endpoints {
+  type Request[A] = js.Function1[A, XMLHttpRequest]
 }
 </code></pre>
-</div></div>
-<p>As previously said, from a client point of view we want to send requests and get responses. So, <code class="hljs">Request[A]</code>
-has the semantics of a function that builds an <code class="hljs">XMLHttpRequest</code> out of an <code class="hljs">A</code> value.</p>
+<p>As previously said, from a client point of view we want to send requests and get responses. So, <code>Request[A]</code> has the semantics of a function that builds an <code>XMLHttpRequest</code> out of an <code>A</code> value.</p>
 <p>Here is the semantics given by the Play-based server interpreter:</p>
-<div class="row"><div class="a_linked small-expand columns a_xscroll a_codeblock">
-<pre class="hljs"><code class="language-scala"><span class="hljs-keyword">package</span> endpoints.play.server
+<pre class="prettyprint"><code class="language-scala">package endpoints.play.server
 
-<span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">Endpoints</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">endpoints</span>.<span class="hljs-title">algebra</span>.<span class="hljs-title">Endpoints</span> </span>{
-  <span class="hljs-class"><span class="hljs-keyword">type</span> <span class="hljs-title">Request</span>[<span class="hljs-type">A</span>] </span>= <span class="hljs-type">RequestHeader</span> =&gt; <span class="hljs-type">Option</span>[<span class="hljs-type">BodyParser</span>[<span class="hljs-type">A</span>]]
+trait Endpoints extends endpoints.algebra.Endpoints {
+  type Request[A] = RequestHeader =&gt; Option[BodyParser[A]]
 }
 </code></pre>
-</div></div>
-<p>The aim of the <code class="hljs">endpoints.play.server.Endpoints</code> trait is to provide a Play router for a given set of HTTP endpoints. So,
-a <code class="hljs">Request[A]</code> is a function that checks if an incoming request matches this endpoint, and in such
-a case it returns a <code class="hljs">BodyParser[A]</code> that decodes a value of type <code class="hljs">A</code> from the request.</p>
-<p>As you can see, each interpreter brings its own <strong>concrete semantic type</strong> for <code class="hljs">Request[A]</code>. Client
-interpreters typically fix the <code class="hljs">Request[A]</code> type to a function that <em>takes</em> an <code class="hljs">A</code> as parameter. Conversely,
-server interpreters typically fix the <code class="hljs">Request[A]</code> type to a function that <em>returns</em> an <code class="hljs">A</code>. Can you guess
-what documentation interpreters do with this type parameter <code class="hljs">A</code>? You can see the answer
-<a href="api/endpoints/openapi/Requests.html#Request[A]=Requests.this.DocumentedRequest">here</a>. It is
-discarded because this type <code class="hljs">A</code> models the information that is carried by an actual request, at run-time,
-but the documentation is static (so, there is no <code class="hljs">A</code> value to deal with).</p>
-<blockquote class="note">
-<p>This technique has been described in details by Bruno C. d. S. Oliveira <em>et al.</em> [1].
-Note that we use a variant discovered by Christian Hofer <em>et al.</em> [2], which uses
-type members rather than type parameters.</p>
-</blockquote>
-<h3 id="summary" class="a_section" data-magellan-target="summary">Summary<a class="a_hlink" href="#summary"></a></h3>
-<p><strong>Algebras</strong> are traits that provide abstract type members and methods defining how to
-<strong>construct</strong> and <strong>combine</strong> endpoint descriptions.</p>
-<p><strong>Interpreters</strong> are traits that extend algebras, and give them a concrete meaning by
-fixing their type members and implementing their methods accordingly.</p>
-<h2 id="modular-algebras" class="a_section" data-magellan-target="modular-algebras">Modular Algebras<a class="a_hlink" href="#modular-algebras"></a></h2>
-<p>The separation between descriptions and interpretations provides one dimension of
-modularity: a same endpoint description can be interpreted with a client interpreter,
-a server interpreter, or documentation interpreter. Even more, the client and server
-stacks can be completely different (one can use Play framework while the other uses
-Akka, for instance). Here is a diagram illustrating the fact that multiple
-interpreters can be applied to a same algebra:</p>
-<div class="mermaid" id="_id0"><pre class="mermaid_src" style="display: none">graph BT
-  algebra.Endpoints
-  play.server.Endpoints --&gt; algebra.Endpoints
-  akkahttp.client.Endpoints --&gt; algebra.Endpoints
-  openapi.Endpoints --&gt; algebra.Endpoints
-</pre></div>
-<blockquote class="note">
-<p>From that perspective, endpoint descriptions are equivalent to protobuf or Swagger
-files: they are machine-readable descriptors for a service. As a consequence, if you
-want to share a descriptor of your service with the outside world, one option is
-to publish the artifact containing the traits that provide your endpoint descriptions.
-Downstream users will then be able to turn these descriptions to a client of
-their choice by applying the interpreter of their choice. Of course, this works only
-if your users use Scala. For the rest of the world, you can distribute the
-descriptor produced by the OpenAPI interpreter.</p>
-</blockquote>
-<p>The fact that algebras are defined in traits and that we can mix several traits
-together provides a second dimension of modularity: the algebra itself is modular.
-For instance, you have seen in the code example at the top of this page that two
-algebras were used together: <code class="hljs">algebra.Endpoints</code> and <code class="hljs">algebra.JsonEntitiesFromSchemas</code>.
-The diagram below shows a couple of algebras and their relations:</p>
-<div class="mermaid" id="_id1"><pre class="mermaid_src" style="display: none">graph BT
-  algebra.Endpoints
-  algebra.JsonEntitiesFromSchemas --&gt; algebra.Endpoints
-  algebra.BasicAuthentication --&gt; algebra.Endpoints
-</pre></div>
-<p>We say that the <code class="hljs">BasicAuthentication</code> algebra <strong>enriches</strong> the <code class="hljs">Endpoints</code> algebra
-with operations related to authentication.</p>
-<p>The fact that algebras are modular is a double-edged sword. On one hand, having several
-algebra modules makes it possible for some interpreters to support only a subset of them.
-Consider for instance an algebra for describing Web Sockets. Not all HTTP clients or servers
-have a good support of Web Sockets, which means that not all HTTP clients or servers could
-interpret such an algebra. However, this is not a problem: that algebra module can
-be skipped, and the interpreters can focus on supporting only the modules that are
-relevant to them. Another benefit is that the algebras provided by the <em>endpoints</em> library
-can be extended <em>outside</em> of the library itself. Any application-specific concern can
-be introduced as another algebra without having to make the <em>endpoints</em> library aware of
-it. This point is illustrated in the
-<a href="guides/custom-authentication.html">authentication example</a>.</p>
-<p>On the other hand, a modular algebra means that you have to select the algebra modules
-to use before you can write endpoint descriptions. For instance, the provided
-<code class="hljs">Endpoints</code> algebra is minimalist and is unlikely to be enough for your needs. Most
-probably, you will complete it with one of the <code class="hljs">JsonEntities</code> algebras. Once you have
-settled on the algebra modules you want to use, you will have to find the matching
-interpreter modules. In general, interpreters follow a specific
-<a href="algebras-and-interpreters.html#naming-conventions">naming convention</a> that should make
-this process easier.</p>
-<p>Another consequence of the modularity of the algebras is that the library <em>intentionally</em>
-provides a minimal set of features. The aim is to cover most users’ needs in the main
-algebra, and let the community experiment with other algebra modules on their own before
-considering including them into the main algebra.</p>
-<h3 id="summary-1" class="a_section" data-magellan-target="summary-1">Summary<a class="a_hlink" href="#summary-1"></a></h3>
-<p>Algebras are <strong>modular</strong>. You select the algebras that provide the features
-you need, and you can even create your own algebras for more specific needs.
-The more algebras are used, the less interpreters can interpret them.</p>
-<h2 id="next-step" class="a_section" data-magellan-target="next-step">Next Step<a class="a_hlink" href="#next-step"></a></h2>
+<p>The aim of the <code>endpoints.play.server.Endpoints</code> trait is to provide a Play router for a given set of HTTP endpoints. So, a <code>Request[A]</code> is a function that checks if an incoming request matches this endpoint, and in such a case it returns a <code>BodyParser[A]</code> that decodes a value of type <code>A</code> from the request.</p>
+<p>As you can see, each interpreter brings its own <strong>concrete semantic type</strong> for <code>Request[A]</code>. Client interpreters typically fix the <code>Request[A]</code> type to a function that <em>takes</em> an <code>A</code> as parameter. Conversely, server interpreters typically fix the <code>Request[A]</code> type to a function that <em>returns</em> an <code>A</code>. Can you guess what documentation interpreters do with this type parameter <code>A</code>? You can see the answer <a href="/api/endpoints/openapi/Requests.html#Request[A]=Requests.this.DocumentedRequest">here</a>. It is discarded because this type <code>A</code> models the information that is carried by an actual request, at run-time, but the documentation is static (so, there is no <code>A</code> value to deal with).</p><div class="callout note "><div class="callout-title">Note</div>
+<p>This technique has been described in details by Bruno C. d. S. Oliveira <em>et al.</em> [1]. Note that we use a variant discovered by Christian Hofer <em>et al.</em> [2], which uses type members rather than type parameters.</p></div>
+<h3><a href="#summary" name="summary" class="anchor"><span class="anchor-link"></span></a>Summary</h3>
+<p><strong>Algebras</strong> are traits that provide abstract type members and methods defining how to <strong>construct</strong> and <strong>combine</strong> endpoint descriptions.</p>
+<p><strong>Interpreters</strong> are traits that extend algebras, and give them a concrete meaning by fixing their type members and implementing their methods accordingly.</p>
+<h2><a href="#modular-algebras" name="modular-algebras" class="anchor"><span class="anchor-link"></span></a>Modular Algebras</h2>
+<p>The separation between descriptions and interpretations provides one dimension of modularity: a same endpoint description can be interpreted with a client interpreter, a server interpreter, or documentation interpreter. Even more, the client and server stacks can be completely different (one can use Play framework while the other uses Akka, for instance). Here is a diagram illustrating the fact that multiple interpreters can be applied to a same algebra:</p>
+<p><img src="multiple-interpreters.svg" alt="multiple-interpreters" /></p><div class="callout note "><div class="callout-title">Note</div>
+<p>From that perspective, endpoint descriptions are equivalent to protobuf or Swagger files: they are machine-readable descriptors for a service. As a consequence, if you want to share a descriptor of your service with the outside world, one option is to publish the artifact containing the traits that provide your endpoint descriptions. Downstream users will then be able to turn these descriptions to a client of their choice by applying the interpreter of their choice. Of course, this works only if your users use Scala. For the rest of the world, you can distribute the descriptor produced by the OpenAPI interpreter.</p></div>
+<p>The fact that algebras are defined in traits and that we can mix several traits together provides a second dimension of modularity: the algebra itself is modular. For instance, you have seen in the code example at the top of this page that two algebras were used together: <code>algebra.Endpoints</code> and <code>algebra.JsonEntitiesFromSchemas</code>. The diagram below shows a couple of algebras and their relations:</p>
+<p><img src="extensible-algebra.svg" alt="extensible-algebra" /></p>
+<p>We say that the <code>BasicAuthentication</code> algebra <strong>enriches</strong> the <code>Endpoints</code> algebra with operations related to authentication.</p>
+<p>The fact that algebras are modular is a double-edged sword. On one hand, having several algebra modules makes it possible for some interpreters to support only a subset of them. Consider for instance an algebra for describing Web Sockets. Not all HTTP clients or servers have a good support of Web Sockets, which means that not all HTTP clients or servers could interpret such an algebra. However, this is not a problem: that algebra module can be skipped, and the interpreters can focus on supporting only the modules that are relevant to them. Another benefit is that the algebras provided by the <em>endpoints</em> library can be extended <em>outside</em> of the library itself. Any application-specific concern can be introduced as another algebra without having to make the <em>endpoints</em> library aware of it. This point is illustrated in the <a href="guides/custom-authentication.html">authentication example</a>.</p>
+<p>On the other hand, a modular algebra means that you have to select the algebra modules to use before you can write endpoint descriptions. For instance, the provided <code>Endpoints</code> algebra is minimalist and is unlikely to be enough for your needs. Most probably, you will complete it with one of the <code>JsonEntities</code> algebras. Once you have settled on the algebra modules you want to use, you will have to find the matching interpreter modules. In general, interpreters follow a specific <a href="algebras-and-interpreters.html#naming-conventions">naming convention</a> that should make this process easier.</p>
+<p>Another consequence of the modularity of the algebras is that the library <em>intentionally</em> provides a minimal set of features. The aim is to cover most users’ needs in the main algebra, and let the community experiment with other algebra modules on their own before considering including them into the main algebra.</p>
+<h3><a href="#summary" name="summary" class="anchor"><span class="anchor-link"></span></a>Summary</h3>
+<p>Algebras are <strong>modular</strong>. You select the algebras that provide the features you need, and you can even create your own algebras for more specific needs. The more algebras are used, the less interpreters can interpret them.</p>
+<h2><a href="#next-step" name="next-step" class="anchor"><span class="anchor-link"></span></a>Next Step</h2>
 <p>Discover the hierarchy of <a href="algebras-and-interpreters.html">algebras</a>.</p>
-<hr />
+<hr/>
 <ul>
-<li>[1] B. C. d. S. Oliveira et. al. Extensibility for the Masses, Practical Extensibility with Object Algebras, ECOOP,
-2012 (<a href="https://www.cs.utexas.edu/~wcook/Drafts/2012/ecoop2012.pdf">pdf</a>)</li>
-<li>[2] C. Hofer et al. Polymorphic Embedding of DSLs, GPCE, 2008 (<a href="https://www.informatik.uni-marburg.de/~rendel/hofer08polymorphic.pdf">pdf</a>)</li>
+  <li>[1] B. C. d. S. Oliveira et. al. Extensibility for the Masses, Practical Extensibility with Object Algebras, ECOOP, 2012 (<a href="https://www.cs.utexas.edu/~wcook/Drafts/2012/ecoop2012.pdf">pdf</a>)</li>
+  <li>[2] C. Hofer et al. Polymorphic Embedding of DSLs, GPCE, 2008 (<a href="https://www.informatik.uni-marburg.de/~rendel/hofer08polymorphic.pdf">pdf</a>)</li>
 </ul>
+</div>
+<div>
+<a href="https://github.com/julienrf/endpoints/tree/0.15.0/documentation/manual/src/paradox/design.md" title="Edit this page" class="md-source-file md-edit">
+Edit this page
+</a>
+</div>
+<div class="print-only">
+<span class="md-source-file md-version">
+0.15.0
+</span>
+</div>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-nav">
+<nav class="md-footer-nav__inner md-grid">
+<a href="quick-start.html" title="Quick start" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+<div class="md-flex__cell md-flex__cell--shrink">
+<i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+</div>
+<div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+<span class="md-flex__ellipsis">
+<span class="md-footer-nav__direction">
+Previous
+</span>
+Quick start
+</span>
+</div>
+</a>
+<a href="algebras-and-interpreters.html" title="Algebras and interpreters" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+<div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+<span class="md-flex__ellipsis">
+<span class="md-footer-nav__direction">
+Next
+</span>
+Algebras and interpreters
+</span>
+</div>
+<div class="md-flex__cell md-flex__cell--shrink">
+<i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+</div>
+</a>
+</nav>
+</div>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+Powered by
+<a href="https://github.com/lightbend/paradox">Paradox</a>
+and
+<a href="https://jonas.github.io/paradox-material-theme/">Paradox Material Theme</a>
 
-                 
-  <ul class="menu align-right simple a_navbar a_navbar_bottom">
-    
-      
-        <li><a href="quick-start.html"  title="Quick start" ><span class="a_foundation_icon"></span>  Previous</a></li>
-      
-    
-      
-        <li><a href="algebras-and-interpreters.html"  title="Algebras and interpreters" ><span class="a_foundation_icon"></span>  Next</a></li>
-      
-    
-      
-        <li><a href="site-contents.html"  title="Table of Contents" ><span class="a_foundation_icon"></span>  Contents</a></li>
-      
-    
-  </ul>
- 
-              </main>
-              
-              
-                <div data-sticky-container class="small-12 medium-12 large-2 large-order-1 columns a_sitenav_container">
-                  <nav class="a_sitenav" data-sticky data-sticky-on="large" data-anchor="_sections">
-                    
-                    <ul>
-                       
-  <li >
-    
-      
-        <a href="index.html">Introduction</a>
-      
-    
-    
-  </li>
-  
-  <li >
-    
-      
-        <a href="use-cases.html">Use Cases</a>
-      
-    
-    
-  </li>
-  
-  <li >
-    
-      
-        <a href="quick-start.html">Quick start</a>
-      
-    
-    
-  </li>
-  
-  <li  class="a_thispage" >
-    
-      
-        <a href="design.html">Design in a nutshell</a>
-      
-    
-    
-  </li>
-  
-  <li >
-    
-      
-        <a href="algebras-and-interpreters.html">Algebras and interpreters</a>
-      
-    
-    
-  </li>
-  
-  <li >
-    
-      
-        <a href="guides.html">Guides</a>
-      
-    
-    
-  </li>
-  
-  <li >
-    
-      
-        <a href="comparison.html">Comparison with similar tools</a>
-      
-    
-    
-  </li>
-  
-  <li >
-    
-      
-        <a href="talks.html">Talks and Publications</a>
-      
-    
-    
-  </li>
- 
-                    </ul>
-                    
-                    
-                  </nav>
-                </div>
-              
-              
-              
-                <div class="small-12 medium-12 large-2 large-order-3 columns a_show-for-xlarge" data-sticky-container>
-                  <nav class="a_pagenav" data-sticky data-sticky-on="large" data-anchor="_sections">
-                     <header><p>On This Page</p>
-</header> 
-                    <ul class="vertical menu" data-magellan>
-                       
-  
-    <li>
-      
-         <a href="#design-in-a-nutshell">Design in a nutshell</a> 
-      
-      
-        <ul class="vertical menu">  
-  
-    <li>
-      
-         <a href="#descriptions-and-interpretations">Descriptions and Interpretations</a> 
-      
-      
-        <ul class="vertical menu">  
-  
-    <li>
-      
-         <a href="#summary">Summary</a> 
-      
-      
-    </li>
-  
-  </ul>
-      
-    </li>
-  
-  
-  
-    <li>
-      
-         <a href="#modular-algebras">Modular Algebras</a> 
-      
-      
-        <ul class="vertical menu">  
-  
-    <li>
-      
-         <a href="#summary-1">Summary</a> 
-      
-      
-    </li>
-  
-  </ul>
-      
-    </li>
-  
-  
-  
-    <li>
-      
-         <a href="#next-step">Next Step</a> 
-      
-      
-    </li>
-  
-  </ul>
-      
-    </li>
-  
- 
-                    </ul>
-                  </nav>
-                </div>
-              
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <footer class="small-12 medium-12 large-12 columns align-self-bottom a_footer">
-        <div class="row">
-          <div class="small-12 medium-12 large-12 columns top-bar">
-            <div class="top-bar-left">
-              
-            </div>
-            <div class="top-bar-right">
-              <p>Generated with <a href="https://github.com/szeiger/ornate">Ornate</a>.</p>
+</div>
+<div class="md-footer-social">
+<a href="https://github.com/julienrf/endpoints" class="md-footer-social__link fa fa-github"></a>
+</div>
 
-            </div>
-          </div>
-        </div>
-      </footer>
-    </div>
-    
-    <script src="theme/js/jquery.min.js"></script>
-    <script src="theme/js/what-input.min.js"></script>
-    <script src="theme/js/foundation.min.js"></script>
-     <script src="theme/js/mermaidAPI-0.5.8.min.js"></script> 
-    <script src="theme/js/app.js"></script>
-    
-  </body>
+</div>
+</div>
+</footer>
+
+</div>
+<script src="assets/javascripts/application.583bbe55.js"></script>
+<script src="assets/javascripts/paradox-material-theme.js"></script>
+<script>app.initialize({version:"0.17",url:{base:"."}})</script>
+<script type="text/javascript" src="lib/prettify/prettify.js"></script>
+<script type="text/javascript" src="lib/prettify/lang-scala.js"></script>
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function(event) {
+window.prettyPrint && prettyPrint();
+});
+</script>
+</body>
 </html>
