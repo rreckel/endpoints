@@ -186,7 +186,7 @@ julienrf/endpoints
 <p>Web client using <code>XMLHttpRequest</code>.</p>
 <pre class="prettyprint"><code class="language-scala">&quot;org.julienrf&quot; %%% &quot;endpoints-xhr-client&quot; % &quot;0.15.0&quot;
 </code></pre>
-<p><a href="/api/endpoints/xhr/index.html">API documentation</a></p>
+<p><a href="api/endpoints/xhr/index.html">API documentation</a></p>
 <p>The <code>Endpoints</code> interpreter fixes the type <code>Endpoint[A, B]</code> to a function from <code>A</code> to <code>Result[B]</code>, where <code>Result</code> is abstract and is intended to be defined by more specialized interpreters.</p>
 <p>An example of such an interpreter is <code>endpoints.xhr.client.future.Endpoints</code>, which fixes the <code>Result[A]</code> type to <code>scala.concurrent.Future[A]</code>.</p>
 <p>This means that, given the following endpoint definition:</p>

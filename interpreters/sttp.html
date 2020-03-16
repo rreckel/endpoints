@@ -186,7 +186,7 @@ julienrf/endpoints
 <p>Client backed by <a href="https://github.com/softwaremill/sttp">sttp</a>.</p>
 <pre class="prettyprint"><code class="language-scala">&quot;org.julienrf&quot; %% &quot;endpoints-sttp-client&quot; % &quot;0.15.0&quot;
 </code></pre>
-<p><a href="/api/endpoints/sttp/client/index.html">API documentation</a></p>
+<p><a href="api/endpoints/sttp/client/index.html">API documentation</a></p>
 <p>The <code>Endpoints</code> interpreter is parameterized by an sttp backend of type <code>SttpBackend[R, Nothing]</code>, for some type constructor <code>R[_]</code>.</p>
 <p>The <code>Endpoint[A, B]</code> type is fixed as follows:</p>
 <pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/sttp/client/src/main/scala/endpoints/sttp/client/Endpoints.scala#L294" target="_blank" title="Go to snippet source"></a><code class="language-scala">type Endpoint[A, B] = A =&gt; R[B]</code></pre>

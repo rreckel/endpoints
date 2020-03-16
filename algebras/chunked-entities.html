@@ -214,7 +214,7 @@ julienrf/endpoints
 <p>This algebra provides vocabulary to describe endpoints whose requests or responses are streamed using the “chunked transfer-encoding” supported by HTTP1.1.</p>
 <pre class="prettyprint"><code class="language-scala">&quot;org.julienrf&quot; %% &quot;endpoints-algebra&quot; % &quot;0.15.0&quot;
 </code></pre>
-<p><a href="/api/endpoints/algebra/ChunkedEntities.html">API documentation</a></p>
+<p><a href="api/endpoints/algebra/ChunkedEntities.html">API documentation</a></p>
 <p>The <code>ChunkedEntities</code> module enriches the <code>Endpoints</code> algebra with operations for defining request and responses entities carrying stream of values.</p>
 <p>For instance, you can define an endpoint streaming a binary file as follows:</p>
 <pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/algebras/algebra/src/test/scala/endpoints/algebra/ChunkedEntitiesDocs.scala#L6-L7" target="_blank" title="Go to snippet source"></a><code class="language-scala">val logo: Endpoint[Unit, Chunks[Array[Byte]]] =
@@ -224,7 +224,7 @@ julienrf/endpoints
 <h2><a href="#chunkedjsonentities" name="chunkedjsonentities" class="anchor"><span class="anchor-link"></span></a><code>ChunkedJsonEntities</code></h2>
 <pre class="prettyprint"><code class="language-scala">&quot;org.julienrf&quot; %% &quot;endpoints-algebra&quot; % &quot;0.15.0&quot;
 </code></pre>
-<p><a href="/api/endpoints/algebra/ChunkedJsonEntities.html">API documentation</a></p>
+<p><a href="api/endpoints/algebra/ChunkedJsonEntities.html">API documentation</a></p>
 <p>Clients and servers have to agree on the serialization format used by response chunks and WebSocket messages. The <code>ChunkedJsonEntities</code> module provides a <code>jsonChunksRequest</code> constructor and a <code>jsonChunksResponse</code> constructor for defining request entities and response entities carrying streams of values that are serialized into JSON:</p>
 <pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/algebras/algebra/src/test/scala/endpoints/algebra/ChunkedEntitiesDocs.scala#L13-L20" target="_blank" title="Go to snippet source"></a><code class="language-scala">trait JsonStreamingExample
     extends endpoints.algebra.Endpoints

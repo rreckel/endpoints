@@ -221,7 +221,7 @@ julienrf/endpoints
 <h2><a href="#the-jsonentities-algebras" name="the-jsonentities-algebras" class="anchor"><span class="anchor-link"></span></a>The <code>JsonEntities</code> algebras</h2>
 <pre class="prettyprint"><code class="language-scala">&quot;org.julienrf&quot; %% &quot;endpoints-algebra&quot; % &quot;0.15.0&quot;
 </code></pre>
-<p><a href="/api/endpoints/algebra/JsonEntities.html">API documentation</a></p>
+<p><a href="api/endpoints/algebra/JsonEntities.html">API documentation</a></p>
 <p>The following diagram shows the relations between the three aforementioned algebras, <code>JsonEntities</code>, <code>JsonEntitiesFromCodecs</code>, and <code>JsonEntitiesFromSchemas</code>, and their relations with the other algebras:</p>
 <p><img src="json-entities.svg" /></p>
 <p>The <code>JsonEntities</code> algebra adds to the <code>Endpoints</code> algebra the capability to describe JSON entities in requests and responses. The <code>JsonEntitiesFromCodecs</code> algebra refines the <code>JsonEntities</code> algebra by aligning the request and response entities to the same <code>JsonCodec</code> type. Finally, the <code>JsonEntitiesFromSchemas</code> algebra refines the <code>JsonEntities</code> algebra by aligning the request and response entities to the same <code>JsonSchema</code> type.</p>
@@ -240,7 +240,7 @@ julienrf/endpoints
 <h2><a href="#jsonentitiesfromschemas" name="jsonentitiesfromschemas" class="anchor"><span class="anchor-link"></span></a><code>JsonEntitiesFromSchemas</code></h2>
 <pre class="prettyprint"><code class="language-scala">&quot;org.julienrf&quot; %% &quot;endpoints-algebra&quot; % &quot;0.15.0&quot;
 </code></pre>
-<p><a href="/api/endpoints/algebra/JsonEntitiesFromSchemas.html">API documentation</a></p>
+<p><a href="api/endpoints/algebra/JsonEntitiesFromSchemas.html">API documentation</a></p>
 <p>This algebra merges the <code>JsonEntities</code> algebra and the <a href="json-schemas.html"><code>JsonSchemas</code> algebra</a> and aligns both the <code>JsonRequest[A]</code> and <code>JsonResponse[A]</code> types to be <code>JsonCodec[A]</code>, which is itself defined to the <code>JsonSchema[A]</code> type provided by the <code>JsonSchemas</code> algebra:</p>
 <pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/algebras/algebra/src/main/scala/endpoints/algebra/JsonEntities.scala#L80" target="_blank" title="Go to snippet source"></a><code class="language-scala">type JsonCodec[A] = JsonSchema[A]</code></pre>
 <p>This means that you have to define such a <code>JsonSchema[A]</code> implicit value (as explained in the <code>JsonSchemas</code> documentation) for each type <code>A</code> that you want to carry as a JSON entity.</p>
@@ -248,13 +248,13 @@ julienrf/endpoints
 <h2><a href="#jsonentitiesfromcodecs" name="jsonentitiesfromcodecs" class="anchor"><span class="anchor-link"></span></a><code>JsonEntitiesFromCodecs</code></h2>
 <pre class="prettyprint"><code class="language-scala">&quot;org.julienrf&quot; %% &quot;endpoints-algebra&quot; % &quot;0.15.0&quot;
 </code></pre>
-<p><a href="/api/endpoints/algebra/JsonEntitiesFromCodecs.html">API documentation</a></p>
+<p><a href="api/endpoints/algebra/JsonEntitiesFromCodecs.html">API documentation</a></p>
 <p>In case you don’t need to document the JSON schemas of your request and response entities, the <code>JsonEntitiesFromCodecs</code> family of algebras is the preferred approach. These algebras fix both the <code>JsonRequest</code> and <code>JsonResponse</code> types to a same (abstract) <code>JsonCodec</code> type:</p>
 <pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/algebras/algebra/src/main/scala/endpoints/algebra/JsonEntities.scala#L53" target="_blank" title="Go to snippet source"></a><code class="language-scala">type JsonCodec[A]</code></pre>
 <p>By using the same codec type for both types ensures that the encoding and decoding are consistent.</p>
-<p>Generally, you want to use a <code>JsonEntitiesFromCodecs</code> algebra that fixes this <code>JsonCodec</code> type to a concrete type. An example is <a href="/api/endpoints/algebra/playjson/JsonEntitiesFromCodecs.html"><code>endpoints.algebra.playjson.JsonEntitiesFromCodecs</code></a>, which aligns the <code>JsonCodec</code> type with Play’s <code>Format</code> type:</p>
+<p>Generally, you want to use a <code>JsonEntitiesFromCodecs</code> algebra that fixes this <code>JsonCodec</code> type to a concrete type. An example is <a href="api/endpoints/algebra/playjson/JsonEntitiesFromCodecs.html"><code>endpoints.algebra.playjson.JsonEntitiesFromCodecs</code></a>, which aligns the <code>JsonCodec</code> type with Play’s <code>Format</code> type:</p>
 <pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/algebras/algebra-playjson/src/main/scala/endpoints/algebra/playjson/JsonEntitiesFromCodecs.scala#L63" target="_blank" title="Go to snippet source"></a><code class="language-scala">type JsonCodec[A] = Format[A]</code></pre>
-<p>The Circe analoguous is <a href="/api/endpoints/algebra/circe/JsonEntitiesFromCodecs.html"><code>endpoints.algebra.circe.JsonEntitiesFromCodecs</code></a>.</p>
+<p>The Circe analoguous is <a href="api/endpoints/algebra/circe/JsonEntitiesFromCodecs.html"><code>endpoints.algebra.circe.JsonEntitiesFromCodecs</code></a>.</p>
 <p>These algebras are provided by the following dependencies:</p>
 <pre class="prettyprint"><code class="language-scala">// Provides endpoints.algebra.circe.JsonEntitiesFromCodecs
 &quot;org.julienrf&quot; %% &quot;endpoints-algebra-circe&quot; % &quot;0.15.0&quot;

@@ -214,7 +214,7 @@ julienrf/endpoints
 <p>This algebra provides vocabulary to define JSON schemas of data types.</p>
 <pre class="prettyprint"><code class="language-scala">&quot;org.julienrf&quot; %% &quot;endpoints-algebra-json-schema&quot; % &quot;0.15.0&quot;
 </code></pre>
-<p><a href="/api/endpoints/algebra/JsonSchemas.html">API documentation</a></p><div class="callout note "><div class="callout-title">Note</div>
+<p><a href="api/endpoints/algebra/JsonSchemas.html">API documentation</a></p><div class="callout note "><div class="callout-title">Note</div>
 <p>This module is dependency-free, it can be used independently of <em>endpoints</em> to define JSON schemas and interpret them as actual encoder, decoders or documentation.</p></div>
 <p>The algebra introduces the concept of <code>JsonSchema[A]</code>: a JSON schema for a type <code>A</code>.</p>
 <h3><a href="#basic-types-and-record-types" name="basic-types-and-record-types" class="anchor"><span class="anchor-link"></span></a>Basic types and record types</h3>
@@ -330,7 +330,7 @@ val recursiveSchema: Record[Recursive] = (
 <p>The module presented in this section uses Shapeless to generically derive JSON schemas for algebraic data type definitions (sealed traits and case classes).</p>
 <pre class="prettyprint"><code class="language-scala">&quot;org.julienrf&quot; %% &quot;endpoints-json-schema-generic&quot; % &quot;0.15.0&quot;
 </code></pre>
-<p><a href="/api/endpoints/generic/JsonSchemas.html">API documentation</a></p>
+<p><a href="api/endpoints/generic/JsonSchemas.html">API documentation</a></p>
 <h3><a href="#json-schemas-derivation" name="json-schemas-derivation" class="anchor"><span class="anchor-link"></span></a>JSON schemas derivation</h3>
 <p>With this module, defining the JSON schema of the <code>Shape</code> data type is reduced to the following:</p>
 <pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/json-schema/json-schema-generic/src/test/scala/endpoints/generic/JsonSchemasDocs.scala#L10" target="_blank" title="Go to snippet source"></a><code class="language-scala">implicit val shapeSchema: JsonSchema[Shape] = genericJsonSchema</code></pre>

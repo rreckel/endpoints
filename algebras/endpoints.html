@@ -215,7 +215,7 @@ julienrf/endpoints
 <p>This algebra, at the top of the hierarchy, provides the base vocabulary to describe HTTP endpoints, requests and responses.</p>
 <pre class="prettyprint"><code class="language-scala">&quot;org.julienrf&quot; %% &quot;endpoints-algebra&quot; % &quot;0.15.0&quot;
 </code></pre>
-<p><a href="/api/endpoints/algebra/Endpoints.html">API documentation</a></p>
+<p><a href="api/endpoints/algebra/Endpoints.html">API documentation</a></p>
 <h2><a href="#endpoint" name="endpoint" class="anchor"><span class="anchor-link"></span></a>Endpoint</h2>
 <p>The algebra introduces the concept of <code>Endpoint[A, B]</code>: an HTTP endpoint whose request carries an information of type <code>A</code> and whose response carries an information of type <code>B</code>. For instance, an endpoint of type <code>Endpoint[Long, Option[User]]</code> has a request containing a <code>Long</code> (for instance, a user id), and a response optionally containing a <code>User</code>.</p>
 <p>You can define an endpoint by using the <code>endpoint</code> constructor:</p>
@@ -291,13 +291,13 @@ implicit def localDateSegment(
       case Success(date) =&gt; Valid(date)
     }
   }(_.toString)</code></pre>
-<p>The first function passed to the <code>xmapPartial</code> operation returns a <a href="/api/endpoints/Validated.html"><code>Validated[LocalDate]</code></a> value. Returning an <code>Invalid</code> value means that there is no representation of the source type in the target type.</p>
+<p>The first function passed to the <code>xmapPartial</code> operation returns a <a href="api/endpoints/Validated.html"><code>Validated[LocalDate]</code></a> value. Returning an <code>Invalid</code> value means that there is no representation of the source type in the target type.</p>
 <h3><a href="#request-headers" name="request-headers" class="anchor"><span class="anchor-link"></span></a>Request Headers</h3>
 <p>The type <code>RequestHeaders[A]</code> models request headers carrying some information of type <code>A</code>. For instance, a value of type <code>RequestHeaders[Credentials]</code> describes request headers containing credentials.</p>
-<p>Please refer to the <a href="/api/endpoints/algebra/Endpoints.html#RequestHeaders[A]">API documentation</a> for details about constructors and operations for the type <code>RequestHeaders</code>.</p>
+<p>Please refer to the <a href="api/endpoints/algebra/Endpoints.html#RequestHeaders[A]">API documentation</a> for details about constructors and operations for the type <code>RequestHeaders</code>.</p>
 <h3><a href="#request-entity" name="request-entity" class="anchor"><span class="anchor-link"></span></a>Request Entity</h3>
 <p>The type <code>RequestEntity[A]</code> models a request entity carrying some information of type <code>A</code>. For instance, a value of type <code>RequestEntity[Command]</code> describes a request entity containing a command.</p>
-<p>The <code>Endpoints</code> algebra provides a few <a href="/api/endpoints/algebra/Endpoints.html#RequestEntity[A]"><code>RequestEntity</code> constructors and operations</a>, which can be extended to support more content types. For instance, the <a href="json-entities.html">JsonEntities</a> algebra adds support for requests with JSON entities.</p>
+<p>The <code>Endpoints</code> algebra provides a few <a href="api/endpoints/algebra/Endpoints.html#RequestEntity[A]"><code>RequestEntity</code> constructors and operations</a>, which can be extended to support more content types. For instance, the <a href="json-entities.html">JsonEntities</a> algebra adds support for requests with JSON entities.</p>
 <h2><a href="#response" name="response" class="anchor"><span class="anchor-link"></span></a>Response</h2>
 <p>The <code>Response[A]</code> type models an HTTP response carrying some information of type <code>A</code>. For instance, a <code>Response[User]</code> value describes an HTTP response containing a user: client interpreters decode a <code>User</code> from the response entity, server interpreters encode a <code>User</code> as a response entity, and documentation interpreters render the serialization schema of a <code>User</code>.</p>
 <h3><a href="#constructing-responses" name="constructing-responses" class="anchor"><span class="anchor-link"></span></a>Constructing Responses</h3>
@@ -314,12 +314,12 @@ val aTextResponse: Response[String] = response(OK, textResponse)</code></pre>
 )</code></pre>
 <h3><a href="#response-headers" name="response-headers" class="anchor"><span class="anchor-link"></span></a>Response Headers</h3>
 <p>The type <code>ResponseHeaders[A]</code> models response headers carrying some information of type <code>A</code>. For instance, a value of type <code>ResponseHeaders[Origin]</code> describes response headers containing an origin (e.g., an <code>Access-Control-Allow-Origin</code> header).</p>
-<p>Refer to the <a href="/api/endpoints/algebra/Endpoints.html#ResponseHeaders[A]">API documentation</a> for details about constructors and operations for the type <code>ResponseHeaders</code>.</p>
+<p>Refer to the <a href="api/endpoints/algebra/Endpoints.html#ResponseHeaders[A]">API documentation</a> for details about constructors and operations for the type <code>ResponseHeaders</code>.</p>
 <h3><a href="#response-entity" name="response-entity" class="anchor"><span class="anchor-link"></span></a>Response Entity</h3>
 <p>The type <code>ResponseEntity[A]</code> models a response entity carrying some information of type <code>A</code>. For instance, a value of type <code>ResponseEntity[Event]</code> describes a response entity containing an event.</p>
-<p>The <code>Endpoints</code> algebra provides a few <a href="/api/endpoints/algebra/Endpoints.html#ResponseEntity[A]"><code>ResponseEntity</code> constructors and operations</a>, which can be extended to support more content-types. For instance, the <a href="json-entities.html">JsonEntities</a> algebra adds support for responses with JSON entities.</p>
+<p>The <code>Endpoints</code> algebra provides a few <a href="api/endpoints/algebra/Endpoints.html#ResponseEntity[A]"><code>ResponseEntity</code> constructors and operations</a>, which can be extended to support more content-types. For instance, the <a href="json-entities.html">JsonEntities</a> algebra adds support for responses with JSON entities.</p>
 <h3><a href="#transforming-responses" name="transforming-responses" class="anchor"><span class="anchor-link"></span></a>Transforming Responses</h3>
-<p>Responses have methods provided by the <a href="/api/endpoints/algebra/Responses$ResponseSyntax.html"><code>ResponseSyntax</code></a> and the <a href="/api/endpoints/InvariantFunctorSyntax$InvariantFunctorSyntax.html"><code>InvariantFunctorSyntax</code></a> implicit classes, whose usage is illustrated in the remaining of this section.</p>
+<p>Responses have methods provided by the <a href="api/endpoints/algebra/Responses$ResponseSyntax.html"><code>ResponseSyntax</code></a> and the <a href="api/endpoints/InvariantFunctorSyntax$InvariantFunctorSyntax.html"><code>InvariantFunctorSyntax</code></a> implicit classes, whose usage is illustrated in the remaining of this section.</p>
 <p>The <code>orNotFound</code> operation is useful to handle resources that may not be found: </p>
 <pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/algebras/algebra/src/test/scala/endpoints/algebra/JsonEntitiesDocs.scala#L22-L26" target="_blank" title="Go to snippet source"></a><code class="language-scala">val getUser: Endpoint[Long, Option[User]] =
   endpoint(
@@ -345,8 +345,8 @@ val aTextResponse: Response[String] = response(OK, textResponse)</code></pre>
   <li>when the server is unable to decode an incoming request (because, for instance,  a query parameter is missing, or the request entity has the wrong format).  In this case it is a “client error” ;</li>
   <li>when the provided business logic throws an exception, or the server is  unable to serialize the result into a proper HTTP response. In this case it is  a “server error”.</li>
 </ul>
-<p>By default, client errors are reported as an <a href="/api/endpoints/Invalid.html">Invalid</a> value, serialized into a Bad Request (400) response, as a JSON array containing string messages. You can change the provided serialization format by overriding the <a href="/api/endpoints/algebra/BuiltInErrors.html#clientErrorsResponseEntity:BuiltInErrors.this.ResponseEntity[endpoints.Invalid]">clientErrorsResponseEntity</a> operation.</p>
-<p>Similarly, by default server errors are reported as a <code>Throwable</code> value, serialized into an Internal Server Error (500) response, as a JSON array containing string messages. You can change the provided serialization format by overriding the <a href="/api/endpoints/algebra/BuiltInErrors.html#serverErrorResponseEntity:BuiltInErrors.this.ResponseEntity[Throwable]">serverErrorResponseEntity</a> operation.</p>
+<p>By default, client errors are reported as an <a href="api/endpoints/Invalid.html">Invalid</a> value, serialized into a Bad Request (400) response, as a JSON array containing string messages. You can change the provided serialization format by overriding the <a href="api/endpoints/algebra/BuiltInErrors.html#clientErrorsResponseEntity:BuiltInErrors.this.ResponseEntity[endpoints.Invalid]">clientErrorsResponseEntity</a> operation.</p>
+<p>Similarly, by default server errors are reported as a <code>Throwable</code> value, serialized into an Internal Server Error (500) response, as a JSON array containing string messages. You can change the provided serialization format by overriding the <a href="api/endpoints/algebra/BuiltInErrors.html#serverErrorResponseEntity:BuiltInErrors.this.ResponseEntity[Throwable]">serverErrorResponseEntity</a> operation.</p>
 <h2><a href="#next-step" name="next-step" class="anchor"><span class="anchor-link"></span></a>Next Step</h2>
 <p>See how you can describe endpoints with <a href="json-entities.html">JSON entities</a>.</p>
 </div>

@@ -186,7 +186,7 @@ julienrf/endpoints
 <p>This algebra provides vocabulary to define endpoints multiplexing several requests and responses.</p>
 <pre class="prettyprint"><code class="language-scala">&quot;org.julienrf&quot; %% &quot;endpoints-algebra&quot; % &quot;0.15.0&quot;
 </code></pre>
-<p><a href="/api/endpoints/algebra/MuxEndpoints.html">API documentation</a></p>
+<p><a href="api/endpoints/algebra/MuxEndpoints.html">API documentation</a></p>
 <p>In general, each possible resource or action supported by a service is exposed through a specific endpoint, taking a specific request type and a specific response type.</p>
 <p>However, in some cases it is useful to use a same endpoint to manage several resources or actions. We call them <em>multiplexed</em> endpoints.</p>
 <p>The algebra enriches the <code>Endpoints</code> algebra with the concept of <code>MuxEndpoint[Req, Resp, Transport]</code>, defining a multiplexed endpoint with a request containing a type <code>Req</code>, a response of type <code>Resp</code>, and serializing data to and from the <code>Transport</code> type.</p>

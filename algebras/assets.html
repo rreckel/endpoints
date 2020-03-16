@@ -186,7 +186,7 @@ julienrf/endpoints
 <p>This algebra provides vocabulary to define endpoints serving static assets.</p>
 <pre class="prettyprint"><code class="language-scala">&quot;org.julienrf&quot; %% &quot;endpoints-algebra&quot; % &quot;0.15.0&quot;
 </code></pre>
-<p><a href="/api/endpoints/algebra/Assets.html">API documentation</a></p>
+<p><a href="api/endpoints/algebra/Assets.html">API documentation</a></p>
 <p>The module enriches the <code>Endpoints</code> algebra with new constructors for endpoints and path segments. It also introduces the concepts of <code>AssetRequest</code>, <code>AssetResponse</code> and <code>AssetPath</code>. The typical usage looks like the following:</p>
 <pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/algebras/algebra/src/test/scala/endpoints/algebra/AssetsDocs.scala#L6-L7" target="_blank" title="Go to snippet source"></a><code class="language-scala">val assets: Endpoint[AssetRequest, AssetResponse] =
   assetsEndpoint(path / &quot;assets&quot; / assetSegments())</code></pre>

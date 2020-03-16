@@ -209,7 +209,7 @@ julienrf/endpoints
 <p>Server backed by <a href="http://http4s.org">http4s</a>.</p>
 <pre class="prettyprint"><code class="language-scala">&quot;org.julienrf&quot; %% &quot;endpoints-http4s-server&quot; % &quot;0.15.0&quot;
 </code></pre>
-<p><a href="/api/endpoints/http4s/server/index.html">API documentation</a></p>
+<p><a href="api/endpoints/http4s/server/index.html">API documentation</a></p>
 <h2><a href="#endpoints" name="endpoints" class="anchor"><span class="anchor-link"></span></a><code>Endpoints</code></h2>
 <p>The <code>Endpoints</code> interpreter provides a <code>routesFromEndpoints</code> operation that turns a sequence of endpoints with their implementation into an <code>org.http4s.HttpRoutes[F]</code> value that can be integrated to your http4s application.</p>
 <p>For instance, given the following endpoint definition:</p>
@@ -227,9 +227,9 @@ julienrf/endpoints
 <h4><a href="#the-incoming-request-doesn-t-match-any-endpoint" name="the-incoming-request-doesn-t-match-any-endpoint" class="anchor"><span class="anchor-link"></span></a>The incoming request doesn’t match any endpoint</h4>
 <p>In that case, the router constructed by <em>endpoints</em> can’t do anything. You have to deal with such errors in the usual http4s way (usually, by adding a <code>.orNotFound</code> call to your application services).</p>
 <h4><a href="#the-incoming-request-is-invalid" name="the-incoming-request-is-invalid" class="anchor"><span class="anchor-link"></span></a>The incoming request is invalid</h4>
-<p>In that case, <em>endpoints</em> returns a “Bad Request” (400) response reporting all the errors in a JSON array. You can change this behavior by overriding the <a href="/api/endpoints/http4s/server/EndpointsWithCustomErrors.html">handleClientErrors</a> method.</p>
+<p>In that case, <em>endpoints</em> returns a “Bad Request” (400) response reporting all the errors in a JSON array. You can change this behavior by overriding the <a href="api/endpoints/http4s/server/EndpointsWithCustomErrors.html">handleClientErrors</a> method.</p>
 <h4><a href="#an-exception-is-thrown" name="an-exception-is-thrown" class="anchor"><span class="anchor-link"></span></a>An exception is thrown</h4>
-<p>If an exception is thrown during request decoding, or when running the business logic, or when encoding the response, <em>endpoints</em> returns an “Internal Server Error” (500) response reporting the error in a JSON array. You can change this behavior by overriding the <a href="/api/endpoints/http4s/server/EndpointsWithCustomErrors.html">handleServerError</a> method.</p>
+<p>If an exception is thrown during request decoding, or when running the business logic, or when encoding the response, <em>endpoints</em> returns an “Internal Server Error” (500) response reporting the error in a JSON array. You can change this behavior by overriding the <a href="api/endpoints/http4s/server/EndpointsWithCustomErrors.html">handleServerError</a> method.</p>
 </div>
 <div>
 <a href="https://github.com/julienrf/endpoints/tree/v0.15.0/documentation/manual/src/paradox/interpreters/http4s.md" title="Edit this page" class="md-source-file md-edit">

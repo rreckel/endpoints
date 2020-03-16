@@ -208,7 +208,7 @@ julienrf/endpoints
 <article class="md-content__inner md-typeset">
 <div class="md-content__searchable">
 <h1><a href="#tupler" name="tupler" class="anchor"><span class="anchor-link"></span></a><code>Tupler</code></h1>
-<p>This guide explains why we use implicit <a href="/api/endpoints/Tupler.html"><code>Tupler</code></a> parameters in the signature of some algebra operations and how it works.</p>
+<p>This guide explains why we use implicit <a href="api/endpoints/Tupler.html"><code>Tupler</code></a> parameters in the signature of some algebra operations and how it works.</p>
 <h2><a href="#motivation" name="motivation" class="anchor"><span class="anchor-link"></span></a>Motivation</h2>
 <p>As explained in the <a href="../design.html">design</a> page, to model a request that carries an information of type <code>A</code>, we use the type <code>Request[A]</code>. This type <code>A</code> is important because it represents what is needed by clients to build such a request and what is received by servers to process such a request. For instance, a request carrying a user id could be modeled as <code>Request[Long]</code>. Clients would have to supply a <code>Long</code> value in order to build such a request, and servers would decode a <code>Long</code> value. Tracking these types is important because it guarantees that requests and responses are well-formed.</p>
 <p>Now, suppose that we define a request that has an URL carrying a user id (of type <code>Long</code>), and an entity carrying an <code>UpdateUser</code> value (describing changes to apply to a user resource). Such a request would have type <code>Request[(Long, UpdateUser)]</code>.</p>

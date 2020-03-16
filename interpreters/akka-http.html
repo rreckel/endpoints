@@ -212,7 +212,7 @@ julienrf/endpoints
 <h2><a href="#client" name="client" class="anchor"><span class="anchor-link"></span></a>Client</h2>
 <pre class="prettyprint"><code class="language-scala">&quot;org.julienrf&quot; %% &quot;endpoints-akka-http-client&quot; % &quot;0.15.0&quot;
 </code></pre>
-<p><a href="/api/endpoints/akkahttp/client/index.html">API documentation</a></p>
+<p><a href="api/endpoints/akkahttp/client/index.html">API documentation</a></p>
 <h3><a href="#endpoints" name="endpoints" class="anchor"><span class="anchor-link"></span></a><code>Endpoints</code></h3>
 <p>The <code>Endpoints</code> interpreter fixes the <code>Endpoint[A, B]</code> type to a function from <code>A</code> to <code>Future[B]</code>:</p>
 <pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/julienrf/endpoints/tree/v0.15.0/akka-http/client/src/main/scala/endpoints/akkahttp/client/Endpoints.scala#L269" target="_blank" title="Go to snippet source"></a><code class="language-scala">type Endpoint[A, B] = A =&gt; Future[B]</code></pre>
@@ -237,7 +237,7 @@ bytesSource.runForeach { bytes =&gt; println(s&quot;Received ${bytes.length} byt
 <h2><a href="#server" name="server" class="anchor"><span class="anchor-link"></span></a>Server</h2>
 <pre class="prettyprint"><code class="language-scala">&quot;org.julienrf&quot; %% &quot;endpoints-akka-http-server&quot; % &quot;0.15.0&quot;
 </code></pre>
-<p><a href="/api/endpoints/akkahttp/server/index.html">API documentation</a></p>
+<p><a href="api/endpoints/akkahttp/server/index.html">API documentation</a></p>
 <h3><a href="#endpoints" name="endpoints" class="anchor"><span class="anchor-link"></span></a><code>Endpoints</code></h3>
 <p>The <code>Endpoints</code> interpreter fixes the <code>Endpoint[A, B]</code> type to something that, given an implementation function <code>A =&gt; B</code>, returns an <code>akka.http.scaladsl.server.Route</code> that can be integrated to your Akka HTTP application.</p>
 <p>For instance, given the following endpoint definition:</p>
@@ -265,9 +265,9 @@ val logoRoute: Route =
 <h4><a href="#the-incoming-request-doesn-t-match-any-endpoint" name="the-incoming-request-doesn-t-match-any-endpoint" class="anchor"><span class="anchor-link"></span></a>The incoming request doesn’t match any endpoint</h4>
 <p>In that case, the routes constructed by <em>endpoints</em> can’t do anything. You have to deal with such errors in the usual Akka HTTP way: by using an implicit <code>akka.http.scaladsl.server.RejectionHandler</code> having a <code>handleNotFound</code> clause.</p>
 <h4><a href="#the-incoming-request-is-invalid" name="the-incoming-request-is-invalid" class="anchor"><span class="anchor-link"></span></a>The incoming request is invalid</h4>
-<p>In that case, <em>endpoints</em> returns a “Bad Request” (400) response reporting all the errors in a JSON array. You can change this behavior by overriding the <a href="/api/endpoints/akkahttp/server/Urls.html">handleClientErrors</a> method.</p>
+<p>In that case, <em>endpoints</em> returns a “Bad Request” (400) response reporting all the errors in a JSON array. You can change this behavior by overriding the <a href="api/endpoints/akkahttp/server/Urls.html">handleClientErrors</a> method.</p>
 <h4><a href="#an-exception-is-thrown" name="an-exception-is-thrown" class="anchor"><span class="anchor-link"></span></a>An exception is thrown</h4>
-<p>If an exception is thrown during request decoding, or when running the business logic, or when encoding the response, <em>endpoints</em> returns an “Internal Server Error” (500) response reporting the error in a JSON array. You can change this behavior by overriding the <a href="/api/endpoints/akkahttp/server/Endpoints.html">handleServerError</a> method.</p>
+<p>If an exception is thrown during request decoding, or when running the business logic, or when encoding the response, <em>endpoints</em> returns an “Internal Server Error” (500) response reporting the error in a JSON array. You can change this behavior by overriding the <a href="api/endpoints/akkahttp/server/Endpoints.html">handleServerError</a> method.</p>
 </div>
 <div>
 <a href="https://github.com/julienrf/endpoints/tree/v0.15.0/documentation/manual/src/paradox/interpreters/akka-http.md" title="Edit this page" class="md-source-file md-edit">
