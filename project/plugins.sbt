@@ -1,6 +1,9 @@
+val scalaJSVersion =
+  Option(System.getenv("SCALAJS_VERSION")).getOrElse("0.6.32")
+
 addSbtPlugin("org.scalameta" % "sbt-scalafmt" % "2.3.2")
 
-addSbtPlugin("org.scala-js" % "sbt-scalajs" % "0.6.32")
+addSbtPlugin("org.scala-js" % "sbt-scalajs" % scalaJSVersion)
 addSbtPlugin("org.portable-scala" % "sbt-scalajs-crossproject" % "1.0.0")
 
 addSbtPlugin("io.spray" % "sbt-revolver" % "0.9.1")
@@ -33,3 +36,8 @@ lazy val `sbt-assets` = RootProject(file("../sbt-assets"))
 val build = project.in(file(".")).dependsOn(`sbt-assets`)
 
 ivyLoggingLevel in ThisBuild := UpdateLogging.Quiet
+
+libraryDependencies ++= {
+  if (scalaJSVersion.startsWith("0.6.")) Nil
+  else Seq("org.scala-js" %% "scalajs-env-jsdom-nodejs" % "1.0.0")
+}
