@@ -19,7 +19,7 @@ val `http4s-server` = LocalProject("http4s-server")
 
 val `xhr-client` = LocalProject("xhr-client")
 val `xhr-client-circe` = LocalProject("xhr-client-circe")
-val `xhr-client-faithful` = LocalProject("xhr-client-faithful")
+//val `xhr-client-faithful` = LocalProject("xhr-client-faithful")
 
 val `scalaj-client` = LocalProject("scalaj-client")
 
@@ -61,7 +61,7 @@ val apiDoc =
         `http4s-server`,
         `xhr-client`,
         `xhr-client-circe`,
-        `xhr-client-faithful`,
+//        `xhr-client-faithful`,
         `scalaj-client`,
         `sttp-client`,
         `openapi-jvm`,
@@ -282,24 +282,24 @@ val `example-cqrs-public-endpoints-jvm` = `example-cqrs-public-endpoints`.jvm
 val `example-cqrs-public-endpoints-js` = `example-cqrs-public-endpoints`.js
 
 // web-client, *uses* the public endpoints’ definitions
-val `example-cqrs-web-client` =
-  project
-    .in(file("examples/cqrs/web-client"))
-    .enablePlugins(ScalaJSPlugin)
-    .settings(
-      noPublishSettings,
-      `scala 2.12 to latest`,
-      //disable coverage for scala.js: https://github.com/scoverage/scalac-scoverage-plugin/issues/196
-      coverageEnabled := false,
-      libraryDependencies ++= Seq(
-        "in.nvilla" %%% "monadic-html" % "0.4.0",
-        "org.julienrf" %%% "faithful-cats" % "2.0.0",
-        "io.github.cquiroz" %%% "scala-java-time" % "2.0.0-RC5"
-      ),
-      scalaJSUseMainModuleInitializer := true
-    )
-    .dependsOn(`xhr-client-faithful`, `xhr-client-circe`)
-    .dependsOn(`example-cqrs-public-endpoints-js`)
+// val `example-cqrs-web-client` =
+//   project
+//     .in(file("examples/cqrs/web-client"))
+//     .enablePlugins(ScalaJSPlugin)
+//     .settings(
+//       noPublishSettings,
+//       `scala 2.12 to latest`,
+//       //disable coverage for scala.js: https://github.com/scoverage/scalac-scoverage-plugin/issues/196
+//       coverageEnabled := false,
+//       libraryDependencies ++= Seq(
+//         "in.nvilla" %%% "monadic-html" % "0.4.0",
+//         "org.julienrf" %%% "faithful-cats" % "2.0.0",
+//         "io.github.cquiroz" %%% "scala-java-time" % "2.0.0-RC5"
+//       ),
+//       scalaJSUseMainModuleInitializer := true
+//     )
+//     .dependsOn(`xhr-client-faithful`, `xhr-client-circe`)
+//     .dependsOn(`example-cqrs-public-endpoints-js`)
 
 // public server implementation, *implements* the public endpoints’ definitions and *uses* the commands and queries definitions
 val `example-cqrs-public-server` =

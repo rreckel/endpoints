@@ -5,6 +5,7 @@ import play.api.libs.functional.syntax._
 import play.api.libs.json._
 
 import scala.collection.compat._
+import endpoints.algebra.TuplesSchemas
 
 /**
   * An interpreter for [[endpoints.algebra.JsonSchemas]] that produces Play JSON `play.api.libs.json.Reads`

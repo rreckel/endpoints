@@ -15,8 +15,8 @@ val sttp = project.in(file("sttp")).settings(noPublishSettings)
 val http4s = project.in(file("http4s")).settings(noPublishSettings)
 
 // Documentation and examples
-val documentation =
-  project.in(file("documentation")).settings(noPublishSettings)
+// val documentation =
+//   project.in(file("documentation")).settings(noPublishSettings)
 
 noPublishSettings
 

@@ -59,21 +59,23 @@ lazy val `json-schema-circe` =
 lazy val `json-schema-circe-js` = `json-schema-circe`.js
 lazy val `json-schema-circe-jvm` = `json-schema-circe`.jvm
 
-lazy val `json-schema-playjson` =
-  crossProject(JSPlatform, JVMPlatform)
-    .crossType(CrossType.Pure)
+// TODO: SCALAJS_VERSION
+lazy val `json-schema-playjsonJVM` =
+  // crossProject(JSPlatform, JVMPlatform)
+  //   .crossType(CrossType.Pure)
+  project
     .in(file("json-schema-playjson"))
     .settings(
       publishSettings,
       `scala 2.12 to latest`,
       name := "endpoints-json-schema-playjson",
-      libraryDependencies += "com.typesafe.play" %%% "play-json" % playjsonVersion,
+      libraryDependencies += "com.typesafe.play" %% "play-json" % playjsonVersion,
       (Compile / boilerplateSource) := baseDirectory.value / ".." / "src" / "main" / "boilerplate"
     )
     .enablePlugins(spray.boilerplate.BoilerplatePlugin)
-    .dependsOnLocalCrossProjectsWithScope(
-      "json-schema" -> "test->test;compile->compile"
+    .dependsOn(
+      `json-schema-jvm` % "test->test;compile->compile"
     )
 
-lazy val `json-schema-playjson-js` = `json-schema-playjson`.js
-lazy val `json-schema-playjson-jvm` = `json-schema-playjson`.jvm
+// lazy val `json-schema-playjson-js` = `json-schema-playjson`.js
+lazy val `json-schema-playjson-jvm` = `json-schema-playjsonJVM`

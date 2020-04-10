@@ -44,17 +44,18 @@ val `algebra-circe` =
 val `algebra-circe-js` = `algebra-circe`.js
 val `algebra-circe-jvm` = `algebra-circe`.jvm
 
-val `algebra-playjson` =
-  crossProject(JSPlatform, JVMPlatform)
-    .crossType(CrossType.Pure)
+val `algebra-playjsonJVM` =
+  // crossProject(JSPlatform, JVMPlatform)
+  //   .crossType(CrossType.Pure)
+  project
     .in(file("algebra-playjson"))
     .settings(
       publishSettings,
       `scala 2.12 to latest`,
       name := "endpoints-algebra-playjson",
-      libraryDependencies += "com.typesafe.play" %%% "play-json" % playjsonVersion
+      libraryDependencies += "com.typesafe.play" %% "play-json" % playjsonVersion
     )
-    .dependsOn(`algebra` % "test->test;compile->compile")
+    .dependsOn(`algebra-jvm` % "test->test;compile->compile")
 
-val `algebra-playjson-js` = `algebra-playjson`.js
-val `algebra-playjson-jvm` = `algebra-playjson`.jvm
+//val `algebra-playjson-js` = `algebra-playjson`.js
+val `algebra-playjson-jvm` = `algebra-playjsonJVM`

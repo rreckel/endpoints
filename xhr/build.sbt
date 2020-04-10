@@ -18,19 +18,19 @@ val `xhr-client` =
     .dependsOn(LocalProject("algebraJS") % "test->test;compile->compile")
     .dependsOn(LocalProject("openapiJS"))
 
-val `xhr-client-faithful` =
-  project
-    .in(file("client-faithful"))
-    .enablePlugins(ScalaJSPlugin)
-    .settings(
-      publishSettings,
-      `scala 2.12 to latest`,
-      name := "endpoints-xhr-client-faithful",
-      //disable coverage for scala.js: https://github.com/scoverage/scalac-scoverage-plugin/issues/196
-      coverageEnabled := false,
-      libraryDependencies += "org.julienrf" %%% "faithful" % "2.0.0"
-    )
-    .dependsOn(`xhr-client`)
+// val `xhr-client-faithful` =
+//   project
+//     .in(file("client-faithful"))
+//     .enablePlugins(ScalaJSPlugin)
+//     .settings(
+//       publishSettings,
+//       `scala 2.12 to latest`,
+//       name := "endpoints-xhr-client-faithful",
+//       //disable coverage for scala.js: https://github.com/scoverage/scalac-scoverage-plugin/issues/196
+//       coverageEnabled := false,
+//       libraryDependencies += "org.julienrf" %%% "faithful" % "2.0.0"
+//     )
+//     .dependsOn(`xhr-client`)
 
 val `xhr-client-circe` =
   project
